@@ -1,0 +1,888 @@
+Kayi Arena — Module 2A: Character Evaluation Framework (Draft v3)
+Kayi Bots · Planning document, no implementation code · Continues Module 2 Draft v1, Sections 1–5
+Labels: [F] approved decision · [R] recommendation, not approved · [U] unresolved · [D] deferred to another module or session · [P] pending verification
+Status of examples. This document contains no character ratings. Any illustration is hypothetical and does not describe a real character. The 14-character calibration sample referred to in Draft v1 is not available, so every finding that depended on it is marked [P] and is excluded from the reasoning here.
+Draft v3 status. This version records your review of Draft v2. Decisions D1, D3, D5, D7, D8 and D9 are approved. D2, D4, D6 and D10 are approved in principle and revised here: evidence ceilings are now defaults with justified exceptions, the one-level limit on Conditional abilities is removed, Tank and Assassin suitability no longer depends on a formal role record, and review is simplified for an AI-assisted workflow with human approval. Naruto is the calibration choice for Module 2B and is not a confirmed launch roster. The original canonical work is the default primary medium.
+
+1. Executive summary
+   Module 2A defines how one canonical character becomes one Power rating (1 to 5) and seven Role Fit ratings (0 to 5), and how those ratings are earned, documented, reviewed, approved and revised. It does not decide rarity, matchups, ties, winners, schemas or code.
+   Preserved without change [F]: Power 1–5, seven independent Fit ratings 0–5, integer ratings, the seven roles, the approved role weights, the deterministic formula, no distribution caps, one playable canonical version per character, prime and reasonably sustainable canonical state, hidden exact ratings, no guaranteed healer draws, no combat simulation or active abilities. I rechecked the formula by recomputing every Fit and Power combination for every role. The score ranges, distinct-score counts and tie rates in Section 2 all reproduce.
+   What this draft changes or adds [R]:
+   • Evidence quality replaces feat counts. Power and Fit are guided by evidence grades and default ceilings (A direct demonstration, B reliable inference or authoritative statement, C weak or speculative), not by a required number of wins against opponents of a given level. Ratings are outputs and are never used as evidence for other characters, which removes the circularity (Section 3.4, Section 7).
+   • Healer self-regeneration is resolved. Self-only regeneration is Healer Fit 0. Trivial first aid or minor healing of others is Fit 1. Self-regeneration counts toward Power and personal durability (Section 5.6).
+   • Scale is no longer a requirement. The top rubric levels describe quality under demanding conditions, not group size. A small-team strategist or captain can reach 5 (Section 5.2).
+   • Role boundaries are re-drawn with one test per pair. This also fixes a real inconsistency in Draft v1: temporary protection was listed under Support while shielding was listed as a Tank signal (Section 4.2).
+   • Rating order is clarified. Draft v1 said Power is rated first and Fit is rated without looking at Power, which cannot both hold for one rater. Fit is now rated first, with Power hidden, then Power is rated (Section 8).
+   • A complete canonical version policy with Core, Conditional and Excluded classes, so Power and all seven Fit ratings describe one coherent version (Section 6).
+   • A complete evidence standard covering sources, anime and manga differences, statements, inference, contradictions, outliers, sparse evidence, confidence and review (Section 7).
+   • A batch workflow from universe setup to approval and revision, compatible with the immutable dataset version contract in Module 1 (Section 8).
+   • Diagnostic thresholds are advisory. The 0.9 correlation and the average of 2 high-Fit roles are indicators to investigate, never targets and never reasons to alter canon-based ratings (Section 2.6).
+   Corrections made directly from the formula: the tie-rate wording in Draft v1 mixed two different quantities (Section 2.5), and a claim that every role has a different best scorer was inconsistent with tied maximum scores in the same text (Section 2.7).
+   Decision status: Section 9 records your review of Draft v2 and how each decision is treated in Draft v3. No incompatibility with Module 1 was found. Module 1 holds no ratings, stores an opaque dataset version, and requires that version to stay retrievable and unchanged for the life of a match.
+2. Reviewed scoring model analysis
+   Role Score = (Fit × Fit weight + Power × Power weight) ÷ 5, with weights as percentages. Every approved weight is a multiple of 5, so every score is a whole number from 0 to 100 [F]. The calculations below were verified by enumerating all 6 Fit × 5 Power combinations per role.
+   2.1 What the weights do
+   Role
+   Points per Fit level
+   Points per Power level
+   Min score
+   Max score
+   Power levels worth one Fit level
+   Distinct scores (of 30 combinations)
+   Captain
+   12
+   8
+   8
+   100
+   1.5
+   22
+   Strategist
+   17
+   3
+   3
+   100
+   5.7
+   30
+   Attacker
+   10
+   10
+   10
+   100
+   1.0
+   10
+   Tank
+   10
+   10
+   10
+   100
+   1.0
+   10
+   Assassin
+   13
+   7
+   7
+   100
+   1.9
+   30
+   Support
+   17
+   3
+   3
+   100
+   5.7
+   30
+   Healer
+   17
+   3
+   3
+   100
+   5.7
+   30
+   Scores are bounded by role minimums. Power is never below 1, so no role score can be 0. The lowest possible score in each role is the Min score column above (for example 8 for Captain and 3 for Strategist, Support and Healer). A score of 0 is not attainable under the approved formula.
+   Three behaviors follow:
+   • Strategist, Support, Healer. One Fit level (17 points) exceeds the largest possible Power gap (4 levels × 3 = 12 points). A higher Fit therefore always beats a lower Fit, and Power only separates equal Fit. Example: Fit 1 with Power 1 scores 20 and beats Fit 0 with Power 5 at 15.
+   • Captain and Assassin. Power can partly compensate for Fit. In Assassin, Fit 2 with Power 1 scores 33 and loses to Fit 0 with Power 5 at 35.
+   • Attacker and Tank. One Fit level equals one Power level. Fit 3 with Power 2 and Fit 2 with Power 3 both score 50.
+   2.2 Powerful but unsuitable characters
+   The maximum for a Fit 0, Power 5 character is 40 as Captain, 35 as Assassin, 15 as Strategist, Support or Healer, and 50 as Attacker or Tank. No role gives an unsuitable powerhouse an excessive score. A Power 5 character with Attacker or Tank Fit 0 should be rare, because Power includes combat capability. If one appears, the rubric evidence should be checked, not the formula. No change.
+   2.3 Specialists versus generalists
+   Specialists gain the most in Strategist, Support and Healer, and gain modestly in Tank, matching intent. Example: Tank Fit 5 with Power 4 scores 90, against Fit 3 with Power 5 at 80. No change.
+   2.4 Overlap between Power and the combat roles
+   Attacker and Tank Fit are partly combat-strength measures, and Power is a combat-strength measure, so these roles may behave partly like Power contests. This is largely intended, since the design gives direct combat roles more Power weight. Draft v1 reported correlations (0.91 for Attacker, 0.19 for Strategist) from the missing sample [P]. These values are not used here.
+   Recommended response [R]:
+3. Keep the approved weights.
+4. Reduce double-counting at the source: Fit is rated on role behavior only, with Power hidden, using the boundary tests in Section 4.3.
+5. Treat correlation as a diagnostic (Section 2.6). A strong correlation in a real roster can simply mean strong fighters are good attackers.
+   2.5 Identical scores
+   If rating pairs were uniformly random (Fit 0–5, Power 1–5), the chance that two characters get an equal score in a role is 12.2% for Attacker and Tank, 5.1% for Captain, and 3.3% for Strategist, Assassin, Support and Healer. In the last group an equal score means an identical rating pair. In the first two, different rating pairs can produce the same score, because 10 distinct scores cover 30 combinations. Draft v1 described the 12.2% figure as identical rating pairs only, which was imprecise. Real ratings cluster, so real tie rates will be higher.
+   Tie-breaking belongs to Module 3 [D]. Module 2 supplies Fit and Power separately so Module 3 can use either as a key. A 55/45 weight split for Attacker and Tank would remove all ties between different rating pairs, but it changes approved weights, and I do not recommend it now [D].
+   2.6 Diagnostic indicators, not targets
+   Draft v1 proposed revisiting weights if Power and Fit correlate above 0.9 after 50 characters, and reviewing rubrics if characters average more than 2 roles at Fit 4 or higher. Revised treatment [R]:
+   • These are indicators that prompt a look, not triggers for change. They are reported with each dataset release.
+   • A flag starts an audit of evidence quality: are ratings supported, and are the rubrics being applied consistently? It never starts a re-rating to reach a preferred distribution.
+   • A high correlation or many versatile characters can be correct. Ratings change only on canonical grounds (Section 8.9).
+   • Weights change only if the audit shows the formula, not the data, produces a gameplay problem, and then only through your approval.
+   • Small samples give unstable correlations, so no diagnostic is read before a meaningful number of characters across several universes is approved.
+   2.7 Unverified findings in Draft v1
+   • The 14-character sample, correlations and per-character scores are [P] and are not reconstructed here.
+   • Draft v1 said every role has a different best scorer, yet it also named three characters tied at 100 as Attacker. If three characters share the maximum, there is no single best scorer, so the two statements cannot both be true. The claim is withdrawn until the sample is rebuilt and checked in Module 2B.
+   • The statement that no character dominates is also [P]. Role slots are used once, and the matchup structure is decided in Module 3, so versatility is not itself a flaw.
+   2.8 Coarse integer scales and knowledge reward
+   A 0–5 scale cannot separate two excellent characters, and decimals are not added [F]. Hidden Fit rewards anime knowledge most in Strategist, Support and Healer, where Fit decides outcomes. Whether visible rarity signals Power or Fit is not assumed here. Rarity is defined in Module 4.
+6. Revised Power evaluation framework
+   3.1 Definition
+   Power is a character's overall canonical combat effectiveness relative to their own universe, for the single eligible canonical version defined in Section 6. It is judged by the threats the character can credibly defeat, neutralize or withstand, not by destructive scale alone, popularity or story importance. Power is the only rating where general strength counts. [F: the universe-relative standard is approved, Section 9 D5.]
+   3.2 Power levels
+   Level descriptions use capability, so a rater can compare against anchors without counting feats.
+   Level
+   Meaning
+   Typical capability
+   Separates from the level below
+   5 Apex
+   Among the universe's top threats
+   Defeats or neutralizes almost any opponent, and contends on even terms with the strongest
+   Typically able to contend with level 4 opponents without needing special circumstances
+   4 Elite
+   A leading fighter
+   Defeats most high-level opponents, and is seriously challenged only by the very top
+   Typically handles level 3 opponents without outside help
+   3 Strong
+   Dependable high-level fighter
+   Handles most standard threats and competes with elites in favorable terms
+   Typically handles level 2 opponents
+   2 Capable
+   Trained fighter
+   Handles ordinary threats, outclassed by strong fighters
+   Real combat ability beyond basic training
+   1 Limited
+   Minimal or no combat role
+   Non-combatant, trainee, or can only fight ineffectively
+   Cannot handle ordinary threats
+   The level names are shorthand for capability bands, not rankings. Any number of characters may share a level [F].
+   Power is not a win guarantee. Power is a broad estimate of combat effectiveness. A higher Power does not guarantee victory over a lower-rated opponent, and canonical outcomes need not form a perfectly transitive ranking. Counters, compatibility, circumstances and tactical advantages can produce legitimate exceptions, so a result that appears to contradict the ordering is not by itself evidence that a rating is wrong. It is recorded and weighed like other evidence [F].
+   3.3 Decision rule
+   The rater assigns the highest level whose description the character demonstrably meets in typical high-stakes performance within the eligible version, supported by evidence of sufficient quality (Section 3.5). The comparison is made against the universe's validated Power anchors (Section 8.3). Five evidence categories are checked for coverage and are not scored or added: offense, defence, mobility, utility and sustained performance.
+   3.4 Ratings are outputs, never evidence
+   The circularity concern is resolved by three rules [R]:
+7. Judge the opponent's demonstrated capability, not the opponent's rating. If a character defeats a rival, the evidence is the canonical outcome and what the rival is shown to be able to do. The rival's Power rating is never cited.
+8. Evaluate outward from anchors. Anchors are fixed first and validated against canonical outcomes (Section 8.3). Other characters are compared to anchors or to well-evidenced outcomes. If evidence depends on an unevaluated character, the rater forms a working judgment from that character's own canonical evidence, notes the dependency, and the dependency is checked at review.
+9. Circular chains are cut at anchors. If A's level depends on B and B's depends on A, both are rated from their direct evidence against anchors, and the circular comparison is not used.
+   3.5 Evidence quality standard for Power
+   Evidence grades (Section 7.4) guide how high a Power rating can go. Evidence quality, rating and confidence are related but distinct: quality describes the sources, the rating describes the character, and confidence describes how sure the rater is. The ceilings below are defaults, not absolute limits [F in principle, wording R].
+   Evidence base
+   Default ceiling
+   Justified exception
+   Grade A: clear demonstration of reliable capability
+   Up to 4
+   Level 5 where corroborated by a second Grade A or an authoritative Grade B tied to a stated reason. A single overwhelming, defining performance with in-world acknowledgment can satisfy this
+   Grade B: authoritative canonical statement, or reliable inference with a stated mechanism
+   Up to 3
+   A higher level where reliable canonical evidence clearly and specifically establishes it, for example an authoritative account of a specific capability that canon backs with a mechanism. A setting that states an ability instead of showing it does not by itself cap the character
+   Grade C: reputation, vague claims, speculation
+   Up to 2
+   None. Weak or speculative evidence never justifies a high rating
+   Justified exceptions. A rater may exceed a default ceiling when reliable canonical evidence clearly establishes the higher level. The record must cite the specific evidence, explain why it is reliable, say what would make it wrong, and carry at least Medium confidence. Exceptions are flagged for independent review (Section 7.10). If the evidence supports two adjacent levels equally, choose the lower, record the higher as the plausible alternative, and flag it. The lower level is never chosen below what Grade A evidence directly supports.
+   3.6 Special cases
+   • Unconventional abilities. Control, sealing, illusion or utility abilities count if they reliably neutralize opponents of the relevant level. Power stops at the level where the ability stops working against shown resistance.
+   • Preparation and conditions. Power is judged in the ready state, meaning what the character does with one normal action of preparation. Longer preparation and conditional abilities are handled by the Conditional class in Section 6 and weighed on their actual canonical effectiveness.
+   • Defence and sustained performance. A character who cannot be hurt or who outlasts opponents has Power evidence even without offense. Power is not the same as Attacker Fit.
+   • Limited appearances. A character with few scenes is rated on what is clearly shown and reliably inferable. Fewer scenes lower confidence, not the rating (Section 7.8).
+   • Inconsistent feats. Use typical high-stakes performance. A result that contradicts two or more independent demonstrations is an outlier: it is excluded from the rating and logged (Section 7.7).
+10. Reviewed role definitions
+    4.1 Definitions
+    Role
+    Definition
+    Core question
+    Captain
+    Leads and coordinates people, makes decisions under pressure, and keeps others following and effective
+    Do others follow this character into hard situations, and does it work?
+    Strategist
+    Wins or prevents losses through planning, tactical reading, anticipation and adaptation
+    Does this character's thinking change outcomes?
+    Attacker
+    Creates and sustains offensive pressure and finishes targets in open engagement
+    Can this character drive an engagement offensively?
+    Tank
+    Takes or redirects the threat so teammates do not have to, including holding position, intercepting and drawing attention
+    Who takes the hit, and can they hold?
+    Assassin
+    Removes or neutralizes a specific target through stealth, infiltration, surprise or precision
+    Can this character reach and remove a specific target that does not expect it?
+    Support
+    Makes allies more effective through enhancement, information, control, protection granted to others, rescue or resource sharing
+    Are allies measurably more effective with this character present?
+    Healer
+    Restores other people's injuries, illness or life
+    Can this character restore someone else?
+    The seven existing roles are retained without renaming [F].
+    Suitability, not occupancy. Role Fit measures how suitable a character is for a role. It does not require that the character has already held that role. Canon that lacks an opportunity is not penalized, and reliable canonical evidence of the underlying capability can establish suitability. Raw Power alone is never Role Fit [F].
+    4.2 Inconsistency found and fixed
+    Draft v1 listed temporary protection under Support and shielding under Tank. It also excluded temporary shields from Healer. The same ability could therefore qualify as Support or Tank depending on wording. The rule is now the single question "who takes the threat?" (Section 4.3, Tank and Support).
+    4.3 Boundary tests [R]
+    Pair
+    Test
+    Resolution
+    Captain / Strategist
+    Does the evidence concern directing people in real time, or designing the plan and reading the situation?
+    Captain: command, coordination, morale, decisions that move others. Strategist: planning and tactics, with or without authority. One event can support both, but each rating must cite which capacity it relies on. Rank and title are not evidence for either
+    Attacker / Assassin
+    Is the pressure open, sustained and aimed at whatever is in front of the character, or covert and aimed at a specific target?
+    Attacker: initiative, sustained offense and finishing. Assassin: reaching and removing a chosen target. Speed, lethality and power alone do not establish Assassin suitability. Both can be high for the same character
+    Tank / Support
+    Who takes the threat?
+    Tank: the character is the one hit, blocks, intercepts, redirects the threat onto themselves or holds an enemy in place. Support: the character gives allies a protective or enabling effect without being the target. A barrier thrown over allies while staying back is Support. Standing in front and holding the line is Tank
+    Support / Healer
+    Does the effect restore injury, illness or life, or does it improve capability and options?
+    Healer: restoring bodily injury, illness, poison or life in others. Support: enhancement, sensing, communication, control, rescue, transport, and restoring depleted energy or resources. Restoring energy is not healing
+    Power / Attacker Fit
+    Does the evidence describe how well the character fights overall, or how well they create and sustain offense?
+    Power covers all effectiveness including defence and mobility. Attacker Fit covers offensive behavior only. Raw strength, durability and speed do not raise Attacker Fit unless used offensively
+    Power / Tank Fit
+    Does the evidence describe the character's own combat survival, or their function as the one who takes threats?
+    Tank Fit covers absorbing, intercepting and holding. Personal durability counts toward Tank Fit. Exceptional durability or defensive capability can support high levels when it would clearly let the character take or hold threats for teammates, even if canon never shows them protecting anyone
+    4.4 Avoiding double-counting without extra complexity [R]
+    • The same canonical event may support different ratings if it demonstrates distinct capacities. The rater states, for each rating, which capacity the event shows.
+    • General strength counts only in Power. No Fit rating may use "this character is strong" as its reason.
+    • Fit is rated with Power hidden (Section 8.6). No other mechanism is needed.
+    • Overlap in Attacker and Tank is accepted as part of the approved design and is not corrected by shifting ratings.
+11. Revised Role Fit rating rubrics
+    5.1 Method
+    The anchored evidence ladder is retained [R, favoured by your planning collaborator]. Raters match canonical evidence to written level descriptions, and evidence grades (Section 7.4) set how high a rating may go. It has no distribution caps: any number of characters may reach any level if their evidence meets the standard [F]. A checklist treats all ticks as equal, weighted sub-scores invent precision the source cannot support, and rank-ordering quietly creates caps, so none of these is used.
+    5.2 Design principles: scale, opportunity, prominence and suitability
+    Draft v1 mixed four different things. They are now separated [R].
+    Concept
+    Meaning
+    Treatment
+    Suitability
+    How well the character would perform the role's function
+    This is what Fit measures
+    Scale
+    How large the group or conflict was
+    Evidence of difficulty only. Never a requirement for any level
+    Opportunity
+    Whether canon gave the character a chance to show the ability
+    Absence of opportunity is not evidence of absence. Reliable canonical evidence of the underlying capability can establish suitability without a prior role record, within the default ceilings in Section 5.4
+    Prominence
+    How much page or screen time the character has
+    Affects evidence confidence, never the rating itself
+    Consequences:
+    • Levels 4 and 5 describe quality under demanding conditions, such as strong opposition, severe constraints, high stakes or great difficulty, not the number of people involved. A solo or small-team success under extreme conditions counts equally with one in a large conflict.
+    • No role has a minimum group size. Evidence of large-scale success is strong evidence, not a condition.
+    • Fit 5 is a quality benchmark, not a rank. It means the character meets the highest standard of the role that the universe demonstrates, or an equivalent standard where the universe never shows one. Several characters may qualify [F].
+    5.3 Universal scale
+    Level
+    Name
+    Meaning
+    0
+    None
+    No relevant capability, or canon shows the opposite
+    1
+    Incidental
+    Relevant ability appears once or only in minor form
+    2
+    Capable
+    Relevant ability shown more than once or reliably within limits, but limited, conditional or below the standard of a dedicated member
+    3
+    Competent
+    Performs the role's core function reliably, at the standard of a dedicated member
+    4
+    Excellent
+    Clearly above that standard under demanding conditions, acknowledged by canon or decisive in important outcomes
+    5
+    Benchmark
+    Meets the highest standard of the role shown in the universe, with decisive effect, and corroborated
+    The "dedicated member" standard is set per universe by Fit calibration examples (Section 8.4), not by the rater's taste.
+    5.4 Evidence ceilings for Fit
+    The grades are defined in Section 7.4. These ceilings are defaults for every role, with justified exceptions as described in Section 3.5 [F in principle]. Evidence quality, Fit rating and confidence are distinct. Fit describes suitability for the role, not whether the character has held it.
+    Evidence base
+    Default ceiling
+    Justified exception
+    Grade A: a clear demonstration, or reliable canonical evidence of the capability the role needs
+    Up to 4
+    Level 5 with corroboration: a second Grade A, or an authoritative Grade B tied to a stated reason
+    Grade B: authoritative statement, or reliable inference with a stated mechanism
+    Up to 3
+    Higher where reliable canonical evidence clearly establishes the suitability, with the mechanism stated and at least Medium confidence
+    Grade C: weak or speculative
+    Up to 2
+    None. Speculation never justifies a high rating
+    Fit 0
+    Canon contradicts the capability, or a documented search found no evidence (see below)
+    Not applicable
+    Two kinds of zero. Integer scoring needs 0 for both cases, but the record distinguishes them. Absent zero: canon contradicts the capability or makes it implausible. Unevidenced zero: nothing was found after a documented search. An unevidenced zero is a data convention, not a claim that the ability is impossible. It is revisited when new evidence appears (Section 8.9).
+    5.5 Role rubrics
+    Each table gives the standard for each level. "Counts" lists the evidence that supports the rating. "Does not count" lists items the role rating must not rely on. All rubrics follow the suitability principle: a role record is not required, and reliable evidence of the capability can establish a rating.
+    Role
+    Suitability evidence without a role record
+    Not enough on its own
+    Captain
+    Decisive judgment under pressure, others reliably deferring to or following the character, successful coordination in informal or small groups
+    Rank, title, strength, popularity, protagonist status
+    Strategist
+    Tactical reading, anticipation, adaptation and problem-solving applied to fights or missions, including individual or small-scale settings
+    Intelligence not applied tactically, book knowledge
+    Attacker
+    Demonstrated offense against resisting targets: initiative, defence-breaking, sustained pressure, finishing
+    Raw strength, durability or speed not used offensively
+    Tank
+    Exceptional durability, mitigation or defensive technique that would clearly let the character take or hold threats for teammates, or a defensive ability that extends to others, even if canon never shows them protecting anyone
+    Power alone, avoidance by speed alone
+    Assassin
+    Reliable evidence of stealth, infiltration, precision or targeted neutralization, even without a formal assassination record
+    Speed, lethality or power alone
+    Support
+    Capabilities that enable others (sensing, enhancement, control, rescue, transport, protective effects granted to others), even if the character mostly acted alone
+    Being a weaker character who is protected
+    Healer
+    Genuine ability to treat, restore or revive others, or a restorative ability whose extension to others canon states or shows
+    Self-only regeneration (Fit 0), durability, shields, restoring energy
+    Captain
+    Counts: command decisions, followers' response, coordination of people or abilities, handling morale, accountability, delegation, calm under pressure. Does not count: protagonist status, popularity, raw strength, rank or title without evidence of actually leading.
+    Level
+    Standard
+    0
+    No leadership. Refuses it, or consistently fails to bring others with them
+    1
+    Led once or by default, or in trivial circumstances
+    2
+    Leads informally or in a small group with mixed results, or holds authority others follow only situationally
+    3
+    Recognized leader, or repeatedly leads effectively in demanding situations. Decisions generally sound, followers trust them
+    4
+    Leads under high stakes or difficult conditions with notable success. Coordinates varied people or abilities and sustains trust. Canon treats them as an exceptional leader
+    5
+    Benchmark: leadership under the most demanding conditions the universe presents, decisive to outcomes, and the standard others are measured against. A small elite team under extreme stakes qualifies equally with a large command
+    Strategist
+    Counts: multi-step plans, anticipating opponents, exploiting information, adapting mid-engagement, succeeding against stronger or better-informed opposition, preparing contingencies. Does not count: book knowledge or general intelligence not applied tactically, leadership rank.
+    Level
+    Standard
+    0
+    No planning evidence. Acts without tactical thought, or canon shows poor judgment
+    1
+    One clever move
+    2
+    Sound tactical instincts in own fights, rarely plans beyond them
+    3
+    Reliably reads situations, adapts, and plans effectively for themselves or a group on more than one occasion
+    4
+    Plans or counters that decide important engagements, including against stronger or better-informed opposition
+    5
+    Benchmark: plans that overcame severe disadvantage in the most demanding situations the universe offers, shown repeatedly or in a defining case with corroboration. Group size is irrelevant
+    Attacker
+    Counts: initiative, offensive repertoire and range, defence-breaking, sustained pressure, finishing power, demonstrated damage against resisting targets. Does not count: durability, speed alone, intelligence, destruction without a resisting target, general strength (that belongs to Power).
+    Level
+    Standard
+    0
+    No offensive capability
+    1
+    Occasional or minor offense
+    2
+    Offense exists but is not their method, and defence or utility is primary
+    3
+    Reliable offensive contributor who initiates, damages and finishes standard threats
+    4
+    Primary offensive threat with varied or defence-breaking attacks that sustain pressure against strong opponents
+    5
+    Benchmark: sustains offense and finishes against the most demanding defences the universe presents
+    Tank
+    Counts: durability, damage mitigation, shielding oneself or others by body or technique, intercepting attacks, holding enemy attention, blocking passage, holding a position. Does not count: general combat strength, avoidance by speed alone, shields cast over allies from a safe position (Support).
+    Level
+    Standard
+    0
+    Fragile, or cannot absorb, redirect or hold anything
+    1
+    Some toughness or minor mitigation
+    2
+    Durable or protective but with important weaknesses, such as failing against common attacks or unable to hold position
+    3
+    Very durable personally, or a protective ability that is shown but limited or unproven under pressure
+    4
+    Either a demonstrated protective or holding function (intercepting, shielding with body or technique, drawing or holding attention, blocking a route) in demanding conditions, or exceptional personal durability or defensive capability, established by reliable canonical evidence, that would clearly let the character take or hold threats for teammates
+    5
+    Benchmark: protects or holds against the most dangerous threats the universe presents, whether shown protecting others or established by reliable, corroborated evidence of exceptional durability and defence
+    Tank measures suitability to absorb, redirect or hold threats. A character who has never protected anyone can still be rated 4 or 5 when canon reliably shows exceptional durability or defensive capability. Self-regeneration counts as part of durability. Power alone does not: strength, offense and speed are not Tank suitability. Level 4 does not require repeated protection.
+    Assassin
+    Counts: stealth, infiltration, ambush, precise methods, reaching a protected or unaware target, targeted neutralization, record of targeted removals. Does not count: speed, lethality or power alone, which do not establish Assassin suitability. A formal assassination record is not required. Reliable canonical evidence of stealth, precision and targeted neutralization can establish suitability, for example infiltrating to reach a protected person or precisely incapacitating a chosen target.
+    Level
+    Standard
+    0
+    No stealth or targeted capability. Cannot act unnoticed or precisely
+    1
+    One ambush or incidental stealth
+    2
+    Fast or lethal but not subtle, or stealth skill without precision or targeting
+    3
+    Competent at stealth, precision and targeted neutralization, shown or reliably established by canon
+    4
+    Reliable at reaching and neutralizing targets, with notable infiltration, ambush or precision success. Evidence may be capability-based
+    5
+    Benchmark: reaches and neutralizes well-defended or difficult targets at the highest standard the universe shows, with clear and corroborated evidence
+    Support
+    Counts: enhancement of allies, sensing and information, communication, control that helps allies, protective effects granted to others without taking the hit, rescue, transport, resource or energy sharing. Does not count: restoring injuries (Healer), planning (Strategist), taking the hit (Tank).
+    Level
+    Standard
+    0
+    Gives allies no benefit, or hinders them
+    1
+    Minor assistance
+    2
+    Occasional real help
+    3
+    Reliable utility that improves allies' effectiveness
+    4
+    Strong enablement that shapes outcomes, with allies clearly more effective for it
+    5
+    Benchmark: the team's effectiveness depends on the character, and they enable results that would otherwise be impossible
+    Healer
+    Counts: treating injuries, curing poison or illness, reviving, caring for many people. Does not count: self-regeneration, personal durability, temporary shields over allies (Support), restoring depleted energy (Support).
+    Level
+    Standard
+    0
+    No ability to treat others. Self-only regeneration is 0 unless the character can also treat allies
+    1
+    Trivial first aid, or minor healing of others
+    2
+    Basic demonstrated medical skill, or limited healing of others (moderate injuries, slow, conditional)
+    3
+    Competent treatment of serious injuries or ailments
+    4
+    Advanced healing of grave injuries or of many people
+    5
+    Benchmark: restores near-fatal or large-scale casualties, or revives, repeatedly or in a defining case
+    5.6 Healer inconsistency resolved
+    Draft v1 said self-regeneration does not count as healing others, yet allowed self-only recovery to receive Fit 1. These cannot both hold, and the role definition says Healer restores others. Resolution [R, matching your planning collaborator's recommendation]:
+    • Self-only regeneration is Healer Fit 0.
+    • Trivial first aid or minor healing of others is Fit 1, and larger genuine healing rises from there.
+    • A character who has self-regeneration and the ability to treat others is rated on the treatment of others. The self-regeneration does not add to Healer Fit.
+    • Self-regeneration is evidence for Power (defence and sustained performance) and for Tank durability.
+    5.7 Role evidence rules and justified exceptions
+    Self-only regeneration is Healer Fit 0 [F], and Power, speed or lethality alone are never Role Fit [F]. Draft v2's numeric limits for Tank (personal durability at most 3) and Assassin (speed or power alone at most 2) are replaced by the suitability evidence above, so a character is not penalized for lacking an opportunity to show a team role. Where canon lets a rater judge suitability from reliable capability evidence, higher ratings are allowed. Departures from the default ceilings follow the exception record in Section 3.5. These rules limit which kind of evidence counts, never how many characters may reach a level.
+12. Canonical character version policy
+    6.1 Principle
+    Each character has exactly one Eligible Canonical Version (ECV), a coherent period or state of the character. Power and all seven Fit ratings describe that ECV and nothing else. Ratings never combine abilities from incompatible periods [F, with the classification below as [R]].
+    6.2 What "prime" means
+    Prime is the character's highest reasonably sustainable canonical state: the strongest condition the character can occupy for a meaningful stretch of story time, return to or maintain reliably, with ordinary preparation, without losing capability afterwards. It is not the strongest single moment, and it is not defined by age. A state counts as sustained if it spans multiple engagements or a defined period of the story, not one fight.
+    6.3 Ability classes
+    Every ability the rater considers is classified before it can support a rating.
+    Class
+    Definition
+    Effect on ratings
+    Core (C)
+    Available on demand or routinely, repeatable, sustainable through a typical engagement, with no unusual cost, preparation or outside help
+    Counts fully
+    Conditional (K)
+    The character's own ability, real and repeatable, but limited by time, cost, cooldown, terrain, preparation, a partner or risk
+    Weighed on its actual canonical effectiveness, accessibility, sustainability, cost and reliability. It may raise a rating by whatever the evidence supports, including several levels for a regularly accessible transformation. There is no fixed numerical cap
+    Excluded (X)
+    One-time, unrepeatable, externally dependent, borrowed, non-prime or outside the version
+    Does not count
+    Normal operating requirements are not conditions. A healer who must touch the patient, or a sensor with limited range, is operating normally. A condition is something that makes the ability unavailable in ordinary use.
+    How Conditional abilities are weighed. The rater asks five questions and records the answers: How effective is the ability when used? How easily can the character reach it? How long can it be sustained and what recovery follows? What does it cost in harm, resources or risk? How reliably does canon show it working? A form that is routinely available and used in important fights counts nearly as much as a Core ability. A rarely reachable, costly or unreliable form earns less. The rating reflects judgment of the evidence, and no formula converts conditions into levels.
+    Inclusion test. An ability is included if the answer to all four is yes, or conditional if exactly one answer is limited:
+13. Can the character use it again under similar circumstances?
+14. Can they keep using it through a typical engagement, or for the duration the role needs?
+15. Does it depend only on the character, and not on a specific other character or a one-off circumstance?
+16. Does it belong to the chosen version?
+    6.4 Policy by case
+    Case
+    Classification and rule
+    Prime sustainable state
+    The default ECV. Abilities in this state are classed as Core
+    Regularly accessible transformation
+    Part of the ECV, not a separate character. Core if accessible on demand and sustainable without harm that removes later capability. Conditional if time-limited, costly or risky, and then weighed on its actual effectiveness. It may legitimately raise ratings by several levels
+    Temporary transformation
+    Conditional. Weighed on how often it is reachable, how long it lasts, what it costs and how reliably canon shows it. Counts only for abilities it reliably gives
+    Exceptional one-time power-up
+    Excluded. One-off awakenings, desperate surges and fluke circumstances. If one later became repeatable, the repeatable form is classified under the rows above
+    Repeatable partner-dependent ability
+    The character's own ability, which needs a particular partner or participant but is an established, repeatable part of the character's method. Conditional. The rater records how the ability works if that partner is absent or replaced, because the draft cannot guarantee a partner. An ability that fails entirely without one specific partner counts for little. One where the partner's role is minor or replaceable counts for more
+    External assistance
+    Excluded. One-time or situational help from another character, supporting cast or circumstance, such as a rescue or an intervention. The test is whether the character can repeat it by their own method
+    Borrowed powers
+    Excluded while borrowed. Abilities belonging to another being, lent, temporarily possessed or granted by a third party. If permanently transferred and integrated into the character, they become part of the version from that point
+    Summons and companions
+    Included if the summon or companion is a tool of the character, available on demand and not capable of acting as a separate draftable character. Core if unrestricted, Conditional if costly or limited. If the companion could stand as a separate character, excluded
+    Standard equipment
+    Included if carried routinely as part of the character's identity and method. Equipment found, lent, one-time or needing scarce consumables is Conditional or Excluded accordingly
+    Preparation-dependent abilities
+    Ready state is what one normal action of preparation allows. Longer preparation is Conditional and weighed on actual effectiveness. For Strategist and Captain ratings, preparation is evidence of the planning or organizing skill itself
+    Conditional abilities (terrain, time, ritual)
+    Conditional. Weighed on how often the condition is met in canon and how effective the ability is when it is
+    Self-sacrificial techniques
+    Fatal or character-ending techniques are Excluded because they cannot be reused. Non-fatal but costly and repeatable techniques are Conditional
+    Characters who permanently lose abilities
+    The ECV is chosen from the pre-loss or post-loss period (Section 6.5). Abilities lost are excluded from the post-loss version, and abilities gained afterwards are excluded from the pre-loss version
+    Substantially different abilities across arcs
+    Treated as separate candidate versions. Choose one ECV (Section 6.5) and rate it alone
+    To tell the three look-alikes apart, ask two questions. Whose ability is it? Another being's ability is borrowed or external. Can the character repeat it by their own method? If yes and it needs a partner, it is partner-dependent. If it happened once because someone helped, it is external assistance.
+    6.5 Selecting the ECV
+17. List candidate versions. Periods or states in which the character's abilities differ substantially, recorded in a short version register.
+18. Check eligibility. A candidate must be sustained (6.2), canonical (Section 7), and have enough evidence to be rated at all. A brief or unclear state is not a candidate.
+19. Choose the prime. Select the candidate with the highest reasonably sustainable overall capability. If several are comparable, prefer the one with the strongest evidence, then the one most representative of the character in canon, and record the choice.
+20. Do not composite. Abilities from rejected versions are not carried into the ECV.
+21. Record the reasoning. The register notes each candidate, why it was or was not chosen, and any disagreement.
+    6.6 Evidence that may cross versions
+    Character-level traits that persist across periods, such as intelligence, training, experience, personality and leadership habits, are admissible for Fit ratings as long as they do not depend on abilities the ECV lacks. A Strategist or Captain rating may use planning or leadership shown in another period if the skill plainly persists, with the source period noted. Abilities (powers, techniques, equipment) are admissible only from the ECV.
+    6.7 Consistency check
+    Every evidence item carries a version tag. The ECV check fails if any rating cites an ability outside the ECV, or if two ratings rely on mutually incompatible abilities (for example, an ability only available before a permanent loss alongside one only available after). Failed records return to the rater.
+22. Canonical evidence standards
+    7.1 Principles
+    • Ratings rest on what canon shows or reliably implies, never on what a rater expects, prefers or has read in fan discussion.
+    • No fabrication. A rater records only references they have personally located and checked. A reference the rater cannot find, or recalls only from memory, is marked unverified and cannot support an approved rating.
+    • Absence of evidence is not evidence of absence. It lowers confidence. It does not prove a lack of ability (see 7.8 and the two kinds of zero in Section 5.4).
+    • Evidence is judged within the ECV (Section 6), apart from persisting traits (Section 6.6).
+    7.2 Source hierarchy [R]
+    Each universe's policy (Section 8.2) fixes which works fall into each tier. The tiers below set precedence, and the examples are generic.
+    Tier
+    Source type
+    Use
+    1
+    Primary canon: the original work in its main published or released form
+    Decisive. Direct demonstrations here are the strongest evidence
+    2
+    Official supplementary material approved by the creator, such as official guides, databooks and creator statements
+    Supports and clarifies. May settle ambiguity in Tier 1 but cannot override a clear Tier 1 demonstration
+    3
+    Official adaptation content that follows the primary canon
+    Usable to confirm Tier 1 content. Adaptation-only additions follow 7.3
+    4
+    Non-canon: spin-offs outside the universe's canon policy, games, filler declared non-canon, fan material, wikis
+    Not evidence. Wikis and fan pages can help find a scene but are never cited as proof. The rater must verify against Tier 1–3
+    Precedence. A direct on-page or on-screen demonstration outranks a statement. A higher tier outranks a lower tier on the same fact. A later official source supersedes an earlier one only if it explicitly changes the earlier fact. Otherwise the conflict is logged (7.7).
+    7.3 Primary medium, adaptation differences and adaptation-only content [R]
+    The universe policy names the primary medium (for example, the original publication). The default rules are:
+    • When the adaptation matches the primary medium, either may be cited, and the primary is preferred.
+    • When the adaptation changes an outcome or ability, the primary medium governs. The difference is logged.
+    • When the adaptation adds material (extra scenes, extended fights, added abilities, new characters), it is adaptation-only content. Default: excluded from Power and Fit, unless the universe policy explicitly accepts it as canon. Where accepted, it is Tier 3, can supplement but not override Tier 1, and its use is flagged for review.
+    • Presentation is not evidence. Animation spectacle, music, camera work and visual exaggeration do not raise a rating beyond what the events actually show.
+    • Translation and edition differences. If a decisive line differs across translations or editions, record both and treat the fact as contested (7.7).
+    7.4 Evidence grades [R]
+    Grade
+    Description
+    Examples of the kind of evidence (generic)
+    A: Direct demonstration
+    The ability or outcome is shown in canon, the effect is clear, and a reviewer could verify it from the source
+    A clearly shown engagement outcome, a shown technique and its effect, a shown act of leadership or planning with visible results
+    B: Reliable inference or authoritative statement
+    Not directly shown, but follows from Grade A facts through a stated mechanism, or is stated by an authoritative source with specific, credible grounds
+    An in-world expert or official source describing a specific capacity with reasons, a Tier 2 source clarifying a Tier 1 fact, a capability that follows plainly from a shown ability
+    C: Weak
+    Vague reputation, boasts, rumor, ambiguous scenes, unexplained claims, or inference that stretches beyond the premises
+    Villain bravado, rumor, off-hand praise without grounds, a single ambiguous scene
+    Evidence quality, rating and confidence are related but distinct. The grade describes the source, the rating describes the character, and confidence describes how sure the rater is. Grade A, B and C have default ceilings, with justified exceptions, in Section 3.5 (Power) and Section 5.4 (Fit). An authoritative canonical statement is not automatically capped: where it clearly and specifically establishes an ability, it can support a higher rating with a recorded justification. Quality, not count, decides the grade. One clear, verifiable demonstration is Grade A, and five vague mentions are still Grade C.
+    7.5 Demonstrated feats versus statements
+    Evidence
+    Treatment
+    Demonstrated feat in canon
+    Grade A if the result and conditions are clear
+    Statement by the narrator or an official supplementary source
+    Usually Grade B, and Grade A if it states a specific fact about an event
+    Statement by a knowledgeable in-world character, with stated grounds
+    Grade B
+    Statement by an in-world character who is biased, deceived, boasting or lacks knowledge
+    Grade C
+    Statements of rank, title or reputation without detail
+    Grade C, and used only as context
+    Contradiction between a statement and a demonstration
+    The demonstration wins unless the demonstration is itself ambiguous (7.7)
+    7.6 Reliable inference versus unsupported speculation
+    Reliable inference (Grade B) is allowed when all of the following are true:
+23. The premises are canonical facts of Grade A or authoritative Grade B.
+24. The mechanism is stated in one or two sentences. If it cannot be stated, it is speculation.
+25. The inference extends no more than one step beyond the demonstrated facts.
+26. No canonical evidence contradicts it.
+27. A second reviewer, given the same premises, would reach the same conclusion.
+    Examples of acceptable inference: a character who consistently defeats a type of opponent can handle that type of opponent in a new setting. An ability applied in a way its stated rules clearly allow. A rater should note that the inference carries Grade B and so is subject to the default ceiling for Grade B, with exceptions as in Section 3.5.
+    Speculation (not evidence) includes hypothetical matchups, "what if" extrapolation, power-scaling chains across several comparisons, fan interpretation of unclear scenes, assuming growth the canon has not shown, and assuming any ability that "must" exist because the character is important. Speculation is not recorded as evidence and never justifies a high rating. It may be recorded in the notes as a reason a rating might be wrong.
+    7.7 Contradictory evidence and outliers
+    Resolution order for contradictions:
+28. Check the tier, with higher tiers prevailing on the same fact.
+29. Check directness, with demonstration over statement.
+30. Check version, with evidence outside the ECV set aside (apart from persisting traits).
+31. Check the weight of the pattern, with the consistent majority of independent demonstrations prevailing over a single exception.
+32. If still unresolved, do not average. Record both facts, rate at the level that both readings support (the lower), record the higher as the plausible alternative, and set confidence to Low.
+    Outliers. A result that contradicts two or more independent Grade A items is an outlier. It is excluded from the rating and logged with the reason, such as a handicap, exhaustion, ambush, deception or narrative convenience. The rater must justify why it is an outlier. Evidence is never excluded merely because it is inconvenient. If the supposed outlier cannot be explained, the contradiction is logged and the record is reviewed.
+    7.8 Limited canonical appearances
+    A character with little canon is rated like anyone else, on what is clearly shown and reliably inferable. Rules:
+    • Limited screen time never caps a rating directly. Evidence quality does, through Section 3.5 and Section 5.4. One clear Grade A demonstration can support up to level 4.
+    • A character with few demonstrations has lower confidence, not a lower rating.
+    • For roles with no evidence, Fit is 0, recorded as an unevidenced zero unless canon contradicts the capability.
+    • Where evidence supports two adjacent levels equally, take the lower and record the alternative. This rule is a tie-break for doubt, not a general discount.
+    • If the whole record is too thin to rate responsibly, the character is held (Section 7.10) and not approved until more evidence is available. It is not rated by guesswork.
+    7.9 Evidence confidence and uncertainty documentation
+    Each rating (Power and each Fit) has a confidence level:
+    Confidence
+    Meaning
+    High
+    Supported by Grade A evidence, no unresolved conflicts, and the level is not sensitive to a reasonable alternative reading
+    Medium
+    Supported by a single Grade A item or Grade A plus Grade B, with minor ambiguity, or by consistent Grade B
+    Low
+    Grade B or C only, unresolved conflicts, sparse evidence, adaptation-only support, or a level sensitive to the reading
+    Every rating record documents, at minimum:
+    • The level, the ECV identifier, and the confidence.
+    • The evidence items, each with source, locator (chapter, episode, volume or equivalent), tier, grade, and whether the reference was verified or unverified.
+    • The ability classes used (Core, Conditional, Excluded) for any ability that affected the rating.
+    • The plausible alternative level and what evidence would change the rating.
+    • Any contradictions, outliers or inferences used.
+    • Which unevaluated characters, if any, the evidence depends on (Section 3.4).
+    The exact record format and field names belong to Module 2B and Module 4 [D].
+    7.10 Review requirements and status of uncertain evaluations
+    Status path: Draft → Evidence-complete → Reviewed → Approved. Only Approved records can enter a production dataset. A record that cannot reach Approved is Held.
+    Situation
+    Review
+    Routine record: Grade A support, no unresolved conflicts, Medium or High confidence, no triggers below
+    Automated validation, then human approval with the rest of the batch
+    Power 5 or any Fit 5
+    Independent AI review: a separate pass rates from the evidence log without seeing the first ratings, then differences are reconciled against the evidence
+    Low confidence, an exception to a default ceiling, inference, contradiction, outlier, adaptation-only evidence, a disputed ECV, or dependence on unevaluated characters
+    Independent AI review of the reasoning. The record is listed for human attention in the batch summary
+    Unverified references
+    Cannot be approved until verified
+    Independent review differs by 2 or more levels, or the case is controversial
+    Human decision, informed by a short disagreement note
+    Independent review differs by 1 level
+    Reconcile against the evidence and record the outcome. Escalate to a human only if unresolved
+    Human approvers approve batches, decide important disagreements and rule on controversial cases. They are not required to re-rate each character, and no multiple-rater or formal adjudication procedure is required for every record. A random sample audit of routine records by an independent AI pass monitors consistency (Section 8.8). Uncertain ratings are not guessed into production: a Low-confidence rating either gains better evidence, is approved by a human with the uncertainty recorded, or is held. Test and sandbox datasets may include Draft records, but production datasets include Approved records only [R].
+33. Character evaluation workflow
+    8.1 Overview
+    The workflow has two phases. Phase A is done once per universe and again only when its inputs change. Phase B is repeated for each batch of characters. Batches of roughly 10 to 25 characters from one universe keep review manageable and let consistency be checked while examples are fresh [R]. The exact batch size can be tuned.
+    Who does what. Claude drafts the evidence logs and ratings. An independent AI pass reviews records where the triggers in Section 7.10 apply. Automated validation checks the data. A human approves batches, decides important disagreements and rules on controversial cases. Approved records are immutable and published only in new dataset versions [F in outline].
+    Phase
+    Step
+    Output
+    A
+    8.2 Universe canonical policy
+    Approved policy document
+    A
+    8.3 Power anchors
+    Validated, versioned anchor set
+    A
+    8.4 Role Fit calibration examples
+    Versioned calibration set
+    B
+    8.5 Establish ECV and gather evidence
+    Version register and evidence log per character
+    B
+    8.6 Rate Fit, then Power
+    Draft ratings with confidence
+    B
+    8.7 Calculate scores and run consistency checks
+    Check report
+    B
+    8.8 Review and approve
+    Approved or Held records
+    B
+    8.10 Assemble dataset version
+    Immutable dataset version
+    Ongoing
+    8.9 Revision
+    New record revisions and new dataset versions
+    8.2 Establish the universe canonical policy (Phase A)
+    For each universe, before any character is rated, write a short policy that fixes:
+    • The primary medium and which works fall into each source tier (Section 7.2).
+    • Whether adaptation-only content is accepted (default: not accepted).
+    • Which supplementary materials count as Tier 2.
+    • The universe's recurring supernatural or technical rules that affect how abilities are read, and the standard conditions for "ready state" (Section 6.3).
+    • Default handling of story arcs and versions (how substantial change is recognized, Section 6.5).
+    • Name, spelling and translation conventions for locating evidence.
+    • The universe's role vocabulary mapped to the seven roles, where useful. For example, which in-universe jobs correspond to Support or Healer.
+    The policy is reviewed and approved once, versioned, and referenced by every record rated under it.
+    8.3 Select and validate Power anchors (Phase A)
+34. Select candidates. For each Power level 1 to 5, pick one to three characters with abundant, clear, mostly Grade A evidence in a single stable version. Prefer characters whose evidence is easy to verify and whose level is unlikely to be disputed.
+35. Describe, then place. Place each candidate by the level descriptions in Section 3.2 and the evidence standard in Section 3.5.
+36. Validate for consistency. Check that the anchors' levels are broadly consistent with canonical outcomes between them. Counters, compatibility, circumstances and tactical advantages produce legitimate exceptions, so outcomes need not form a perfectly ordered hierarchy. Unexplained contradictions are reviewed. Anchor validation uses canonical outcomes and shown abilities, never previously assigned ratings (Section 3.4).
+37. Resolve conflicts by returning to the evidence, never by choosing whichever level gives a preferred distribution.
+38. Freeze and version. The approved set becomes Anchor Set vN for that universe. Characters in the anchor set go through the normal review in Phase B as well.
+    Changing an anchor is a versioned change and triggers an impact review of characters rated against it (Section 8.9).
+    8.4 Select useful Role Fit calibration examples (Phase A)
+    Calibration examples teach raters what "dedicated member standard" and "benchmark" mean in a given universe [R].
+    • For each role, choose one to three examples each for levels 3, 4 and 5 where evidence is clear and not contested, with brief written reasons. Where the universe has no example of a level, say so and use the rubric text.
+    • Add boundary examples for the pairs in Section 4.3 (for instance, a character whose ability is clearly Support and not Healer).
+    • Add a few low-level examples (0, 1, 2) for each role, especially unevidenced zeros.
+    • Examples illustrate standards. They are not quotas, a ranking, or a template for distribution [F, no distribution caps].
+    • A calibration example is rated through the normal process, and an independent AI-assisted review checks that it is rated the same way. Disagreement is resolved from the evidence and the rubric wording may be clarified.
+    Calibration examples may be added as new characters are approved and are versioned like anchors.
+    8.5 Establish the ECV and gather evidence (Phase B)
+    For each character in the batch:
+39. Open a version register and list candidate versions (Section 6.5). Select and record the ECV. If the choice is not clear, flag it for review before rating.
+40. Gather evidence. Search the sources under the universe policy and record each item with source, locator, tier, grade, version tag and verified status (Section 7.9). Do not rely on memory or on Tier 4 material as proof.
+41. Classify abilities as Core, Conditional or Excluded (Section 6.3 and Section 6.4).
+42. Search for each role. For every one of the seven roles, perform and document a short targeted search. A role with no results becomes an unevidenced zero. This prevents roles being skipped silently.
+43. Note dependencies on unevaluated characters and on adaptation-only content.
+    The evidence log is neutral: it records what canon shows, not ratings.
+    8.6 Assign Fit ratings, then Power (Phase B)
+    Order and independence [R]. Draft v1 said Power was rated first and Fit rated without looking at Power, which cannot both hold for one rater. The recommended order is:
+44. Fit first, with Power hidden. Rate the seven Fit ratings from the evidence log without seeing or assigning Power. This reduces double-counting through the Attacker and Tank overlap.
+45. Rate each role independently, one at a time. For each role: state the core question, list the evidence that counts, apply the ceilings in Section 5.4, assign a level, record confidence and the plausible alternative. Do not let a high rating in one role raise another, and do not rate by "the character feels like an X".
+46. Then rate Power against the anchor set using the decision rule in Section 3.3 and the evidence standard in Section 3.5.
+47. Do not revise Fit after seeing Power except to correct a documented error. A revision must cite the evidence, not the Power value.
+    For AI-assisted rating, Fit and Power are produced in separate passes, with the Fit pass done without Power visible. An independent review pass supplies the independence needed, with no second human rater required.
+    8.7 Calculate role scores and check consistency (Phase B)
+    Scores. Role Scores come from the approved deterministic formula only. Calculated scores are never edited.
+    Automated and manual checks:
+    Check
+    Purpose
+    Range and integer check: Power 1–5, Fit 0–5, all integers
+    Data validity
+    ECV check: every cited ability belongs to the ECV, with no incompatible pairs (Section 6.7)
+    One coherent version
+    Ceiling check: any rating above the default ceiling for its evidence grade has a recorded justified exception
+    Evidence discipline
+    Role-rule check: Healer above 0 needs the ability to treat others. Tank 4 or 5 and Assassin 3 or above need the suitability evidence in Section 5.5, and are flagged if they rest on Power, speed or lethality alone
+    Role boundaries
+    Double-counting check: no Fit relies on general strength as its reason
+    Section 4.4
+    Calibration comparison: ratings for similar evidence match the calibration examples
+    Consistency across characters
+    Anchor sanity: anchor ratings unchanged, and new ratings are broadly consistent with anchor comparisons, allowing for counters and matchup exceptions
+    Stable scale
+    Plausibility flags: for example, Tank 4 or 5 with Power 1, or Power 5 with Attacker 0
+    Prompts a look at the evidence, never an automatic change
+    Unverified and dependency flags
+    Section 7.10
+    Distribution diagnostics. The correlation between Power and Fit per role, and the number of roles per character at Fit 4 or higher, are reported with each release as advisory indicators (Section 2.6). They never change a rating by themselves. A rating changes only if a check finds that the evidence or the rubric was misapplied.
+    8.8 Review uncertain cases and approve (Phase B)
+48. Automated validation runs first (Section 8.7).
+49. Triage. The record is classed as routine or flagged, using the triggers in Section 7.10.
+50. Independent AI review of flagged records. A separate pass re-rates from the evidence log without seeing the first ratings for Power 5 and Fit 5, and reviews the reasoning for other flagged records. Differences are reconciled against the evidence. A rating changes only on cited evidence, never to fit a desired distribution.
+51. Sample audit. A random sample of routine records is re-rated by an independent AI pass. The sample rate is a tunable setting. High disagreement widens the sample and prompts a look at the calibration examples.
+52. Human approval of the batch. The approver sees a summary of flagged records, exceptions to default ceilings, disagreements and controversial cases, and approves or holds records. Humans are not required to re-rate characters.
+53. Record the outcome, including dissent and accepted uncertainty. An Approved record is immutable (Section 8.10).
+    8.9 Revise evaluations when new information appears
+    Trigger
+    Response
+    New canonical material (new chapters, episodes, official supplements)
+    Re-open the affected characters. Check whether the ECV changes, whether new evidence upgrades a rating, whether an unevidenced zero can now be evidenced, or whether the new material creates a new candidate version
+    Error found (misread source, wrong version, unverified reference proved wrong)
+    Correct with a new record revision and note the error
+    New universe policy decision
+    Review records affected by the policy, such as accepted adaptation content
+    Anchor set or calibration change
+    Impact review of all characters rated against the changed anchors. Re-rate only those whose evidence comparison changes
+    Diagnostic indicators flagged
+    Audit evidence quality only. No re-rating for distribution reasons
+    Rubric clarification
+    Check affected ratings. Apply only where the clarified rubric gives a different result from the same evidence
+    Revision mechanics. An approved record is never edited. A revision is a new record that references the previous one, goes through the same review proportionate to the change, and takes effect only in a new dataset version (Section 8.10). Revisions are collected into periodic releases and not published one by one, which limits churn. Every revision records the reason, the evidence and the approver.
+    8.10 Compatibility with the immutable dataset version contract
+    Module 1 requires that the engine stores an opaque dataset version, never reads ratings, and that Match Resolution reads ratings from that same version. Module 4 keeps it retrievable and unchanged for active and past matches. The workflow supports this as follows [R]:
+    • A dataset version is a frozen set of Approved records plus the scoring formula and weights version, the universe policy version, the anchor set version and the calibration set version in force. Approved records only.
+    • Once published, a dataset version is never modified. Any change, including a correction, creates a new dataset version.
+    • Matches that started on an older version continue to resolve using that version.
+    • The version identifier is opaque to Module 1 and Module 3. The mapping from identifier to contents is Module 2B and Module 4 work [D].
+    • Evaluation work in progress never modifies a published version. Drafts live outside it.
+    • Characters used in a dataset version and the rarity assigned to them are separate concerns. Rarity tiers are not defined here [D].
+    8.11 Keeping the process practical for hundreds of characters
+    • Tiered effort [R]. Well-evidenced characters with unremarkable ratings need a light pass: evidence log, ratings, automated checks and sample audit. Only the triggers in Section 7.10 call for deeper review. Most of the effort goes to the highest ratings and the least certain evidence.
+    • Reuse. Universe policy, anchors and calibration examples are done once and reused for every later batch.
+    • Anchors first, then outward. Evaluate characters who appear in the same story arcs together, so evidence is gathered once.
+    • Defer hard cases. Low-evidence characters are held instead of blocking a batch.
+    • Reconcile in batches. Reviewers handle disagreements at the end of each batch, not continuously.
+    • Track the work. A simple register lists each character's status, confidence flags and pending dependencies.
+54. Important decisions requiring approval
+    Your review of Draft v2 is recorded below. Approved items are now [F]. Revised items show how Draft v3 treats them.
+
+#
+
+Decision
+Status
+Treatment in Draft v3
+D1
+Self-only regeneration is Healer Fit 0. Trivial first aid or minor healing of others is Fit 1
+Approved
+Unchanged (Section 5.5, 5.6)
+D2
+Evidence grades with ceilings
+Approved in principle, revised
+A, B and C grades and confidence levels are kept. Ceilings are defaults with justified exceptions, and speculation never justifies a high rating (Sections 3.5, 5.4, 7.4)
+D3
+Fit rated first with Power hidden, then Power
+Approved
+Unchanged (Section 8.6)
+D4
+Conditional abilities
+Revised
+The one-level limit is removed. Conditional abilities are weighed on actual effectiveness, accessibility, sustainability, cost and reliability, with no replacement numeric cap (Section 6.3)
+D5
+Universe-relative standard for Power and the Fit benchmark
+Approved
+Unchanged (Section 3.1)
+D6
+Role evidence limits
+Approved in principle, with justified exceptions
+Healer self-only 0 stays. The Tank and Assassin numeric caps are replaced by suitability evidence that does not need a role record (Section 5.5, 5.7)
+D7
+Adaptation-only content excluded by default
+Approved
+Unchanged (Section 7.3)
+D8
+Doubt handling: lower level when two are equally supported, Approved records only in production
+Approved
+Unchanged (Sections 3.5, 7.10)
+D9
+Diagnostic thresholds are advisory
+Approved
+Unchanged (Section 2.6)
+D10
+Review intensity
+Simplified
+AI-assisted rating and independent AI review where triggered, automated validation, human approval of batches and controversial cases (Sections 7.10, 8.8)
+Answers to the three questions.
+
+1.  Raters and reviewers: AI-assisted evaluation, primarily by Claude, with independent AI-assisted review where necessary and human approval of batches, important disagreements and controversial cases.
+2.  First universe: Naruto for the initial calibration sample. This is a calibration choice and does not confirm the launch roster.
+3.  Primary medium: the original canonical work by default, with universe-specific exceptions in the universe policy.
+4.  Handoff notes for Module 2B
+    Module 2B must do, and has not been done here:
+    • Use Naruto as the calibration universe (a calibration choice, not a confirmed launch roster). Write its universe policy and choose its anchors, then rebuild the 14-character calibration sample from sources, treating Draft v1's sample as unverified. All earlier correlations, scores and "best scorer" findings are [P].
+    • Check the scoring model empirically on the verified sample, including ties, Fit and Power overlap and role differences.
+    • Define evaluation data requirements, including the evidence record fields from Section 7.9.
+    • Define the immutable dataset version contents and the mapping from the opaque identifier, including scoring, policy, anchor and calibration versions.
+    • Define module interfaces (Module 3 reads Fit and Power separately, Module 4 stores dataset versions).
+    • Define independent testing and acceptance criteria.
+    • Complete the final decision register and the deferred considerations.
+    Facts and constraints for Module 2B:
+    • The formula, weights, rating ranges and preserved decisions in Section 1 are fixed unless a substantial problem is shown.
+    • The score table in Section 2.1 has been verified. Equal-score probabilities under uniform random ratings are 12.2% (Attacker, Tank), 5.1% (Captain) and 3.3% (others).
+    • Tie-breaking, rarity and matchup design remain out of scope until their modules.
+    • The ECV policy, the evidence ceilings and the role boundary tests are the main items to validate with real characters. Watch in particular how Conditional abilities are weighed, justified exceptions to default ceilings, Tank and Assassin suitability judgments, partner-dependent abilities, and the Healer 0 and 1 boundary.
+    • Do not adjust ratings to fix distributions. Record observed distributions as diagnostics only.
+    • Every claim about a specific character in the calibration sample must carry verified references. Nothing should be written from memory.
+5.  Change summary from Draft v1
+    11.1 Changes from Draft v2 to Draft v3
+    Area
+    Change
+    Evidence ceilings (3.5, 5.4, 7.4)
+    A, B and C grades and confidence kept. Ceilings are defaults with justified exceptions, and authoritative statements are not automatically capped at 3. Grade C and speculation never justify a high rating
+    Conditional abilities (6.3, 6.4)
+    One-level limit removed. Abilities are weighed on actual effectiveness, accessibility, sustainability, cost and reliability. One-time power-ups and out-of-version abilities stay excluded
+    Partner, assistance and borrowed (6.4)
+    Separated by two questions: whose ability is it, and can the character repeat it by their own method. Conflicting treatment removed
+    Role suitability (4.1, 5.5, 5.7)
+    Suitability principle added. Tank and Assassin numeric caps replaced by capability-based evidence. Healer self-only stays 0. All seven rubrics reviewed
+    Review (7.10, 8.1, 8.8)
+    Simplified to AI-assisted rating, independent AI review for flagged records, automated validation and human batch approval
+    Power and ordering (3.2, 3.5, 8.3)
+    Power is not a win guarantee. Transitive outcomes are not required. Anchor validation allows counters and exceptions
+    Score minimums (2.1)
+    Role minimums stated, and a score of 0 is not attainable
+    Rarity and matchups (2.7, 2.8)
+    No assumption that rarity reveals Power, and same-role matchups are not treated as settled
+    Decisions and answers (9, 10)
+    Register updated. Naruto is the calibration universe. The original work is the default primary medium
+    11.2 Changes from Draft v1 to Draft v2
+    Area
+    Draft v1
+    Draft v2
+    Executive summary
+    Relied on unavailable sample findings
+    Rewritten. Findings from the sample marked pending
+    Scoring analysis
+    Included correlations and best-scorer claims
+    Formula table verified. Tie-rate wording corrected. Sample-based findings marked pending. Contradiction about best scorers noted. Thresholds made advisory
+    Power
+    Required counts of demonstrations against levelled opponents
+    Evidence-quality standard with ceilings. Ratings never used as evidence. Circularity rules added
+    Roles
+    Seven roles, with inconsistent Support, Tank and Healer treatment of shields
+    Same seven roles. "Who takes the threat?" test added, with boundary tests for every pair and the Power overlaps
+    Fit rubrics
+    Some top levels needed large-scale activity. Healer self-only was Fit 1. Tank 4 needed repeated protection
+    Scale, opportunity and prominence separated from suitability. Levels based on quality. Healer self-only is 0. Tank 4 needs one clear protective function. Two kinds of zero added
+    Rating order
+    Power first, Fit "without looking at Power"
+    Fit first with Power hidden, then Power
+    Section 6
+    Absent
+    Full ECV policy with Core, Conditional and Excluded classes
+    Section 7
+    Absent
+    Source tiers, adaptation rules, grades, statements, inference, contradictions, outliers, sparse evidence, confidence, review
+    Section 8
+    Absent
+    Universe-and-batch workflow compatible with immutable dataset versions
+    Sections 9–11
+    Absent
+    Decisions, handoff notes, this summary
+    Unchanged: approved weights, formula, rating scales, the seven roles, no distribution caps, hidden ratings, one version per character and the scope exclusions.
