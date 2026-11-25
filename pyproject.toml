@@ -1,0 +1,19 @@
+[project]
+name = "kayi-arena"
+version = "0.1.0"
+description = "Kayi Arena — Competitive Telegram anime character drafting game"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
