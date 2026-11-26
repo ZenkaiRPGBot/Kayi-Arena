@@ -318,12 +318,20 @@ class MongoMatchStore:
             self._db["active_player_locks"].find({"_id": {"$in": list(match.players)}})
         )
         if existing_locks:
+            lock_mids = list({str(l.get("match_id", "")) for l in existing_locks if l.get("match_id")})
+            if lock_mids and self._db["matches"].find_one({"_id": {"$in": lock_mids}, "pending_commit": True}) is not None:
+                self.reconcile_orphan_locks()
+                existing_locks = list(
+                    self._db["active_player_locks"].find({"_id": {"$in": list(match.players)}})
+                )
+        if existing_locks:
             raise PersistenceConflictError(
                 f"Active match lock conflict: player {existing_locks[0]['_id']} already locked."
             )
         now = _utc_now()
         acquired: list[str] = []
         match_written = False
+        challenge_attempted = False
         try:
             doc = _serialize_match(match)
             doc["pending_commit"] = True
@@ -334,17 +342,51 @@ class MongoMatchStore:
                     {"_id": pid, "player_id": pid, "match_id": match.match_id, "updated_at": now}
                 )
                 acquired.append(pid)
+            challenge_attempted = True
             self.save_challenge(challenge)
             self._db["matches"].update_one(
                 {"_id": match.match_id}, {"$set": {"pending_commit": False}}
             )
         except Exception as exc:
-            if acquired:
-                self._db["active_player_locks"].delete_many(
-                    {"_id": {"$in": acquired}, "match_id": match.match_id}
-                )
             if match_written:
-                self._db["matches"].delete_many({"_id": match.match_id})
+                try:
+                    current_match = self._db["matches"].find_one({"_id": match.match_id})
+                    if current_match is not None and current_match.get("pending_commit") is False:
+                        return
+                except Exception:
+                    pass
+
+            challenge_rolled_back = not challenge_attempted
+            if challenge_attempted:
+                try:
+                    self._db["challenges"].update_one(
+                        {
+                            "_id": challenge.challenge_id,
+                            "status": ChallengeStatus.ACCEPTED.value,
+                            "match_id": match.match_id,
+                        },
+                        {
+                            "$set": {
+                                "status": ChallengeStatus.OPEN.value,
+                                "accepted_by": None,
+                                "match_id": None,
+                                "updated_at": _utc_now(),
+                            }
+                        },
+                    )
+                    challenge_rolled_back = True
+                except Exception:
+                    challenge_rolled_back = False
+
+            if challenge_rolled_back:
+                if acquired:
+                    self._db["active_player_locks"].delete_many(
+                        {"_id": {"$in": acquired}, "match_id": match.match_id}
+                    )
+                if match_written:
+                    self._db["matches"].delete_many(
+                        {"_id": match.match_id, "pending_commit": True}
+                    )
             raise PersistenceConflictError(
                 f"Active match lock conflict for match {match.match_id}: {exc}"
             ) from exc
@@ -398,27 +440,27 @@ class MongoMatchStore:
         for inc_doc in list(self._db["matches"].find({"pending_commit": True})):
             inc_mid = str(inc_doc.get("match_id", inc_doc.get("_id", "")))
             inc_cid = inc_doc.get("challenge_id")
-            self._db["active_player_locks"].delete_many({"match_id": inc_mid})
-            self._db["matches"].delete_many({"_id": inc_mid, "pending_commit": True})
-            if inc_cid:
-                chl_doc = self._db["challenges"].find_one({"_id": inc_cid})
-                if (
-                    chl_doc is not None
-                    and chl_doc.get("status") == ChallengeStatus.ACCEPTED.value
-                    and chl_doc.get("match_id") == inc_mid
-                ):
-                    self._db["challenges"].update_one(
-                        {"_id": inc_cid},
-                        {
-                            "$set": {
-                                "status": ChallengeStatus.OPEN.value,
-                                "accepted_by": None,
-                                "match_id": None,
-                                "updated_at": _utc_now(),
-                            }
-                        },
-                    )
-            removed += 1
+            if inc_cid and self._db["matches"].find_one({"_id": inc_mid, "pending_commit": True}) is not None:
+                self._db["challenges"].update_one(
+                    {
+                        "_id": inc_cid,
+                        "status": ChallengeStatus.ACCEPTED.value,
+                        "match_id": inc_mid,
+                    },
+                    {
+                        "$set": {
+                            "status": ChallengeStatus.OPEN.value,
+                            "accepted_by": None,
+                            "match_id": None,
+                            "updated_at": _utc_now(),
+                        }
+                    },
+                )
+            if self._db["matches"].find_one({"_id": inc_mid, "pending_commit": True}) is not None:
+                self._db["active_player_locks"].delete_many({"match_id": inc_mid})
+            res = self._db["matches"].delete_many({"_id": inc_mid, "pending_commit": True})
+            if res is None or getattr(res, "deleted_count", 0):
+                removed += 1
 
         active_matches = self.load_active_matches()
         active_by_id = {m.match_id: m for m in active_matches}
