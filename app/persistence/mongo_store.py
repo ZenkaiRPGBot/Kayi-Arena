@@ -325,9 +325,9 @@ class MongoMatchStore:
         acquired: list[str] = []
         match_written = False
         try:
-            self._db["matches"].replace_one(
-                {"_id": match.match_id}, _serialize_match(match), upsert=True
-            )
+            doc = _serialize_match(match)
+            doc["pending_commit"] = True
+            self._db["matches"].replace_one({"_id": match.match_id}, doc, upsert=True)
             match_written = True
             for pid in match.players:
                 self._db["active_player_locks"].insert_one(
@@ -335,6 +335,9 @@ class MongoMatchStore:
                 )
                 acquired.append(pid)
             self.save_challenge(challenge)
+            self._db["matches"].update_one(
+                {"_id": match.match_id}, {"$set": {"pending_commit": False}}
+            )
         except Exception as exc:
             if acquired:
                 self._db["active_player_locks"].delete_many(
@@ -376,7 +379,9 @@ class MongoMatchStore:
         return _doc_to_match(doc) if doc is not None else None
 
     def load_active_matches(self) -> list[ManagedMatch]:
-        docs = self._db["matches"].find({"status": MatchLifecycleStatus.DRAFTING.value})
+        docs = self._db["matches"].find(
+            {"status": MatchLifecycleStatus.DRAFTING.value, "pending_commit": {"$ne": True}}
+        )
         items = [_doc_to_match(d) for d in docs]
         items.sort(key=lambda m: m.created_at)
         return items
@@ -388,18 +393,49 @@ class MongoMatchStore:
         }
 
     def reconcile_orphan_locks(self) -> int:
-        """Remove active_player_locks whose match_id has no DRAFTING match, and ensure DRAFTING match locks exist."""
+        """Clean up incomplete (pending_commit) matches and orphan active_player_locks."""
+        removed = 0
+        for inc_doc in list(self._db["matches"].find({"pending_commit": True})):
+            inc_mid = str(inc_doc.get("match_id", inc_doc.get("_id", "")))
+            inc_cid = inc_doc.get("challenge_id")
+            self._db["active_player_locks"].delete_many({"match_id": inc_mid})
+            self._db["matches"].delete_many({"_id": inc_mid, "pending_commit": True})
+            if inc_cid:
+                chl_doc = self._db["challenges"].find_one({"_id": inc_cid})
+                if (
+                    chl_doc is not None
+                    and chl_doc.get("status") == ChallengeStatus.ACCEPTED.value
+                    and chl_doc.get("match_id") == inc_mid
+                ):
+                    self._db["challenges"].update_one(
+                        {"_id": inc_cid},
+                        {
+                            "$set": {
+                                "status": ChallengeStatus.OPEN.value,
+                                "accepted_by": None,
+                                "match_id": None,
+                                "updated_at": _utc_now(),
+                            }
+                        },
+                    )
+            removed += 1
+
         active_matches = self.load_active_matches()
         active_by_id = {m.match_id: m for m in active_matches}
-        removed = 0
         for lock_doc in list(self._db["active_player_locks"].find({})):
             mid = str(lock_doc.get("match_id", ""))
             if mid not in active_by_id:
                 live_doc = self._db["matches"].find_one(
-                    {"_id": mid, "status": MatchLifecycleStatus.DRAFTING.value}
+                    {
+                        "_id": mid,
+                        "status": MatchLifecycleStatus.DRAFTING.value,
+                        "pending_commit": {"$ne": True},
+                    }
                 )
                 if live_doc is None:
-                    self._db["active_player_locks"].delete_many({"_id": lock_doc["_id"]})
+                    self._db["active_player_locks"].delete_many(
+                        {"_id": lock_doc["_id"], "match_id": mid}
+                    )
                     removed += 1
         now = _utc_now()
         for match in active_matches:

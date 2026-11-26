@@ -47,6 +47,8 @@ class _FakeCollection:
                     return False
                 if "$nin" in v and val in v["$nin"]:
                     return False
+                if "$ne" in v and val == v["$ne"]:
+                    return False
             elif val != v:
                 return False
         return True
@@ -288,3 +290,68 @@ async def test_mongo_shared_client_without_uri_and_orphan_lock_recovery(tmp_path
     assert mstore.load_active_matches() == []
     assert mstore.reconcile_orphan_locks() == 0
     assert mstore.load_active_player_locks() == {}
+
+    # Crash-consistency: pending_commit=True match with partial/full locks & valid lock on another match
+    mdb.create_universe("naruto", "Naruto", active=True)
+    for idx in range(1, 15):
+        c = mdb.add_character(
+            character_id=f"c_{idx}",
+            universe_id="naruto",
+            name=f"Ninja {idx}",
+            canonical_version="Base",
+            rarity="Common",
+            power=3,
+            fit={r: 3 for r in SCORING_ROLES},
+            image=ImageMetadata(url_or_ref=f"https://cdn.example.org/{idx}.png", status=ImageValidationStatus.VERIFIED),
+        )
+        mdb.submit_for_review(c.character_id)
+        mdb.approve_character(c.character_id)
+    mdb.publish_dataset("naruto", "1.0.0")
+    _, res_valid = await mgr.handle_draft_command(
+        player_id="900", chat_id="-100", universe_arg="naruto", reply_to_user_id="901"
+    )
+    acc_valid = await mgr.accept_challenge(challenge_id=res_valid.challenge.challenge_id, player_id="901")
+    valid_mid = acc_valid.match.match_id
+
+    fake_db["matches"].insert_one(
+        {
+            "_id": "match-crashed-pending",
+            "match_id": "match-crashed-pending",
+            "challenge_id": "chl-crashed",
+            "status": "drafting",
+            "pending_commit": True,
+            "player_1_id": "801",
+            "player_2_id": "802",
+        }
+    )
+    fake_db["active_player_locks"].insert_one(
+        {"_id": "801", "player_id": "801", "match_id": "match-crashed-pending"}
+    )
+    fake_db["challenges"].insert_one(
+        {
+            "_id": "chl-crashed",
+            "challenge_id": "chl-crashed",
+            "challenge_type": "open",
+            "challenger_id": "801",
+            "target_player_id": None,
+            "universe_id": "naruto",
+            "game_mode": "ranked",
+            "chat_id": "-100",
+            "status": "accepted",
+            "created_at": 1.0,
+            "expires_at": 301.0,
+            "generation": 1,
+            "accepted_by": "802",
+            "match_id": "match-crashed-pending",
+        }
+    )
+    # Incomplete match must never be loaded as active
+    assert [m.match_id for m in mstore.load_active_matches()] == [valid_mid]
+    # Reconciliation removes pending_commit match + its partial lock, restores challenge to open, preserves valid lock 900
+    assert mstore.reconcile_orphan_locks() >= 1
+    assert "801" not in mstore.load_active_player_locks()
+    assert mstore.load_active_player_locks().get("900") == valid_mid
+    assert mstore.load_active_player_locks().get("901") == valid_mid
+    restored_chl, _ = mstore.load_challenge("chl-crashed")
+    assert restored_chl.status.value == "open"
+    assert restored_chl.match_id is None
