@@ -46,6 +46,7 @@ from app.telegram.ports import ProfileStatsProvider, UnavailableStatsProvider
 from app.telegram.safe_api import (
     edit_card_message_safe,
     edit_message_text_safe,
+    replace_text_with_photo_card_safe,
     send_message_safe,
     send_photo_or_text_safe,
 )
@@ -462,6 +463,29 @@ class ArenaTelegramCoordinator:
                     caption = f"<b>{cid}</b>\n\nChoose a role."
                     photo = None
                 markup = build_character_revealed_keyboard(match)
+
+            if not state.card_is_photo and photo is not None:
+                sent_card, now_is_photo = await replace_text_with_photo_card_safe(
+                    self.bot,
+                    chat_id=state.chat_id,
+                    old_message_id=state.card_message_id,
+                    photo=photo,
+                    caption=caption,
+                    reply_markup=markup,
+                    fallback_photo=self.config.card_back_ref or None,
+                )
+                if sent_card is not None:
+                    state.card_message_id = sent_card.message_id
+                    state.card_is_photo = now_is_photo
+                    await self.manager.attach_message_reference(
+                        match.match_id,
+                        MessageReference(
+                            chat_id=state.chat_id,
+                            message_id=str(state.card_message_id),
+                            kind="card",
+                        ),
+                    )
+                    return
 
             _, state.card_is_photo = await edit_card_message_safe(
                 self.bot,

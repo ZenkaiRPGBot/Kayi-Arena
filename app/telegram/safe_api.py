@@ -185,16 +185,43 @@ async def send_photo_or_text_safe(
     return msg, False
 
 
+async def replace_text_with_photo_card_safe(
+    bot: Bot,
+    *,
+    chat_id: int | str,
+    old_message_id: int,
+    photo: Any,
+    caption: str,
+    reply_markup: InlineKeyboardMarkup | None = None,
+    fallback_photo: Any | None = None,
+) -> tuple[Message | None, bool]:
+    """Upgrade a text card into a photo card by sending the photo and deleting the old text."""
+    sent, is_photo = await send_photo_or_text_safe(
+        bot,
+        chat_id=chat_id,
+        photo=photo,
+        caption=caption,
+        reply_markup=reply_markup,
+        fallback_photo=fallback_photo,
+    )
+    if sent is not None and is_photo:
+        try:
+            await bot.delete_message(chat_id=chat_id, message_id=old_message_id)
+        except Exception:
+            pass
+    return sent, is_photo
+
+
 async def edit_card_message_safe(
     bot: Bot,
     *,
     chat_id: int | str,
     message_id: int,
     is_photo: bool,
-    photo: str | None,
+    photo: Any | None,
     caption: str,
     reply_markup: InlineKeyboardMarkup | None = None,
-    fallback_photo: str | None = None,
+    fallback_photo: Any | None = None,
 ) -> tuple[bool, bool]:
     """Update an existing card message (photo or text) without losing controls.
 

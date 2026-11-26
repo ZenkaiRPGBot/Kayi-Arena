@@ -118,103 +118,98 @@ def render_home_group() -> str:
 
 _HELP_TOPICS: dict[str, tuple[str, str]] = {
     "menu": (
-        "📖 <b>Kayi Arena Guide</b>",
-        "Everything you need to know before entering the arena.\n\nSelect a topic below.",
-    ),
-    "getting_started": (
-        "⚔️ <b>Getting Started</b>",
+        "<b>How to Play</b>",
         "\n".join(
             [
-                "• Use <code>/arena</code> to choose an anime universe and mode (Ranked or Friendly).",
-                "• Use <code>/arena Naruto</code> to create an open challenge, or reply to another player to send a direct challenge.",
-                "• Use <code>/arena random</code> to jump into a random active universe.",
-                "• Use <code>/game</code> to jump back to or recover your active match.",
-            ]
-        ),
-    ),
-    "drafting": (
-        "🎴 <b>Drafting Rules</b>",
-        "\n".join(
-            [
-                "• 1v1 alternating draft — starting player is chosen randomly.",
-                "• Press <b>Shuffle</b> to draw a random character from the pinned universe dataset.",
-                "• Assign the drawn character to any open role on your 7-member team.",
-                "• Each player gets <b>2 skips</b> per match. A skipped character cannot appear on the very next draw.",
-                "• Assignments are permanent and no character may be drafted twice across both teams.",
+                "Build a team of seven anime characters and compete against another player.",
+                "",
+                "<b>01. Challenge</b>",
+                "Use /arena to challenge a player.",
+                "",
+                "<b>02. Shuffle</b>",
+                "Reveal a random anime character.",
+                "",
+                "<b>03. Assign</b>",
+                "Choose the role that suits your character best.",
+                "",
+                "<b>04. Battle</b>",
+                "Complete your team and win more role matchups than your opponent.",
+                "",
+                "You have 2 minutes per turn and 2 skips per match.",
+                "",
+                "<i>Choose wisely. Power alone won't win every battle.</i>",
             ]
         ),
     ),
     "roles": (
-        "🎭 <b>The Seven Roles</b>",
+        "<b>The Seven Roles</b>",
         "\n".join(
             [
-                "Every team fills seven canonical roles in order:",
-                "1. 👑 <b>Captain</b> — Leadership & command",
-                "2. 🧠 <b>Strategist</b> — Tactical planning",
-                "3. ⚔️ <b>Attacker</b> — Primary offense",
-                "4. 🛡️ <b>Tank</b> — Frontline durability",
-                "5. 🗡️ <b>Assassin</b> — Precision elimination",
-                "6. ✨ <b>Support</b> — Utility & team enablement",
-                "7. 💚 <b>Healer</b> — Recovery & sustain",
+                "👑 Captain — Leads the team.",
+                "🧠 Strategist — Outsmarts the enemy.",
+                "⚔️ Attacker — Deals powerful attacks.",
+                "🛡️ Tank — Endures attacks and protects allies.",
+                "🗡️ Assassin — Eliminates targets with precision.",
+                "✨ Support — Strengthens and assists allies.",
+                "💚 Healer — Heals injured teammates.",
+                "",
+                "The strongest fighter isn't necessarily the best healer or strategist.",
             ]
         ),
     ),
     "rarity": (
-        "💎 <b>Rarity System</b>",
+        "<b>Character Rarity</b>",
         "\n".join(
             [
-                "Characters belong to five rarity tiers:",
-                "⚪ Common — 30% draw weight",
-                "🟢 Uncommon — 30% draw weight",
-                "🔵 Rare — 22% draw weight",
-                "🟣 Epic — 13% draw weight",
-                "🟡 Legendary — 5% draw weight",
+                "⚪ Common — 30%",
+                "🟢 Uncommon — 30%",
+                "🔵 Rare — 22%",
+                "🟣 Epic — 13%",
+                "🟡 Legendary — 5%",
                 "",
-                "Exact Power, Role Fit, and calculated role scores stay hidden during drafting.",
+                "Higher rarity does not guarantee superiority in every role.",
+                "If a rarity tier has no available characters left, it is excluded from the draw.",
             ]
         ),
     ),
-    "ranked": (
-        "🏆 <b>Ranked Battles</b>",
+    "rules": (
+        "<b>Battle Rules</b>",
         "\n".join(
             [
-                "• <b>Ranked</b> matches are designed for competitive progression (Module 8).",
-                "• <b>Friendly</b> matches use the exact same drafting and resolution rules without competitive rating impact.",
-                "• Universal competitive ratings and leaderboards will activate once competitive progression is enabled.",
-            ]
-        ),
-    ),
-    "timers": (
-        "⏳ <b>Timers &amp; Skips</b>",
-        "\n".join(
-            [
-                "• Challenge expiration: <b>5 minutes</b> (300s).",
-                "• Turn duration: <b>2 minutes</b> (120s).",
-                "• Shuffle and Skip do <b>not</b> reset the turn timer.",
-                "• Assigning a character starts your opponent's 120s turn timer.",
-                "• If a turn expires, the opponent has <b>60s</b> to Claim Victory or grant a one-time <b>+60s extension</b> (once per player per match).",
-                "• If neither player responds, the match is abandoned with no winner.",
+                "• Both players build seven-member teams and alternate turns.",
+                "• Each character can be assigned only once across both teams.",
+                "• Assignments are permanent.",
+                "• Each player has two skips. A skipped character cannot appear in the immediately following draw.",
+                "• Shuffle and Skip do not reset the two-minute turn timer.",
+                "• Seven matching roles are compared: most role victories wins.",
+                "• Combined score breaks tied role-win counts; equal combined scores result in a draw.",
+                "• If a turn expires, the opponent has 60 seconds to claim victory or grant a one-time +60s extension. Mutual inactivity abandons the match.",
+                "• Voluntary forfeiture awards the win to your opponent.",
             ]
         ),
     ),
     "scoring": (
-        "📊 <b>Match Scoring</b>",
+        "<b>Advanced Scoring</b>",
         "\n".join(
             [
-                "• Once all 14 roles are filled, all seven role matchups are resolved deterministically.",
-                "• Each role score uses: <code>(Role Fit × 17) + (Power × 3)</code>.",
-                "• Winner is decided by <b>most role matchup wins</b>.",
-                "• If role wins are tied, the higher <b>combined team score</b> wins. Equal combined score results in a draw.",
+                "• Every character has a Power rating (1–5) and seven Role Fit ratings (0–5).",
+                "• Each role weights Role Fit and Power differently (for example, Healer/Support/Strategist use <code>(Fit × 17) + (Power × 3)</code>).",
+                "• Exact ratings stay hidden during drafting and are revealed in Detailed Results after the match.",
             ]
         ),
     ),
-    "faq": (
-        "❓ <b>Frequently Asked Questions</b>",
+    "cmds": (
+        "<b>Commands</b>",
         "\n".join(
             [
-                "• <b>Can I play two matches at once?</b> No — one active match per player globally.",
-                "• <b>Can I see ratings while drafting?</b> No — only character name, universe, and rarity are shown until the match ends.",
-                "• <b>What if a message gets deleted or buried?</b> Run <code>/game</code> and press <b>Recover Game</b>.",
+                "• <code>/start</code> — Home menu",
+                "• <code>/arena</code> — Choose a universe and start a match",
+                "• <code>/arena &lt;universe&gt;</code> — Start an open or reply challenge",
+                "• <code>/arena random</code> — Challenge in a random universe",
+                "• <code>/game</code> — View, recover, or forfeit your active match",
+                "• <code>/list</code> — Browse the character catalogue",
+                "• <code>/help</code> — Open this guide",
+                "• <code>/ping</code> — Check bot latency",
             ]
         ),
     ),

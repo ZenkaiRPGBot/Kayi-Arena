@@ -409,27 +409,33 @@ def build_catalogue_page_keyboard(
 
 
 def build_help_keyboard(topic: str = "menu") -> InlineKeyboardMarkup:
+    if topic == "rules":
+        return InlineKeyboardMarkup(
+            inline_keyboard=[
+                [_btn("Advanced Scoring", callback_data=encode_cb("hlp", "scoring"))],
+                [_btn("« Back", callback_data=encode_cb("hlp", "menu"))],
+            ]
+        )
+    if topic == "scoring":
+        return InlineKeyboardMarkup(
+            inline_keyboard=[[_btn("« Back", callback_data=encode_cb("hlp", "rules"))]]
+        )
     if topic != "menu":
         return InlineKeyboardMarkup(
-            inline_keyboard=[[_btn("« Back to Guide", callback_data=encode_cb("hlp", "menu"))]]
+            inline_keyboard=[[_btn("« Back", callback_data=encode_cb("hlp", "menu"))]]
         )
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [_btn("⚔️ Getting Started", callback_data=encode_cb("hlp", "getting_started"))],
+            [_btn("⚔️ Start Playing", callback_data=encode_cb("arena"), style=STYLE_PRIMARY)],
             [
-                _btn("🎴 Drafting Rules", callback_data=encode_cb("hlp", "drafting")),
-                _btn("🎭 The Seven Roles", callback_data=encode_cb("hlp", "roles")),
+                _btn("The Seven Roles", callback_data=encode_cb("hlp", "roles")),
+                _btn("Character Rarity", callback_data=encode_cb("hlp", "rarity")),
             ],
             [
-                _btn("💎 Rarity System", callback_data=encode_cb("hlp", "rarity")),
-                _btn("🏆 Ranked Battles", callback_data=encode_cb("hlp", "ranked")),
+                _btn("Battle Rules", callback_data=encode_cb("hlp", "rules")),
+                _btn("Commands", callback_data=encode_cb("hlp", "cmds")),
             ],
-            [
-                _btn("⏳ Timers & Skips", callback_data=encode_cb("hlp", "timers")),
-                _btn("📊 Match Scoring", callback_data=encode_cb("hlp", "scoring")),
-            ],
-            [_btn("❓ Frequently Asked Questions", callback_data=encode_cb("hlp", "faq"))],
-            [_btn("« Back to Home", callback_data=encode_cb("home"))],
+            [_btn("« Home", callback_data=encode_cb("home"))],
         ]
     )
 

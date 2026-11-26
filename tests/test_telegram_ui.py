@@ -155,6 +155,9 @@ class MockBotRecorder:
         self.edited_captions.append(kwargs)
         return self._make_message(kwargs["chat_id"])
 
+    async def delete_message(self, **kwargs: Any) -> bool:
+        return True
+
     async def __call__(self, method: Any, **kwargs: Any) -> Any:
         from aiogram.methods import AnswerCallbackQuery
 
@@ -765,4 +768,48 @@ def test_text_escaping_and_length_limits() -> None:
         player_names=evil_names,
     )
     assert len(cap) <= MAX_CAPTION_LENGTH
+    db.close()
+
+
+@pytest.mark.asyncio
+async def test_help_navigation_and_all_pages() -> None:
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION)
+    bot = MockBotRecorder()
+    cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot")
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr)
+
+    user = _make_user(101, "Alex")
+    await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=user, text="/help"))
+    help_msg_id = 100 + len(bot.sent_messages)
+    assert "How to Play" in bot.sent_messages[-1]["text"]
+    assert "01. Challenge" in bot.sent_messages[-1]["text"]
+
+    for idx, (topic, expected) in enumerate(
+        [
+            ("roles", "The Seven Roles"),
+            ("rarity", "Character Rarity"),
+            ("rules", "Battle Rules"),
+            ("scoring", "Advanced Scoring"),
+            ("cmds", "Commands"),
+            ("menu", "How to Play"),
+        ],
+        start=10,
+    ):
+        await dp.feed_update(
+            bot,
+            _make_callback_update(
+                idx,
+                chat_id=101,
+                chat_type="private",
+                message_id=help_msg_id,
+                user=user,
+                data=encode_cb("hlp", topic),
+                recorder=bot,
+            ),
+        )
+        assert expected in bot.edited_messages[-1]["text"]
+
+    await coordinator.shutdown()
     db.close()
