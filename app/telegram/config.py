@@ -48,6 +48,8 @@ class BotConfig:
     updates_url: str = DEFAULT_UPDATES_URL
     support_url: str = DEFAULT_SUPPORT_URL
     db_path: str = "data/kayi_arena.sqlite3"
+    match_db_path: str = "data/kayi_arena_state.sqlite3"
+    restart_state_path: str = ""
     dataset_kind: DatasetKind = DatasetKind.PRODUCTION
     home_banner_ref: str = ""
     card_back_ref: str = ""
@@ -71,6 +73,8 @@ class BotConfig:
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
             support_url=_env_str("SUPPORT_URL", DEFAULT_SUPPORT_URL),
             db_path=_env_str("ARENA_DB_PATH", "data/kayi_arena.sqlite3"),
+            match_db_path=_env_str("ARENA_STATE_DB_PATH", "data/kayi_arena_state.sqlite3"),
+            restart_state_path=_env_str("RESTART_STATE_PATH", ""),
             dataset_kind=dataset_kind,
             home_banner_ref=_env_str("HOME_BANNER_REF", ""),
             card_back_ref=_env_str("CARD_BACK_REF", ""),

@@ -26,6 +26,7 @@ from typing import Callable
 from aiogram import Bot
 from aiogram.enums import ParseMode
 
+from app.persistence.models import StartupRecoveryReport
 from app.telegram.config import BOT_BRAND_NAME, BotConfig
 
 logger = logging.getLogger(__name__)
@@ -117,14 +118,16 @@ class RestartNotifier:
         except OSError as exc:
             logger.warning("Could not persist restart state: %s", type(exc).__name__)
 
-    async def notify_once(self) -> bool:
+    async def notify_once(
+        self, *, recovery_report: StartupRecoveryReport | None = None
+    ) -> bool:
         """Deliver startup notification once per process without blocking startup."""
         async with self._lock:
             if self._attempted:
                 return False
             self._attempted = True
             try:
-                return await self._notify()
+                return await self._notify(recovery_report=recovery_report)
             except asyncio.CancelledError:
                 raise
             except Exception:
@@ -150,7 +153,9 @@ class RestartNotifier:
                 logger.warning("Could not notify %s: %s", chat_id, type(exc).__name__)
         return False
 
-    async def _notify(self) -> bool:
+    async def _notify(
+        self, *, recovery_report: StartupRecoveryReport | None = None
+    ) -> bool:
         targets = self.targets()
         if not targets:
             logger.info("Restart notification skipped: OWNER_ID/LOG_CHANNEL_ID not set.")
@@ -183,6 +188,23 @@ class RestartNotifier:
         ]
         if reason:
             lines.append(f"<b>Note:</b> {html.escape(reason)}")
+        if recovery_report is not None and recovery_report.has_activity:
+            lines.append("")
+            lines.append("<b>Recovery Summary:</b>")
+            if recovery_report.restored_matches:
+                lines.append(f"• Active matches restored: {recovery_report.restored_matches}")
+            if recovery_report.pending_challenges:
+                lines.append(f"• Pending challenges restored: {recovery_report.pending_challenges}")
+            if recovery_report.expired_challenges:
+                lines.append(f"• Expired challenges closed: {recovery_report.expired_challenges}")
+            if recovery_report.inactivity_prompted_matches:
+                lines.append(
+                    f"• Downtime inactivity prompts: {recovery_report.inactivity_prompted_matches}"
+                )
+            if recovery_report.abandoned_matches:
+                lines.append(f"• Downtime-abandoned matches: {recovery_report.abandoned_matches}")
+            if recovery_report.recovery_errors:
+                lines.append(f"• Recovery warnings: {len(recovery_report.recovery_errors)}")
         lines.append(f"<b>Time:</b> <code>{now_str}</code>")
         content = "\n".join(lines)
 
@@ -198,8 +220,10 @@ class RestartNotifier:
 
 
 def build_restart_notifier(bot: Bot, config: BotConfig) -> RestartNotifier:
+    state_path = Path(config.restart_state_path) if config.restart_state_path else None
     return RestartNotifier(
         bot,
         owner_id=config.owner_id,
         log_channel_id=config.log_channel_id,
+        state_path=state_path,
     )

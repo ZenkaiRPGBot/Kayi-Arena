@@ -110,3 +110,16 @@
 
 3. **Rarity Points v0.2 (`RARITY-0.2`)**
    - Implemented in `app/scoring/rarity_v02.py` (`classify_rarity_v02`) separately from `SCORE-1.0` and Telegram presentation, with optional provisional Naruto Healer floors (`Healer Fit 4 -> Rare`, `Healer Fit 5 -> Epic`).
+
+
+## Module 7: Durable Persistence & Recovery
+
+1. **Restart-Safe Wall-Clock Deadlines**
+   - `MatchManager` defaults `clock` to `time.time` (epoch seconds) so persisted `expires_at`, `turn_deadline_at`, and `inactivity_claim_expires_at` remain valid across process restarts while preserving `clock` injection for deterministic tests.
+
+2. **Downtime Inactivity Policy (Flagged for Owner Confirmation if Changed)**
+   - If a turn deadline expires while the bot is offline, startup recovery transitions the match to the 60s inactivity claim prompt (`now + claim_window_seconds`) rather than fabricating an automatic victory.
+   - If an already-open 60s inactivity claim window expires during downtime, startup recovery abandons the match (`MUTUAL_INACTIVITY_ABANDONMENT`, no winner, no rating change).
+
+3. **SQLite WAL & Persistent Disk Requirement**
+   - `SqliteMatchStore` uses `WAL` mode, `BEGIN IMMEDIATE`, `schema_migrations`, and database-level `active_player_locks`. `render.yaml` specifies a Render Persistent Disk (`/var/data`) on the `starter` plan because Render's free tier is ephemeral.

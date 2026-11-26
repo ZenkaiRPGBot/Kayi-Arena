@@ -2,12 +2,18 @@ services:
   - type: worker
     name: kayi-arena
     runtime: python
-    plan: free
+    # Note: Persistent disks on Render require a paid instance plan (e.g. starter).
+    # Ephemeral filesystems on the free tier will lose SQLite state on redeploy.
+    plan: starter
     region: frankfurt
     autoDeploy: true
     maxShutdownDelaySeconds: 30
     buildCommand: pip install -r requirements.txt
     startCommand: python -m app.main
+    disk:
+      name: kayi-arena-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.11
@@ -27,6 +33,12 @@ services:
         value: https://t.me/KayiBots
       - key: SUPPORT_URL
         value: https://t.me/KayiBots
+      - key: ARENA_DB_PATH
+        value: /var/data/kayi_arena.sqlite3
+      - key: ARENA_STATE_DB_PATH
+        value: /var/data/kayi_arena_state.sqlite3
+      - key: RESTART_STATE_PATH
+        value: /var/data/restart_state.json
       - key: ARENA_DATASET_KIND
         value: production
       - key: LOG_LEVEL

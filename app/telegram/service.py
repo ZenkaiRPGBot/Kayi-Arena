@@ -10,7 +10,7 @@ from __future__ import annotations
 import asyncio
 import logging
 from dataclasses import dataclass
-from typing import Mapping
+from typing import TYPE_CHECKING, Mapping
 
 from aiogram import Bot
 from aiogram.types import Message, User
@@ -28,8 +28,10 @@ from app.matches import (
     MatchOperationResult,
     MessageReference,
 )
+from app.persistence.models import StartupRecoveryReport
 from app.telegram.config import BotConfig
 from app.telegram.constants import ROLE_ORDER
+from app.telegram.media import CharacterMediaResolver
 from app.telegram.keyboards import (
     build_awaiting_shuffle_keyboard,
     build_challenge_keyboard,
@@ -56,6 +58,9 @@ from app.telegram.texts import (
     render_revealed_character_card,
     render_turn_expired_card,
 )
+
+if TYPE_CHECKING:
+    from app.persistence.store import SqliteMatchStore
 
 logger = logging.getLogger(__name__)
 
@@ -93,12 +98,15 @@ class ArenaTelegramCoordinator:
         db: CharacterDatabase,
         manager: MatchManager,
         stats_provider: ProfileStatsProvider | None = None,
+        store: SqliteMatchStore | None = None,
     ) -> None:
         self.bot = bot
         self.config = config
         self.db = db
         self.manager = manager
         self.stats_provider: ProfileStatsProvider = stats_provider or UnavailableStatsProvider()
+        self.store = store
+        self.media_resolver = CharacterMediaResolver(store)
 
         self._player_names: dict[str, str] = {}
         self._player_usernames: dict[str, str] = {}
@@ -108,6 +116,7 @@ class ArenaTelegramCoordinator:
         self._detail_messages: dict[tuple[str, int], tuple[str, str]] = {}
         self._seen_updates: dict[int, float] = {}
         self._timer_tasks: dict[str, asyncio.Task[None]] = {}
+        self._recovery_locks: dict[str, asyncio.Lock] = {}
         self._char_cache: dict[str, CharacterEntry] = {}
 
     # ------------------------------------------------------------------
@@ -122,6 +131,8 @@ class ArenaTelegramCoordinator:
         self._player_names[uid] = name
         if user.username:
             self._player_usernames[uid] = user.username
+        if self.store is not None:
+            self.store.upsert_player_profile(uid, name, user.username)
         return uid
 
     def display_name(self, player_id: str) -> str:
@@ -191,6 +202,8 @@ class ArenaTelegramCoordinator:
 
     def register_challenge_message(self, challenge_id: str, chat_id: str, message_id: int) -> None:
         self._challenge_messages[challenge_id] = (chat_id, message_id)
+        if self.store is not None:
+            self.store.set_challenge_message(challenge_id, chat_id, str(message_id))
 
     async def render_challenge_message(
         self,
@@ -259,10 +272,7 @@ class ArenaTelegramCoordinator:
     # ------------------------------------------------------------------
 
     def _character_media_ref(self, rec: CharacterEntry | None) -> str | None:
-        if rec is None:
-            return None
-        ref = rec.image.url_or_ref.strip()
-        return ref if ref else None
+        return self.media_resolver.resolve_media_ref(rec)
 
     async def start_match_ui(self, match: ManagedMatch, *, chat_id: str) -> MatchUIState | None:
         """Send the two primary messages (board + card) for a newly started match."""
@@ -423,104 +433,196 @@ class ArenaTelegramCoordinator:
                 fallback_photo=self.config.card_back_ref or None,
             )
 
-    async def recover_game_ui(self, match: ManagedMatch) -> MatchUIState | None:
-        """Recreate board & card in original match chat and retire old controls."""
-        state = self._match_ui.get(match.match_id)
-        if state is None:
-            return None
+    def _recovery_lock(self, match_id: str) -> asyncio.Lock:
+        lock = self._recovery_locks.get(match_id)
+        if lock is None:
+            lock = asyncio.Lock()
+            self._recovery_locks[match_id] = lock
+        return lock
 
-        # Retire old controls best-effort
-        await edit_message_text_safe(
-            self.bot,
-            chat_id=state.chat_id,
-            message_id=state.board_message_id,
-            text=f"🔄 Match <code>#{match.match_id}</code> recovered below.",
-            reply_markup=None,
-        )
-        await edit_card_message_safe(
-            self.bot,
-            chat_id=state.chat_id,
-            message_id=state.card_message_id,
-            is_photo=state.card_is_photo,
-            photo=None,
-            caption="🔄 Controls moved to recovered match messages.",
-            reply_markup=None,
-        )
+    async def recover_on_startup(self) -> StartupRecoveryReport:
+        """Restore persisted challenges, matches, UI references, and timers."""
+        if self.store is not None:
+            self._player_names.update(self.store.load_player_names())
 
-        names = self.player_names_for_match(match)
-        u_name = self.universe_name(match.universe_id)
-        char_lookup = self.char_lookup_for_match(match)
-        remaining = max(0.0, match.turn_deadline_at - self.manager.clock())
+        (
+            report,
+            pending_challenges,
+            expired_challenges,
+            restored_matches,
+            inactivity_prompted,
+            abandoned_matches,
+        ) = await self.manager.recover_from_store()
 
-        new_board = await send_message_safe(
-            self.bot,
-            chat_id=state.chat_id,
-            text=render_draft_board(
+        for chl, msg_id in expired_challenges:
+            if msg_id is not None:
+                await self.render_challenge_message(
+                    chl, chat_id=chl.chat_id, message_id=int(msg_id)
+                )
+
+        for chl, msg_id in pending_challenges:
+            if msg_id is not None:
+                self._challenge_messages[chl.challenge_id] = (chl.chat_id, int(msg_id))
+            self.schedule_challenge_expiry(chl)
+
+        prompted_ids = {m.match_id for m in inactivity_prompted}
+        for match in restored_matches:
+            self._restore_match_ui_from_refs(match)
+            if match.match_id in prompted_ids:
+                await self.sync_match_ui(
+                    match,
+                    last_action_line="Turn expired while bot was offline — awaiting opponent decision.",
+                    update_board=True,
+                    update_card=True,
+                )
+                self.schedule_claim_window_timeout(match)
+            elif match.inactivity_claim_offered_to is not None:
+                self.schedule_claim_window_timeout(match)
+            else:
+                self.schedule_turn_timeout(match)
+
+        for match in abandoned_matches:
+            self._restore_match_ui_from_refs(match)
+            await self.sync_match_ui(
                 match,
+                last_action_line="Match abandoned due to mutual inactivity during downtime.",
+                update_board=True,
+                update_card=True,
+            )
+
+        return report
+
+    def _restore_match_ui_from_refs(self, match: ManagedMatch) -> MatchUIState | None:
+        board_ref = next((r for r in reversed(match.message_refs) if r.kind == "board"), None)
+        card_ref = next((r for r in reversed(match.message_refs) if r.kind == "card"), None)
+        if board_ref is None or card_ref is None:
+            return None
+        state = MatchUIState(
+            chat_id=board_ref.chat_id,
+            board_message_id=int(board_ref.message_id),
+            card_message_id=int(card_ref.message_id),
+            card_is_photo=False,
+        )
+        self._match_ui[match.match_id] = state
+        return state
+
+    async def recover_game_ui(self, match: ManagedMatch) -> MatchUIState | None:
+        """Reconstruct missing/unusable messages in original chat & invalidate old controls."""
+        async with self._recovery_lock(match.match_id):
+            latest = self.manager.get_match(match.match_id) or match
+            state = self._match_ui.get(latest.match_id) or self._restore_match_ui_from_refs(latest)
+            if state is None:
+                return None
+
+            names = self.player_names_for_match(latest)
+            u_name = self.universe_name(latest.universe_id)
+            char_lookup = self.char_lookup_for_match(latest)
+            remaining = max(0.0, latest.turn_deadline_at - self.manager.clock())
+
+            # Bump generation FIRST so obsolete controls cannot mutate the match
+            refs_res = await self.manager.replace_message_references(
+                latest.match_id, latest.message_refs, bump_generation=True
+            )
+            if not refs_res.accepted or refs_res.match is None:
+                return None
+            latest = refs_res.match
+
+            board_text = render_draft_board(
+                latest,
                 universe_name=u_name,
                 player_names=names,
                 char_lookup=char_lookup,
                 seconds_remaining=remaining,
                 last_action_line="Game recovered.",
-            ),
-            reply_markup=build_draft_board_keyboard(match),
-        )
-        if new_board is None:
-            return None
-
-        if match.inactivity_claim_offered_to is not None:
-            caption = render_turn_expired_card(match, player_names=names)
-            markup = build_inactivity_keyboard(match)
-            photo = self.config.card_back_ref or None
-        elif match.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
-            caption = render_awaiting_shuffle_card(match, player_names=names)
-            markup = build_awaiting_shuffle_keyboard(match)
-            photo = self.config.card_back_ref or None
-        else:
-            held = match.draft_snapshot.held_character
-            rec = (
-                self.get_character_entry(held.character_id)
-                if held is not None
-                else None
             )
-            caption = (
-                render_revealed_character_card(
-                    match, character=rec, universe_name=u_name, player_names=names
+            board_markup = build_draft_board_keyboard(latest)
+
+            if latest.inactivity_claim_offered_to is not None:
+                caption = render_turn_expired_card(latest, player_names=names)
+                markup = build_inactivity_keyboard(latest)
+                photo = self.config.card_back_ref or None
+            elif latest.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
+                caption = render_awaiting_shuffle_card(latest, player_names=names)
+                markup = build_awaiting_shuffle_keyboard(latest)
+                photo = self.config.card_back_ref or None
+            else:
+                held = latest.draft_snapshot.held_character
+                rec = (
+                    self.get_character_entry(held.character_id)
+                    if held is not None
+                    else None
                 )
-                if rec is not None
-                else "Choose a role."
+                caption = (
+                    render_revealed_character_card(
+                        latest, character=rec, universe_name=u_name, player_names=names
+                    )
+                    if rec is not None
+                    else "Choose a role."
+                )
+                photo = self._character_media_ref(rec)
+                markup = build_character_revealed_keyboard(latest)
+
+            # Reuse surviving board/card if still editable; recreate only missing/unusable ones
+            board_ok = await edit_message_text_safe(
+                self.bot,
+                chat_id=state.chat_id,
+                message_id=state.board_message_id,
+                text=board_text,
+                reply_markup=board_markup,
             )
-            photo = self._character_media_ref(rec)
-            markup = build_character_revealed_keyboard(match)
+            board_msg_id = state.board_message_id
+            if not board_ok:
+                new_board = await send_message_safe(
+                    self.bot,
+                    chat_id=state.chat_id,
+                    text=board_text,
+                    reply_markup=board_markup,
+                )
+                if new_board is None:
+                    return None
+                board_msg_id = new_board.message_id
 
-        new_card, is_photo = await send_photo_or_text_safe(
-            self.bot,
-            chat_id=state.chat_id,
-            photo=photo,
-            caption=caption,
-            reply_markup=markup,
-            fallback_photo=self.config.card_back_ref or None,
-        )
-        if new_card is None:
-            return None
+            card_ok, is_photo = await edit_card_message_safe(
+                self.bot,
+                chat_id=state.chat_id,
+                message_id=state.card_message_id,
+                is_photo=state.card_is_photo,
+                photo=photo,
+                caption=caption,
+                reply_markup=markup,
+                fallback_photo=self.config.card_back_ref or None,
+            )
+            card_msg_id = state.card_message_id
+            if not card_ok:
+                new_card, is_photo = await send_photo_or_text_safe(
+                    self.bot,
+                    chat_id=state.chat_id,
+                    photo=photo,
+                    caption=caption,
+                    reply_markup=markup,
+                    fallback_photo=self.config.card_back_ref or None,
+                )
+                if new_card is None:
+                    return None
+                card_msg_id = new_card.message_id
 
-        new_state = MatchUIState(
-            chat_id=state.chat_id,
-            board_message_id=new_board.message_id,
-            card_message_id=new_card.message_id,
-            card_is_photo=is_photo,
-            last_action_line="Game recovered.",
-        )
-        self._match_ui[match.match_id] = new_state
-        await self.manager.attach_message_reference(
-            match.match_id,
-            MessageReference(chat_id=new_state.chat_id, message_id=str(new_state.board_message_id), kind="board"),
-        )
-        await self.manager.attach_message_reference(
-            match.match_id,
-            MessageReference(chat_id=new_state.chat_id, message_id=str(new_state.card_message_id), kind="card"),
-        )
-        return new_state
+            new_state = MatchUIState(
+                chat_id=state.chat_id,
+                board_message_id=board_msg_id,
+                card_message_id=card_msg_id,
+                card_is_photo=is_photo,
+                last_action_line="Game recovered.",
+            )
+            self._match_ui[latest.match_id] = new_state
+            await self.manager.replace_message_references(
+                latest.match_id,
+                (
+                    MessageReference(chat_id=new_state.chat_id, message_id=str(board_msg_id), kind="board"),
+                    MessageReference(chat_id=new_state.chat_id, message_id=str(card_msg_id), kind="card"),
+                ),
+                bump_generation=False,
+            )
+            return new_state
 
     def build_game_link(self, match: ManagedMatch) -> str | None:
         state = self._match_ui.get(match.match_id)

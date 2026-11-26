@@ -634,9 +634,12 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
         ),
     )
     new_state = coordinator._match_ui[match.match_id]
-    assert new_state.board_message_id != old_state.board_message_id
+    assert new_state.last_action_line == "Game recovered."
+    recovered_match = mgr.get_match(match.match_id)
+    assert recovered_match is not None and recovered_match.generation > match.generation
 
-    # Forfeit confirmation -> Yes, Forfeit
+    # Forfeit confirmation -> Yes, Forfeit (use latest generation after recovery)
+    latest_gen = recovered_match.generation
     await dp.feed_update(
         bot,
         _make_callback_update(
@@ -645,7 +648,7 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
             chat_type="private",
             message_id=game_msg_id,
             user=alex,
-            data=encode_cb("gf", match.match_id, match.generation),
+            data=encode_cb("gf", match.match_id, latest_gen),
             recorder=bot,
         ),
     )
@@ -659,7 +662,7 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
             chat_type="private",
             message_id=game_msg_id,
             user=alex,
-            data=encode_cb("gfc", match.match_id, match.generation),
+            data=encode_cb("gfc", match.match_id, latest_gen),
             recorder=bot,
         ),
     )

@@ -7,7 +7,7 @@ import random
 import secrets
 import time
 import uuid
-from typing import Callable
+from typing import TYPE_CHECKING, Callable
 
 from app.database import CharacterDatabase
 from app.engine import (
@@ -35,8 +35,12 @@ from app.matches.models import (
     MessageReference,
     TimeoutPolicy,
 )
+from app.persistence.models import HistoricalMatchRecord, StartupRecoveryReport
 from app.resolution import DecidedBy, MatchOutcome, resolve_completed_draft
 from app.scoring import DatasetKind
+
+if TYPE_CHECKING:
+    from app.persistence.store import SqliteMatchStore
 
 _VALID_GAME_MODES = frozenset({"ranked", "friendly"})
 
@@ -54,20 +58,39 @@ class MatchManager:
         draw_source: DrawSource | None = None,
         universe_rng: random.Random | None = None,
         eligibility_checker: Callable[[str], bool] | None = None,
+        store: SqliteMatchStore | None = None,
     ) -> None:
         self.db = db
         self.dataset_kind = dataset_kind
         self.timeout_policy = timeout_policy or TimeoutPolicy()
-        self.clock = clock or time.monotonic
+        self.clock = clock or time.time
         self.draw_source = draw_source
         self._universe_rng = universe_rng or secrets.SystemRandom()
         self._eligibility_checker = eligibility_checker or (lambda _pid: True)
+        self._store = store
 
         self._global_lock = asyncio.Lock()
         self._match_locks: dict[str, asyncio.Lock] = {}
         self._challenges: dict[str, ChallengeRecord] = {}
         self._matches: dict[str, ManagedMatch] = {}
         self._active_match_by_player: dict[str, str] = {}
+
+    def _persist_challenge(self, challenge: ChallengeRecord) -> None:
+        if self._store is not None:
+            self._store.save_challenge(challenge)
+
+    def _persist_match(self, match: ManagedMatch, *, release_players: bool = False) -> None:
+        if self._store is not None:
+            history = (
+                HistoricalMatchRecord.from_managed_match(match)
+                if (release_players and match.outcome is not None)
+                else None
+            )
+            self._store.save_match_transition(
+                match,
+                release_players=release_players,
+                history_record=history,
+            )
 
     def _lock_for_match(self, match_id: str) -> asyncio.Lock:
         lock = self._match_locks.get(match_id)
@@ -224,6 +247,7 @@ class MatchManager:
                 expires_at=now + self.timeout_policy.challenge_ttl_seconds,
                 generation=0,
             )
+            self._persist_challenge(record)
             self._challenges[cid] = record
             return ChallengeOperationResult(accepted=True, challenge=record)
 
@@ -252,6 +276,7 @@ class MatchManager:
                         "generation": chl.generation + 1,
                     }
                 )
+                self._persist_challenge(expired)
                 self._challenges[challenge_id] = expired
                 return ChallengeOperationResult(
                     accepted=False,
@@ -361,6 +386,8 @@ class MatchManager:
                     "generation": chl.generation + 1,
                 }
             )
+            if self._store is not None:
+                self._store.accept_challenge_and_create_match(accepted_chl, match)
             self._challenges[challenge_id] = accepted_chl
             self._matches[match_id] = match
             self._active_match_by_player[chl.challenger_id] = match_id
@@ -414,6 +441,7 @@ class MatchManager:
                     "generation": chl.generation + 1,
                 }
             )
+            self._persist_challenge(cancelled)
             self._challenges[challenge_id] = cancelled
             return ChallengeOperationResult(accepted=True, challenge=cancelled)
 
@@ -444,6 +472,7 @@ class MatchManager:
                         "generation": chl.generation + 1,
                     }
                 )
+                self._persist_challenge(expired)
                 self._challenges[challenge_id] = expired
                 return ChallengeOperationResult(
                     accepted=False,
@@ -496,6 +525,7 @@ class MatchManager:
                     "generation": chl.generation + 1,
                 }
             )
+            self._persist_challenge(updated)
             self._challenges[challenge_id] = updated
             return ChallengeOperationResult(accepted=True, challenge=updated)
 
@@ -531,6 +561,7 @@ class MatchManager:
                     "generation": chl.generation + 1,
                 }
             )
+            self._persist_challenge(expired)
             self._challenges[challenge_id] = expired
             return ChallengeOperationResult(accepted=True, challenge=expired)
 
@@ -620,6 +651,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
@@ -665,6 +697,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
@@ -749,6 +782,7 @@ class MatchManager:
                         "updated_at": now,
                     }
                 )
+                self._persist_match(completed_match, release_players=True)
                 self._matches[match_id] = completed_match
                 async with self._global_lock:
                     self._release_players(match.players, match_id)
@@ -769,6 +803,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
@@ -842,6 +877,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated, release_players=True)
             self._matches[match_id] = updated
             async with self._global_lock:
                 self._release_players(match.players, match_id)
@@ -900,6 +936,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
@@ -955,6 +992,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
@@ -1023,6 +1061,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated, release_players=True)
             self._matches[match_id] = updated
             async with self._global_lock:
                 self._release_players(match.players, match_id)
@@ -1095,6 +1134,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated, release_players=True)
             self._matches[match_id] = updated
             async with self._global_lock:
                 self._release_players(match.players, match_id)
@@ -1168,6 +1208,7 @@ class MatchManager:
                     "updated_at": now,
                 }
             )
+            self._persist_match(updated, release_players=True)
             self._matches[match_id] = updated
             async with self._global_lock:
                 self._release_players(match.players, match_id)
@@ -1204,10 +1245,22 @@ class MatchManager:
     # ------------------------------------------------------------------
 
     def get_challenge(self, challenge_id: str) -> ChallengeRecord | None:
-        return self._challenges.get(challenge_id)
+        chl = self._challenges.get(challenge_id)
+        if chl is not None:
+            return chl
+        if self._store is not None:
+            loaded = self._store.load_challenge(challenge_id)
+            if loaded is not None:
+                return loaded[0]
+        return None
 
     def get_match(self, match_id: str) -> ManagedMatch | None:
-        return self._matches.get(match_id)
+        match = self._matches.get(match_id)
+        if match is not None:
+            return match
+        if self._store is not None:
+            return self._store.load_match(match_id)
+        return None
 
     def get_active_match_for_player(self, player_id: str) -> ManagedMatch | None:
         match_id = self._active_match_by_player.get(player_id)
@@ -1230,5 +1283,164 @@ class MatchManager:
                     "message_refs": match.message_refs + (ref,),
                 }
             )
+            self._persist_match(updated)
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
+
+    async def replace_message_references(
+        self,
+        match_id: str,
+        refs: tuple[MessageReference, ...],
+        *,
+        bump_generation: bool = True,
+    ) -> MatchOperationResult:
+        """Atomically replace UI message references and optionally invalidate old controls."""
+        async with self._lock_for_match(match_id):
+            match = self._matches.get(match_id)
+            if match is None:
+                return MatchOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.MATCH_NOT_FOUND,
+                    message="Match not found",
+                )
+            updated = ManagedMatch(
+                **{
+                    **{f: getattr(match, f) for f in match.__slots__},
+                    "message_refs": refs,
+                    "generation": match.generation + (1 if bump_generation else 0),
+                    "updated_at": self.clock(),
+                }
+            )
+            self._persist_match(updated)
+            self._matches[match_id] = updated
+            return MatchOperationResult(accepted=True, match=updated)
+
+    async def recover_from_store(
+        self,
+    ) -> tuple[
+        StartupRecoveryReport,
+        list[tuple[ChallengeRecord, str | None]],
+        list[tuple[ChallengeRecord, str | None]],
+        list[ManagedMatch],
+        list[ManagedMatch],
+        list[ManagedMatch],
+    ]:
+        """Load nonterminal challenges & matches from SQLite and reconcile deadlines."""
+        if self._store is None:
+            return StartupRecoveryReport(), [], [], [], [], []
+
+        now = self.clock()
+        pending_challenges: list[tuple[ChallengeRecord, str | None]] = []
+        expired_challenges: list[tuple[ChallengeRecord, str | None]] = []
+        restored_matches: list[ManagedMatch] = []
+        inactivity_prompted: list[ManagedMatch] = []
+        abandoned_matches: list[ManagedMatch] = []
+        errors: list[str] = []
+
+        async with self._global_lock:
+            for chl, msg_id in self._store.load_open_challenges():
+                if now >= chl.expires_at:
+                    expired = ChallengeRecord(
+                        **{
+                            **{f: getattr(chl, f) for f in chl.__slots__},
+                            "status": ChallengeStatus.EXPIRED,
+                            "generation": chl.generation + 1,
+                        }
+                    )
+                    self._store.save_challenge(expired)
+                    self._challenges[expired.challenge_id] = expired
+                    expired_challenges.append((expired, msg_id))
+                else:
+                    self._challenges[chl.challenge_id] = chl
+                    pending_challenges.append((chl, msg_id))
+
+            for match in self._store.load_active_matches():
+                try:
+                    self.db.load_manifest(match.dataset_version)
+                except Exception as exc:
+                    errors.append(
+                        f"Match {match.match_id}: pinned dataset {match.dataset_version!r} unavailable ({type(exc).__name__})"
+                    )
+                    continue
+
+                if match.inactivity_claim_offered_to is not None:
+                    if (
+                        match.inactivity_claim_expires_at is not None
+                        and now >= match.inactivity_claim_expires_at
+                    ):
+                        term_res = terminate_draft(
+                            match.draft_snapshot,
+                            reason=TerminationReason.BOTH_INACTIVE,
+                            subject_player_id=None,
+                            source_label="startup_recovery",
+                            caller_reference="downtime_claim_expired",
+                        )
+                        outcome = MatchOutcomeSummary(
+                            reason=MatchOutcomeReason.MUTUAL_INACTIVITY_ABANDONMENT,
+                            winner_id=None,
+                            loser_id=None,
+                            affects_rating=False,
+                            resolution=None,
+                            terminal_record=term_res.terminal_record,
+                        )
+                        abandoned = ManagedMatch(
+                            **{
+                                **{f: getattr(match, f) for f in match.__slots__},
+                                "status": MatchLifecycleStatus.ABANDONED,
+                                "draft_snapshot": term_res.snapshot,
+                                "public_view": term_res.public_view,
+                                "generation": match.generation + 1,
+                                "inactivity_claim_offered_to": None,
+                                "inactivity_claim_expires_at": None,
+                                "outcome": outcome,
+                                "updated_at": now,
+                            }
+                        )
+                        self._persist_match(abandoned, release_players=True)
+                        self._matches[abandoned.match_id] = abandoned
+                        abandoned_matches.append(abandoned)
+                    else:
+                        self._matches[match.match_id] = match
+                        for pid in match.players:
+                            self._active_match_by_player[pid] = match.match_id
+                        restored_matches.append(match)
+                elif now >= match.turn_deadline_at:
+                    active = match.draft_snapshot.active_player_id
+                    opponent = match.players[1] if match.players[0] == active else match.players[0]
+                    prompted = ManagedMatch(
+                        **{
+                            **{f: getattr(match, f) for f in match.__slots__},
+                            "generation": match.generation + 1,
+                            "inactivity_claim_offered_to": opponent,
+                            "inactivity_claim_expires_at": now + match.timeout_policy.claim_window_seconds,
+                            "updated_at": now,
+                        }
+                    )
+                    self._persist_match(prompted)
+                    self._matches[prompted.match_id] = prompted
+                    for pid in prompted.players:
+                        self._active_match_by_player[pid] = prompted.match_id
+                    restored_matches.append(prompted)
+                    inactivity_prompted.append(prompted)
+                else:
+                    self._matches[match.match_id] = match
+                    for pid in match.players:
+                        self._active_match_by_player[pid] = match.match_id
+                    restored_matches.append(match)
+
+        report = StartupRecoveryReport(
+            restored_matches=len(restored_matches),
+            pending_challenges=len(pending_challenges),
+            expired_challenges=len(expired_challenges),
+            abandoned_matches=len(abandoned_matches),
+            inactivity_prompted_matches=len(inactivity_prompted),
+            recovery_errors=tuple(errors),
+        )
+        return (
+            report,
+            pending_challenges,
+            expired_challenges,
+            restored_matches,
+            inactivity_prompted,
+            abandoned_matches,
+        )

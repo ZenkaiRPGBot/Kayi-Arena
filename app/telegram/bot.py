@@ -13,6 +13,7 @@ from aiogram.types import BotCommand, TelegramObject, Update
 
 from app.database import CharacterDatabase
 from app.matches import MatchManager
+from app.persistence import SqliteMatchStore
 from app.telegram.config import BotConfig
 from app.telegram.handlers import (
     build_callbacks_router,
@@ -71,14 +72,16 @@ def create_dispatcher(
     db: CharacterDatabase,
     manager: MatchManager | None = None,
     stats_provider: ProfileStatsProvider | None = None,
+    store: SqliteMatchStore | None = None,
 ) -> tuple[Dispatcher, ArenaTelegramCoordinator]:
-    mgr = manager or MatchManager(db, dataset_kind=config.dataset_kind)
+    mgr = manager or MatchManager(db, dataset_kind=config.dataset_kind, store=store)
     coordinator = ArenaTelegramCoordinator(
         bot=bot,
         config=config,
         db=db,
         manager=mgr,
         stats_provider=stats_provider,
+        store=store,
     )
     dp = Dispatcher(storage=MemoryStorage())
     dp["coordinator"] = coordinator

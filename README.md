@@ -4,7 +4,7 @@ Competitive Telegram-based anime character drafting game under the **Kayi Bots**
 
 - **Bot name:** Kayi Arena (`@KayiArenaBot`)
 - **Primary gameplay command:** `/arena`
-- **Current status:** **Modules 1–6** (Core Drafting, Scoring `SCORE-1.0`, Match Resolution `RES-1.0`, Database Foundation, Challenge & Match Management, Telegram UI & UX) implemented and verified; Modules 4B and 7–9 are in progress or awaiting specification.
+- **Current status:** **Modules 1–7** (Core Drafting, Scoring `SCORE-1.0`, Match Resolution `RES-1.0`, Database Foundation, Character Content Tooling, Challenge & Match Management, Telegram UI & UX, Durable Persistence & Recovery) implemented and verified; Modules 8–9 are awaiting specification.
 
 ## Setup
 
@@ -61,7 +61,7 @@ Notes:
 | 4B | Catalogue & Image Tooling | In Progress (Parallel Branch) |
 | 5 | Challenge & Match Management | Implemented & Tested |
 | 6 | Telegram UI & User Experience | Implemented & Tested (`aiogram` 3) |
-| 7 | Persistence & Game Recovery | Awaiting Planning |
+| 7 | Persistence & Game Recovery | Implemented & Tested (`SQLite` + `WAL`) |
 | 8 | Profiles & Competitive Progression | Awaiting Planning |
 | 9 | Administration & Bot Operations | Awaiting Planning |
 
@@ -72,6 +72,7 @@ Notes:
 - [Module 3 Match Resolution Specification](docs/MODULE_03_MATCH_RESOLUTION_SPECIFICATION.md)
 - [Module 5 Challenge & Match Management Specification](docs/MODULE_05_MATCH_MANAGEMENT_SPECIFICATION.md)
 - [Module 6 Telegram UI & UX Specification](docs/MODULE_06_TELEGRAM_UI_SPECIFICATION.md)
+- [Module 7 Persistence & Recovery Specification](docs/MODULE_07_PERSISTENCE_RECOVERY_SPECIFICATION.md)
 - [Versioned JSON Import Format (`KA-IMPORT-1.0`)](docs/IMPORT_FORMAT.md)
 - [Progress Tracker](docs/PROGRESS.md)
 - [Architecture & Technical Decisions](docs/DECISIONS.md)
@@ -81,6 +82,7 @@ Notes:
 - [Module 4A Implementation Report](docs/MODULE_04A_IMPLEMENTATION_REPORT.md)
 - [Module 5 Implementation Report](docs/MODULE_05_IMPLEMENTATION_REPORT.md)
 - [Module 6 Implementation Report](docs/MODULE_06_IMPLEMENTATION_REPORT.md)
+- [Module 7 Implementation Report](docs/MODULE_07_IMPLEMENTATION_REPORT.md)
 
 ## Running the Telegram Bot
 
