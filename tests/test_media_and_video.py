@@ -283,3 +283,92 @@ async def test_welcome_video_send_and_fallback_and_admin_media_manager(tmp_path:
     )
     assert any(c[0] == "send_video" for c in bot2.calls)
     assert any(c[0] == "send_message" and "Welcome to" in c[1]["text"] for c in bot2.calls)
+
+
+@pytest.mark.asyncio
+async def test_admin_manage_characters_filters_profile_and_retry_failed(tmp_path: Path) -> None:
+    _, store, coordinator, dp, bot, entry = _setup_env(tmp_path)
+    now = datetime.now(timezone.utc)
+
+    # Record one failed media asset
+    store.upsert_media_asset(
+        media_key=f"{entry.character_id}:{entry.image.url_or_ref}",
+        character_id=entry.character_id,
+        universe_id=entry.universe_id,
+        source_url=entry.image.url_or_ref,
+        telegram_file_id="",
+        upload_status="failed",
+        last_error="HTTP 403",
+    )
+
+    # 1. Media Manager shows Retry Failed button
+    await dp.feed_raw_update(
+        bot,
+        {
+            "update_id": 2001,
+            "callback_query": {
+                "id": "cb_mm1",
+                "from": {"id": 1, "is_bot": False, "first_name": "Owner"},
+                "chat_instance": "ci1",
+                "data": "adm:media",
+                "message": {
+                    "message_id": 20,
+                    "date": int(now.timestamp()),
+                    "chat": {"id": 1, "type": "private"},
+                    "text": "Admin",
+                },
+            },
+        },
+    )
+    media_edit = [c[1] for c in bot.calls if c[0] == "edit_message_text"][-1]
+    assert "Total characters in DB: <b>1</b>" in media_edit["text"]
+    flat_cbs = [
+        btn.callback_data
+        for row in media_edit["reply_markup"].inline_keyboard
+        for btn in row
+    ]
+    assert "adm:mretry" in flat_cbs
+
+    # 2. Manage Characters browser & filter cycling & profile view
+    await dp.feed_raw_update(
+        bot,
+        {
+            "update_id": 2002,
+            "callback_query": {
+                "id": "cb_mc1",
+                "from": {"id": 1, "is_bot": False, "first_name": "Owner"},
+                "chat_instance": "ci1",
+                "data": "adm:chars:naruto:all:0",
+                "message": {
+                    "message_id": 20,
+                    "date": int(now.timestamp()),
+                    "chat": {"id": 1, "type": "private"},
+                    "text": "Admin",
+                },
+            },
+        },
+    )
+    chars_edit = [c[1] for c in bot.calls if c[0] == "edit_message_text"][-1]
+    assert "Manage Characters — naruto" in chars_edit["text"]
+    assert "Naruto Uzumaki" in chars_edit["text"]
+
+    await dp.feed_raw_update(
+        bot,
+        {
+            "update_id": 2003,
+            "callback_query": {
+                "id": "cb_mc2",
+                "from": {"id": 1, "is_bot": False, "first_name": "Owner"},
+                "chat_instance": "ci1",
+                "data": f"adm:chview:{entry.character_id}",
+                "message": {
+                    "message_id": 20,
+                    "date": int(now.timestamp()),
+                    "chat": {"id": 1, "type": "private"},
+                    "text": "Admin",
+                },
+            },
+        },
+    )
+    profile_calls = [c[1] for c in bot.calls if c[0] in {"send_photo", "send_message"}]
+    assert any("Role Fits:" in (c.get("caption") or c.get("text") or "") for c in profile_calls)

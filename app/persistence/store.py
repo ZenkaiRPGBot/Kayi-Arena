@@ -710,6 +710,7 @@ class SqliteMatchStore:
         verification_status: str = "pending",
         upload_status: str = "uploaded",
         attribution: str = "",
+        last_error: str = "",
     ) -> None:
         now = _utc_iso()
         self._conn.execute("BEGIN IMMEDIATE")

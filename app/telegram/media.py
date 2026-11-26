@@ -19,11 +19,16 @@ from urllib.parse import urljoin, urlparse
 
 import httpx
 from aiogram import Bot
-from aiogram.exceptions import TelegramBadRequest, TelegramNetworkError, TelegramRetryAfter
+from aiogram.exceptions import (
+    TelegramAPIError,
+    TelegramBadRequest,
+    TelegramNetworkError,
+    TelegramRetryAfter,
+)
 from aiogram.types import BufferedInputFile
 from PIL import Image, ImageOps, UnidentifiedImageError
 
-from app.database import CharacterEntry, ImageValidationStatus
+from app.database import CharacterEntry
 
 if TYPE_CHECKING:
     from app.persistence.store import SqliteMatchStore
@@ -50,6 +55,14 @@ _BLOCKED_HOSTNAMES = frozenset(
 )
 _MAX_MEDIA_BYTES = 10 * 1024 * 1024
 _MAX_REDIRECTS = 3
+_DEFAULT_HEADERS = {
+    "User-Agent": "KayiArenaMediaBot/1.0",
+    "Accept": "*/*",
+}
+_FALLBACK_HEADERS = {
+    "User-Agent": "curl/8.5.0",
+    "Accept": "*/*",
+}
 
 
 class UnsafeMediaURLError(ValueError):
@@ -147,12 +160,13 @@ class MediaSyncResult:
     skipped: int = 0
     failed: int = 0
     errors: list[str] = field(default_factory=list)
+    error_counts: dict[str, int] = field(default_factory=dict)
 
 
 class MediaPipeline:
     """SSRF-safe image downloader, 960x540 standardizer, and Telegram media channel uploader."""
 
-    def __init__(self, store: SqliteMatchStore | None = None) -> None:
+    def __init__(self, store: SqliteMatchStore | Any | None = None) -> None:
         self._store = store
 
     async def download_and_prepare(
@@ -169,12 +183,22 @@ class MediaPipeline:
         if client is None:
             client = httpx.AsyncClient(
                 timeout=httpx.Timeout(15.0, connect=8.0),
-                headers={"User-Agent": "KayiArenaMediaBot/1.0"},
+                headers=_DEFAULT_HEADERS,
             )
         try:
             response: httpx.Response | None = None
             for _ in range(_MAX_REDIRECTS + 1):
-                resp = await client.get(current_url, follow_redirects=False)
+                resp = await client.get(
+                    current_url,
+                    follow_redirects=False,
+                    headers=_DEFAULT_HEADERS,
+                )
+                if resp.status_code == 403:
+                    resp = await client.get(
+                        current_url,
+                        follow_redirects=False,
+                        headers=_FALLBACK_HEADERS,
+                    )
                 if resp.status_code in {301, 302, 303, 307, 308}:
                     location = resp.headers.get("location", "").strip()
                     if not location:
@@ -198,8 +222,8 @@ class MediaPipeline:
                 raise MediaDownloadError("Downloaded empty media payload.")
             if len(raw_bytes) > max_bytes:
                 raise MediaDownloadError(f"Media exceeds {max_bytes} bytes limit.")
-        except (httpx.HTTPError,) as exc:
-            raise MediaDownloadError(f"HTTP download error: {exc}") from exc
+        except httpx.HTTPError as exc:
+            raise MediaDownloadError(f"HTTP download error ({type(exc).__name__}): {exc}") from exc
         finally:
             if owns_client:
                 await client.aclose()
@@ -214,7 +238,7 @@ class MediaPipeline:
         digest = hashlib.sha256(standardized).hexdigest()
         return standardized, digest
 
-    async def upload_character_media(
+    async def upload_character_media_detailed(
         self,
         bot: Bot,
         entry: CharacterEntry,
@@ -224,17 +248,16 @@ class MediaPipeline:
         force: bool = False,
         client: httpx.AsyncClient | None = None,
         resolve_dns: bool = True,
-    ) -> str | None:
+    ) -> tuple[str | None, str | None]:
         raw_ref = entry.image.url_or_ref.strip()
         if not raw_ref:
-            return None
+            return None, "missing source URL"
         cache_key = CharacterMediaResolver._cache_key(entry, raw_ref)
         if not force and self._store is not None:
             existing = self._store.get_media_cache(cache_key)
             if existing:
-                return existing
+                return existing, None
 
-        # Already a Telegram file_id (not a URL)
         if not raw_ref.startswith(("http://", "https://")) and ":" not in raw_ref:
             if self._store is not None:
                 self._store.upsert_media_asset(
@@ -248,8 +271,9 @@ class MediaPipeline:
                     verification_status=entry.image.status.value,
                     upload_status="uploaded",
                     attribution=entry.image.source_ref,
+                    last_error="",
                 )
-            return raw_ref
+            return raw_ref, None
 
         try:
             jpg_bytes, digest = await self.download_and_prepare(
@@ -259,7 +283,8 @@ class MediaPipeline:
                 resolve_dns=resolve_dns,
             )
         except (UnsafeMediaURLError, MediaDownloadError) as exc:
-            logger.warning("Media download failed for %s: %s", entry.character_id, exc)
+            err_msg = str(exc)
+            logger.warning("Media download failed for %s: %s", entry.character_id, err_msg)
             if self._store is not None:
                 self._store.upsert_media_asset(
                     media_key=cache_key,
@@ -272,8 +297,9 @@ class MediaPipeline:
                     verification_status=entry.image.status.value,
                     upload_status="failed",
                     attribution=entry.image.source_ref,
+                    last_error=err_msg,
                 )
-            return None
+            return None, err_msg
 
         caption = (
             f"Kayi Arena Media | {entry.name} ({entry.character_id})\n"
@@ -281,17 +307,20 @@ class MediaPipeline:
         )
         file_obj = BufferedInputFile(jpg_bytes, filename=f"{entry.character_id}.jpg")
         msg = None
+        last_err = "Telegram upload failed"
         for attempt in range(2):
             try:
                 msg = await bot.send_photo(chat_id=channel_id, photo=file_obj, caption=caption)
                 break
             except TelegramRetryAfter as exc:
+                last_err = f"TelegramRetryAfter ({exc.retry_after}s)"
                 if attempt == 0:
                     await asyncio.sleep(min(float(exc.retry_after) + 0.5, 30.0))
                     continue
                 logger.warning("TelegramRetryAfter exhausted for %s", entry.character_id)
-            except (TelegramBadRequest, TelegramNetworkError, OSError) as exc:
-                logger.warning("Media channel upload failed for %s: %s", entry.character_id, exc)
+            except (TelegramAPIError, TelegramBadRequest, TelegramNetworkError, OSError) as exc:
+                last_err = f"{type(exc).__name__}: {exc}"
+                logger.warning("Media channel upload failed for %s: %s", entry.character_id, last_err)
                 break
 
         if msg is None or not getattr(msg, "photo", None):
@@ -308,8 +337,9 @@ class MediaPipeline:
                     verification_status=entry.image.status.value,
                     upload_status="failed",
                     attribution=entry.image.source_ref,
+                    last_error=last_err,
                 )
-            return None
+            return None, last_err
 
         best_photo = msg.photo[-1]
         file_id = str(best_photo.file_id)
@@ -329,7 +359,30 @@ class MediaPipeline:
                 verification_status=entry.image.status.value,
                 upload_status="uploaded",
                 attribution=entry.image.source_ref,
+                last_error="",
             )
+        return file_id, None
+
+    async def upload_character_media(
+        self,
+        bot: Bot,
+        entry: CharacterEntry,
+        *,
+        channel_id: int | str,
+        bot_username: str = "",
+        force: bool = False,
+        client: httpx.AsyncClient | None = None,
+        resolve_dns: bool = True,
+    ) -> str | None:
+        file_id, _ = await self.upload_character_media_detailed(
+            bot,
+            entry,
+            channel_id=channel_id,
+            bot_username=bot_username,
+            force=force,
+            client=client,
+            resolve_dns=resolve_dns,
+        )
         return file_id
 
     async def sync_universe_media(
@@ -340,25 +393,48 @@ class MediaPipeline:
         channel_id: int | str,
         bot_username: str = "",
         force: bool = False,
+        only_failed: bool = False,
         delay_seconds: float = 0.25,
         resolve_dns: bool = True,
     ) -> MediaSyncResult:
         result = MediaSyncResult(total=len(entries))
+
+        # Preflight check on media channel accessibility
+        if hasattr(bot, "get_chat"):
+            try:
+                await bot.get_chat(channel_id)
+            except Exception as exc:
+                reason = f"Media channel inaccessible ({type(exc).__name__}): {exc}"
+                result.failed = len(entries)
+                result.errors.append(reason)
+                result.error_counts[reason[:80]] = len(entries)
+                return result
+
         async with httpx.AsyncClient(
             timeout=httpx.Timeout(15.0, connect=8.0),
-            headers={"User-Agent": "KayiArenaMediaBot/1.0"},
+            headers=_DEFAULT_HEADERS,
         ) as client:
             for entry in entries:
                 raw_ref = entry.image.url_or_ref.strip()
                 if not raw_ref:
                     result.failed += 1
-                    result.errors.append(f"{entry.character_id}: missing source URL")
+                    reason = "missing source URL"
+                    result.errors.append(f"{entry.character_id}: {reason}")
+                    result.error_counts[reason] = result.error_counts.get(reason, 0) + 1
                     continue
+
                 cache_key = CharacterMediaResolver._cache_key(entry, raw_ref)
                 if not force and self._store is not None and self._store.get_media_cache(cache_key):
                     result.skipped += 1
                     continue
-                file_id = await self.upload_character_media(
+
+                if only_failed and self._store is not None:
+                    asset = self._store.get_media_asset_by_character(entry.character_id)
+                    if not asset or asset.get("upload_status") != "failed":
+                        result.skipped += 1
+                        continue
+
+                file_id, err_reason = await self.upload_character_media_detailed(
                     bot,
                     entry,
                     channel_id=channel_id,
@@ -371,7 +447,10 @@ class MediaPipeline:
                     result.uploaded += 1
                 else:
                     result.failed += 1
-                    result.errors.append(f"{entry.character_id}: upload failed")
+                    msg = err_reason or "upload failed"
+                    result.errors.append(f"{entry.character_id}: {msg}")
+                    bucket = msg.split("\n")[0][:70]
+                    result.error_counts[bucket] = result.error_counts.get(bucket, 0) + 1
                 if delay_seconds > 0:
                     await asyncio.sleep(delay_seconds)
         return result
@@ -380,7 +459,7 @@ class MediaPipeline:
 class CharacterMediaResolver:
     """Resolves character artwork via persistent Telegram file_id cache, media channel, or SSRF-safe fallback."""
 
-    def __init__(self, store: SqliteMatchStore | None = None) -> None:
+    def __init__(self, store: SqliteMatchStore | Any | None = None) -> None:
         self._store = store
         self._pipeline = MediaPipeline(store)
         self._memory_cache: dict[str, str] = {}
@@ -500,6 +579,7 @@ class CharacterMediaResolver:
             verification_status=entry.image.status.value,
             upload_status="uploaded",
             attribution=entry.image.source_ref,
+            last_error="",
         )
 
     @staticmethod

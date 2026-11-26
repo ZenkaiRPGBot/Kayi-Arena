@@ -129,6 +129,7 @@ class ArenaTelegramCoordinator:
         self._broadcast_drafts: dict[str, str] = {}
         self._admin_input_state: dict[str, tuple[str, str]] = {}
         self._welcome_video_override: str | None = None
+        self._char_browser_filters: dict[str, dict[str, str]] = {}
         self._latency_samples: deque[float] = deque(maxlen=100)
 
     def record_latency_ms(self, ms: float) -> None:
@@ -185,6 +186,24 @@ class ArenaTelegramCoordinator:
 
     def clear_admin_input_state(self, admin_id: str) -> None:
         self._admin_input_state.pop(admin_id, None)
+
+    def get_char_browser_filter(self, admin_id: str, universe_id: str) -> dict[str, str]:
+        flt = self._char_browser_filters.get(admin_id)
+        if flt is None or flt.get("universe_id") != universe_id:
+            flt = {
+                "universe_id": universe_id,
+                "status": "all",
+                "rarity": "all",
+                "image": "all",
+                "query": "",
+            }
+            self._char_browser_filters[admin_id] = flt
+        return flt
+
+    def set_char_browser_filter(self, admin_id: str, universe_id: str, **updates: str) -> dict[str, str]:
+        flt = self.get_char_browser_filter(admin_id, universe_id)
+        flt.update(updates)
+        return flt
 
     def get_welcome_video_file_id(self) -> str:
         if self._welcome_video_override is not None:

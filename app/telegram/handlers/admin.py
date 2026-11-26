@@ -22,8 +22,9 @@ from aiogram.types import (
     User,
 )
 
-from app.database import EvaluationStatus, HELD_NARUTO_NAMES, ImageMetadata, ImageValidationStatus
+from app.database import EvaluationStatus, HELD_NARUTO_NAMES, ImageMetadata, ImageValidationStatus, RARITY_TIERS
 from app.engine import TerminationReason
+from app.scoring import SCORING_ROLES
 from app.telegram.constants import STYLE_DANGER, STYLE_PRIMARY, STYLE_SUCCESS
 from app.telegram.media import MediaPipeline, UnsafeMediaURLError, validate_media_url
 from app.telegram.safe_api import (
@@ -127,6 +128,100 @@ def _back_kb() -> InlineKeyboardMarkup:
     )
 
 
+def _render_char_browser(
+    coordinator: ArenaTelegramCoordinator,
+    actor_id: str,
+    uid: str,
+    *,
+    page: int = 0,
+) -> tuple[str, InlineKeyboardMarkup]:
+    all_chars = coordinator.db.list_characters(universe_id=uid)
+    counts = {"draft": 0, "review": 0, "approved": 0}
+    for c in all_chars:
+        counts[c.status.value] = counts.get(c.status.value, 0) + 1
+
+    flt = coordinator.get_char_browser_filter(actor_id, uid)
+    st_flt = flt["status"]
+    rar_flt = flt["rarity"]
+    img_flt = flt["image"]
+    q_flt = flt["query"].strip().lower()
+
+    filtered = []
+    for ch in all_chars:
+        if st_flt != "all" and ch.status.value != st_flt:
+            continue
+        if rar_flt != "all" and ch.rarity != rar_flt:
+            continue
+        has_cached = bool(coordinator.media_resolver.resolve_media_ref(ch))
+        if img_flt == "cached" and not has_cached:
+            continue
+        if img_flt == "missing" and has_cached:
+            continue
+        if q_flt and q_flt not in ch.name.lower() and q_flt not in ch.character_id.lower():
+            continue
+        filtered.append(ch)
+
+    per_page = 6
+    total_pages = max(1, (len(filtered) + per_page - 1) // per_page)
+    safe_page = max(0, min(page, total_pages - 1))
+    chunk = filtered[safe_page * per_page : (safe_page + 1) * per_page]
+
+    lines = [
+        f"📚 <b>Manage Characters — {esc(uid)}</b>",
+        f"Total: <b>{len(all_chars)}</b> | Draft: <b>{counts['draft']}</b> | Review: <b>{counts['review']}</b> | Approved: <b>{counts['approved']}</b>",
+        f"Filters: Status=<code>{esc(st_flt)}</code> | Rarity=<code>{esc(rar_flt)}</code> | Img=<code>{esc(img_flt)}</code>"
+        + (f" | Search=<code>{esc(q_flt)}</code>" if q_flt else ""),
+        f"Matching: <b>{len(filtered)}</b>",
+        "",
+    ]
+    rows: list[list[InlineKeyboardButton]] = []
+    for ch in chunk:
+        img_icon = "✅" if coordinator.media_resolver.resolve_media_ref(ch) else "⚠️"
+        lines.append(
+            f"{img_icon} <b>{esc(ch.name)}</b> [{esc(ch.rarity)}] — <code>{esc(ch.status.value)}</code>"
+        )
+        rows.append([_btn(f"👤 {ch.name[:24]} ({ch.rarity[:3]})", f"adm:chview:{ch.character_id}")])
+
+    if not chunk:
+        lines.append("<i>No characters match the current filters.</i>")
+
+    rows.append(
+        [
+            _btn("All", f"adm:chflt:{uid}:status:all"),
+            _btn("Draft", f"adm:chflt:{uid}:status:draft"),
+            _btn("Review", f"adm:chflt:{uid}:status:review"),
+            _btn("Approved", f"adm:chflt:{uid}:status:approved"),
+        ]
+    )
+    rows.append(
+        [
+            _btn(f"🎲 Rarity: {rar_flt.title()}", f"adm:chflt:{uid}:rarity:cycle"),
+            _btn(f"🖼️ Img: {img_flt.title()}", f"adm:chflt:{uid}:image:cycle"),
+        ]
+    )
+    rows.append(
+        [
+            _btn("🔍 Search Name", f"adm:chsearch:{uid}"),
+            _btn("♻️ Reset Filters", f"adm:chreset:{uid}"),
+        ]
+    )
+    rows.append(
+        [
+            _btn("📤 Submit Non-Held Drafts", f"adm:chsuball:{uid}"),
+            _btn("✅ Batch Approve Review", f"adm:chappall:{uid}", style=STYLE_SUCCESS),
+        ]
+    )
+    nav: list[InlineKeyboardButton] = []
+    if safe_page > 0:
+        nav.append(_btn("‹", f"adm:chars:{uid}:{st_flt}:{safe_page - 1}"))
+    nav.append(_btn(f"{safe_page + 1}/{total_pages}", f"adm:chars:menu"))
+    if safe_page + 1 < total_pages:
+        nav.append(_btn("›", f"adm:chars:{uid}:{st_flt}:{safe_page + 1}"))
+    rows.append(nav)
+    rows.append([_btn("« Back to Admin", "adm:dash")])
+    return clamp_text("\n".join(lines)), InlineKeyboardMarkup(inline_keyboard=rows)
+
+
 async def cmd_admin(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
     ok, err = _is_authorized_private(message.from_user, message.chat, coordinator)
     if not ok:
@@ -151,6 +246,16 @@ async def handle_admin_input(
     if pending is not None:
         mode, target_id = pending
         if message.text and message.text.strip().startswith("/"):
+            return
+
+        if mode == "char_search" and target_id:
+            q = (message.text or "").strip()
+            coordinator.set_char_browser_filter(uid, target_id, query=q)
+            coordinator.clear_admin_input_state(uid)
+            text, kb = _render_char_browser(coordinator, uid, target_id, page=0)
+            await send_message_safe(
+                coordinator.bot, chat_id=message.chat.id, text=text, reply_markup=kb
+            )
             return
 
         if mode == "welcome_video":
@@ -473,75 +578,141 @@ async def handle_admin_callback(
         sub = args[0] if args else "menu"
         universes = coordinator.db.list_universes(active_only=False)
         if sub == "menu":
-            rows = [
-                [_btn(f"{u.name}", f"adm:chars:{u.universe_id}:review:0")]
-                for u in universes
-            ]
+            rows = []
+            for u in universes:
+                cnt = len(coordinator.db.list_characters(u.universe_id))
+                rows.append([_btn(f"{u.name} ({cnt})", f"adm:chars:{u.universe_id}:all:0")])
             rows.append([_btn("« Back to Admin", "adm:dash")])
             await edit_message_text_safe(
                 coordinator.bot,
                 chat_id=chat_id,
                 message_id=msg_id,
-                text="📚 <b>Manage Characters</b>\n\nSelect a universe to inspect Draft, Review, and Approved records.",
+                text="📚 <b>Manage Characters</b>\n\nSelect a universe to browse, search, filter, and review characters.",
                 reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
             )
             await answer_callback_safe(query)
             return
 
         uid = sub
-        status_str = args[1] if len(args) > 1 else "review"
+        if len(args) > 1 and args[1] in {"all", "draft", "review", "approved"}:
+            coordinator.set_char_browser_filter(actor_id, uid, status=args[1])
         page = int(args[2]) if len(args) > 2 and args[2].isdigit() else 0
-        ev_status = EvaluationStatus(status_str)
-        chars = coordinator.db.list_characters(universe_id=uid, status=ev_status)
-        per_page = 6
-        total_pages = max(1, (len(chars) + per_page - 1) // per_page)
-        safe_page = max(0, min(page, total_pages - 1))
-        chunk = chars[safe_page * per_page : (safe_page + 1) * per_page]
-
-        lines = [
-            f"📚 <b>{esc(uid)} — {esc(ev_status.value.title())}</b> ({len(chars)})",
-            "",
-        ]
-        rows = []
-        for ch in chunk:
-            lines.append(
-                f"• <b>{esc(ch.name)}</b> ({esc(ch.rarity)}) — Img: <code>{esc(ch.image.status.value)}</code>"
-            )
-            if ev_status is EvaluationStatus.REVIEW:
-                rows.append([_btn(f"Approve {ch.name[:18]}", f"adm:chappr:{ch.character_id}", style=STYLE_SUCCESS)])
-            elif ev_status is EvaluationStatus.APPROVED:
-                rows.append([_btn(f"Reopen {ch.name[:18]}", f"adm:chreopen:{ch.character_id}")])
-
-        rows.append(
-            [
-                _btn("Draft", f"adm:chars:{uid}:draft:0"),
-                _btn("Review", f"adm:chars:{uid}:review:0"),
-                _btn("Approved", f"adm:chars:{uid}:approved:0"),
-            ]
-        )
-        rows.append(
-            [
-                _btn("📤 Submit Non-Held Drafts", f"adm:chsuball:{uid}"),
-                _btn("✅ Batch Approve Review", f"adm:chappall:{uid}", style=STYLE_SUCCESS),
-            ]
-        )
-        nav: list[InlineKeyboardButton] = []
-        if safe_page > 0:
-            nav.append(_btn("‹", f"adm:chars:{uid}:{status_str}:{safe_page - 1}"))
-        nav.append(_btn(f"{safe_page + 1}/{total_pages}", "adm:dash"))
-        if safe_page + 1 < total_pages:
-            nav.append(_btn("›", f"adm:chars:{uid}:{status_str}:{safe_page + 1}"))
-        rows.append(nav)
-        rows.append([_btn("« Back to Admin", "adm:dash")])
-
+        text, kb = _render_char_browser(coordinator, actor_id, uid, page=page)
         await edit_message_text_safe(
             coordinator.bot,
             chat_id=chat_id,
             message_id=msg_id,
-            text=clamp_text("\n".join(lines)),
-            reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
+            text=text,
+            reply_markup=kb,
         )
         await answer_callback_safe(query)
+        return
+
+    if action == "chflt" and len(args) >= 3:
+        uid, key, val = args[0], args[1], args[2]
+        flt = coordinator.get_char_browser_filter(actor_id, uid)
+        if key == "status":
+            coordinator.set_char_browser_filter(actor_id, uid, status=val)
+        elif key == "rarity":
+            order = ("all",) + tuple(RARITY_TIERS)
+            cur = flt.get("rarity", "all")
+            nxt = order[(order.index(cur) + 1) % len(order)] if cur in order else "all"
+            coordinator.set_char_browser_filter(actor_id, uid, rarity=nxt)
+        elif key == "image":
+            order_img = ("all", "cached", "missing")
+            cur = flt.get("image", "all")
+            nxt = order_img[(order_img.index(cur) + 1) % len(order_img)] if cur in order_img else "all"
+            coordinator.set_char_browser_filter(actor_id, uid, image=nxt)
+        text, kb = _render_char_browser(coordinator, actor_id, uid, page=0)
+        await edit_message_text_safe(
+            coordinator.bot, chat_id=chat_id, message_id=msg_id, text=text, reply_markup=kb
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "chreset" and args:
+        uid = args[0]
+        coordinator.set_char_browser_filter(
+            actor_id, uid, status="all", rarity="all", image="all", query=""
+        )
+        text, kb = _render_char_browser(coordinator, actor_id, uid, page=0)
+        await edit_message_text_safe(
+            coordinator.bot, chat_id=chat_id, message_id=msg_id, text=text, reply_markup=kb
+        )
+        await answer_callback_safe(query, "Filters reset.")
+        return
+
+    if action == "chsearch" and args:
+        uid = args[0]
+        coordinator.set_admin_input_state(actor_id, "char_search", uid)
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"🔍 <b>Search Characters in {esc(uid)}</b>\n\nSend the character name or ID to filter by.",
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("✖ Cancel", f"adm:chars:{uid}:all:0", style=STYLE_DANGER)]]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "chview" and args:
+        cid = args[0]
+        entry = coordinator.db.get_character_entry(cid)
+        photo = await coordinator.media_resolver.resolve_card_photo_async(
+            coordinator.bot,
+            entry,
+            channel_id=coordinator.config.media_channel_id,
+            bot_username=coordinator.config.bot_username,
+        )
+        fit_lines = [
+            f"  • {role.title()}: <b>{entry.fit.get(role, '-')}</b>"
+            for role in SCORING_ROLES
+        ] if entry.fit else ["  • <i>Unrated</i>"]
+        caption = clamp_text(
+            "\n".join(
+                [
+                    f"👤 <b>{esc(entry.name)}</b> (<code>{esc(entry.character_id)}</code>)",
+                    f"Version: <b>{esc(entry.canonical_version)}</b> | Rarity: <b>{esc(entry.rarity)}</b>",
+                    f"Status: <code>{esc(entry.status.value)}</code> | Image: <code>{esc(entry.image.status.value)}</code>",
+                    f"Power: <b>{entry.power if entry.power is not None else '-'}</b>",
+                    "Role Fits:",
+                    *fit_lines,
+                ]
+            )
+        )
+        action_row: list[InlineKeyboardButton] = [_btn("🔁 Replace Artwork", f"adm:mrep:{cid}")]
+        if entry.status is EvaluationStatus.DRAFT and entry.power is not None and entry.fit is not None:
+            action_row.append(_btn("📤 Submit Review", f"adm:chsub:{cid}", style=STYLE_PRIMARY))
+        elif entry.status is EvaluationStatus.REVIEW:
+            action_row.append(_btn("✅ Approve", f"adm:chappr:{cid}", style=STYLE_SUCCESS))
+        elif entry.status is EvaluationStatus.APPROVED:
+            action_row.append(_btn("↩️ Reopen", f"adm:chreopen:{cid}"))
+        kb = InlineKeyboardMarkup(
+            inline_keyboard=[
+                action_row,
+                [_btn("« Back to Characters", f"adm:chars:{entry.universe_id}:all:0")],
+            ]
+        )
+        await send_photo_or_text_safe(
+            coordinator.bot, chat_id=chat_id, photo=photo, caption=caption, reply_markup=kb
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "chsub" and args:
+        cid = args[0]
+        entry = coordinator.db.submit_for_review(cid)
+        if coordinator.store:
+            coordinator.store.record_admin_action(
+                actor_id=actor_id,
+                action="submit_character_review",
+                target_type="character",
+                target_id=cid,
+                details={},
+            )
+        await answer_callback_safe(query, f"{entry.name} submitted for review.")
         return
 
     if action == "chappr" and args:
@@ -990,26 +1161,27 @@ async def handle_admin_callback(
                 ]
             )
         )
-        kb = InlineKeyboardMarkup(
-            inline_keyboard=[
-                [
-                    _btn("🔄 Sync Images", "adm:msync"),
-                    _btn("⬆️ Upload Missing", "adm:mup"),
-                ],
-                [
-                    _btn("👀 Review Images", "adm:mrev:0"),
-                    _btn("📊 Media Status", "adm:mstat"),
-                ],
-                [_btn("« Back to Admin", "adm:dash")],
-            ]
-        )
+        kb_rows = [
+            [
+                _btn("🔄 Sync Images", "adm:msync"),
+                _btn("⬆️ Upload Missing", "adm:mup"),
+            ],
+            [
+                _btn("👀 Review Images", "adm:mrev:0"),
+                _btn("📊 Media Status", "adm:mstat"),
+            ],
+        ]
+        if stats.get("failed", 0) > 0:
+            kb_rows.insert(1, [_btn(f"🔁 Retry Failed ({stats['failed']})", "adm:mretry", style=STYLE_PRIMARY)])
+        kb_rows.append([_btn("« Back to Admin", "adm:dash")])
+        kb = InlineKeyboardMarkup(inline_keyboard=kb_rows)
         await edit_message_text_safe(
             coordinator.bot, chat_id=chat_id, message_id=msg_id, text=text, reply_markup=kb
         )
         await answer_callback_safe(query)
         return
 
-    if action == "msync" or action == "mup":
+    if action in {"msync", "mup", "mretry"}:
         if not coordinator.config.media_channel_id:
             await edit_message_text_safe(
                 coordinator.bot,
@@ -1022,12 +1194,16 @@ async def handle_admin_callback(
             )
             await answer_callback_safe(query)
             return
-        force = action == "msync"
-        verb = "Force-sync all" if force else "Upload missing"
+        mode_code = "1" if action == "msync" else ("2" if action == "mretry" else "0")
+        verb = (
+            "Force-sync all"
+            if action == "msync"
+            else ("Retry failed" if action == "mretry" else "Upload missing")
+        )
         kb = InlineKeyboardMarkup(
             inline_keyboard=[
                 [
-                    _btn(f"✅ Confirm {verb}", f"adm:mupc:{1 if force else 0}", style=STYLE_SUCCESS),
+                    _btn(f"✅ Confirm {verb}", f"adm:mupc:{mode_code}", style=STYLE_SUCCESS),
                     _btn("Cancel", "adm:media"),
                 ]
             ]
@@ -1046,7 +1222,9 @@ async def handle_admin_callback(
         if not coordinator.config.media_channel_id:
             await answer_callback_safe(query, "MEDIA_CHANNEL_ID not configured.", show_alert=True)
             return
-        force = bool(args and args[0] == "1")
+        mode_code = args[0] if args else "0"
+        force = mode_code == "1"
+        only_failed = mode_code == "2"
         await answer_callback_safe(query, "Starting batch image upload...")
         await edit_message_text_safe(
             coordinator.bot,
@@ -1075,6 +1253,7 @@ async def handle_admin_callback(
             channel_id=coordinator.config.media_channel_id,
             bot_username=coordinator.config.bot_username,
             force=force,
+            only_failed=only_failed,
             delay_seconds=0.05,
         )
         if coordinator.store:
@@ -1083,28 +1262,36 @@ async def handle_admin_callback(
                 action="media_sync",
                 target_type="media",
                 target_id="all",
-                details={"uploaded": res.uploaded, "skipped": res.skipped, "failed": res.failed},
+                details={
+                    "uploaded": res.uploaded,
+                    "skipped": res.skipped,
+                    "failed": res.failed,
+                    "error_counts": res.error_counts,
+                },
             )
-        text = clamp_text(
-            "\n".join(
-                [
-                    "✅ <b>Media Sync Complete</b>",
-                    "",
-                    f"Total scanned: <b>{res.total}</b>",
-                    f"Uploaded: <b>{res.uploaded}</b>",
-                    f"Skipped (cached): <b>{res.skipped}</b>",
-                    f"Failed: <b>{res.failed}</b>",
-                ]
-            )
-        )
+        lines = [
+            "✅ <b>Media Sync Complete</b>",
+            "",
+            f"Total scanned: <b>{res.total}</b>",
+            f"Uploaded: <b>{res.uploaded}</b>",
+            f"Skipped (cached): <b>{res.skipped}</b>",
+            f"Failed: <b>{res.failed}</b>",
+        ]
+        if res.error_counts:
+            lines.append("")
+            lines.append("<b>Failure Reasons:</b>")
+            for err_msg, cnt in sorted(res.error_counts.items(), key=lambda x: -x[1])[:5]:
+                lines.append(f"• <code>{esc(err_msg)}</code> ({cnt})")
+        kb_rows = []
+        if res.failed > 0:
+            kb_rows.append([_btn(f"🔁 Retry Failed ({res.failed})", "adm:mretry", style=STYLE_PRIMARY)])
+        kb_rows.append([_btn("« Back to Media", "adm:media")])
         await edit_message_text_safe(
             coordinator.bot,
             chat_id=chat_id,
             message_id=msg_id,
-            text=text,
-            reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
-            ),
+            text=clamp_text("\n".join(lines)),
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=kb_rows),
         )
         return
 

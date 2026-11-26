@@ -459,6 +459,7 @@ class MongoMatchStore:
         verification_status: str = "pending",
         upload_status: str = "uploaded",
         attribution: str = "",
+        last_error: str = "",
     ) -> None:
         now = _utc_now()
         self._db["media_assets"].replace_one(
@@ -478,6 +479,7 @@ class MongoMatchStore:
                 "verification_status": verification_status,
                 "upload_status": upload_status,
                 "attribution": attribution,
+                "last_error": last_error,
                 "last_validated_at": now,
                 "updated_at": now,
             },
