@@ -321,15 +321,26 @@ class MongoMatchStore:
             raise PersistenceConflictError(
                 f"Active match lock conflict: player {existing_locks[0]['_id']} already locked."
             )
-        self.save_challenge(challenge)
-        self._db["matches"].replace_one({"_id": match.match_id}, _serialize_match(match), upsert=True)
         now = _utc_now()
-        for pid in match.players:
-            self._db["active_player_locks"].replace_one(
-                {"_id": pid},
-                {"_id": pid, "player_id": pid, "match_id": match.match_id, "updated_at": now},
-                upsert=True,
+        acquired: list[str] = []
+        try:
+            for pid in match.players:
+                self._db["active_player_locks"].insert_one(
+                    {"_id": pid, "player_id": pid, "match_id": match.match_id, "updated_at": now}
+                )
+                acquired.append(pid)
+            self.save_challenge(challenge)
+            self._db["matches"].replace_one(
+                {"_id": match.match_id}, _serialize_match(match), upsert=True
             )
+        except Exception as exc:
+            if acquired:
+                self._db["active_player_locks"].delete_many(
+                    {"_id": {"$in": acquired}, "match_id": match.match_id}
+                )
+            raise PersistenceConflictError(
+                f"Active match lock conflict for match {match.match_id}: {exc}"
+            ) from exc
 
     def save_match_transition(
         self,

@@ -195,7 +195,7 @@ async def test_admin_workflows_universe_character_dataset_match_maintenance_broa
     await dp.feed_update(bot, _cb_upd(3, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:stats"))
     assert "Active matches: <b>1</b>" in bot.edited_messages[-1]["text"]
     await dp.feed_update(bot, _cb_upd(4, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:diag"))
-    assert "SQLite integrity: <b>OK</b>" in bot.edited_messages[-1]["text"]
+    assert "Database integrity: <b>OK</b>" in bot.edited_messages[-1]["text"]
 
     # Approve REVIEW character naruto_c15
     await dp.feed_update(

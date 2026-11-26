@@ -484,7 +484,7 @@ async def handle_admin_callback(
                     f"Python: <code>{platform.python_version()}</code> ({esc(platform.system())})",
                     f"Transport mode: <code>{esc(coordinator.config.transport_mode)}</code>",
                     f"Dataset kind: <code>{esc(coordinator.config.dataset_kind.value)}</code>",
-                    f"SQLite integrity: <b>{'OK' if db_ok else 'FAILED'}</b> ({esc(db_msg)})",
+                    f"Database integrity: <b>{'OK' if db_ok else 'FAILED'}</b> ({esc(db_msg)})",
                     f"Maintenance mode: <b>{'ON' if coordinator.is_maintenance_mode() else 'OFF'}</b>",
                 ]
             )

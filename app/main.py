@@ -35,7 +35,27 @@ async def run_bot() -> None:
         config.port,
     )
 
-    db = create_character_database(config)
+    if config.db_backend == "mongodb" and config.mongodb_uri:
+        from pymongo import MongoClient
+        from app.database import MongoCharacterDatabase
+        from app.persistence import MongoMatchStore
+
+        shared_client = MongoClient(
+            config.mongodb_uri,
+            serverSelectionTimeoutMS=5000,
+            connectTimeoutMS=5000,
+            socketTimeoutMS=10000,
+        )
+        db = MongoCharacterDatabase(
+            database_name=config.mongodb_database, client=shared_client
+        )
+        store = MongoMatchStore(
+            database_name=config.mongodb_database, client=shared_client
+        )
+    else:
+        shared_client = None
+        db = create_character_database(config)
+        store = create_match_store(config)
 
     snap_path = Path(config.bootstrap_snapshot_path) if config.bootstrap_snapshot_path else None
     boot_summary = bootstrap_naruto_database(
@@ -52,7 +72,6 @@ async def run_bot() -> None:
         boot_summary.published_production_version,
     )
 
-    store = create_match_store(config)
     bot = create_bot(config)
 
     manager = MatchManager(db, dataset_kind=config.dataset_kind, store=store)
@@ -163,6 +182,8 @@ async def run_bot() -> None:
         await bot.session.close()
         store.close()
         db.close()
+        if shared_client is not None:
+            shared_client.close()
         logger.info("Kayi Arena shut down cleanly.")
 
 

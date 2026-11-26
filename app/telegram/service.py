@@ -296,6 +296,9 @@ class ArenaTelegramCoordinator:
         message_id: int,
         ctx: UniverseMenuContext,
     ) -> None:
+        if len(self._universe_menus) > 500:
+            oldest = next(iter(self._universe_menus))
+            self._universe_menus.pop(oldest, None)
         self._universe_menus[(chat_id, message_id)] = ctx
 
     def get_universe_menu(self, chat_id: str, message_id: int) -> UniverseMenuContext | None:
@@ -460,6 +463,7 @@ class ArenaTelegramCoordinator:
 
         if match.status is not MatchLifecycleStatus.DRAFTING:
             self._cancel_match_timers(match.match_id)
+            self._recovery_locks.pop(match.match_id, None)
             if update_board:
                 char_lookup = self.char_lookup_for_match(match)
                 await edit_message_text_safe(
