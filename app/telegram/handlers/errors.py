@@ -14,9 +14,18 @@ logger = logging.getLogger(__name__)
 
 async def on_error(event: ErrorEvent) -> bool:
     exc = event.exception
-    logger.error("Unhandled update error: %s", type(exc).__name__, exc_info=exc)
-
     update = event.update
+    cb_data = update.callback_query.data if update.callback_query else None
+    msg = update.message or (update.callback_query.message if update.callback_query else None)
+    chat_type = msg.chat.type if msg and msg.chat else "unknown"
+    logger.error(
+        "Unhandled update error: %s (update_id=%s, chat_type=%s, cb=%r)",
+        type(exc).__name__,
+        update.update_id,
+        chat_type,
+        cb_data,
+        exc_info=exc,
+    )
     if update.callback_query is not None:
         await answer_callback_safe(
             update.callback_query,

@@ -748,8 +748,8 @@ class MongoCharacterDatabase:
         catalog = tuple(
             CatalogEntry(
                 character_id=r.character_id,
-                rarity=str(rarities.get(r.character_id) or self.get_character_entry(r.character_id).rarity),
+                rarity_id=str(rarities.get(r.character_id) or self.get_character_entry(r.character_id).rarity),
             )
-            for r in manifest.records
+            for r in sorted(manifest.records, key=lambda rec: rec.character_id)
         )
         return catalog, dict(universe.rarity_weights), dataset_version

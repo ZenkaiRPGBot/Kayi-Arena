@@ -129,6 +129,22 @@ def test_mongo_character_database_naruto_bootstrap_and_dataset_pinning() -> None
     assert summary2.total_loaded == 60
     assert len(mdb.list_characters("naruto")) == 60
 
+    # Verify export_draft_catalog produces valid CatalogEntry(rarity_id=...)
+    from app.scoring import DatasetKind
+
+    eligible_ids = [
+        c.character_id
+        for c in mdb.list_characters("naruto")
+        if c.power is not None and c.fit is not None
+    ][:20]
+    manifest, _ = mdb.publish_dataset(
+        "naruto", "naruto-test-export", kind=DatasetKind.TEST, character_ids=eligible_ids
+    )
+    catalog, weights, dver = mdb.export_draft_catalog(manifest.dataset_version)
+    assert dver == "naruto-test-export"
+    assert len(catalog) == 20
+    assert catalog[0].rarity_id in weights
+
 
 @pytest.mark.asyncio
 async def test_mongo_store_match_lifecycle_cas_and_media_metadata(tmp_path: Path) -> None:
