@@ -18,9 +18,15 @@ from app.telegram.keyboards import (
     build_home_keyboard,
     build_leaderboard_keyboard,
     build_match_results_keyboard,
+    build_support_keyboard,
     build_universe_selection_keyboard,
 )
-from app.telegram.safe_api import answer_callback_safe, edit_message_text_safe, send_message_safe
+from app.telegram.safe_api import (
+    answer_callback_safe,
+    edit_message_text_safe,
+    send_message_safe,
+    send_video_or_text_safe,
+)
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
 from app.telegram.texts import (
     render_active_game,
@@ -33,6 +39,7 @@ from app.telegram.texts import (
     render_leaderboard,
     render_match_results,
     render_profile,
+    render_support_home,
     render_universe_selection,
 )
 
@@ -119,13 +126,46 @@ async def handle_arena_callback(
     # ------------------------------------------------------------------
     if action == "home":
         if msg.chat.type == "private":
-            await edit_message_text_safe(
-                coordinator.bot,
-                chat_id=chat_id,
-                message_id=msg_id,
-                text=render_home_private(),
-                reply_markup=build_home_keyboard(coordinator.config),
-            )
+            caption = render_home_private()
+            markup = build_home_keyboard(coordinator.config)
+            welcome_video = coordinator.get_welcome_video_file_id()
+            if welcome_video:
+                sent, is_video = await send_video_or_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    video=welcome_video,
+                    caption=caption,
+                    reply_markup=markup,
+                )
+                if is_video and sent is not None and getattr(sent, "video", None):
+                    vid_id = getattr(sent.video, "file_id", "")
+                    if vid_id and vid_id != welcome_video:
+                        coordinator.set_welcome_video_file_id(vid_id)
+                if sent is not None:
+                    try:
+                        await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+                    except Exception:
+                        pass
+            elif getattr(msg, "text", None) is None:
+                sent = await send_message_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    text=caption,
+                    reply_markup=markup,
+                )
+                if sent is not None:
+                    try:
+                        await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+                    except Exception:
+                        pass
+            else:
+                await edit_message_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    text=caption,
+                    reply_markup=markup,
+                )
         else:
             await edit_message_text_safe(
                 coordinator.bot,
@@ -134,6 +174,45 @@ async def handle_arena_callback(
                 text=render_home_group(),
             )
         await answer_callback_safe(query)
+        return
+
+    if action == "sup":
+        if msg.chat.type != "private":
+            await answer_callback_safe(query, "Support is available in private chat.", show_alert=True)
+            return
+        sub = args[0] if args else "menu"
+        if sub == "bug":
+            await answer_callback_safe(query, "Bug reporting is not available yet.", show_alert=True)
+            return
+        if sub == "idea":
+            await answer_callback_safe(query, "Feature suggestions are not available yet.", show_alert=True)
+            return
+        if sub == "menu":
+            support_text = render_support_home()
+            support_markup = build_support_keyboard()
+            if getattr(msg, "text", None) is None:
+                sent = await send_message_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    text=support_text,
+                    reply_markup=support_markup,
+                )
+                if sent is not None:
+                    try:
+                        await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+                    except Exception:
+                        pass
+            else:
+                await edit_message_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    text=support_text,
+                    reply_markup=support_markup,
+                )
+            await answer_callback_safe(query)
+            return
+        await answer_callback_safe(query, "This action is no longer available.")
         return
 
     if action == "hlp":

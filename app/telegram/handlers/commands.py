@@ -22,7 +22,6 @@ from app.telegram.keyboards import (
 )
 from app.telegram.safe_api import (
     send_message_safe,
-    send_photo_or_text_safe,
     send_video_or_text_safe,
 )
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
@@ -60,15 +59,6 @@ async def cmd_start(message: Message, coordinator: ArenaTelegramCoordinator) -> 
                 vid_id = getattr(sent.video, "file_id", "")
                 if vid_id and vid_id != welcome_video:
                     coordinator.set_welcome_video_file_id(vid_id)
-            return
-        if coordinator.config.home_banner_ref:
-            await send_photo_or_text_safe(
-                coordinator.bot,
-                chat_id=message.chat.id,
-                photo=coordinator.config.home_banner_ref,
-                caption=caption,
-                reply_markup=markup,
-            )
             return
         await send_message_safe(
             coordinator.bot,

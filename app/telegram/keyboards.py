@@ -48,21 +48,24 @@ def build_home_keyboard(config: BotConfig) -> InlineKeyboardMarkup:
     add_group_url = f"https://t.me/{config.bot_username}?startgroup=true"
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [_btn("⚔️ Enter Arena", callback_data=encode_cb("arena"), style=STYLE_PRIMARY)],
+            [_btn("➕ Add to Group", url=add_group_url, style=STYLE_SUCCESS)],
             [
-                _btn("👤 My Profile", callback_data=encode_cb("pr", "self")),
-                _btn("🏆 Leaderboards", callback_data=encode_cb("lb", "g", 0)),
+                _btn("📢 Updates", url=config.updates_url, style=STYLE_PRIMARY),
+                _btn("💬 Support", callback_data=encode_cb("sup", "menu"), style=STYLE_PRIMARY),
             ],
+            [_btn("👨💻 Developer", url=config.developer_url, style=STYLE_DANGER)],
+        ]
+    )
+
+
+def build_support_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
             [
-                _btn("🌐 Universes", callback_data=encode_cb("ls", "menu", "a", 0)),
-                _btn("📖 How to Play", callback_data=encode_cb("hlp", "menu")),
+                _btn("🐞 Report a Bug", callback_data=encode_cb("sup", "bug"), style=STYLE_DANGER),
+                _btn("💡 Suggest an Idea", callback_data=encode_cb("sup", "idea"), style=STYLE_SUCCESS),
             ],
-            [_btn("➕ Add to Group", url=add_group_url)],
-            [
-                _btn("📢 Updates", url=config.updates_url),
-                _btn("💬 Support", url=config.support_url),
-            ],
-            [_btn("👨💻 Developer", url=config.developer_url)],
+            [_btn("« Back", callback_data=encode_cb("home"))],
         ]
     )
 

@@ -83,20 +83,37 @@ def format_deadline_countdown(seconds_remaining: float) -> str:
 
 
 def render_home_private() -> str:
+    return clamp_caption(
+        "\n".join(
+            [
+                "⚔️ <b>Welcome to Kayi Arena</b>",
+                "",
+                "A battlefield where anime universes collide and strategy decides your fate.",
+                "",
+                "Assemble your dream team, master seven unique roles, and outsmart your opponents in strategic 1v1 battles.",
+                "",
+                "Every character matters. Every decision counts.",
+                "",
+                "⚔️ /arena — Begin your battle",
+                "📖 /help — Learn the game",
+                "",
+                "<i>Power is given. Victory is earned.</i>",
+                "",
+                "<i>Powered by Kayi Bots</i>",
+            ]
+        )
+    )
+
+
+def render_support_home() -> str:
     return clamp_text(
         "\n".join(
             [
-                "⚔️ <b>KAYI ARENA</b>",
+                "<b>💬 Kayi Arena Support</b>",
                 "",
-                "<i>DRAFT • STRATEGIZE • DOMINATE</i>",
+                "Encountered an issue or have an idea to improve the arena?",
                 "",
-                "Welcome to Kayi Arena!",
-                "",
-                "Draft your favorite anime characters, build your ultimate seven-member team and challenge other players in strategic battles.",
-                "",
-                "Knowledge wins battles. Strategy wins wars.",
-                "",
-                "<i>Powered by Kayi Bots</i>",
+                "We'd love to hear from you.",
             ]
         )
     )

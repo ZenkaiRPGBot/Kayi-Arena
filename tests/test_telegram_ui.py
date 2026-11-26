@@ -103,10 +103,13 @@ class MockBotRecorder:
         self.sent_messages: list[dict[str, Any]] = []
         self.edited_messages: list[dict[str, Any]] = []
         self.sent_photos: list[dict[str, Any]] = []
+        self.sent_videos: list[dict[str, Any]] = []
+        self.deleted_messages: list[dict[str, Any]] = []
         self.edited_media: list[dict[str, Any]] = []
         self.edited_captions: list[dict[str, Any]] = []
         self.callback_answers: list[dict[str, Any]] = []
         self.fail_photos: bool = False
+        self.fail_videos: bool = False
 
     def _make_message(self, chat_id: int | str, text: str = "", reply_markup: Any = None) -> MagicMock:
         self.next_msg_id += 1
@@ -145,6 +148,20 @@ class MockBotRecorder:
             reply_markup=kwargs.get("reply_markup"),
         )
 
+    async def send_video(self, **kwargs: Any) -> MagicMock:
+        if self.fail_videos:
+            raise TelegramBadRequest(method=MagicMock(), message="Bad Request: wrong video identifier")
+        self.sent_videos.append(kwargs)
+        msg = self._make_message(
+            kwargs["chat_id"],
+            text=None,  # type: ignore[arg-type]
+            reply_markup=kwargs.get("reply_markup"),
+        )
+        msg.text = None
+        msg.caption = kwargs.get("caption", "")
+        msg.video = MagicMock(file_id=kwargs["video"])
+        return msg
+
     async def edit_message_media(self, **kwargs: Any) -> MagicMock:
         if self.fail_photos:
             raise TelegramBadRequest(method=MagicMock(), message="Bad Request: invalid media")
@@ -156,6 +173,7 @@ class MockBotRecorder:
         return self._make_message(kwargs["chat_id"])
 
     async def delete_message(self, **kwargs: Any) -> bool:
+        self.deleted_messages.append(kwargs)
         return True
 
     async def __call__(self, method: Any, **kwargs: Any) -> Any:
@@ -246,6 +264,8 @@ def test_public_commands_use_arena_not_draft() -> None:
 
 
 def test_home_keyboard_and_button_styles() -> None:
+    from app.telegram.keyboards import build_support_keyboard
+
     cfg = BotConfig(
         bot_token="fake:token",
         bot_username="KayiArenaBot",
@@ -254,12 +274,120 @@ def test_home_keyboard_and_button_styles() -> None:
         support_url="https://t.me/KayiBots",
     )
     kb = build_home_keyboard(cfg)
-    flat = [b for row in kb.inline_keyboard for b in row]
-    assert flat[0].text == "⚔️ Enter Arena"
-    assert flat[0].model_dump(exclude_none=True)["style"] == "primary"
-    assert any(b.url == "https://t.me/KayiArenaBot?startgroup=true" for b in flat)
-    assert any(b.url == "https://t.me/KayiBots" for b in flat)
-    assert any(b.url == "https://t.me/qouba" for b in flat)
+    assert len(kb.inline_keyboard) == 3
+    assert [b.text for b in kb.inline_keyboard[0]] == ["➕ Add to Group"]
+    assert [b.text for b in kb.inline_keyboard[1]] == ["📢 Updates", "💬 Support"]
+    assert [b.text for b in kb.inline_keyboard[2]] == ["👨💻 Developer"]
+
+    assert kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "success"
+    assert kb.inline_keyboard[0][0].url == "https://t.me/KayiArenaBot?startgroup=true"
+    assert kb.inline_keyboard[1][0].model_dump(exclude_none=True)["style"] == "primary"
+    assert kb.inline_keyboard[1][0].url == "https://t.me/KayiBots"
+    assert kb.inline_keyboard[1][1].model_dump(exclude_none=True)["style"] == "primary"
+    assert kb.inline_keyboard[1][1].callback_data == encode_cb("sup", "menu")
+    assert kb.inline_keyboard[2][0].model_dump(exclude_none=True)["style"] == "danger"
+    assert kb.inline_keyboard[2][0].url == "https://t.me/qouba"
+
+    sup_kb = build_support_keyboard()
+    assert len(sup_kb.inline_keyboard) == 2
+    assert [b.text for b in sup_kb.inline_keyboard[0]] == ["🐞 Report a Bug", "💡 Suggest an Idea"]
+    assert sup_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "danger"
+    assert sup_kb.inline_keyboard[0][1].model_dump(exclude_none=True)["style"] == "success"
+    assert [b.text for b in sup_kb.inline_keyboard[1]] == ["« Back"]
+    assert "style" not in sup_kb.inline_keyboard[1][0].model_dump(exclude_none=True)
+
+
+@pytest.mark.asyncio
+async def test_start_welcome_video_and_support_flow() -> None:
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION)
+    bot = MockBotRecorder()
+    cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot")
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr)
+    alex = _make_user(101, "Alex")
+
+    # Without welcome video: sends text with exact approved wording
+    await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=alex, text="/start"))
+    welcome_text = bot.sent_messages[-1]["text"]
+    assert "⚔️ <b>Welcome to Kayi Arena</b>" in welcome_text
+    assert "⚔️ /arena — Begin your battle" in welcome_text
+    assert "📖 /help — Learn the game" in welcome_text
+    assert "<i>Power is given. Victory is earned.</i>" in welcome_text
+    assert "<i>Powered by Kayi Bots</i>" in welcome_text
+
+    # Configure welcome video and test /start -> Support -> Bug/Idea -> Back transitions
+    coordinator.set_welcome_video_file_id("VID_FILE_123")
+    await dp.feed_update(bot, _make_message_update(2, chat_id=101, chat_type="private", user=alex, text="/start"))
+    assert len(bot.sent_videos) == 1
+    assert bot.sent_videos[-1]["video"] == "VID_FILE_123"
+    assert "⚔️ <b>Welcome to Kayi Arena</b>" in bot.sent_videos[-1]["caption"]
+    vid_msg_id = 100 + len(bot.sent_messages) + len(bot.sent_videos)
+
+    # Click Support from video message: sends text Support menu and deletes old video message
+    now_dt = datetime.datetime.now(datetime.timezone.utc)
+    video_msg = Message(
+        message_id=vid_msg_id,
+        date=now_dt,
+        chat=Chat(id=101, type="private"),
+        from_user=alex,
+    )
+    cq_sup = CallbackQuery(
+        id="cq_sup_1",
+        from_user=alex,
+        chat_instance="ci1",
+        message=video_msg,
+        data=encode_cb("sup", "menu"),
+    )
+    await dp.feed_update(bot, Update(update_id=3, callback_query=cq_sup))
+    assert "<b>💬 Kayi Arena Support</b>" in bot.sent_messages[-1]["text"]
+    assert any(d["message_id"] == vid_msg_id for d in bot.deleted_messages)
+
+    # Click Report a Bug & Suggest an Idea -> truthful alerts
+    sup_msg_id = 100 + len(bot.sent_messages) + len(bot.sent_videos)
+    sup_msg = Message(
+        message_id=sup_msg_id,
+        date=now_dt,
+        chat=Chat(id=101, type="private"),
+        from_user=alex,
+        text=bot.sent_messages[-1]["text"],
+    )
+    await dp.feed_update(
+        bot,
+        Update(
+            update_id=4,
+            callback_query=CallbackQuery(
+                id="cq_bug", from_user=alex, chat_instance="ci1", message=sup_msg, data=encode_cb("sup", "bug")
+            ),
+        ),
+    )
+    assert "not available yet" in bot.callback_answers[-1]["text"].lower()
+    assert bot.callback_answers[-1]["show_alert"] is True
+
+    await dp.feed_update(
+        bot,
+        Update(
+            update_id=5,
+            callback_query=CallbackQuery(
+                id="cq_idea", from_user=alex, chat_instance="ci1", message=sup_msg, data=encode_cb("sup", "idea")
+            ),
+        ),
+    )
+    assert "not available yet" in bot.callback_answers[-1]["text"].lower()
+    assert bot.callback_answers[-1]["show_alert"] is True
+
+    # Click Back -> returns to welcome video and deletes Support text message
+    await dp.feed_update(
+        bot,
+        Update(
+            update_id=6,
+            callback_query=CallbackQuery(
+                id="cq_back", from_user=alex, chat_instance="ci1", message=sup_msg, data=encode_cb("home")
+            ),
+        ),
+    )
+    assert len(bot.sent_videos) == 2
+    assert any(d["message_id"] == sup_msg_id for d in bot.deleted_messages)
 
 
 @pytest.mark.asyncio
@@ -278,7 +406,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
 
     # 1. /start in private & group
     await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=alex, text="/start"))
-    assert "KAYI ARENA" in bot.sent_messages[-1]["text"]
+    assert "Welcome to Kayi Arena" in bot.sent_messages[-1]["text"]
     assert bot.sent_messages[-1]["reply_markup"] is not None
 
     await dp.feed_update(bot, _make_message_update(2, chat_id=-1001, chat_type="supergroup", user=alex, text="/start"))
