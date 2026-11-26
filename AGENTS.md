@@ -6,7 +6,9 @@ For every future development assignment in this repository, follow this exact se
 
 1. **Implementation** — Write modular, type-safe code preserving approved gameplay rules, character evaluations, and UI layouts.
 2. **Tests** — Add or update targeted unit and integration tests for all new behavior and bug fixes.
-3. **CodeRabbit Review** — Run CodeRabbit review (CLI `coderabbit review --agent` in Linux/macOS/WSL environments, or CodeRabbit Cloud MCP / PR review) on the changes.
+3. **CodeRabbit Review** — Run CodeRabbit CLI review on Windows (locate `coderabbit` in `PATH` or `%LOCALAPPDATA%\Programs\coderabbit\coderabbit.exe`):
+   - Verify auth: `"<cli_path>" auth status --agent`
+   - Review changes: `"<cli_path>" review --agent --base-commit <commit>` (or `--uncommitted`)
 4. **Fix Findings** — Resolve all confirmed `critical`, `major`, and relevant `minor` findings without weakening security or bypassing validation.
 5. **Regression Tests** — Re-run the full `pytest tests -v` suite (and live MongoDB Atlas checks when database code changes) after all fixes.
 6. **Final Review** — Confirm clean `git status`, zero secret exposure, and accurate verification output.

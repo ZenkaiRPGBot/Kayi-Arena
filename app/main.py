@@ -47,10 +47,10 @@ async def run_bot() -> None:
             socketTimeoutMS=10000,
         )
         db = MongoCharacterDatabase(
-            database_name=config.mongodb_database, client=shared_client
+            uri=config.mongodb_uri, database_name=config.mongodb_database, client=shared_client
         )
         store = MongoMatchStore(
-            database_name=config.mongodb_database, client=shared_client
+            uri=config.mongodb_uri, database_name=config.mongodb_database, client=shared_client
         )
     else:
         shared_client = None

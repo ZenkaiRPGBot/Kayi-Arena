@@ -233,7 +233,7 @@ class MongoMatchStore:
                 raise RuntimeError(
                     "pymongo is required when DB_BACKEND=mongodb. Install pymongo>=4.6."
                 ) from exc
-            if not uri:
+            if client is None and not uri:
                 raise ValueError("MONGODB_URI is required when DB_BACKEND=mongodb.")
             self._client = client or MongoClient(
                 uri,
@@ -323,21 +323,25 @@ class MongoMatchStore:
             )
         now = _utc_now()
         acquired: list[str] = []
+        match_written = False
         try:
+            self._db["matches"].replace_one(
+                {"_id": match.match_id}, _serialize_match(match), upsert=True
+            )
+            match_written = True
             for pid in match.players:
                 self._db["active_player_locks"].insert_one(
                     {"_id": pid, "player_id": pid, "match_id": match.match_id, "updated_at": now}
                 )
                 acquired.append(pid)
             self.save_challenge(challenge)
-            self._db["matches"].replace_one(
-                {"_id": match.match_id}, _serialize_match(match), upsert=True
-            )
         except Exception as exc:
             if acquired:
                 self._db["active_player_locks"].delete_many(
                     {"_id": {"$in": acquired}, "match_id": match.match_id}
                 )
+            if match_written:
+                self._db["matches"].delete_many({"_id": match.match_id})
             raise PersistenceConflictError(
                 f"Active match lock conflict for match {match.match_id}: {exc}"
             ) from exc
@@ -372,11 +376,7 @@ class MongoMatchStore:
         return _doc_to_match(doc) if doc is not None else None
 
     def load_active_matches(self) -> list[ManagedMatch]:
-        terminal = {
-            MatchLifecycleStatus.COMPLETED.value,
-            MatchLifecycleStatus.ABANDONED.value,
-        }
-        docs = self._db["matches"].find({"status": {"$nin": list(terminal)}})
+        docs = self._db["matches"].find({"status": MatchLifecycleStatus.DRAFTING.value})
         items = [_doc_to_match(d) for d in docs]
         items.sort(key=lambda m: m.created_at)
         return items
@@ -386,6 +386,31 @@ class MongoMatchStore:
             str(d["player_id"]): str(d["match_id"])
             for d in self._db["active_player_locks"].find({})
         }
+
+    def reconcile_orphan_locks(self) -> int:
+        """Remove active_player_locks whose match_id has no DRAFTING match, and ensure DRAFTING match locks exist."""
+        active_matches = self.load_active_matches()
+        active_by_id = {m.match_id: m for m in active_matches}
+        removed = 0
+        for lock_doc in list(self._db["active_player_locks"].find({})):
+            mid = str(lock_doc.get("match_id", ""))
+            if mid not in active_by_id:
+                live_doc = self._db["matches"].find_one(
+                    {"_id": mid, "status": MatchLifecycleStatus.DRAFTING.value}
+                )
+                if live_doc is None:
+                    self._db["active_player_locks"].delete_many({"_id": lock_doc["_id"]})
+                    removed += 1
+        now = _utc_now()
+        for match in active_matches:
+            for pid in match.players:
+                if self._db["active_player_locks"].find_one({"_id": pid}) is None:
+                    self._db["active_player_locks"].replace_one(
+                        {"_id": pid},
+                        {"_id": pid, "player_id": pid, "match_id": match.match_id, "updated_at": now},
+                        upsert=True,
+                    )
+        return removed
 
     # ------------------------------------------------------------------
     # History & Profiles
@@ -583,10 +608,6 @@ class MongoMatchStore:
             return False, f"mongodb error: {type(exc).__name__}"
 
     def get_stats_snapshot(self) -> dict[str, int]:
-        terminal = {
-            MatchLifecycleStatus.COMPLETED.value,
-            MatchLifecycleStatus.ABANDONED.value,
-        }
         return {
             "total_users": self._db["player_profiles"].count_documents({}),
             "private_chats": self._db["known_chats"].count_documents({"chat_type": "private"}),
@@ -594,10 +615,10 @@ class MongoMatchStore:
                 {"chat_type": {"$in": ["group", "supergroup"]}}
             ),
             "active_matches": self._db["matches"].count_documents(
-                {"status": {"$nin": list(terminal)}}
+                {"status": MatchLifecycleStatus.DRAFTING.value}
             ),
             "completed_matches": self._db["matches"].count_documents(
-                {"status": {"$in": list(terminal)}}
+                {"status": {"$ne": MatchLifecycleStatus.DRAFTING.value}}
             ),
             "total_history": self._db["match_history"].count_documents({}),
             "open_challenges": self._db["challenges"].count_documents(

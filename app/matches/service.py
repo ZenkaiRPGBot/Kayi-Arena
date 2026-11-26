@@ -1338,6 +1338,8 @@ class MatchManager:
         errors: list[str] = []
 
         async with self._global_lock:
+            if hasattr(self._store, "reconcile_orphan_locks"):
+                self._store.reconcile_orphan_locks()
             for chl, msg_id in self._store.load_open_challenges():
                 if now >= chl.expires_at:
                     expired = ChallengeRecord(

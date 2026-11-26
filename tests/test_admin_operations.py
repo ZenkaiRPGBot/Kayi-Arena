@@ -207,7 +207,18 @@ async def test_admin_workflows_universe_character_dataset_match_maintenance_broa
     await dp.feed_update(
         bot, _cb_upd(6, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:dpubc:naruto")
     )
-    assert "Published immutable dataset" in bot.edited_messages[-1]["text"]
+    assert "Published immutable <b>production</b> dataset" in bot.edited_messages[-1]["text"]
+
+    # Even when bot config is DatasetKind.TEST, adm:dpubc explicitly publishes PRODUCTION
+    coordinator.config = BotConfig(bot_token="secret_tok", owner_id=1000, dataset_kind=DatasetKind.TEST)
+    await dp.feed_update(
+        bot, _cb_upd(60, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:dpubc:naruto")
+    )
+    assert "Published immutable <b>production</b> dataset" in bot.edited_messages[-1]["text"]
+    latest_prod = db.get_latest_published_version("naruto", kind=DatasetKind.PRODUCTION)
+    assert latest_prod is not None
+    assert db.load_manifest(latest_prod).kind is DatasetKind.PRODUCTION
+    coordinator.config = cfg
     assert mgr.get_match(match.match_id).dataset_version == "naruto-v1"
 
     # Toggle universe inactive with confirmation

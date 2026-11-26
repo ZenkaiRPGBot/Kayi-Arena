@@ -975,12 +975,12 @@ async def handle_admin_callback(
 
     if action == "dpubc" and args:
         uid = args[0]
-        ver = f"{uid}-{coordinator.config.dataset_kind.value[:4]}-{int(time.time())}"
+        ver = f"{uid}-prod-{int(time.time())}"
         try:
             manifest, _health = coordinator.db.publish_dataset(
                 universe_id=uid,
                 dataset_version=ver,
-                kind=coordinator.config.dataset_kind,
+                kind=DatasetKind.PRODUCTION,
             )
             published_ver = manifest.dataset_version
             if coordinator.store:
@@ -989,9 +989,9 @@ async def handle_admin_callback(
                     action="publish_dataset",
                     target_type="dataset",
                     target_id=published_ver,
-                    details={"universe_id": uid, "count": len(manifest.records)},
+                    details={"universe_id": uid, "kind": "production", "count": len(manifest.records)},
                 )
-            text = f"✅ Published immutable dataset <code>{esc(published_ver)}</code> ({len(manifest.records)} characters)."
+            text = f"✅ Published immutable <b>production</b> dataset <code>{esc(published_ver)}</code> ({len(manifest.records)} characters)."
         except Exception as exc:
             text = f"⚠️ Publication blocked: {esc(exc)}"
         await edit_message_text_safe(

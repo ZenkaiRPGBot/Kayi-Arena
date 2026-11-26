@@ -72,7 +72,7 @@ class MongoCharacterDatabase:
                 raise RuntimeError(
                     "pymongo is required when DB_BACKEND=mongodb. Install pymongo>=4.6."
                 ) from exc
-            if not uri:
+            if client is None and not uri:
                 raise ValueError("MONGODB_URI is required when DB_BACKEND=mongodb.")
             self._client = client or MongoClient(
                 uri,

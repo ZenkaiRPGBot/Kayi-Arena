@@ -539,6 +539,9 @@ class SqliteMatchStore:
         rows = self._conn.execute("SELECT player_id, match_id FROM active_player_locks").fetchall()
         return {str(r["player_id"]): str(r["match_id"]) for r in rows}
 
+    def reconcile_orphan_locks(self) -> int:
+        return 0
+
     # ------------------------------------------------------------------
     # Historical Match Records
     # ------------------------------------------------------------------

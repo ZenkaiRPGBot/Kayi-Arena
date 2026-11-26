@@ -249,3 +249,42 @@ async def test_sqlite_to_mongo_dry_run_and_execute_migration(tmp_path: Path) -> 
     assert mstore.get_setting("welcome_video_file_id") == "VID_123"
     assert mstore.get_media_cache("naruto_1:k") == "FILE_123"
     assert fake_db["characters"].count_documents({}) == 1
+
+
+@pytest.mark.asyncio
+async def test_mongo_shared_client_without_uri_and_orphan_lock_recovery(tmp_path: Path) -> None:
+    fake_db = _FakeMongoDatabase()
+
+    class _FakeClient:
+        def __getitem__(self, name: str) -> _FakeMongoDatabase:
+            return fake_db
+
+    # Constructing with client= and no uri= must succeed
+    mdb = MongoCharacterDatabase(database_name="kayi_arena", client=_FakeClient())
+    mstore = MongoMatchStore(database_name="kayi_arena", client=_FakeClient())
+
+    # Simulate an orphan lock left behind by a crash before match creation
+    fake_db["active_player_locks"].insert_one(
+        {"_id": "555", "player_id": "555", "match_id": "match-crashed-ghost"}
+    )
+    assert "555" in mstore.load_active_player_locks()
+
+    mgr = MatchManager(mdb, store=mstore)
+    report, *_ = await mgr.recover_from_store()
+    assert report.restored_matches == 0
+    assert mstore.load_active_player_locks() == {}
+
+    # Terminal match statuses must not be treated as active or have locks recreated
+    for term_status in ("forfeited", "inactivity_win", "terminated_admin", "terminated_technical"):
+        fake_db["matches"].insert_one(
+            {
+                "_id": f"match-{term_status}",
+                "match_id": f"match-{term_status}",
+                "status": term_status,
+                "player_1_id": "701",
+                "player_2_id": "702",
+            }
+        )
+    assert mstore.load_active_matches() == []
+    assert mstore.reconcile_orphan_locks() == 0
+    assert mstore.load_active_player_locks() == {}
