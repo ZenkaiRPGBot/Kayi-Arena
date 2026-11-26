@@ -22,13 +22,15 @@ from aiogram.types import (
     User,
 )
 
-from app.database import EvaluationStatus, HELD_NARUTO_NAMES
+from app.database import EvaluationStatus, HELD_NARUTO_NAMES, ImageMetadata, ImageValidationStatus
 from app.engine import TerminationReason
 from app.telegram.constants import STYLE_DANGER, STYLE_PRIMARY, STYLE_SUCCESS
+from app.telegram.media import MediaPipeline, UnsafeMediaURLError, validate_media_url
 from app.telegram.safe_api import (
     answer_callback_safe,
     edit_message_text_safe,
     send_message_safe,
+    send_photo_or_text_safe,
 )
 from app.telegram.service import ArenaTelegramCoordinator
 from app.telegram.texts import clamp_text, esc
@@ -104,6 +106,7 @@ def _render_dashboard(coordinator: ArenaTelegramCoordinator) -> tuple[str, Inlin
             ],
             [_btn("🌐 Manage Universes", "adm:univ")],
             [_btn("📚 Manage Characters", "adm:chars:menu")],
+            [_btn("🖼️ Media Manager", "adm:media"), _btn("🎬 Welcome Video", "adm:wvid")],
             [_btn("📦 Manage Datasets", "adm:dsets")],
             [_btn("🎮 Active Matches", "adm:matches")],
             [_btn("📢 Broadcast", "adm:bcast")],
@@ -135,7 +138,7 @@ async def cmd_admin(message: Message, coordinator: ArenaTelegramCoordinator) -> 
     )
 
 
-async def handle_broadcast_input(
+async def handle_admin_input(
     message: Message, coordinator: ArenaTelegramCoordinator
 ) -> None:
     if message.from_user is None or not coordinator.config.is_admin(message.from_user.id):
@@ -143,6 +146,135 @@ async def handle_broadcast_input(
     if message.chat.type != "private":
         return
     uid = str(message.from_user.id)
+
+    pending = coordinator.get_admin_input_state(uid)
+    if pending is not None:
+        mode, target_id = pending
+        if message.text and message.text.strip().startswith("/"):
+            return
+
+        if mode == "welcome_video":
+            file_id = ""
+            if message.video is not None:
+                file_id = str(message.video.file_id)
+            elif message.text:
+                candidate = message.text.strip()
+                if candidate and " " not in candidate:
+                    file_id = candidate
+            if not file_id:
+                await send_message_safe(
+                    coordinator.bot,
+                    chat_id=message.chat.id,
+                    text="⚠️ Please send a valid video file (audio preserved) or a Telegram video <code>file_id</code>.",
+                )
+                return
+            coordinator.set_welcome_video_file_id(file_id)
+            coordinator.clear_admin_input_state(uid)
+            if coordinator.store:
+                coordinator.store.record_admin_action(
+                    actor_id=uid,
+                    action="set_welcome_video",
+                    target_type="setting",
+                    target_id="welcome_video_file_id",
+                    details={"file_id_prefix": file_id[:16]},
+                )
+            await send_message_safe(
+                coordinator.bot,
+                chat_id=message.chat.id,
+                text="✅ Welcome video updated and cached. New private /start messages will include it.",
+                reply_markup=_back_kb(),
+            )
+            return
+
+        if mode == "replace_image" and target_id:
+            entry = coordinator.db.get_character_entry(target_id)
+            if message.photo:
+                new_file_id = str(message.photo[-1].file_id)
+                new_unique_id = str(getattr(message.photo[-1], "file_unique_id", "") or "")
+                coordinator.media_resolver.record_telegram_file_id(entry, new_file_id)
+                if coordinator.store:
+                    cache_key = coordinator.media_resolver._cache_key(
+                        entry, entry.image.url_or_ref.strip() or new_file_id
+                    )
+                    coordinator.store.upsert_media_asset(
+                        media_key=cache_key,
+                        character_id=entry.character_id,
+                        universe_id=entry.universe_id,
+                        source_url=entry.image.url_or_ref,
+                        telegram_file_id=new_file_id,
+                        telegram_file_unique_id=new_unique_id,
+                        channel_id=str(coordinator.config.media_channel_id or ""),
+                        bot_username=coordinator.config.bot_username,
+                        verification_status=entry.image.status.value,
+                        upload_status="uploaded",
+                        attribution=entry.image.source_ref,
+                    )
+                    coordinator.store.record_admin_action(
+                        actor_id=uid,
+                        action="replace_character_image_photo",
+                        target_type="character",
+                        target_id=entry.character_id,
+                        details={"file_id_prefix": new_file_id[:16]},
+                    )
+                coordinator.clear_admin_input_state(uid)
+                await send_message_safe(
+                    coordinator.bot,
+                    chat_id=message.chat.id,
+                    text=f"✅ Cached new Telegram photo for <b>{esc(entry.name)}</b>.",
+                    reply_markup=_back_kb(),
+                )
+                return
+
+            if message.text:
+                raw_url = message.text.strip()
+                try:
+                    safe_url = validate_media_url(raw_url, resolve_dns=False)
+                except UnsafeMediaURLError as exc:
+                    await send_message_safe(
+                        coordinator.bot,
+                        chat_id=message.chat.id,
+                        text=f"⚠️ Rejected unsafe URL: {esc(str(exc))}",
+                    )
+                    return
+                new_img = ImageMetadata(
+                    url_or_ref=safe_url,
+                    source_ref=entry.image.source_ref,
+                    status=ImageValidationStatus.PENDING,
+                )
+                updated_entry = coordinator.db.update_image_metadata(entry.character_id, new_img)
+                coordinator.invalidate_character_cache(entry.character_id)
+                uploaded_id: str | None = None
+                if coordinator.config.media_channel_id:
+                    pipeline = MediaPipeline(coordinator.store)
+                    uploaded_id = await pipeline.upload_character_media(
+                        coordinator.bot,
+                        updated_entry,
+                        channel_id=coordinator.config.media_channel_id,
+                        bot_username=coordinator.config.bot_username,
+                        force=True,
+                    )
+                coordinator.clear_admin_input_state(uid)
+                if coordinator.store:
+                    coordinator.store.record_admin_action(
+                        actor_id=uid,
+                        action="replace_character_image_url",
+                        target_type="character",
+                        target_id=entry.character_id,
+                        details={"uploaded_to_channel": bool(uploaded_id)},
+                    )
+                status_note = (
+                    "Uploaded & cached to media channel."
+                    if uploaded_id
+                    else "URL saved (will upload on next sync or reveal)."
+                )
+                await send_message_safe(
+                    coordinator.bot,
+                    chat_id=message.chat.id,
+                    text=f"✅ Updated image for <b>{esc(entry.name)}</b>.\n{status_note}",
+                    reply_markup=_back_kb(),
+                )
+                return
+
     if not coordinator.is_awaiting_broadcast(uid):
         return
     raw_text = (message.text or "").strip()
@@ -835,6 +967,315 @@ async def handle_admin_callback(
         return
 
     # ------------------------------------------------------------------
+    # Media Manager & Welcome Video
+    # ------------------------------------------------------------------
+    if action == "media":
+        stats = coordinator.store.get_media_stats() if coordinator.store else {}
+        ch_status = (
+            f"<code>{coordinator.config.media_channel_id}</code>"
+            if coordinator.config.media_channel_id
+            else "<i>Not configured</i>"
+        )
+        text = clamp_text(
+            "\n".join(
+                [
+                    "🖼️ <b>Media Manager</b>",
+                    "",
+                    f"Media channel: {ch_status}",
+                    f"Cached / Uploaded: <b>{stats.get('uploaded', 0)}</b>",
+                    f"Pending: <b>{stats.get('pending', 0)}</b> | Failed: <b>{stats.get('failed', 0)}</b>",
+                ]
+            )
+        )
+        kb = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [
+                    _btn("🔄 Sync Images", "adm:msync"),
+                    _btn("⬆️ Upload Missing", "adm:mup"),
+                ],
+                [
+                    _btn("👀 Review Images", "adm:mrev:0"),
+                    _btn("📊 Media Status", "adm:mstat"),
+                ],
+                [_btn("« Back to Admin", "adm:dash")],
+            ]
+        )
+        await edit_message_text_safe(
+            coordinator.bot, chat_id=chat_id, message_id=msg_id, text=text, reply_markup=kb
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "msync" or action == "mup":
+        if not coordinator.config.media_channel_id:
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text="⚠️ <b>MEDIA_CHANNEL_ID</b> is not configured. Set it in environment variables first.",
+                reply_markup=InlineKeyboardMarkup(
+                    inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+        force = action == "msync"
+        verb = "Force-sync all" if force else "Upload missing"
+        kb = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [
+                    _btn(f"✅ Confirm {verb}", f"adm:mupc:{1 if force else 0}", style=STYLE_SUCCESS),
+                    _btn("Cancel", "adm:media"),
+                ]
+            ]
+        )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"🖼️ <b>{verb} character images</b> to channel <code>{coordinator.config.media_channel_id}</code>?",
+            reply_markup=kb,
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "mupc":
+        if not coordinator.config.media_channel_id:
+            await answer_callback_safe(query, "MEDIA_CHANNEL_ID not configured.", show_alert=True)
+            return
+        force = bool(args and args[0] == "1")
+        entries = coordinator.db.list_characters(status=EvaluationStatus.APPROVED)
+        if not entries:
+            entries = coordinator.db.list_characters()
+        pipeline = MediaPipeline(coordinator.store)
+        res = await pipeline.sync_universe_media(
+            coordinator.bot,
+            entries,
+            channel_id=coordinator.config.media_channel_id,
+            bot_username=coordinator.config.bot_username,
+            force=force,
+            delay_seconds=0.05,
+        )
+        if coordinator.store:
+            coordinator.store.record_admin_action(
+                actor_id=actor_id,
+                action="media_sync",
+                target_type="media",
+                target_id="all",
+                details={"uploaded": res.uploaded, "skipped": res.skipped, "failed": res.failed},
+            )
+        text = clamp_text(
+            "\n".join(
+                [
+                    "✅ <b>Media Sync Complete</b>",
+                    "",
+                    f"Total scanned: <b>{res.total}</b>",
+                    f"Uploaded: <b>{res.uploaded}</b>",
+                    f"Skipped (cached): <b>{res.skipped}</b>",
+                    f"Failed: <b>{res.failed}</b>",
+                ]
+            )
+        )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=text,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
+            ),
+        )
+        await answer_callback_safe(query, "Media sync complete.")
+        return
+
+    if action == "mstat":
+        universes = coordinator.db.list_universes(active_only=False)
+        lines = ["📊 <b>Media Status Report</b>", ""]
+        for u in universes:
+            chars = coordinator.db.list_characters(universe_id=u.universe_id)
+            u_stats = (
+                coordinator.store.get_media_stats(u.universe_id)
+                if coordinator.store
+                else {}
+            )
+            verified = sum(1 for c in chars if c.image.status is ImageValidationStatus.VERIFIED)
+            lines.append(
+                f"• <b>{esc(u.name)}</b>: {len(chars)} chars | "
+                f"Cached: <b>{u_stats.get('uploaded', 0)}</b> | "
+                f"Failed: <b>{u_stats.get('failed', 0)}</b> | "
+                f"Verified: <b>{verified}</b>"
+            )
+        if not universes:
+            lines.append("No universes found.")
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=clamp_text("\n".join(lines)),
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "mrev":
+        page = int(args[0]) if args and args[0].isdigit() else 0
+        chars = coordinator.db.list_characters()
+        per_page = 6
+        total_pages = max(1, (len(chars) + per_page - 1) // per_page)
+        safe_page = max(0, min(page, total_pages - 1))
+        chunk = chars[safe_page * per_page : (safe_page + 1) * per_page]
+        lines = [f"👀 <b>Review Character Images</b> ({len(chars)})", ""]
+        rows: list[list[InlineKeyboardButton]] = []
+        for ch in chunk:
+            cached = bool(coordinator.media_resolver.resolve_media_ref(ch))
+            badge = "✅" if cached else "⚠️"
+            lines.append(f"{badge} <b>{esc(ch.name)}</b> — {esc(ch.image.status.value)}")
+            rows.append(
+                [
+                    _btn(f"👁 Preview {ch.name[:14]}", f"adm:mprev:{ch.character_id}"),
+                    _btn("🔁 Replace", f"adm:mrep:{ch.character_id}"),
+                ]
+            )
+        nav: list[InlineKeyboardButton] = []
+        if safe_page > 0:
+            nav.append(_btn("‹", f"adm:mrev:{safe_page - 1}"))
+        nav.append(_btn(f"{safe_page + 1}/{total_pages}", "adm:media"))
+        if safe_page + 1 < total_pages:
+            nav.append(_btn("›", f"adm:mrev:{safe_page + 1}"))
+        rows.append(nav)
+        rows.append([_btn("« Back to Media", "adm:media")])
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=clamp_text("\n".join(lines)),
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "mprev" and args:
+        cid = args[0]
+        entry = coordinator.db.get_character_entry(cid)
+        photo = await coordinator.media_resolver.resolve_card_photo_async(
+            coordinator.bot,
+            entry,
+            channel_id=coordinator.config.media_channel_id,
+            bot_username=coordinator.config.bot_username,
+        )
+        caption = clamp_text(
+            "\n".join(
+                [
+                    f"🖼️ <b>{esc(entry.name)}</b> (<code>{esc(entry.character_id)}</code>)",
+                    f"Rarity: <b>{esc(entry.rarity)}</b> | Status: <code>{esc(entry.image.status.value)}</code>",
+                ]
+            )
+        )
+        await send_photo_or_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            photo=photo,
+            caption=caption,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [_btn("🔁 Replace Image", f"adm:mrep:{cid}")],
+                    [_btn("« Back to Review", "adm:mrev:0")],
+                ]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "mrep" and args:
+        cid = args[0]
+        entry = coordinator.db.get_character_entry(cid)
+        coordinator.set_admin_input_state(actor_id, "replace_image", cid)
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=(
+                f"🔁 <b>Replace Image for {esc(entry.name)}</b>\n\n"
+                "Send a new Telegram photo or paste a public <code>https://</code> image URL."
+            ),
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("✖ Cancel", "adm:mrepc", style=STYLE_DANGER)]]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "mrepc":
+        coordinator.clear_admin_input_state(actor_id)
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text="✖ Media input cancelled.",
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "wvid":
+        current = coordinator.get_welcome_video_file_id()
+        masked = f"<code>{esc(current[:18])}...</code>" if len(current) > 18 else (f"<code>{esc(current)}</code>" if current else "<i>Not set</i>")
+        kb = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [_btn("📹 Set / Update Video", "adm:wvidset", style=STYLE_PRIMARY)],
+                [_btn("🗑️ Clear Video", "adm:wvidclr", style=STYLE_DANGER)],
+                [_btn("« Back to Admin", "adm:dash")],
+            ]
+        )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"🎬 <b>Welcome Video Settings</b>\n\nCurrent <code>file_id</code>: {masked}\n\nSent via <code>send_video</code> (audio preserved).",
+            reply_markup=kb,
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "wvidset":
+        coordinator.set_admin_input_state(actor_id, "welcome_video", "")
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text="🎬 Send the welcome video file now (audio preserved) or paste a Telegram video <code>file_id</code>.",
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("✖ Cancel", "adm:mrepc", style=STYLE_DANGER)]]
+            ),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "wvidclr":
+        coordinator.set_welcome_video_file_id("")
+        if coordinator.store:
+            coordinator.store.record_admin_action(
+                actor_id=actor_id,
+                action="clear_welcome_video",
+                target_type="setting",
+                target_id="welcome_video_file_id",
+                details={},
+            )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text="🗑️ Welcome video cleared.",
+            reply_markup=_back_kb(),
+        )
+        await answer_callback_safe(query, "Welcome video cleared.")
+        return
+
+    # ------------------------------------------------------------------
     # Maintenance Mode
     # ------------------------------------------------------------------
     if action == "maint":
@@ -886,10 +1327,9 @@ def build_admin_router() -> Router:
     r = Router(name="kayi_arena_admin")
     r.message.register(cmd_admin, Command("admin"))
     r.message.register(
-        handle_broadcast_input,
+        handle_admin_input,
         F.chat.type == "private",
-        F.text,
-        ~F.text.startswith("/"),
+        (F.text & ~F.text.startswith("/")) | F.photo | F.video,
     )
     r.callback_query.register(handle_admin_callback, F.data.startswith("adm:"))
     return r

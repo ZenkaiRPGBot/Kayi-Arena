@@ -74,6 +74,8 @@ class BotConfig:
     dataset_kind: DatasetKind = DatasetKind.PRODUCTION
     home_banner_ref: str = ""
     card_back_ref: str = ""
+    media_channel_id: int = 0
+    welcome_video_file_id: str = ""
     drop_pending_updates: bool = True
     log_level: str = "INFO"
     host: str = "0.0.0.0"
@@ -147,6 +149,8 @@ class BotConfig:
             dataset_kind=dataset_kind,
             home_banner_ref=_env_str("HOME_BANNER_REF", ""),
             card_back_ref=_env_str("CARD_BACK_REF", ""),
+            media_channel_id=_env_int("MEDIA_CHANNEL_ID", 0),
+            welcome_video_file_id=_env_str("WELCOME_VIDEO_FILE_ID", ""),
             drop_pending_updates=_env_bool("DROP_PENDING_UPDATES", True),
             log_level=_env_str("LOG_LEVEL", "INFO").upper(),
             host=_env_str("HOST", "0.0.0.0"),

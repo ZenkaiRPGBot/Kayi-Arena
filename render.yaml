@@ -35,6 +35,10 @@ services:
         sync: false
       - key: LOG_CHANNEL_ID
         sync: false
+      - key: MEDIA_CHANNEL_ID
+        sync: false
+      - key: WELCOME_VIDEO_FILE_ID
+        sync: false
       - key: DEVELOPER_URL
         value: https://t.me/qouba
       - key: UPDATES_URL

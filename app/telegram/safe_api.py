@@ -185,6 +185,46 @@ async def send_photo_or_text_safe(
     return msg, False
 
 
+async def send_video_or_text_safe(
+    bot: Bot,
+    *,
+    chat_id: int | str,
+    video: Any,
+    caption: str,
+    reply_markup: InlineKeyboardMarkup | None = None,
+    supports_streaming: bool = True,
+) -> tuple[Message | None, bool]:
+    """Send a video (preserving audio) with automatic fallback to plain text on failure."""
+    if video:
+        try:
+            msg = await _call_with_retry(
+                lambda: bot.send_video(
+                    chat_id=chat_id,
+                    video=video,
+                    caption=caption,
+                    parse_mode=ParseMode.HTML,
+                    reply_markup=reply_markup,
+                    supports_streaming=supports_streaming,
+                )
+            )
+            return msg, True
+        except TelegramForbiddenError:
+            logger.info("Cannot send video to chat %s (bot removed or blocked)", chat_id)
+            return None, False
+        except TelegramBadRequest as exc:
+            logger.warning("Invalid video ref for chat %s: %s", chat_id, exc)
+        except Exception as exc:
+            logger.warning("Failed sending video to %s: %s", chat_id, type(exc).__name__)
+
+    msg = await send_message_safe(
+        bot,
+        chat_id=chat_id,
+        text=caption,
+        reply_markup=reply_markup,
+    )
+    return msg, False
+
+
 async def replace_text_with_photo_card_safe(
     bot: Bot,
     *,

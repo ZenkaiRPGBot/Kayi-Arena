@@ -32,7 +32,7 @@ from app.persistence.models import (
     timeout_policy_to_dict,
 )
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 _MIGRATIONS: dict[int, tuple[str, ...]] = {
     1: (
@@ -161,6 +161,29 @@ _MIGRATIONS: dict[int, tuple[str, ...]] = {
             updated_at TEXT NOT NULL
         )
         """,
+    ),
+    3: (
+        """
+        CREATE TABLE IF NOT EXISTS media_assets (
+            media_key TEXT PRIMARY KEY,
+            character_id TEXT NOT NULL,
+            universe_id TEXT NOT NULL,
+            source_url TEXT NOT NULL,
+            telegram_file_id TEXT NOT NULL,
+            telegram_file_unique_id TEXT NOT NULL,
+            channel_id TEXT NOT NULL,
+            channel_message_id INTEGER,
+            bot_username TEXT NOT NULL,
+            image_hash TEXT NOT NULL,
+            verification_status TEXT NOT NULL,
+            upload_status TEXT NOT NULL,
+            attribution TEXT NOT NULL,
+            last_validated_at TEXT NOT NULL,
+            updated_at TEXT NOT NULL
+        )
+        """,
+        "CREATE INDEX IF NOT EXISTS idx_media_assets_char ON media_assets(character_id)",
+        "CREATE INDEX IF NOT EXISTS idx_media_assets_univ ON media_assets(universe_id, upload_status)",
     ),
 }
 
@@ -661,9 +684,103 @@ class SqliteMatchStore:
 
     def get_media_cache(self, media_key: str) -> str | None:
         row = self._conn.execute(
+            "SELECT telegram_file_id FROM media_assets WHERE media_key = ? AND upload_status = 'uploaded'",
+            (media_key,),
+        ).fetchone()
+        if row is not None and row["telegram_file_id"]:
+            return str(row["telegram_file_id"])
+        row2 = self._conn.execute(
             "SELECT telegram_file_id FROM media_cache WHERE media_key = ?", (media_key,)
         ).fetchone()
-        return str(row["telegram_file_id"]) if row is not None else None
+        return str(row2["telegram_file_id"]) if row2 is not None else None
+
+    def upsert_media_asset(
+        self,
+        *,
+        media_key: str,
+        character_id: str,
+        universe_id: str,
+        source_url: str,
+        telegram_file_id: str,
+        telegram_file_unique_id: str = "",
+        channel_id: str = "",
+        channel_message_id: int | None = None,
+        bot_username: str = "",
+        image_hash: str = "",
+        verification_status: str = "pending",
+        upload_status: str = "uploaded",
+        attribution: str = "",
+    ) -> None:
+        now = _utc_iso()
+        self._conn.execute("BEGIN IMMEDIATE")
+        try:
+            self._conn.execute(
+                """
+                INSERT INTO media_assets (
+                    media_key, character_id, universe_id, source_url,
+                    telegram_file_id, telegram_file_unique_id, channel_id,
+                    channel_message_id, bot_username, image_hash,
+                    verification_status, upload_status, attribution,
+                    last_validated_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(media_key) DO UPDATE SET
+                    source_url = excluded.source_url,
+                    telegram_file_id = excluded.telegram_file_id,
+                    telegram_file_unique_id = excluded.telegram_file_unique_id,
+                    channel_id = excluded.channel_id,
+                    channel_message_id = excluded.channel_message_id,
+                    bot_username = excluded.bot_username,
+                    image_hash = excluded.image_hash,
+                    verification_status = excluded.verification_status,
+                    upload_status = excluded.upload_status,
+                    attribution = excluded.attribution,
+                    last_validated_at = excluded.last_validated_at,
+                    updated_at = excluded.updated_at
+                """,
+                (
+                    media_key,
+                    character_id,
+                    universe_id,
+                    source_url,
+                    telegram_file_id,
+                    telegram_file_unique_id,
+                    channel_id,
+                    channel_message_id,
+                    bot_username,
+                    image_hash,
+                    verification_status,
+                    upload_status,
+                    attribution,
+                    now,
+                    now,
+                ),
+            )
+            self._conn.execute("COMMIT")
+        except Exception as exc:
+            self._conn.execute("ROLLBACK")
+            raise PersistenceError(f"Failed saving media asset {media_key}: {exc}") from exc
+
+    def get_media_asset_by_character(self, character_id: str) -> dict[str, Any] | None:
+        row = self._conn.execute(
+            "SELECT * FROM media_assets WHERE character_id = ? ORDER BY updated_at DESC LIMIT 1",
+            (character_id,),
+        ).fetchone()
+        return dict(row) if row is not None else None
+
+    def get_media_stats(self, universe_id: str | None = None) -> dict[str, int]:
+        where = "WHERE universe_id = ?" if universe_id else ""
+        params = (universe_id,) if universe_id else ()
+        rows = self._conn.execute(
+            f"SELECT upload_status, COUNT(*) AS cnt FROM media_assets {where} GROUP BY upload_status",
+            params,
+        ).fetchall()
+        counts = {str(r["upload_status"]): int(r["cnt"]) for r in rows}
+        return {
+            "total": sum(counts.values()),
+            "uploaded": counts.get("uploaded", 0),
+            "pending": counts.get("pending", 0),
+            "failed": counts.get("failed", 0),
+        }
 
     # ------------------------------------------------------------------
     # Admin Audit Log, Settings, Known Chats, Diagnostics & Stats (v2)

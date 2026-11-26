@@ -18,7 +18,11 @@ from app.telegram.keyboards import (
     build_no_active_game_keyboard,
     build_universe_selection_keyboard,
 )
-from app.telegram.safe_api import send_message_safe, send_photo_or_text_safe
+from app.telegram.safe_api import (
+    send_message_safe,
+    send_photo_or_text_safe,
+    send_video_or_text_safe,
+)
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
 from app.telegram.texts import (
     render_active_game,
@@ -41,6 +45,20 @@ async def cmd_start(message: Message, coordinator: ArenaTelegramCoordinator) -> 
     if message.chat.type == "private":
         caption = render_home_private()
         markup = build_home_keyboard(coordinator.config)
+        welcome_video = coordinator.get_welcome_video_file_id()
+        if welcome_video:
+            sent, is_video = await send_video_or_text_safe(
+                coordinator.bot,
+                chat_id=message.chat.id,
+                video=welcome_video,
+                caption=caption,
+                reply_markup=markup,
+            )
+            if is_video and sent is not None and getattr(sent, "video", None):
+                vid_id = getattr(sent.video, "file_id", "")
+                if vid_id and vid_id != welcome_video:
+                    coordinator.set_welcome_video_file_id(vid_id)
+            return
         if coordinator.config.home_banner_ref:
             await send_photo_or_text_safe(
                 coordinator.bot,

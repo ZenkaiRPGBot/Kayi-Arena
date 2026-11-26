@@ -126,6 +126,8 @@ class ArenaTelegramCoordinator:
         )
         self._broadcast_compose: set[str] = set()
         self._broadcast_drafts: dict[str, str] = {}
+        self._admin_input_state: dict[str, tuple[str, str]] = {}
+        self._welcome_video_override: str | None = None
 
     def uptime_seconds(self) -> float:
         return max(0.0, time.monotonic() - self._started_at)
@@ -156,6 +158,30 @@ class ArenaTelegramCoordinator:
     def clear_broadcast_state(self, admin_id: str) -> None:
         self._broadcast_compose.discard(admin_id)
         self._broadcast_drafts.pop(admin_id, None)
+
+    def set_admin_input_state(self, admin_id: str, mode: str, target_id: str = "") -> None:
+        self._admin_input_state[admin_id] = (mode, target_id)
+
+    def get_admin_input_state(self, admin_id: str) -> tuple[str, str] | None:
+        return self._admin_input_state.get(admin_id)
+
+    def clear_admin_input_state(self, admin_id: str) -> None:
+        self._admin_input_state.pop(admin_id, None)
+
+    def get_welcome_video_file_id(self) -> str:
+        if self._welcome_video_override is not None:
+            return self._welcome_video_override
+        if self.store is not None:
+            val = self.store.get_setting("welcome_video_file_id", "")
+            if val:
+                return val
+        return self.config.welcome_video_file_id
+
+    def set_welcome_video_file_id(self, file_id: str) -> None:
+        cleaned = file_id.strip()
+        self._welcome_video_override = cleaned
+        if self.store is not None:
+            self.store.set_setting("welcome_video_file_id", cleaned)
 
     def register_chat(self, chat_id: int | str, chat_type: str, title: str | None = None) -> None:
         if self.store is not None:
@@ -316,6 +342,14 @@ class ArenaTelegramCoordinator:
     def _character_media_ref(self, rec: CharacterEntry | None) -> str | None:
         return self.media_resolver.resolve_media_ref(rec)
 
+    async def _character_media_photo_async(self, rec: CharacterEntry | None) -> Any:
+        return await self.media_resolver.resolve_card_photo_async(
+            self.bot,
+            rec,
+            channel_id=self.config.media_channel_id,
+            bot_username=self.config.bot_username,
+        )
+
     async def start_match_ui(self, match: ManagedMatch, *, chat_id: str) -> MatchUIState | None:
         """Send the two primary messages (board + card) for a newly started match."""
         names = self.player_names_for_match(match)
@@ -457,7 +491,7 @@ class ArenaTelegramCoordinator:
                         universe_name=u_name,
                         player_names=names,
                     )
-                    photo = self._character_media_ref(rec)
+                    photo = await self._character_media_photo_async(rec)
                 else:
                     cid = held.character_id if held else "Unknown"
                     caption = f"<b>{cid}</b>\n\nChoose a role."
@@ -477,6 +511,10 @@ class ArenaTelegramCoordinator:
                 if sent_card is not None:
                     state.card_message_id = sent_card.message_id
                     state.card_is_photo = now_is_photo
+                    if now_is_photo and rec is not None and getattr(sent_card, "photo", None):
+                        self.media_resolver.record_telegram_file_id(
+                            rec, sent_card.photo[-1].file_id
+                        )
                     await self.manager.attach_message_reference(
                         match.match_id,
                         MessageReference(
@@ -487,7 +525,7 @@ class ArenaTelegramCoordinator:
                     )
                     return
 
-            _, state.card_is_photo = await edit_card_message_safe(
+            edited_msg, state.card_is_photo = await edit_card_message_safe(
                 self.bot,
                 chat_id=state.chat_id,
                 message_id=state.card_message_id,
@@ -497,6 +535,8 @@ class ArenaTelegramCoordinator:
                 reply_markup=markup,
                 fallback_photo=self.config.card_back_ref or None,
             )
+            if state.card_is_photo and rec is not None and getattr(edited_msg, "photo", None):
+                self.media_resolver.record_telegram_file_id(rec, edited_msg.photo[-1].file_id)
 
     def _recovery_lock(self, match_id: str) -> asyncio.Lock:
         lock = self._recovery_locks.get(match_id)
@@ -624,7 +664,7 @@ class ArenaTelegramCoordinator:
                     if rec is not None
                     else "Choose a role."
                 )
-                photo = self._character_media_ref(rec)
+                photo = await self._character_media_photo_async(rec)
                 markup = build_character_revealed_keyboard(latest)
 
             # Reuse surviving board/card if still editable; recreate only missing/unusable ones
