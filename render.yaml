@@ -18,7 +18,9 @@ services:
       - key: PORT
         value: "10000"
       - key: TRANSPORT_MODE
-        value: polling
+        value: webhook
+      - key: DROP_PENDING_UPDATES
+        value: "false"
       - key: WEBHOOK_PATH
         value: /telegram/webhook
       - key: WEBHOOK_SECRET
