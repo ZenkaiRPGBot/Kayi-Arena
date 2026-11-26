@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Kayi Arena — Competitive Telegram anime character drafting game"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "aiogram>=3.13,<4.0",
+]
 
 [project.optional-dependencies]
 dev = [

@@ -1,0 +1,33 @@
+services:
+  - type: worker
+    name: kayi-arena
+    runtime: python
+    plan: free
+    region: frankfurt
+    autoDeploy: true
+    maxShutdownDelaySeconds: 30
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.main
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_USERNAME
+        value: KayiArenaBot
+      - key: OWNER_ID
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: DEVELOPER_URL
+        value: https://t.me/qouba
+      - key: UPDATES_URL
+        value: https://t.me/KayiBots
+      - key: SUPPORT_URL
+        value: https://t.me/KayiBots
+      - key: ARENA_DATASET_KIND
+        value: production
+      - key: LOG_LEVEL
+        value: INFO

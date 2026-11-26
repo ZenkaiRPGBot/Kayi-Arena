@@ -417,6 +417,88 @@ class MatchManager:
             self._challenges[challenge_id] = cancelled
             return ChallengeOperationResult(accepted=True, challenge=cancelled)
 
+    async def switch_challenge_mode(
+        self,
+        *,
+        challenge_id: str,
+        player_id: str,
+        game_mode: str | None = None,
+        expected_generation: int | None = None,
+    ) -> ChallengeOperationResult:
+        """Atomically toggle or set challenge mode without resetting expiration."""
+        async with self._global_lock:
+            chl = self._challenges.get(challenge_id)
+            if chl is None:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_NOT_FOUND,
+                    message="Challenge not found",
+                )
+
+            now = self.clock()
+            if chl.status is ChallengeStatus.OPEN and now >= chl.expires_at:
+                expired = ChallengeRecord(
+                    **{
+                        **{f: getattr(chl, f) for f in chl.__slots__},
+                        "status": ChallengeStatus.EXPIRED,
+                        "generation": chl.generation + 1,
+                    }
+                )
+                self._challenges[challenge_id] = expired
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_EXPIRED,
+                    message="Challenge has expired",
+                    challenge=expired,
+                )
+
+            if player_id != chl.challenger_id:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.NOT_CHALLENGER,
+                    message="Only the challenger may change the mode",
+                    challenge=chl,
+                )
+            if chl.status is not ChallengeStatus.OPEN:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_NOT_OPEN,
+                    message=f"Challenge is already {chl.status.value}",
+                    challenge=chl,
+                )
+            if expected_generation is not None and expected_generation != chl.generation:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.STALE_CONTROL_GENERATION,
+                    message="Challenge control is outdated",
+                    challenge=chl,
+                )
+
+            target_mode = (
+                ("friendly" if chl.game_mode == "ranked" else "ranked")
+                if game_mode is None
+                else game_mode.strip().lower()
+            )
+            if target_mode not in _VALID_GAME_MODES:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.INVALID_GAME_MODE,
+                    message=f"Unsupported game mode: {target_mode!r}",
+                    challenge=chl,
+                )
+            if target_mode == chl.game_mode:
+                return ChallengeOperationResult(accepted=True, challenge=chl)
+
+            updated = ChallengeRecord(
+                **{
+                    **{f: getattr(chl, f) for f in chl.__slots__},
+                    "game_mode": target_mode,
+                    "generation": chl.generation + 1,
+                }
+            )
+            self._challenges[challenge_id] = updated
+            return ChallengeOperationResult(accepted=True, challenge=updated)
+
     async def expire_challenge(self, challenge_id: str) -> ChallengeOperationResult:
         async with self._global_lock:
             chl = self._challenges.get(challenge_id)

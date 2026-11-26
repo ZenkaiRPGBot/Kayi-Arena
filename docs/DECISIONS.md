@@ -96,3 +96,17 @@
 ### Owner-Approved Updates (Timer & Rarity Defaults)
 - **Approved initial `TimeoutPolicy` (pinned per match):** `120s` turn duration, `300s` challenge expiration, `60s` inactivity response window, and `1` `60s` extension per player per match granted only by their opponent (`grant_turn_extension`).
 - **Approved initial `DEFAULT_RARITY_WEIGHTS`:** `Common` 30%, `Uncommon` 30%, `Rare` 22%, `Epic` 13%, `Legendary` 5% (configurable per universe, pinned at match creation).
+
+## Module 6: Telegram UI & User Experience
+
+1. **Framework & Kayi Bots Parity**
+   - Uses `aiogram` (`>=3.13,<4.0`) with `ParseMode.HTML`, `InlineKeyboardButton(..., style=...)` (`primary`, `success`, `danger`), and Kayi Bots links (`https://t.me/qouba`, `https://t.me/KayiBots`).
+   - Reuses the `RestartNotifier` pattern (`Kayi Arena Online 🟢`, IST time, per-commit dedup) without claiming in-memory matches are restored prior to Module 7.
+
+2. **Public Command & Two-Message Match Architecture**
+   - Public gameplay command is `/arena` (replacing `/draft` in all public commands, docs, and UI); internal engine/module naming remains unchanged.
+   - Active matches project onto two edited Telegram messages (Permanent Draft Board + Interactive Character Card) via `ArenaTelegramCoordinator`, committing `MatchManager` transitions before rendering.
+   - Detailed Results (`1/7`–`7/7`) use viewer-specific messages so one player's pagination never mutates the shared result board for others.
+
+3. **Rarity Points v0.2 (`RARITY-0.2`)**
+   - Implemented in `app/scoring/rarity_v02.py` (`classify_rarity_v02`) separately from `SCORE-1.0` and Telegram presentation, with optional provisional Naruto Healer floors (`Healer Fit 4 -> Rare`, `Healer Fit 5 -> Epic`).

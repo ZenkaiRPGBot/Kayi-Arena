@@ -41,6 +41,11 @@ from app.scoring.models import (
     SCORING_ROLES,
     ScoringConfig,
 )
+from app.scoring.rarity_v02 import (
+    RARITY_V02_VERSION,
+    RarityClassificationResult,
+    classify_rarity_v02,
+)
 
 __all__ = [
     "BatchScoreResult",
@@ -56,7 +61,9 @@ __all__ = [
     "InMemoryDatasetRepository",
     "InternalScoreRangeError",
     "PRELIMINARY_SAMPLE_THRESHOLD",
+    "RARITY_V02_VERSION",
     "RatingInput",
+    "RarityClassificationResult",
     "RecordStatus",
     "RoleWeight",
     "SCORE_1_0_CONFIG",
@@ -68,6 +75,7 @@ __all__ = [
     "ScoringValidationErrorCode",
     "ValidationIssue",
     "build_signed_manifest",
+    "classify_rarity_v02",
     "compute_diagnostics",
     "score_batch",
     "score_record",
