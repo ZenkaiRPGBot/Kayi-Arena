@@ -412,35 +412,30 @@ def build_catalogue_page_keyboard(
 
 
 def build_help_keyboard(topic: str = "menu") -> InlineKeyboardMarkup:
-    if topic == "rules":
+    if topic == "menu" or topic not in {"1", "2", "3", "4", "5", "6"}:
         return InlineKeyboardMarkup(
             inline_keyboard=[
-                [_btn("Advanced Scoring", callback_data=encode_cb("hlp", "scoring"))],
-                [_btn("« Back", callback_data=encode_cb("hlp", "menu"))],
+                [
+                    _btn("1", callback_data=encode_cb("hlp", "1"), style=STYLE_PRIMARY),
+                    _btn("2", callback_data=encode_cb("hlp", "2"), style=STYLE_PRIMARY),
+                    _btn("3", callback_data=encode_cb("hlp", "3"), style=STYLE_PRIMARY),
+                ],
+                [
+                    _btn("4", callback_data=encode_cb("hlp", "4"), style=STYLE_PRIMARY),
+                    _btn("5", callback_data=encode_cb("hlp", "5"), style=STYLE_PRIMARY),
+                    _btn("6", callback_data=encode_cb("hlp", "6"), style=STYLE_PRIMARY),
+                ],
             ]
         )
-    if topic == "scoring":
-        return InlineKeyboardMarkup(
-            inline_keyboard=[[_btn("« Back", callback_data=encode_cb("hlp", "rules"))]]
-        )
-    if topic != "menu":
-        return InlineKeyboardMarkup(
-            inline_keyboard=[[_btn("« Back", callback_data=encode_cb("hlp", "menu"))]]
-        )
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [_btn("⚔️ Start Playing", callback_data=encode_cb("arena"), style=STYLE_PRIMARY)],
-            [
-                _btn("The Seven Roles", callback_data=encode_cb("hlp", "roles")),
-                _btn("Character Rarity", callback_data=encode_cb("hlp", "rarity")),
-            ],
-            [
-                _btn("Battle Rules", callback_data=encode_cb("hlp", "rules")),
-                _btn("Commands", callback_data=encode_cb("hlp", "cmds")),
-            ],
-            [_btn("« Home", callback_data=encode_cb("home"))],
-        ]
-    )
+
+    chapter_num = int(topic)
+    row: list[InlineKeyboardButton] = []
+    if chapter_num > 1:
+        row.append(_btn("← Previous", callback_data=encode_cb("hlp", str(chapter_num - 1))))
+    row.append(_btn("☰", callback_data=encode_cb("hlp", "menu"), style=STYLE_SUCCESS))
+    if chapter_num < 6:
+        row.append(_btn("Next →", callback_data=encode_cb("hlp", str(chapter_num + 1)), style=STYLE_PRIMARY))
+    return InlineKeyboardMarkup(inline_keyboard=[row])
 
 
 def build_leaderboard_keyboard(

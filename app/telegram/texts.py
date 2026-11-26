@@ -133,109 +133,211 @@ def render_home_group() -> str:
     )
 
 
-_HELP_TOPICS: dict[str, tuple[str, str]] = {
-    "menu": (
-        "<b>How to Play</b>",
-        "\n".join(
-            [
-                "Build a team of seven anime characters and compete against another player.",
-                "",
-                "<b>01. Challenge</b>",
-                "Use /arena to challenge a player.",
-                "",
-                "<b>02. Shuffle</b>",
-                "Reveal a random anime character.",
-                "",
-                "<b>03. Assign</b>",
-                "Choose the role that suits your character best.",
-                "",
-                "<b>04. Battle</b>",
-                "Complete your team and win more role matchups than your opponent.",
-                "",
-                "You have 2 minutes per turn and 2 skips per match.",
-                "",
-                "<i>Choose wisely. Power alone won't win every battle.</i>",
-            ]
-        ),
-    ),
-    "roles": (
-        "<b>The Seven Roles</b>",
-        "\n".join(
-            [
-                "👑 Captain — Leads the team.",
-                "🧠 Strategist — Outsmarts the enemy.",
-                "⚔️ Attacker — Deals powerful attacks.",
-                "🛡️ Tank — Endures attacks and protects allies.",
-                "🗡️ Assassin — Eliminates targets with precision.",
-                "✨ Support — Strengthens and assists allies.",
-                "💚 Healer — Heals injured teammates.",
-                "",
-                "The strongest fighter isn't necessarily the best healer or strategist.",
-            ]
-        ),
-    ),
-    "rarity": (
-        "<b>Character Rarity</b>",
-        "\n".join(
-            [
-                "⚪ Common — 30%",
-                "🟢 Uncommon — 30%",
-                "🔵 Rare — 22%",
-                "🟣 Epic — 13%",
-                "🟡 Legendary — 5%",
-                "",
-                "Higher rarity does not guarantee superiority in every role.",
-                "If a rarity tier has no available characters left, it is excluded from the draw.",
-            ]
-        ),
-    ),
-    "rules": (
-        "<b>Battle Rules</b>",
-        "\n".join(
-            [
-                "• Both players build seven-member teams and alternate turns.",
-                "• Each character can be assigned only once across both teams.",
-                "• Assignments are permanent.",
-                "• Each player has two skips. A skipped character cannot appear in the immediately following draw.",
-                "• Shuffle and Skip do not reset the two-minute turn timer.",
-                "• Seven matching roles are compared: most role victories wins.",
-                "• Combined score breaks tied role-win counts; equal combined scores result in a draw.",
-                "• If a turn expires, the opponent has 60 seconds to claim victory or grant a one-time +60s extension. Mutual inactivity abandons the match.",
-                "• Voluntary forfeiture awards the win to your opponent.",
-            ]
-        ),
-    ),
-    "scoring": (
-        "<b>Advanced Scoring</b>",
-        "\n".join(
-            [
-                "• Every character has a Power rating (1–5) and seven Role Fit ratings (0–5).",
-                "• Each role weights Role Fit and Power differently (for example, Healer/Support/Strategist use <code>(Fit × 17) + (Power × 3)</code>).",
-                "• Exact ratings stay hidden during drafting and are revealed in Detailed Results after the match.",
-            ]
-        ),
-    ),
-    "cmds": (
-        "<b>Commands</b>",
-        "\n".join(
-            [
-                "• <code>/start</code> — Home menu",
-                "• <code>/arena</code> — Choose a universe and start a match",
-                "• <code>/arena &lt;universe&gt;</code> — Start an open or reply challenge",
-                "• <code>/arena random</code> — Challenge in a random universe",
-                "• <code>/game</code> — View, recover, or forfeit your active match",
-                "• <code>/list</code> — Browse the character catalogue",
-                "• <code>/help</code> — Open this guide",
-                "• <code>/ping</code> — Check bot latency",
-            ]
-        ),
-    ),
-}
+def _format_rarity_pct(weight: float) -> str:
+    if weight == int(weight):
+        return f"{int(weight)}%"
+    return f"{weight:g}%"
 
 
-def render_help_topic(topic: str) -> str:
-    title, body = _HELP_TOPICS.get(topic, _HELP_TOPICS["menu"])
-    return clamp_text(f"{title}\n\n{body}")
+def _build_handbook_chapters() -> dict[str, str]:
+    from app.database.models import DEFAULT_RARITY_WEIGHTS
+
+    total_w = sum(DEFAULT_RARITY_WEIGHTS.values()) or 100.0
+    def _pct(tier: str) -> str:
+        raw = DEFAULT_RARITY_WEIGHTS.get(tier, 0.0)
+        return _format_rarity_pct((raw / total_w) * 100.0 if abs(total_w - 100.0) > 1e-6 else raw)
+
+    return {
+        "menu": "\n".join(
+            [
+                "<b>📖 The Arena Handbook</b>",
+                "",
+                "Your guide to playing Kayi Arena.",
+                "",
+                "<b>01</b> — Getting Started",
+                "<b>02</b> — Building Your Team",
+                "<b>03</b> — Understanding Roles",
+                "<b>04</b> — Character Rarity",
+                "<b>05</b> — Winning the Battle",
+                "<b>06</b> — Match Rules",
+                "",
+                "<i>Select a chapter to continue.</i>",
+            ]
+        ),
+        "1": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 01/06</i>",
+                "",
+                "<b>Getting Started</b>",
+                "",
+                "Kayi Arena is a two-player strategy game where you build a team of anime characters and compete against another player.",
+                "",
+                "Each team has seven characters, with one character assigned to each role.",
+                "",
+                "<b>How to start a match</b>",
+                "",
+                "To challenge someone directly, reply to their message with /arena.",
+                "",
+                "To invite anyone in the group to play, send /arena without replying to a message.",
+                "",
+                "Select an anime universe and wait for your opponent to accept the challenge.",
+                "",
+                "Once accepted, the game begins!",
+            ]
+        ),
+        "2": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 02/06</i>",
+                "",
+                "<b>Building Your Team</b>",
+                "",
+                "Both players take turns choosing characters for their teams.",
+                "",
+                "<b>Shuffle</b>",
+                "",
+                "Press Shuffle to receive a random character from the selected anime universe.",
+                "",
+                "<b>Assign</b>",
+                "",
+                "Choose an available role for the character. Once assigned, the character cannot be moved or replaced.",
+                "",
+                "<b>Skip</b>",
+                "",
+                "Don't want the character? Use a skip, then press Shuffle to receive another character. You have two skips per match.",
+                "",
+                "After assigning a character, your opponent takes their turn.",
+                "",
+                "The battle begins automatically when both teams are complete.",
+                "",
+                "⏳ Each turn lasts 2 minutes.",
+            ]
+        ),
+        "3": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 03/06</i>",
+                "",
+                "<b>Understanding Roles</b>",
+                "",
+                "Every character has different strengths. Choosing the right role is just as important as getting a powerful character.",
+                "",
+                "<b>👑 Captain</b>",
+                "Leads the team and guides others during battle.",
+                "",
+                "<b>🧠 Strategist</b>",
+                "Creates plans, studies opponents and makes smart decisions.",
+                "",
+                "<b>⚔️ Attacker</b>",
+                "Uses powerful attacks to defeat enemies.",
+                "",
+                "<b>🛡️ Tank</b>",
+                "Withstands heavy attacks and protects the team.",
+                "",
+                "<b>🗡️ Assassin</b>",
+                "Specializes in surprise attacks and eliminating specific enemies.",
+                "",
+                "<b>✨ Support</b>",
+                "Helps teammates by improving their abilities or limiting enemies.",
+                "",
+                "<b>💚 Healer</b>",
+                "Treats injuries and helps teammates recover.",
+                "",
+                "For example, Shikamaru may be a better Strategist than a much stronger fighter.",
+            ]
+        ),
+        "4": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 04/06</i>",
+                "",
+                "<b>Character Rarity</b>",
+                "",
+                "Characters are divided into five rarity levels based on their power and abilities.",
+                "",
+                f"⚪ Common — {_pct('Common')}",
+                f"🟢 Uncommon — {_pct('Uncommon')}",
+                f"🔵 Rare — {_pct('Rare')}",
+                f"🟣 Epic — {_pct('Epic')}",
+                f"🟡 Legendary — {_pct('Legendary')}",
+                "",
+                "These are the chances of receiving a character from each rarity level when all five levels are available. The chances adjust when a rarity level runs out of available characters.",
+                "",
+                "<b>Does higher rarity always mean a better character?</b>",
+                "",
+                "No. A character with lower rarity can defeat a Legendary character if they are better suited to their assigned role.",
+                "",
+                "Always consider the character's abilities before choosing a role.",
+            ]
+        ),
+        "5": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 05/06</i>",
+                "",
+                "<b>Winning the Battle</b>",
+                "",
+                "When both teams are complete, the game compares characters assigned to the same role.",
+                "",
+                "Your Captain faces their Captain, your Attacker faces their Attacker, and so on.",
+                "",
+                "Each character receives a score based on their overall power and how suitable they are for the assigned role.",
+                "",
+                "<b>Example Battle</b>",
+                "",
+                "👑 Captain — <b>80</b> vs 72",
+                "🧠 Strategist — <b>91</b> vs 63",
+                "⚔️ Attacker — 80 vs <b>90</b>",
+                "🛡️ Tank — 60 vs <b>90</b>",
+                "🗡️ Assassin — <b>87</b> vs 80",
+                "✨ Support — 80 vs 80",
+                "💚 Healer — <b>97</b> vs 60",
+                "",
+                "<b>4 — 2</b>",
+                "",
+                "🏆 <b>You win!</b>",
+                "",
+                "4 wins · 2 losses · 1 draw",
+                "",
+                "<b>What happens if both players have equal wins?</b>",
+                "",
+                "The player with the higher total team score wins. If the total scores are also equal, the match ends in a draw.",
+            ]
+        ),
+        "6": "\n".join(
+            [
+                "<i>THE ARENA HANDBOOK · 06/06</i>",
+                "",
+                "<b>Match Rules</b>",
+                "",
+                "<b>Ranked &amp; Friendly Matches</b>",
+                "",
+                "Ranked matches are intended for competitive play. Friendly matches allow you to play without affecting your competitive ranking.",
+                "",
+                "<b>Running out of time</b>",
+                "",
+                "If you fail to assign a character within 2 minutes, your opponent has 60 seconds to claim victory or grant you an extra minute.",
+                "",
+                "Each player can receive one extension per match.",
+                "",
+                "If your opponent does not respond within 60 seconds, the match ends without a winner.",
+                "",
+                "<b>Leaving a match</b>",
+                "",
+                "You can use /game to return to your active match or surrender. Surrendering counts as a loss.",
+                "",
+                "<b>Important rules</b>",
+                "",
+                "• Only one active match is allowed per player.",
+                "• Each character can appear only once in a match.",
+                "• Assigned characters cannot be replaced.",
+                "• Shuffling and skipping do not reset your timer.",
+                "• Unaccepted challenges expire after 5 minutes.",
+            ]
+        ),
+    }
+
+
+def render_help_topic(topic: str = "menu") -> str:
+    chapters = _build_handbook_chapters()
+    text = chapters.get(topic, chapters["menu"])
+    return clamp_text(text)
 
 
 # ---------------------------------------------------------------------------

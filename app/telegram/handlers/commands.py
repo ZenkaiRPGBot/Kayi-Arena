@@ -22,6 +22,7 @@ from app.telegram.keyboards import (
 )
 from app.telegram.safe_api import (
     send_message_safe,
+    send_photo_or_text_safe,
     send_video_or_text_safe,
 )
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
@@ -264,13 +265,29 @@ async def cmd_history(message: Message, coordinator: ArenaTelegramCoordinator) -
 
 
 async def cmd_help(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
-    coordinator.register_user(message.from_user)
-    await send_message_safe(
-        coordinator.bot,
-        chat_id=message.chat.id,
-        text=render_help_topic("menu"),
-        reply_markup=build_help_keyboard("menu"),
-    )
+    from app.telegram.constants import MAX_CAPTION_LENGTH
+
+    player_id = coordinator.register_user(message.from_user)
+    text = render_help_topic("menu")
+    markup = build_help_keyboard("menu")
+    photo_id = coordinator.get_handbook_illustration_file_id("menu")
+    if photo_id and len(text) <= MAX_CAPTION_LENGTH:
+        sent, _ = await send_photo_or_text_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            photo=photo_id,
+            caption=text,
+            reply_markup=markup,
+        )
+    else:
+        sent = await send_message_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            text=text,
+            reply_markup=markup,
+        )
+    if sent is not None and player_id:
+        coordinator.register_handbook_message(message.chat.id, sent.message_id, player_id)
 
 
 async def cmd_ping(message: Message, coordinator: ArenaTelegramCoordinator) -> None:

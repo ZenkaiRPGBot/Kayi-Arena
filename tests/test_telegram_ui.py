@@ -901,6 +901,8 @@ def test_text_escaping_and_length_limits() -> None:
 
 @pytest.mark.asyncio
 async def test_help_navigation_and_all_pages() -> None:
+    from app.telegram.keyboards import build_help_keyboard
+
     db = CharacterDatabase(":memory:")
     _seed_naruto_db(db)
     mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION)
@@ -908,20 +910,41 @@ async def test_help_navigation_and_all_pages() -> None:
     cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot")
     dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr)
 
+    # Verify keyboard structure & button styles for Contents and chapters 1..6
+    kb_menu = build_help_keyboard("menu")
+    assert [[b.text for b in r] for r in kb_menu.inline_keyboard] == [["1", "2", "3"], ["4", "5", "6"]]
+    assert all(b.model_dump(exclude_none=True)["style"] == "primary" for r in kb_menu.inline_keyboard for b in r)
+
+    kb_ch1 = build_help_keyboard("1")
+    assert [b.text for b in kb_ch1.inline_keyboard[0]] == ["☰", "Next →"]
+    assert kb_ch1.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "success"
+    assert kb_ch1.inline_keyboard[0][1].model_dump(exclude_none=True)["style"] == "primary"
+
+    kb_ch2 = build_help_keyboard("2")
+    assert [b.text for b in kb_ch2.inline_keyboard[0]] == ["← Previous", "☰", "Next →"]
+    assert "style" not in kb_ch2.inline_keyboard[0][0].model_dump(exclude_none=True)
+    assert kb_ch2.inline_keyboard[0][1].model_dump(exclude_none=True)["style"] == "success"
+    assert kb_ch2.inline_keyboard[0][2].model_dump(exclude_none=True)["style"] == "primary"
+
+    kb_ch6 = build_help_keyboard("6")
+    assert [b.text for b in kb_ch6.inline_keyboard[0]] == ["← Previous", "☰"]
+
     user = _make_user(101, "Alex")
+    other = _make_user(202, "Kai")
     await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=user, text="/help"))
     help_msg_id = 100 + len(bot.sent_messages)
-    assert "How to Play" in bot.sent_messages[-1]["text"]
-    assert "01. Challenge" in bot.sent_messages[-1]["text"]
+    assert "The Arena Handbook" in bot.sent_messages[-1]["text"]
+    assert "<b>01</b> — Getting Started" in bot.sent_messages[-1]["text"]
 
-    for idx, (topic, expected) in enumerate(
+    for idx, (topic, expected_snippets) in enumerate(
         [
-            ("roles", "The Seven Roles"),
-            ("rarity", "Character Rarity"),
-            ("rules", "Battle Rules"),
-            ("scoring", "Advanced Scoring"),
-            ("cmds", "Commands"),
-            ("menu", "How to Play"),
+            ("1", ["THE ARENA HANDBOOK · 01/06", "Getting Started"]),
+            ("2", ["THE ARENA HANDBOOK · 02/06", "Building Your Team"]),
+            ("3", ["THE ARENA HANDBOOK · 03/06", "Understanding Roles", "Shikamaru"]),
+            ("4", ["THE ARENA HANDBOOK · 04/06", "⚪ Common — 30%", "🟡 Legendary — 5%"]),
+            ("5", ["THE ARENA HANDBOOK · 05/06", "<b>4 — 2</b>", "🏆 <b>You win!</b>"]),
+            ("6", ["THE ARENA HANDBOOK · 06/06", "Match Rules", "/game"]),
+            ("menu", ["The Arena Handbook", "Select a chapter to continue."]),
         ],
         start=10,
     ):
@@ -937,7 +960,33 @@ async def test_help_navigation_and_all_pages() -> None:
                 recorder=bot,
             ),
         )
-        assert expected in bot.edited_messages[-1]["text"]
+        edited_text = bot.edited_messages[-1]["text"]
+        assert len(edited_text) <= MAX_MESSAGE_LENGTH
+        for snippet in expected_snippets:
+            assert snippet in edited_text
+
+    # Group chat owner isolation
+    await dp.feed_update(bot, _make_message_update(20, chat_id=-1005, chat_type="supergroup", user=user, text="/help"))
+    grp_msg_id = bot.next_msg_id
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            21,
+            chat_id=-1005,
+            chat_type="supergroup",
+            message_id=grp_msg_id,
+            user=other,
+            data=encode_cb("hlp", "1"),
+            recorder=bot,
+        ),
+    )
+    assert "Only the player who opened this handbook" in bot.callback_answers[-1]["text"]
+
+    # Optional illustration file_id support + fallback transition
+    coordinator.set_handbook_illustration_file_id("menu", "PHOTO_COVER_ID")
+    await dp.feed_update(bot, _make_message_update(30, chat_id=101, chat_type="private", user=user, text="/help"))
+    assert len(bot.sent_photos) >= 1
+    assert bot.sent_photos[-1]["photo"] == "PHOTO_COVER_ID"
 
     await coordinator.shutdown()
     db.close()

@@ -129,6 +129,8 @@ class ArenaTelegramCoordinator:
         self._broadcast_drafts: dict[str, str] = {}
         self._admin_input_state: dict[str, tuple[str, str]] = {}
         self._welcome_video_override: str | None = None
+        self._handbook_illustrations: dict[str, str] = {}
+        self._handbook_owners: dict[tuple[str, int], str] = {}
         self._char_browser_filters: dict[str, dict[str, str]] = {}
         self._latency_samples: deque[float] = deque(maxlen=100)
 
@@ -219,6 +221,46 @@ class ArenaTelegramCoordinator:
         self._welcome_video_override = cleaned
         if self.store is not None:
             self.store.set_setting("welcome_video_file_id", cleaned)
+
+    _HANDBOOK_SETTING_KEYS: dict[str, str] = {
+        "menu": "handbook_cover_file_id",
+        "1": "handbook_ch1_file_id",
+        "2": "handbook_ch2_file_id",
+        "3": "handbook_ch3_file_id",
+        "4": "handbook_ch4_file_id",
+        "5": "handbook_ch5_file_id",
+        "6": "handbook_ch6_file_id",
+    }
+
+    def get_handbook_illustration_file_id(self, page: str) -> str:
+        key = self._HANDBOOK_SETTING_KEYS.get(page)
+        if not key:
+            return ""
+        if page in self._handbook_illustrations:
+            return self._handbook_illustrations[page]
+        if self.store is not None:
+            val = self.store.get_setting(key, "")
+            if val:
+                return val
+        return ""
+
+    def set_handbook_illustration_file_id(self, page: str, file_id: str) -> None:
+        key = self._HANDBOOK_SETTING_KEYS.get(page)
+        if not key:
+            raise ValueError(f"Unknown handbook page: {page!r}")
+        cleaned = file_id.strip()
+        self._handbook_illustrations[page] = cleaned
+        if self.store is not None:
+            self.store.set_setting(key, cleaned)
+
+    def register_handbook_message(self, chat_id: int | str, message_id: int, owner_id: str) -> None:
+        if len(self._handbook_owners) > 1000:
+            oldest = next(iter(self._handbook_owners))
+            self._handbook_owners.pop(oldest, None)
+        self._handbook_owners[(str(chat_id), int(message_id))] = owner_id
+
+    def get_handbook_owner(self, chat_id: int | str, message_id: int) -> str | None:
+        return self._handbook_owners.get((str(chat_id), int(message_id)))
 
     def register_chat(self, chat_id: int | str, chat_type: str, title: str | None = None) -> None:
         if self.store is not None:

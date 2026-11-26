@@ -23,7 +23,9 @@ from app.telegram.keyboards import (
 )
 from app.telegram.safe_api import (
     answer_callback_safe,
+    edit_card_message_safe,
     edit_message_text_safe,
+    replace_text_with_photo_card_safe,
     send_message_safe,
     send_video_or_text_safe,
 )
@@ -216,14 +218,71 @@ async def handle_arena_callback(
         return
 
     if action == "hlp":
+        from app.telegram.constants import MAX_CAPTION_LENGTH
+
+        if msg.chat.type != "private":
+            owner_id = coordinator.get_handbook_owner(chat_id, msg_id)
+            if owner_id is not None and owner_id != user_id:
+                await answer_callback_safe(
+                    query,
+                    "Only the player who opened this handbook can navigate it.",
+                    show_alert=True,
+                )
+                return
+
         topic = args[0] if args else "menu"
-        await edit_message_text_safe(
-            coordinator.bot,
-            chat_id=chat_id,
-            message_id=msg_id,
-            text=render_help_topic(topic),
-            reply_markup=build_help_keyboard(topic),
-        )
+        if topic not in {"menu", "1", "2", "3", "4", "5", "6"}:
+            topic = "menu"
+        text = render_help_topic(topic)
+        markup = build_help_keyboard(topic)
+        photo_id = coordinator.get_handbook_illustration_file_id(topic)
+        use_photo = bool(photo_id and len(text) <= MAX_CAPTION_LENGTH)
+        currently_media = getattr(msg, "text", None) is None
+
+        if currently_media:
+            if use_photo:
+                await edit_card_message_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    is_photo=True,
+                    photo=photo_id,
+                    caption=text,
+                    reply_markup=markup,
+                )
+            else:
+                sent = await send_message_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    text=text,
+                    reply_markup=markup,
+                )
+                if sent is not None:
+                    coordinator.register_handbook_message(chat_id, sent.message_id, user_id)
+                    try:
+                        await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+                    except Exception:
+                        pass
+        else:
+            if use_photo:
+                sent, _ = await replace_text_with_photo_card_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    old_message_id=msg_id,
+                    photo=photo_id,
+                    caption=text,
+                    reply_markup=markup,
+                )
+                if sent is not None:
+                    coordinator.register_handbook_message(chat_id, sent.message_id, user_id)
+            else:
+                await edit_message_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    text=text,
+                    reply_markup=markup,
+                )
         await answer_callback_safe(query)
         return
 
