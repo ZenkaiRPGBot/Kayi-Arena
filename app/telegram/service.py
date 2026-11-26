@@ -506,6 +506,7 @@ class ArenaTelegramCoordinator:
             )
 
         if update_card:
+            rec: CharacterEntry | None = None
             if match.inactivity_claim_offered_to is not None:
                 caption = render_turn_expired_card(match, player_names=names)
                 markup = build_inactivity_keyboard(match)

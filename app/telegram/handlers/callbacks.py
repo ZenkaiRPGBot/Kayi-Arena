@@ -61,12 +61,14 @@ def _map_match_error(code: MatchManagementErrorCode | None, draft_code: DraftErr
         return "Inactivity claim is not available."
     if draft_code is DraftErrorCode.NOT_YOUR_TURN:
         return "It's not your turn."
-    if draft_code is DraftErrorCode.ROLE_ALREADY_FILLED:
+    if draft_code is DraftErrorCode.ROLE_OCCUPIED:
         return "That role has already been assigned."
     if draft_code is DraftErrorCode.NO_SKIPS_REMAINING:
         return "No skips remaining."
-    if draft_code is DraftErrorCode.INVALID_PHASE:
+    if draft_code is DraftErrorCode.WRONG_PHASE:
         return "That action is not available right now."
+    if draft_code is DraftErrorCode.STALE_REVISION:
+        return "This action has expired."
     return "Action could not be completed."
 
 

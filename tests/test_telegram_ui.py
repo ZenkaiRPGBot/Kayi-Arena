@@ -813,3 +813,138 @@ async def test_help_navigation_and_all_pages() -> None:
 
     await coordinator.shutdown()
     db.close()
+
+
+async def test_shuffle_photo_upgrade_then_assign_all_roles_no_error() -> None:
+    """Regression test: text card -> photo card on Shuffle -> Assign Role must not raise UnboundLocalError."""
+    from app.persistence import SqliteMatchStore
+    from app.telegram.callbacks import role_to_index
+
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    store = SqliteMatchStore(":memory:")
+    for ch in db.list_characters("naruto"):
+        store.upsert_media_asset(
+            media_key=f"{ch.character_id}:{ch.image.checksum or ch.image.url_or_ref}",
+            character_id=ch.character_id,
+            universe_id="naruto",
+            source_url=ch.image.url_or_ref,
+            telegram_file_id=f"AgAC_cached_{ch.character_id}",
+        )
+
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION, store=store)
+    bot = MockBotRecorder()
+    cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot", card_back_ref="")
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr, store=store)
+
+    u1 = _make_user(101, "Alice")
+    u2 = _make_user(202, "Bob")
+    chat_id = -100777
+    upd = 100
+
+    await dp.feed_update(
+        bot,
+        _make_message_update(
+            upd, chat_id=chat_id, chat_type="supergroup", user=u1, text="/arena naruto", reply_to_user=u2
+        ),
+    )
+    upd += 1
+    chl_id = next(iter(mgr._challenges.keys()))
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            upd,
+            chat_id=chat_id,
+            chat_type="supergroup",
+            message_id=101,
+            user=u2,
+            data=encode_cb("ca", chl_id, 0),
+            recorder=bot,
+        ),
+    )
+    upd += 1
+
+    match = next(iter(mgr._matches.values()))
+    ui = coordinator._match_ui[match.match_id]
+    assert ui.card_is_photo is False
+
+    skipped_once = False
+    while match.status.value == "drafting":
+        actor_id = match.public_view.active_player_id
+        actor_user = u1 if actor_id == "101" else u2
+        await dp.feed_update(
+            bot,
+            _make_callback_update(
+                upd,
+                chat_id=chat_id,
+                chat_type="supergroup",
+                message_id=ui.card_message_id,
+                user=actor_user,
+                data=encode_cb("sh", match.match_id, match.generation),
+                recorder=bot,
+            ),
+        )
+        upd += 1
+        match = mgr.get_match(match.match_id) or match
+        assert coordinator._match_ui[match.match_id].card_is_photo is True
+
+        if not skipped_once and match.draft_snapshot.skips_remaining[actor_id] > 0:
+            skipped_once = True
+            await dp.feed_update(
+                bot,
+                _make_callback_update(
+                    upd,
+                    chat_id=chat_id,
+                    chat_type="supergroup",
+                    message_id=ui.card_message_id,
+                    user=actor_user,
+                    data=encode_cb("sk", match.match_id, match.generation),
+                    recorder=bot,
+                ),
+            )
+            upd += 1
+            match = mgr.get_match(match.match_id) or match
+
+        role = match.public_view.remaining_roles[actor_id][0]
+        stale_gen = match.generation
+        await dp.feed_update(
+            bot,
+            _make_callback_update(
+                upd,
+                chat_id=chat_id,
+                chat_type="supergroup",
+                message_id=ui.card_message_id,
+                user=actor_user,
+                data=encode_cb("as", match.match_id, stale_gen, role_to_index(role)),
+                recorder=bot,
+            ),
+        )
+        upd += 1
+        match = mgr.get_match(match.match_id) or match
+
+        # Duplicate / stale retry of the same assign callback must not duplicate or error
+        await dp.feed_update(
+            bot,
+            _make_callback_update(
+                upd,
+                chat_id=chat_id,
+                chat_type="supergroup",
+                message_id=ui.card_message_id,
+                user=actor_user,
+                data=encode_cb("as", match.match_id, stale_gen, role_to_index(role)),
+                recorder=bot,
+            ),
+        )
+        upd += 1
+        match = mgr.get_match(match.match_id) or match
+
+    assert match.outcome is not None
+    error_alerts = [
+        ans.get("text", "")
+        for ans in bot.callback_answers
+        if "Something went wrong" in str(ans.get("text", ""))
+    ]
+    assert error_alerts == [], f"Unexpected error alerts: {error_alerts}"
+    await coordinator.shutdown()
+    store.close()
+    db.close()
