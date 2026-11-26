@@ -26,6 +26,13 @@ async def run_bot() -> None:
         level=getattr(logging, config.log_level, logging.INFO),
         format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
         stream=sys.stdout,
+        force=True,
+    )
+    logger.info(
+        "Starting Kayi Arena (transport=%s, backend=%s, port=%d)",
+        config.transport_mode,
+        config.db_backend,
+        config.port,
     )
 
     db_path = Path(config.db_path)
@@ -48,39 +55,21 @@ async def run_bot() -> None:
     )
 
     store = create_match_store(config)
-
     bot = create_bot(config)
-
-    try:
-        me = await bot.get_me()
-        if me.username:
-            config = replace(config, bot_username=me.username)
-        await register_bot_commands(bot)
-    except Exception as exc:
-        logger.warning("Startup metadata sync skipped: %s", type(exc).__name__)
 
     manager = MatchManager(db, dataset_kind=config.dataset_kind, store=store)
     dp, coordinator = create_dispatcher(
         bot=bot, config=config, db=db, manager=manager, store=store
     )
 
-    recovery_report = await coordinator.recover_on_startup()
-    logger.info(
-        "Startup recovery complete: restored=%d pending_chl=%d expired_chl=%d abandoned=%d errors=%d",
-        recovery_report.restored_matches,
-        recovery_report.pending_challenges,
-        recovery_report.expired_challenges,
-        recovery_report.abandoned_matches,
-        len(recovery_report.recovery_errors),
-    )
-
     use_webhook = config.transport_mode == "webhook" and bool(config.webhook_url)
+    health_status: dict[str, object] = {
+        "transport_mode": "webhook" if use_webhook else "polling",
+        "restored_matches": 0,
+        "pending_challenges": 0,
+    }
     health_app = build_health_app(
-        extra_status={
-            "transport_mode": "webhook" if use_webhook else "polling",
-            "restored_matches": recovery_report.restored_matches,
-            "pending_challenges": recovery_report.pending_challenges,
-        },
+        extra_status=health_status,
         readiness_check=store.integrity_check,
         bot=bot if use_webhook else None,
         dp=dp if use_webhook else None,
@@ -97,7 +86,27 @@ async def run_bot() -> None:
         "webhook" if use_webhook else "polling",
     )
 
-    notifier = build_restart_notifier(bot, config)
+    try:
+        me = await asyncio.wait_for(bot.get_me(), timeout=10.0)
+        if me.username:
+            coordinator.config = replace(coordinator.config, bot_username=me.username)
+        await asyncio.wait_for(register_bot_commands(bot), timeout=10.0)
+    except Exception as exc:
+        logger.warning("Startup metadata sync skipped: %s", type(exc).__name__)
+
+    recovery_report = await coordinator.recover_on_startup()
+    health_status["restored_matches"] = recovery_report.restored_matches
+    health_status["pending_challenges"] = recovery_report.pending_challenges
+    logger.info(
+        "Startup recovery complete: restored=%d pending_chl=%d expired_chl=%d abandoned=%d errors=%d",
+        recovery_report.restored_matches,
+        recovery_report.pending_challenges,
+        recovery_report.expired_challenges,
+        recovery_report.abandoned_matches,
+        len(recovery_report.recovery_errors),
+    )
+
+    notifier = build_restart_notifier(bot, coordinator.config)
     notify_task = asyncio.create_task(
         notifier.notify_once(recovery_report=recovery_report),
         name="kayi-arena-restart-notify",
@@ -113,13 +122,19 @@ async def run_bot() -> None:
 
     try:
         if use_webhook:
-            await bot.set_webhook(
-                url=config.webhook_url,
-                secret_token=config.webhook_secret or None,
-                drop_pending_updates=config.drop_pending_updates,
-                allowed_updates=["message", "callback_query"],
-            )
-            logger.info("Webhook registered at %s", config.webhook_url)
+            try:
+                await asyncio.wait_for(
+                    bot.set_webhook(
+                        url=config.webhook_url,
+                        secret_token=config.webhook_secret or None,
+                        drop_pending_updates=config.drop_pending_updates,
+                        allowed_updates=["message", "callback_query"],
+                    ),
+                    timeout=15.0,
+                )
+                logger.info("Webhook registered at %s", config.webhook_url)
+            except Exception as exc:
+                logger.warning("Webhook registration warning: %s", type(exc).__name__)
             await stop_event.wait()
         else:
             # Ensure no stale webhook causes a Telegram 409 Conflict during polling

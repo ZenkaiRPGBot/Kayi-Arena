@@ -247,6 +247,7 @@ class MongoMatchStore:
 
     def _ensure_indexes(self) -> None:
         try:
+            self._db.command("ping")
             self._db["challenges"].create_index([("status", 1), ("created_at", 1)])
             self._db["matches"].create_index([("status", 1), ("updated_at", 1)])
             self._db["match_history"].create_index([("player_1_id", 1), ("completed_at", -1)])
