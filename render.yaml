@@ -1,24 +1,22 @@
 services:
-  - type: worker
+  - type: web
     name: kayi-arena
     runtime: python
-    # Note: Persistent disks on Render require a paid instance plan (e.g. starter).
-    # Ephemeral filesystems on the free tier will lose SQLite state on redeploy.
-    plan: starter
+    plan: free
     region: frankfurt
     autoDeploy: true
-    maxShutdownDelaySeconds: 30
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -m app.main
-    disk:
-      name: kayi-arena-data
-      mountPath: /var/data
-      sizeGB: 1
+    buildCommand: pip install --no-cache-dir -r requirements.txt
+    startCommand: python -u -m app.main
+    healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION
-        value: 3.12.11
+        value: "3.12"
       - key: PYTHONUNBUFFERED
         value: "1"
+      - key: PYTHONPATH
+        value: "."
+      - key: PORT
+        value: "10000"
       - key: BOT_TOKEN
         sync: false
       - key: BOT_USERNAME
@@ -33,12 +31,15 @@ services:
         value: https://t.me/KayiBots
       - key: SUPPORT_URL
         value: https://t.me/KayiBots
+      # Note: Render Free Web Services use an ephemeral filesystem.
+      # For durable production persistence across redeploys, attach a paid
+      # persistent disk (e.g. /var/data) or migrate SqliteMatchStore to external Postgres.
       - key: ARENA_DB_PATH
-        value: /var/data/kayi_arena.sqlite3
+        value: data/kayi_arena.sqlite3
       - key: ARENA_STATE_DB_PATH
-        value: /var/data/kayi_arena_state.sqlite3
+        value: data/kayi_arena_state.sqlite3
       - key: RESTART_STATE_PATH
-        value: /var/data/restart_state.json
+        value: ""
       - key: ARENA_DATASET_KIND
         value: production
       - key: LOG_LEVEL

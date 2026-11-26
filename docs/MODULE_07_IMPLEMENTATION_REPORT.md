@@ -16,8 +16,9 @@ Module 7 adds durable SQLite persistence, versioned schema migrations, atomic st
   - [service.py](file:///D:/KayiBots/Kayi%20Arena/app/telegram/service.py): `recover_on_startup()` and serialized, non-duplicating `recover_game_ui()`.
   - [restart_notify.py](file:///D:/KayiBots/Kayi%20Arena/app/telegram/restart_notify.py): Accurate, non-sensitive `StartupRecoveryReport` summary in startup alerts.
   - [seed_synthetic_dev.py](file:///D:/KayiBots/Kayi%20Arena/scripts/seed_synthetic_dev.py): Isolated synthetic dataset seeder for local Telegram smoke testing.
-- **Deployment (`render.yaml`, `.env.example`):**
-  - Configured Render Persistent Disk (`/var/data`) on `starter` plan for `ARENA_DB_PATH`, `ARENA_STATE_DB_PATH`, and `RESTART_STATE_PATH`.
+- **Deployment & HTTP Health Server (`app/telegram/web.py`, `app/main.py`, `render.yaml`, `.env.example`):**
+  - Added lightweight `aiohttp` HTTP server (`/` and `/health`) bound to `0.0.0.0:$PORT` alongside Telegram polling, with graceful shutdown (`runner.cleanup()`, `dp.stop_polling()`, `coordinator.shutdown()`, `store.close()`, `db.close()`).
+  - Updated `render.yaml` to free Render Web Service (`type: web`, `plan: free`, `healthCheckPath: /health`, no `maxShutdownDelaySeconds`) and documented ephemeral filesystem limitations vs. durable production storage (paid persistent disk or external Postgres).
 
 ## 3. Downtime Policy Note (Owner Confirmation)
 - When a turn expires while the bot is offline, startup recovery offers the opponent a fresh 60s inactivity claim window rather than fabricating an automatic victory.

@@ -476,3 +476,28 @@ async def test_crash_after_persistence_and_missing_dataset_fails_safely(tmp_path
 
     store2.close()
     empty_db.close()
+
+
+@pytest.mark.asyncio
+async def test_http_health_server_endpoints_and_graceful_shutdown() -> None:
+    import aiohttp
+    from app.telegram.web import build_health_app, start_http_server
+
+    app = build_health_app(extra_status={"restored_matches": 1})
+    runner, site = await start_http_server(app, host="127.0.0.1", port=0)
+    try:
+        port = site._server.sockets[0].getsockname()[1]  # type: ignore[union-attr]
+        async with aiohttp.ClientSession() as session:
+            async with session.get(f"http://127.0.0.1:{port}/") as resp:
+                assert resp.status == 200
+                data = await resp.json()
+                assert data["service"] == "kayi-arena"
+                assert data["status"] == "ok"
+
+            async with session.get(f"http://127.0.0.1:{port}/health") as resp:
+                assert resp.status == 200
+                data = await resp.json()
+                assert data["status"] == "ok"
+                assert data["restored_matches"] == 1
+    finally:
+        await runner.cleanup()

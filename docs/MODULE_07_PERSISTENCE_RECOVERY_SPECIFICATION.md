@@ -33,6 +33,9 @@ On startup (`recover_on_startup`):
 - `recover_game_ui` is serialized per match (`_recovery_locks`), bumps `match.generation` atomically via `replace_message_references(..., bump_generation=True)` to invalidate stale keyboards, and reuses surviving board/card messages without duplicating boards.
 - `CharacterMediaResolver` (`app/telegram/media.py`) resolves cached Telegram `file_id`s or HTTPS URLs without auto-promoting technically validated images to identity-verified.
 
-## 6. Deployment & Backup
-- `render.yaml` configures a Render Persistent Disk mounted at `/var/data` (`ARENA_DB_PATH`, `ARENA_STATE_DB_PATH`, `RESTART_STATE_PATH`) on the `starter` plan (Render Free tier has ephemeral storage and cannot guarantee SQLite durability across redeploys).
+## 6. Deployment, Free Render Web Service & Durable Storage Strategy
+- **Render Hosting Mode:** Hosted as a free Render **Web Service** (`type: web`, `plan: free`, `region: frankfurt`, `startCommand: python -u -m app.main`, `healthCheckPath: /health`). `maxShutdownDelaySeconds` is omitted because Render does not support it on free instances.
+- **HTTP Health Server (`app/telegram/web.py`):** Runs a lightweight `aiohttp.web` server bound to `0.0.0.0:$PORT` alongside Telegram polling, serving `/` and `/health` (`200 OK` JSON) and shutting down gracefully via `runner.cleanup()` alongside `dp.stop_polling()`.
+- **Ephemeral Filesystem Limitation:** Render Free Web Services use an ephemeral filesystem — local SQLite files (`ARENA_DB_PATH`, `ARENA_STATE_DB_PATH`) and `RESTART_STATE_PATH` survive in-process restarts on the same container, but **are wiped on redeploy or container replacement**.
+- **Durable Production Storage Strategy:** For production competitive gameplay across redeploys, either upgrade to a Render paid plan with a Persistent Disk mounted at `/var/data`, or add an external managed database backend (e.g., PostgreSQL) implementing the `SqliteMatchStore` persistence contract.
 - `SqliteMatchStore.backup_to(dest_path)` uses SQLite's online backup API for safe live snapshots.

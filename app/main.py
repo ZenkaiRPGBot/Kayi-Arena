@@ -1,9 +1,11 @@
-"""Main polling entrypoint for Kayi Arena Telegram bot."""
+"""Main entrypoint for Kayi Arena: lightweight HTTP server + Telegram polling."""
 
 from __future__ import annotations
 
 import asyncio
 import logging
+import signal
+import sys
 from dataclasses import replace
 from pathlib import Path
 
@@ -13,6 +15,7 @@ from app.persistence import SqliteMatchStore
 from app.telegram.bot import create_bot, create_dispatcher, register_bot_commands
 from app.telegram.config import BotConfig
 from app.telegram.restart_notify import build_restart_notifier
+from app.telegram.web import build_health_app, start_http_server
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +25,7 @@ async def run_bot() -> None:
     logging.basicConfig(
         level=getattr(logging, config.log_level, logging.INFO),
         format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+        stream=sys.stdout,
     )
 
     db_path = Path(config.db_path)
@@ -57,11 +61,30 @@ async def run_bot() -> None:
         len(recovery_report.recovery_errors),
     )
 
+    health_app = build_health_app(
+        extra_status={
+            "restored_matches": recovery_report.restored_matches,
+            "pending_challenges": recovery_report.pending_challenges,
+        }
+    )
+    runner, _site = await start_http_server(
+        health_app, host=config.host, port=config.port
+    )
+    logger.info("HTTP health server listening on %s:%d", config.host, config.port)
+
     notifier = build_restart_notifier(bot, config)
-    asyncio.create_task(
+    notify_task = asyncio.create_task(
         notifier.notify_once(recovery_report=recovery_report),
         name="kayi-arena-restart-notify",
     )
+
+    # Graceful signal handling on POSIX (Render Linux containers)
+    loop = asyncio.get_running_loop()
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        try:
+            loop.add_signal_handler(sig, lambda: asyncio.create_task(dp.stop_polling()))
+        except NotImplementedError:
+            pass
 
     try:
         await dp.start_polling(
@@ -70,10 +93,14 @@ async def run_bot() -> None:
             drop_pending_updates=config.drop_pending_updates,
         )
     finally:
+        if not notify_task.done():
+            notify_task.cancel()
         await coordinator.shutdown()
+        await runner.cleanup()
         await bot.session.close()
         store.close()
         db.close()
+        logger.info("Kayi Arena shut down cleanly.")
 
 
 if __name__ == "__main__":

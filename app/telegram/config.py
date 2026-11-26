@@ -55,6 +55,8 @@ class BotConfig:
     card_back_ref: str = ""
     drop_pending_updates: bool = True
     log_level: str = "INFO"
+    host: str = "0.0.0.0"
+    port: int = 10000
 
     @classmethod
     def from_env(cls) -> BotConfig:
@@ -80,4 +82,6 @@ class BotConfig:
             card_back_ref=_env_str("CARD_BACK_REF", ""),
             drop_pending_updates=_env_bool("DROP_PENDING_UPDATES", True),
             log_level=_env_str("LOG_LEVEL", "INFO").upper(),
+            host=_env_str("HOST", "0.0.0.0"),
+            port=_env_int("PORT", 10000),
         )

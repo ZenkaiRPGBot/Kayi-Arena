@@ -121,5 +121,7 @@
    - If a turn deadline expires while the bot is offline, startup recovery transitions the match to the 60s inactivity claim prompt (`now + claim_window_seconds`) rather than fabricating an automatic victory.
    - If an already-open 60s inactivity claim window expires during downtime, startup recovery abandons the match (`MUTUAL_INACTIVITY_ABANDONMENT`, no winner, no rating change).
 
-3. **SQLite WAL & Persistent Disk Requirement**
-   - `SqliteMatchStore` uses `WAL` mode, `BEGIN IMMEDIATE`, `schema_migrations`, and database-level `active_player_locks`. `render.yaml` specifies a Render Persistent Disk (`/var/data`) on the `starter` plan because Render's free tier is ephemeral.
+3. **Free Render Web Service & Durable Storage Strategy**
+   - `SqliteMatchStore` uses `WAL` mode, `BEGIN IMMEDIATE`, `schema_migrations`, and database-level `active_player_locks`.
+   - `render.yaml` targets a free Render Web Service (`type: web`, `plan: free`, `healthCheckPath: /health`, without `maxShutdownDelaySeconds`) running a lightweight `aiohttp` server (`/` and `/health`) on `0.0.0.0:$PORT` alongside Telegram polling.
+   - Because Render Free Web Services have an ephemeral filesystem, SQLite state is durable within a running container but resets on redeploys; production persistence across redeploys requires a persistent disk or external managed database.
