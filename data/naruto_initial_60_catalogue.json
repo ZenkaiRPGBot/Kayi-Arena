@@ -1,0 +1,5810 @@
+{
+  "universe": "Naruto",
+  "source": "dattebayo",
+  "provider": "dattebayo",
+  "generated_at": "2026-11-26T04:24:37.616523+00:00",
+  "stats": {},
+  "duplicates_removed": [],
+  "candidates": [
+    {
+      "candidate_id": "dattebayo:1344",
+      "name": "Naruto Uzumaki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Naruto_Uzumaki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png",
+        "https://static.wikia.nocookie.net/naruto/images/7/7d/Naruto_Part_II.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png",
+          "source": "dattebayo",
+          "sha256": "b3ec46981edbf4d3400abae907a917631e6c1555459be48b6ec415258460f44d",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 113240,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7d/Naruto_Part_II.png",
+          "source": "dattebayo",
+          "sha256": "2a8b290c2751fe2d2ccbbe4e49855bbe8c737ed888a4cad399c78fa857b05333",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 95410,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #1",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Find the Four-Leaf Red Clover!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Sage",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1344,
+        "debut": {
+          "manga": "Naruto Chapter #1",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Find the Four-Leaf Red Clover!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Sage",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [
+          "うずまきナルトUzumakiNaruto",
+          "the-off,NumberOneUnpredictable,NoisyNinja(目立ちたがり屋で意外性no.1のドタバタ忍者,MedachitagariyaDeIgaiseiNanbāWanNoDotabataNinja,EnglishTv:NumberOneHyperactive,KnuckleheadNinja)",
+          "childOfTheProphecy(予言の子,YogenNoKo)",
+          "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+          "heroOfTheHiddenLeaf(木ノ葉隠れの英雄,KonohagakureNoEiyū,LiterallyMeaning:HeroOfTheHiddenTreeLeaves)",
+          "boyOfMiracles(奇跡を起こす少年,KisekiOOkosuShōnen)",
+          "konoha'sOrangeHokage(木ノ葉のオレンジ火影,KonohaNoOrenjiHokage,LiterallyMeaning:TreeLeaves'OrangeFireShadow)",
+          "seventhHokage(七代目火影,NanadaimeHokage,LiterallyMeaning:SeventhFireShadow)",
+          "fox(狐,Kitsune)"
+        ],
+        "personal": {
+          "birthdate": "October 10",
+          "sex": "Male",
+          "age": {
+            "Part I": "12–13",
+            "Part II": "15–17",
+            "Academy Graduate": "12"
+          },
+          "height": {
+            "Part I": "145.3cm - 147.5cm",
+            "Part II": "166cm",
+            "Blank Period": "180cm"
+          },
+          "weight": {
+            "Part I": "40.1kg - 40.6kg",
+            "Part II": "50.9kg"
+          },
+          "bloodType": "B",
+          "kekkeiGenkai": [
+            "Lava Release",
+            "Magnet Release",
+            "Boil Release"
+          ],
+          "classification": [
+            "Jinchūriki",
+            "Sage",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Shukaku, Matatabi, Isobu, Son Gokū, Kokuō, Saiken, Chōmei, Gyūki, Kurama (Forms)",
+          "occupation": [
+            "Hokage",
+            "Chūnin Exams Proctor  (Anime only)"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Mount Myōboku",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Kakashi",
+            "Sasuke Recovery Team",
+            "Konoha 11  (Anime only)",
+            "Bikōchū Search Team  (Anime only)",
+            "Kaima Capture Team  (Anime only)",
+            "Star Guard Team  (Anime only)",
+            "Peddlers Escort Team  (Anime only)",
+            "Kazekage Rescue Team",
+            "Team One  (Anime only)",
+            "Eight Man Squad",
+            "Hanabi Rescue Team  (Movie only)"
+          ],
+          "clan": "Uzumaki",
+          "titles": [
+            "うずまきナルトUzumakiNaruto",
+            "the-off,NumberOneUnpredictable,NoisyNinja(目立ちたがり屋で意外性no.1のドタバタ忍者,MedachitagariyaDeIgaiseiNanbāWanNoDotabataNinja,EnglishTv:NumberOneHyperactive,KnuckleheadNinja)",
+            "childOfTheProphecy(予言の子,YogenNoKo)",
+            "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+            "heroOfTheHiddenLeaf(木ノ葉隠れの英雄,KonohagakureNoEiyū,LiterallyMeaning:HeroOfTheHiddenTreeLeaves)",
+            "boyOfMiracles(奇跡を起こす少年,KisekiOOkosuShōnen)",
+            "konoha'sOrangeHokage(木ノ葉のオレンジ火影,KonohaNoOrenjiHokage,LiterallyMeaning:TreeLeaves'OrangeFireShadow)",
+            "seventhHokage(七代目火影,NanadaimeHokage,LiterallyMeaning:SeventhFireShadow)",
+            "fox(狐,Kitsune)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin",
+            "Gaiden": "Kage"
+          },
+          "ninjaRegistration": "012607"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Mount Myōboku",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Uzumaki",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1307",
+      "name": "Sasuke Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sasuke_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png",
+        "https://static.wikia.nocookie.net/naruto/images/1/13/Sasuke_Part_2.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png",
+          "source": "dattebayo",
+          "sha256": "480cc531bcd35cbb275452d10f4514233eae3ecab554b829b87e80fd5b526ac6",
+          "format": "webp",
+          "width": 1350,
+          "height": 1000,
+          "bytes": 89252,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/13/Sasuke_Part_2.png",
+          "source": "dattebayo",
+          "sha256": "06f2559509682e5e2a3ce11ee116f75e23ef4f813cfbe9631723c9361116d86b",
+          "format": "webp",
+          "width": 2700,
+          "height": 2000,
+          "bytes": 178644,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #3",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Find the Four-Leaf Red Clover!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1307,
+        "debut": {
+          "manga": "Naruto Chapter #3",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Find the Four-Leaf Red Clover!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [
+          "うちはサスケUchihaSasuke",
+          "childOfTheProphecy(予言の子,YogenNoKo)",
+          "sasukeOfTheSharingan(写輪眼のサスケ,SharinganNoSasuke)",
+          "supportingKage(支う影,Sasaukage,LiterallyMeaning:SupportingShadow)"
+        ],
+        "personal": {
+          "birthdate": "July 23",
+          "sex": "Male",
+          "age": {
+            "Part I": "12–13",
+            "Part II": "16–17",
+            "Academy Graduate": "12"
+          },
+          "height": {
+            "Part I": "150.8cm - 153.2cm",
+            "Part II": "168cm",
+            "Blank Period": "182cm"
+          },
+          "weight": {
+            "Part I": "42.2kg - 43.5kg",
+            "Part II": "52.2kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Eternal Mangekyō Sharingan",
+            "Rinnegan"
+          ],
+          "classification": "Missing-nin",
+          "occupation": "Head of the Uchiha Clan",
+          "affiliation": [
+            "Konohagakure",
+            "Otogakure",
+            "Ryūchi Cave",
+            "Akatsuki"
+          ],
+          "team": [
+            "Team Kakashi",
+            "Sound Four",
+            "Taka"
+          ],
+          "clan": "Uchiha",
+          "titles": [
+            "うちはサスケUchihaSasuke",
+            "childOfTheProphecy(予言の子,YogenNoKo)",
+            "sasukeOfTheSharingan(写輪眼のサスケ,SharinganNoSasuke)",
+            "supportingKage(支う影,Sasaukage,LiterallyMeaning:SupportingShadow)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin"
+          },
+          "ninjaRegistration": "012606"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Otogakure",
+          "Ryūchi Cave",
+          "Akatsuki"
+        ],
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1299",
+      "name": "Madara Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Madara_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png",
+          "source": "dattebayo",
+          "sha256": "b294b0e5813eb73b2269dd15a540f8d051986cd5f751985ea34fa6da026ff126",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 63734,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #370",
+        "anime": "Naruto Shippūden Episode #130",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky  (Mentioned)",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Missing-nin",
+        "Sensor Type",
+        "Sage"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1299,
+        "debut": {
+          "manga": "Naruto Chapter #370",
+          "anime": "Naruto Shippūden Episode #130",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky  (Mentioned)",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Missing-nin",
+          "Sensor Type",
+          "Sage"
+        ],
+        "species": null,
+        "titles": [
+          "うちはマダラUchihaMadara",
+          "secondSixPaths(二人目の六道,FutarimeNoRikudō)",
+          "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+          "ghostOfTheUchiha(うちはの亡霊,UchihaNoBōrei)"
+        ],
+        "personal": {
+          "birthdate": "December 24",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "179cm"
+          },
+          "weight": {
+            "Part II": "71.3kg"
+          },
+          "bloodType": "O",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Eternal Mangekyō Sharingan",
+            "Rinnegan",
+            "Wood Release",
+            "Storm Release"
+          ],
+          "kekkeiMōra": "Rinne Sharingan",
+          "classification": [
+            "Jinchūriki",
+            "Missing-nin",
+            "Sensor Type",
+            "Sage"
+          ],
+          "tailedBeast": "Ten-Tails (Forms)",
+          "occupation": [
+            "Co-founder of Konohagakure",
+            "Head of the Uchiha clan  (Former)"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Akatsuki"
+          ],
+          "partner": [
+            "Obito Uchiha",
+            "Black Zetsu"
+          ],
+          "clan": "Uchiha",
+          "titles": [
+            "うちはマダラUchihaMadara",
+            "secondSixPaths(二人目の六道,FutarimeNoRikudō)",
+            "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+            "ghostOfTheUchiha(うちはの亡霊,UchihaNoBōrei)"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Konohagakure",
+          "Akatsuki"
+        ],
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:878",
+      "name": "Shikamaru Nara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shikamaru_Nara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/44/Shikamaru_Part_I.png",
+        "https://static.wikia.nocookie.net/naruto/images/9/9a/Shikamaru_Nara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/44/Shikamaru_Part_I.png",
+          "source": "dattebayo",
+          "sha256": "73d33109fecb218ba7b564caffd219910ee5bfabd0588901b12e42472a92e0b5",
+          "format": "webp",
+          "width": 1362,
+          "height": 1075,
+          "bytes": 54126,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/9a/Shikamaru_Nara.png",
+          "source": "dattebayo",
+          "sha256": "4315170addd5c06ba67799956894713b56fea8aeb81a801f503d0c8b30e4ba6d",
+          "format": "webp",
+          "width": 1362,
+          "height": 1075,
+          "bytes": 112402,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #34",
+        "anime": "Naruto Episode #1",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto the Movie: Legend of the Stone of Gelel",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 878,
+        "debut": {
+          "manga": "Naruto Chapter #34",
+          "anime": "Naruto Episode #1",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto the Movie: Legend of the Stone of Gelel",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "September 22",
+          "sex": "Male",
+          "age": {
+            "Part I": "12–13",
+            "Part II": "15–17",
+            "Blank Period": "19",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "12"
+          },
+          "height": {
+            "Part I": "150.8cm - 152.1cm",
+            "Part II": "170cm",
+            "Blank Period": "176cm"
+          },
+          "weight": {
+            "Part I": "42kg - 42.9kg",
+            "Part II": "53.4kg"
+          },
+          "bloodType": "AB",
+          "occupation": [
+            "Hokage's Chief Aide",
+            "Planner for the Shinobi Union",
+            "Proxy Commander of Fourth Division of the Allied Shinobi Forces",
+            "Chūnin Exam Proctor  (Anime only)",
+            "Head of the Nara Clan"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team 10",
+            "Sasuke Recovery Team",
+            "Konoha 11  (Anime only)",
+            "Twenty Platoons",
+            "Fourth Division",
+            "Hanabi Rescue Team  (Movie only)"
+          ],
+          "clan": "Nara"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin",
+            "Blank Period": "Jōnin"
+          },
+          "ninjaRegistration": "012611"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Nara",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1280",
+      "name": "Tsunade",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tsunade",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png",
+          "source": "dattebayo",
+          "sha256": "da014c97e73f8126587ceccc70067ce93b05a50df6161b59222efa6d3b4b088b",
+          "format": "webp",
+          "width": 1481,
+          "height": 1080,
+          "bytes": 121212,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #139",
+        "anime": "Naruto Episode #83",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto Shippūden the Movie",
+        "game": "Naruto: Ultimate Ninja 2",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Medical-nin",
+        "Sannin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1280,
+        "debut": {
+          "manga": "Naruto Chapter #139",
+          "anime": "Naruto Episode #83",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto Shippūden the Movie",
+          "game": "Naruto: Ultimate Ninja 2",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Medical-nin",
+          "Sannin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "August 2",
+          "sex": "Female",
+          "age": {
+            "Part I": "51",
+            "Part II": "54–55",
+            "Academy Graduate": "6"
+          },
+          "height": {
+            "Part I": "163.1cm",
+            "Part II": "163.1cm"
+          },
+          "weight": {
+            "Part I": "48.9kg",
+            "Part II": "48.9kg"
+          },
+          "bloodType": "B",
+          "classification": [
+            "Medical-nin",
+            "Sannin"
+          ],
+          "occupation": "Hokage",
+          "affiliation": [
+            "Konohagakure",
+            "Shikkotsu Forest",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Team Hiruzen",
+          "clan": "Senju"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Kage"
+          },
+          "ninjaRegistration": "002302"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Shikkotsu Forest",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Senju",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:374",
+      "name": "Sakura Haruno",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sakura_Haruno",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png",
+        "https://static.wikia.nocookie.net/naruto/images/b/ba/Sakurap2.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png",
+          "source": "dattebayo",
+          "sha256": "44b119154f4d18b8f936aaa0c5f23820be8a37e2198b1593b5ce2b41ca65f128",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 132322,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/ba/Sakurap2.png",
+          "source": "dattebayo",
+          "sha256": "cf9e49a37274e26f161c2cbfd53c46546c7e213f461c3dfefb407be2e41a0313",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 125016,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #3",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Find the Four-Leaf Red Clover!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 374,
+        "debut": {
+          "manga": "Naruto Chapter #3",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Find the Four-Leaf Red Clover!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "March 28",
+          "sex": "Female",
+          "age": {
+            "Part I": "12–13",
+            "Part II": "15–17",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "14"
+          },
+          "height": {
+            "Part I": "148.5cm - 150.1cm",
+            "Part II": "161cm",
+            "Blank Period": "165cm"
+          },
+          "weight": {
+            "Part I": "35.4kg - 35.9kg",
+            "Part II": "45.4kg"
+          },
+          "bloodType": "O",
+          "classification": "Medical-nin",
+          "occupation": [
+            "Director of Konoha Children Mental Health Clinic",
+            "Head of Konoha Medical Department"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces",
+            "Shikkotsu Forest"
+          ],
+          "team": [
+            "Team Kakashi",
+            "Konoha 11  (Anime only)",
+            "Team Asuma  (Anime only)",
+            "Kazekage Rescue Team",
+            "Eight Man Squad",
+            "Team Three  (Anime only)",
+            "Third Division",
+            "Hanabi Rescue Team  (Movie only)",
+            "Ino–Saku–Sai  (Novel only)",
+            "Medic Corps"
+          ],
+          "clan": "Uchiha"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin",
+            "Part II": "Chūnin",
+            "Blank Period": "Jōnin"
+          },
+          "ninjaRegistration": "012601"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces",
+          "Shikkotsu Forest"
+        ],
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:376",
+      "name": "Kakashi Hatake",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kakashi_Hatake",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png",
+        "https://static.wikia.nocookie.net/naruto/images/2/25/Kakashi_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png",
+          "source": "dattebayo",
+          "sha256": "18d5a7eb1ced955ca6e6e1ae1c046f4d15243f8bc0dca67bf52fea29227d91a0",
+          "format": "webp",
+          "width": 1439,
+          "height": 1076,
+          "bytes": 66958,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/25/Kakashi_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "1aca6c683cc81056bbaa457feb4a0f5ccb8fdbf7b98fb5a705fbc3b7921684d8",
+          "format": "webp",
+          "width": 1439,
+          "height": 1076,
+          "bytes": 181986,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #3",
+        "anime": "Naruto Episode #3",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Find the Four-Leaf Red Clover!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 376,
+        "debut": {
+          "manga": "Naruto Chapter #3",
+          "anime": "Naruto Episode #3",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Find the Four-Leaf Red Clover!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "はたけカカシHatakeKakashi",
+          "copyNinjaKakashi(コピー忍者のカカシ,KopīNinjaNoKakashi)",
+          "kakashiOfTheSharingan(写輪眼のカカシ,SharinganNoKakashi,LiterallyMeaning:KakashiOfTheCopyWheelEye)",
+          "heroOfTheSharingan(写輪眼の英雄,SharinganNoEiyū,LiterallyMeaning:HeroOfTheCopyWheelEye)",
+          "cold-bloodedKakashi(冷血カカシ,ReiketsuKakashi)",
+          "friend-killerKakashi(仲間殺しのカカシ,NakamagoroshiNoKakashi)",
+          "sixthHokage(六代目火影,RokudaimeHokage,LiterallyMeaning:SixthFireShadow)",
+          "sukea(スケア)"
+        ],
+        "personal": {
+          "birthdate": "September 15",
+          "sex": "Male",
+          "age": {
+            "Part I": "26–27",
+            "Part II": "29–31",
+            "Academy Graduate": "5",
+            "Chunin Promotion": "6"
+          },
+          "height": {
+            "Part I": "181cm"
+          },
+          "weight": {
+            "Part I": "67.5kg"
+          },
+          "bloodType": "O",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "occupation": [
+            "Anbu Captain  (Former)",
+            "Third Division Commander of the Allied Shinobi Forces",
+            "Hokage",
+            "Genin Exams Proctor  (Anime only)"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Root  (Anime only)",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Minato",
+            "Team Ro  (Anime only)",
+            "Team Kakashi",
+            "Kazekage Rescue Team",
+            "Team Asuma  (Temporarily)",
+            "Team One  (Anime only)",
+            "Team 8  (Temporarily)",
+            "Eight Man Squad",
+            "Third Division"
+          ],
+          "clan": "Hatake",
+          "titles": [
+            "はたけカカシHatakeKakashi",
+            "copyNinjaKakashi(コピー忍者のカカシ,KopīNinjaNoKakashi)",
+            "kakashiOfTheSharingan(写輪眼のカカシ,SharinganNoKakashi,LiterallyMeaning:KakashiOfTheCopyWheelEye)",
+            "heroOfTheSharingan(写輪眼の英雄,SharinganNoEiyū,LiterallyMeaning:HeroOfTheCopyWheelEye)",
+            "cold-bloodedKakashi(冷血カカシ,ReiketsuKakashi)",
+            "friend-killerKakashi(仲間殺しのカカシ,NakamagoroshiNoKakashi)",
+            "sixthHokage(六代目火影,RokudaimeHokage,LiterallyMeaning:SixthFireShadow)",
+            "sukea(スケア)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin",
+            "Blank Period": "Kage"
+          },
+          "ninjaRegistration": "009720"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root  (Anime only)",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Hatake",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:739",
+      "name": "Rock Lee",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Rock_Lee",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/97/Rock_Lee_Part_I.png",
+        "https://static.wikia.nocookie.net/naruto/images/7/7d/Lee_timeskip.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/97/Rock_Lee_Part_I.png",
+          "source": "dattebayo",
+          "sha256": "da518440143b9838a4fc9d3bff3d3b900f046008d01dfe2bef7b2dea7d8d2767",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 96590,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7d/Lee_timeskip.png",
+          "source": "dattebayo",
+          "sha256": "1ae4a21d7bfcb43a6379e9972ee68bf0c43321db3a5bad603d54456c78fb7d39",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 118018,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #36",
+        "anime": "Naruto Episode #21",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto the Movie: Guardians of the Crescent Moon Kingdom",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 739,
+        "debut": {
+          "manga": "Naruto Chapter #36",
+          "anime": "Naruto Episode #21",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto the Movie: Guardians of the Crescent Moon Kingdom",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "November 27",
+          "sex": "Male",
+          "age": {
+            "Part I": "13–14",
+            "Part II": "17",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "15"
+          },
+          "height": {
+            "Part I": "158.5cm - 162.1cm",
+            "Part II": "172cm",
+            "Blank Period": "177cm"
+          },
+          "weight": {
+            "Part I": "46.6kg - 47.5kg",
+            "Part II": "54.7kg"
+          },
+          "bloodType": "A",
+          "occupation": "Chūnin Exams Proctor",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Guy",
+            "Konoha 11  (Anime only)",
+            "Star Guard Team  (Anime only)",
+            "Team Two  (Anime only)",
+            "Third Division",
+            "Suicide Corps  (Movie only)"
+          ],
+          "clan": "Lee   (Novel only)"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin",
+            "Part II": "Chūnin",
+            "Gaiden": "Jōnin"
+          },
+          "ninjaRegistration": "012561"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Lee   (Novel only)",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:711",
+      "name": "Kurama",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kurama",
+      "aliases": [],
+      "image_urls": [],
+      "images": [],
+      "debut": {
+        "manga": "Naruto Chapter #1",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast",
+        "Sensor Type",
+        "Sage"
+      ],
+      "species": "Kitsune",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Kitsune",
+      "source_metadata": {
+        "dattebayo_id": 711,
+        "debut": {
+          "manga": "Naruto Chapter #1",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast",
+          "Sensor Type",
+          "Sage"
+        ],
+        "species": "Kitsune",
+        "titles": [
+          "九喇嘛Kurama",
+          "nine-tails(九尾,Kyūbi)",
+          "nine-tailedDemonFox(九尾の妖狐,KyūbiNoYōko,EnglishTv:Nine-tailedFox)",
+          "monsterFox(化け狐",
+          "バケ狐,Bakegitsune)"
+        ],
+        "personal": {
+          "species": "Kitsune",
+          "status": "Deceased",
+          "classification": [
+            "Tailed Beast",
+            "Sensor Type",
+            "Sage"
+          ],
+          "jinchūriki": [
+            "Mito Uzumaki",
+            "Kushina Uzumaki",
+            "Minato Namikaze (Yin half)",
+            "Naruto Uzumaki",
+            "Black Zetsu (Yin half)",
+            "Obito Uchiha (Yin half)"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "titles": [
+            "九喇嘛Kurama",
+            "nine-tails(九尾,Kyūbi)",
+            "nine-tailedDemonFox(九尾の妖狐,KyūbiNoYōko,EnglishTv:Nine-tailedFox)",
+            "monsterFox(化け狐",
+            "バケ狐,Bakegitsune)"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Kitsune."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:608",
+      "name": "Katsuyu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Katsuyu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/59/Katsuyu_Summoned.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/59/Katsuyu_Summoned.png",
+          "source": "dattebayo",
+          "sha256": "2a0ea256e5e0e2278cd636f67c9aed0f2095b2f484b809925fa3c666b8b4560b",
+          "format": "webp",
+          "width": 1912,
+          "height": 1078,
+          "bytes": 93536,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #169",
+        "anime": "Naruto Episode #95",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja 2",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [
+        "Summon"
+      ],
+      "species": "Slug",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Slug",
+      "source_metadata": {
+        "dattebayo_id": 608,
+        "debut": {
+          "manga": "Naruto Chapter #169",
+          "anime": "Naruto Episode #95",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja 2",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [
+          "Summon"
+        ],
+        "species": "Slug",
+        "titles": [],
+        "personal": {
+          "birthdate": "May 9",
+          "sex": "File:Gender Other.svg Other",
+          "species": "Slug",
+          "classification": "Summon",
+          "affiliation": [
+            "Shikkotsu Forest",
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Shikkotsu Forest",
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Slug."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1063",
+      "name": "Hashirama Senju",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hashirama_Senju",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/7e/Hashirama_Senju.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7e/Hashirama_Senju.png",
+          "source": "dattebayo",
+          "sha256": "1338ab3f8ec5f8d48ced515923df4f6de9374ea6156c57e227827f957ecbabd7",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 55490,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #118",
+        "anime": "Naruto Episode #69",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sage"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1063,
+        "debut": {
+          "manga": "Naruto Chapter #118",
+          "anime": "Naruto Episode #69",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sage"
+        ],
+        "species": null,
+        "titles": [
+          "千手柱間SenjuHashirama",
+          "firstHokage(初代火影,ShodaiHokage)",
+          "godOfShinobi(忍の神,ShinobiNoKami,EnglishTv:TheSupremeShinobi)"
+        ],
+        "personal": {
+          "birthdate": "October 23",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "185.1cm"
+          },
+          "weight": {
+            "Part II": "74kg"
+          },
+          "bloodType": "B",
+          "kekkeiGenkai": "Wood Release",
+          "classification": "Sage",
+          "occupation": [
+            "Head of the Senju clan",
+            "Hokage"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Senju",
+          "titles": [
+            "千手柱間SenjuHashirama",
+            "firstHokage(初代火影,ShodaiHokage)",
+            "godOfShinobi(忍の神,ShinobiNoKami,EnglishTv:TheSupremeShinobi)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Kage"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Senju",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:940",
+      "name": "Kaguya Ōtsutsuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kaguya_Ōtsutsuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/6c/Kaguya_%C5%8Ctsutsuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6c/Kaguya_%C5%8Ctsutsuki.png",
+          "source": "dattebayo",
+          "sha256": "bf799cf83022aeb2fe2b4f20c1d35ff3084bf275f6777a662f319d9c16ae8360",
+          "format": "webp",
+          "width": 2052,
+          "height": 1434,
+          "bytes": 162088,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #679",
+        "anime": "Naruto Shippūden Episode #458",
+        "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": "Celestial Being",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being",
+      "source_metadata": {
+        "dattebayo_id": 940,
+        "debut": {
+          "manga": "Naruto Chapter #679",
+          "anime": "Naruto Shippūden Episode #458",
+          "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": "Celestial Being",
+        "titles": [
+          "大筒木カグヤŌtsutsukiKaguya",
+          "rabbitGoddess(卯の女神,UsagiNoMegami)",
+          "demon(鬼,Oni)",
+          "progenitorOfChakra(チャクラの祖,ChakuraNoSo)",
+          "godAlmighty(全能の神,ZennōNoKami)",
+          "motherOfChakra"
+        ],
+        "personal": {
+          "birthdate": "August 15",
+          "sex": "Female",
+          "species": "Celestial Being",
+          "status": "Incapacitated",
+          "kekkeiMōra": [
+            "Byakugan",
+            "Rinne Sharingan"
+          ],
+          "classification": "Sensor Type",
+          "occupation": [
+            "Princess",
+            "Head of the Ōtsutsuki Clan  (Former)"
+          ],
+          "affiliation": "Land of Ancestors  (Anime only)",
+          "partner": [
+            "Isshiki Ōtsutsuki",
+            "Black Zetsu"
+          ],
+          "clan": "Ōtsutsuki",
+          "titles": [
+            "大筒木カグヤŌtsutsukiKaguya",
+            "rabbitGoddess(卯の女神,UsagiNoMegami)",
+            "demon(鬼,Oni)",
+            "progenitorOfChakra(チャクラの祖,ChakuraNoSo)",
+            "godAlmighty(全能の神,ZennōNoKami)",
+            "motherOfChakra"
+          ]
+        },
+        "rank": {},
+        "affiliation": "Land of Ancestors  (Anime only)",
+        "clan": "Ōtsutsuki",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Celestial Being."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:935",
+      "name": "Hagoromo Ōtsutsuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hagoromo_Ōtsutsuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/62/Hagoromo.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/62/Hagoromo.png",
+          "source": "dattebayo",
+          "sha256": "da28729b798ad064497d0407e2e91ac3e8196c76d2b8581da9c914a5ee91cd7f",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 97732,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #572",
+        "anime": "Naruto Shippūden Episode #329",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Sage",
+        "Sensor Type"
+      ],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "source_metadata": {
+        "dattebayo_id": 935,
+        "debut": {
+          "manga": "Naruto Chapter #572",
+          "anime": "Naruto Shippūden Episode #329",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Sage",
+          "Sensor Type"
+        ],
+        "species": "Celestial Being-Human hybrid",
+        "titles": [
+          "大筒木ハゴロモŌtsutsukiHagoromo",
+          "sageOfSixPaths(六道仙人,RikudōSennin,EnglishTv:TheSageOfTheSixPaths)",
+          "ancestorOfShinobi(忍の始祖,ShinobiNoShiso)",
+          "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+          "godSageOfSixPaths(六道の神仙,RikudōNoShinsen)"
+        ],
+        "personal": {
+          "birthdate": "August 6",
+          "sex": "Male",
+          "species": "Celestial Being-Human hybrid",
+          "status": "Deceased",
+          "height": {
+            "Part II": "186cm"
+          },
+          "kekkeiMōra": [
+            "Sharingan  (Anime only)",
+            "Mangekyō Sharingan  (Anime only)",
+            "Rinnegan"
+          ],
+          "classification": [
+            "Jinchūriki",
+            "Sage",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Ten-Tails (Forms)",
+          "occupation": "Priest",
+          "affiliation": [
+            "Land of Ancestors  (Anime only)",
+            "Mount Myōboku  (Anime only)"
+          ],
+          "clan": "Ōtsutsuki",
+          "titles": [
+            "大筒木ハゴロモŌtsutsukiHagoromo",
+            "sageOfSixPaths(六道仙人,RikudōSennin,EnglishTv:TheSageOfTheSixPaths)",
+            "ancestorOfShinobi(忍の始祖,ShinobiNoShiso)",
+            "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)",
+            "godSageOfSixPaths(六道の神仙,RikudōNoShinsen)"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Land of Ancestors  (Anime only)",
+          "Mount Myōboku  (Anime only)"
+        ],
+        "clan": "Ōtsutsuki",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1303",
+      "name": "Obito Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Obito_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4a/Obito_Uchiha.png",
+        "https://static.wikia.nocookie.net/naruto/images/3/3c/Obito.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4a/Obito_Uchiha.png",
+          "source": "dattebayo",
+          "sha256": "e89813e334de7b067c627581534a0bcd01769feaf9b4b5ab4b174809e3b49b39",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 55644,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/3c/Obito.png",
+          "source": "dattebayo",
+          "sha256": "62e84e4db0123ce738286d5d50e4c628e2ae71dce96f9c9ce97ad8b0fab2e978",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 96526,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #239",
+        "anime": "Naruto Shippūden Episode #32",
+        "novel": "Naruto Jinraiden: The Day the Wolf Howled",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+        "ova": "Naruto: The Cross Roads",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Pseudo-Jinchūriki",
+        "Missing-nin",
+        "S-rank",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1303,
+        "debut": {
+          "manga": "Naruto Chapter #239",
+          "anime": "Naruto Shippūden Episode #32",
+          "novel": "Naruto Jinraiden: The Day the Wolf Howled",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+          "ova": "Naruto: The Cross Roads",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Pseudo-Jinchūriki",
+          "Missing-nin",
+          "S-rank",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [
+          "うちはオビトUchihaObito",
+          "tobi(トビ)",
+          "madaraUchiha(うちはマダラ,UchihaMadara)",
+          "maskedMadara(仮面のマダラ,KamenNoMadara)",
+          "maskedMan(仮面の男,KamenNoOtoko)",
+          "saviour(救世主,Kyūseishu)"
+        ],
+        "personal": {
+          "birthdate": "February 10",
+          "sex": "Male",
+          "age": {
+            "Part I": "13  (Kakashi Gaiden)",
+            "Part II": "31",
+            "Academy Graduate": "9",
+            "Chunin Promotion": "11"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "154.2cm",
+            "Part II": "175cm - 182cm"
+          },
+          "weight": {
+            "Part I": "44.5kg",
+            "Part II": "55.9kg - 70.3kg"
+          },
+          "bloodType": "O",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan",
+            "Rinnegan",
+            "Wood Release"
+          ],
+          "classification": [
+            "Jinchūriki",
+            "Pseudo-Jinchūriki",
+            "Missing-nin",
+            "S-rank",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Ten-Tails, Shukaku, Gyūki, Kurama (Yin half) (Forms)",
+          "occupation": [
+            "Leader of Akatsuki",
+            "Secret Leader of Kirigakure"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Akatsuki",
+            "Kirigakure"
+          ],
+          "team": "Team Minato",
+          "partner": [
+            "Madara Uchiha",
+            "Deidara",
+            "Zetsu"
+          ],
+          "clan": "Uchiha",
+          "titles": [
+            "うちはオビトUchihaObito",
+            "tobi(トビ)",
+            "madaraUchiha(うちはマダラ,UchihaMadara)",
+            "maskedMadara(仮面のマダラ,KamenNoMadara)",
+            "maskedMan(仮面の男,KamenNoOtoko)",
+            "saviour(救世主,Kyūseishu)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          },
+          "ninjaRegistration": "010886"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Akatsuki",
+          "Kirigakure"
+        ],
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:861",
+      "name": "Nagato",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Nagato",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/46/Nagato.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/46/Nagato.png",
+          "source": "dattebayo",
+          "sha256": "e9a84df5f4e108679527b1852c46c8854d54391f030a6af82be80779197470a2",
+          "format": "webp",
+          "width": 1376,
+          "height": 872,
+          "bytes": 48952,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #372",
+        "anime": "Naruto Shippūden Episode #128",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie  (Pain)",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3  (Pain)",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 861,
+        "debut": {
+          "manga": "Naruto Chapter #372",
+          "anime": "Naruto Shippūden Episode #128",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie  (Pain)",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3  (Pain)",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "September 19",
+          "sex": "Male",
+          "age": {
+            "Part II": "35"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "175.5cm"
+          },
+          "weight": {
+            "Part II": "40.1kg"
+          },
+          "bloodType": "A",
+          "kekkeiGenkai": "Rinnegan",
+          "classification": [
+            "S-rank",
+            "Sensor Type"
+          ],
+          "occupation": [
+            "Akatsuki Leader",
+            "Village Head"
+          ],
+          "affiliation": [
+            "Amegakure",
+            "Akatsuki"
+          ],
+          "team": "Ame Orphans",
+          "partner": "Konan",
+          "clan": "Uzumaki"
+        },
+        "rank": {},
+        "affiliation": [
+          "Amegakure",
+          "Akatsuki"
+        ],
+        "clan": "Uzumaki",
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:865",
+      "name": "Minato Namikaze",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Minato_Namikaze",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/71/Minato_Namikaze.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/71/Minato_Namikaze.png",
+          "source": "dattebayo",
+          "sha256": "193fa9c32804e18f611c89825a5c04caf875630a7c17c872c6a9ce9e659af212",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 165842,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #239",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto Shippūden the Movie: The Lost Tower",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Sage",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 865,
+        "debut": {
+          "manga": "Naruto Chapter #239",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto Shippūden the Movie: The Lost Tower",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Sage",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [
+          "波風ミナトNamikazeMinato",
+          "fourthHokage(四代目火影,YondaimeHokage)",
+          "konoha'sYellowFlash(木ノ葉の黄色い閃光,KonohaNoKiiroiSenkō,EnglishTv:YellowFlashOfTheLeaf)",
+          "childOfTheProphecy(予言の子,YogenNoKo)",
+          "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)"
+        ],
+        "personal": {
+          "birthdate": "January 25",
+          "sex": "Male",
+          "age": {
+            "Part II": "24",
+            "Academy Graduate": "10"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "179.2cm"
+          },
+          "weight": {
+            "Part I": "66.1kg"
+          },
+          "bloodType": "B",
+          "classification": [
+            "Jinchūriki",
+            "Sage",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Kurama (Yin half) (Forms)",
+          "occupation": "Hokage",
+          "affiliation": [
+            "Konohagakure",
+            "Mount Myōboku",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Jiraiya",
+            "Team Minato"
+          ],
+          "titles": [
+            "波風ミナトNamikazeMinato",
+            "fourthHokage(四代目火影,YondaimeHokage)",
+            "konoha'sYellowFlash(木ノ葉の黄色い閃光,KonohaNoKiiroiSenkō,EnglishTv:YellowFlashOfTheLeaf)",
+            "childOfTheProphecy(予言の子,YogenNoKo)",
+            "saviourOfThisWorld(この世の救世主,KonoYoNoKyūseishu)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Kage"
+          },
+          "ninjaRegistration": "006510"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Mount Myōboku",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1066",
+      "name": "Tobirama Senju",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tobirama_Senju",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png",
+          "source": "dattebayo",
+          "sha256": "c4cc8fc09d2c6b8a42538f563da4a252aabf35ceb15100418cd45bf45a9f3fe0",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 133142,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #118",
+        "anime": "Naruto Episode #69",
+        "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1066,
+        "debut": {
+          "manga": "Naruto Chapter #118",
+          "anime": "Naruto Episode #69",
+          "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 19",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "182.3cm"
+          },
+          "weight": {
+            "Part II": "70.5kg"
+          },
+          "bloodType": "A",
+          "classification": "Sensor Type",
+          "occupation": "Hokage",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Tobirama",
+            "Escort Unit"
+          ],
+          "clan": "Senju"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Kage"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Senju",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1293",
+      "name": "Itachi Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Itachi_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png",
+          "source": "dattebayo",
+          "sha256": "0b55d5d498d29fb59878e0041b29580e46150de20fa470af355fd525457e2d6e",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 80616,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #139",
+        "anime": "Naruto Episode #80",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja 2",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1293,
+        "debut": {
+          "manga": "Naruto Chapter #139",
+          "anime": "Naruto Episode #80",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja 2",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [
+          "うちはイタチUchihaItachi",
+          "itachiOfTheSharingan(写輪眼のイタチ,SharinganNoItachi,LiterallyMeaning:ItachiOfTheCopyWheelEye)clanKillerItachi(一族殺しのイタチ,IchizokugoroshiNoItachi)"
+        ],
+        "personal": {
+          "birthdate": "June 9",
+          "sex": "Male",
+          "age": {
+            "Part I": "17–18",
+            "Part II": "21",
+            "Academy Graduate": "7",
+            "Chunin Promotion": "10"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "175.2cm",
+            "Part II": "178cm"
+          },
+          "weight": {
+            "Part I": "57.1kg",
+            "Part II": "58kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "classification": [
+            "S-rank",
+            "Missing-nin"
+          ],
+          "occupation": "Anbu Captain  (Former)",
+          "affiliation": [
+            "Konohagakure",
+            "Akatsuki"
+          ],
+          "team": [
+            "Team 2  (Anime and Novel only)",
+            "Team Ro  (Anime only)"
+          ],
+          "partner": [
+            "Jūzō Biwa  (Anime only)",
+            "Kisame Hoshigaki"
+          ],
+          "clan": "Uchiha",
+          "titles": [
+            "うちはイタチUchihaItachi",
+            "itachiOfTheSharingan(写輪眼のイタチ,SharinganNoItachi,LiterallyMeaning:ItachiOfTheCopyWheelEye)clanKillerItachi(一族殺しのイタチ,IchizokugoroshiNoItachi)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Anbu"
+          },
+          "ninjaRegistration": "012110"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Akatsuki"
+        ],
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:936",
+      "name": "Hamura Ōtsutsuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hamura_Ōtsutsuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/e8/Hamura.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e8/Hamura.png",
+          "source": "dattebayo",
+          "sha256": "c2734ebd244a7e384a59212e5d69311921cd34b5e54a3fdc1cc7812649b150e8",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 123144,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #670",
+        "anime": "Naruto Shippūden Episode #420",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 4  (Mentioned)",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sage"
+      ],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "source_metadata": {
+        "dattebayo_id": 936,
+        "debut": {
+          "manga": "Naruto Chapter #670",
+          "anime": "Naruto Shippūden Episode #420",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 4  (Mentioned)",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sage"
+        ],
+        "species": "Celestial Being-Human hybrid",
+        "titles": [],
+        "personal": {
+          "birthdate": "August 6",
+          "sex": "Male",
+          "species": "Celestial Being-Human hybrid",
+          "status": "Deceased",
+          "height": {
+            "Part II": "185cm"
+          },
+          "kekkeiMōra": [
+            "Byakugan",
+            "Tenseigan"
+          ],
+          "classification": "Sage",
+          "occupation": "Head of the Ōtsutsuki Clan",
+          "affiliation": [
+            "Land of Ancestors  (Anime only)",
+            "Mount Myōboku  (Anime only)",
+            "Moon"
+          ],
+          "clan": "Ōtsutsuki"
+        },
+        "rank": {},
+        "affiliation": [
+          "Land of Ancestors  (Anime only)",
+          "Mount Myōboku  (Anime only)",
+          "Moon"
+        ],
+        "clan": "Ōtsutsuki",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:938",
+      "name": "Indra Ōtsutsuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Indra_Ōtsutsuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/bd/Indra_%C5%8Ctsutsuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/bd/Indra_%C5%8Ctsutsuki.png",
+          "source": "dattebayo",
+          "sha256": "c32be0948691c19486b222327bbcd93bfa8171e4cb7899d009f80e4423e1186c",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 119916,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #462",
+        "anime": "Naruto Shippūden Episode #203",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Impact",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "source_metadata": {
+        "dattebayo_id": 938,
+        "debut": {
+          "manga": "Naruto Chapter #462",
+          "anime": "Naruto Shippūden Episode #203",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Impact",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": "Celestial Being-Human hybrid",
+        "titles": [],
+        "personal": {
+          "birthdate": "January 4",
+          "sex": "Male",
+          "species": "Celestial Being-Human hybrid",
+          "status": "Deceased",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "classification": "Sensor Type",
+          "affiliation": "Land of Ancestors  (Anime only)",
+          "clan": "Ōtsutsuki"
+        },
+        "rank": {},
+        "affiliation": "Land of Ancestors  (Anime only)",
+        "clan": "Ōtsutsuki",
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:934",
+      "name": "Asura Ōtsutsuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Asura_Ōtsutsuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/56/Asura_%C5%8Ctsutsuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/56/Asura_%C5%8Ctsutsuki.png",
+          "source": "dattebayo",
+          "sha256": "a7d46752ff03490d01d7e843094dd67fe94089243e94863c8471b217307cf059",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 114722,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #462",
+        "anime": "Naruto Shippūden Episode #203",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Impact",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sage",
+        "Sensor Type"
+      ],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "source_metadata": {
+        "dattebayo_id": 934,
+        "debut": {
+          "manga": "Naruto Chapter #462",
+          "anime": "Naruto Shippūden Episode #203",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Impact",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sage",
+          "Sensor Type"
+        ],
+        "species": "Celestial Being-Human hybrid",
+        "titles": [
+          "大筒木アシュラŌtsutsukiAshura"
+        ],
+        "personal": {
+          "birthdate": "June 8",
+          "sex": "Male",
+          "species": "Celestial Being-Human hybrid",
+          "status": "Deceased",
+          "kekkeiGenkai": "Wood Release   (Anime only)",
+          "classification": [
+            "Sage",
+            "Sensor Type"
+          ],
+          "affiliation": "Land of Ancestors  (Anime only)",
+          "clan": "Ōtsutsuki",
+          "titles": [
+            "大筒木アシュラŌtsutsukiAshura"
+          ]
+        },
+        "rank": {},
+        "affiliation": "Land of Ancestors  (Anime only)",
+        "clan": "Ōtsutsuki",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:345",
+      "name": "Gyūki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gyūki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/d7/Gyuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d7/Gyuki.png",
+          "source": "dattebayo",
+          "sha256": "1bad612b64bc5b8bf4d5ce08c66c2165eb9e96e1933e5e8f7278b6dabfb05c10",
+          "format": "webp",
+          "width": 1804,
+          "height": 1080,
+          "bytes": 93628,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #413",
+        "anime": "Naruto Shippūden Episode #143",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Ushi-oni",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Ushi-oni",
+      "source_metadata": {
+        "dattebayo_id": 345,
+        "debut": {
+          "manga": "Naruto Chapter #413",
+          "anime": "Naruto Shippūden Episode #143",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Ushi-oni",
+        "titles": [],
+        "personal": {
+          "species": "Ushi-oni",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Blue B",
+            "Killer B",
+            "Obito Uchiha",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": [
+            "Kumogakure",
+            "Allied Shinobi Forces"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Kumogakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Ushi-oni."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1036",
+      "name": "Hiruzen Sarutobi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hiruzen_Sarutobi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/e4/Hiruzen_Sarutobi.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e4/Hiruzen_Sarutobi.png",
+          "source": "dattebayo",
+          "sha256": "ba864c3d20277560963e7a3f34bf6134c115b5ee9b85e2e94e977fee954fae13",
+          "format": "webp",
+          "width": 1470,
+          "height": 1080,
+          "bytes": 111346,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #1",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto Shippūden the Movie: The Will of Fire",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1036,
+        "debut": {
+          "manga": "Naruto Chapter #1",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto Shippūden the Movie: The Will of Fire",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 8",
+          "sex": "Male",
+          "age": {
+            "Part I": "68–69"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "163.1cm"
+          },
+          "weight": {
+            "Part I": "50.6kg"
+          },
+          "bloodType": "A",
+          "classification": "Sensor Type",
+          "occupation": "Hokage",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Tobirama",
+            "Team Hiruzen",
+            "Escort Unit"
+          ],
+          "clan": "Sarutobi"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Kage"
+          },
+          "ninjaRegistration": "000261"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Sarutobi",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:515",
+      "name": "Jiraiya",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Jiraiya",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
+          "source": "dattebayo",
+          "status": "missing",
+          "error": "http 404",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #90",
+        "anime": "Naruto Episode #52",
+        "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+        "game": "Naruto: Ultimate Ninja 2",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [
+        "Sage",
+        "Sannin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 515,
+        "debut": {
+          "manga": "Naruto Chapter #90",
+          "anime": "Naruto Episode #52",
+          "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
+          "game": "Naruto: Ultimate Ninja 2",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [
+          "Sage",
+          "Sannin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "November 11",
+          "sex": "Male",
+          "age": {
+            "Part I": "50–51",
+            "Part II": "54",
+            "Academy Graduate": "6"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "191.2cm"
+          },
+          "weight": {
+            "Part I": "87.5kg"
+          },
+          "bloodType": "B",
+          "classification": [
+            "Sage",
+            "Sannin"
+          ],
+          "occupation": "Writer",
+          "affiliation": [
+            "Konohagakure",
+            "Mount Myōboku"
+          ],
+          "team": [
+            "Team Hiruzen",
+            "Ame Orphans",
+            "Team Jiraiya"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin"
+          },
+          "ninjaRegistration": "002301"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Mount Myōboku"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:928",
+      "name": "Orochimaru",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Orochimaru",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/14/Orochimaru_Infobox.png",
+        "https://static.wikia.nocookie.net/naruto/images/b/be/Orochimaru_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/14/Orochimaru_Infobox.png",
+          "source": "dattebayo",
+          "sha256": "873a6b218df34521fd8f72628a595ac5642838a949d4f8158f3c0202e92d7ed5",
+          "format": "webp",
+          "width": 1424,
+          "height": 1076,
+          "bytes": 97726,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/be/Orochimaru_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "a3cc1ceec0c6c91e4dd139e0f7c04f62891dccb5cdc8cb87a4e25c35923136f6",
+          "format": "webp",
+          "width": 1424,
+          "height": 1076,
+          "bytes": 125842,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #45",
+        "anime": "Naruto Episode #27",
+        "novel": "Sasuke Shinden: Book of Sunrise",
+        "movie": "Naruto Shippūden the Movie: Bonds",
+        "game": "Naruto: Ninja Council",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Missing-nin",
+        "S-rank",
+        "Sannin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 928,
+        "debut": {
+          "manga": "Naruto Chapter #45",
+          "anime": "Naruto Episode #27",
+          "novel": "Sasuke Shinden: Book of Sunrise",
+          "movie": "Naruto Shippūden the Movie: Bonds",
+          "game": "Naruto: Ninja Council",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Missing-nin",
+          "S-rank",
+          "Sannin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "October 27",
+          "sex": "File:Gender Various.svg Various",
+          "age": {
+            "Part I": "50–51",
+            "Part II": "54",
+            "Academy Graduate": "6"
+          },
+          "height": {
+            "Part I": "179.4cm - 172cm",
+            "Part II": "172cm",
+            "Gaiden": "179.5cm"
+          },
+          "weight": {
+            "Part I": "63.9kg - 57.3kg",
+            "Part II": "57.3kg"
+          },
+          "bloodType": "B",
+          "kekkeiGenkai": [
+            "Jūgo's Clan's Kekkei Genkai",
+            "Sakon and Ukon's Kekkei Genkai",
+            "Shikotsumyaku",
+            "Wood Release"
+          ],
+          "classification": [
+            "Missing-nin",
+            "S-rank",
+            "Sannin"
+          ],
+          "occupation": [
+            "Founder and Leader of Otogakure",
+            "Scientist"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Root",
+            "Akatsuki",
+            "Otogakure",
+            "Ryūchi Cave"
+          ],
+          "team": [
+            "Team Hiruzen",
+            "Team Orochimaru",
+            "Team Dosu"
+          ],
+          "partner": [
+            "Sasori",
+            "Kabuto Yakushi"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Anbu"
+          },
+          "ninjaRegistration": "002300"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root",
+          "Akatsuki",
+          "Otogakure",
+          "Ryūchi Cave"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:344",
+      "name": "Might Guy",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Might_Guy",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/31/Might_Guy.png",
+        "https://static.wikia.nocookie.net/naruto/images/b/b3/Might_Guy_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/31/Might_Guy.png",
+          "source": "dattebayo",
+          "sha256": "ad4d9014da8eda354a27429644901d8a25e07b832d6a1712d80dc6a4b750197a",
+          "format": "webp",
+          "width": 1486,
+          "height": 1076,
+          "bytes": 145926,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b3/Might_Guy_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "b7fc22e5a215bbdefd0e4db7562d932ba3a2602e141362749d512833d6c31566",
+          "format": "webp",
+          "width": 1486,
+          "height": 1076,
+          "bytes": 121286,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #38",
+        "anime": "Naruto Episode #21",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto Shippūden the Movie",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 344,
+        "debut": {
+          "manga": "Naruto Chapter #38",
+          "anime": "Naruto Episode #21",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto Shippūden the Movie",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "January 1",
+          "sex": "Male",
+          "age": {
+            "Part I": "26–27",
+            "Part II": "30–31",
+            "Academy Graduate": "7",
+            "Chunin Promotion": "11"
+          },
+          "height": {
+            "Part I": "184cm"
+          },
+          "weight": {
+            "Part I": "76kg"
+          },
+          "bloodType": "B",
+          "occupation": "Academy Teacher  (Anime only)",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Chōza",
+            "Team Guy",
+            "Third Division"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin"
+          },
+          "ninjaRegistration": "010252"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1359",
+      "name": "Kabuto Yakushi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kabuto_Yakushi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/c/c9/Kabuto_Part_1.png",
+        "https://static.wikia.nocookie.net/naruto/images/0/0b/Kabuto_Part_II.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/c/c9/Kabuto_Part_1.png",
+          "source": "dattebayo",
+          "sha256": "1f52c1584120e1b94e7764c9d892890f76e18a0cc884f1fe1f495ce0501a5c04",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 81192,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0b/Kabuto_Part_II.png",
+          "source": "dattebayo",
+          "sha256": "45a3e367a55073963e7b1c6f6f5346ee4894c972d3b8dffb877c430483c6a30c",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 104884,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #39",
+        "anime": "Naruto Episode #23",
+        "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+        "movie": "Naruto Shippūden the Movie: Bonds",
+        "game": "Naruto: Ultimate Ninja",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Medical-nin",
+        "Missing-nin",
+        "Sage"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1359,
+        "debut": {
+          "manga": "Naruto Chapter #39",
+          "anime": "Naruto Episode #23",
+          "novel": "Sasuke Shinden: Book of Sunrise  (Mentioned)",
+          "movie": "Naruto Shippūden the Movie: Bonds",
+          "game": "Naruto: Ultimate Ninja",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Medical-nin",
+          "Missing-nin",
+          "Sage"
+        ],
+        "species": null,
+        "titles": [
+          "薬師カブトYakushiKabuto"
+        ],
+        "personal": {
+          "birthdate": "February 29",
+          "sex": "Male",
+          "age": {
+            "Part I": "19–20",
+            "Part II": "23–24",
+            "Academy Graduate": "10"
+          },
+          "height": {
+            "Part I": "176.2cm",
+            "Part II": "177cm"
+          },
+          "weight": {
+            "Part I": "65kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": [
+            "Jūgo's Clan's Kekkei Genkai",
+            "Sakon and Ukon's Kekkei Genkai",
+            "Shikotsumyaku"
+          ],
+          "classification": [
+            "Medical-nin",
+            "Missing-nin",
+            "Sage"
+          ],
+          "occupation": [
+            "Orochimaru's spy and right-hand man",
+            "Sasori's spy",
+            "Caretaker at the Konoha Orphanage"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Root",
+            "Konoha Orphanage",
+            "Otogakure",
+            "Ryūchi Cave",
+            "Akatsuki"
+          ],
+          "team": "Team Kabuto",
+          "partner": "Orochimaru",
+          "titles": [
+            "薬師カブトYakushiKabuto"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin"
+          },
+          "ninjaRegistration": "012140"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root",
+          "Konoha Orphanage",
+          "Otogakure",
+          "Ryūchi Cave",
+          "Akatsuki"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:259",
+      "name": "Gaara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gaara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/20/Gaara_in_Part_I.png",
+        "https://static.wikia.nocookie.net/naruto/images/0/0f/Gaara_Part_II.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/20/Gaara_in_Part_I.png",
+          "source": "dattebayo",
+          "sha256": "f11d4a1b5e964afa172000939e3596dd9d1d2fa200e94af4c63533259c8c09a1",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 93056,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0f/Gaara_Part_II.png",
+          "source": "dattebayo",
+          "sha256": "b32fb2e0bf3778734da7a5273fa1a884c662ced9ae48aa8ab141835bcfa048ba",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 69588,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #35",
+        "anime": "Naruto Episode #20",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto the Movie: Legend of the Stone of Gelel",
+        "game": "Naruto: Ninja Council",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 259,
+        "debut": {
+          "manga": "Naruto Chapter #35",
+          "anime": "Naruto Episode #20",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto the Movie: Legend of the Stone of Gelel",
+          "game": "Naruto: Ninja Council",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "January 19",
+          "sex": "Male",
+          "age": {
+            "Part I": "12–13",
+            "Part II": "15–17",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "14"
+          },
+          "height": {
+            "Part I": "146.1cm - 148.1cm",
+            "Part II": "166.1cm",
+            "Blank Period": "172.5cm"
+          },
+          "weight": {
+            "Part I": "39kg - 40.2kg",
+            "Part II": "50.9kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": "Magnet Release   (Novel only)",
+          "classification": [
+            "Jinchūriki",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Shukaku (Forms)",
+          "occupation": [
+            "Kazekage",
+            "Regimental Commander of the Allied Shinobi Forces",
+            "Commander of the Fourth Division"
+          ],
+          "affiliation": [
+            "Sunagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Three Sand Siblings",
+            "Fourth Division"
+          ],
+          "clan": "Kazekage   (Novel only)"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Genin",
+            "Part II": "Kage"
+          },
+          "ninjaRegistration": "56-001"
+        },
+        "affiliation": [
+          "Sunagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Kazekage   (Novel only)",
+        "collected_at": "2026-11-26T01:40:17.911880+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:636",
+      "name": "Killer B",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Killer_B",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/63/Killer_B.png",
+        "https://static.wikia.nocookie.net/naruto/images/3/30/Killer_B_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/63/Killer_B.png",
+          "source": "dattebayo",
+          "sha256": "172a7961a1ccd836994296d961c6e766356445593fc3ccd9d9b5ca9ffa0af90f",
+          "format": "webp",
+          "width": 1570,
+          "height": 1054,
+          "bytes": 55776,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/30/Killer_B_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "f3908056ddc71881881e9997d83c72fafbf33167094117bd769a3efd9bd964aa",
+          "format": "webp",
+          "width": 1570,
+          "height": 1054,
+          "bytes": 77086,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #408",
+        "anime": "Naruto Shippūden Episode #142",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 636,
+        "debut": {
+          "manga": "Naruto Chapter #408",
+          "anime": "Naruto Shippūden Episode #142",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki"
+        ],
+        "species": null,
+        "titles": [
+          "キラービーKirāBī",
+          "killerBee"
+        ],
+        "personal": {
+          "birthdate": "May 15",
+          "sex": "Male",
+          "age": {
+            "Part II": "36"
+          },
+          "height": {
+            "Part II": "192cm",
+            "Gaiden": "190cm"
+          },
+          "weight": {
+            "Part II": "87.1kg"
+          },
+          "bloodType": "B",
+          "classification": "Jinchūriki",
+          "tailedBeast": "Gyūki (Forms)",
+          "occupation": "Guardian of Kumogakure",
+          "affiliation": [
+            "Kumogakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "A–B Combo",
+            "Kumo Council"
+          ],
+          "partner": "A",
+          "titles": [
+            "キラービーKirāBī",
+            "killerBee"
+          ]
+        },
+        "rank": {
+          "ninjaRegistration": "CL3288"
+        },
+        "affiliation": [
+          "Kumogakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:925",
+      "name": "Ōnoki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Ōnoki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/67/%C5%8Cnoki.png",
+        "https://static.wikia.nocookie.net/naruto/images/e/e0/%C5%8Cnoki_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/67/%C5%8Cnoki.png",
+          "source": "dattebayo",
+          "sha256": "670f88a317788c61cd1326c5cea0a33ffd770a7365454cb8b56ec566f304c8f2",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 97212,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e0/%C5%8Cnoki_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "f9fa1146d51455ad5bc629c57cefe7f85b7533ba696250f99323841afa1a0b26",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 217688,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #454",
+        "anime": "Naruto Shippūden Episode #199",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden 3D: The New Era",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 925,
+        "debut": {
+          "manga": "Naruto Chapter #454",
+          "anime": "Naruto Shippūden Episode #199",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden 3D: The New Era",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "October 8",
+          "sex": "Male",
+          "age": {
+            "Part II": "79",
+            "Gaiden": "100"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "130cm",
+            "Gaiden": "83.6cm"
+          },
+          "weight": {
+            "Part II": "42.3kg"
+          },
+          "bloodType": "O",
+          "kekkeiGenkai": "Lava Release   (Novel only)",
+          "kekkeiTōta": "Dust Release",
+          "occupation": "Tsuchikage",
+          "affiliation": [
+            "Iwagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Kamizuru   (Anime only)"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": [
+          "Iwagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Kamizuru   (Anime only)",
+        "collected_at": "2026-11-26T01:40:20.439761+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:844",
+      "name": "Mū",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mū",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/d5/M%C5%AB.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d5/M%C5%AB.png",
+          "source": "dattebayo",
+          "sha256": "03cca916f3503816d2b5e6762cbf60df3d0d3dcc1f9c4bdbcc880e5067b3bb06",
+          "format": "webp",
+          "width": 1910,
+          "height": 1076,
+          "bytes": 168508,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #515",
+        "anime": "Naruto Shippūden Episode #256",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 844,
+        "debut": {
+          "manga": "Naruto Chapter #515",
+          "anime": "Naruto Shippūden Episode #256",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "June 6",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "173cm"
+          },
+          "weight": {
+            "Part II": "55.6kg"
+          },
+          "bloodType": "O",
+          "kekkeiTōta": "Dust Release",
+          "classification": "Sensor Type",
+          "occupation": "Tsuchikage",
+          "affiliation": "Iwagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": "Iwagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:428",
+      "name": "Gengetsu Hōzuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gengetsu_Hōzuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/9f/Gengetsu_H%C5%8Dzuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/9f/Gengetsu_H%C5%8Dzuki.png",
+          "source": "dattebayo",
+          "sha256": "7a8a73a5c692b9d326cade35bb4cf2cea260d637be5332c8678c900a444e75a0",
+          "format": "webp",
+          "width": 1568,
+          "height": 1078,
+          "bytes": 118454,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #525",
+        "anime": "Naruto Shippūden Episode #267",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 428,
+        "debut": {
+          "manga": "Naruto Chapter #525",
+          "anime": "Naruto Shippūden Episode #267",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "October 26",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "186.6cm"
+          },
+          "weight": {
+            "Part II": "75.4kg"
+          },
+          "bloodType": "AB",
+          "occupation": "Mizukage",
+          "affiliation": "Kirigakure",
+          "clan": "Hōzuki"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": "Hōzuki",
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:5",
+      "name": "A (Third Raikage)",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/A_(Third_Raikage)",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/f5/Raikage3.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f5/Raikage3.png",
+          "source": "dattebayo",
+          "sha256": "b8305c33aa263846fc4ae5c10000fc71f1bb7714c9c2fbed7c09b81533c36832",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 101780,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #494",
+        "anime": "Naruto Shippūden Episode #244",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 5,
+        "debut": {
+          "manga": "Naruto Chapter #494",
+          "anime": "Naruto Shippūden Episode #244",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "August 1",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "205cm"
+          },
+          "weight": {
+            "Part II": "105.1kg"
+          },
+          "bloodType": "O",
+          "occupation": "Raikage",
+          "affiliation": "Kumogakure",
+          "team": "Eight-Tails Subduing Team",
+          "partner": "Blue B"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": "Kumogakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:6",
+      "name": "A (Fourth Raikage)",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/A_(Fourth_Raikage)",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4c/Fourth_Raikage_2.png",
+        "https://static.wikia.nocookie.net/naruto/images/4/4b/A_Part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4c/Fourth_Raikage_2.png",
+          "source": "dattebayo",
+          "sha256": "abc0fb9bc9539411b8c057d3f2114d7305e59ca1a5e7dc1b0be498a56d46301a",
+          "format": "webp",
+          "width": 1396,
+          "height": 1076,
+          "bytes": 77892,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4b/A_Part_III.png",
+          "source": "dattebayo",
+          "sha256": "64088f3337f322e79b90ce0c3a972eb7629c24f6b634e191c02833026fb8f37e",
+          "format": "webp",
+          "width": 1396,
+          "height": 1076,
+          "bytes": 92746,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #416",
+        "anime": "Naruto Shippūden Episode #152",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto Shippūden: Gekitō Ninja Taisen! Special",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 6,
+        "debut": {
+          "manga": "Naruto Chapter #416",
+          "anime": "Naruto Shippūden Episode #152",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto Shippūden: Gekitō Ninja Taisen! Special",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "June 1",
+          "sex": "Male",
+          "age": {
+            "Part II": "47"
+          },
+          "height": {
+            "Part II": "198.2cm"
+          },
+          "weight": {
+            "Part II": "101.1kg"
+          },
+          "bloodType": "A",
+          "occupation": [
+            "Raikage",
+            "Supreme Leader of the Allied Shinobi Forces"
+          ],
+          "affiliation": [
+            "Kumogakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Eight-Tails Subduing Team",
+            "A–B Combo"
+          ],
+          "partner": "Killer B"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          },
+          "ninjaRegistration": "CL2211"
+        },
+        "affiliation": [
+          "Kumogakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:421",
+      "name": "Kisame Hoshigaki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kisame_Hoshigaki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/25/Kisame.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/25/Kisame.png",
+          "source": "dattebayo",
+          "sha256": "63406be8b4559054bf2cd002f763e719393103ef76d1d9fd43bebc341d691933",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 79940,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #139",
+        "anime": "Naruto Episode #80",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja 2",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 421,
+        "debut": {
+          "manga": "Naruto Chapter #139",
+          "anime": "Naruto Episode #80",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja 2",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "March 18",
+          "sex": "Male",
+          "age": {
+            "Part I": "29",
+            "Part II": "32–33",
+            "Academy Graduate": "10"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "195cm"
+          },
+          "weight": {
+            "Part I": "83.1kg"
+          },
+          "bloodType": "AB",
+          "classification": [
+            "S-rank",
+            "Missing-nin"
+          ],
+          "affiliation": [
+            "Kirigakure",
+            "Akatsuki"
+          ],
+          "team": [
+            "Cypher Division",
+            "Seven Ninja Swordsmen of the Mist"
+          ],
+          "partner": "Itachi Uchiha",
+          "clan": "Hoshigaki   (Anime only)"
+        },
+        "rank": {},
+        "affiliation": [
+          "Kirigakure",
+          "Akatsuki"
+        ],
+        "clan": "Hoshigaki   (Anime only)",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1042",
+      "name": "Sasori",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sasori",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/f7/Sasori.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f7/Sasori.png",
+          "source": "dattebayo",
+          "sha256": "507d157eda3b43c44656dda9d111a56f114faf807bf7ebc0b0946bec1e7b0452",
+          "format": "webp",
+          "width": 1460,
+          "height": 1197,
+          "bytes": 104870,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #247",
+        "anime": "Naruto Shippūden Episode #2",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1042,
+        "debut": {
+          "manga": "Naruto Chapter #247",
+          "anime": "Naruto Shippūden Episode #2",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "November 8",
+          "sex": "Male",
+          "age": {
+            "Part II": "35",
+            "Academy Graduate": "7",
+            "Chunin Promotion": "8"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "164.1cm"
+          },
+          "weight": {
+            "Part II": "47.3kg"
+          },
+          "bloodType": "AB",
+          "classification": [
+            "S-rank",
+            "Missing-nin"
+          ],
+          "affiliation": [
+            "Sunagakure",
+            "Akatsuki"
+          ],
+          "team": [
+            "Puppet Brigade",
+            "Surprise Attack and Diversion Platoon"
+          ],
+          "partner": [
+            "Orochimaru",
+            "Deidara"
+          ]
+        },
+        "rank": {
+          "ninjaRegistration": "33-001"
+        },
+        "affiliation": [
+          "Sunagakure",
+          "Akatsuki"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:193",
+      "name": "Deidara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Deidara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/06/Deidara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/06/Deidara.png",
+          "source": "dattebayo",
+          "sha256": "4acfd45c4dca13bc35a6c19770e99e235e652930bb7daf4378980e2f26f22a95",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 106140,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #247",
+        "anime": "Naruto Shippūden Episode #2",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Missing-nin",
+        "Mercenary Ninja"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 193,
+        "debut": {
+          "manga": "Naruto Chapter #247",
+          "anime": "Naruto Shippūden Episode #2",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Missing-nin",
+          "Mercenary Ninja"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "May 5",
+          "sex": "Male",
+          "age": {
+            "Part II": "19"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "166cm"
+          },
+          "weight": {
+            "Part II": "50.8kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": "Explosion Release",
+          "classification": [
+            "S-rank",
+            "Missing-nin",
+            "Mercenary Ninja"
+          ],
+          "occupation": "Terrorist Bomber",
+          "affiliation": [
+            "Iwagakure",
+            "Akatsuki"
+          ],
+          "team": [
+            "Explosion Corps",
+            "Surprise Attack and Diversion Platoon"
+          ],
+          "partner": [
+            "Sasori",
+            "Tobi"
+          ]
+        },
+        "rank": {
+          "ninjaRegistration": "IW-08721"
+        },
+        "affiliation": [
+          "Iwagakure",
+          "Akatsuki"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:558",
+      "name": "Kakuzu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kakuzu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/57/Kakuzu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/57/Kakuzu.png",
+          "source": "dattebayo",
+          "sha256": "9e2e5276eb17f52957e140482556bca4fea88c012866ca9f5e36b617ef1743fb",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 81314,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #312",
+        "anime": "Naruto Shippūden Episode #71",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX 3",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 558,
+        "debut": {
+          "manga": "Naruto Chapter #312",
+          "anime": "Naruto Shippūden Episode #71",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Gekitō Ninja Taisen! EX 3",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "August 15",
+          "sex": "Male",
+          "age": {
+            "Part II": "91"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "185cm"
+          },
+          "weight": {
+            "Part II": "63.2kg"
+          },
+          "bloodType": "A",
+          "classification": [
+            "S-rank",
+            "Missing-nin"
+          ],
+          "occupation": "Akatsuki Treasurer",
+          "affiliation": [
+            "Takigakure",
+            "Akatsuki"
+          ],
+          "partner": [
+            "Kakuzu's Partner",
+            "Hidan"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Takigakure",
+          "Akatsuki"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:684",
+      "name": "Konan",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Konan",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/58/Konan_Infobox.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/58/Konan_Infobox.png",
+          "source": "dattebayo",
+          "sha256": "4f1986f7d4f70af6725003d0bbce23d649985d5650d219cc2e761768e32db22c",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 131094,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #363",
+        "anime": "Naruto Shippūden Episode #125",
+        "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+        "ova": "Naruto x UT",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "S-rank",
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 684,
+        "debut": {
+          "manga": "Naruto Chapter #363",
+          "anime": "Naruto Shippūden Episode #125",
+          "novel": "Akatsuki Hiden: Evil Flowers in Full Bloom",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+          "ova": "Naruto x UT",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "S-rank",
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 20",
+          "sex": "Female",
+          "age": {
+            "Part II": "35"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "169.4cm"
+          },
+          "weight": {
+            "Part II": "45.3kg"
+          },
+          "bloodType": "O",
+          "classification": [
+            "S-rank",
+            "Sensor Type"
+          ],
+          "occupation": "Village Head",
+          "affiliation": [
+            "Amegakure",
+            "Akatsuki"
+          ],
+          "team": "Ame Orphans",
+          "partner": "Nagato"
+        },
+        "rank": {},
+        "affiliation": [
+          "Amegakure",
+          "Akatsuki"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1093",
+      "name": "Danzō Shimura",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Danzō_Shimura",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/17/Danz%C5%8D.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/17/Danz%C5%8D.png",
+          "source": "dattebayo",
+          "sha256": "c403e0b9a4ebde581177439e20359822cca68f27bffdd5ca2aa776a77a4e380f",
+          "format": "webp",
+          "width": 2880,
+          "height": 2108,
+          "bytes": 250044,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #281",
+        "anime": "Naruto Shippūden Episode #32",
+        "novel": "Itachi Shinden: Book of Bright Light",
+        "game": "Naruto Shippūden: Kizuna Drive",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1093,
+        "debut": {
+          "manga": "Naruto Chapter #281",
+          "anime": "Naruto Shippūden Episode #32",
+          "novel": "Itachi Shinden: Book of Bright Light",
+          "game": "Naruto Shippūden: Kizuna Drive",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "志村ダンゾウShimuraDanzō",
+          "theDarknessOfTheShinobi(忍の闇,ShinobiNoYami,EnglishTv:TheShinobiOfDarkness)",
+          "sixthHokageCandidate(六代目火影候補,RokudaimeHokageKōho)",
+          "kanzō(カンゾウ)"
+        ],
+        "personal": {
+          "birthdate": "January 6",
+          "sex": "Male",
+          "age": {
+            "Part II": "72–73"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "170cm"
+          },
+          "weight": {
+            "Part II": "52.7kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan",
+            "Wood Release"
+          ],
+          "occupation": [
+            "Leader of Root",
+            "Candidate Sixth Hokage"
+          ],
+          "affiliation": [
+            "Konohagakure",
+            "Root"
+          ],
+          "team": [
+            "Konoha Council",
+            "Escort Unit"
+          ],
+          "clan": "Shimura",
+          "titles": [
+            "志村ダンゾウShimuraDanzō",
+            "theDarknessOfTheShinobi(忍の闇,ShinobiNoYami,EnglishTv:TheShinobiOfDarkness)",
+            "sixthHokageCandidate(六代目火影候補,RokudaimeHokageKōho)",
+            "kanzō(カンゾウ)"
+          ]
+        },
+        "rank": {
+          "ninjaRegistration": "000272"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root"
+        ],
+        "clan": "Shimura",
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:148",
+      "name": "Chiyo",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Chiyo",
+      "aliases": [],
+      "image_urls": [],
+      "images": [],
+      "debut": {
+        "manga": "Naruto Chapter #252",
+        "anime": "Naruto Shippūden Episode #9",
+        "game": "Naruto Shippūden: Ultimate Ninja 4",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 148,
+        "debut": {
+          "manga": "Naruto Chapter #252",
+          "anime": "Naruto Shippūden Episode #9",
+          "game": "Naruto Shippūden: Ultimate Ninja 4",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [
+          "チヨChiyo",
+          "honouredGrandmotherChiyo(チヨバア様,Chiyo-baasama)"
+        ],
+        "personal": {
+          "birthdate": "October 15",
+          "sex": "Female",
+          "age": {
+            "Part II": "73"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "149.1cm"
+          },
+          "weight": {
+            "Part II": "39.1kg"
+          },
+          "bloodType": "B",
+          "classification": "Medical-nin",
+          "occupation": "Counsellor  (Retired)",
+          "affiliation": "Sunagakure",
+          "team": [
+            "Puppet Brigade",
+            "Honoured Siblings",
+            "Kazekage Rescue Team"
+          ],
+          "titles": [
+            "チヨChiyo",
+            "honouredGrandmotherChiyo(チヨバア様,Chiyo-baasama)"
+          ]
+        },
+        "rank": {
+          "ninjaRegistration": "01-002"
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:368",
+      "name": "Hanzō",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hanzō",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/7a/Hanz%C5%8D.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7a/Hanz%C5%8D.png",
+          "source": "dattebayo",
+          "sha256": "11b3e981bacae9e54350f5d8ffa5d2d36913c3cb3cdffdab4dd431e7c90a5cc6",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 70340,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #369",
+        "anime": "Naruto Shippūden Episode #128",
+        "game": "Naruto Shippūden: Ultimate Ninja Impact",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 368,
+        "debut": {
+          "manga": "Naruto Chapter #369",
+          "anime": "Naruto Shippūden Episode #128",
+          "game": "Naruto Shippūden: Ultimate Ninja Impact",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 12",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "177cm"
+          },
+          "weight": {
+            "Part II": "58.6kg"
+          },
+          "bloodType": "A",
+          "occupation": "Village Head",
+          "affiliation": "Amegakure"
+        },
+        "rank": {},
+        "affiliation": "Amegakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1223",
+      "name": "Mei Terumī",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mei_Terumī",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/6f/Mei.png",
+        "https://static.wikia.nocookie.net/naruto/images/2/26/Mei_part_III.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6f/Mei.png",
+          "source": "dattebayo",
+          "sha256": "7530b892c541736ea3c8602e9a757f3dd1702ad4a7c8fcca92cea0d5522116c9",
+          "format": "webp",
+          "width": 1368,
+          "height": 1076,
+          "bytes": 84650,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/26/Mei_part_III.png",
+          "source": "dattebayo",
+          "sha256": "473b994ee3952d2adf146d53a92e716bd6c211f210904afe826f2f3703c5b597",
+          "format": "webp",
+          "width": 1368,
+          "height": 1076,
+          "bytes": 113320,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #454",
+        "anime": "Naruto Shippūden Episode #199",
+        "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden 3D: The New Era",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1223,
+        "debut": {
+          "manga": "Naruto Chapter #454",
+          "anime": "Naruto Shippūden Episode #199",
+          "novel": "Kakashi Hiden: Lightning in the Icy Sky",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden 3D: The New Era",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "May 21",
+          "sex": "Female",
+          "age": {
+            "Part II": "31",
+            "Academy Graduate": "9"
+          },
+          "height": {
+            "Part II": "174cm"
+          },
+          "weight": {
+            "Part II": "53kg"
+          },
+          "bloodType": "AB",
+          "kekkeiGenkai": [
+            "Lava Release",
+            "Boil Release"
+          ],
+          "occupation": "Mizukage",
+          "affiliation": [
+            "Kirigakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Daimyō Protection Squad"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": [
+          "Kirigakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:621",
+      "name": "Third Kazekage",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Third_Kazekage",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4e/Third_Kazekage_Reincarnated.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4e/Third_Kazekage_Reincarnated.png",
+          "source": "dattebayo",
+          "sha256": "a8844c604c59473a938a2bef89d2b3071482d2f2bdaf9027931f46e6e49019c4",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 100736,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #690",
+        "anime": "Naruto Shippūden Episode #457",
+        "game": "Naruto Shippūden: Ninja Council 4",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 621,
+        "debut": {
+          "manga": "Naruto Chapter #690",
+          "anime": "Naruto Shippūden Episode #457",
+          "game": "Naruto Shippūden: Ninja Council 4",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "status": "Deceased",
+          "kekkeiGenkai": "Magnet Release",
+          "occupation": "Kazekage",
+          "affiliation": "Sunagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Kage"
+          }
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1341",
+      "name": "Kushina Uzumaki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kushina_Uzumaki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/db/Kushina.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/db/Kushina.png",
+          "source": "dattebayo",
+          "sha256": "ce102a3a15e50c4b8a533c13a40b183535c6a4ea0daa019e74bc4fd28e63d5c4",
+          "format": "webp",
+          "width": 1498,
+          "height": 1124,
+          "bytes": 85584,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #382",
+        "anime": "Naruto Shippūden Episode #128",
+        "novel": "Naruto Shippūden the Movie: The Lost Tower",
+        "movie": "Naruto Shippūden the Movie: The Lost Tower",
+        "game": "Naruto Shippūden: Ultimate Ninja Impact",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1341,
+        "debut": {
+          "manga": "Naruto Chapter #382",
+          "anime": "Naruto Shippūden Episode #128",
+          "novel": "Naruto Shippūden the Movie: The Lost Tower",
+          "movie": "Naruto Shippūden the Movie: The Lost Tower",
+          "game": "Naruto Shippūden: Ultimate Ninja Impact",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "July 10",
+          "sex": "Female",
+          "age": {
+            "Part II": "24"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "165cm"
+          },
+          "weight": {
+            "Part II": "47kg"
+          },
+          "bloodType": "B",
+          "classification": "Jinchūriki",
+          "tailedBeast": "Kurama (Forms)",
+          "affiliation": [
+            "Uzushiogakure",
+            "Konohagakure"
+          ],
+          "clan": "Uzumaki"
+        },
+        "rank": {
+          "ninjaRegistration": "007310"
+        },
+        "affiliation": [
+          "Uzushiogakure",
+          "Konohagakure"
+        ],
+        "clan": "Uzumaki",
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1310",
+      "name": "Shisui Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shisui_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4c/Shisui_Uchiha.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4c/Shisui_Uchiha.png",
+          "source": "dattebayo",
+          "sha256": "99ca9bfb5b71d8afbb42fa94c28513cfaa552c0cbeb82495254f06a8ec631521",
+          "format": "webp",
+          "width": 1831,
+          "height": 1080,
+          "bytes": 127274,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #459",
+        "anime": "Naruto Shippūden Episode #201",
+        "novel": "Itachi Shinden: Book of Bright Light",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm Revolution",
+        "ova": "Ninja Escapades",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1310,
+        "debut": {
+          "manga": "Naruto Chapter #459",
+          "anime": "Naruto Shippūden Episode #201",
+          "novel": "Itachi Shinden: Book of Bright Light",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm Revolution",
+          "ova": "Ninja Escapades",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "October 19",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "180cm"
+          },
+          "weight": {
+            "Part II": "68.9kg"
+          },
+          "bloodType": "A",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "affiliation": "Konohagakure",
+          "team": "Team Shisui  (Anime only)",
+          "clan": "Uchiha"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin",
+            "Part II": "Anbu"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1425",
+      "name": "Black Zetsu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Black_Zetsu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/e9/Black_Zetsu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e9/Black_Zetsu.png",
+          "source": "dattebayo",
+          "sha256": "b9eac9170ee5353579dbcf4a01e4b8620bc8f18decb587c136bba581e39813dd",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 79106,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #234",
+        "anime": "Naruto Episode #134",
+        "novel": "Naruto Jinraiden: The Day the Wolf Howled",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja 4",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Jinchūriki",
+        "S-rank",
+        "Sensor Type"
+      ],
+      "species": "Artificial Human",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Artificial Human",
+      "source_metadata": {
+        "dattebayo_id": 1425,
+        "debut": {
+          "manga": "Naruto Chapter #234",
+          "anime": "Naruto Episode #134",
+          "novel": "Naruto Jinraiden: The Day the Wolf Howled",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja 4",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Jinchūriki",
+          "S-rank",
+          "Sensor Type"
+        ],
+        "species": "Artificial Human",
+        "titles": [],
+        "personal": {
+          "species": "Artificial Human",
+          "status": "Incapacitated",
+          "kekkeiGenkai": [
+            "Wood Release",
+            "Rinnegan",
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "classification": [
+            "Jinchūriki",
+            "S-rank",
+            "Sensor Type"
+          ],
+          "tailedBeast": "Kurama (Yin half) (Forms)",
+          "occupation": "Akatsuki spy",
+          "affiliation": "Akatsuki",
+          "partner": [
+            "Kaguya Ōtsutsuki",
+            "White Zetsu",
+            "Obito Uchiha",
+            "Madara Uchiha"
+          ]
+        },
+        "rank": {},
+        "affiliation": "Akatsuki",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Artificial Human."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:377",
+      "name": "Sakumo Hatake",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sakumo_Hatake",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/3f/Sakumo_Hatake.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/3f/Sakumo_Hatake.png",
+          "source": "dattebayo",
+          "sha256": "504177b496e1a34a139842a1b0d6c6dddef9eb8496b73fac1f66334fd31aaba0",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 100548,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #425",
+        "anime": "Naruto Shippūden Episode #159",
+        "novel": "Kakashi Retsuden: The Sixth Hokage and the Failure Boy  (Mentioned)",
+        "game": "Naruto Shippūden: Ultimate Ninja Blazing",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 377,
+        "debut": {
+          "manga": "Naruto Chapter #425",
+          "anime": "Naruto Shippūden Episode #159",
+          "novel": "Kakashi Retsuden: The Sixth Hokage and the Failure Boy  (Mentioned)",
+          "game": "Naruto Shippūden: Ultimate Ninja Blazing",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "September 3",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "181cm"
+          },
+          "weight": {
+            "Part II": "65.7kg"
+          },
+          "bloodType": "O",
+          "affiliation": "Konohagakure",
+          "clan": "Hatake"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": "Hatake",
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1296",
+      "name": "Izuna Uchiha",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Izuna_Uchiha",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/8/83/Izuna_Uchiha.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/8/83/Izuna_Uchiha.png",
+          "source": "dattebayo",
+          "sha256": "c815878c9d4d183c2daf1feff83d89990117e1418d9afe0e3d5ec617e817bab9",
+          "format": "webp",
+          "width": 2960,
+          "height": 2154,
+          "bytes": 155320,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #386",
+        "anime": "Naruto Shippūden Episode #136",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Shinobi Collection Shippū Ranbu",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1296,
+        "debut": {
+          "manga": "Naruto Chapter #386",
+          "anime": "Naruto Shippūden Episode #136",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Shinobi Collection Shippū Ranbu",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 10",
+          "sex": "Male",
+          "age": {
+            "Part II": "24"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "174.8cm"
+          },
+          "weight": {
+            "Part II": "55.9kg"
+          },
+          "bloodType": "O",
+          "kekkeiGenkai": [
+            "Sharingan",
+            "Mangekyō Sharingan"
+          ],
+          "clan": "Uchiha"
+        },
+        "rank": {},
+        "affiliation": null,
+        "clan": "Uchiha",
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1127",
+      "name": "Shukaku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shukaku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/99/Shukaku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/99/Shukaku.png",
+          "source": "dattebayo",
+          "sha256": "69cbc12a49e2fd415c641f87023939ac6b81b54033c5b365d7f0c88d86a4f8fa",
+          "format": "webp",
+          "width": 1915,
+          "height": 1080,
+          "bytes": 150658,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #134",
+        "anime": "Naruto Episode #78",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja",
+        "ova": "Naruto x UT",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Tanuki",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Tanuki",
+      "source_metadata": {
+        "dattebayo_id": 1127,
+        "debut": {
+          "manga": "Naruto Chapter #134",
+          "anime": "Naruto Episode #78",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja",
+          "ova": "Naruto x UT",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Tanuki",
+        "titles": [],
+        "personal": {
+          "species": "Tanuki",
+          "kekkeiGenkai": "Magnet Release",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Bunpuku",
+            "Gaara",
+            "Obito Uchiha",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Sunagakure"
+        },
+        "rank": {},
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Tanuki."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:771",
+      "name": "Matatabi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Matatabi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/a/a7/Matatabi.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/a/a7/Matatabi.png",
+          "source": "dattebayo",
+          "sha256": "798ecbb1650829230539516b2fe3112c4b0927e801b8d21ade2fe02fe81c531d",
+          "format": "webp",
+          "width": 1390,
+          "height": 1080,
+          "bytes": 129534,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #313",
+        "anime": "Naruto Shippūden Episode #72",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ninja Destiny 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Bakeneko",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Bakeneko",
+      "source_metadata": {
+        "dattebayo_id": 771,
+        "debut": {
+          "manga": "Naruto Chapter #313",
+          "anime": "Naruto Shippūden Episode #72",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ninja Destiny 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Bakeneko",
+        "titles": [],
+        "personal": {
+          "species": "Bakeneko",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Yugito Nii",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Kumogakure"
+        },
+        "rank": {},
+        "affiliation": "Kumogakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Bakeneko."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:480",
+      "name": "Isobu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Isobu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/df/Isobu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/df/Isobu.png",
+          "source": "dattebayo",
+          "sha256": "02922eb18bcb4e60b7d24d521400ae068a18ff3fe25e12407bef91cb2c176cf0",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 93384,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #317",
+        "anime": "Naruto Shippūden Episode #92",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ninja Destiny 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Turtle",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Turtle",
+      "source_metadata": {
+        "dattebayo_id": 480,
+        "debut": {
+          "manga": "Naruto Chapter #317",
+          "anime": "Naruto Shippūden Episode #92",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ninja Destiny 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Turtle",
+        "titles": [],
+        "personal": {
+          "species": "Turtle",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Rin Nohara",
+            "Yagura Karatachi",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Kirigakure"
+        },
+        "rank": {},
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Turtle."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1134",
+      "name": "Son Gokū",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Son_Gokū",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/5e/Son_Goku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/5e/Son_Goku.png",
+          "source": "dattebayo",
+          "sha256": "ceb907c1990ad96abe6150953890277b3db173e112366bd05157234f1e07a682",
+          "format": "webp",
+          "width": 1634,
+          "height": 1080,
+          "bytes": 99052,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #467",
+        "anime": "Naruto Shippūden Episode #165",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast",
+        "Sage"
+      ],
+      "species": "Monkey",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Monkey",
+      "source_metadata": {
+        "dattebayo_id": 1134,
+        "debut": {
+          "manga": "Naruto Chapter #467",
+          "anime": "Naruto Shippūden Episode #165",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast",
+          "Sage"
+        ],
+        "species": "Monkey",
+        "titles": [],
+        "personal": {
+          "species": "Monkey",
+          "kekkeiGenkai": "Lava Release",
+          "classification": [
+            "Tailed Beast",
+            "Sage"
+          ],
+          "jinchūriki": [
+            "Rōshi",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Iwagakure"
+        },
+        "rank": {},
+        "affiliation": "Iwagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Monkey."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:669",
+      "name": "Kokuō",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kokuō",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/a/a3/Kokuo.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/a/a3/Kokuo.png",
+          "source": "dattebayo",
+          "sha256": "79adaf6274757dd487dbf78e95f641942b09ffce654a85414f9b193582635452",
+          "format": "webp",
+          "width": 1760,
+          "height": 1080,
+          "bytes": 75894,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #467",
+        "anime": "Naruto Shippūden Episode #165",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 669,
+        "debut": {
+          "manga": "Naruto Chapter #467",
+          "anime": "Naruto Shippūden Episode #165",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "kekkeiGenkai": "Boil Release",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Han",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Iwagakure"
+        },
+        "rank": {},
+        "affiliation": "Iwagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1009",
+      "name": "Saiken",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Saiken",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/58/Saiken.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/58/Saiken.png",
+          "source": "dattebayo",
+          "sha256": "1223ad32709e0098a7f07ed9b4434fcb6acd08d78064bfcd39c3c856fc4e6d86",
+          "format": "webp",
+          "width": 1332,
+          "height": 1076,
+          "bytes": 66664,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #467",
+        "anime": "Naruto Shippūden Episode #151",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Slug",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Slug",
+      "source_metadata": {
+        "dattebayo_id": 1009,
+        "debut": {
+          "manga": "Naruto Chapter #467",
+          "anime": "Naruto Shippūden Episode #151",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Slug",
+        "titles": [],
+        "personal": {
+          "species": "Slug",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Utakata",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Kirigakure"
+        },
+        "rank": {},
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Slug."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:153",
+      "name": "Chōmei",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Chōmei",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/78/Chomei.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/78/Chomei.png",
+          "source": "dattebayo",
+          "sha256": "e0fd580e8055b5eadc209c99b8ca84cf322a3148d2e7eb76e07cc2fad8e105f6",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 116582,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #467",
+        "anime": "Naruto Shippūden Episode #165",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Tailed Beast"
+      ],
+      "species": "Kabutomushi",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Kabutomushi",
+      "source_metadata": {
+        "dattebayo_id": 153,
+        "debut": {
+          "manga": "Naruto Chapter #467",
+          "anime": "Naruto Shippūden Episode #165",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 3",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Tailed Beast"
+        ],
+        "species": "Kabutomushi",
+        "titles": [],
+        "personal": {
+          "species": "Kabutomushi",
+          "classification": "Tailed Beast",
+          "jinchūriki": [
+            "Fū",
+            "Naruto Uzumaki"
+          ],
+          "affiliation": "Takigakure"
+        },
+        "rank": {},
+        "affiliation": "Takigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Kabutomushi."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:261",
+      "name": "Gamabunta",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gamabunta",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/f6/Gamabunta2.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f6/Gamabunta2.png",
+          "source": "dattebayo",
+          "sha256": "8407254c06bfab051c3ddb58ba27680e2e2d5e9f0883b5e341bdfca9582c195d",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 112078,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #1",
+        "anime": "Naruto Episode #1",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "movie": "Naruto Shippūden the Movie: Bonds",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Summon"
+      ],
+      "species": "Toad",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "source_metadata": {
+        "dattebayo_id": 261,
+        "debut": {
+          "manga": "Naruto Chapter #1",
+          "anime": "Naruto Episode #1",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "movie": "Naruto Shippūden the Movie: Bonds",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Summon"
+        ],
+        "species": "Toad",
+        "titles": [],
+        "personal": {
+          "birthdate": "January 3",
+          "sex": "Male",
+          "species": "Toad",
+          "height": {
+            "Part II": "1700cm"
+          },
+          "classification": "Summon",
+          "affiliation": [
+            "Mount Myōboku",
+            "Konohagakure"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Mount Myōboku",
+          "Konohagakure"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Toad."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:761",
+      "name": "Manda",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Manda",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/e0/Manda_Summoned.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e0/Manda_Summoned.png",
+          "source": "dattebayo",
+          "sha256": "156082c949543f0d3e6cee4c89c81240edebd0317ce1d1e7e889585dc020e017",
+          "format": "webp",
+          "width": 1912,
+          "height": 1078,
+          "bytes": 134198,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #169",
+        "anime": "Naruto Episode #95",
+        "game": "Naruto: Ultimate Ninja 2",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Summon"
+      ],
+      "species": "Snake",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Snake",
+      "source_metadata": {
+        "dattebayo_id": 761,
+        "debut": {
+          "manga": "Naruto Chapter #169",
+          "anime": "Naruto Episode #95",
+          "game": "Naruto: Ultimate Ninja 2",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Summon"
+        ],
+        "species": "Snake",
+        "titles": [
+          "マンダManda",
+          "strongestColossalSerpent(最強の蟒蛇,SaikyōNoUwabami)"
+        ],
+        "personal": {
+          "sex": "Male",
+          "species": "Snake",
+          "status": "Deceased",
+          "classification": "Summon",
+          "affiliation": [
+            "Ryūchi Cave",
+            "Otogakure"
+          ],
+          "titles": [
+            "マンダManda",
+            "strongestColossalSerpent(最強の蟒蛇,SaikyōNoUwabami)"
+          ]
+        },
+        "rank": {},
+        "affiliation": [
+          "Ryūchi Cave",
+          "Otogakure"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Snake."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:230",
+      "name": "Fukasaku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Fukasaku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/fc/Fukusaku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/fc/Fukusaku.png",
+          "source": "dattebayo",
+          "sha256": "71829d2832ce3725c94191c4f0bdd9c3a479ab907c2d5128efbf04181c76ff7f",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 91224,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #375",
+        "anime": "Naruto Shippūden Episode #127",
+        "novel": "Road to Ninja: Naruto the Movie",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sage",
+        "Summon"
+      ],
+      "species": "Toad",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "source_metadata": {
+        "dattebayo_id": 230,
+        "debut": {
+          "manga": "Naruto Chapter #375",
+          "anime": "Naruto Shippūden Episode #127",
+          "novel": "Road to Ninja: Naruto the Movie",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sage",
+          "Summon"
+        ],
+        "species": "Toad",
+        "titles": [],
+        "personal": {
+          "birthdate": "May 9",
+          "sex": "Male",
+          "species": "Toad",
+          "height": {
+            "Part II": "25.3cm"
+          },
+          "classification": [
+            "Sage",
+            "Summon"
+          ],
+          "occupation": "Toad Elder",
+          "affiliation": [
+            "Mount Myōboku",
+            "Konohagakure"
+          ],
+          "team": "Two Great Sage Toads"
+        },
+        "rank": {},
+        "affiliation": [
+          "Mount Myōboku",
+          "Konohagakure"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Toad."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1091",
+      "name": "Shima",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shima",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/69/Shima.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/69/Shima.png",
+          "source": "dattebayo",
+          "sha256": "dd020fdb34d1f04a1b2f17b94957495b6b7c3fb29db3434632d3e9e8f0f072ec",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 99784,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #375",
+        "anime": "Naruto Shippūden Episode #127",
+        "novel": "Road to Ninja: Naruto the Movie",
+        "movie": "Road to Ninja: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+        "ova": "Naruto Shippūden: UNSG anime cutscenes",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [
+        "Sage",
+        "Summon"
+      ],
+      "species": "Toad",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "source_metadata": {
+        "dattebayo_id": 1091,
+        "debut": {
+          "manga": "Naruto Chapter #375",
+          "anime": "Naruto Shippūden Episode #127",
+          "novel": "Road to Ninja: Naruto the Movie",
+          "movie": "Road to Ninja: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3",
+          "ova": "Naruto Shippūden: UNSG anime cutscenes",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [
+          "Sage",
+          "Summon"
+        ],
+        "species": "Toad",
+        "titles": [],
+        "personal": {
+          "birthdate": "August 26",
+          "sex": "Female",
+          "species": "Toad",
+          "height": {
+            "Part II": "25cm"
+          },
+          "classification": [
+            "Sage",
+            "Summon"
+          ],
+          "occupation": "Toad Elder",
+          "affiliation": [
+            "Mount Myōboku",
+            "Konohagakure"
+          ],
+          "team": "Two Great Sage Toads"
+        },
+        "rank": {},
+        "affiliation": [
+          "Mount Myōboku",
+          "Konohagakure"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Non-human/special species: Toad."
+      ]
+    }
+  ]
+}
