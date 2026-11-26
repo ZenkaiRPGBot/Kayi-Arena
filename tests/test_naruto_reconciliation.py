@@ -34,3 +34,22 @@ def test_curated_candidates_groups_exist() -> None:
     assert data["total_naruto_candidates"] == 1159
     assert "ready_for_evaluation" in data["groups"]
     assert sum(data["stats"].values()) == 1159
+
+
+def test_evaluated_dataset_has_60_records() -> None:
+    data = json.loads(Path("data/naruto_evaluated_60_dataset.json").read_text(encoding="utf-8"))
+    assert data["record_count"] == 60
+    assert data["held_count"] == 7
+    assert data["status"] == "draft"
+    assert "rarity_distribution" in data
+    assert sum(data["rarity_distribution"].values()) == 60
+
+
+def test_evaluated_records_have_scores_and_rarity() -> None:
+    data = json.loads(Path("data/naruto_evaluated_60_dataset.json").read_text(encoding="utf-8"))
+    for rec in data["characters"]:
+        assert 1 <= rec["power"] <= 5
+        assert set(rec["fit"].keys()) == {"captain", "strategist", "attacker", "tank", "assassin", "support", "healer"}
+        assert set(rec["scores"].keys()) == {"captain", "strategist", "attacker", "tank", "assassin", "support", "healer"}
+        assert rec["rarity"] in {"Common", "Uncommon", "Rare", "Epic", "Legendary"}
+        assert rec["held"] == (rec["evaluation_status"] == "held")

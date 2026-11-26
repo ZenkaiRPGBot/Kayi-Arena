@@ -1,0 +1,26 @@
+{
+  "total_evaluated": 60,
+  "held": 7,
+  "draft": 53,
+  "rarity_distribution": {
+    "Legendary": 8,
+    "Epic": 2,
+    "Rare": 28,
+    "Uncommon": 22
+  },
+  "issues": [
+    {
+      "name": "Kurama",
+      "issue": "no images in catalogue"
+    },
+    {
+      "name": "Jiraiya",
+      "issue": "no technically valid images"
+    },
+    {
+      "name": "Chiyo",
+      "issue": "no images in catalogue"
+    }
+  ],
+  "missing_ratings": []
+}

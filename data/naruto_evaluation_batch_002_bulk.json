@@ -1,0 +1,1572 @@
+{
+ "universe_id": "naruto",
+ "batch_id": "naruto-batch-002-bulk",
+ "mode": "bulk_preliminary",
+ "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+ "scoring_version": "SCORE-1.0",
+ "canonical_policy_version": "NARUTO-CANON-0.1",
+ "rarity_rubric_version": "RARITY-RUBRIC-0.2-PROVISIONAL",
+ "prepared_date": "2026-11-26",
+ "batch_status": "draft",
+ "notes": [
+  "All evidence leads are unverified arc-level recollection; no chapter references are given.",
+  "Every record is Draft or Held. Independent review and verification are still required.",
+  "Role scores are omitted; the scoring engine derives them. IDs are provisional.",
+  "Power anchors are those of batch 001 (NARUTO-POWER-ANCHORS-0.1)."
+ ],
+ "characters": [
+  {
+   "id": "naruto:hashirama_senju",
+   "name": "Hashirama Senju",
+   "canonical_version": "Prime First Hokage (founding era): Wood Release, Sage Mode",
+   "power": 5,
+   "fit": {
+    "captain": 5,
+    "strategist": 3,
+    "attacker": 5,
+    "tank": 4,
+    "assassin": 1,
+    "support": 3,
+    "healer": 1
+   },
+   "rarity": "legendary",
+   "justification": "Founded Konoha by uniting clans; Wood Release gives benchmark offense, large-scale defense and terrain control; subdued Kurama. Healing limited to cell transfer used by others.",
+   "evidence_leads": [
+    {
+     "lead": "Valley of the End fight with Madara (flashback)",
+     "verified": false
+    },
+    {
+     "lead": "Konoha founding flashbacks",
+     "verified": false
+    },
+    {
+     "lead": "Edo Tensei appearance, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "EDO_AND_FLASHBACK_EVIDENCE",
+    "POWER_5",
+    "FIT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kaguya_otsutsuki",
+   "name": "Kaguya Otsutsuki",
+   "canonical_version": "Rabbit Goddess state (war arc)",
+   "power": 5,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 5,
+    "tank": 5,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "legendary",
+   "justification": "Dimension shifting, Byakugan and Truth-Seeking Orbs give near-unmatched offense and defense; no cooperative or healing role.",
+   "evidence_leads": [
+    {
+     "lead": "Final battle with Team 7, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_5",
+    "FIT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hagoromo_otsutsuki",
+   "name": "Hagoromo Otsutsuki",
+   "canonical_version": "Sage of Six Paths prime (flashback; spirit appearance in war arc)",
+   "power": 5,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 4,
+    "assassin": 1,
+    "support": 5,
+    "healer": 3
+   },
+   "rarity": "legendary",
+   "justification": "Founder of ninshu who sealed the Ten-Tails and empowered Naruto and Sasuke; evidence is flashback and spirit-state only.",
+   "evidence_leads": [
+    {
+     "lead": "Ten-Tails flashback, war arc",
+     "verified": false
+    },
+    {
+     "lead": "Naruto and Sasuke empowerment scene, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_5",
+    "FIT_5",
+    "ELIGIBILITY_REVIEW_SPIRIT_STATE",
+    "LIMITED_EVIDENCE"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:obito_uchiha",
+   "name": "Obito Uchiha",
+   "canonical_version": "War-era Obito before the Ten-Tails jinchuriki state: Kamui, Wood Release, Rinnegan",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 4,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Architect of the war plan; Kamui, Wood Release and Rinnegan give strong offense, infiltration and transport. Jinchuriki state excluded as a one-time external transformation.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth Great Ninja War arc",
+     "verified": false
+    },
+    {
+     "lead": "Konoha attack flashback (Minato fight)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "VERSION_DISPUTE_JINCHURIKI_STATE",
+    "POWER_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:nagato",
+   "name": "Nagato",
+   "canonical_version": "Pain's Assault arc: Six Paths of Pain through the Rinnegan; Rinne Tensei excluded",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 1,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Rinnegan bodies give overwhelming offense and area control. Rinne Tensei revival is fatal and excluded, so Healer is 0 (would be 5 if counted).",
+   "evidence_leads": [
+    {
+     "lead": "Pain's Assault arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "FATAL_TECHNIQUE_EXCLUDED_HEALER",
+    "POWER_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:minato_namikaze",
+   "name": "Minato Namikaze",
+   "canonical_version": "Prime Fourth Hokage: Flying Thunder God, Rasengan; Reaper Death Seal excluded",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 1,
+    "assassin": 4,
+    "support": 4,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Hokage leader; Flying Thunder God gives targeted kills, rescue and transport; weak durability.",
+   "evidence_leads": [
+    {
+     "lead": "Third Great Ninja War flashbacks",
+     "verified": false
+    },
+    {
+     "lead": "Konoha attack flashback (Obito fight, sealing Kurama)",
+     "verified": false
+    },
+    {
+     "lead": "Edo Tensei, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "BORDERLINE_RARITY",
+    "POWER_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:tobirama_senju",
+   "name": "Tobirama Senju",
+   "canonical_version": "Prime Second Hokage (founding era): Water Release, Flying Thunder God",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 3,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Inventor of the Flying Thunder God and village systems; strong tactician and sensor. Battlefield evidence is mostly Edo Tensei.",
+   "evidence_leads": [
+    {
+     "lead": "Edo Tensei, war arc",
+     "verified": false
+    },
+    {
+     "lead": "Founding-era flashbacks",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:itachi_uchiha",
+   "name": "Itachi Uchiha",
+   "canonical_version": "Akatsuki-era Itachi (illness remains a limit); Edo state excluded",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 5,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "legendary",
+   "justification": "ANBU captain and clan operation show benchmark targeted elimination; genjutsu, Susanoo and Amaterasu give strong offense; long-term planning.",
+   "evidence_leads": [
+    {
+     "lead": "Itachi versus Sasuke fight",
+     "verified": false
+    },
+    {
+     "lead": "Uchiha clan flashbacks",
+     "verified": false
+    },
+    {
+     "lead": "Edo Tensei, war arc (abilities only)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "FIT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hamura_otsutsuki",
+   "name": "Hamura Otsutsuki",
+   "canonical_version": "Hamura Otsutsuki (brief flashback)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Appears briefly alongside Hagoromo; abilities largely unestablished, so ratings are placeholders.",
+   "evidence_leads": [
+    {
+     "lead": "Hagoromo flashback, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "ELIGIBILITY_REVIEW"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:indra_otsutsuki",
+   "name": "Indra Otsutsuki",
+   "canonical_version": "Indra Otsutsuki (flashback)",
+   "power": 4,
+   "fit": {
+    "captain": 1,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Susanoo-era power and tactical skill shown only in flashback; placeholders pending evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Indra and Ashura flashback, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "ELIGIBILITY_REVIEW"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:ashura_otsutsuki",
+   "name": "Ashura Otsutsuki",
+   "canonical_version": "Ashura Otsutsuki (flashback)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 3,
+    "healer": 1
+   },
+   "rarity": "uncommon",
+   "justification": "Chakra-of-cooperation legacy shown only in flashback; placeholders pending evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Indra and Ashura flashback, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "ELIGIBILITY_REVIEW"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:gyuki",
+   "name": "Gyuki",
+   "canonical_version": "Eight-Tails Gyuki as independent beast (war arc)",
+   "power": 4,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 0,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; advises Killer B. Partner-dependent modes are excluded from independent feats.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth Great Ninja War arc",
+     "verified": false
+    },
+    {
+     "lead": "Killer B fights",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "SHARED_EVENT_WITH_KILLER_B",
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "POWER_ALT_3"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hiruzen_sarutobi",
+   "name": "Hiruzen Sarutobi",
+   "canonical_version": "Prime Third Hokage; war-era Edo evidence; Shinigami seal excluded",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 4,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 1,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Decades as Hokage with broad ninjutsu mastery; tactician against Orochimaru. Dead Demon Consuming Seal excluded as fatal.",
+   "evidence_leads": [
+    {
+     "lead": "Konoha Invasion arc (Part I)",
+     "verified": false
+    },
+    {
+     "lead": "Edo Tensei, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:jiraiya",
+   "name": "Jiraiya",
+   "canonical_version": "Pain's Assault-era Jiraiya: Sage Mode, toad summons, spy network",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 3,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Sannin with Sage Mode, Rasengan and toad summons; continent-wide spymaster; strong offense, moderate strategy.",
+   "evidence_leads": [
+    {
+     "lead": "Pain's Assault arc (fight with Pain)",
+     "verified": false
+    },
+    {
+     "lead": "Part I Sannin appearances",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:orochimaru",
+   "name": "Orochimaru",
+   "canonical_version": "Part II Orochimaru with restored arms; Edo Tensei user",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 4,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Scientist-strategist with Edo Tensei plans, snake techniques, infiltration and self-only body regeneration.",
+   "evidence_leads": [
+    {
+     "lead": "Konoha Invasion arc (Part I)",
+     "verified": false
+    },
+    {
+     "lead": "Part II appearances",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc cameo",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "ARMS_VERSION_CHECK"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:might_guy",
+   "name": "Might Guy",
+   "canonical_version": "War-era Might Guy: Gates through the Seventh; Eighth Gate excluded",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Taijutsu master with Gate-enhanced offense; protects teammates in front-line fights. Eighth Gate excluded.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Kisame, Madara fights)",
+     "verified": false
+    },
+    {
+     "lead": "Part I appearances",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "GATES_UNVERIFIED",
+    "POWER_ALT_5",
+    "ATTACKER_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kabuto_yakushi",
+   "name": "Kabuto Yakushi",
+   "canonical_version": "Part II Kabuto with Sage Mode and Edo Tensei (own ability)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 4,
+    "support": 2,
+    "healer": 3
+   },
+   "rarity": "rare",
+   "justification": "Spy-medic and Edo Tensei user; Sage Mode and Orochimaru-cell abilities; competent healer of others, regeneration self-only.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Kabuto appearances",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "SAGE_MODE_DEPENDENCY"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:gaara",
+   "name": "Gaara",
+   "canonical_version": "War-era Gaara after Shukaku extraction: sand control without Shukaku-only abilities",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 4,
+    "assassin": 2,
+    "support": 4,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Alliance commander; sand shield protects allies; sand manipulation retained. Shukaku-dependent absolute defense excluded.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Alliance command)",
+     "verified": false
+    },
+    {
+     "lead": "Five Kage Summit arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POST_EXTRACTION_VERSION",
+    "TANK_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:killer_b",
+   "name": "Killer B",
+   "canonical_version": "War-era Killer B with Gyuki partnership (Conditional)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Jinchuriki with Tailed Beast Bombs and swordsmanship; partner-dependent power is Conditional.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Sasuke retrieval arc (Part II)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "SHARED_EVENT_WITH_GYUKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:onoki",
+   "name": "Onoki",
+   "canonical_version": "War-era Third Tsuchikage: Dust Release",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Tsuchikage and Alliance commander; Dust Release disintegrates targets; flight aids transport.",
+   "evidence_leads": [
+    {
+     "lead": "Five Kage Summit arc",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:mu",
+   "name": "Mu",
+   "canonical_version": "Edo-only: First Tsuchikage, Particle Style (living prime inferred)",
+   "power": 4,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Particle Style Atomic Dismantling; evidence is Edo Tensei only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:gengetsu_hozuki",
+   "name": "Gengetsu Hozuki",
+   "canonical_version": "Edo-only: Second Mizukage, Steam Release (living prime inferred)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Steam Release offense seen through Edo Tensei only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:third_raikage",
+   "name": "Third Raikage",
+   "canonical_version": "Edo-only: Third Raikage, lightning armor",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 4,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Lightning armor and thrust attacks with notable durability; evidence is Edo Tensei only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:fourth_raikage",
+   "name": "Fourth Raikage",
+   "canonical_version": "War-era Fourth Raikage (A): lightning armor",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Raikage and Alliance leader with Lightning Release armor, speed and strength.",
+   "evidence_leads": [
+    {
+     "lead": "Five Kage Summit arc",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kisame_hoshigaki",
+   "name": "Kisame Hoshigaki",
+   "canonical_version": "Akatsuki-era Kisame with Samehada",
+   "power": 4,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Huge chakra, Water Release and Samehada chakra absorption; strong frontline fighter.",
+   "evidence_leads": [
+    {
+     "lead": "Akatsuki arcs (Part II)",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:sasori",
+   "name": "Sasori",
+   "canonical_version": "Sasori arc: puppeteer with the Third Kazekage puppet",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 3,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Puppet and poison specialist with targeted lethal poison; no healing evidence (antidote knowledge is not healing).",
+   "evidence_leads": [
+    {
+     "lead": "Sasori arc (Part II)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:deidara",
+   "name": "Deidara",
+   "canonical_version": "Akatsuki-era Deidara: explosive clay",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 1,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Strong explosive offense; little leadership or durability.",
+   "evidence_leads": [
+    {
+     "lead": "Akatsuki arcs (Part II)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kakuzu",
+   "name": "Kakuzu",
+   "canonical_version": "Akatsuki-era Kakuzu with multiple hearts",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Durable multi-element fighter with tactical sense; self-only recovery.",
+   "evidence_leads": [
+    {
+     "lead": "Hidan and Kakuzu arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_4"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:konan",
+   "name": "Konan",
+   "canonical_version": "Pain's Assault-era Konan: paper techniques",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Paper clones and wings give offense, scouting and transport for Akatsuki.",
+   "evidence_leads": [
+    {
+     "lead": "Pain's Assault arc",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc (Obito fight)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:danzo_shimura",
+   "name": "Danzo Shimura",
+   "canonical_version": "Five Kage Summit-era Danzo: borrowed Sharingan, Izanagi, Wood arm",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 4,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 3,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Root leader and schemer with varied techniques; Izanagi as limited self-only resilience.",
+   "evidence_leads": [
+    {
+     "lead": "Five Kage Summit arc",
+     "verified": false
+    },
+    {
+     "lead": "Root flashbacks",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_4",
+    "BORROWED_POWER_CHECK"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:chiyo",
+   "name": "Chiyo",
+   "canonical_version": "Sasori arc Chiyo: puppets; Selfless Reincarnation excluded (fatal)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 2,
+    "healer": 1
+   },
+   "rarity": "uncommon",
+   "justification": "Skilled puppeteer and advisor. Selfless Reincarnation revives another but is fatal and excluded, so Healer is 1 (would be 5 if counted).",
+   "evidence_leads": [
+    {
+     "lead": "Sasori arc (Part II)",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "FATAL_TECHNIQUE_EXCLUDED_HEALER",
+    "CONTROVERSIAL_HEALER"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hanzo",
+   "name": "Hanzo",
+   "canonical_version": "Prime Hanzo of the Salamander (flashback and Edo evidence)",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Feared leader of Amegakure who held his own against the Sannin; evidence from flashback and Edo.",
+   "evidence_leads": [
+    {
+     "lead": "Part I and II Sannin flashbacks",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_AND_FLASHBACK_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:mei_terumi",
+   "name": "Mei Terumi",
+   "canonical_version": "War-era Fifth Mizukage: Lava and Boil Release",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Mizukage and Alliance leader with powerful Lava and Boil Release.",
+   "evidence_leads": [
+    {
+     "lead": "Five Kage Summit arc",
+     "verified": false
+    },
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:third_kazekage",
+   "name": "Third Kazekage",
+   "canonical_version": "Edo-only: Third Kazekage, iron sand",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Iron sand offense; evidence is Edo Tensei only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo)",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kushina_uzumaki",
+   "name": "Kushina Uzumaki",
+   "canonical_version": "Flashback-era Kushina: Adamantine Sealing Chains, jinchuriki",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 4,
+    "assassin": 1,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Chakra Chains restrain Kurama (threat holding) and support sealing; evidence is flashback only.",
+   "evidence_leads": [
+    {
+     "lead": "Konoha attack flashback",
+     "verified": false
+    },
+    {
+     "lead": "Kurama meeting scene, war arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FLASHBACK_ONLY",
+    "POWER_ALT_4",
+    "TANK_ALT_3"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:shisui_uchiha",
+   "name": "Shisui Uchiha",
+   "canonical_version": "Prime Shisui (flashback)",
+   "power": 4,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 4,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Famed for speed and Kotoamatsukami targeted manipulation; evidence is brief flashback.",
+   "evidence_leads": [
+    {
+     "lead": "Uchiha clan flashbacks",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FLASHBACK_ONLY"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:black_zetsu",
+   "name": "Black Zetsu",
+   "canonical_version": "War-era Black Zetsu",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 4,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 4,
+    "support": 3,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Manipulated events for centuries; infiltration and mimicry; weak direct combat.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Akatsuki-era scenes",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "POWER_ALT_2"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:sakumo_hatake",
+   "name": "Sakumo Hatake",
+   "canonical_version": "Sakumo Hatake (flashback)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 3,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Known as the White Fang with strong swordsmanship; evidence is brief flashback.",
+   "evidence_leads": [
+    {
+     "lead": "Kakashi flashback",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "FLASHBACK_ONLY"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:izuna_uchiha",
+   "name": "Izuna Uchiha",
+   "canonical_version": "Izuna Uchiha (flashback)",
+   "power": 4,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "rare",
+   "justification": "Strong clan fighter with Mangekyo; evidence is brief flashback.",
+   "evidence_leads": [
+    {
+     "lead": "Founding-era flashback",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "FLASHBACK_ONLY"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:shukaku",
+   "name": "Shukaku",
+   "canonical_version": "One-Tail Shukaku as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Jinchuriki-related arcs",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "SHARED_EVENT_WITH_JINCHURIKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:matatabi",
+   "name": "Matatabi",
+   "canonical_version": "Two-Tails Matatabi as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Jinchuriki-related arcs",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "SHARED_EVENT_WITH_JINCHURIKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:isobu",
+   "name": "Isobu",
+   "canonical_version": "Three-Tails Isobu as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Jinchuriki-related arcs",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "SHARED_EVENT_WITH_JINCHURIKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:son_goku",
+   "name": "Son Goku",
+   "canonical_version": "Four-Tails Son Goku as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Jinchuriki-related arcs",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "SHARED_EVENT_WITH_JINCHURIKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kokuo",
+   "name": "Kokuo",
+   "canonical_version": "Five-Tails Kokuo as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Large chakra, Tailed Beast Bombs and durability; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    },
+    {
+     "lead": "Jinchuriki-related arcs",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT",
+    "SHARED_EVENT_WITH_JINCHURIKI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:saiken",
+   "name": "Saiken",
+   "canonical_version": "Six-Tails Saiken as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Acid and bubble techniques with large chakra; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:chomei",
+   "name": "Chomei",
+   "canonical_version": "Seven-Tails Chomei as independent beast (war arc)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Flight and scale powder with large chakra; no leadership, planning or healing evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ELIGIBILITY_CHECK_SENTIENT"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:gamabunta",
+   "name": "Gamabunta",
+   "canonical_version": "Boss Toad Gamabunta (Part I-II)",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Boss of the toads; large frame and strong durability; usually acts under a summoner.",
+   "evidence_leads": [
+    {
+     "lead": "Part I and II toad summons",
+     "verified": false
+    },
+    {
+     "lead": "Pain's Assault arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "SUMMON_ATTRIBUTION",
+    "POWER_ALT_4"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:manda",
+   "name": "Manda",
+   "canonical_version": "Manda, Orochimaru's boss snake (Part I-II)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Huge predatory snake with strong offense; usually acts under a summoner.",
+   "evidence_leads": [
+    {
+     "lead": "Konoha Invasion arc",
+     "verified": false
+    },
+    {
+     "lead": "Part II snake summons",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "SUMMON_ATTRIBUTION",
+    "POWER_ALT_4"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:fukasaku",
+   "name": "Fukasaku",
+   "canonical_version": "Elder Toad Sage Fukasaku (Part II)",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 4,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Toad Sage who trains Naruto and enables Sage Mode through fusion; sage taijutsu.",
+   "evidence_leads": [
+    {
+     "lead": "Naruto's Sage Mode training, Part II",
+     "verified": false
+    },
+    {
+     "lead": "Pain's Assault arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:shima",
+   "name": "Shima",
+   "canonical_version": "Elder Toad Sage Shima (Part II)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 4,
+    "healer": 0
+   },
+   "rarity": "uncommon",
+   "justification": "Toad Sage who enables Sage Mode through fusion and advises Naruto.",
+   "evidence_leads": [
+    {
+     "lead": "Naruto's Sage Mode training, Part II",
+     "verified": false
+    },
+    {
+     "lead": "Pain's Assault arc",
+     "verified": false
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [],
+   "evaluation_status": "draft"
+  }
+ ]
+}
