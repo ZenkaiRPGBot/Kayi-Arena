@@ -1,0 +1,459 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "catalogue",
+  "universe_id": "naruto",
+  "batch_id": "naruto_candidate_batch_005",
+  "batch_status": "draft",
+  "characters": [
+    {
+      "id": "dattebayo_1364",
+      "name": "Fū Yamanaka",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #454",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Fū_Yamanaka"
+      ]
+    },
+    {
+      "id": "dattebayo_1427",
+      "name": "Zō",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #99",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Zō"
+      ]
+    },
+    {
+      "id": "dattebayo_46",
+      "name": "Shitō Akimichi",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #422",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Shitō_Akimichi"
+      ]
+    },
+    {
+      "id": "dattebayo_146",
+      "name": "Chiriku",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #314",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Chiriku"
+      ]
+    },
+    {
+      "id": "dattebayo_157",
+      "name": "Chūkichi",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #516",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Chūkichi"
+      ]
+    },
+    {
+      "id": "dattebayo_348",
+      "name": "Kotetsu Hagane",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #36",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kotetsu_Hagane"
+      ]
+    },
+    {
+      "id": "dattebayo_429",
+      "name": "Mangetsu Hōzuki",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #522",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Mangetsu_Hōzuki"
+      ]
+    },
+    {
+      "id": "dattebayo_468",
+      "name": "Tsume Inuzuka",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #137",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Tsume_Inuzuka"
+      ]
+    },
+    {
+      "id": "dattebayo_571",
+      "name": "Izumo Kamizuki",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #36",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Izumo_Kamizuki"
+      ]
+    },
+    {
+      "id": "dattebayo_621",
+      "name": "Third Kazekage",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #690",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Third_Kazekage"
+      ]
+    },
+    {
+      "id": "dattebayo_716",
+      "name": "Kushimaru Kuriarare",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #522",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kushimaru_Kuriarare"
+      ]
+    },
+    {
+      "id": "dattebayo_754",
+      "name": "Maki",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #270",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Maki"
+      ]
+    },
+    {
+      "id": "dattebayo_873",
+      "name": "Ensui Nara",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #523",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Ensui_Nara"
+      ]
+    },
+    {
+      "id": "dattebayo_1145",
+      "name": "Fuguki Suikazan",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #507",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Fuguki_Suikazan"
+      ]
+    },
+    {
+      "id": "dattebayo_10",
+      "name": "Muta Aburame",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #427",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Muta_Aburame"
+      ]
+    },
+    {
+      "id": "dattebayo_131",
+      "name": "Bunpuku",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #660",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Bunpuku"
+      ]
+    },
+    {
+      "id": "dattebayo_122",
+      "name": "Jūzō Biwa",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #668",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Jūzō_Biwa"
+      ]
+    },
+    {
+      "id": "dattebayo_195",
+      "name": "Demonic Statue of the Outer Path",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #254",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Demonic_Statue_of_the_Outer_Path"
+      ]
+    },
+    {
+      "id": "dattebayo_439",
+      "name": "Hizashi Hyūga",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #102",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Hizashi_Hyūga"
+      ]
+    },
+    {
+      "id": "dattebayo_465",
+      "name": "Hana Inuzuka",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #137",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Hana_Inuzuka"
+      ]
+    },
+    {
+      "id": "dattebayo_485",
+      "name": "Ittan",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #515",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Ittan"
+      ]
+    },
+    {
+      "id": "dattebayo_517",
+      "name": "Jirōbō",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #115",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Jirōbō"
+      ]
+    },
+    {
+      "id": "dattebayo_552",
+      "name": "Kakkō",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #241",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kakkō"
+      ]
+    },
+    {
+      "id": "dattebayo_558",
+      "name": "Kakuzu",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #312",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kakuzu"
+      ]
+    },
+    {
+      "id": "dattebayo_626",
+      "name": "Kidōmaru",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #115",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kidōmaru"
+      ]
+    },
+    {
+      "id": "dattebayo_637",
+      "name": "Kimimaro",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #199",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kimimaro"
+      ]
+    },
+    {
+      "id": "dattebayo_652",
+      "name": "Kitō",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #235",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Kitō"
+      ]
+    },
+    {
+      "id": "dattebayo_753",
+      "name": "Mahiru",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #239",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Mahiru"
+      ]
+    },
+    {
+      "id": "dattebayo_824",
+      "name": "Mogusa",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #235",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Mogusa"
+      ]
+    },
+    {
+      "id": "dattebayo_853",
+      "name": "Jinpachi Munashi",
+      "aliases": [],
+      "canonical_version": "Naruto Chapter #522",
+      "power": null,
+      "fit": null,
+      "rarity": null,
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "image_available": true,
+      "source_references": [
+        "profile:https://naruto.fandom.com/wiki/Jinpachi_Munashi"
+      ]
+    }
+  ]
+}

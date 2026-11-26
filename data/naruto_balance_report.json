@@ -1,0 +1,21 @@
+{
+  "total_drafts": 10000,
+  "avg_actions": 28.0,
+  "first_player_win_rate": 0.4953,
+  "role_distribution": {
+    "Tank": 20000,
+    "Captain": 20000,
+    "Strategist": 20000,
+    "Support": 20000,
+    "Healer": 20000,
+    "Assassin": 20000,
+    "Attacker": 20000
+  },
+  "rarity_distribution": {
+    "Legendary": 10893,
+    "Uncommon": 64521,
+    "Rare": 47526,
+    "Epic": 17060
+  },
+  "healer_high_fit_picks": 4735
+}

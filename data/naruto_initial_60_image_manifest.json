@@ -185,8 +185,18 @@
     {
       "target_name": "Kurama",
       "candidate_id": "dattebayo:711",
-      "image_count": 0,
-      "images": []
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest/scale-to-width-down/1200?cb=20140818171718",
+          "status": "valid",
+          "format": "webp",
+          "width": 1200,
+          "height": 685,
+          "sha256": "c0b5a8329a228704c0114ea8fb3eced583d409df8616204cf2a217a89d49171b",
+          "bytes": 33964
+        }
+      ]
     },
     {
       "target_name": "Katsuyu",
@@ -424,7 +434,7 @@
     {
       "target_name": "Jiraiya",
       "candidate_id": "dattebayo:515",
-      "image_count": 1,
+      "image_count": 2,
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
@@ -434,6 +444,15 @@
           "height": null,
           "sha256": null,
           "bytes": null
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/1f/Jiraiya_Young.png/revision/latest?cb=20260220182003",
+          "status": "valid",
+          "format": "webp",
+          "width": 399,
+          "height": 502,
+          "sha256": "682a4481c13b2ff4ad82d7d21e10819e3ac0cec7ede82cc18eed9bea6d21ee15",
+          "bytes": 47676
         }
       ]
     },
@@ -759,8 +778,18 @@
     {
       "target_name": "Chiyo",
       "candidate_id": "dattebayo:148",
-      "image_count": 0,
-      "images": []
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest/scale-to-width-down/1200?cb=20160113171702",
+          "status": "valid",
+          "format": "webp",
+          "width": 1200,
+          "height": 900,
+          "sha256": "2f83116e409fd580ebcbb78fe62883270f155f1047da409160c10bd71159f0a8",
+          "bytes": 52676
+        }
+      ]
     },
     {
       "target_name": "Hanzō",

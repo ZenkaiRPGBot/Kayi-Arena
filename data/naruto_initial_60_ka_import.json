@@ -255,7 +255,16 @@
       "eligibility_reason": "non-human or special species reported by source: Kitsune",
       "notes": [
         "Non-human/special species: Kitsune."
-      ]
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest/scale-to-width-down/1200?cb=20140818171718",
+        "source_ref": "manual-narutopedia",
+        "mime_type": "image/webp",
+        "width": 1200,
+        "height": 685,
+        "checksum": "sha256-c0b5a8329a228704c0114ea8fb3eced583d409df8616204cf2a217a89d49171b",
+        "status": "pending"
+      }
     },
     {
       "character_id": "dattebayo_608",
@@ -1188,7 +1197,16 @@
       "review_status": "pending",
       "canonical_eligibility": "eligible",
       "eligibility_reason": "manga debut recorded by source",
-      "notes": []
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest/scale-to-width-down/1200?cb=20160113171702",
+        "source_ref": "manual-narutopedia",
+        "mime_type": "image/webp",
+        "width": 1200,
+        "height": 900,
+        "checksum": "sha256-2f83116e409fd580ebcbb78fe62883270f155f1047da409160c10bd71159f0a8",
+        "status": "pending"
+      }
     },
     {
       "character_id": "dattebayo_368",
