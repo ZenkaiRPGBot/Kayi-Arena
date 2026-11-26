@@ -11,7 +11,7 @@ from pathlib import Path
 
 from app.database import CharacterDatabase, bootstrap_naruto_database
 from app.matches import MatchManager
-from app.persistence import SqliteMatchStore
+from app.persistence import create_match_store
 from app.telegram.bot import create_bot, create_dispatcher, register_bot_commands
 from app.telegram.config import BotConfig
 from app.telegram.restart_notify import build_restart_notifier
@@ -47,9 +47,7 @@ async def run_bot() -> None:
         boot_summary.published_production_version,
     )
 
-    state_db_path = Path(config.match_db_path)
-    state_db_path.parent.mkdir(parents=True, exist_ok=True)
-    store = SqliteMatchStore(state_db_path)
+    store = create_match_store(config)
 
     bot = create_bot(config)
 

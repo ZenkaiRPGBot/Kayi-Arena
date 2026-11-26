@@ -48,6 +48,12 @@ services:
       # Note: Render Free Web Services use an ephemeral filesystem.
       # For durable production persistence across redeploys, attach a paid
       # persistent disk (e.g. /var/data) or migrate SqliteMatchStore to external Postgres.
+      - key: DB_BACKEND
+        value: sqlite
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DATABASE
+        value: kayi_arena
       - key: ARENA_DB_PATH
         value: data/kayi_arena.sqlite3
       - key: ARENA_STATE_DB_PATH

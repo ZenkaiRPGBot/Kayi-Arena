@@ -1044,9 +1044,20 @@ async def handle_admin_callback(
             await answer_callback_safe(query, "MEDIA_CHANNEL_ID not configured.", show_alert=True)
             return
         force = bool(args and args[0] == "1")
-        entries = coordinator.db.list_characters(status=EvaluationStatus.APPROVED)
+        universes = coordinator.db.list_universes(active_only=False)
+        entries = [
+            c
+            for u in universes
+            for c in coordinator.db.list_characters(
+                universe_id=u.universe_id, status=EvaluationStatus.APPROVED
+            )
+        ]
         if not entries:
-            entries = coordinator.db.list_characters()
+            entries = [
+                c
+                for u in universes
+                for c in coordinator.db.list_characters(universe_id=u.universe_id)
+            ]
         pipeline = MediaPipeline(coordinator.store)
         res = await pipeline.sync_universe_media(
             coordinator.bot,
@@ -1121,7 +1132,11 @@ async def handle_admin_callback(
 
     if action == "mrev":
         page = int(args[0]) if args and args[0].isdigit() else 0
-        chars = coordinator.db.list_characters()
+        chars = [
+            c
+            for u in coordinator.db.list_universes(active_only=False)
+            for c in coordinator.db.list_characters(universe_id=u.universe_id)
+        ]
         per_page = 6
         total_pages = max(1, (len(chars) + per_page - 1) // per_page)
         safe_page = max(0, min(page, total_pages - 1))

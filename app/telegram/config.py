@@ -67,6 +67,9 @@ class BotConfig:
     developer_url: str = DEFAULT_DEVELOPER_URL
     updates_url: str = DEFAULT_UPDATES_URL
     support_url: str = DEFAULT_SUPPORT_URL
+    db_backend: str = "sqlite"
+    mongodb_uri: str = ""
+    mongodb_database: str = "kayi_arena"
     db_path: str = "data/kayi_arena.sqlite3"
     match_db_path: str = "data/kayi_arena_state.sqlite3"
     restart_state_path: str = ""
@@ -140,6 +143,9 @@ class BotConfig:
             developer_url=_env_str("DEVELOPER_URL", DEFAULT_DEVELOPER_URL),
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
             support_url=_env_str("SUPPORT_URL", DEFAULT_SUPPORT_URL),
+            db_backend=_env_str("DB_BACKEND", "sqlite").lower(),
+            mongodb_uri=_env_str("MONGODB_URI", ""),
+            mongodb_database=_env_str("MONGODB_DATABASE", "kayi_arena"),
             db_path=_env_str("ARENA_DB_PATH", "data/kayi_arena.sqlite3"),
             match_db_path=_env_str("ARENA_STATE_DB_PATH", "data/kayi_arena_state.sqlite3"),
             restart_state_path=_env_str("RESTART_STATE_PATH", ""),
