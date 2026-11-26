@@ -328,3 +328,78 @@ async def test_forfeit_inactivity_win_and_concurrency_races() -> None:
         mgr.cancel_challenge(challenge_id=c2.challenge.challenge_id, player_id="p1"),
     )
     assert (acc2.accepted and not can2.accepted) or (can2.accepted and not acc2.accepted)
+
+
+@pytest.mark.asyncio
+async def test_approved_120s_timer_extension_inactivity_win_and_rarity_weights() -> None:
+    from app.database import DEFAULT_RARITY_WEIGHTS
+    from app.matches import TimeoutPolicy
+
+    assert DEFAULT_RARITY_WEIGHTS == {
+        "Common": 30.0,
+        "Uncommon": 30.0,
+        "Rare": 22.0,
+        "Epic": 13.0,
+        "Legendary": 5.0,
+    }
+    policy = TimeoutPolicy()
+    assert policy.turn_timeout_seconds == 120.0
+    assert policy.challenge_ttl_seconds == 300.0
+    assert policy.claim_window_seconds == 60.0
+    assert policy.extension_seconds == 60.0
+    assert policy.extensions_per_player == 1
+
+    db = _setup_db_with_two_universes()
+    clock = _FakeClock(start=2000.0)
+    mgr = MatchManager(db, timeout_policy=policy, clock=clock, draw_source=SeededDrawSource(17))
+
+    chl = (await mgr.create_challenge(challenger_id="p1", chat_id="c1", universe_id="naruto")).challenge
+    match = (await mgr.accept_challenge(challenge_id=chl.challenge_id, player_id="p2")).match
+    assert match.turn_deadline_at == 2120.0
+    assert match.extensions_remaining == {"p1": 1, "p2": 1}
+
+    active = match.public_view.active_player_id
+    opponent = "p2" if active == "p1" else "p1"
+
+    # Active player cannot extend own turn
+    self_ext = await mgr.grant_turn_extension(match_id=match.match_id, granting_player_id=active)
+    assert not self_ext.accepted and self_ext.error_code is MatchManagementErrorCode.SELF_EXTENSION_FORBIDDEN
+
+    # Shuffle does NOT reset turn_deadline_at
+    clock.advance(50.0)  # now = 2050.0
+    sh = await mgr.shuffle_match(match_id=match.match_id, player_id=active, expected_revision=0)
+    assert sh.accepted and sh.match.turn_deadline_at == 2120.0
+
+    # Opponent grants 60s extension -> deadline becomes 2180.0, active has 0 extensions left
+    ext = await mgr.grant_turn_extension(match_id=match.match_id, granting_player_id=opponent)
+    assert ext.accepted and ext.match.turn_deadline_at == 2180.0
+    assert ext.match.extensions_remaining[active] == 0
+
+    # Second extension for same player rejected
+    ext2 = await mgr.grant_turn_extension(match_id=match.match_id, granting_player_id=opponent)
+    assert not ext2.accepted and ext2.error_code is MatchManagementErrorCode.NO_EXTENSIONS_REMAINING
+
+    # At 125s (2125.0), turn is NOT expired because of the 60s extension
+    clock.advance(75.0)  # now = 2125.0
+    not_yet = await mgr.handle_turn_timeout(
+        match_id=match.match_id,
+        expected_revision=ext.match.public_view.revision,
+        expected_turn_number=1,
+    )
+    assert not not_yet.accepted and not_yet.error_code is MatchManagementErrorCode.INACTIVITY_NOT_ELAPSED
+
+    # At 180s (2180.0), timeout fires and opponent claims victory
+    clock.advance(55.0)  # now = 2180.0
+    to_res = await mgr.handle_turn_timeout(
+        match_id=match.match_id,
+        expected_revision=ext.match.public_view.revision,
+        expected_turn_number=1,
+    )
+    assert to_res.accepted and to_res.match.inactivity_claim_offered_to == opponent
+
+    win = await mgr.claim_inactivity_victory(match_id=match.match_id, player_id=opponent)
+    assert win.accepted and win.match.status is MatchLifecycleStatus.INACTIVITY_WIN
+    assert win.match.outcome.reason is MatchOutcomeReason.INACTIVITY_VICTORY
+    assert win.match.outcome.winner_id == opponent
+    assert win.match.outcome.loser_id == active
+    assert win.match.outcome.affects_rating is True

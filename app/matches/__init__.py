@@ -14,6 +14,7 @@ from app.matches.models import (
     MatchOutcomeSummary,
     MessageReference,
     ProvisionalTimeoutPolicy,
+    TimeoutPolicy,
 )
 from app.matches.service import MatchManager
 
@@ -32,4 +33,5 @@ __all__ = [
     "MatchOutcomeSummary",
     "MessageReference",
     "ProvisionalTimeoutPolicy",
+    "TimeoutPolicy",
 ]

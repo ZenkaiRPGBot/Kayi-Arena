@@ -33,7 +33,7 @@ from app.matches.models import (
     MatchOutcomeReason,
     MatchOutcomeSummary,
     MessageReference,
-    ProvisionalTimeoutPolicy,
+    TimeoutPolicy,
 )
 from app.resolution import DecidedBy, MatchOutcome, resolve_completed_draft
 from app.scoring import DatasetKind
@@ -49,7 +49,7 @@ class MatchManager:
         db: CharacterDatabase,
         *,
         dataset_kind: DatasetKind = DatasetKind.PRODUCTION,
-        timeout_policy: ProvisionalTimeoutPolicy | None = None,
+        timeout_policy: TimeoutPolicy | None = None,
         clock: Callable[[], float] | None = None,
         draw_source: DrawSource | None = None,
         universe_rng: random.Random | None = None,
@@ -57,7 +57,7 @@ class MatchManager:
     ) -> None:
         self.db = db
         self.dataset_kind = dataset_kind
-        self.timeout_policy = timeout_policy or ProvisionalTimeoutPolicy()
+        self.timeout_policy = timeout_policy or TimeoutPolicy()
         self.clock = clock or time.monotonic
         self.draw_source = draw_source
         self._universe_rng = universe_rng or secrets.SystemRandom()
@@ -342,7 +342,13 @@ class MatchManager:
                 public_view=draft_res.public_view,
                 generation=0,
                 turn_started_at=now,
+                turn_deadline_at=now + self.timeout_policy.turn_timeout_seconds,
                 turn_number_at_start=draft_res.snapshot.turn_number or 1,
+                extensions_remaining={
+                    players[0]: self.timeout_policy.extensions_per_player,
+                    players[1]: self.timeout_policy.extensions_per_player,
+                },
+                timeout_policy=self.timeout_policy,
                 created_at=now,
                 updated_at=now,
             )
@@ -674,6 +680,7 @@ class MatchManager:
                     "public_view": res.public_view,
                     "generation": match.generation + 1,
                     "turn_started_at": now,
+                    "turn_deadline_at": now + match.timeout_policy.turn_timeout_seconds,
                     "turn_number_at_start": res.snapshot.turn_number or match.turn_number_at_start,
                     "inactivity_claim_offered_to": None,
                     "inactivity_claim_expires_at": None,
@@ -792,7 +799,7 @@ class MatchManager:
                     match=match,
                 )
             now = self.clock()
-            if (now - match.turn_started_at) < self.timeout_policy.turn_timeout_seconds:
+            if now < match.turn_deadline_at:
                 return MatchOperationResult(
                     accepted=False,
                     error_code=MatchManagementErrorCode.INACTIVITY_NOT_ELAPSED,
@@ -807,7 +814,62 @@ class MatchManager:
                     **{f: getattr(match, f) for f in match.__slots__},
                     "generation": match.generation + 1,
                     "inactivity_claim_offered_to": opponent,
-                    "inactivity_claim_expires_at": now + self.timeout_policy.claim_window_seconds,
+                    "inactivity_claim_expires_at": now + match.timeout_policy.claim_window_seconds,
+                    "updated_at": now,
+                }
+            )
+            self._matches[match_id] = updated
+            return MatchOperationResult(accepted=True, match=updated)
+
+    async def grant_turn_extension(
+        self,
+        *,
+        match_id: str,
+        granting_player_id: str,
+        expected_generation: int | None = None,
+    ) -> MatchOperationResult:
+        """Grant one 60s extension to the active player (only by their opponent)."""
+        async with self._lock_for_match(match_id):
+            match = self._matches.get(match_id)
+            err = self._validate_active_participant(
+                match,
+                player_id=granting_player_id,
+                expected_generation=expected_generation,
+            )
+            if err is not None:
+                return err
+            assert match is not None
+
+            active = match.draft_snapshot.active_player_id
+            assert active is not None
+            if granting_player_id == active:
+                return MatchOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.SELF_EXTENSION_FORBIDDEN,
+                    message="Only the opponent may grant a turn extension",
+                    match=match,
+                )
+            remaining = match.extensions_remaining.get(active, 0)
+            if remaining <= 0:
+                return MatchOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.NO_EXTENSIONS_REMAINING,
+                    message="Active player has already used their match extension",
+                    match=match,
+                )
+
+            now = self.clock()
+            new_ext = dict(match.extensions_remaining)
+            new_ext[active] = remaining - 1
+            new_deadline = max(now, match.turn_deadline_at) + match.timeout_policy.extension_seconds
+            updated = ManagedMatch(
+                **{
+                    **{f: getattr(match, f) for f in match.__slots__},
+                    "generation": match.generation + 1,
+                    "turn_deadline_at": new_deadline,
+                    "extensions_remaining": new_ext,
+                    "inactivity_claim_offered_to": None,
+                    "inactivity_claim_expires_at": None,
                     "updated_at": now,
                 }
             )

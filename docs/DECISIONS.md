@@ -92,3 +92,7 @@
 3. **Dataset pinning & resolution boundary**
    - `accept_challenge` pins the universe's latest published `dataset_version` and rarity weights at match creation; later publications never affect active matches.
    - Prematurely terminated matches (`FORFEITED`, `INACTIVITY_WIN`, `ABANDONED`, `TERMINATED_*`) never enter Module 3 resolution (`TERMINATED_MATCH_CANNOT_RESOLVE`).
+
+### Owner-Approved Updates (Timer & Rarity Defaults)
+- **Approved initial `TimeoutPolicy` (pinned per match):** `120s` turn duration, `300s` challenge expiration, `60s` inactivity response window, and `1` `60s` extension per player per match granted only by their opponent (`grant_turn_extension`).
+- **Approved initial `DEFAULT_RARITY_WEIGHTS`:** `Common` 30%, `Uncommon` 30%, `Rare` 22%, `Epic` 13%, `Legendary` 5% (configurable per universe, pinned at match creation).

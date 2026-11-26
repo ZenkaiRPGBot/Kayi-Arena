@@ -45,17 +45,18 @@ class MatchOutcomeReason(str, Enum):
 
 
 @dataclass(frozen=True, slots=True)
-class ProvisionalTimeoutPolicy:
-    """Provisional timeout defaults (not finalized gameplay rules).
-
-    Exact durations, response windows, and extension policies remain pending
-    owner approval.
-    """
+class TimeoutPolicy:
+    """Configurable match timer settings (approved initial defaults, pinned per match)."""
 
     challenge_ttl_seconds: float = 300.0
-    turn_timeout_seconds: float = 90.0
+    turn_timeout_seconds: float = 120.0
     claim_window_seconds: float = 60.0
+    extension_seconds: float = 60.0
+    extensions_per_player: int = 1
     allow_inactivity_claim: bool = True
+
+
+ProvisionalTimeoutPolicy = TimeoutPolicy
 
 
 @dataclass(frozen=True, slots=True)
@@ -115,7 +116,10 @@ class ManagedMatch:
     public_view: PublicDraftView
     generation: int
     turn_started_at: float
+    turn_deadline_at: float
     turn_number_at_start: int
+    extensions_remaining: dict[str, int]
+    timeout_policy: TimeoutPolicy
     created_at: float
     updated_at: float
     inactivity_claim_offered_to: str | None = None

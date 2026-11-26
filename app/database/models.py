@@ -19,10 +19,10 @@ RARITY_TIERS: tuple[str, ...] = (
 RARITY_SET: frozenset[str] = frozenset(RARITY_TIERS)
 
 DEFAULT_RARITY_WEIGHTS: dict[str, float] = {
-    "Common": 40.0,
-    "Uncommon": 25.0,
-    "Rare": 18.0,
-    "Epic": 12.0,
+    "Common": 30.0,
+    "Uncommon": 30.0,
+    "Rare": 22.0,
+    "Epic": 13.0,
     "Legendary": 5.0,
 }
 
