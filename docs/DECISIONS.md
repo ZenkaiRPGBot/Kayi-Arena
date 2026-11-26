@@ -77,3 +77,18 @@
 
 4. **Parallel development contract (`KA-IMPORT-1.0`)**
    - Documented in `docs/IMPORT_FORMAT.md`; supports incomplete candidate imports (`draft` status) and AI evaluation batches independently of external providers/scrapers.
+
+## Module 5: Challenge & Match Management
+
+1. **Global & per-match concurrency isolation**
+   - `_global_lock` serializes challenge creation, acceptance, cancellation, expiration, and global `_active_match_by_player` checks.
+   - Per-match `asyncio.Lock` serializes all drafting, timeout, forfeit, and resolution transitions.
+
+2. **Timer & stale-timeout protection**
+   - `turn_started_at` is updated only when a draft starts or `assign_role` advances the turn; `skip_character` leaves `turn_started_at` unchanged.
+   - `handle_turn_timeout` revalidates `(expected_revision, expected_turn_number)` atomically under the match lock before offering an inactivity claim.
+   - `ProvisionalTimeoutPolicy` durations (`300s` challenge, `90s` turn, `60s` claim) are explicitly provisional pending owner confirmation.
+
+3. **Dataset pinning & resolution boundary**
+   - `accept_challenge` pins the universe's latest published `dataset_version` and rarity weights at match creation; later publications never affect active matches.
+   - Prematurely terminated matches (`FORFEITED`, `INACTIVITY_WIN`, `ABANDONED`, `TERMINATED_*`) never enter Module 3 resolution (`TERMINATED_MATCH_CANNOT_RESOLVE`).

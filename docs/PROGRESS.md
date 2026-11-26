@@ -6,7 +6,7 @@
 | 2 | Character Evaluation & Scoring | Finalized (v1.0) | Complete | Complete | `SCORE-1.0` integer engine + T1–T12 + revised R5 diagnostics |
 | 3 | Match Resolution | Finalized (`RES-1.0`) | Complete | Complete | Pure deterministic resolver + M1/M2 adapters + 1,000+ replays |
 | 4 | Universe & Character Database (4A Foundation) | Finalized (4A) | Complete (4A) | Complete (4A) | SQLite store, `KA-IMPORT-1.0`, health reports; 4B catalogue/images parallel |
-| 5 | Challenge & Match Management | Awaiting Planning | Not Started | Not Started | Owns timers, inactivity checks, forfeit auth, `Terminate` callers |
+| 5 | Challenge & Match Management | Finalized | Complete | Complete | Challenges, global active lock, timeouts, forfeit, M1/M3/M4A integration |
 | 6 | Telegram UI & User Experience | Awaiting Planning | Not Started | Not Started | Consumes `PublicDraftView` + `DraftEvent` only |
 | 7 | Persistence & Game Recovery | Awaiting Planning | Not Started | Not Started | Implements `DraftStore` CAS + commit-before-reveal |
 | 8 | Profiles & Competitive Progression | Awaiting Planning | Not Started | Not Started | Consumes emitted `DraftEvent`s |

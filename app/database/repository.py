@@ -836,6 +836,37 @@ class CharacterDatabase:
             f"Character {character_id!r} not found in dataset version {dataset_version!r}"
         )
 
+    def get_latest_published_version(
+        self,
+        universe_id: str,
+        *,
+        kind: DatasetKind = DatasetKind.PRODUCTION,
+    ) -> str | None:
+        """Return the most recently published dataset_version for ``universe_id``, if any."""
+        row = self._conn.execute(
+            """
+            SELECT dataset_version
+            FROM published_datasets
+            WHERE universe_id = ? AND kind = ?
+            ORDER BY rowid DESC
+            LIMIT 1
+            """,
+            (universe_id, kind.value),
+        ).fetchone()
+        return row["dataset_version"] if row is not None else None
+
+    def list_eligible_universes(
+        self,
+        *,
+        kind: DatasetKind = DatasetKind.PRODUCTION,
+    ) -> tuple[Universe, ...]:
+        """Return active universes that have at least one published dataset of ``kind``."""
+        eligible: list[Universe] = []
+        for universe in self.list_universes(active_only=True):
+            if self.get_latest_published_version(universe.universe_id, kind=kind) is not None:
+                eligible.append(universe)
+        return tuple(eligible)
+
     def get_health_report(self, dataset_version: str) -> dict[str, Any]:
         row = self._conn.execute(
             "SELECT health_report_json FROM published_datasets WHERE dataset_version = ?",
