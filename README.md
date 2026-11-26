@@ -34,6 +34,22 @@ python -m scripts.demo_scoring
 python -m scripts.demo_resolution
 ```
 
+## Character Catalogue Tooling (Module 4 support)
+
+Collect and validate candidate character/image data without modifying the production database:
+
+```powershell
+python -m scripts.collect_naruto_catalogue --output data/naruto_candidates.json
+python -m scripts.validate_naruto_images --catalogue data/naruto_candidates.json --output-dir data/naruto_images --report data/naruto_image_report.json
+python -m scripts.export_naruto_catalogue --catalogue data/naruto_candidates.json --output data/naruto_candidates_ka_import.json
+```
+
+Notes:
+- The collector uses the Dattebayo API and records incomplete/unverified entries as `pending` drafts.
+- Image validation checks HTTP status, file signature, dimensions, corruption markers, and exact duplicate hashes.
+- Export targets `KA-IMPORT-1.0` (`batch_type = "catalogue"`); `rarity` is intentionally set to a provisional `Common` placeholder because Claude assigns final rarity.
+- Network-dependent collection is separate from deterministic unit tests.
+
 ## Module Roadmap
 
 | # | Module | Status |

@@ -1,0 +1,1 @@
+"""Character catalogue collection and image validation tooling."""
