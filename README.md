@@ -4,7 +4,7 @@ Competitive Telegram-based anime character drafting game under the **Kayi Bots**
 
 - **Bot name:** Kayi Arena (`@KayiArenaBot`)
 - **Primary gameplay command:** `/draft`
-- **Current status:** **Module 1 (Core Drafting Engine)** and **Module 2 (Character Evaluation & Scoring)** implemented and verified; Modules 3–9 are planned or awaiting specification.
+- **Current status:** **Module 1 (Core Drafting Engine)**, **Module 2 (Character Evaluation & Scoring)**, and **Module 3 (Match Resolution)** implemented and verified; Modules 4–9 are awaiting specification.
 
 ## Setup
 
@@ -31,6 +31,7 @@ Observe and play a fictional 2-player draft locally without Telegram:
 python -m scripts.demo_draft
 python -m scripts.demo_draft --seed 42
 python -m scripts.demo_scoring
+python -m scripts.demo_resolution
 ```
 
 ## Module Roadmap
@@ -39,7 +40,7 @@ python -m scripts.demo_scoring
 | --- | --- | --- |
 | 1 | Core Drafting Engine | Implemented & Tested (`v1.0`) |
 | 2 | Character Evaluation & Scoring | Implemented & Tested (`SCORE-1.0`) |
-| 3 | Match Resolution | Awaiting Planning |
+| 3 | Match Resolution | Implemented & Tested (`RES-1.0`) |
 | 4 | Universe & Character Database | Awaiting Planning |
 | 5 | Challenge & Match Management | Awaiting Planning |
 | 6 | Telegram UI & User Experience | Awaiting Planning |
@@ -51,7 +52,9 @@ python -m scripts.demo_scoring
 
 - [Module 1 Specification](docs/MODULE_01_CORE_DRAFTING_ENGINE.md)
 - [Module 2 Final Scoring Specification](docs/Kayi%20Arena%20%E2%80%94%20Module%202%20Final%20Scoring%20Specification%20%26%20Implementation%20Handoff%20v1.0.md)
+- [Module 3 Match Resolution Specification](docs/MODULE_03_MATCH_RESOLUTION_SPECIFICATION.md)
 - [Progress Tracker](docs/PROGRESS.md)
 - [Architecture & Technical Decisions](docs/DECISIONS.md)
 - [Module 1 Implementation Report](docs/MODULE_01_IMPLEMENTATION_REPORT.md)
 - [Module 2 Implementation Report](docs/MODULE_02_IMPLEMENTATION_REPORT.md)
+- [Module 3 Implementation Report](docs/MODULE_03_IMPLEMENTATION_REPORT.md)

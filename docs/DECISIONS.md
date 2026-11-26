@@ -44,3 +44,19 @@
 3. **Canonical hashing & V08 invariant guard**
    - `DatasetManifest.compute_content_hash()` uses deterministic `json.dumps(..., sort_keys=True, separators=(",", ":"))` over sorted `DatasetRecord`s + SHA-256, verified on both publication and load (`DV3`).
    - `V08` (`verify_internal_score_range`) is an internal invariant guard tested directly without permitting invalid inputs through public scoring APIs.
+
+## Module 3: Match Resolution (`RES-1.0`)
+
+1. **Approved Decisions (D1–D6)**
+   - **D1:** `RES-1.0` stored in every `MatchResolutionSuccess`.
+   - **D2:** Each `RoleMatchup` retains `power`, assigned-role `fit`, and assigned-role `score`; full 7-role Fit vectors remain in the pinned dataset.
+   - **D3 & D6 (Future Module 4):** Module 4 must generate advisory dataset health reports (never blocking publication or forcing rating changes) and repeat strategic balance simulations using actual character datasets.
+   - **D4:** Fail-fast validation precedence Stages 1–9 (`MALFORMED_REQUEST` through `CHARACTER_RECORD_INVALID`), with Stages 1–4 performing zero dataset access.
+   - **D5:** All 14 character records are reverified during resolution using Module 2's `score_record()` logic.
+
+2. **Role Casing & Module 1 Adapter**
+   - `resolve_match()` strictly enforces lowercase `SCORING_ROLES` (`"captain"`..`"healer"`) with no silent normalization.
+   - `build_resolve_request_from_completed_draft()` explicitly translates Module 1's `CompletedDraftOutput` Title Case roles (`"Captain"`..`"Healer"`) into lowercase `SCORING_ROLES` while preserving player identities and slots without reordering.
+
+3. **Canonical Serialization**
+   - `canonical_json()` uses `json.dumps(..., sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)` so UTF-8 Unicode characters serialize directly without `\uXXXX` escaping, floats/NaN/Infinity are forbidden, and optional empty `details` are omitted.

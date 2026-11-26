@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 1 | Core Drafting Engine | Finalized (v1.0) | Complete | Complete | Pure rules engine + CAS adapter + 100k simulations |
 | 2 | Character Evaluation & Scoring | Finalized (v1.0) | Complete | Complete | `SCORE-1.0` integer engine + T1–T12 + revised R5 diagnostics |
-| 3 | Match Resolution | Awaiting Planning | Not Started | Not Started | Consumes `CompletedDraftOutput` + `dataset_version` |
+| 3 | Match Resolution | Finalized (`RES-1.0`) | Complete | Complete | Pure deterministic resolver + M1/M2 adapters + 1,000+ replays |
 | 4 | Universe & Character Database | Awaiting Planning | Not Started | Not Started | Supplies frozen catalog + weights + `dataset_version` |
 | 5 | Challenge & Match Management | Awaiting Planning | Not Started | Not Started | Owns timers, inactivity checks, forfeit auth, `Terminate` callers |
 | 6 | Telegram UI & User Experience | Awaiting Planning | Not Started | Not Started | Consumes `PublicDraftView` + `DraftEvent` only |
