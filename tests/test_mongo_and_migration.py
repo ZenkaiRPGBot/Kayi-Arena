@@ -7,7 +7,14 @@ from typing import Any
 
 import pytest
 
-from app.database import CharacterDatabase, ImageMetadata, ImageValidationStatus
+from app.database import (
+    CharacterDatabase,
+    ImageMetadata,
+    ImageValidationStatus,
+    MongoCharacterDatabase,
+    bootstrap_naruto_database,
+    create_character_database,
+)
 from app.matches import MatchManager
 from app.persistence import (
     MongoMatchStore,
@@ -96,10 +103,31 @@ class _FakeMongoDatabase:
 
 
 def test_create_match_store_defaults_to_sqlite(tmp_path: Path) -> None:
-    cfg = BotConfig(match_db_path=str(tmp_path / "state.sqlite3"))
+    cfg = BotConfig(
+        db_path=str(tmp_path / "chars.sqlite3"),
+        match_db_path=str(tmp_path / "state.sqlite3"),
+    )
     store = create_match_store(cfg)
+    char_db = create_character_database(cfg)
     assert isinstance(store, SqliteMatchStore)
+    assert isinstance(char_db, CharacterDatabase)
     store.close()
+    char_db.close()
+
+
+def test_mongo_character_database_naruto_bootstrap_and_dataset_pinning() -> None:
+    fake_db = _FakeMongoDatabase()
+    mdb = MongoCharacterDatabase(database=fake_db)
+    summary1 = bootstrap_naruto_database(mdb)
+    assert summary1.total_loaded == 60
+    assert summary1.draft_count == 53
+    assert summary1.held_count == 7
+    assert len(mdb.list_characters("naruto")) == 60
+
+    # Idempotent second bootstrap
+    summary2 = bootstrap_naruto_database(mdb)
+    assert summary2.total_loaded == 60
+    assert len(mdb.list_characters("naruto")) == 60
 
 
 @pytest.mark.asyncio

@@ -29,10 +29,30 @@ from app.database.naruto_loader import (
     export_approved_snapshot,
     load_naruto_60_into_db,
 )
+from pathlib import Path
+from typing import Any
+
+from app.database.mongo_repository import MongoCharacterDatabase
 from app.database.repository import CharacterDatabase
+
+
+def create_character_database(config: Any) -> CharacterDatabase | MongoCharacterDatabase:
+    """Create the configured character database (SQLite default, or MongoDB Atlas)."""
+    backend = str(getattr(config, "db_backend", "sqlite")).lower()
+    mongo_uri = str(getattr(config, "mongodb_uri", "")).strip()
+    if backend == "mongodb" and mongo_uri:
+        return MongoCharacterDatabase(
+            mongo_uri,
+            database_name=str(getattr(config, "mongodb_database", "kayi_arena") or "kayi_arena"),
+        )
+    db_path = Path(str(getattr(config, "db_path", "data/kayi_arena.sqlite3")))
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    return CharacterDatabase(db_path)
 
 __all__ = [
     "CharacterDatabase",
+    "MongoCharacterDatabase",
+    "create_character_database",
     "CharacterEntry",
     "DEFAULT_RARITY_WEIGHTS",
     "DatabaseError",

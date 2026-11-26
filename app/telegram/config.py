@@ -133,6 +133,13 @@ class BotConfig:
         mode_raw = _env_str("TRANSPORT_MODE", "polling").lower()
         transport_mode = "webhook" if mode_raw == "webhook" and webhook_base else "polling"
 
+        mongodb_uri = _env_str("MONGODB_URI", "")
+        db_backend_raw = _env_str("DB_BACKEND", "").lower()
+        if db_backend_raw in {"sqlite", "mongodb"}:
+            db_backend = db_backend_raw
+        else:
+            db_backend = "mongodb" if mongodb_uri else "sqlite"
+
         return cls(
             bot_token=_env_str("BOT_TOKEN", ""),
             bot_username=_env_str("BOT_USERNAME", DEFAULT_BOT_USERNAME).lstrip("@"),
@@ -143,8 +150,8 @@ class BotConfig:
             developer_url=_env_str("DEVELOPER_URL", DEFAULT_DEVELOPER_URL),
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
             support_url=_env_str("SUPPORT_URL", DEFAULT_SUPPORT_URL),
-            db_backend=_env_str("DB_BACKEND", "sqlite").lower(),
-            mongodb_uri=_env_str("MONGODB_URI", ""),
+            db_backend=db_backend,
+            mongodb_uri=mongodb_uri,
             mongodb_database=_env_str("MONGODB_DATABASE", "kayi_arena"),
             db_path=_env_str("ARENA_DB_PATH", "data/kayi_arena.sqlite3"),
             match_db_path=_env_str("ARENA_STATE_DB_PATH", "data/kayi_arena_state.sqlite3"),

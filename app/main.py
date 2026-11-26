@@ -9,7 +9,7 @@ import sys
 from dataclasses import replace
 from pathlib import Path
 
-from app.database import CharacterDatabase, bootstrap_naruto_database
+from app.database import bootstrap_naruto_database, create_character_database
 from app.matches import MatchManager
 from app.persistence import create_match_store
 from app.telegram.bot import create_bot, create_dispatcher, register_bot_commands
@@ -35,9 +35,7 @@ async def run_bot() -> None:
         config.port,
     )
 
-    db_path = Path(config.db_path)
-    db_path.parent.mkdir(parents=True, exist_ok=True)
-    db = CharacterDatabase(db_path)
+    db = create_character_database(config)
 
     snap_path = Path(config.bootstrap_snapshot_path) if config.bootstrap_snapshot_path else None
     boot_summary = bootstrap_naruto_database(

@@ -971,6 +971,8 @@ async def handle_admin_callback(
     # ------------------------------------------------------------------
     if action == "media":
         stats = coordinator.store.get_media_stats() if coordinator.store else {}
+        universes = coordinator.db.list_universes(active_only=False)
+        total_chars = sum(len(coordinator.db.list_characters(u.universe_id)) for u in universes)
         ch_status = (
             f"<code>{coordinator.config.media_channel_id}</code>"
             if coordinator.config.media_channel_id
@@ -981,6 +983,7 @@ async def handle_admin_callback(
                 [
                     "🖼️ <b>Media Manager</b>",
                     "",
+                    f"Total characters in DB: <b>{total_chars}</b>",
                     f"Media channel: {ch_status}",
                     f"Cached / Uploaded: <b>{stats.get('uploaded', 0)}</b>",
                     f"Pending: <b>{stats.get('pending', 0)}</b> | Failed: <b>{stats.get('failed', 0)}</b>",
@@ -1044,6 +1047,13 @@ async def handle_admin_callback(
             await answer_callback_safe(query, "MEDIA_CHANNEL_ID not configured.", show_alert=True)
             return
         force = bool(args and args[0] == "1")
+        await answer_callback_safe(query, "Starting batch image upload...")
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text="⏳ <b>Syncing character images to media channel...</b>\nPlease wait.",
+        )
         universes = coordinator.db.list_universes(active_only=False)
         entries = [
             c
@@ -1096,7 +1106,6 @@ async def handle_admin_callback(
                 inline_keyboard=[[_btn("« Back to Media", "adm:media")]]
             ),
         )
-        await answer_callback_safe(query, "Media sync complete.")
         return
 
     if action == "mstat":

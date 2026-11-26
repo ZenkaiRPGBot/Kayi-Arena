@@ -103,6 +103,7 @@ def load_naruto_60_into_db(
         c["candidate_id"]: c for c in manifest_data.get("characters", [])
     }
 
+    existing_map = {c.character_id: c for c in db.list_characters("naruto")}
     draft_count = 0
     held_count = 0
     approved_testing = 0
@@ -127,11 +128,11 @@ def load_naruto_60_into_db(
             if isinstance(e, dict) and e.get("claim")
         )
 
-        try:
-            existing = db.get_character_entry(cid)
+        existing = existing_map.get(cid)
+        if existing is not None:
             if not existing.image.url_or_ref and img_meta.url_or_ref:
                 db.update_image_metadata(cid, img_meta)
-        except Exception:
+        else:
             db.add_character(
                 character_id=cid,
                 universe_id="naruto",
