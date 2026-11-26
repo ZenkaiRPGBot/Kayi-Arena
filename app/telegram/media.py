@@ -1,4 +1,4 @@
-"""Character media resolution and Telegram file_id caching (Module 7).
+"""Character media resolution, 960x540 card standardization, and Telegram file_id caching.
 
 Never auto-promotes technically validated images to identity-verified, and
 never lets media resolution failures interrupt drafting gameplay.
@@ -6,12 +6,49 @@ never lets media resolution failures interrupt drafting gameplay.
 
 from __future__ import annotations
 
+from io import BytesIO
 from typing import TYPE_CHECKING
+
+from PIL import Image, ImageOps
 
 from app.database import CharacterEntry
 
 if TYPE_CHECKING:
     from app.persistence.store import SqliteMatchStore
+
+_RARITY_BORDER_RGB: dict[str, tuple[int, int, int]] = {
+    "Common": (148, 163, 184),
+    "Uncommon": (34, 197, 94),
+    "Rare": (59, 130, 246),
+    "Epic": (168, 85, 247),
+    "Legendary": (234, 179, 8),
+}
+
+
+def standardize_card_image(
+    raw_bytes: bytes,
+    *,
+    rarity: str = "Common",
+    target_size: tuple[int, int] = (960, 540),
+    border_px: int = 8,
+) -> bytes:
+    """Standardize character artwork onto a 960x540 landscape canvas without stretching."""
+    with Image.open(BytesIO(raw_bytes)) as src:
+        rgb = src.convert("RGB")
+        inner_w = max(1, target_size[0] - 2 * border_px)
+        inner_h = max(1, target_size[1] - 2 * border_px)
+        padded = ImageOps.pad(
+            rgb,
+            (inner_w, inner_h),
+            method=Image.Resampling.LANCZOS,
+            color=(15, 23, 42),
+        )
+        border_color = _RARITY_BORDER_RGB.get(rarity, (148, 163, 184))
+        canvas = Image.new("RGB", target_size, border_color)
+        canvas.paste(padded, (border_px, border_px))
+        out = BytesIO()
+        canvas.save(out, format="JPEG", quality=90, optimize=True)
+        return out.getvalue()
 
 
 class CharacterMediaResolver:

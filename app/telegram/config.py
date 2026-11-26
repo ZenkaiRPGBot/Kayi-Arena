@@ -62,6 +62,7 @@ class BotConfig:
     bot_username: str = DEFAULT_BOT_USERNAME
     owner_id: int = 0
     admin_ids: tuple[int, ...] = ()
+    authorized_tester_ids: tuple[int, ...] = ()
     log_channel_id: int = 0
     developer_url: str = DEFAULT_DEVELOPER_URL
     updates_url: str = DEFAULT_UPDATES_URL
@@ -69,6 +70,7 @@ class BotConfig:
     db_path: str = "data/kayi_arena.sqlite3"
     match_db_path: str = "data/kayi_arena_state.sqlite3"
     restart_state_path: str = ""
+    bootstrap_snapshot_path: str = "data/approved_naruto_snapshot.json"
     dataset_kind: DatasetKind = DatasetKind.PRODUCTION
     home_banner_ref: str = ""
     card_back_ref: str = ""
@@ -94,6 +96,17 @@ class BotConfig:
             return False
         return uid != 0 and uid in self.all_admin_ids()
 
+    def is_authorized_tester(self, user_id: int | str) -> bool:
+        if self.is_admin(user_id):
+            return True
+        if not self.authorized_tester_ids:
+            return self.dataset_kind is not DatasetKind.TEST
+        try:
+            uid = int(user_id)
+        except (TypeError, ValueError):
+            return False
+        return uid != 0 and uid in self.authorized_tester_ids
+
     @property
     def webhook_url(self) -> str:
         base = self.webhook_base_url.rstrip("/")
@@ -110,6 +123,7 @@ class BotConfig:
 
         owner_id = _env_int("OWNER_ID", 0)
         admin_ids = _env_int_tuple("ADMIN_IDS")
+        tester_ids = _env_int_tuple("AUTHORIZED_TESTER_IDS")
         webhook_base = _env_str("WEBHOOK_BASE_URL", "") or _env_str("RENDER_EXTERNAL_URL", "")
         mode_raw = _env_str("TRANSPORT_MODE", "polling").lower()
         transport_mode = "webhook" if mode_raw == "webhook" and webhook_base else "polling"
@@ -119,6 +133,7 @@ class BotConfig:
             bot_username=_env_str("BOT_USERNAME", DEFAULT_BOT_USERNAME).lstrip("@"),
             owner_id=owner_id,
             admin_ids=admin_ids,
+            authorized_tester_ids=tester_ids,
             log_channel_id=_env_int("LOG_CHANNEL_ID", 0),
             developer_url=_env_str("DEVELOPER_URL", DEFAULT_DEVELOPER_URL),
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
@@ -126,6 +141,9 @@ class BotConfig:
             db_path=_env_str("ARENA_DB_PATH", "data/kayi_arena.sqlite3"),
             match_db_path=_env_str("ARENA_STATE_DB_PATH", "data/kayi_arena_state.sqlite3"),
             restart_state_path=_env_str("RESTART_STATE_PATH", ""),
+            bootstrap_snapshot_path=_env_str(
+                "ARENA_BOOTSTRAP_SNAPSHOT_PATH", "data/approved_naruto_snapshot.json"
+            ),
             dataset_kind=dataset_kind,
             home_banner_ref=_env_str("HOME_BANNER_REF", ""),
             card_back_ref=_env_str("CARD_BACK_REF", ""),

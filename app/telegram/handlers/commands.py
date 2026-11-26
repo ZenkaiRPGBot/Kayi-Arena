@@ -7,6 +7,7 @@ from aiogram.filters import Command, CommandObject, CommandStart
 from aiogram.types import Message
 
 from app.matches import MatchManagementErrorCode
+from app.scoring import DatasetKind
 from app.telegram.constants import LEADERBOARD_PER_PAGE
 from app.telegram.keyboards import (
     build_active_game_keyboard,
@@ -71,6 +72,17 @@ async def cmd_arena(
 ) -> None:
     player_id = coordinator.register_user(message.from_user)
     if not player_id:
+        return
+    if (
+        coordinator.config.dataset_kind is DatasetKind.TEST
+        and not coordinator.config.is_authorized_tester(player_id)
+    ):
+        await send_message_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            text="🔒 Testing dataset access is restricted to authorized testers.",
+            reply_to_message_id=message.message_id,
+        )
         return
 
     target_player_id: str | None = None
@@ -180,7 +192,17 @@ async def cmd_game(message: Message, coordinator: ArenaTelegramCoordinator) -> N
 
 
 async def cmd_list(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
-    coordinator.register_user(message.from_user)
+    player_id = coordinator.register_user(message.from_user)
+    if (
+        coordinator.config.dataset_kind is DatasetKind.TEST
+        and not coordinator.config.is_authorized_tester(player_id)
+    ):
+        await send_message_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            text="🔒 Testing dataset catalogue is restricted to authorized testers.",
+        )
+        return
     universes = coordinator.eligible_universes()
     await send_message_safe(
         coordinator.bot,

@@ -9,7 +9,7 @@ import sys
 from dataclasses import replace
 from pathlib import Path
 
-from app.database import CharacterDatabase
+from app.database import CharacterDatabase, bootstrap_naruto_database
 from app.matches import MatchManager
 from app.persistence import SqliteMatchStore
 from app.telegram.bot import create_bot, create_dispatcher, register_bot_commands
@@ -31,6 +31,21 @@ async def run_bot() -> None:
     db_path = Path(config.db_path)
     db_path.parent.mkdir(parents=True, exist_ok=True)
     db = CharacterDatabase(db_path)
+
+    snap_path = Path(config.bootstrap_snapshot_path) if config.bootstrap_snapshot_path else None
+    boot_summary = bootstrap_naruto_database(
+        db,
+        dataset_kind=config.dataset_kind,
+        snapshot_path=snap_path,
+    )
+    logger.info(
+        "Naruto bootstrap complete: loaded=%d draft=%d held=%d testing=%s prod=%s",
+        boot_summary.total_loaded,
+        boot_summary.draft_count,
+        boot_summary.held_count,
+        boot_summary.published_testing_version,
+        boot_summary.published_production_version,
+    )
 
     state_db_path = Path(config.match_db_path)
     state_db_path.parent.mkdir(parents=True, exist_ok=True)

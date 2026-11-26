@@ -87,6 +87,8 @@ Notes:
 - [Module 6 Implementation Report](docs/MODULE_06_IMPLEMENTATION_REPORT.md)
 - [Module 7 Implementation Report](docs/MODULE_07_IMPLEMENTATION_REPORT.md)
 - [Module 9 Implementation Report](docs/MODULE_09_IMPLEMENTATION_REPORT.md)
+- [Naruto Initial Integration Report](docs/NARUTO_INITIAL_INTEGRATION_REPORT.md)
+- [Naruto 60 Consolidated Review Report](docs/NARUTO_60_CONSOLIDATED_REVIEW_REPORT.md)
 
 ## Running the Telegram Bot
 

@@ -22,7 +22,7 @@ from aiogram.types import (
     User,
 )
 
-from app.database import EvaluationStatus
+from app.database import EvaluationStatus, HELD_NARUTO_NAMES
 from app.engine import TerminationReason
 from app.telegram.constants import STYLE_DANGER, STYLE_PRIMARY, STYLE_SUCCESS
 from app.telegram.safe_api import (
@@ -387,6 +387,12 @@ async def handle_admin_callback(
                 _btn("Approved", f"adm:chars:{uid}:approved:0"),
             ]
         )
+        rows.append(
+            [
+                _btn("📤 Submit Non-Held Drafts", f"adm:chsuball:{uid}"),
+                _btn("✅ Batch Approve Review", f"adm:chappall:{uid}", style=STYLE_SUCCESS),
+            ]
+        )
         nav: list[InlineKeyboardButton] = []
         if safe_page > 0:
             nav.append(_btn("‹", f"adm:chars:{uid}:{status_str}:{safe_page - 1}"))
@@ -471,6 +477,94 @@ async def handle_admin_callback(
             ),
         )
         await answer_callback_safe(query, "Reopened to Draft.")
+        return
+
+    if action == "chsuball" and args:
+        uid = args[0]
+        drafts = coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.DRAFT)
+        submitted = 0
+        held_skipped = 0
+        for ch in drafts:
+            if ch.name in HELD_NARUTO_NAMES:
+                held_skipped += 1
+                continue
+            coordinator.db.submit_for_review(ch.character_id)
+            submitted += 1
+        if coordinator.store:
+            coordinator.store.record_admin_action(
+                actor_id=actor_id,
+                action="batch_submit_review",
+                target_type="universe",
+                target_id=uid,
+                details={"submitted": submitted, "held_skipped": held_skipped},
+            )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"📤 Submitted <b>{submitted}</b> non-held Draft characters to Review.\n⏸ Held preserved: <b>{held_skipped}</b>.",
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("« View Review Queue", f"adm:chars:{uid}:review:0")]]
+            ),
+        )
+        await answer_callback_safe(query, f"Submitted {submitted} to Review.")
+        return
+
+    if action == "chappall" and args:
+        uid = args[0]
+        in_review = [
+            c
+            for c in coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.REVIEW)
+            if c.name not in HELD_NARUTO_NAMES
+        ]
+        kb = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [
+                    _btn(f"Confirm Approve ({len(in_review)})", f"adm:chappallc:{uid}", style=STYLE_SUCCESS),
+                    _btn("Cancel", f"adm:chars:{uid}:review:0"),
+                ]
+            ]
+        )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"⚠️ Approve <b>{len(in_review)}</b> non-held Review characters in <code>{esc(uid)}</code> for publication?\n\nHeld characters remain excluded.",
+            reply_markup=kb,
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "chappallc" and args:
+        uid = args[0]
+        in_review = coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.REVIEW)
+        approved = 0
+        for ch in in_review:
+            if ch.name in HELD_NARUTO_NAMES:
+                continue
+            coordinator.db.approve_character(ch.character_id)
+            approved += 1
+        if coordinator.store:
+            coordinator.store.record_admin_action(
+                actor_id=actor_id,
+                action="batch_approve_characters",
+                target_type="universe",
+                target_id=uid,
+                details={"approved": approved},
+            )
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=f"✅ Batch-approved <b>{approved}</b> non-held characters in <code>{esc(uid)}</code>.",
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [_btn("📦 Go to Datasets", "adm:dsets", style=STYLE_PRIMARY)],
+                    [_btn("« Back to Characters", f"adm:chars:{uid}:approved:0")],
+                ]
+            ),
+        )
+        await answer_callback_safe(query, f"Approved {approved} characters.")
         return
 
     # ------------------------------------------------------------------

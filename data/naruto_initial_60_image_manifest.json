@@ -185,8 +185,17 @@
     {
       "target_name": "Kurama",
       "candidate_id": "dattebayo:711",
-      "image_count": 0,
-      "images": []
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest?cb=20140818171718",
+          "status": "valid",
+          "format": "png",
+          "width": 1891,
+          "height": 1080,
+          "source_ref": "https://naruto.fandom.com/wiki/Kurama"
+        }
+      ]
     },
     {
       "target_name": "Katsuyu",
@@ -221,7 +230,7 @@
       ]
     },
     {
-      "target_name": "Kaguya Ōtsutsuki",
+      "target_name": "Kaguya \u014ctsutsuki",
       "candidate_id": "dattebayo:940",
       "image_count": 1,
       "images": [
@@ -237,7 +246,7 @@
       ]
     },
     {
-      "target_name": "Hagoromo Ōtsutsuki",
+      "target_name": "Hagoromo \u014ctsutsuki",
       "candidate_id": "dattebayo:935",
       "image_count": 1,
       "images": [
@@ -342,7 +351,7 @@
       ]
     },
     {
-      "target_name": "Hamura Ōtsutsuki",
+      "target_name": "Hamura \u014ctsutsuki",
       "candidate_id": "dattebayo:936",
       "image_count": 1,
       "images": [
@@ -358,7 +367,7 @@
       ]
     },
     {
-      "target_name": "Indra Ōtsutsuki",
+      "target_name": "Indra \u014ctsutsuki",
       "candidate_id": "dattebayo:938",
       "image_count": 1,
       "images": [
@@ -374,7 +383,7 @@
       ]
     },
     {
-      "target_name": "Asura Ōtsutsuki",
+      "target_name": "Asura \u014ctsutsuki",
       "candidate_id": "dattebayo:934",
       "image_count": 1,
       "images": [
@@ -390,7 +399,7 @@
       ]
     },
     {
-      "target_name": "Gyūki",
+      "target_name": "Gy\u016bki",
       "candidate_id": "dattebayo:345",
       "image_count": 1,
       "images": [
@@ -427,13 +436,12 @@
       "image_count": 1,
       "images": [
         {
-          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
-          "status": "missing",
-          "format": null,
-          "width": null,
-          "height": null,
-          "sha256": null,
-          "bytes": null
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d7/Jiraiya_Posing.png/revision/latest?cb=20191209054336",
+          "status": "valid",
+          "format": "png",
+          "width": 1916,
+          "height": 1076,
+          "source_ref": "https://naruto.fandom.com/wiki/Jiraiya"
         }
       ]
     },
@@ -563,7 +571,7 @@
       ]
     },
     {
-      "target_name": "Ōnoki",
+      "target_name": "\u014cnoki",
       "candidate_id": "dattebayo:925",
       "image_count": 2,
       "images": [
@@ -588,7 +596,7 @@
       ]
     },
     {
-      "target_name": "Mū",
+      "target_name": "M\u016b",
       "candidate_id": "dattebayo:844",
       "image_count": 1,
       "images": [
@@ -604,7 +612,7 @@
       ]
     },
     {
-      "target_name": "Gengetsu Hōzuki",
+      "target_name": "Gengetsu H\u014dzuki",
       "candidate_id": "dattebayo:428",
       "image_count": 1,
       "images": [
@@ -741,7 +749,7 @@
       ]
     },
     {
-      "target_name": "Danzō Shimura",
+      "target_name": "Danz\u014d Shimura",
       "candidate_id": "dattebayo:1093",
       "image_count": 1,
       "images": [
@@ -759,11 +767,20 @@
     {
       "target_name": "Chiyo",
       "candidate_id": "dattebayo:148",
-      "image_count": 0,
-      "images": []
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest?cb=20160113171702",
+          "status": "valid",
+          "format": "png",
+          "width": 1440,
+          "height": 1080,
+          "source_ref": "https://naruto.fandom.com/wiki/Chiyo"
+        }
+      ]
     },
     {
-      "target_name": "Hanzō",
+      "target_name": "Hanz\u014d",
       "candidate_id": "dattebayo:368",
       "image_count": 1,
       "images": [
@@ -779,7 +796,7 @@
       ]
     },
     {
-      "target_name": "Mei Terumī",
+      "target_name": "Mei Terum\u012b",
       "candidate_id": "dattebayo:1223",
       "image_count": 2,
       "images": [
@@ -948,7 +965,7 @@
       ]
     },
     {
-      "target_name": "Son Gokū",
+      "target_name": "Son Gok\u016b",
       "candidate_id": "dattebayo:1134",
       "image_count": 1,
       "images": [
@@ -964,7 +981,7 @@
       ]
     },
     {
-      "target_name": "Kokuō",
+      "target_name": "Koku\u014d",
       "candidate_id": "dattebayo:669",
       "image_count": 1,
       "images": [
@@ -996,7 +1013,7 @@
       ]
     },
     {
-      "target_name": "Chōmei",
+      "target_name": "Ch\u014dmei",
       "candidate_id": "dattebayo:153",
       "image_count": 1,
       "images": [
