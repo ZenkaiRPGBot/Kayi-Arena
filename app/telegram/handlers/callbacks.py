@@ -15,9 +15,11 @@ from app.telegram.keyboards import (
     build_catalogue_universes_keyboard,
     build_forfeit_confirm_keyboard,
     build_help_keyboard,
+    build_history_keyboard,
     build_home_keyboard,
     build_leaderboard_keyboard,
     build_match_results_keyboard,
+    build_profile_keyboard,
     build_support_keyboard,
     build_universe_selection_keyboard,
 )
@@ -36,6 +38,7 @@ from app.telegram.texts import (
     render_catalogue_universes,
     render_forfeit_confirmation,
     render_help_topic,
+    render_history,
     render_home_group,
     render_home_private,
     render_leaderboard,
@@ -289,10 +292,42 @@ async def handle_arena_callback(
     if action == "pr":
         target_id = user_id if (not args or args[0] == "self") else args[0]
         profile = await coordinator.stats_provider.get_profile(target_id)
-        await send_message_safe(
+        text = render_profile(profile, fallback_name=coordinator.display_name(target_id))
+        markup = build_profile_keyboard(target_id)
+        if getattr(msg, "text", None) and "Match History" in msg.text:
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=text,
+                reply_markup=markup,
+            )
+        else:
+            await send_message_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                text=text,
+                reply_markup=markup,
+            )
+        await answer_callback_safe(query)
+        return
+
+    if action == "hs":
+        target_id = args[0] if args else user_id
+        page = _parse_int(args[1]) if len(args) >= 2 else 0
+        safe_page = max(0, page or 0)
+        available = coordinator.stats_provider.is_available()
+        entries, total_pages = await coordinator.stats_provider.get_history(
+            target_id, page=safe_page, per_page=10
+        )
+        await edit_message_text_safe(
             coordinator.bot,
             chat_id=chat_id,
-            text=render_profile(profile, fallback_name=coordinator.display_name(target_id)),
+            message_id=msg_id,
+            text=render_history(entries, available=available),
+            reply_markup=build_history_keyboard(
+                target_id=target_id, page=safe_page, total_pages=total_pages
+            ),
         )
         await answer_callback_safe(query)
         return

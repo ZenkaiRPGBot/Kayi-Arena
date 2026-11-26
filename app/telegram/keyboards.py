@@ -470,3 +470,30 @@ def build_leaderboard_keyboard(
         rows.append([_btn("🔄 Refresh", callback_data=encode_cb("lb", scope, page))])
     rows.append([_btn("« Back to Home", callback_data=encode_cb("home"))])
     return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def build_profile_keyboard(target_id: str) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [_btn("📜 Match History", callback_data=encode_cb("hs", target_id, 0))]
+        ]
+    )
+
+
+def build_history_keyboard(
+    *,
+    target_id: str,
+    page: int,
+    total_pages: int,
+) -> InlineKeyboardMarkup:
+    rows: list[list[InlineKeyboardButton]] = []
+    if total_pages > 1:
+        nav: list[InlineKeyboardButton] = []
+        if page > 0:
+            nav.append(_btn("‹", callback_data=encode_cb("hs", target_id, page - 1)))
+        nav.append(_btn(f"{page + 1}/{total_pages}", callback_data=encode_cb("noop")))
+        if page + 1 < total_pages:
+            nav.append(_btn("›", callback_data=encode_cb("hs", target_id, page + 1)))
+        rows.append(nav)
+    rows.append([_btn("« Back to Profile", callback_data=encode_cb("pr", target_id))])
+    return InlineKeyboardMarkup(inline_keyboard=rows)

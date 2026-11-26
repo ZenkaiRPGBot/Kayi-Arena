@@ -4,13 +4,22 @@ from __future__ import annotations
 
 import logging
 import time
-from typing import Any, Awaitable, Callable
+from typing import Any, Awaitable, Callable, Iterable
 
 from aiogram import BaseMiddleware, Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.types import BotCommand, TelegramObject, Update
+from aiogram.types import (
+    BotCommand,
+    BotCommandScopeAllChatAdministrators,
+    BotCommandScopeAllGroupChats,
+    BotCommandScopeAllPrivateChats,
+    BotCommandScopeChat,
+    BotCommandScopeDefault,
+    TelegramObject,
+    Update,
+)
 
 from app.database import CharacterDatabase
 from app.matches import MatchManager
@@ -29,15 +38,23 @@ from app.telegram.service import ArenaTelegramCoordinator
 logger = logging.getLogger(__name__)
 
 PUBLIC_BOT_COMMANDS: tuple[BotCommand, ...] = (
-    BotCommand(command="start", description="Home menu"),
-    BotCommand(command="arena", description="Start a draft battle or pick a universe"),
-    BotCommand(command="game", description="View or recover your active match"),
-    BotCommand(command="list", description="Browse the character catalogue"),
+    BotCommand(command="start", description="Welcome to Kayi Arena"),
+    BotCommand(command="arena", description="Challenge another player"),
+    BotCommand(command="game", description="View your active match"),
     BotCommand(command="profile", description="View your player profile"),
-    BotCommand(command="leaderboard", description="View competitive leaderboards"),
-    BotCommand(command="history", description="View your match history"),
-    BotCommand(command="help", description="Read the Kayi Arena guide"),
-    BotCommand(command="ping", description="Check bot responsiveness"),
+    BotCommand(command="leaderboard", description="View player rankings"),
+    BotCommand(command="list", description="Explore anime characters"),
+    BotCommand(command="help", description="Learn how to play"),
+    BotCommand(command="ping", description="Check bot response time"),
+)
+
+GROUP_BOT_COMMANDS: tuple[BotCommand, ...] = tuple(
+    cmd for cmd in PUBLIC_BOT_COMMANDS if cmd.command != "start"
+)
+
+ADMIN_BOT_COMMANDS: tuple[BotCommand, ...] = (
+    BotCommand(command="admin", description="Open administration panel"),
+    *PUBLIC_BOT_COMMANDS,
 )
 
 
@@ -153,5 +170,64 @@ def create_dispatcher(
     return dp, coordinator
 
 
-async def register_bot_commands(bot: Bot) -> None:
-    await bot.set_my_commands(list(PUBLIC_BOT_COMMANDS))
+async def register_bot_commands(
+    bot: Bot,
+    config: BotConfig | None = None,
+    *,
+    previous_admin_ids: Iterable[int] = (),
+) -> None:
+    """Register private, group, and per-admin BotCommand scopes safely."""
+    try:
+        await bot.set_my_commands(
+            list(PUBLIC_BOT_COMMANDS),
+            scope=BotCommandScopeDefault(),
+        )
+    except Exception as exc:
+        logger.warning("Failed setting default bot commands: %s", type(exc).__name__)
+
+    try:
+        await bot.set_my_commands(
+            list(PUBLIC_BOT_COMMANDS),
+            scope=BotCommandScopeAllPrivateChats(),
+        )
+    except Exception as exc:
+        logger.warning("Failed setting private bot commands: %s", type(exc).__name__)
+
+    try:
+        await bot.set_my_commands(
+            list(GROUP_BOT_COMMANDS),
+            scope=BotCommandScopeAllGroupChats(),
+        )
+    except Exception as exc:
+        logger.warning("Failed setting group bot commands: %s", type(exc).__name__)
+
+    if hasattr(bot, "delete_my_commands"):
+        try:
+            await bot.delete_my_commands(scope=BotCommandScopeAllChatAdministrators())
+        except Exception as exc:
+            logger.debug("Cleanup of all-chat-admins command scope skipped: %s", type(exc).__name__)
+
+    current_admins = set(config.all_admin_ids()) if config is not None else set()
+    for revoked_id in set(previous_admin_ids) - current_admins:
+        if hasattr(bot, "delete_my_commands"):
+            try:
+                await bot.delete_my_commands(scope=BotCommandScopeChat(chat_id=revoked_id))
+            except Exception as exc:
+                logger.warning(
+                    "Failed clearing revoked admin commands for %s: %s",
+                    revoked_id,
+                    type(exc).__name__,
+                )
+
+    for admin_id in sorted(current_admins):
+        try:
+            await bot.set_my_commands(
+                list(ADMIN_BOT_COMMANDS),
+                scope=BotCommandScopeChat(chat_id=admin_id),
+            )
+        except Exception as exc:
+            logger.warning(
+                "Failed setting admin commands for %s: %s",
+                admin_id,
+                type(exc).__name__,
+            )

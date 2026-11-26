@@ -107,7 +107,7 @@ async def run_bot() -> None:
         me = await asyncio.wait_for(bot.get_me(), timeout=10.0)
         if me.username:
             coordinator.config = replace(coordinator.config, bot_username=me.username)
-        await asyncio.wait_for(register_bot_commands(bot), timeout=10.0)
+        await asyncio.wait_for(register_bot_commands(bot, coordinator.config), timeout=10.0)
     except Exception as exc:
         logger.warning("Startup metadata sync skipped: %s", type(exc).__name__)
 

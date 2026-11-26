@@ -258,9 +258,105 @@ def test_callback_encoding_and_limits() -> None:
 
 
 def test_public_commands_use_arena_not_draft() -> None:
-    names = {c.command for c in PUBLIC_BOT_COMMANDS}
-    assert "arena" in names
-    assert "draft" not in names
+    from app.telegram.bot import ADMIN_BOT_COMMANDS, GROUP_BOT_COMMANDS
+
+    assert [(c.command, c.description) for c in PUBLIC_BOT_COMMANDS] == [
+        ("start", "Welcome to Kayi Arena"),
+        ("arena", "Challenge another player"),
+        ("game", "View your active match"),
+        ("profile", "View your player profile"),
+        ("leaderboard", "View player rankings"),
+        ("list", "Explore anime characters"),
+        ("help", "Learn how to play"),
+        ("ping", "Check bot response time"),
+    ]
+    assert [c.command for c in GROUP_BOT_COMMANDS] == [
+        "arena",
+        "game",
+        "profile",
+        "leaderboard",
+        "list",
+        "help",
+        "ping",
+    ]
+    assert ADMIN_BOT_COMMANDS[0].command == "admin"
+    assert ADMIN_BOT_COMMANDS[0].description == "Open administration panel"
+    assert list(ADMIN_BOT_COMMANDS[1:]) == list(PUBLIC_BOT_COMMANDS)
+
+
+@pytest.mark.asyncio
+async def test_register_bot_commands_scopes_and_profile_history() -> None:
+    from aiogram.types import (
+        BotCommandScopeAllChatAdministrators,
+        BotCommandScopeAllGroupChats,
+        BotCommandScopeAllPrivateChats,
+        BotCommandScopeChat,
+        BotCommandScopeDefault,
+    )
+    from app.telegram.bot import ADMIN_BOT_COMMANDS, GROUP_BOT_COMMANDS, register_bot_commands
+
+    recorded_sets: list[tuple[list[str], Any]] = []
+    recorded_deletes: list[Any] = []
+
+    class _ScopeBot(MockBotRecorder):
+        async def set_my_commands(self, commands: list[Any], scope: Any = None, **kwargs: Any) -> bool:
+            recorded_sets.append(([c.command for c in commands], scope))
+            return True
+
+        async def delete_my_commands(self, scope: Any = None, **kwargs: Any) -> bool:
+            recorded_deletes.append(scope)
+            return True
+
+    bot = _ScopeBot()
+    cfg = BotConfig(
+        bot_token="fake:token",
+        bot_username="KayiArenaBot",
+        owner_id=1001,
+        admin_ids=(2002,),
+    )
+    await register_bot_commands(bot, cfg, previous_admin_ids=(3003,))
+
+    assert any(isinstance(s, BotCommandScopeDefault) and cmds == [c.command for c in PUBLIC_BOT_COMMANDS] for cmds, s in recorded_sets)
+    assert any(isinstance(s, BotCommandScopeAllPrivateChats) and cmds == [c.command for c in PUBLIC_BOT_COMMANDS] for cmds, s in recorded_sets)
+    assert any(isinstance(s, BotCommandScopeAllGroupChats) and cmds == [c.command for c in GROUP_BOT_COMMANDS] for cmds, s in recorded_sets)
+    assert any(isinstance(s, BotCommandScopeAllChatAdministrators) for s in recorded_deletes)
+    assert any(isinstance(s, BotCommandScopeChat) and s.chat_id == 3003 for s in recorded_deletes)
+    admin_chats = {s.chat_id: cmds for cmds, s in recorded_sets if isinstance(s, BotCommandScopeChat)}
+    assert admin_chats[1001] == [c.command for c in ADMIN_BOT_COMMANDS]
+    assert admin_chats[2002] == [c.command for c in ADMIN_BOT_COMMANDS]
+
+    # /profile includes default-styled Match History button & /history handler still works
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION)
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr)
+    alex = _make_user(101, "Alex")
+
+    await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=alex, text="/profile"))
+    prof_msg_id = bot.next_msg_id
+    prof_markup = bot.sent_messages[-1]["reply_markup"]
+    hist_btn = prof_markup.inline_keyboard[0][0]
+    assert hist_btn.text == "📜 Match History"
+    assert "style" not in hist_btn.model_dump(exclude_none=True)
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            2,
+            chat_id=101,
+            chat_type="private",
+            message_id=prof_msg_id,
+            user=alex,
+            data=hist_btn.callback_data,
+            recorder=bot,
+        ),
+    )
+    assert "Match History" in bot.edited_messages[-1]["text"]
+
+    await dp.feed_update(bot, _make_message_update(3, chat_id=101, chat_type="private", user=alex, text="/history"))
+    assert "Match History" in bot.sent_messages[-1]["text"]
+    await coordinator.shutdown()
+    db.close()
 
 
 def test_home_keyboard_and_button_styles() -> None:

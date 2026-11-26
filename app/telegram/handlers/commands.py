@@ -18,6 +18,7 @@ from app.telegram.keyboards import (
     build_home_keyboard,
     build_leaderboard_keyboard,
     build_no_active_game_keyboard,
+    build_profile_keyboard,
     build_universe_selection_keyboard,
 )
 from app.telegram.safe_api import (
@@ -230,6 +231,7 @@ async def cmd_profile(message: Message, coordinator: ArenaTelegramCoordinator) -
         coordinator.bot,
         chat_id=message.chat.id,
         text=render_profile(profile, fallback_name=coordinator.display_name(player_id)),
+        reply_markup=build_profile_keyboard(player_id),
     )
 
 
