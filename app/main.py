@@ -81,6 +81,7 @@ async def run_bot() -> None:
             "restored_matches": recovery_report.restored_matches,
             "pending_challenges": recovery_report.pending_challenges,
         },
+        readiness_check=store.integrity_check,
         bot=bot if use_webhook else None,
         dp=dp if use_webhook else None,
         webhook_path=config.webhook_path if use_webhook else None,

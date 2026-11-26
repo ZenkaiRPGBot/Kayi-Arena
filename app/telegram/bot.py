@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import time
 from typing import Any, Awaitable, Callable
 
 from aiogram import BaseMiddleware, Bot, Dispatcher
@@ -61,7 +62,11 @@ class UpdateDedupMiddleware(BaseMiddleware):
                 self._coordinator.register_chat(
                     msg.chat.id, msg.chat.type, getattr(msg.chat, "title", None)
                 )
-        return await handler(event, data)
+        t0 = time.perf_counter()
+        try:
+            return await handler(event, data)
+        finally:
+            self._coordinator.record_latency_ms((time.perf_counter() - t0) * 1000.0)
 
 
 class MaintenanceMiddleware(BaseMiddleware):
@@ -103,7 +108,11 @@ class MaintenanceMiddleware(BaseMiddleware):
                         text="🔧 <b>Maintenance Mode</b>\n\nKayi Arena is undergoing maintenance. Please try again shortly.",
                     )
                     return None
-        return await handler(event, data)
+        t0 = time.perf_counter()
+        try:
+            return await handler(event, data)
+        finally:
+            self._coordinator.record_latency_ms((time.perf_counter() - t0) * 1000.0)
 
 
 def create_bot(config: BotConfig) -> Bot:

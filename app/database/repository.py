@@ -122,6 +122,8 @@ class CharacterDatabase:
         self._conn = sqlite3.connect(self.db_path)
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA foreign_keys = ON")
+        self._manifest_cache: dict[str, DatasetManifest] = {}
+        self._dataset_record_cache: dict[str, dict[str, DatasetRecord]] = {}
         self._init_schema()
 
     def __enter__(self) -> CharacterDatabase:
@@ -808,6 +810,16 @@ class CharacterDatabase:
 
     def load_manifest(self, dataset_version: str) -> DatasetManifest:
         """Module 3 DatasetReader contract: load & verify content hash on every read."""
+        cached = self._manifest_cache.get(dataset_version)
+        if cached is not None:
+            hash_row = self._conn.execute(
+                "SELECT content_hash FROM published_datasets WHERE dataset_version = ?",
+                (dataset_version,),
+            ).fetchone()
+            if hash_row is not None and hash_row["content_hash"] == cached.content_hash:
+                return cached
+            self._manifest_cache.pop(dataset_version, None)
+            self._dataset_record_cache.pop(dataset_version, None)
         row = self._conn.execute(
             "SELECT manifest_json, content_hash FROM published_datasets WHERE dataset_version = ?",
             (dataset_version,),
@@ -824,14 +836,19 @@ class CharacterDatabase:
                 DatasetErrorCode.HASH_MISMATCH,
                 f"Content hash verification failed for dataset {dataset_version!r}",
             )
+        self._manifest_cache[dataset_version] = manifest
+        self._dataset_record_cache[dataset_version] = {
+            rec.character_id: rec for rec in manifest.records
+        }
         return manifest
 
     def get_character(self, dataset_version: str, character_id: str) -> DatasetRecord:
         """Module 3 DatasetReader contract: fetch character from verified pinned version."""
-        manifest = self.load_manifest(dataset_version)
-        for rec in manifest.records:
-            if rec.character_id == character_id:
-                return rec
+        self.load_manifest(dataset_version)
+        records_map = self._dataset_record_cache[dataset_version]
+        rec = records_map.get(character_id)
+        if rec is not None:
+            return rec
         raise KeyError(
             f"Character {character_id!r} not found in dataset version {dataset_version!r}"
         )

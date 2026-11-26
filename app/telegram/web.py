@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Callable
 
 from aiohttp import web
 
@@ -14,6 +14,7 @@ def build_health_app(
     *,
     service_name: str = "kayi-arena",
     extra_status: dict[str, Any] | None = None,
+    readiness_check: Callable[[], tuple[bool, str]] | None = None,
     bot: Bot | None = None,
     dp: Dispatcher | None = None,
     webhook_path: str | None = None,
@@ -31,13 +32,21 @@ def build_health_app(
         )
 
     async def handle_health(_request: web.Request) -> web.Response:
+        status = "ok"
+        http_code = 200
         payload: dict[str, Any] = {
-            "status": "ok",
+            "status": status,
             "service": service_name,
         }
+        if readiness_check is not None:
+            ok, msg = readiness_check()
+            payload["database"] = msg
+            if not ok:
+                payload["status"] = "degraded"
+                http_code = 503
         if extra_status:
             payload.update(extra_status)
-        return web.json_response(payload)
+        return web.json_response(payload, status=http_code)
 
     app.router.add_get("/", handle_root)
     app.router.add_get("/health", handle_health)

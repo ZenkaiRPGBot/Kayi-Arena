@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import time
+
 from aiogram import Router
 from aiogram.filters import Command, CommandObject, CommandStart
 from aiogram.types import Message
@@ -282,11 +284,47 @@ async def cmd_help(message: Message, coordinator: ArenaTelegramCoordinator) -> N
 
 
 async def cmd_ping(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
+    app_t0 = time.perf_counter()
     coordinator.register_user(message.from_user)
+
+    db_t0 = time.perf_counter()
+    db_ok, db_msg = (
+        coordinator.store.integrity_check()
+        if coordinator.store is not None
+        else (True, "in-memory")
+    )
+    db_ms = (time.perf_counter() - db_t0) * 1000.0
+
+    tg_ms: float | None = None
+    if hasattr(coordinator.bot, "get_me"):
+        tg_t0 = time.perf_counter()
+        try:
+            await coordinator.bot.get_me()
+            tg_ms = (time.perf_counter() - tg_t0) * 1000.0
+        except Exception:
+            tg_ms = None
+
+    app_ms = max(0.0, (time.perf_counter() - app_t0) * 1000.0 - db_ms - (tg_ms or 0.0))
+    tg_str = f"{tg_ms:.1f} ms" if tg_ms is not None else "N/A"
+    lines = [
+        "🏓 <b>Pong!</b> Kayi Arena is online.",
+        "",
+        f"• App processing: <code>{app_ms:.2f} ms</code>",
+        f"• Database ({'OK' if db_ok else 'ERR'}): <code>{db_ms:.2f} ms</code>",
+        f"• Telegram API (getMe): <code>{tg_str}</code>",
+    ]
+    pct = coordinator.latency_percentiles()
+    if pct is not None:
+        lines.append(
+            f"• Rolling ({int(pct['count'])} reqs): "
+            f"P50 <code>{pct['median']:.1f}ms</code> | "
+            f"P95 <code>{pct['p95']:.1f}ms</code> | "
+            f"P99 <code>{pct['p99']:.1f}ms</code>"
+        )
     await send_message_safe(
         coordinator.bot,
         chat_id=message.chat.id,
-        text="🏓 <b>Pong!</b> Kayi Arena is online.",
+        text="\n".join(lines),
     )
 
 

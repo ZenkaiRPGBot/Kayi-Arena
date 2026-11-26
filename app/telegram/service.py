@@ -10,6 +10,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import time
+from collections import deque
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Mapping
 
@@ -128,6 +129,23 @@ class ArenaTelegramCoordinator:
         self._broadcast_drafts: dict[str, str] = {}
         self._admin_input_state: dict[str, tuple[str, str]] = {}
         self._welcome_video_override: str | None = None
+        self._latency_samples: deque[float] = deque(maxlen=100)
+
+    def record_latency_ms(self, ms: float) -> None:
+        if ms >= 0.0:
+            self._latency_samples.append(float(ms))
+
+    def latency_percentiles(self) -> dict[str, float] | None:
+        if len(self._latency_samples) < 2:
+            return None
+        ordered = sorted(self._latency_samples)
+        n = len(ordered)
+        return {
+            "median": ordered[n // 2],
+            "p95": ordered[min(n - 1, int(0.95 * (n - 1)))],
+            "p99": ordered[min(n - 1, int(0.99 * (n - 1)))],
+            "count": float(n),
+        }
 
     def uptime_seconds(self) -> float:
         return max(0.0, time.monotonic() - self._started_at)

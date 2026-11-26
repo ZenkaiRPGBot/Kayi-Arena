@@ -390,7 +390,7 @@ async def test_deleted_message_recovery_generation_invalidation_and_dataset_pinn
 def test_schema_migration_backup_rollback_corrupt_state_and_media_cache(tmp_path: Path) -> None:
     db_path = tmp_path / "state.sqlite3"
     store = SqliteMatchStore(db_path)
-    assert store.current_schema_version() == 2
+    assert store.current_schema_version() == 3
 
     # Online SQLite backup
     backup_path = tmp_path / "backup.sqlite3"
