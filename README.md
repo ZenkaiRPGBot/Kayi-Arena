@@ -4,7 +4,7 @@ Competitive Telegram-based anime character drafting game under the **Kayi Bots**
 
 - **Bot name:** Kayi Arena (`@KayiArenaBot`)
 - **Primary gameplay command:** `/draft`
-- **Current status:** **Module 1 (Core Drafting Engine)**, **Module 2 (Character Evaluation & Scoring)**, and **Module 3 (Match Resolution)** implemented and verified; Modules 4–9 are awaiting specification.
+- **Current status:** **Modules 1–4A** (Core Drafting, Scoring `SCORE-1.0`, Match Resolution `RES-1.0`, Database Foundation) implemented and verified; Modules 4B–9 are in progress or awaiting specification.
 
 ## Setup
 
@@ -41,7 +41,8 @@ python -m scripts.demo_resolution
 | 1 | Core Drafting Engine | Implemented & Tested (`v1.0`) |
 | 2 | Character Evaluation & Scoring | Implemented & Tested (`SCORE-1.0`) |
 | 3 | Match Resolution | Implemented & Tested (`RES-1.0`) |
-| 4 | Universe & Character Database | Awaiting Planning |
+| 4A | Universe & Character Database (Foundation) | Implemented & Tested (`SQLite` + `KA-IMPORT-1.0`) |
+| 4B | Catalogue & Image Tooling | In Progress (Parallel Branch) |
 | 5 | Challenge & Match Management | Awaiting Planning |
 | 6 | Telegram UI & User Experience | Awaiting Planning |
 | 7 | Persistence & Game Recovery | Awaiting Planning |
@@ -53,8 +54,10 @@ python -m scripts.demo_resolution
 - [Module 1 Specification](docs/MODULE_01_CORE_DRAFTING_ENGINE.md)
 - [Module 2 Final Scoring Specification](docs/Kayi%20Arena%20%E2%80%94%20Module%202%20Final%20Scoring%20Specification%20%26%20Implementation%20Handoff%20v1.0.md)
 - [Module 3 Match Resolution Specification](docs/MODULE_03_MATCH_RESOLUTION_SPECIFICATION.md)
+- [Versioned JSON Import Format (`KA-IMPORT-1.0`)](docs/IMPORT_FORMAT.md)
 - [Progress Tracker](docs/PROGRESS.md)
 - [Architecture & Technical Decisions](docs/DECISIONS.md)
 - [Module 1 Implementation Report](docs/MODULE_01_IMPLEMENTATION_REPORT.md)
 - [Module 2 Implementation Report](docs/MODULE_02_IMPLEMENTATION_REPORT.md)
 - [Module 3 Implementation Report](docs/MODULE_03_IMPLEMENTATION_REPORT.md)
+- [Module 4A Implementation Report](docs/MODULE_04A_IMPLEMENTATION_REPORT.md)

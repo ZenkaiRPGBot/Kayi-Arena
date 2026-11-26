@@ -60,3 +60,20 @@
 
 3. **Canonical Serialization**
    - `canonical_json()` uses `json.dumps(..., sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)` so UTF-8 Unicode characters serialize directly without `\uXXXX` escaping, floats/NaN/Infinity are forbidden, and optional empty `details` are omitted.
+
+## Module 4A: Database Foundation
+
+1. **Zero-dependency SQLite persistence (`app/database/`)**
+   - Uses Python 3.12 stdlib `sqlite3` with `PRAGMA foreign_keys = ON` and transactional writes, supporting both `:memory:` and persistent file databases.
+   - Implements Module 3's `DatasetReader` protocol directly (`load_manifest`, `get_character`) and exports Module 1-compatible `(catalog, rarity_weights, dataset_version)` via `export_draft_catalog()`.
+
+2. **Five rarity tiers & configurable minimums**
+   - Enforces exact 5 rarity tiers: `Common`, `Uncommon`, `Rare`, `Epic`, `Legendary` with configurable positive universe draw weights.
+   - Enforces Module 1's hard floor of `14` characters while keeping each universe's `min_pool_size` configurable (`>= 14`).
+
+3. **Publication safeguards & mandatory advisory health reports**
+   - Production datasets require active universe, `EvaluationStatus.APPROVED` records only, verified `ImageValidationStatus.VERIFIED` metadata, valid 5-tier rarities, and Module 2 `validate_manifest_for_publication()` (`DV1`–`DV8`).
+   - Generates mandatory `DatasetHealthReport` (rarity, Power, Fit, specialist, healer, concentration, tie frequencies, and Module 2 `compute_diagnostics()`) without imposing artificial caps, mandatory healer quotas, or pity systems.
+
+4. **Parallel development contract (`KA-IMPORT-1.0`)**
+   - Documented in `docs/IMPORT_FORMAT.md`; supports incomplete candidate imports (`draft` status) and AI evaluation batches independently of external providers/scrapers.
