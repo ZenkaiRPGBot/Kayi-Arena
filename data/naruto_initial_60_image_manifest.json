@@ -1,0 +1,1079 @@
+{
+  "characters": [
+    {
+      "target_name": "Naruto Uzumaki",
+      "candidate_id": "dattebayo:1344",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "b3ec46981edbf4d3400abae907a917631e6c1555459be48b6ec415258460f44d",
+          "bytes": 113240
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7d/Naruto_Part_II.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "2a8b290c2751fe2d2ccbbe4e49855bbe8c737ed888a4cad399c78fa857b05333",
+          "bytes": 95410
+        }
+      ]
+    },
+    {
+      "target_name": "Sasuke Uchiha",
+      "candidate_id": "dattebayo:1307",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1350,
+          "height": 1000,
+          "sha256": "480cc531bcd35cbb275452d10f4514233eae3ecab554b829b87e80fd5b526ac6",
+          "bytes": 89252
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/13/Sasuke_Part_2.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 2700,
+          "height": 2000,
+          "sha256": "06f2559509682e5e2a3ce11ee116f75e23ef4f813cfbe9631723c9361116d86b",
+          "bytes": 178644
+        }
+      ]
+    },
+    {
+      "target_name": "Madara Uchiha",
+      "candidate_id": "dattebayo:1299",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "b294b0e5813eb73b2269dd15a540f8d051986cd5f751985ea34fa6da026ff126",
+          "bytes": 63734
+        }
+      ]
+    },
+    {
+      "target_name": "Shikamaru Nara",
+      "candidate_id": "dattebayo:878",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/44/Shikamaru_Part_I.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1362,
+          "height": 1075,
+          "sha256": "73d33109fecb218ba7b564caffd219910ee5bfabd0588901b12e42472a92e0b5",
+          "bytes": 54126
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/9a/Shikamaru_Nara.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1362,
+          "height": 1075,
+          "sha256": "4315170addd5c06ba67799956894713b56fea8aeb81a801f503d0c8b30e4ba6d",
+          "bytes": 112402
+        }
+      ]
+    },
+    {
+      "target_name": "Tsunade",
+      "candidate_id": "dattebayo:1280",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1481,
+          "height": 1080,
+          "sha256": "da014c97e73f8126587ceccc70067ce93b05a50df6161b59222efa6d3b4b088b",
+          "bytes": 121212
+        }
+      ]
+    },
+    {
+      "target_name": "Sakura Haruno",
+      "candidate_id": "dattebayo:374",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "44b119154f4d18b8f936aaa0c5f23820be8a37e2198b1593b5ce2b41ca65f128",
+          "bytes": 132322
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/ba/Sakurap2.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "cf9e49a37274e26f161c2cbfd53c46546c7e213f461c3dfefb407be2e41a0313",
+          "bytes": 125016
+        }
+      ]
+    },
+    {
+      "target_name": "Kakashi Hatake",
+      "candidate_id": "dattebayo:376",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1439,
+          "height": 1076,
+          "sha256": "18d5a7eb1ced955ca6e6e1ae1c046f4d15243f8bc0dca67bf52fea29227d91a0",
+          "bytes": 66958
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/25/Kakashi_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1439,
+          "height": 1076,
+          "sha256": "1aca6c683cc81056bbaa457feb4a0f5ccb8fdbf7b98fb5a705fbc3b7921684d8",
+          "bytes": 181986
+        }
+      ]
+    },
+    {
+      "target_name": "Rock Lee",
+      "candidate_id": "dattebayo:739",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/97/Rock_Lee_Part_I.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "da518440143b9838a4fc9d3bff3d3b900f046008d01dfe2bef7b2dea7d8d2767",
+          "bytes": 96590
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7d/Lee_timeskip.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "1ae4a21d7bfcb43a6379e9972ee68bf0c43321db3a5bad603d54456c78fb7d39",
+          "bytes": 118018
+        }
+      ]
+    },
+    {
+      "target_name": "Kurama",
+      "candidate_id": "dattebayo:711",
+      "image_count": 0,
+      "images": []
+    },
+    {
+      "target_name": "Katsuyu",
+      "candidate_id": "dattebayo:608",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/59/Katsuyu_Summoned.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1912,
+          "height": 1078,
+          "sha256": "2a0ea256e5e0e2278cd636f67c9aed0f2095b2f484b809925fa3c666b8b4560b",
+          "bytes": 93536
+        }
+      ]
+    },
+    {
+      "target_name": "Hashirama Senju",
+      "candidate_id": "dattebayo:1063",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7e/Hashirama_Senju.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "1338ab3f8ec5f8d48ced515923df4f6de9374ea6156c57e227827f957ecbabd7",
+          "bytes": 55490
+        }
+      ]
+    },
+    {
+      "target_name": "Kaguya Ōtsutsuki",
+      "candidate_id": "dattebayo:940",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6c/Kaguya_%C5%8Ctsutsuki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 2052,
+          "height": 1434,
+          "sha256": "bf799cf83022aeb2fe2b4f20c1d35ff3084bf275f6777a662f319d9c16ae8360",
+          "bytes": 162088
+        }
+      ]
+    },
+    {
+      "target_name": "Hagoromo Ōtsutsuki",
+      "candidate_id": "dattebayo:935",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/62/Hagoromo.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "da28729b798ad064497d0407e2e91ac3e8196c76d2b8581da9c914a5ee91cd7f",
+          "bytes": 97732
+        }
+      ]
+    },
+    {
+      "target_name": "Obito Uchiha",
+      "candidate_id": "dattebayo:1303",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4a/Obito_Uchiha.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "e89813e334de7b067c627581534a0bcd01769feaf9b4b5ab4b174809e3b49b39",
+          "bytes": 55644
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/3c/Obito.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "62e84e4db0123ce738286d5d50e4c628e2ae71dce96f9c9ce97ad8b0fab2e978",
+          "bytes": 96526
+        }
+      ]
+    },
+    {
+      "target_name": "Nagato",
+      "candidate_id": "dattebayo:861",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/46/Nagato.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1376,
+          "height": 872,
+          "sha256": "e9a84df5f4e108679527b1852c46c8854d54391f030a6af82be80779197470a2",
+          "bytes": 48952
+        }
+      ]
+    },
+    {
+      "target_name": "Minato Namikaze",
+      "candidate_id": "dattebayo:865",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/71/Minato_Namikaze.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "193fa9c32804e18f611c89825a5c04caf875630a7c17c872c6a9ce9e659af212",
+          "bytes": 165842
+        }
+      ]
+    },
+    {
+      "target_name": "Tobirama Senju",
+      "candidate_id": "dattebayo:1066",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "c4cc8fc09d2c6b8a42538f563da4a252aabf35ceb15100418cd45bf45a9f3fe0",
+          "bytes": 133142
+        }
+      ]
+    },
+    {
+      "target_name": "Itachi Uchiha",
+      "candidate_id": "dattebayo:1293",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "0b55d5d498d29fb59878e0041b29580e46150de20fa470af355fd525457e2d6e",
+          "bytes": 80616
+        }
+      ]
+    },
+    {
+      "target_name": "Hamura Ōtsutsuki",
+      "candidate_id": "dattebayo:936",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e8/Hamura.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "c2734ebd244a7e384a59212e5d69311921cd34b5e54a3fdc1cc7812649b150e8",
+          "bytes": 123144
+        }
+      ]
+    },
+    {
+      "target_name": "Indra Ōtsutsuki",
+      "candidate_id": "dattebayo:938",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/bd/Indra_%C5%8Ctsutsuki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "c32be0948691c19486b222327bbcd93bfa8171e4cb7899d009f80e4423e1186c",
+          "bytes": 119916
+        }
+      ]
+    },
+    {
+      "target_name": "Asura Ōtsutsuki",
+      "candidate_id": "dattebayo:934",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/56/Asura_%C5%8Ctsutsuki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "a7d46752ff03490d01d7e843094dd67fe94089243e94863c8471b217307cf059",
+          "bytes": 114722
+        }
+      ]
+    },
+    {
+      "target_name": "Gyūki",
+      "candidate_id": "dattebayo:345",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d7/Gyuki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1804,
+          "height": 1080,
+          "sha256": "1bad612b64bc5b8bf4d5ce08c66c2165eb9e96e1933e5e8f7278b6dabfb05c10",
+          "bytes": 93628
+        }
+      ]
+    },
+    {
+      "target_name": "Hiruzen Sarutobi",
+      "candidate_id": "dattebayo:1036",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e4/Hiruzen_Sarutobi.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1470,
+          "height": 1080,
+          "sha256": "ba864c3d20277560963e7a3f34bf6134c115b5ee9b85e2e94e977fee954fae13",
+          "bytes": 111346
+        }
+      ]
+    },
+    {
+      "target_name": "Jiraiya",
+      "candidate_id": "dattebayo:515",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
+          "status": "missing",
+          "format": null,
+          "width": null,
+          "height": null,
+          "sha256": null,
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "target_name": "Orochimaru",
+      "candidate_id": "dattebayo:928",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/14/Orochimaru_Infobox.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1424,
+          "height": 1076,
+          "sha256": "873a6b218df34521fd8f72628a595ac5642838a949d4f8158f3c0202e92d7ed5",
+          "bytes": 97726
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/be/Orochimaru_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1424,
+          "height": 1076,
+          "sha256": "a3cc1ceec0c6c91e4dd139e0f7c04f62891dccb5cdc8cb87a4e25c35923136f6",
+          "bytes": 125842
+        }
+      ]
+    },
+    {
+      "target_name": "Might Guy",
+      "candidate_id": "dattebayo:344",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/31/Might_Guy.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1486,
+          "height": 1076,
+          "sha256": "ad4d9014da8eda354a27429644901d8a25e07b832d6a1712d80dc6a4b750197a",
+          "bytes": 145926
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b3/Might_Guy_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1486,
+          "height": 1076,
+          "sha256": "b7fc22e5a215bbdefd0e4db7562d932ba3a2602e141362749d512833d6c31566",
+          "bytes": 121286
+        }
+      ]
+    },
+    {
+      "target_name": "Kabuto Yakushi",
+      "candidate_id": "dattebayo:1359",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/c/c9/Kabuto_Part_1.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "1f52c1584120e1b94e7764c9d892890f76e18a0cc884f1fe1f495ce0501a5c04",
+          "bytes": 81192
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0b/Kabuto_Part_II.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "45a3e367a55073963e7b1c6f6f5346ee4894c972d3b8dffb877c430483c6a30c",
+          "bytes": 104884
+        }
+      ]
+    },
+    {
+      "target_name": "Gaara",
+      "candidate_id": "dattebayo:259",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/20/Gaara_in_Part_I.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "f11d4a1b5e964afa172000939e3596dd9d1d2fa200e94af4c63533259c8c09a1",
+          "bytes": 93056
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0f/Gaara_Part_II.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "b32fb2e0bf3778734da7a5273fa1a884c662ced9ae48aa8ab141835bcfa048ba",
+          "bytes": 69588
+        }
+      ]
+    },
+    {
+      "target_name": "Killer B",
+      "candidate_id": "dattebayo:636",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/63/Killer_B.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1570,
+          "height": 1054,
+          "sha256": "172a7961a1ccd836994296d961c6e766356445593fc3ccd9d9b5ca9ffa0af90f",
+          "bytes": 55776
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/30/Killer_B_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1570,
+          "height": 1054,
+          "sha256": "f3908056ddc71881881e9997d83c72fafbf33167094117bd769a3efd9bd964aa",
+          "bytes": 77086
+        }
+      ]
+    },
+    {
+      "target_name": "Ōnoki",
+      "candidate_id": "dattebayo:925",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/67/%C5%8Cnoki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "670f88a317788c61cd1326c5cea0a33ffd770a7365454cb8b56ec566f304c8f2",
+          "bytes": 97212
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e0/%C5%8Cnoki_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "f9fa1146d51455ad5bc629c57cefe7f85b7533ba696250f99323841afa1a0b26",
+          "bytes": 217688
+        }
+      ]
+    },
+    {
+      "target_name": "Mū",
+      "candidate_id": "dattebayo:844",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d5/M%C5%AB.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1910,
+          "height": 1076,
+          "sha256": "03cca916f3503816d2b5e6762cbf60df3d0d3dcc1f9c4bdbcc880e5067b3bb06",
+          "bytes": 168508
+        }
+      ]
+    },
+    {
+      "target_name": "Gengetsu Hōzuki",
+      "candidate_id": "dattebayo:428",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/9f/Gengetsu_H%C5%8Dzuki.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1568,
+          "height": 1078,
+          "sha256": "7a8a73a5c692b9d326cade35bb4cf2cea260d637be5332c8678c900a444e75a0",
+          "bytes": 118454
+        }
+      ]
+    },
+    {
+      "target_name": "A (Third Raikage)",
+      "candidate_id": "dattebayo:5",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f5/Raikage3.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "b8305c33aa263846fc4ae5c10000fc71f1bb7714c9c2fbed7c09b81533c36832",
+          "bytes": 101780
+        }
+      ]
+    },
+    {
+      "target_name": "A (Fourth Raikage)",
+      "candidate_id": "dattebayo:6",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4c/Fourth_Raikage_2.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1396,
+          "height": 1076,
+          "sha256": "abc0fb9bc9539411b8c057d3f2114d7305e59ca1a5e7dc1b0be498a56d46301a",
+          "bytes": 77892
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4b/A_Part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1396,
+          "height": 1076,
+          "sha256": "64088f3337f322e79b90ce0c3a972eb7629c24f6b634e191c02833026fb8f37e",
+          "bytes": 92746
+        }
+      ]
+    },
+    {
+      "target_name": "Kisame Hoshigaki",
+      "candidate_id": "dattebayo:421",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/25/Kisame.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "63406be8b4559054bf2cd002f763e719393103ef76d1d9fd43bebc341d691933",
+          "bytes": 79940
+        }
+      ]
+    },
+    {
+      "target_name": "Sasori",
+      "candidate_id": "dattebayo:1042",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f7/Sasori.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1460,
+          "height": 1197,
+          "sha256": "507d157eda3b43c44656dda9d111a56f114faf807bf7ebc0b0946bec1e7b0452",
+          "bytes": 104870
+        }
+      ]
+    },
+    {
+      "target_name": "Deidara",
+      "candidate_id": "dattebayo:193",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/06/Deidara.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "4acfd45c4dca13bc35a6c19770e99e235e652930bb7daf4378980e2f26f22a95",
+          "bytes": 106140
+        }
+      ]
+    },
+    {
+      "target_name": "Kakuzu",
+      "candidate_id": "dattebayo:558",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/57/Kakuzu.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "9e2e5276eb17f52957e140482556bca4fea88c012866ca9f5e36b617ef1743fb",
+          "bytes": 81314
+        }
+      ]
+    },
+    {
+      "target_name": "Konan",
+      "candidate_id": "dattebayo:684",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/58/Konan_Infobox.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "4f1986f7d4f70af6725003d0bbce23d649985d5650d219cc2e761768e32db22c",
+          "bytes": 131094
+        }
+      ]
+    },
+    {
+      "target_name": "Danzō Shimura",
+      "candidate_id": "dattebayo:1093",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/17/Danz%C5%8D.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 2880,
+          "height": 2108,
+          "sha256": "c403e0b9a4ebde581177439e20359822cca68f27bffdd5ca2aa776a77a4e380f",
+          "bytes": 250044
+        }
+      ]
+    },
+    {
+      "target_name": "Chiyo",
+      "candidate_id": "dattebayo:148",
+      "image_count": 0,
+      "images": []
+    },
+    {
+      "target_name": "Hanzō",
+      "candidate_id": "dattebayo:368",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7a/Hanz%C5%8D.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "11b3e981bacae9e54350f5d8ffa5d2d36913c3cb3cdffdab4dd431e7c90a5cc6",
+          "bytes": 70340
+        }
+      ]
+    },
+    {
+      "target_name": "Mei Terumī",
+      "candidate_id": "dattebayo:1223",
+      "image_count": 2,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6f/Mei.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1368,
+          "height": 1076,
+          "sha256": "7530b892c541736ea3c8602e9a757f3dd1702ad4a7c8fcca92cea0d5522116c9",
+          "bytes": 84650
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/26/Mei_part_III.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1368,
+          "height": 1076,
+          "sha256": "473b994ee3952d2adf146d53a92e716bd6c211f210904afe826f2f3703c5b597",
+          "bytes": 113320
+        }
+      ]
+    },
+    {
+      "target_name": "Third Kazekage",
+      "candidate_id": "dattebayo:621",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4e/Third_Kazekage_Reincarnated.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "sha256": "a8844c604c59473a938a2bef89d2b3071482d2f2bdaf9027931f46e6e49019c4",
+          "bytes": 100736
+        }
+      ]
+    },
+    {
+      "target_name": "Kushina Uzumaki",
+      "candidate_id": "dattebayo:1341",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/db/Kushina.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1498,
+          "height": 1124,
+          "sha256": "ce102a3a15e50c4b8a533c13a40b183535c6a4ea0daa019e74bc4fd28e63d5c4",
+          "bytes": 85584
+        }
+      ]
+    },
+    {
+      "target_name": "Shisui Uchiha",
+      "candidate_id": "dattebayo:1310",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4c/Shisui_Uchiha.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1831,
+          "height": 1080,
+          "sha256": "99ca9bfb5b71d8afbb42fa94c28513cfaa552c0cbeb82495254f06a8ec631521",
+          "bytes": 127274
+        }
+      ]
+    },
+    {
+      "target_name": "Black Zetsu",
+      "candidate_id": "dattebayo:1425",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e9/Black_Zetsu.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "b9eac9170ee5353579dbcf4a01e4b8620bc8f18decb587c136bba581e39813dd",
+          "bytes": 79106
+        }
+      ]
+    },
+    {
+      "target_name": "Sakumo Hatake",
+      "candidate_id": "dattebayo:377",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/3f/Sakumo_Hatake.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "504177b496e1a34a139842a1b0d6c6dddef9eb8496b73fac1f66334fd31aaba0",
+          "bytes": 100548
+        }
+      ]
+    },
+    {
+      "target_name": "Izuna Uchiha",
+      "candidate_id": "dattebayo:1296",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/8/83/Izuna_Uchiha.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 2960,
+          "height": 2154,
+          "sha256": "c815878c9d4d183c2daf1feff83d89990117e1418d9afe0e3d5ec617e817bab9",
+          "bytes": 155320
+        }
+      ]
+    },
+    {
+      "target_name": "Shukaku",
+      "candidate_id": "dattebayo:1127",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/99/Shukaku.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1915,
+          "height": 1080,
+          "sha256": "69cbc12a49e2fd415c641f87023939ac6b81b54033c5b365d7f0c88d86a4f8fa",
+          "bytes": 150658
+        }
+      ]
+    },
+    {
+      "target_name": "Matatabi",
+      "candidate_id": "dattebayo:771",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/a/a7/Matatabi.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1390,
+          "height": 1080,
+          "sha256": "798ecbb1650829230539516b2fe3112c4b0927e801b8d21ade2fe02fe81c531d",
+          "bytes": 129534
+        }
+      ]
+    },
+    {
+      "target_name": "Isobu",
+      "candidate_id": "dattebayo:480",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/df/Isobu.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "02922eb18bcb4e60b7d24d521400ae068a18ff3fe25e12407bef91cb2c176cf0",
+          "bytes": 93384
+        }
+      ]
+    },
+    {
+      "target_name": "Son Gokū",
+      "candidate_id": "dattebayo:1134",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/5e/Son_Goku.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1634,
+          "height": 1080,
+          "sha256": "ceb907c1990ad96abe6150953890277b3db173e112366bd05157234f1e07a682",
+          "bytes": 99052
+        }
+      ]
+    },
+    {
+      "target_name": "Kokuō",
+      "candidate_id": "dattebayo:669",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/a/a3/Kokuo.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1760,
+          "height": 1080,
+          "sha256": "79adaf6274757dd487dbf78e95f641942b09ffce654a85414f9b193582635452",
+          "bytes": 75894
+        }
+      ]
+    },
+    {
+      "target_name": "Saiken",
+      "candidate_id": "dattebayo:1009",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/58/Saiken.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1332,
+          "height": 1076,
+          "sha256": "1223ad32709e0098a7f07ed9b4434fcb6acd08d78064bfcd39c3c856fc4e6d86",
+          "bytes": 66664
+        }
+      ]
+    },
+    {
+      "target_name": "Chōmei",
+      "candidate_id": "dattebayo:153",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/78/Chomei.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "e0fd580e8055b5eadc209c99b8ca84cf322a3148d2e7eb76e07cc2fad8e105f6",
+          "bytes": 116582
+        }
+      ]
+    },
+    {
+      "target_name": "Gamabunta",
+      "candidate_id": "dattebayo:261",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f6/Gamabunta2.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "8407254c06bfab051c3ddb58ba27680e2e2d5e9f0883b5e341bdfca9582c195d",
+          "bytes": 112078
+        }
+      ]
+    },
+    {
+      "target_name": "Manda",
+      "candidate_id": "dattebayo:761",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/e0/Manda_Summoned.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1912,
+          "height": 1078,
+          "sha256": "156082c949543f0d3e6cee4c89c81240edebd0317ce1d1e7e889585dc020e017",
+          "bytes": 134198
+        }
+      ]
+    },
+    {
+      "target_name": "Fukasaku",
+      "candidate_id": "dattebayo:230",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/fc/Fukusaku.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "71829d2832ce3725c94191c4f0bdd9c3a479ab907c2d5128efbf04181c76ff7f",
+          "bytes": 91224
+        }
+      ]
+    },
+    {
+      "target_name": "Shima",
+      "candidate_id": "dattebayo:1091",
+      "image_count": 1,
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/69/Shima.png",
+          "status": "valid",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "sha256": "dd020fdb34d1f04a1b2f17b94957495b6b7c3fb29db3434632d3e9e8f0f072ec",
+          "bytes": 99784
+        }
+      ]
+    }
+  ]
+}

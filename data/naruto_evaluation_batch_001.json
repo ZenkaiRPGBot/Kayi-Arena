@@ -1,0 +1,1737 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-001",
+  "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+  "scoring_version": "SCORE-1.0",
+  "canonical_policy_version": "NARUTO-CANON-0.1",
+  "power_anchor_set_version": "NARUTO-POWER-ANCHORS-0.1",
+  "role_calibration_set_version": "NARUTO-FIT-CALIBRATION-0.1",
+  "rarity_rubric_version": "RARITY-RUBRIC-0.1",
+  "prepared_date": "2026-11-26",
+  "batch_status": "draft",
+  "global_notes": [
+    "All evidence references are recollection of the Naruto manga and are unverified. Locators are arc-level only.",
+    "Unverified references cannot establish approved production ratings. No record is approved.",
+    "All seven Fit ratings were set before Power. Power was not used to raise any Fit.",
+    "Calculated role scores are intentionally omitted. The scoring engine derives them.",
+    "Character IDs are provisional until reconciled with the OpenCode catalogue."
+  ],
+  "characters": [
+    {
+      "id": "naruto:naruto_uzumaki",
+      "name": "Naruto Uzumaki",
+      "aliases": [
+        "Naruto"
+      ],
+      "canonical_version": "War-era Naruto (Fourth Great Ninja War arc, up to ch. 700): bonded with Kurama, with Sage Mode, Kurama chakra modes and Six Paths Sage Mode. Baryon Mode excluded.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state: bonded Kurama access used repeatedly across the war arc. The one-off fatal Baryon Mode is excluded. Six Paths Sage Mode is treated as Conditional under rule GP-1 (granted power, retained and used repeatedly).",
+      "core_abilities": [
+        "Shadow Clone Technique including clone knowledge feedback",
+        "Rasengan and chakra-control variants",
+        "Standard shinobi ninjutsu and taijutsu"
+      ],
+      "conditional_abilities": [
+        "Sage Mode (needs natural energy gathering, limited duration)",
+        "Kurama chakra cloak, Link Mode and chakra modes (bonded partner, duration and cost)",
+        "Tailed Beast Bomb and Rasenshuriken variants (high chakra cost, partner or preparation dependent)",
+        "Six Paths Sage Mode (granted by Hagoromo, retained and used repeatedly; policy-dependent under GP-1)",
+        "Chakra sharing with allies through Kurama (partner-dependent)"
+      ],
+      "excluded_abilities": [
+        "Baryon Mode (fatal)",
+        "Direct interventions by Hagoromo and other external help",
+        "Boruto-era and post-chapter-700 abilities",
+        "Anime-only and movie-only abilities"
+      ],
+      "power": 5,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "rarity": "epic",
+      "rarity_justification": "Apex fighter with two elite roles (Attacker and Tank) but no benchmark strategic, leadership or healing role. Protagonist status and narrative importance were not considered. Legendary would require a third elite role.",
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "medium",
+        "attacker": "high",
+        "tank": "medium",
+        "assassin": "low",
+        "support": "medium",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "NAR-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Defeats Pain's bodies through Sage Mode, clone tactics and Rasenshuriken, then ends the invasion by persuading Nagato.",
+          "supports": [
+            "power:5",
+            "attacker:5",
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights with Kurama chakra modes and Tailed Beast Bombs against Obito and later opponents, absorbing heavy damage and recovering through Kurama's chakra.",
+          "supports": [
+            "attacker:5",
+            "tank:4",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Shares Kurama's chakra with allies and senses malice through Kurama Mode.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Rallies and coordinates Allied shinobi; no formal command role is established in the war arc.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Six Paths Sage Mode in the final phase against Kaguya after receiving the grant.",
+          "supports": [
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Only Shadow Clone scouting recalled for stealth or targeted elimination.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero, not an absent zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "Owner rejects GP-1 and Kurama-mode evidence alone is judged below Apex."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal command or division leadership in the war arc is verified."
+        },
+        {
+          "rating": "support",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Alliance-wide chakra sharing is verified as outcome-shaping and attributable to Naruto rather than Kurama."
+        },
+        {
+          "rating": "healer",
+          "current": 0,
+          "alternative": 1,
+          "would_change_if": "Repeated healing of others through Kurama's chakra is verified."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Protection of others is not verified and only personal durability stands."
+        }
+      ],
+      "review_flags": [
+        "POLICY_DEPENDENT_VERSION",
+        "SHARED_EVENT_WITH_KURAMA",
+        "CONTROVERSIAL_RARITY",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "POWER_5",
+        "FIT_5:attacker",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:healer",
+        "POLICY_DEPENDENT_VERSION",
+        "SHARED_EVENT_WITH_KURAMA",
+        "CONTROVERSIAL_RARITY"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:sasuke_uchiha",
+      "name": "Sasuke Uchiha",
+      "aliases": [
+        "Sasuke"
+      ],
+      "canonical_version": "War-era Sasuke (Fourth Great Ninja War arc, up to ch. 700): Eternal Mangekyo Sharingan, Rinnegan, Susanoo and Chidori variants.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state: repeated use of Rinnegan and Mangekyo abilities across the war arc. Indra-related Six Paths power is treated as Conditional under GP-1, the same rule applied to Naruto.",
+      "core_abilities": [
+        "Sharingan and Mangekyo Sharingan",
+        "Chidori variants and Kusanagi",
+        "Fire Release",
+        "Susanoo",
+        "Standard shinobi skills"
+      ],
+      "conditional_abilities": [
+        "Amaterasu and Kagutsuchi (eye strain, cooldown)",
+        "Rinnegan techniques including Amenotejikara (chakra cost, range)",
+        "Large-scale Susanoo and Indra's Arrow (high chakra cost; granted-power dependent under GP-1)"
+      ],
+      "excluded_abilities": [
+        "Curse Mark states from earlier periods",
+        "Direct interventions by Hagoromo",
+        "Edo Tensei related abilities",
+        "Boruto-era and anime-only or movie-only abilities"
+      ],
+      "power": 5,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 3,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "rarity": "epic",
+      "rarity_justification": "Epic. Benchmark Attacker, but only one elite role: Tank, Assassin and Support are competent rather than elite. Protagonist-rival status was not considered.",
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "low",
+        "attacker": "high",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "SAS-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Five Kage Summit arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Hunts and kills Danzo, wearing down his Izanagi-backed resilience.",
+          "supports": [
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Rinnegan, Susanoo and Amaterasu-class offense against Kaguya alongside Naruto.",
+          "supports": [
+            "attacker:5",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Amenotejikara to rescue and reposition teammates.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Team Hebi / Taka period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Assembles and leads Team Hebi/Taka, leading by control rather than trust.",
+          "supports": [
+            "captain:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Sasuke versus Itachi fight (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Adapts mid-fight using Susanoo and Amaterasu; tactics remain centered on his own engagement.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Susanoo is used to shield himself and nearby allies (verify).",
+          "supports": [
+            "tank:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Contends with Obito's Ten-Tails jinchuriki form alongside Naruto.",
+          "supports": [
+            "attacker:5",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "Owner rejects GP-1 and non-granted abilities alone are judged below Apex."
+        },
+        {
+          "rating": "strategist",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Multi-situation planning beyond personal engagements is verified."
+        },
+        {
+          "rating": "tank",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Repeated protection of allies with Susanoo under demanding conditions is verified."
+        },
+        {
+          "rating": "assassin",
+          "current": 3,
+          "alternative": 2,
+          "would_change_if": "Danzo and similar kills are judged power-driven rather than targeted."
+        }
+      ],
+      "review_flags": [
+        "POLICY_DEPENDENT_VERSION",
+        "CONTROVERSIAL_RARITY",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "POWER_5",
+        "FIT_5:attacker",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer",
+        "POLICY_DEPENDENT_VERSION",
+        "CONTROVERSIAL_RARITY"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:madara_uchiha",
+      "name": "Madara Uchiha",
+      "aliases": [
+        "Madara"
+      ],
+      "canonical_version": "Living Rinnegan Madara (Fourth Great Ninja War arc) before becoming the Ten-Tails jinchuriki: Rinnegan, Perfect Susanoo and Wood Release. Edo Tensei form excluded.",
+      "version_selection_reasoning": "Living and revived-in-body state evaluated separately from the Edo Tensei state. The Ten-Tails jinchuriki transformation is an external, one-time state and is excluded.",
+      "core_abilities": [
+        "Mangekyo Sharingan techniques and Perfect Susanoo",
+        "Fire Release",
+        "Wood Release (own implanted cells)",
+        "Gunbai and standard combat skills"
+      ],
+      "conditional_abilities": [
+        "Rinnegan techniques including Chibaku Tensei (chakra cost)",
+        "Large-scale techniques such as Meteor (chakra cost)"
+      ],
+      "excluded_abilities": [
+        "Edo Tensei immortality and external chakra",
+        "Ten-Tails jinchuriki state",
+        "Rinne Tensei (one-time, life-ending self-revival)",
+        "Boruto-era and anime-only abilities"
+      ],
+      "power": 5,
+      "fit": {
+        "captain": 4,
+        "strategist": 4,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "rarity": "legendary",
+      "rarity_justification": "Legendary. Apex Power plus three elite roles (Attacker, Captain, Tank) and a strong Strategist, so he is valuable in several different slots.",
+      "confidence": {
+        "power": "high",
+        "captain": "medium",
+        "strategist": "medium",
+        "attacker": "high",
+        "tank": "medium",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "MAD-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights the Five Kage and Alliance forces with Perfect Susanoo and large-scale techniques.",
+          "supports": [
+            "power:5",
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Eye of the Moon Plan and the war's Zetsu army operation show long-range planning and contingency use.",
+          "supports": [
+            "strategist:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Directs the Zetsu army and the opposing war effort as its supreme commander.",
+          "supports": [
+            "captain:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Perfect Susanoo and Wood Release regeneration let him withstand combined Kage assaults.",
+          "supports": [
+            "tank:4",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Rinnegan Chibaku Tensei and Meteor used against the Alliance.",
+          "supports": [
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Hashirama-cell regeneration and Rinne Tensei are self-only; no healing of others recalled.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Kills by overwhelming force; no stealth or targeted-elimination method recalled.",
+          "supports": [
+            "assassin:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Little ally-enabling capability recalled beyond commanding Zetsu.",
+          "supports": [
+            "support:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "strategist",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "A second corroborating demonstration or authoritative acknowledgment of repeated large-scale strategy is verified."
+        },
+        {
+          "rating": "captain",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Command is judged coercive rather than effective leadership."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Personal durability without protection of others is judged insufficient for 4."
+        }
+      ],
+      "review_flags": [
+        "DISPUTED_VERSION",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 95 and >= 3 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "POWER_5",
+        "FIT_5:attacker",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer",
+        "DISPUTED_VERSION"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:shikamaru_nara",
+      "name": "Shikamaru Nara",
+      "aliases": [
+        "Shikamaru"
+      ],
+      "canonical_version": "War-era Shikamaru (Fourth Great Ninja War arc, up to ch. 700): Shadow Possession family and tactical command role.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state: established shadow techniques plus the strategic role held through Part II. Persisting intelligence and experience carry into the selected version.",
+      "core_abilities": [
+        "Shadow Possession and shadow-binding variants",
+        "Tactical planning and analysis",
+        "Standard shinobi equipment"
+      ],
+      "conditional_abilities": [
+        "Shadow techniques (need shadows, range and chakra limits)",
+        "Shadow Neck Bind and Strangle (needs prior binding)"
+      ],
+      "excluded_abilities": [
+        "Boruto-era abilities",
+        "Anime-only and movie-only abilities"
+      ],
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 5,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 4,
+        "healer": 0
+      },
+      "rarity": "epic",
+      "rarity_justification": "Epic. Benchmark Strategist fit gives an elite-level result in that role despite low Power. This is the weak-fighter, high-strategic-value case the rubric is meant to reward.",
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "high",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "medium",
+        "support": "low",
+        "healer": "high"
+      },
+      "evidence": [
+        {
+          "evidence_id": "SHI-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Hidan and Kakuzu arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Devises and executes the plan that defeats the immortal Hidan by trapping and burying him.",
+          "supports": [
+            "strategist:5",
+            "attacker:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Chunin Exam arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Plans and adapts across a multi-step match against a stronger opponent.",
+          "supports": [
+            "strategist:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Serves in the Alliance's command and planning structure.",
+          "supports": [
+            "captain:3",
+            "strategist:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Repeatedly binds opponents with shadows so allies can act.",
+          "supports": [
+            "support:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "No durability or healing capability recalled.",
+          "supports": [
+            "tank:1",
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Traps and ambushes recalled, but not a stealth or elimination specialty.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Shadow binding is verified to neutralize Level 3 opponents reliably."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal division command in the war arc is verified."
+        },
+        {
+          "rating": "strategist",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "The Hidan plan is judged the only defining case and corroboration is not verified."
+        }
+      ],
+      "review_flags": [
+        "FIT_5_REVIEW",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "FIT_5:strategist",
+        "LOW_CONFIDENCE:attacker",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:support"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:tsunade",
+      "name": "Tsunade",
+      "aliases": [
+        "Tsunade Senju",
+        "Fifth Hokage"
+      ],
+      "canonical_version": "Fifth Hokage-era Tsunade (Pain's Assault arc through the Fourth Great Ninja War arc): medical ninjutsu, super strength, Katsuyu and the Strength of a Hundred Seal.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state: established Byakugo seal and Katsuyu access across the Hokage period. Creation Rebirth is held out until its cost is verified.",
+      "core_abilities": [
+        "Medical ninjutsu (Mystical Palm, Hundred Healings)",
+        "Chakra-enhanced super strength",
+        "Katsuyu summoning contract"
+      ],
+      "conditional_abilities": [
+        "Strength of a Hundred Seal / Byakugo (stored chakra, regeneration, cost and time)",
+        "Katsuyu division healing network (partner-dependent)"
+      ],
+      "excluded_abilities": [
+        "Creation Rebirth pending verification of its cost (excluded if life-ending)",
+        "Katsuyu's own independent feats (credited to Katsuyu)",
+        "Boruto-era and anime-only abilities"
+      ],
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 3,
+        "healer": 5
+      },
+      "rarity": "epic",
+      "rarity_justification": "Epic. Benchmark Healer in a scarce role with Elite Power and a strong Attacker. Also meets the provisional Healer scarcity floor for Epic.",
+      "confidence": {
+        "power": "medium",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "TSU-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Katsuyu to heal large numbers of wounded in Konoha.",
+          "supports": [
+            "healer:5",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Leads medical effort and heals allied casualties, supported by the Byakugo seal.",
+          "supports": [
+            "healer:5",
+            "tank:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Tsunade retrieval arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights Orochimaru and Kabuto with super strength and medical skill.",
+          "supports": [
+            "attacker:4",
+            "power:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part I introduction and companion material (arc-level; chapter numbers not verified)",
+          "source_tier": 2,
+          "evidence_grade": "B",
+          "summary": "Acknowledged in canon as the greatest medical ninja.",
+          "supports": [
+            "healer:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fifth Hokage period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Leads Konoha as Hokage through Pain's invasion and the war; discrete leadership decisions need verification.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fifth Hokage period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Tactical sense recalled but not a defining trait.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No stealth or targeted elimination recalled.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Discrete high-stakes leadership decisions are verified, not only the Hokage title."
+        },
+        {
+          "rating": "tank",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Repeated protection of others under demanding conditions is verified."
+        },
+        {
+          "rating": "power",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Direct feats against Apex-level opponents are verified."
+        }
+      ],
+      "review_flags": [
+        "FIT_5_REVIEW",
+        "CREATION_REBIRTH_UNVERIFIED",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "FIT_5:healer",
+        "LOW_CONFIDENCE:captain",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:sakura_haruno",
+      "name": "Sakura Haruno",
+      "aliases": [
+        "Sakura"
+      ],
+      "canonical_version": "War-era Sakura (Fourth Great Ninja War arc, up to ch. 700): Tsunade-trained medic with super strength and the Strength of a Hundred Seal.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state after Tsunade's training, used during the war arc.",
+      "core_abilities": [
+        "Medical ninjutsu and antidote preparation",
+        "Chakra-enhanced super strength",
+        "Chakra control"
+      ],
+      "conditional_abilities": [
+        "Strength of a Hundred Seal (stored chakra, cost)",
+        "Katsuyu partnership (to verify)"
+      ],
+      "excluded_abilities": [
+        "Tsunade's personal feats",
+        "Boruto-era abilities",
+        "Anime-only and movie-only abilities"
+      ],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 4
+      },
+      "rarity": "rare",
+      "rarity_justification": "Rare. Healer 4 gives a strong but not elite result and would be Uncommon by peak alone. The provisional Healer scarcity floor raises it to Rare.",
+      "confidence": {
+        "power": "medium",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "SAK-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Sasori arc (Part II) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Prepares an antidote for a lethal poison after fighting alongside Chiyo.",
+          "supports": [
+            "healer:3",
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Treats and stabilizes serious Alliance casualties as a leading medic.",
+          "supports": [
+            "healer:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses chakra-enhanced strength effectively in combat.",
+          "supports": [
+            "attacker:3",
+            "power:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited leadership, durability, stealth and support evidence recalled.",
+          "supports": [
+            "captain:1",
+            "tank:2",
+            "assassin:1",
+            "support:2"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "healer",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Near-fatal or large-scale restoration by Sakura herself is verified."
+        },
+        {
+          "rating": "support",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Field coordination or chakra-sharing support is verified as repeated and outcome-shaping."
+        },
+        {
+          "rating": "power",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Direct feats against Level 4 opponents are verified."
+        }
+      ],
+      "review_flags": [
+        "PROVISIONAL_SCARCITY_FLOOR",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": true,
+        "scarcity_floor_rule": "Healer Fit 4 sets minimum Rare"
+      },
+      "independent_review_required_reasons": [
+        "LOW_CONFIDENCE:captain",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:kakashi_hatake",
+      "name": "Kakashi Hatake",
+      "aliases": [
+        "Kakashi",
+        "Copy Ninja"
+      ],
+      "canonical_version": "War-era Kakashi (Fourth Great Ninja War arc): Sharingan with Kamui, Raikiri and ninken. Borrowed Obito power-ups excluded unless independently demonstrated by Kakashi.",
+      "version_selection_reasoning": "Strongest reasonably sustainable state with permanent Sharingan access. Experience and analytical skill persist across periods.",
+      "core_abilities": [
+        "Sharingan (copying and analysis)",
+        "Raikiri / Lightning Blade",
+        "Ninken summoning and tracking",
+        "Standard ninjutsu and taijutsu"
+      ],
+      "conditional_abilities": [
+        "Kamui (Mangekyo-based, chakra cost and range)",
+        "Large-scale Raikiri variants (chakra cost)"
+      ],
+      "excluded_abilities": [
+        "Abilities granted temporarily by Obito and not independently demonstrated by Kakashi (verify)",
+        "Boruto-era abilities",
+        "Anime-only and movie-only abilities"
+      ],
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 4,
+        "healer": 0
+      },
+      "rarity": "rare",
+      "rarity_justification": "Rare. Versatile (Support 4 plus several competent roles) but no elite role. Versatility alone does not raise the tier.",
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "high",
+        "support": "medium",
+        "healer": "high"
+      },
+      "evidence": [
+        {
+          "evidence_id": "KAK-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Kamui to rescue and relocate allies and reposition against Obito.",
+          "supports": [
+            "support:4",
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights Obito, matching Kamui and using Raikiri and Sharingan analysis.",
+          "supports": [
+            "power:4",
+            "attacker:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "ANBU period flashbacks (arc-level; chapter numbers not verified)",
+          "source_tier": 2,
+          "evidence_grade": "B",
+          "summary": "ANBU background supports stealth and targeted elimination.",
+          "supports": [
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Team 7 and Alliance periods (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Leads Team 7 and Konoha forces; formal war-era command to verify.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Tactical adaptation across several fights.",
+          "supports": [
+            "strategist:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "No healing capability recalled.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Kamui intangibility is mostly self-protective.",
+          "supports": [
+            "tank:2"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "strategist",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Plans or counters that decide important engagements against stronger opponents are verified."
+        },
+        {
+          "rating": "assassin",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Reliable targeted eliminations by Kakashi are verified."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal large-scale command in the war arc is verified."
+        }
+      ],
+      "review_flags": [
+        "BORROWED_POWER_CHECK",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 80",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:tank",
+        "BORROWED_POWER_CHECK"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:rock_lee",
+      "name": "Rock Lee",
+      "aliases": [
+        "Lee"
+      ],
+      "canonical_version": "PROVISIONAL: Part II / war-era Lee with Eight Gates use limited to the level verified up to ch. 700 (not yet verified). Eighth Gate excluded.",
+      "version_selection_reasoning": "Held: which Gates Lee himself demonstrated in the war arc cannot be confirmed here, and Might Guy's feats must not be attributed to him.",
+      "core_abilities": [
+        "Taijutsu (Strong Fist style)",
+        "Leaf Hurricane and standard moves"
+      ],
+      "conditional_abilities": [
+        "Hidden Lotus and Gate opening up to a verified level (body damage, duration limits)"
+      ],
+      "excluded_abilities": [
+        "Eighth Gate (fatal)",
+        "Might Guy's feats",
+        "Boruto-era and anime-only abilities"
+      ],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "rarity": "uncommon",
+      "rarity_justification": "Uncommon. Attacker 4 with moderate Power gives a good but not elite result. Provisional pending verification of Gate usage.",
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "LEE-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Chunin Exam arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Hidden Lotus and Gate-opening taijutsu against Gaara at significant bodily cost.",
+          "supports": [
+            "attacker:4",
+            "power:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "War-era Gate usage and level are unconfirmed.",
+          "supports": [
+            "attacker:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Speed noted but not stealth or targeted elimination.",
+          "supports": [
+            "assassin:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Little leadership, strategy, durability, support or healing evidence recalled.",
+          "supports": [
+            "captain:1",
+            "strategist:1",
+            "tank:2",
+            "support:1",
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Gates beyond the Fifth are verified as repeatedly used by Lee in the war arc."
+        },
+        {
+          "rating": "attacker",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Gate usage is verified as lower than assumed."
+        },
+        {
+          "rating": "tank",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Gate-enhanced durability under demanding conditions is verified."
+        }
+      ],
+      "review_flags": [
+        "HELD_UNVERIFIED_GATES",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "held",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "LOW_CONFIDENCE:power",
+        "LOW_CONFIDENCE:captain",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:attacker",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer",
+        "HELD_UNVERIFIED_GATES"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:kurama",
+      "name": "Kurama",
+      "aliases": [
+        "Nine-Tails",
+        "Kyuubi",
+        "Kyubi"
+      ],
+      "canonical_version": "Kurama as an independent character, reconciled and cooperating with Naruto in the Fourth Great Ninja War arc: full chakra, Tailed Beast Bombs and regeneration. Naruto's personal feats excluded.",
+      "version_selection_reasoning": "Independent sentient tailed beast evaluated in its cooperative war-arc state. Events where Kurama acts through Naruto are credited only for Kurama's own contribution.",
+      "core_abilities": [
+        "Massive chakra reserves and physical offense",
+        "Tailed Beast Bomb",
+        "Rapid regeneration",
+        "Tailed-beast durability"
+      ],
+      "conditional_abilities": [
+        "Chakra provision and Link Mode with Naruto (partner-dependent)",
+        "Sensing malicious intent and sharing it (partner-dependent)",
+        "Chakra transfer to the Alliance through Naruto (partner-dependent)"
+      ],
+      "excluded_abilities": [
+        "Naruto's personal feats",
+        "Control or sealing by others' Sharingan or seals (counter, not capability)",
+        "Boruto-era and anime-only abilities"
+      ],
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 0,
+        "support": 4,
+        "healer": 0
+      },
+      "rarity": "epic",
+      "rarity_justification": "Epic. Attacker 5 at Power 4 reaches the Epic threshold. Only one elite role, so Legendary is not met.",
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "medium",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "KUR-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Konoha attack flashback (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "The attack devastated Konoha and required Minato's sacrifice to stop.",
+          "supports": [
+            "power:4",
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Contributes Tailed Beast Bombs and chakra against Obito and later opponents.",
+          "supports": [
+            "attacker:5",
+            "power:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Provides chakra and senses malice, enabling Naruto and the Alliance.",
+          "supports": [
+            "support:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Regeneration and mass absorb heavy attacks; the chakra cloak shields Naruto.",
+          "supports": [
+            "tank:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Gives Naruto tactical advice in several fights.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited coordination of other tailed beasts recalled.",
+          "supports": [
+            "captain:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No stealth or targeted elimination recalled. Absent zero for an enormous, noisy fighter.",
+          "supports": [
+            "assassin:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Kurama's own, non-partnered feats against Apex opponents are verified."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Protection of others is not verified and Grade A durability evidence is missing."
+        },
+        {
+          "rating": "support",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Support events are judged to belong to Naruto's method rather than Kurama's."
+        },
+        {
+          "rating": "healer",
+          "current": 0,
+          "alternative": 1,
+          "would_change_if": "Kurama's chakra is verified as repeatedly healing others."
+        }
+      ],
+      "review_flags": [
+        "SHARED_EVENT_WITH_NARUTO",
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "UNVERIFIED_REFERENCES",
+        "EVIDENCE_CEILING_EXCEPTION:tank"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "independent_review_required_reasons": [
+        "FIT_5:attacker",
+        "LOW_CONFIDENCE:power",
+        "LOW_CONFIDENCE:captain",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer",
+        "CEILING_EXCEPTION:tank",
+        "SHARED_EVENT_WITH_NARUTO"
+      ],
+      "independent_review_required": true
+    },
+    {
+      "id": "naruto:katsuyu",
+      "name": "Katsuyu",
+      "aliases": [
+        "Slug Sage Katsuyu",
+        "Lady Katsuyu"
+      ],
+      "canonical_version": "Katsuyu in the Pain's Assault and Fourth Great Ninja War arcs: Slug Sage summon that divides into many bodies for healing and communication.",
+      "version_selection_reasoning": "Independent sentient summon evaluated in the period where her division network is demonstrated. Tsunade's personal feats are excluded.",
+      "core_abilities": [
+        "Body division into many small slugs",
+        "Healing applied through divisions (attribution to verify)"
+      ],
+      "conditional_abilities": [
+        "Healing network dependent on Tsunade's chakra and summoning",
+        "Information relay through divisions"
+      ],
+      "excluded_abilities": [
+        "Tsunade's personal feats",
+        "Boruto-era and anime-only abilities"
+      ],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 4
+      },
+      "rarity": "rare",
+      "rarity_justification": "Rare. Healer 4 gives a decent result in a scarce role; weak Power would otherwise place it Uncommon. Rarity depends on the provisional Healer scarcity floor and on unresolved attribution of the healing.",
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "evidence": [
+        {
+          "evidence_id": "KAT-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Divides to heal and tend large numbers of wounded in the village.",
+          "supports": [
+            "healer:4",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Divisions link and heal Alliance members; attribution to Katsuyu versus Tsunade to verify.",
+          "supports": [
+            "healer:4",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Divisions relay information between locations.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited direct combat shown; Power rated from sparse evidence.",
+          "supports": [
+            "power:2",
+            "attacker:1",
+            "tank:1"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No leadership, strategy or stealth evidence recalled.",
+          "supports": [
+            "captain:1",
+            "strategist:1",
+            "assassin:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "healer",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "The healing is judged to belong to Tsunade's chakra and technique rather than Katsuyu."
+        },
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 1,
+          "would_change_if": "Katsuyu is verified as ineffective in combat."
+        },
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Direct combat victories over capable opponents are verified."
+        }
+      ],
+      "review_flags": [
+        "HEALING_ATTRIBUTION",
+        "PROVISIONAL_SCARCITY_FLOOR",
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": true,
+        "scarcity_floor_rule": "Healer Fit 4 sets minimum Rare"
+      },
+      "independent_review_required_reasons": [
+        "LOW_CONFIDENCE:power",
+        "LOW_CONFIDENCE:captain",
+        "LOW_CONFIDENCE:strategist",
+        "LOW_CONFIDENCE:attacker",
+        "LOW_CONFIDENCE:tank",
+        "LOW_CONFIDENCE:assassin",
+        "LOW_CONFIDENCE:support",
+        "LOW_CONFIDENCE:healer",
+        "HEALING_ATTRIBUTION"
+      ],
+      "independent_review_required": true
+    }
+  ]
+}

@@ -52,6 +52,27 @@ Reusable character catalogue collection and image validation tooling has been im
 - Network-dependent collection is kept separate from deterministic tests.
 - Full test suite result: **84 passed, 0 failures**.
 
+## Reconciliation results (Module 4C)
+
+- Priority roster size: **60**
+- Matched to catalogue: **60/60**
+- Unmatched: **0** (Ashura Otsutsuki resolved to "Asura Ōtsutsuki")
+- Image manifest entries: **60**
+- Curated Naruto roster groups: ready_for_evaluation=59, insufficient_canonical_evidence=3, canon_or_eligibility_disputed=324, duplicate_or_alternate_version=3, filler_exclusive=375, image_requires_review=395
+
+## Evidence verification leads (proposed, not verified)
+
+- Naruto retained Six Paths powers: verify against manga chapters 695-699 and 700; wiki lead only.
+- Sasuke retained Rinnegan/Susanoo: verify against chapters 699-700.
+- Madara/Obito jinchuriki sustainability: verify against chapters 658-678 and 600-610.
+- Naruto healing others: verify against medical ninjutsu feats; wiki lead only.
+- Kakashi borrowed Obito powers: verify against chapters 680-690.
+- Rock Lee Gates: verify against chapters 66-72 and 671-672.
+- Sakura advanced healing: verify against chapters 254-265 and 539-540.
+- Tsunade/Katsuyu contributions: verify against chapters 148-171 and 632.
+- Kurama independent abilities: verify against chapters 567-570.
+- Edo Tensei characters: verify living feats vs reanimation-only feats.
+
 ## Human review required
 
 - 910 uncertain eligibility entries.
@@ -59,3 +80,4 @@ Reusable character catalogue collection and image validation tooling has been im
 - 75 missing/failed image downloads.
 - 1 invalid image.
 - All Boruto-era candidates for separation decision.
+- 7 Held records from evaluation batches are preserved as Held, not approved.

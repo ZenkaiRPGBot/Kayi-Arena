@@ -1,0 +1,1767 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "catalogue",
+  "universe_id": "naruto",
+  "characters": [
+    {
+      "character_id": "dattebayo_1344",
+      "name": "Naruto Uzumaki",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #1",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Naruto_Uzumaki",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #1\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Find the Four-Leaf Red Clover!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-b3ec46981edbf4d3400abae907a917631e6c1555459be48b6ec415258460f44d",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1307",
+      "name": "Sasuke Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #3",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Sasuke_Uchiha",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #3\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Find the Four-Leaf Red Clover!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1350,
+        "height": 1000,
+        "checksum": "sha256-480cc531bcd35cbb275452d10f4514233eae3ecab554b829b87e80fd5b526ac6",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1299",
+      "name": "Madara Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #370",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Madara_Uchiha",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #130\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 2\", \"manga\": \"Naruto Chapter #370\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky  (Mentioned)\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-b294b0e5813eb73b2269dd15a540f8d051986cd5f751985ea34fa6da026ff126",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_878",
+      "name": "Shikamaru Nara",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #34",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Shikamaru_Nara",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #34\", \"movie\": \"Naruto the Movie: Legend of the Stone of Gelel\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/44/Shikamaru_Part_I.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1362,
+        "height": 1075,
+        "checksum": "sha256-73d33109fecb218ba7b564caffd219910ee5bfabd0588901b12e42472a92e0b5",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1280",
+      "name": "Tsunade",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #139",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Tsunade",
+        "debut:{\"anime\": \"Naruto Episode #83\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #139\", \"movie\": \"Naruto Shipp\\u016bden the Movie\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Finally a clash! J\\u014dnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1481,
+        "height": 1080,
+        "checksum": "sha256-da014c97e73f8126587ceccc70067ce93b05a50df6161b59222efa6d3b4b088b",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_374",
+      "name": "Sakura Haruno",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #3",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Sakura_Haruno",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #3\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Find the Four-Leaf Red Clover!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-44b119154f4d18b8f936aaa0c5f23820be8a37e2198b1593b5ce2b41ca65f128",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_376",
+      "name": "Kakashi Hatake",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #3",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kakashi_Hatake",
+        "debut:{\"anime\": \"Naruto Episode #3\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #3\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Find the Four-Leaf Red Clover!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1439,
+        "height": 1076,
+        "checksum": "sha256-18d5a7eb1ced955ca6e6e1ae1c046f4d15243f8bc0dca67bf52fea29227d91a0",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_739",
+      "name": "Rock Lee",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #36",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Rock_Lee",
+        "debut:{\"anime\": \"Naruto Episode #21\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #36\", \"movie\": \"Naruto the Movie: Guardians of the Crescent Moon Kingdom\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/9/97/Rock_Lee_Part_I.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-da518440143b9838a4fc9d3bff3d3b900f046008d01dfe2bef7b2dea7d8d2767",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_711",
+      "name": "Kurama",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #1",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kurama",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #1\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Kitsune",
+      "notes": [
+        "Non-human/special species: Kitsune."
+      ]
+    },
+    {
+      "character_id": "dattebayo_608",
+      "name": "Katsuyu",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #169",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Katsuyu",
+        "debut:{\"anime\": \"Naruto Episode #95\", \"appearsIn\": \"Anime, Manga, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #169\", \"movie\": \"The Last: Naruto the Movie\", \"ova\": \"Finally a clash! J\\u014dnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Slug",
+      "notes": [
+        "Non-human/special species: Slug."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/59/Katsuyu_Summoned.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1912,
+        "height": 1078,
+        "checksum": "sha256-2a0ea256e5e0e2278cd636f67c9aed0f2095b2f484b809925fa3c666b8b4560b",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1063",
+      "name": "Hashirama Senju",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #118",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Hashirama_Senju",
+        "debut:{\"anime\": \"Naruto Episode #69\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja\", \"manga\": \"Naruto Chapter #118\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/7e/Hashirama_Senju.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-1338ab3f8ec5f8d48ced515923df4f6de9374ea6156c57e227827f957ecbabd7",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_940",
+      "name": "Kaguya Ōtsutsuki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #679",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kaguya_Ōtsutsuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #458\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 4\", \"manga\": \"Naruto Chapter #679\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"Sasuke Shinden: Book of Sunrise  (Mentioned)\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being",
+      "notes": [
+        "Non-human/special species: Celestial Being."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/6c/Kaguya_%C5%8Ctsutsuki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 2052,
+        "height": 1434,
+        "checksum": "sha256-bf799cf83022aeb2fe2b4f20c1d35ff3084bf275f6777a662f319d9c16ae8360",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_935",
+      "name": "Hagoromo Ōtsutsuki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #572",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Hagoromo_Ōtsutsuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #329\", \"appearsIn\": \"Anime, Manga, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 4\", \"manga\": \"Naruto Chapter #572\", \"movie\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/62/Hagoromo.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-da28729b798ad064497d0407e2e91ac3e8196c76d2b8581da9c914a5ee91cd7f",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1303",
+      "name": "Obito Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #239",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Obito_Uchiha",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #32\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Heroes 3\", \"manga\": \"Naruto Chapter #239\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Naruto Jinraiden: The Day the Wolf Howled\", \"ova\": \"Naruto: The Cross Roads\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/4a/Obito_Uchiha.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-e89813e334de7b067c627581534a0bcd01769feaf9b4b5ab4b174809e3b49b39",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_861",
+      "name": "Nagato",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #372",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Nagato",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #128\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Heroes 3  (Pain)\", \"manga\": \"Naruto Chapter #372\", \"movie\": \"Road to Ninja: Naruto the Movie  (Pain)\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/46/Nagato.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1376,
+        "height": 872,
+        "checksum": "sha256-e9a84df5f4e108679527b1852c46c8854d54391f030a6af82be80779197470a2",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_865",
+      "name": "Minato Namikaze",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #239",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Minato_Namikaze",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #239\", \"movie\": \"Naruto Shipp\\u016bden the Movie: The Lost Tower\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/71/Minato_Namikaze.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-193fa9c32804e18f611c89825a5c04caf875630a7c17c872c6a9ce9e659af212",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1066",
+      "name": "Tobirama Senju",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #118",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Tobirama_Senju",
+        "debut:{\"anime\": \"Naruto Episode #69\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja\", \"manga\": \"Naruto Chapter #118\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"Sasuke Shinden: Book of Sunrise  (Mentioned)\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-c4cc8fc09d2c6b8a42538f563da4a252aabf35ceb15100418cd45bf45a9f3fe0",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1293",
+      "name": "Itachi Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #139",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Itachi_Uchiha",
+        "debut:{\"anime\": \"Naruto Episode #80\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #139\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-0b55d5d498d29fb59878e0041b29580e46150de20fa470af355fd525457e2d6e",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_936",
+      "name": "Hamura Ōtsutsuki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #670",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Hamura_Ōtsutsuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #420\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 4  (Mentioned)\", \"manga\": \"Naruto Chapter #670\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/e/e8/Hamura.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-c2734ebd244a7e384a59212e5d69311921cd34b5e54a3fdc1cc7812649b150e8",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_938",
+      "name": "Indra Ōtsutsuki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #462",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Indra_Ōtsutsuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #203\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Impact\", \"manga\": \"Naruto Chapter #462\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/b/bd/Indra_%C5%8Ctsutsuki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-c32be0948691c19486b222327bbcd93bfa8171e4cb7899d009f80e4423e1186c",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_934",
+      "name": "Asura Ōtsutsuki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #462",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Asura_Ōtsutsuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #203\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Impact\", \"manga\": \"Naruto Chapter #462\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Celestial Being-Human hybrid",
+      "notes": [
+        "Non-human/special species: Celestial Being-Human hybrid."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/56/Asura_%C5%8Ctsutsuki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-a7d46752ff03490d01d7e843094dd67fe94089243e94863c8471b217307cf059",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_345",
+      "name": "Gyūki",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #413",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Gyūki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #143\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 2\", \"manga\": \"Naruto Chapter #413\", \"movie\": \"Naruto the Movie: Blood Prison\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Ushi-oni",
+      "notes": [
+        "Non-human/special species: Ushi-oni."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/d/d7/Gyuki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1804,
+        "height": 1080,
+        "checksum": "sha256-1bad612b64bc5b8bf4d5ce08c66c2165eb9e96e1933e5e8f7278b6dabfb05c10",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1036",
+      "name": "Hiruzen Sarutobi",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #1",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Hiruzen_Sarutobi",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #1\", \"movie\": \"Naruto Shipp\\u016bden the Movie: The Will of Fire\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/e/e4/Hiruzen_Sarutobi.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1470,
+        "height": 1080,
+        "checksum": "sha256-ba864c3d20277560963e7a3f34bf6134c115b5ee9b85e2e94e977fee954fae13",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_515",
+      "name": "Jiraiya",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #90",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Jiraiya",
+        "debut:{\"anime\": \"Naruto Episode #52\", \"appearsIn\": \"Anime, Manga, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #90\", \"movie\": \"Naruto the Movie: Ninja Clash in the Land of Snow\", \"ova\": \"Finally a clash! J\\u014dnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
+        "source_ref": "dattebayo",
+        "mime_type": "",
+        "width": null,
+        "height": null,
+        "checksum": "",
+        "status": "failed"
+      }
+    },
+    {
+      "character_id": "dattebayo_928",
+      "name": "Orochimaru",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #45",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Orochimaru",
+        "debut:{\"anime\": \"Naruto Episode #27\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ninja Council\", \"manga\": \"Naruto Chapter #45\", \"movie\": \"Naruto Shipp\\u016bden the Movie: Bonds\", \"novel\": \"Sasuke Shinden: Book of Sunrise\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/1/14/Orochimaru_Infobox.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1424,
+        "height": 1076,
+        "checksum": "sha256-873a6b218df34521fd8f72628a595ac5642838a949d4f8158f3c0202e92d7ed5",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_344",
+      "name": "Might Guy",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #38",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Might_Guy",
+        "debut:{\"anime\": \"Naruto Episode #21\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #38\", \"movie\": \"Naruto Shipp\\u016bden the Movie\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Finally a clash! J\\u014dnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/3/31/Might_Guy.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1486,
+        "height": 1076,
+        "checksum": "sha256-ad4d9014da8eda354a27429644901d8a25e07b832d6a1712d80dc6a4b750197a",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1359",
+      "name": "Kabuto Yakushi",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #39",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kabuto_Yakushi",
+        "debut:{\"anime\": \"Naruto Episode #23\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja\", \"manga\": \"Naruto Chapter #39\", \"movie\": \"Naruto Shipp\\u016bden the Movie: Bonds\", \"novel\": \"Sasuke Shinden: Book of Sunrise  (Mentioned)\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/c/c9/Kabuto_Part_1.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-1f52c1584120e1b94e7764c9d892890f76e18a0cc884f1fe1f495ce0501a5c04",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_259",
+      "name": "Gaara",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #35",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Gaara",
+        "debut:{\"anime\": \"Naruto Episode #20\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ninja Council\", \"manga\": \"Naruto Chapter #35\", \"movie\": \"Naruto the Movie: Legend of the Stone of Gelel\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/2/20/Gaara_in_Part_I.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-f11d4a1b5e964afa172000939e3596dd9d1d2fa200e94af4c63533259c8c09a1",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_636",
+      "name": "Killer B",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #408",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Killer_B",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #142\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 2\", \"manga\": \"Naruto Chapter #408\", \"movie\": \"Naruto the Movie: Blood Prison\", \"novel\": \"The Last: Naruto the Movie\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/63/Killer_B.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1570,
+        "height": 1054,
+        "checksum": "sha256-172a7961a1ccd836994296d961c6e766356445593fc3ccd9d9b5ca9ffa0af90f",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_925",
+      "name": "Ōnoki",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #454",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Ōnoki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #199\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden 3D: The New Era\", \"manga\": \"Naruto Chapter #454\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/67/%C5%8Cnoki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-670f88a317788c61cd1326c5cea0a33ffd770a7365454cb8b56ec566f304c8f2",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_844",
+      "name": "Mū",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #515",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Mū",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #256\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #515\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/d/d5/M%C5%AB.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1910,
+        "height": 1076,
+        "checksum": "sha256-03cca916f3503816d2b5e6762cbf60df3d0d3dcc1f9c4bdbcc880e5067b3bb06",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_428",
+      "name": "Gengetsu Hōzuki",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #525",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Gengetsu_Hōzuki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #267\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #525\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/9/9f/Gengetsu_H%C5%8Dzuki.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1568,
+        "height": 1078,
+        "checksum": "sha256-7a8a73a5c692b9d326cade35bb4cf2cea260d637be5332c8678c900a444e75a0",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_5",
+      "name": "A (Third Raikage)",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #494",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/A_(Third_Raikage)",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #244\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #494\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/f/f5/Raikage3.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-b8305c33aa263846fc4ae5c10000fc71f1bb7714c9c2fbed7c09b81533c36832",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_6",
+      "name": "A (Fourth Raikage)",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #416",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/A_(Fourth_Raikage)",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #152\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Gekit\\u014d Ninja Taisen! Special\", \"manga\": \"Naruto Chapter #416\", \"movie\": \"Naruto the Movie: Blood Prison\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/4c/Fourth_Raikage_2.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1396,
+        "height": 1076,
+        "checksum": "sha256-abc0fb9bc9539411b8c057d3f2114d7305e59ca1a5e7dc1b0be498a56d46301a",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_421",
+      "name": "Kisame Hoshigaki",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #139",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kisame_Hoshigaki",
+        "debut:{\"anime\": \"Naruto Episode #80\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #139\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Hidden Leaf Village Grand Sports Festival!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/2/25/Kisame.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-63406be8b4559054bf2cd002f763e719393103ef76d1d9fd43bebc341d691933",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1042",
+      "name": "Sasori",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #247",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Sasori",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #2\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Gekit\\u014d Ninja Taisen! EX\", \"manga\": \"Naruto Chapter #247\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/f/f7/Sasori.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1460,
+        "height": 1197,
+        "checksum": "sha256-507d157eda3b43c44656dda9d111a56f114faf807bf7ebc0b0946bec1e7b0452",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_193",
+      "name": "Deidara",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #247",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Deidara",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #2\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Gekit\\u014d Ninja Taisen! EX\", \"manga\": \"Naruto Chapter #247\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/0/06/Deidara.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-4acfd45c4dca13bc35a6c19770e99e235e652930bb7daf4378980e2f26f22a95",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_558",
+      "name": "Kakuzu",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #312",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kakuzu",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #71\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Gekit\\u014d Ninja Taisen! EX 3\", \"manga\": \"Naruto Chapter #312\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/57/Kakuzu.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-9e2e5276eb17f52957e140482556bca4fea88c012866ca9f5e36b617ef1743fb",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_684",
+      "name": "Konan",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #363",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Konan",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #125\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Heroes 3\", \"manga\": \"Naruto Chapter #363\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Akatsuki Hiden: Evil Flowers in Full Bloom\", \"ova\": \"Naruto x UT\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/58/Konan_Infobox.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-4f1986f7d4f70af6725003d0bbce23d649985d5650d219cc2e761768e32db22c",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1093",
+      "name": "Danzō Shimura",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #281",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Danzō_Shimura",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #32\", \"appearsIn\": \"Anime, Manga, Novel, Game\", \"game\": \"Naruto Shipp\\u016bden: Kizuna Drive\", \"manga\": \"Naruto Chapter #281\", \"novel\": \"Itachi Shinden: Book of Bright Light\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/1/17/Danz%C5%8D.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 2880,
+        "height": 2108,
+        "checksum": "sha256-c403e0b9a4ebde581177439e20359822cca68f27bffdd5ca2aa776a77a4e380f",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_148",
+      "name": "Chiyo",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #252",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Chiyo",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #9\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja 4\", \"manga\": \"Naruto Chapter #252\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": []
+    },
+    {
+      "character_id": "dattebayo_368",
+      "name": "Hanzō",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #369",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Hanzō",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #128\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Impact\", \"manga\": \"Naruto Chapter #369\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/7a/Hanz%C5%8D.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-11b3e981bacae9e54350f5d8ffa5d2d36913c3cb3cdffdab4dd431e7c90a5cc6",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1223",
+      "name": "Mei Terumī",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #454",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Mei_Terumī",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #199\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden 3D: The New Era\", \"manga\": \"Naruto Chapter #454\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"Kakashi Hiden: Lightning in the Icy Sky\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/6f/Mei.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1368,
+        "height": 1076,
+        "checksum": "sha256-7530b892c541736ea3c8602e9a757f3dd1702ad4a7c8fcca92cea0d5522116c9",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_621",
+      "name": "Third Kazekage",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #690",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Third_Kazekage",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #457\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto Shipp\\u016bden: Ninja Council 4\", \"manga\": \"Naruto Chapter #690\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/4e/Third_Kazekage_Reincarnated.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1076,
+        "checksum": "sha256-a8844c604c59473a938a2bef89d2b3071482d2f2bdaf9027931f46e6e49019c4",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1341",
+      "name": "Kushina Uzumaki",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #382",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kushina_Uzumaki",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #128\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Impact\", \"manga\": \"Naruto Chapter #382\", \"movie\": \"Naruto Shipp\\u016bden the Movie: The Lost Tower\", \"novel\": \"Naruto Shipp\\u016bden the Movie: The Lost Tower\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/d/db/Kushina.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1498,
+        "height": 1124,
+        "checksum": "sha256-ce102a3a15e50c4b8a533c13a40b183535c6a4ea0daa019e74bc4fd28e63d5c4",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1310",
+      "name": "Shisui Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #459",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Shisui_Uchiha",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #201\", \"appearsIn\": \"Anime, Manga, Novel, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm Revolution\", \"manga\": \"Naruto Chapter #459\", \"novel\": \"Itachi Shinden: Book of Bright Light\", \"ova\": \"Ninja Escapades\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/4/4c/Shisui_Uchiha.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1831,
+        "height": 1080,
+        "checksum": "sha256-99ca9bfb5b71d8afbb42fa94c28513cfaa552c0cbeb82495254f06a8ec631521",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1425",
+      "name": "Black Zetsu",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #234",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Black_Zetsu",
+        "debut:{\"anime\": \"Naruto Episode #134\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja 4\", \"manga\": \"Naruto Chapter #234\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Naruto Jinraiden: The Day the Wolf Howled\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Artificial Human",
+      "notes": [
+        "Non-human/special species: Artificial Human."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/e/e9/Black_Zetsu.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-b9eac9170ee5353579dbcf4a01e4b8620bc8f18decb587c136bba581e39813dd",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_377",
+      "name": "Sakumo Hatake",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #425",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Sakumo_Hatake",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #159\", \"appearsIn\": \"Anime, Manga, Novel, Game\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Blazing\", \"manga\": \"Naruto Chapter #425\", \"novel\": \"Kakashi Retsuden: The Sixth Hokage and the Failure Boy  (Mentioned)\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/3/3f/Sakumo_Hatake.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1920,
+        "height": 1080,
+        "checksum": "sha256-504177b496e1a34a139842a1b0d6c6dddef9eb8496b73fac1f66334fd31aaba0",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1296",
+      "name": "Izuna Uchiha",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #386",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Izuna_Uchiha",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #136\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Shinobi Collection Shipp\\u016b Ranbu\", \"manga\": \"Naruto Chapter #386\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/8/83/Izuna_Uchiha.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 2960,
+        "height": 2154,
+        "checksum": "sha256-c815878c9d4d183c2daf1feff83d89990117e1418d9afe0e3d5ec617e817bab9",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1127",
+      "name": "Shukaku",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #134",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Shukaku",
+        "debut:{\"anime\": \"Naruto Episode #78\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Ultimate Ninja\", \"manga\": \"Naruto Chapter #134\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\", \"ova\": \"Naruto x UT\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Tanuki",
+      "notes": [
+        "Non-human/special species: Tanuki."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/9/99/Shukaku.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1915,
+        "height": 1080,
+        "checksum": "sha256-69cbc12a49e2fd415c641f87023939ac6b81b54033c5b365d7f0c88d86a4f8fa",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_771",
+      "name": "Matatabi",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #313",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Matatabi",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #72\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ninja Destiny 3\", \"manga\": \"Naruto Chapter #313\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Bakeneko",
+      "notes": [
+        "Non-human/special species: Bakeneko."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/a/a7/Matatabi.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1390,
+        "height": 1080,
+        "checksum": "sha256-798ecbb1650829230539516b2fe3112c4b0927e801b8d21ade2fe02fe81c531d",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_480",
+      "name": "Isobu",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #317",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Isobu",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #92\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ninja Destiny 3\", \"manga\": \"Naruto Chapter #317\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Turtle",
+      "notes": [
+        "Non-human/special species: Turtle."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/d/df/Isobu.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1920,
+        "height": 1080,
+        "checksum": "sha256-02922eb18bcb4e60b7d24d521400ae068a18ff3fe25e12407bef91cb2c176cf0",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1134",
+      "name": "Son Gokū",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #467",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Son_Gokū",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #165\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #467\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Monkey",
+      "notes": [
+        "Non-human/special species: Monkey."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/5e/Son_Goku.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1634,
+        "height": 1080,
+        "checksum": "sha256-ceb907c1990ad96abe6150953890277b3db173e112366bd05157234f1e07a682",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_669",
+      "name": "Kokuō",
+      "aliases": [],
+      "species": "human",
+      "canonical_version": "Naruto Chapter #467",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Kokuō",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #165\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #467\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "notes": [],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/a/a3/Kokuo.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1760,
+        "height": 1080,
+        "checksum": "sha256-79adaf6274757dd487dbf78e95f641942b09ffce654a85414f9b193582635452",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1009",
+      "name": "Saiken",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #467",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Saiken",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #151\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #467\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Slug",
+      "notes": [
+        "Non-human/special species: Slug."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/5/58/Saiken.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1332,
+        "height": 1076,
+        "checksum": "sha256-1223ad32709e0098a7f07ed9b4434fcb6acd08d78064bfcd39c3c856fc4e6d86",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_153",
+      "name": "Chōmei",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #467",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Chōmei",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #165\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Storm 3\", \"manga\": \"Naruto Chapter #467\", \"movie\": \"The Last: Naruto the Movie\", \"novel\": \"The Last: Naruto the Movie\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Kabutomushi",
+      "notes": [
+        "Non-human/special species: Kabutomushi."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/7/78/Chomei.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1920,
+        "height": 1080,
+        "checksum": "sha256-e0fd580e8055b5eadc209c99b8ca84cf322a3148d2e7eb76e07cc2fad8e105f6",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_261",
+      "name": "Gamabunta",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #1",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Gamabunta",
+        "debut:{\"anime\": \"Naruto Episode #1\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto: Konoha Ninp\\u014dch\\u014d\", \"manga\": \"Naruto Chapter #1\", \"movie\": \"Naruto Shipp\\u016bden the Movie: Bonds\", \"novel\": \"Naruto: Innocent Heart, Demonic Blood\", \"ova\": \"Finally a clash! J\\u014dnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "notes": [
+        "Non-human/special species: Toad."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/f/f6/Gamabunta2.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1920,
+        "height": 1080,
+        "checksum": "sha256-8407254c06bfab051c3ddb58ba27680e2e2d5e9f0883b5e341bdfca9582c195d",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_761",
+      "name": "Manda",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #169",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Manda",
+        "debut:{\"anime\": \"Naruto Episode #95\", \"appearsIn\": \"Anime, Manga, Game\", \"game\": \"Naruto: Ultimate Ninja 2\", \"manga\": \"Naruto Chapter #169\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Snake",
+      "notes": [
+        "Non-human/special species: Snake."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/e/e0/Manda_Summoned.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1912,
+        "height": 1078,
+        "checksum": "sha256-156082c949543f0d3e6cee4c89c81240edebd0317ce1d1e7e889585dc020e017",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_230",
+      "name": "Fukasaku",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #375",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Fukasaku",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #127\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Heroes 3\", \"manga\": \"Naruto Chapter #375\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Road to Ninja: Naruto the Movie\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "notes": [
+        "Non-human/special species: Toad."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/f/fc/Fukusaku.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-71829d2832ce3725c94191c4f0bdd9c3a479ab907c2d5128efbf04181c76ff7f",
+        "status": "pending"
+      }
+    },
+    {
+      "character_id": "dattebayo_1091",
+      "name": "Shima",
+      "aliases": [],
+      "species": "non_human",
+      "canonical_version": "Naruto Chapter #375",
+      "rarity": "Common",
+      "power": null,
+      "fit": null,
+      "source_references": [
+        "source:dattebayo",
+        "profile:https://naruto.fandom.com/wiki/Shima",
+        "debut:{\"anime\": \"Naruto Shipp\\u016bden Episode #127\", \"appearsIn\": \"Anime, Manga, Novel, Game, Movie\", \"game\": \"Naruto Shipp\\u016bden: Ultimate Ninja Heroes 3\", \"manga\": \"Naruto Chapter #375\", \"movie\": \"Road to Ninja: Naruto the Movie\", \"novel\": \"Road to Ninja: Naruto the Movie\", \"ova\": \"Naruto Shipp\\u016bden: UNSG anime cutscenes\"}"
+      ],
+      "revision_ref": "cat-1",
+      "review_status": "pending",
+      "canonical_eligibility": "uncertain",
+      "eligibility_reason": "non-human or special species reported by source: Toad",
+      "notes": [
+        "Non-human/special species: Toad."
+      ],
+      "image": {
+        "url_or_ref": "https://static.wikia.nocookie.net/naruto/images/6/69/Shima.png",
+        "source_ref": "dattebayo",
+        "mime_type": "image/webp",
+        "width": 1440,
+        "height": 1080,
+        "checksum": "sha256-dd020fdb34d1f04a1b2f17b94957495b6b7c3fb29db3434632d3e9e8f0f072ec",
+        "status": "pending"
+      }
+    }
+  ]
+}

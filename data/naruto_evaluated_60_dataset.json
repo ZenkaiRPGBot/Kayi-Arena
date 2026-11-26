@@ -1,0 +1,4478 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "evaluation_integrated",
+  "universe_id": "naruto",
+  "status": "draft",
+  "record_count": 60,
+  "held_count": 7,
+  "characters": [
+    {
+      "character_id": "dattebayo:1344",
+      "catalogue_name": "Naruto Uzumaki",
+      "claude_id": "naruto:naruto_uzumaki",
+      "name": "Naruto Uzumaki",
+      "universe_id": "naruto",
+      "aliases": [
+        "Naruto"
+      ],
+      "species": null,
+      "canonical_version": "War-era Naruto (Fourth Great Ninja War arc, up to ch. 700): bonded with Kurama, with Sage Mode, Kurama chakra modes and Six Paths Sage Mode. Baryon Mode excluded.",
+      "power": 5,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 76,
+        "strategist": 49,
+        "attacker": 100,
+        "tank": 90,
+        "assassin": 48,
+        "support": 66,
+        "healer": 15
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 107,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "medium",
+        "attacker": "high",
+        "tank": "medium",
+        "assassin": "low",
+        "support": "medium",
+        "healer": "low"
+      },
+      "review_flags": [
+        "POLICY_DEPENDENT_VERSION",
+        "SHARED_EVENT_WITH_KURAMA",
+        "CONTROVERSIAL_RARITY",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "NAR-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Defeats Pain's bodies through Sage Mode, clone tactics and Rasenshuriken, then ends the invasion by persuading Nagato.",
+          "supports": [
+            "power:5",
+            "attacker:5",
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights with Kurama chakra modes and Tailed Beast Bombs against Obito and later opponents, absorbing heavy damage and recovering through Kurama's chakra.",
+          "supports": [
+            "attacker:5",
+            "tank:4",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Shares Kurama's chakra with allies and senses malice through Kurama Mode.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Rallies and coordinates Allied shinobi; no formal command role is established in the war arc.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Six Paths Sage Mode in the final phase against Kaguya after receiving the grant.",
+          "supports": [
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Only Shadow Clone scouting recalled for stealth or targeted elimination.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "NAR-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero, not an absent zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "Owner rejects GP-1 and Kurama-mode evidence alone is judged below Apex."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal command or division leadership in the war arc is verified."
+        },
+        {
+          "rating": "support",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Alliance-wide chakra sharing is verified as outcome-shaping and attributable to Naruto rather than Kurama."
+        },
+        {
+          "rating": "healer",
+          "current": 0,
+          "alternative": 1,
+          "would_change_if": "Repeated healing of others through Kurama's chakra is verified."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Protection of others is not verified and only personal durability stands."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1307",
+      "catalogue_name": "Sasuke Uchiha",
+      "claude_id": "naruto:sasuke_uchiha",
+      "name": "Sasuke Uchiha",
+      "universe_id": "naruto",
+      "aliases": [
+        "Sasuke"
+      ],
+      "species": null,
+      "canonical_version": "War-era Sasuke (Fourth Great Ninja War arc, up to ch. 700): Eternal Mangekyo Sharingan, Rinnegan, Susanoo and Chidori variants.",
+      "power": 5,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 3,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 64,
+        "strategist": 49,
+        "attacker": 100,
+        "tank": 80,
+        "assassin": 74,
+        "support": 66,
+        "healer": 15
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 107,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "low",
+        "attacker": "high",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "POLICY_DEPENDENT_VERSION",
+        "CONTROVERSIAL_RARITY",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "SAS-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Five Kage Summit arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Hunts and kills Danzo, wearing down his Izanagi-backed resilience.",
+          "supports": [
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Rinnegan, Susanoo and Amaterasu-class offense against Kaguya alongside Naruto.",
+          "supports": [
+            "attacker:5",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Amenotejikara to rescue and reposition teammates.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Team Hebi / Taka period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Assembles and leads Team Hebi/Taka, leading by control rather than trust.",
+          "supports": [
+            "captain:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Sasuke versus Itachi fight (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Adapts mid-fight using Susanoo and Amaterasu; tactics remain centered on his own engagement.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Susanoo is used to shield himself and nearby allies (verify).",
+          "supports": [
+            "tank:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Contends with Obito's Ten-Tails jinchuriki form alongside Naruto.",
+          "supports": [
+            "attacker:5",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAS-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "Owner rejects GP-1 and non-granted abilities alone are judged below Apex."
+        },
+        {
+          "rating": "strategist",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Multi-situation planning beyond personal engagements is verified."
+        },
+        {
+          "rating": "tank",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Repeated protection of allies with Susanoo under demanding conditions is verified."
+        },
+        {
+          "rating": "assassin",
+          "current": 3,
+          "alternative": 2,
+          "would_change_if": "Danzo and similar kills are judged power-driven rather than targeted."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1299",
+      "catalogue_name": "Madara Uchiha",
+      "claude_id": "naruto:madara_uchiha",
+      "name": "Madara Uchiha",
+      "universe_id": "naruto",
+      "aliases": [
+        "Madara"
+      ],
+      "species": null,
+      "canonical_version": "Living Rinnegan Madara (Fourth Great Ninja War arc) before becoming the Ten-Tails jinchuriki: Rinnegan, Perfect Susanoo and Wood Release. Edo Tensei form excluded.",
+      "power": 5,
+      "fit": {
+        "captain": 4,
+        "strategist": 4,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 88,
+        "strategist": 83,
+        "attacker": 100,
+        "tank": 90,
+        "assassin": 61,
+        "support": 32,
+        "healer": 15
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 111,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 0,
+        "versatility_bonus": 6,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "high",
+        "captain": "medium",
+        "strategist": "medium",
+        "attacker": "high",
+        "tank": "medium",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "DISPUTED_VERSION",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "MAD-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights the Five Kage and Alliance forces with Perfect Susanoo and large-scale techniques.",
+          "supports": [
+            "power:5",
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Eye of the Moon Plan and the war's Zetsu army operation show long-range planning and contingency use.",
+          "supports": [
+            "strategist:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Directs the Zetsu army and the opposing war effort as its supreme commander.",
+          "supports": [
+            "captain:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Perfect Susanoo and Wood Release regeneration let him withstand combined Kage assaults.",
+          "supports": [
+            "tank:4",
+            "power:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Rinnegan Chibaku Tensei and Meteor used against the Alliance.",
+          "supports": [
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Hashirama-cell regeneration and Rinne Tensei are self-only; no healing of others recalled.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Kills by overwhelming force; no stealth or targeted-elimination method recalled.",
+          "supports": [
+            "assassin:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "MAD-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Little ally-enabling capability recalled beyond commanding Zetsu.",
+          "supports": [
+            "support:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "strategist",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "A second corroborating demonstration or authoritative acknowledgment of repeated large-scale strategy is verified."
+        },
+        {
+          "rating": "captain",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Command is judged coercive rather than effective leadership."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Personal durability without protection of others is judged insufficient for 4."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 95 and >= 3 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:878",
+      "catalogue_name": "Shikamaru Nara",
+      "claude_id": "naruto:shikamaru_nara",
+      "name": "Shikamaru Nara",
+      "universe_id": "naruto",
+      "aliases": [
+        "Shikamaru"
+      ],
+      "species": null,
+      "canonical_version": "War-era Shikamaru (Fourth Great Ninja War arc, up to ch. 700): Shadow Possession family and tactical command role.",
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 5,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 52,
+        "strategist": 91,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 27,
+        "support": 74,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Epic",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 94,
+        "base_rarity": "Epic",
+        "final_rarity": "Epic",
+        "highest_role_score": 91,
+        "combat_bonus": 0,
+        "specialist_bonus": 3,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "high",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "medium",
+        "support": "low",
+        "healer": "high"
+      },
+      "review_flags": [
+        "FIT_5_REVIEW",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "SHI-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Hidan and Kakuzu arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Devises and executes the plan that defeats the immortal Hidan by trapping and burying him.",
+          "supports": [
+            "strategist:5",
+            "attacker:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Chunin Exam arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Plans and adapts across a multi-step match against a stronger opponent.",
+          "supports": [
+            "strategist:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Serves in the Alliance's command and planning structure.",
+          "supports": [
+            "captain:3",
+            "strategist:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Repeatedly binds opponents with shadows so allies can act.",
+          "supports": [
+            "support:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "No durability or healing capability recalled.",
+          "supports": [
+            "tank:1",
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SHI-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Traps and ambushes recalled, but not a stealth or elimination specialty.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Shadow binding is verified to neutralize Level 3 opponents reliably."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal division command in the war arc is verified."
+        },
+        {
+          "rating": "strategist",
+          "current": 5,
+          "alternative": 4,
+          "would_change_if": "The Hidan plan is judged the only defining case and corroboration is not verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1280",
+      "catalogue_name": "Tsunade",
+      "claude_id": "naruto:tsunade",
+      "name": "Tsunade",
+      "universe_id": "naruto",
+      "aliases": [
+        "Tsunade Senju",
+        "Fifth Hokage"
+      ],
+      "species": null,
+      "canonical_version": "Fifth Hokage-era Tsunade (Pain's Assault arc through the Fourth Great Ninja War arc): medical ninjutsu, super strength, Katsuyu and the Strength of a Hundred Seal.",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 3,
+        "healer": 5
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 41,
+        "support": 63,
+        "healer": 97
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 105,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 97,
+        "combat_bonus": 3,
+        "specialist_bonus": 3,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "FIT_5_REVIEW",
+        "CREATION_REBIRTH_UNVERIFIED",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "TSU-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Katsuyu to heal large numbers of wounded in Konoha.",
+          "supports": [
+            "healer:5",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Leads medical effort and heals allied casualties, supported by the Byakugo seal.",
+          "supports": [
+            "healer:5",
+            "tank:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Tsunade retrieval arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights Orochimaru and Kabuto with super strength and medical skill.",
+          "supports": [
+            "attacker:4",
+            "power:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part I introduction and companion material (arc-level; chapter numbers not verified)",
+          "source_tier": 2,
+          "evidence_grade": "B",
+          "summary": "Acknowledged in canon as the greatest medical ninja.",
+          "supports": [
+            "healer:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fifth Hokage period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Leads Konoha as Hokage through Pain's invasion and the war; discrete leadership decisions need verification.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fifth Hokage period (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Tactical sense recalled but not a defining trait.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "TSU-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No stealth or targeted elimination recalled.",
+          "supports": [
+            "assassin:1"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Discrete high-stakes leadership decisions are verified, not only the Hokage title."
+        },
+        {
+          "rating": "tank",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Repeated protection of others under demanding conditions is verified."
+        },
+        {
+          "rating": "power",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Direct feats against Apex-level opponents are verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:374",
+      "catalogue_name": "Sakura Haruno",
+      "claude_id": "naruto:sakura_haruno",
+      "name": "Sakura Haruno",
+      "universe_id": "naruto",
+      "aliases": [
+        "Sakura"
+      ],
+      "species": null,
+      "canonical_version": "War-era Sakura (Fourth Great Ninja War arc, up to ch. 700): Tsunade-trained medic with super strength and the Strength of a Hundred Seal.",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 4
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 43,
+        "healer": 77
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Rare",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": "healer_fit_4_min_rare"
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "PROVISIONAL_SCARCITY_FLOOR",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "SAK-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Sasori arc (Part II) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Prepares an antidote for a lethal poison after fighting alongside Chiyo.",
+          "supports": [
+            "healer:3",
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Treats and stabilizes serious Alliance casualties as a leading medic.",
+          "supports": [
+            "healer:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses chakra-enhanced strength effectively in combat.",
+          "supports": [
+            "attacker:3",
+            "power:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "SAK-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited leadership, durability, stealth and support evidence recalled.",
+          "supports": [
+            "captain:1",
+            "tank:2",
+            "assassin:1",
+            "support:2"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "healer",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Near-fatal or large-scale restoration by Sakura herself is verified."
+        },
+        {
+          "rating": "support",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Field coordination or chakra-sharing support is verified as repeated and outcome-shaping."
+        },
+        {
+          "rating": "power",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Direct feats against Level 4 opponents are verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": true,
+        "scarcity_floor_rule": "Healer Fit 4 sets minimum Rare"
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:376",
+      "catalogue_name": "Kakashi Hatake",
+      "claude_id": "naruto:kakashi_hatake",
+      "name": "Kakashi Hatake",
+      "universe_id": "naruto",
+      "aliases": [
+        "Kakashi",
+        "Copy Ninja"
+      ],
+      "species": null,
+      "canonical_version": "War-era Kakashi (Fourth Great Ninja War arc): Sharingan with Kamui, Raikiri and ninken. Borrowed Obito power-ups excluded unless independently demonstrated by Kakashi.",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 63,
+        "attacker": 70,
+        "tank": 60,
+        "assassin": 67,
+        "support": 80,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "high",
+        "support": "medium",
+        "healer": "high"
+      },
+      "review_flags": [
+        "BORROWED_POWER_CHECK",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "KAK-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Kamui to rescue and relocate allies and reposition against Obito.",
+          "supports": [
+            "support:4",
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Fights Obito, matching Kamui and using Raikiri and Sharingan analysis.",
+          "supports": [
+            "power:4",
+            "attacker:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "ANBU period flashbacks (arc-level; chapter numbers not verified)",
+          "source_tier": 2,
+          "evidence_grade": "B",
+          "summary": "ANBU background supports stealth and targeted elimination.",
+          "supports": [
+            "assassin:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Team 7 and Alliance periods (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Leads Team 7 and Konoha forces; formal war-era command to verify.",
+          "supports": [
+            "captain:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Tactical adaptation across several fights.",
+          "supports": [
+            "strategist:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "No healing capability recalled.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAK-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Kamui intangibility is mostly self-protective.",
+          "supports": [
+            "tank:2"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "strategist",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Plans or counters that decide important engagements against stronger opponents are verified."
+        },
+        {
+          "rating": "assassin",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Reliable targeted eliminations by Kakashi are verified."
+        },
+        {
+          "rating": "captain",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Formal large-scale command in the war arc is verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 80",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:739",
+      "catalogue_name": "Rock Lee",
+      "claude_id": "naruto:rock_lee",
+      "name": "Rock Lee",
+      "universe_id": "naruto",
+      "aliases": [
+        "Lee"
+      ],
+      "species": null,
+      "canonical_version": "PROVISIONAL: Part II / war-era Lee with Eight Gates use limited to the level verified up to ch. 700 (not yet verified). Eighth Gate excluded.",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 70,
+        "tank": 50,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "HELD_UNVERIFIED_GATES",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [
+        {
+          "evidence_id": "LEE-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Chunin Exam arc (Part I) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Uses Hidden Lotus and Gate-opening taijutsu against Gaara at significant bodily cost.",
+          "supports": [
+            "attacker:4",
+            "power:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "War-era Gate usage and level are unconfirmed.",
+          "supports": [
+            "attacker:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Speed noted but not stealth or targeted elimination.",
+          "supports": [
+            "assassin:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "LEE-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Little leadership, strategy, durability, support or healing evidence recalled.",
+          "supports": [
+            "captain:1",
+            "strategist:1",
+            "tank:2",
+            "support:1",
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 3,
+          "alternative": 4,
+          "would_change_if": "Gates beyond the Fifth are verified as repeatedly used by Lee in the war arc."
+        },
+        {
+          "rating": "attacker",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Gate usage is verified as lower than assumed."
+        },
+        {
+          "rating": "tank",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Gate-enhanced durability under demanding conditions is verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:711",
+      "catalogue_name": "Kurama",
+      "claude_id": "naruto:kurama",
+      "name": "Kurama",
+      "universe_id": "naruto",
+      "aliases": [
+        "Nine-Tails",
+        "Kyuubi",
+        "Kyubi"
+      ],
+      "species": "Kitsune",
+      "canonical_version": "Kurama as an independent character, reconciled and cooperating with Naruto in the Fourth Great Ninja War arc: full chakra, Tailed Beast Bombs and regeneration. Naruto's personal feats excluded.",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 0,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 46,
+        "attacker": 90,
+        "tank": 80,
+        "assassin": 28,
+        "support": 80,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Epic",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 97,
+        "base_rarity": "Epic",
+        "final_rarity": "Epic",
+        "highest_role_score": 90,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "medium",
+        "tank": "low",
+        "assassin": "medium",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "SHARED_EVENT_WITH_NARUTO",
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "UNVERIFIED_REFERENCES",
+        "EVIDENCE_CEILING_EXCEPTION:tank"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "KUR-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Konoha attack flashback (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "The attack devastated Konoha and required Minato's sacrifice to stop.",
+          "supports": [
+            "power:4",
+            "attacker:5"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Contributes Tailed Beast Bombs and chakra against Obito and later opponents.",
+          "supports": [
+            "attacker:5",
+            "power:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Provides chakra and senses malice, enabling Naruto and the Alliance.",
+          "supports": [
+            "support:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Regeneration and mass absorb heavy attacks; the chakra cloak shields Naruto.",
+          "supports": [
+            "tank:4"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Part II arcs (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Gives Naruto tactical advice in several fights.",
+          "supports": [
+            "strategist:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-6",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited coordination of other tailed beasts recalled.",
+          "supports": [
+            "captain:2"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-7",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No stealth or targeted elimination recalled. Absent zero for an enormous, noisy fighter.",
+          "supports": [
+            "assassin:0"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KUR-8",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search, incomplete) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No healing of others recalled. Unevidenced zero.",
+          "supports": [
+            "healer:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "power",
+          "current": 4,
+          "alternative": 5,
+          "would_change_if": "Kurama's own, non-partnered feats against Apex opponents are verified."
+        },
+        {
+          "rating": "tank",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Protection of others is not verified and Grade A durability evidence is missing."
+        },
+        {
+          "rating": "support",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "Support events are judged to belong to Naruto's method rather than Kurama's."
+        },
+        {
+          "rating": "healer",
+          "current": 0,
+          "alternative": 1,
+          "would_change_if": "Kurama's chakra is verified as repeatedly healing others."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 90 or >= 2 elite roles",
+        "scarcity_floor_applied": false,
+        "scarcity_floor_rule": null
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:608",
+      "catalogue_name": "Katsuyu",
+      "claude_id": "naruto:katsuyu",
+      "name": "Katsuyu",
+      "universe_id": "naruto",
+      "aliases": [
+        "Slug Sage Katsuyu",
+        "Lady Katsuyu"
+      ],
+      "species": "Slug",
+      "canonical_version": "Katsuyu in the Pain's Assault and Fourth Great Ninja War arcs: Slug Sage summon that divides into many bodies for healing and communication.",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 4
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 23,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 14,
+        "support": 57,
+        "healer": 74
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 74,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Rare",
+        "highest_role_score": 74,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": "healer_fit_4_min_rare"
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "review_flags": [
+        "HEALING_ATTRIBUTION",
+        "PROVISIONAL_SCARCITY_FLOOR",
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "UNVERIFIED_REFERENCES"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "evidence_id": "KAT-1",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Pain's Assault arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "A",
+          "summary": "Divides to heal and tend large numbers of wounded in the village.",
+          "supports": [
+            "healer:4",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-2",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Divisions link and heal Alliance members; attribution to Katsuyu versus Tsunade to verify.",
+          "supports": [
+            "healer:4",
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-3",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Fourth Great Ninja War arc (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "B",
+          "summary": "Divisions relay information between locations.",
+          "supports": [
+            "support:3"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-4",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "Limited direct combat shown; Power rated from sparse evidence.",
+          "supports": [
+            "power:2",
+            "attacker:1",
+            "tank:1"
+          ],
+          "verification_status": "unverified"
+        },
+        {
+          "evidence_id": "KAT-5",
+          "source_title": "Naruto (manga), Masashi Kishimoto",
+          "source_locator": "Whole manga (targeted search) (arc-level; chapter numbers not verified)",
+          "source_tier": 1,
+          "evidence_grade": "C",
+          "summary": "No leadership, strategy or stealth evidence recalled.",
+          "supports": [
+            "captain:1",
+            "strategist:1",
+            "assassin:0"
+          ],
+          "verification_status": "unverified"
+        }
+      ],
+      "alternative_ratings": [
+        {
+          "rating": "healer",
+          "current": 4,
+          "alternative": 3,
+          "would_change_if": "The healing is judged to belong to Tsunade's chakra and technique rather than Katsuyu."
+        },
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 1,
+          "would_change_if": "Katsuyu is verified as ineffective in combat."
+        },
+        {
+          "rating": "power",
+          "current": 2,
+          "alternative": 3,
+          "would_change_if": "Direct combat victories over capable opponents are verified."
+        }
+      ],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": {
+        "rubric_rule": "peak >= 60",
+        "scarcity_floor_applied": true,
+        "scarcity_floor_rule": "Healer Fit 4 sets minimum Rare"
+      },
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1063",
+      "catalogue_name": "Hashirama Senju",
+      "claude_id": "naruto:hashirama_senju",
+      "name": "Hashirama Senju",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime First Hokage (founding era): Wood Release, Sage Mode",
+      "power": 5,
+      "fit": {
+        "captain": 5,
+        "strategist": 3,
+        "attacker": 5,
+        "tank": 4,
+        "assassin": 1,
+        "support": 3,
+        "healer": 1
+      },
+      "scores": {
+        "captain": 100,
+        "strategist": 66,
+        "attacker": 100,
+        "tank": 90,
+        "assassin": 48,
+        "support": 66,
+        "healer": 32
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 109,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "EDO_AND_FLASHBACK_EVIDENCE",
+        "POWER_5",
+        "FIT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:940",
+      "catalogue_name": "Kaguya Ōtsutsuki",
+      "claude_id": "naruto:kaguya_otsutsuki",
+      "name": "Kaguya Otsutsuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Celestial Being",
+      "canonical_version": "Rabbit Goddess state (war arc)",
+      "power": 5,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 5,
+        "tank": 5,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 64,
+        "strategist": 49,
+        "attacker": 100,
+        "tank": 100,
+        "assassin": 61,
+        "support": 32,
+        "healer": 15
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 107,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_5",
+        "FIT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:935",
+      "catalogue_name": "Hagoromo Ōtsutsuki",
+      "claude_id": "naruto:hagoromo_otsutsuki",
+      "name": "Hagoromo Otsutsuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_version": "Sage of Six Paths prime (flashback; spirit appearance in war arc)",
+      "power": 5,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 4,
+        "assassin": 1,
+        "support": 5,
+        "healer": 3
+      },
+      "scores": {
+        "captain": 88,
+        "strategist": 66,
+        "attacker": 90,
+        "tank": 90,
+        "assassin": 48,
+        "support": 100,
+        "healer": 66
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 114,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 100,
+        "combat_bonus": 5,
+        "specialist_bonus": 3,
+        "versatility_bonus": 6,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_5",
+        "FIT_5",
+        "ELIGIBILITY_REVIEW_SPIRIT_STATE",
+        "LIMITED_EVIDENCE"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1303",
+      "catalogue_name": "Obito Uchiha",
+      "claude_id": "naruto:obito_uchiha",
+      "name": "Obito Uchiha",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Obito before the Ten-Tails jinchuriki state: Kamui, Wood Release, Rinnegan",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 4,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 80,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 80,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 87,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "VERSION_DISPUTE_JINCHURIKI_STATE",
+        "POWER_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:861",
+      "catalogue_name": "Nagato",
+      "claude_id": "naruto:nagato",
+      "name": "Nagato",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Pain's Assault arc: Six Paths of Pain through the Rinnegan; Rinne Tensei excluded",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 41,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "FATAL_TECHNIQUE_EXCLUDED_HEALER",
+        "POWER_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:865",
+      "catalogue_name": "Minato Namikaze",
+      "claude_id": "naruto:minato_namikaze",
+      "name": "Minato Namikaze",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime Fourth Hokage: Flying Thunder God, Rasengan; Reaper Death Seal excluded",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 1,
+        "assassin": 4,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 50,
+        "assassin": 80,
+        "support": 80,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 89,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 6,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "BORDERLINE_RARITY",
+        "POWER_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1066",
+      "catalogue_name": "Tobirama Senju",
+      "claude_id": "naruto:tobirama_senju",
+      "name": "Tobirama Senju",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime Second Hokage (founding era): Water Release, Flying Thunder God",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 80,
+        "attacker": 70,
+        "tank": 60,
+        "assassin": 67,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1293",
+      "catalogue_name": "Itachi Uchiha",
+      "claude_id": "naruto:itachi_uchiha",
+      "name": "Itachi Uchiha",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Akatsuki-era Itachi (illness remains a limit); Edo state excluded",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 5,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 80,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 93,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Legendary",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 100,
+        "base_rarity": "Legendary",
+        "final_rarity": "Legendary",
+        "highest_role_score": 93,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "FIT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:936",
+      "catalogue_name": "Hamura Ōtsutsuki",
+      "claude_id": "naruto:hamura_otsutsuki",
+      "name": "Hamura Otsutsuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_version": "Hamura Otsutsuki (brief flashback)",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "ELIGIBILITY_REVIEW"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:938",
+      "catalogue_name": "Indra Ōtsutsuki",
+      "claude_id": "naruto:indra_otsutsuki",
+      "name": "Indra Otsutsuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_version": "Indra Otsutsuki (flashback)",
+      "power": 4,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 44,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "ELIGIBILITY_REVIEW"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:934",
+      "catalogue_name": "Asura Ōtsutsuki",
+      "claude_id": "naruto:ashura_otsutsuki",
+      "name": "Ashura Otsutsuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Celestial Being-Human hybrid",
+      "canonical_version": "Ashura Otsutsuki (flashback)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 3,
+        "healer": 1
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 70,
+        "tank": 60,
+        "assassin": 41,
+        "support": 63,
+        "healer": 29
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 73,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "ELIGIBILITY_REVIEW"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:345",
+      "catalogue_name": "Gyūki",
+      "claude_id": "naruto:gyuki",
+      "name": "Gyuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Ushi-oni",
+      "canonical_version": "Eight-Tails Gyuki as independent beast (war arc)",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 28,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "SHARED_EVENT_WITH_KILLER_B",
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "POWER_ALT_3"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1036",
+      "catalogue_name": "Hiruzen Sarutobi",
+      "claude_id": "naruto:hiruzen_sarutobi",
+      "name": "Hiruzen Sarutobi",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime Third Hokage; war-era Edo evidence; Shinigami seal excluded",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 4,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 80,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 41,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 87,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:515",
+      "catalogue_name": "Jiraiya",
+      "claude_id": "naruto:jiraiya",
+      "name": "Jiraiya",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Pain's Assault-era Jiraiya: Sage Mode, toad summons, spy network",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 67,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:928",
+      "catalogue_name": "Orochimaru",
+      "claude_id": "naruto:orochimaru",
+      "name": "Orochimaru",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Part II Orochimaru with restored arms; Edo Tensei user",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 4,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 80,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 80,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 87,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "ARMS_VERSION_CHECK"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:344",
+      "catalogue_name": "Might Guy",
+      "claude_id": "naruto:might_guy",
+      "name": "Might Guy",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Might Guy: Gates through the Seventh; Eighth Gate excluded",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "GATES_UNVERIFIED",
+        "POWER_ALT_5",
+        "ATTACKER_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1359",
+      "catalogue_name": "Kabuto Yakushi",
+      "claude_id": "naruto:kabuto_yakushi",
+      "name": "Kabuto Yakushi",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Part II Kabuto with Sage Mode and Edo Tensei (own ability)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 4,
+        "support": 2,
+        "healer": 3
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 80,
+        "attacker": 70,
+        "tank": 70,
+        "assassin": 80,
+        "support": 46,
+        "healer": 63
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "SAGE_MODE_DEPENDENCY"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:259",
+      "catalogue_name": "Gaara",
+      "claude_id": "naruto:gaara",
+      "name": "Gaara",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Gaara after Shukaku extraction: sand control without Shukaku-only abilities",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 4,
+        "assassin": 2,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 70,
+        "tank": 80,
+        "assassin": 54,
+        "support": 80,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 87,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 4,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POST_EXTRACTION_VERSION",
+        "TANK_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:636",
+      "catalogue_name": "Killer B",
+      "claude_id": "naruto:killer_b",
+      "name": "Killer B",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Killer B with Gyuki partnership (Conditional)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 41,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "SHARED_EVENT_WITH_GYUKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:925",
+      "catalogue_name": "Ōnoki",
+      "claude_id": "naruto:onoki",
+      "name": "Onoki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Third Tsuchikage: Dust Release",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 54,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:844",
+      "catalogue_name": "Mū",
+      "claude_id": "naruto:mu",
+      "name": "Mu",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Edo-only: First Tsuchikage, Particle Style (living prime inferred)",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:428",
+      "catalogue_name": "Gengetsu Hōzuki",
+      "claude_id": "naruto:gengetsu_hozuki",
+      "name": "Gengetsu Hozuki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Edo-only: Second Mizukage, Steam Release (living prime inferred)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 41,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:5",
+      "catalogue_name": "A (Third Raikage)",
+      "claude_id": "naruto:third_raikage",
+      "name": "Third Raikage",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Edo-only: Third Raikage, lightning armor",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 4,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 80,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:6",
+      "catalogue_name": "A (Fourth Raikage)",
+      "claude_id": "naruto:fourth_raikage",
+      "name": "Fourth Raikage",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Fourth Raikage (A): lightning armor",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:421",
+      "catalogue_name": "Kisame Hoshigaki",
+      "claude_id": "naruto:kisame_hoshigaki",
+      "name": "Kisame Hoshigaki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Akatsuki-era Kisame with Samehada",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1042",
+      "catalogue_name": "Sasori",
+      "claude_id": "naruto:sasori",
+      "name": "Sasori",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Sasori arc: puppeteer with the Third Kazekage puppet",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 60,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:193",
+      "catalogue_name": "Deidara",
+      "claude_id": "naruto:deidara",
+      "name": "Deidara",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Akatsuki-era Deidara: explosive clay",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 70,
+        "tank": 40,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:558",
+      "catalogue_name": "Kakuzu",
+      "claude_id": "naruto:kakuzu",
+      "name": "Kakuzu",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Akatsuki-era Kakuzu with multiple hearts",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_4"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:684",
+      "catalogue_name": "Konan",
+      "claude_id": "naruto:konan",
+      "name": "Konan",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Pain's Assault-era Konan: paper techniques",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1093",
+      "catalogue_name": "Danzō Shimura",
+      "claude_id": "naruto:danzo_shimura",
+      "name": "Danzo Shimura",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Five Kage Summit-era Danzo: borrowed Sharingan, Izanagi, Wood arm",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 4,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 3,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 77,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 60,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_4",
+        "BORROWED_POWER_CHECK"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:148",
+      "catalogue_name": "Chiyo",
+      "claude_id": "naruto:chiyo",
+      "name": "Chiyo",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Sasori arc Chiyo: puppets; Selfless Reincarnation excluded (fatal)",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 2,
+        "healer": 1
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 43,
+        "healer": 26
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "FATAL_TECHNIQUE_EXCLUDED_HEALER",
+        "CONTROVERSIAL_HEALER"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:368",
+      "catalogue_name": "Hanzō",
+      "claude_id": "naruto:hanzo",
+      "name": "Hanzo",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime Hanzo of the Salamander (flashback and Edo evidence)",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_AND_FLASHBACK_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1223",
+      "catalogue_name": "Mei Terumī",
+      "claude_id": "naruto:mei_terumi",
+      "name": "Mei Terumi",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "War-era Fifth Mizukage: Lava and Boil Release",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 54,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:621",
+      "catalogue_name": "Third Kazekage",
+      "claude_id": "naruto:third_kazekage",
+      "name": "Third Kazekage",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Edo-only: Third Kazekage, iron sand",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 54,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1341",
+      "catalogue_name": "Kushina Uzumaki",
+      "claude_id": "naruto:kushina_uzumaki",
+      "name": "Kushina Uzumaki",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Flashback-era Kushina: Adamantine Sealing Chains, jinchuriki",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 4,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 70,
+        "assassin": 34,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FLASHBACK_ONLY",
+        "POWER_ALT_4",
+        "TANK_ALT_3"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1310",
+      "catalogue_name": "Shisui Uchiha",
+      "claude_id": "naruto:shisui_uchiha",
+      "name": "Shisui Uchiha",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Prime Shisui (flashback)",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 4,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 63,
+        "attacker": 70,
+        "tank": 50,
+        "assassin": 80,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FLASHBACK_ONLY"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1425",
+      "catalogue_name": "Black Zetsu",
+      "claude_id": "naruto:black_zetsu",
+      "name": "Black Zetsu",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Artificial Human",
+      "canonical_version": "War-era Black Zetsu",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 4,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 4,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 77,
+        "attacker": 50,
+        "tank": 40,
+        "assassin": 73,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "POWER_ALT_2"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:377",
+      "catalogue_name": "Sakumo Hatake",
+      "claude_id": "naruto:sakumo_hatake",
+      "name": "Sakumo Hatake",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Sakumo Hatake (flashback)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 3,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 67,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "FLASHBACK_ONLY"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1296",
+      "catalogue_name": "Izuna Uchiha",
+      "claude_id": "naruto:izuna_uchiha",
+      "name": "Izuna Uchiha",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Izuna Uchiha (flashback)",
+      "power": 4,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 68,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 54,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 83,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "FLASHBACK_ONLY"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1127",
+      "catalogue_name": "Shukaku",
+      "claude_id": "naruto:shukaku",
+      "name": "Shukaku",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Tanuki",
+      "canonical_version": "One-Tail Shukaku as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "SHARED_EVENT_WITH_JINCHURIKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:771",
+      "catalogue_name": "Matatabi",
+      "claude_id": "naruto:matatabi",
+      "name": "Matatabi",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Bakeneko",
+      "canonical_version": "Two-Tails Matatabi as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "SHARED_EVENT_WITH_JINCHURIKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:480",
+      "catalogue_name": "Isobu",
+      "claude_id": "naruto:isobu",
+      "name": "Isobu",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Turtle",
+      "canonical_version": "Three-Tails Isobu as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "SHARED_EVENT_WITH_JINCHURIKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1134",
+      "catalogue_name": "Son Gokū",
+      "claude_id": "naruto:son_goku",
+      "name": "Son Goku",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Monkey",
+      "canonical_version": "Four-Tails Son Goku as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "SHARED_EVENT_WITH_JINCHURIKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:669",
+      "catalogue_name": "Kokuō",
+      "claude_id": "naruto:kokuo",
+      "name": "Kokuo",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": null,
+      "canonical_version": "Five-Tails Kokuo as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT",
+        "SHARED_EVENT_WITH_JINCHURIKI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1009",
+      "catalogue_name": "Saiken",
+      "claude_id": "naruto:saiken",
+      "name": "Saiken",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Slug",
+      "canonical_version": "Six-Tails Saiken as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:153",
+      "catalogue_name": "Chōmei",
+      "claude_id": "naruto:chomei",
+      "name": "Chomei",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Kabutomushi",
+      "canonical_version": "Seven-Tails Chomei as independent beast (war arc)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ELIGIBILITY_CHECK_SENTIENT"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:261",
+      "catalogue_name": "Gamabunta",
+      "claude_id": "naruto:gamabunta",
+      "name": "Gamabunta",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Toad",
+      "canonical_version": "Boss Toad Gamabunta (Part I-II)",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "SUMMON_ATTRIBUTION",
+        "POWER_ALT_4"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:761",
+      "catalogue_name": "Manda",
+      "claude_id": "naruto:manda",
+      "name": "Manda",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Snake",
+      "canonical_version": "Manda, Orochimaru's boss snake (Part I-II)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 70,
+        "tank": 60,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "SUMMON_ATTRIBUTION",
+        "POWER_ALT_4"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:230",
+      "catalogue_name": "Fukasaku",
+      "claude_id": "naruto:fukasaku",
+      "name": "Fukasaku",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Toad",
+      "canonical_version": "Elder Toad Sage Fukasaku (Part II)",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 77,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    },
+    {
+      "character_id": "dattebayo:1091",
+      "catalogue_name": "Shima",
+      "claude_id": "naruto:shima",
+      "name": "Shima",
+      "universe_id": "naruto",
+      "aliases": [],
+      "species": "Toad",
+      "canonical_version": "Elder Toad Sage Shima (Part II)",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 77,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [],
+      "alternative_ratings": [],
+      "canonical_policy_version": null,
+      "rarity_rule_trace": null,
+      "image_status": "pending",
+      "image_verification": "unverified"
+    }
+  ],
+  "issues": [
+    {
+      "name": "Kurama",
+      "issue": "no images in catalogue"
+    },
+    {
+      "name": "Jiraiya",
+      "issue": "no technically valid images"
+    },
+    {
+      "name": "Chiyo",
+      "issue": "no images in catalogue"
+    }
+  ],
+  "rarity_distribution": {
+    "Legendary": 8,
+    "Epic": 2,
+    "Rare": 28,
+    "Uncommon": 22
+  }
+}
