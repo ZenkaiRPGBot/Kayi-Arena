@@ -24,7 +24,7 @@ from aiogram.types import (
 
 from app.database import EvaluationStatus, HELD_NARUTO_NAMES, ImageMetadata, ImageValidationStatus, RARITY_TIERS
 from app.engine import TerminationReason
-from app.scoring import SCORING_ROLES
+from app.scoring import DatasetKind, SCORING_ROLES
 from app.telegram.constants import STYLE_DANGER, STYLE_PRIMARY, STYLE_SUCCESS
 from app.telegram.media import MediaPipeline, UnsafeMediaURLError, validate_media_url
 from app.telegram.safe_api import (
@@ -807,7 +807,10 @@ async def handle_admin_callback(
             message_id=msg_id,
             text=f"📤 Submitted <b>{submitted}</b> non-held Draft characters to Review.\n⏸ Held preserved: <b>{held_skipped}</b>.",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[_btn("« View Review Queue", f"adm:chars:{uid}:review:0")]]
+                inline_keyboard=[
+                    [_btn("✅ Batch Approve Review", f"adm:chappall:{uid}", style=STYLE_SUCCESS)],
+                    [_btn("« View Review Queue", f"adm:chars:{uid}:review:0")],
+                ]
             ),
         )
         await answer_callback_safe(query, f"Submitted {submitted} to Review.")
@@ -862,6 +865,7 @@ async def handle_admin_callback(
             text=f"✅ Batch-approved <b>{approved}</b> non-held characters in <code>{esc(uid)}</code>.",
             reply_markup=InlineKeyboardMarkup(
                 inline_keyboard=[
+                    [_btn("🚀 Publish Production Dataset", f"adm:dpub:{uid}", style=STYLE_SUCCESS)],
                     [_btn("📦 Go to Datasets", "adm:dsets", style=STYLE_PRIMARY)],
                     [_btn("« Back to Characters", f"adm:chars:{uid}:approved:0")],
                 ]
@@ -875,16 +879,28 @@ async def handle_admin_callback(
     # ------------------------------------------------------------------
     if action == "dsets":
         universes = coordinator.db.list_universes(active_only=False)
-        lines = ["📦 <b>Manage Datasets</b>", ""]
+        lines = [
+            "📦 <b>Manage Datasets</b>",
+            f"Active bot mode: <code>{esc(coordinator.config.dataset_kind.value)}</code>",
+            "",
+        ]
         rows = []
         for u in universes:
-            latest = coordinator.db.get_latest_published_version(
-                u.universe_id, kind=coordinator.config.dataset_kind
+            latest_prod = coordinator.db.get_latest_published_version(
+                u.universe_id, kind=DatasetKind.PRODUCTION
+            )
+            latest_test = coordinator.db.get_latest_published_version(
+                u.universe_id, kind=DatasetKind.TEST
             )
             lines.append(
-                f"• <b>{esc(u.name)}</b> — Latest: <code>{esc(latest or 'none')}</code>"
+                f"• <b>{esc(u.name)}</b> — Prod: <code>{esc(latest_prod or 'none')}</code> | Test: <code>{esc(latest_test or 'none')}</code>"
             )
-            rows.append([_btn(f"Publish {u.name}", f"adm:dpub:{u.universe_id}", style=STYLE_PRIMARY)])
+            rows.append(
+                [
+                    _btn(f"🚀 Publish Prod ({u.name})", f"adm:dpub:{u.universe_id}", style=STYLE_SUCCESS),
+                    _btn(f"🧪 Publish Test ({u.name})", f"adm:dpubt:{u.universe_id}", style=STYLE_PRIMARY),
+                ]
+            )
         rows.append([_btn("« Back to Admin", "adm:dash")])
         await edit_message_text_safe(
             coordinator.bot,
@@ -892,6 +908,47 @@ async def handle_admin_callback(
             message_id=msg_id,
             text=clamp_text("\n".join(lines)),
             reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
+        )
+        await answer_callback_safe(query)
+        return
+
+    if action == "dpubt" and args:
+        uid = args[0]
+        eligible_ids = [
+            c.character_id
+            for c in coordinator.db.list_characters(universe_id=uid)
+            if c.name not in HELD_NARUTO_NAMES and c.power is not None and c.fit is not None
+        ]
+        ver = f"{uid}-test-{int(time.time())}"
+        try:
+            manifest, _health = coordinator.db.publish_dataset(
+                universe_id=uid,
+                dataset_version=ver,
+                kind=DatasetKind.TEST,
+                character_ids=eligible_ids,
+            )
+            if coordinator.store:
+                coordinator.store.record_admin_action(
+                    actor_id=actor_id,
+                    action="publish_test_dataset",
+                    target_type="dataset",
+                    target_id=manifest.dataset_version,
+                    details={"universe_id": uid, "count": len(manifest.records)},
+                )
+            text = (
+                f"🧪 Published preliminary testing dataset <code>{esc(manifest.dataset_version)}</code> "
+                f"({len(manifest.records)} non-held characters; review statuses preserved)."
+            )
+        except Exception as exc:
+            text = f"⚠️ Testing publication blocked: {esc(exc)}"
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=text,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[_btn("« Back to Datasets", "adm:dsets")]]
+            ),
         )
         await answer_callback_safe(query)
         return
