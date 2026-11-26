@@ -10,4 +10,4 @@
 | 6 | Telegram UI & User Experience | Finalized | Complete | Complete | `aiogram` 3 UI, `/arena`, 2-message draft, Rarity v0.2, Kayi Bots conventions |
 | 7 | Persistence & Game Recovery | Finalized | Complete | Complete | SQLite store, migrations, startup & `/game` recovery, history, media cache |
 | 8 | Profiles & Competitive Progression | Awaiting Planning | Not Started | Not Started | Consumes emitted `DraftEvent`s |
-| 9 | Administration & Bot Operations | Awaiting Planning | Not Started | Not Started | Calls `terminate_draft` via authorized admin layer |
+| 9 | Administration & Bot Operations | Finalized | Complete | Complete | `/admin` dashboard, audit log, maintenance mode, webhook/polling, Render docs |

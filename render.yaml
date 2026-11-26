@@ -17,11 +17,19 @@ services:
         value: "."
       - key: PORT
         value: "10000"
+      - key: TRANSPORT_MODE
+        value: polling
+      - key: WEBHOOK_PATH
+        value: /telegram/webhook
+      - key: WEBHOOK_SECRET
+        sync: false
       - key: BOT_TOKEN
         sync: false
       - key: BOT_USERNAME
         value: KayiArenaBot
       - key: OWNER_ID
+        sync: false
+      - key: ADMIN_IDS
         sync: false
       - key: LOG_CHANNEL_ID
         sync: false

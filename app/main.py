@@ -1,4 +1,4 @@
-"""Main entrypoint for Kayi Arena: lightweight HTTP server + Telegram polling."""
+"""Main entrypoint for Kayi Arena: lightweight HTTP server + webhook/polling."""
 
 from __future__ import annotations
 
@@ -61,16 +61,27 @@ async def run_bot() -> None:
         len(recovery_report.recovery_errors),
     )
 
+    use_webhook = config.transport_mode == "webhook" and bool(config.webhook_url)
     health_app = build_health_app(
         extra_status={
+            "transport_mode": "webhook" if use_webhook else "polling",
             "restored_matches": recovery_report.restored_matches,
             "pending_challenges": recovery_report.pending_challenges,
-        }
+        },
+        bot=bot if use_webhook else None,
+        dp=dp if use_webhook else None,
+        webhook_path=config.webhook_path if use_webhook else None,
+        webhook_secret=config.webhook_secret,
     )
     runner, _site = await start_http_server(
         health_app, host=config.host, port=config.port
     )
-    logger.info("HTTP health server listening on %s:%d", config.host, config.port)
+    logger.info(
+        "HTTP server listening on %s:%d (mode=%s)",
+        config.host,
+        config.port,
+        "webhook" if use_webhook else "polling",
+    )
 
     notifier = build_restart_notifier(bot, config)
     notify_task = asyncio.create_task(
@@ -78,20 +89,45 @@ async def run_bot() -> None:
         name="kayi-arena-restart-notify",
     )
 
-    # Graceful signal handling on POSIX (Render Linux containers)
+    stop_event = asyncio.Event()
     loop = asyncio.get_running_loop()
     for sig in (signal.SIGINT, signal.SIGTERM):
         try:
-            loop.add_signal_handler(sig, lambda: asyncio.create_task(dp.stop_polling()))
+            loop.add_signal_handler(sig, stop_event.set)
         except NotImplementedError:
             pass
 
     try:
-        await dp.start_polling(
-            bot,
-            allowed_updates=["message", "callback_query"],
-            drop_pending_updates=config.drop_pending_updates,
-        )
+        if use_webhook:
+            await bot.set_webhook(
+                url=config.webhook_url,
+                secret_token=config.webhook_secret or None,
+                drop_pending_updates=config.drop_pending_updates,
+                allowed_updates=["message", "callback_query"],
+            )
+            logger.info("Webhook registered at %s", config.webhook_url)
+            await stop_event.wait()
+        else:
+            # Ensure no stale webhook causes a Telegram 409 Conflict during polling
+            try:
+                await bot.delete_webhook(drop_pending_updates=False)
+            except Exception as exc:
+                logger.warning("delete_webhook skipped: %s", type(exc).__name__)
+            polling_task = asyncio.create_task(
+                dp.start_polling(
+                    bot,
+                    allowed_updates=["message", "callback_query"],
+                    drop_pending_updates=config.drop_pending_updates,
+                )
+            )
+            stop_wait = asyncio.create_task(stop_event.wait())
+            done, pending = await asyncio.wait(
+                {polling_task, stop_wait}, return_when=asyncio.FIRST_COMPLETED
+            )
+            if stop_wait in done and not polling_task.done():
+                await dp.stop_polling()
+            for task in pending:
+                task.cancel()
     finally:
         if not notify_task.done():
             notify_task.cancel()

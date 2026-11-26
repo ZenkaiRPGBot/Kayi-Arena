@@ -32,7 +32,7 @@ from app.persistence.models import (
     timeout_policy_to_dict,
 )
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 _MIGRATIONS: dict[int, tuple[str, ...]] = {
     1: (
@@ -129,6 +129,35 @@ _MIGRATIONS: dict[int, tuple[str, ...]] = {
             character_id TEXT,
             telegram_file_id TEXT NOT NULL,
             source_ref TEXT,
+            updated_at TEXT NOT NULL
+        )
+        """,
+    ),
+    2: (
+        """
+        CREATE TABLE IF NOT EXISTS admin_audit_log (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            actor_id TEXT NOT NULL,
+            action TEXT NOT NULL,
+            target_type TEXT NOT NULL,
+            target_id TEXT NOT NULL,
+            details_json TEXT NOT NULL,
+            created_at TEXT NOT NULL
+        )
+        """,
+        "CREATE INDEX IF NOT EXISTS idx_audit_created ON admin_audit_log(id DESC)",
+        """
+        CREATE TABLE IF NOT EXISTS bot_settings (
+            key TEXT PRIMARY KEY,
+            value TEXT NOT NULL,
+            updated_at TEXT NOT NULL
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS known_chats (
+            chat_id TEXT PRIMARY KEY,
+            chat_type TEXT NOT NULL,
+            title TEXT,
             updated_at TEXT NOT NULL
         )
         """,
@@ -635,3 +664,143 @@ class SqliteMatchStore:
             "SELECT telegram_file_id FROM media_cache WHERE media_key = ?", (media_key,)
         ).fetchone()
         return str(row["telegram_file_id"]) if row is not None else None
+
+    # ------------------------------------------------------------------
+    # Admin Audit Log, Settings, Known Chats, Diagnostics & Stats (v2)
+    # ------------------------------------------------------------------
+
+    def record_admin_action(
+        self,
+        *,
+        actor_id: str,
+        action: str,
+        target_type: str,
+        target_id: str,
+        details: dict[str, Any] | None = None,
+    ) -> None:
+        self._conn.execute("BEGIN IMMEDIATE")
+        try:
+            self._conn.execute(
+                """
+                INSERT INTO admin_audit_log (actor_id, action, target_type, target_id, details_json, created_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    actor_id,
+                    action,
+                    target_type,
+                    target_id,
+                    json.dumps(details or {}, separators=(",", ":")),
+                    _utc_iso(),
+                ),
+            )
+            self._conn.execute("COMMIT")
+        except Exception as exc:
+            self._conn.execute("ROLLBACK")
+            raise PersistenceError(f"Failed recording audit action: {exc}") from exc
+
+    def list_admin_audit_log(self, *, limit: int = 20) -> list[dict[str, Any]]:
+        rows = self._conn.execute(
+            "SELECT * FROM admin_audit_log ORDER BY id DESC LIMIT ?", (limit,)
+        ).fetchall()
+        return [
+            {
+                "id": int(r["id"]),
+                "actor_id": str(r["actor_id"]),
+                "action": str(r["action"]),
+                "target_type": str(r["target_type"]),
+                "target_id": str(r["target_id"]),
+                "details": json.loads(r["details_json"]),
+                "created_at": str(r["created_at"]),
+            }
+            for r in rows
+        ]
+
+    def get_setting(self, key: str, default: str = "") -> str:
+        row = self._conn.execute(
+            "SELECT value FROM bot_settings WHERE key = ?", (key,)
+        ).fetchone()
+        return str(row["value"]) if row is not None else default
+
+    def set_setting(self, key: str, value: str) -> None:
+        self._conn.execute("BEGIN IMMEDIATE")
+        try:
+            self._conn.execute(
+                """
+                INSERT INTO bot_settings (key, value, updated_at)
+                VALUES (?, ?, ?)
+                ON CONFLICT(key) DO UPDATE SET
+                    value = excluded.value,
+                    updated_at = excluded.updated_at
+                """,
+                (key, value, _utc_iso()),
+            )
+            self._conn.execute("COMMIT")
+        except Exception as exc:
+            self._conn.execute("ROLLBACK")
+            raise PersistenceError(f"Failed updating setting {key}: {exc}") from exc
+
+    def upsert_known_chat(
+        self, chat_id: str, chat_type: str, title: str | None = None
+    ) -> None:
+        self._conn.execute("BEGIN IMMEDIATE")
+        try:
+            self._conn.execute(
+                """
+                INSERT INTO known_chats (chat_id, chat_type, title, updated_at)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(chat_id) DO UPDATE SET
+                    chat_type = excluded.chat_type,
+                    title = COALESCE(excluded.title, known_chats.title),
+                    updated_at = excluded.updated_at
+                """,
+                (chat_id, chat_type, title, _utc_iso()),
+            )
+            self._conn.execute("COMMIT")
+        except Exception:
+            self._conn.execute("ROLLBACK")
+
+    def list_known_chats(self, *, chat_type: str | None = None) -> list[str]:
+        if chat_type is None:
+            rows = self._conn.execute("SELECT chat_id FROM known_chats").fetchall()
+        else:
+            rows = self._conn.execute(
+                "SELECT chat_id FROM known_chats WHERE chat_type = ?", (chat_type,)
+            ).fetchall()
+        return [str(r["chat_id"]) for r in rows]
+
+    def integrity_check(self) -> tuple[bool, str]:
+        try:
+            row = self._conn.execute("PRAGMA integrity_check").fetchone()
+            msg = str(row[0]) if row else "unknown"
+            return msg.lower() == "ok", msg
+        except Exception as exc:
+            return False, type(exc).__name__
+
+    def get_stats_snapshot(self) -> dict[str, int]:
+        def _count(sql: str, params: tuple[Any, ...] = ()) -> int:
+            row = self._conn.execute(sql, params).fetchone()
+            return int(row[0]) if row else 0
+
+        return {
+            "total_users": _count("SELECT COUNT(*) FROM player_profiles"),
+            "private_chats": _count(
+                "SELECT COUNT(*) FROM known_chats WHERE chat_type = 'private'"
+            ),
+            "group_chats": _count(
+                "SELECT COUNT(*) FROM known_chats WHERE chat_type != 'private'"
+            ),
+            "active_matches": _count(
+                "SELECT COUNT(*) FROM matches WHERE status = ?",
+                (MatchLifecycleStatus.DRAFTING.value,),
+            ),
+            "completed_matches": _count(
+                "SELECT COUNT(*) FROM match_history WHERE status = ?",
+                (MatchLifecycleStatus.COMPLETED.value,),
+            ),
+            "total_history": _count("SELECT COUNT(*) FROM match_history"),
+            "open_challenges": _count(
+                "SELECT COUNT(*) FROM challenges WHERE status = ?",
+                (ChallengeStatus.OPEN.value,),
+            ),
+        }

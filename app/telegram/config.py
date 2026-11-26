@@ -36,6 +36,24 @@ def _env_bool(name: str, default: bool = False) -> bool:
     return raw in {"1", "true", "yes", "on"}
 
 
+def _env_int_tuple(name: str) -> tuple[int, ...]:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return ()
+    result: list[int] = []
+    for part in raw.split(","):
+        item = part.strip()
+        if not item:
+            continue
+        try:
+            val = int(item)
+        except ValueError:
+            continue
+        if val not in result:
+            result.append(val)
+    return tuple(result)
+
+
 @dataclass(frozen=True, slots=True)
 class BotConfig:
     """Runtime configuration for Kayi Arena Telegram bot."""
@@ -43,6 +61,7 @@ class BotConfig:
     bot_token: str = ""
     bot_username: str = DEFAULT_BOT_USERNAME
     owner_id: int = 0
+    admin_ids: tuple[int, ...] = ()
     log_channel_id: int = 0
     developer_url: str = DEFAULT_DEVELOPER_URL
     updates_url: str = DEFAULT_UPDATES_URL
@@ -57,6 +76,29 @@ class BotConfig:
     log_level: str = "INFO"
     host: str = "0.0.0.0"
     port: int = 10000
+    transport_mode: str = "polling"
+    webhook_base_url: str = ""
+    webhook_path: str = "/telegram/webhook"
+    webhook_secret: str = ""
+
+    def all_admin_ids(self) -> tuple[int, ...]:
+        ids = list(self.admin_ids)
+        if self.owner_id and self.owner_id not in ids:
+            ids.insert(0, self.owner_id)
+        return tuple(ids)
+
+    def is_admin(self, user_id: int | str) -> bool:
+        try:
+            uid = int(user_id)
+        except (TypeError, ValueError):
+            return False
+        return uid != 0 and uid in self.all_admin_ids()
+
+    @property
+    def webhook_url(self) -> str:
+        base = self.webhook_base_url.rstrip("/")
+        path = self.webhook_path if self.webhook_path.startswith("/") else f"/{self.webhook_path}"
+        return f"{base}{path}" if base else ""
 
     @classmethod
     def from_env(cls) -> BotConfig:
@@ -66,10 +108,17 @@ class BotConfig:
         except ValueError:
             dataset_kind = DatasetKind.PRODUCTION
 
+        owner_id = _env_int("OWNER_ID", 0)
+        admin_ids = _env_int_tuple("ADMIN_IDS")
+        webhook_base = _env_str("WEBHOOK_BASE_URL", "") or _env_str("RENDER_EXTERNAL_URL", "")
+        mode_raw = _env_str("TRANSPORT_MODE", "polling").lower()
+        transport_mode = "webhook" if mode_raw == "webhook" and webhook_base else "polling"
+
         return cls(
             bot_token=_env_str("BOT_TOKEN", ""),
             bot_username=_env_str("BOT_USERNAME", DEFAULT_BOT_USERNAME).lstrip("@"),
-            owner_id=_env_int("OWNER_ID", 0),
+            owner_id=owner_id,
+            admin_ids=admin_ids,
             log_channel_id=_env_int("LOG_CHANNEL_ID", 0),
             developer_url=_env_str("DEVELOPER_URL", DEFAULT_DEVELOPER_URL),
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
@@ -84,4 +133,8 @@ class BotConfig:
             log_level=_env_str("LOG_LEVEL", "INFO").upper(),
             host=_env_str("HOST", "0.0.0.0"),
             port=_env_int("PORT", 10000),
+            transport_mode=transport_mode,
+            webhook_base_url=webhook_base,
+            webhook_path=_env_str("WEBHOOK_PATH", "/telegram/webhook"),
+            webhook_secret=_env_str("WEBHOOK_SECRET", ""),
         )

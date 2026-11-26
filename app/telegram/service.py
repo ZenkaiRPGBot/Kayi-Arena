@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import time
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Mapping
 
@@ -118,6 +119,46 @@ class ArenaTelegramCoordinator:
         self._timer_tasks: dict[str, asyncio.Task[None]] = {}
         self._recovery_locks: dict[str, asyncio.Lock] = {}
         self._char_cache: dict[str, CharacterEntry] = {}
+        self._started_at: float = time.monotonic()
+        self._maintenance_mode: bool = (
+            store.get_setting("maintenance_mode", "0") == "1" if store is not None else False
+        )
+        self._broadcast_compose: set[str] = set()
+        self._broadcast_drafts: dict[str, str] = {}
+
+    def uptime_seconds(self) -> float:
+        return max(0.0, time.monotonic() - self._started_at)
+
+    def is_maintenance_mode(self) -> bool:
+        return self._maintenance_mode
+
+    def set_maintenance_mode(self, enabled: bool) -> None:
+        self._maintenance_mode = bool(enabled)
+        if self.store is not None:
+            self.store.set_setting("maintenance_mode", "1" if enabled else "0")
+
+    def begin_broadcast_compose(self, admin_id: str) -> None:
+        self._broadcast_compose.add(admin_id)
+        self._broadcast_drafts.pop(admin_id, None)
+
+    def is_awaiting_broadcast(self, admin_id: str) -> bool:
+        return admin_id in self._broadcast_compose
+
+    def set_broadcast_draft(self, admin_id: str, text: str) -> None:
+        self._broadcast_compose.discard(admin_id)
+        self._broadcast_drafts[admin_id] = text
+
+    def pop_broadcast_draft(self, admin_id: str) -> str | None:
+        self._broadcast_compose.discard(admin_id)
+        return self._broadcast_drafts.pop(admin_id, None)
+
+    def clear_broadcast_state(self, admin_id: str) -> None:
+        self._broadcast_compose.discard(admin_id)
+        self._broadcast_drafts.pop(admin_id, None)
+
+    def register_chat(self, chat_id: int | str, chat_type: str, title: str | None = None) -> None:
+        if self.store is not None:
+            self.store.upsert_known_chat(str(chat_id), chat_type, title)
 
     # ------------------------------------------------------------------
     # Player & Metadata Helpers

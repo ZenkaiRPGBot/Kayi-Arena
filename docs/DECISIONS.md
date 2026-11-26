@@ -125,3 +125,15 @@
    - `SqliteMatchStore` uses `WAL` mode, `BEGIN IMMEDIATE`, `schema_migrations`, and database-level `active_player_locks`.
    - `render.yaml` targets a free Render Web Service (`type: web`, `plan: free`, `healthCheckPath: /health`, without `maxShutdownDelaySeconds`) running a lightweight `aiohttp` server (`/` and `/health`) on `0.0.0.0:$PORT` alongside Telegram polling.
    - Because Render Free Web Services have an ephemeral filesystem, SQLite state is durable within a running container but resets on redeploys; production persistence across redeploys requires a persistent disk or external managed database.
+
+
+## Module 9: Admin Operations & Deployment Readiness
+
+1. **Owner/Admin Authorization & Auditability**
+   - `/admin` and all `adm:*` callbacks independently verify `BotConfig.is_admin(user_id)` (`OWNER_ID` + `ADMIN_IDS`) and restrict operations to private chats. All mutating actions write to `admin_audit_log` (SQLite Schema v2).
+
+2. **Dual Transport Mode (`polling` vs `webhook`)**
+   - `BotConfig.from_env()` supports `TRANSPORT_MODE=polling` (calling `delete_webhook` on startup to prevent `409 Conflict`) or `TRANSPORT_MODE=webhook` (registering `SimpleRequestHandler` on `aiohttp` when `WEBHOOK_BASE_URL` or `RENDER_EXTERNAL_URL` is set, recommended for sleeping free Render Web Services). Only one mode runs at a time.
+
+3. **Deferred Module 8**
+   - Competitive ratings, rank thresholds, rewards, and seasonal progression remain explicitly deferred; existing `ProfileStatsProvider` integration ports are preserved.
