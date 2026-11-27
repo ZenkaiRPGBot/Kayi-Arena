@@ -637,6 +637,7 @@ def _render_player_board_section(
     if filled == 0:
         lines.append("<i>No characters assigned.</i>")
     else:
+        assigned_lines: list[str] = []
         for role in ROLE_ORDER:
             cid = assignments.get(role)
             if cid is None:
@@ -645,16 +646,20 @@ def _render_player_board_section(
             r_icon = ROLE_ICONS.get(role, "🎭")
             if rec is not None:
                 rar_icon = rarity_icon(rec.rarity)
-                lines.append(f"✦ {r_icon} <b>{esc(role)}</b> — <b>{esc(rec.name)}</b> {rar_icon}")
+                assigned_lines.append(f"✦ {r_icon} <b>{esc(role)}</b> — <b>{esc(rec.name)}</b> {rar_icon}")
             else:
-                lines.append(f"✦ {r_icon} <b>{esc(role)}</b> — <b>{esc(cid)}</b>")
+                assigned_lines.append(f"✦ {r_icon} <b>{esc(role)}</b> — <b>{esc(cid)}</b>")
+        for idx, entry_line in enumerate(assigned_lines):
+            if idx > 0:
+                lines.append("")
+            lines.append(entry_line)
     available_icons = [ROLE_ICONS[role] for role in ROLE_ORDER if assignments.get(role) is None]
     avail_text = " ".join(available_icons) if available_icons else "None"
     lines.extend(
         [
             "",
-            f"▪ <b>Available:</b> {avail_text}",
-            f"▪ <b>Skips left:</b> {skips_remaining}/2",
+            f"▸ <b>Available:</b> {avail_text}",
+            f"▸ <b>Skips left:</b> {skips_remaining}/2",
         ]
     )
     return lines

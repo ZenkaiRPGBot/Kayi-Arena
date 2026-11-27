@@ -728,7 +728,11 @@ class ArenaTelegramCoordinator:
                 self._forfeit_locks.pop(k, None)
             await self.cleanup_forfeit_confirmations(match.match_id, match=match)
 
-            if update_board:
+            old_board_id = state.board_message_id
+            old_card_id = state.card_message_id
+            result_msg_id: int | None = None
+
+            if update_board and match.match_id not in self._terminal_rendered_matches:
                 char_lookup = self.char_lookup_for_match(match)
                 result_text = render_match_results(
                     match,
@@ -737,37 +741,40 @@ class ArenaTelegramCoordinator:
                     char_lookup=char_lookup,
                 )
                 result_markup = build_match_results_keyboard(match, player_names=names)
-                edited_ok = await edit_message_text_safe(
+                sent_result = await send_message_safe(
                     self.bot,
                     chat_id=state.chat_id,
-                    message_id=state.board_message_id,
                     text=result_text,
                     reply_markup=result_markup,
                 )
-                replacement = None
-                if not edited_ok and match.match_id not in self._terminal_rendered_matches:
-                    replacement = await send_message_safe(
+                if sent_result is not None:
+                    self._terminal_rendered_matches.add(match.match_id)
+                    result_msg_id = sent_result.message_id
+                    state.board_message_id = result_msg_id
+                    await self._delete_or_strip_message(state.chat_id, old_board_id)
+                else:
+                    edited_ok = await edit_message_text_safe(
                         self.bot,
                         chat_id=state.chat_id,
+                        message_id=old_board_id,
                         text=result_text,
                         reply_markup=result_markup,
                     )
-                    if replacement is not None:
-                        state.board_message_id = replacement.message_id
-                if edited_ok or replacement is not None:
-                    self._terminal_rendered_matches.add(match.match_id)
+                    if edited_ok:
+                        self._terminal_rendered_matches.add(match.match_id)
+                        result_msg_id = old_board_id
 
             if update_card:
                 try:
                     await self.bot.delete_message(
-                        chat_id=state.chat_id, message_id=state.card_message_id
+                        chat_id=state.chat_id, message_id=old_card_id
                     )
                 except Exception:
                     retired_text = render_retired_card_text(match, player_names=names)
                     _, state.card_is_photo = await edit_card_message_safe(
                         self.bot,
                         chat_id=state.chat_id,
-                        message_id=state.card_message_id,
+                        message_id=old_card_id,
                         is_photo=state.card_is_photo,
                         photo=None,
                         caption=retired_text,
@@ -780,9 +787,11 @@ class ArenaTelegramCoordinator:
                         rid = int(ref.message_id)
                     except ValueError:
                         continue
-                    if ref.chat_id == state.chat_id and rid == state.board_message_id:
-                        continue
-                    if ref.chat_id == state.chat_id and rid == state.card_message_id:
+                    if ref.chat_id == state.chat_id and rid in {
+                        old_board_id,
+                        old_card_id,
+                        result_msg_id,
+                    }:
                         continue
                     await self._delete_or_strip_message(ref.chat_id, rid)
 

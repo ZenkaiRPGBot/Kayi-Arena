@@ -932,8 +932,8 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
     forfeited = mgr.get_match(match.match_id)
     assert forfeited is not None
     assert forfeited.status is MatchLifecycleStatus.FORFEITED
-    # Forfeit result must NOT invent 7 matchups
-    board_result = bot.edited_messages[-1]["text"]
+    # Forfeit result is sent as a fresh message and must NOT invent 7 matchups
+    board_result = bot.sent_messages[-1]["text"]
     assert "𝐀𝐑𝐄𝐍𝐀 𝐑𝐄𝐒𝐔𝐋𝐓" in board_result
     assert "Forfeit" in board_result
     assert "𝐓𝐄𝐀𝐌 𝐒𝐂𝐎𝐑𝐄𝐒" not in board_result

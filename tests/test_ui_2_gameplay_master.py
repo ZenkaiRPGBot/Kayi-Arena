@@ -574,3 +574,144 @@ async def test_gameplay_logger_formats_dedups_and_isolates_failures() -> None:
     assert ok_fail is False
 
     db.close()
+
+
+@pytest.mark.asyncio
+async def test_ui_2_1_board_spacing_bullets_and_fresh_conclusion_message() -> None:
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    clock = FakeClock()
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION, clock=clock)
+    bot = MockBotRecorder()
+    dp, coord = create_dispatcher(bot=bot, config=BotConfig(bot_token="fake:t"), db=db, manager=mgr)
+    u1 = _make_user(101, "Obito")
+    u2 = _make_user(202, "Kiyomi")
+    coord.register_user(u1)
+    coord.register_user(u2)
+
+    chl = (
+        await mgr.create_challenge(challenger_id="101", chat_id="-1001234567890", universe_id="naruto")
+    ).challenge
+    match = (await mgr.accept_challenge(challenge_id=chl.challenge_id, player_id="202")).match
+    assert match is not None
+    ui = await coord.start_match_ui(match, chat_id="-1001234567890")
+    assert ui is not None
+    old_board_id = ui.board_message_id
+    old_card_id = ui.card_message_id
+
+    # Draft 2 roles for player 1 and 2 roles for player 2 to check Draft Board spacing & bullets
+    for turn in range(4):
+        cur = mgr.get_match(match.match_id)
+        assert cur is not None
+        active = cur.draft_snapshot.active_player_id or "101"
+        sh = await mgr.shuffle_match(
+            match_id=cur.match_id,
+            player_id=active,
+            expected_revision=cur.draft_snapshot.revision,
+            expected_generation=cur.generation,
+        )
+        assert sh.accepted and sh.match is not None
+        role_idx = turn // 2
+        asg = await mgr.assign_match_role(
+            match_id=sh.match.match_id,
+            player_id=active,
+            role=ROLE_ORDER[role_idx],
+            expected_revision=sh.match.draft_snapshot.revision,
+            expected_generation=sh.match.generation,
+        )
+        assert asg.accepted and asg.match is not None
+
+    mid = mgr.get_match(match.match_id)
+    assert mid is not None
+    board_text = render_draft_board(
+        mid,
+        universe_name="Naruto",
+        player_names=coord.player_names_for_match(mid),
+        char_lookup=coord.char_lookup_for_match(mid),
+    )
+    # 1. Exactly one empty line between assigned roles for both players
+    lines = board_text.splitlines()
+    role_indices = [i for i, ln in enumerate(lines) if ln.startswith("✦ ") and "<b>Captain</b>" in ln or ln.startswith("✦ ") and "<b>Strategist</b>" in ln]
+    assert len(role_indices) == 4
+    assert lines[role_indices[0] + 1] == "" and role_indices[1] == role_indices[0] + 2
+    assert lines[role_indices[2] + 1] == "" and role_indices[3] == role_indices[2] + 2
+
+    # 2. Lighter ▸ bullets on Available and Skips left for both players (not ▪)
+    assert board_text.count("▸ <b>Available:</b>") == 2
+    assert board_text.count("▸ <b>Skips left:</b>") == 2
+    assert "▪ <b>Available:</b>" not in board_text
+    assert "▪ <b>Skips left:</b>" not in board_text
+
+    # 3. Complete the draft -> fresh result message sent, old board & card deleted, duplicate sync suppressed
+    while True:
+        cur = mgr.get_match(match.match_id)
+        assert cur is not None
+        if cur.status is not MatchLifecycleStatus.DRAFTING:
+            break
+        active = cur.draft_snapshot.active_player_id or "101"
+        sh = await mgr.shuffle_match(
+            match_id=cur.match_id,
+            player_id=active,
+            expected_revision=cur.draft_snapshot.revision,
+            expected_generation=cur.generation,
+        )
+        assert sh.accepted and sh.match is not None
+        open_roles = [r for r in ROLE_ORDER if sh.match.public_view.teams[active].get(r) is None]
+        asg = await mgr.assign_match_role(
+            match_id=sh.match.match_id,
+            player_id=active,
+            role=open_roles[0],
+            expected_revision=sh.match.draft_snapshot.revision,
+            expected_generation=sh.match.generation,
+        )
+        assert asg.accepted and asg.match is not None
+
+    done_match = mgr.get_match(match.match_id)
+    assert done_match is not None and done_match.status is MatchLifecycleStatus.COMPLETED
+    sent_before = len(bot.sent_messages)
+    await coord.sync_match_ui(done_match, update_board=True, update_card=True)
+    assert len(bot.sent_messages) == sent_before + 1
+    fresh_result_id = bot.next_msg_id
+    assert fresh_result_id != old_board_id
+    assert "𝐀𝐑𝐄𝐍𝐀 𝐑𝐄𝐒𝐔𝐋𝐓" in bot.sent_messages[-1]["text"]
+    deleted_ids = {d["message_id"] for d in bot.deleted_messages}
+    assert old_board_id in deleted_ids
+    assert old_card_id in deleted_ids
+
+    # Duplicate terminal sync does NOT send a second result message
+    await coord.sync_match_ui(done_match, update_board=True, update_card=True)
+    assert len(bot.sent_messages) == sent_before + 1
+
+    # Battle Breakdown & Back to Result edit the newly sent result message
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            50,
+            chat_id=-1001234567890,
+            chat_type="supergroup",
+            message_id=fresh_result_id,
+            user=u1,
+            data=encode_cb("dr", done_match.match_id, 0),
+            recorder=bot,
+        ),
+    )
+    assert bot.edited_messages[-1]["message_id"] == fresh_result_id
+    assert "𝐁𝐀𝐓𝐓𝐋𝐄 𝐁𝐑𝐄𝐀𝐊𝐃𝐎𝐖𝐍" in bot.edited_messages[-1]["text"]
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            51,
+            chat_id=-1001234567890,
+            chat_type="supergroup",
+            message_id=fresh_result_id,
+            user=u1,
+            data=encode_cb("mr", done_match.match_id),
+            recorder=bot,
+        ),
+    )
+    assert bot.edited_messages[-1]["message_id"] == fresh_result_id
+    assert "𝐀𝐑𝐄𝐍𝐀 𝐑𝐄𝐒𝐔𝐋𝐓" in bot.edited_messages[-1]["text"]
+
+    await coord.shutdown()
+    db.close()
