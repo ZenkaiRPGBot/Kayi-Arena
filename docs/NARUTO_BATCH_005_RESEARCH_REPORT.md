@@ -136,6 +136,6 @@ Fields containing only “not recorded”, “unknown”, rank/affiliation/clan/
 
 - Focused quality tests: **7 passed**.
 - Full suite result: **167 passed**.
-- Stage 01B package commit: `PENDING_PACKAGE_COMMIT`.
+- Stage 01B package commit: `fda4dcfeda635d768dead8527a3b08694727eb47`.
 
 The test line and commit are populated after verification so the report refers to real results and a real commit.
