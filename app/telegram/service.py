@@ -70,13 +70,21 @@ logger = logging.getLogger(__name__)
 
 @dataclass(slots=True)
 class UniverseMenuContext:
-    """Preserves reply-to-player context while navigating /arena menu."""
+    """Preserves battle configuration & challenge target while navigating /arena."""
 
     owner_user_id: str
+    chat_id: str = ""
     target_player_id: str | None = None
     target_player_name: str | None = None
+    selected_universe_id: str | None = None
+    explicit_universe_mode: bool = False
     game_mode: str = "ranked"
     page: int = 0
+    screen: str = "config"
+    invalid_universe_arg: str | None = None
+    created_at: float = 0.0
+    cancelled: bool = False
+    confirmed: bool = False
 
 
 @dataclass(slots=True)
@@ -289,13 +297,17 @@ class ArenaTelegramCoordinator:
         return {pid: self.display_name(pid) for pid in match.players}
 
     def universe_name(self, universe_id: str) -> str:
+        if universe_id.strip().lower() == "random":
+            return "Random"
         try:
             return self.db.get_universe(universe_id).name
         except Exception:
             return universe_id
 
     def eligible_universes(self) -> tuple[Universe, ...]:
-        return self.db.list_eligible_universes(kind=self.config.dataset_kind)
+        items = list(self.db.list_eligible_universes(kind=self.config.dataset_kind))
+        items.sort(key=lambda u: (u.name.lower(), u.universe_id))
+        return tuple(items)
 
     def get_character_entry(self, character_id: str) -> CharacterEntry | None:
         cached = self._char_cache.get(character_id)

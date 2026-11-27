@@ -188,8 +188,8 @@ async def test_tester_restriction_batch_admin_and_full_naruto_gameplay(tmp_path:
     p1 = _user(201, "Tester1")
     p2 = _user(202, "Tester2")
 
-    # Unauthorized user blocked from testing dataset
-    await dp.feed_update(bot, _msg_upd(1, chat_id=999, chat_type="private", user=outsider, text="/arena"))
+    # Unauthorized user blocked from testing dataset in group
+    await dp.feed_update(bot, _msg_upd(1, chat_id=-1001, chat_type="supergroup", user=outsider, text="/arena"))
     assert "restricted to authorized testers" in bot.sent_messages[-1]["text"]
 
     # Authorized testers play full Naruto draft on testing dataset

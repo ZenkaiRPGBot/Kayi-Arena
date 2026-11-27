@@ -176,13 +176,15 @@ def _build_handbook_chapters() -> dict[str, str]:
                 "",
                 "<b>How to start a match</b>",
                 "",
+                "Battles begin in groups. Add the bot to a group, then:",
+                "",
                 "To challenge someone directly, reply to their message with /arena.",
                 "",
                 "To invite anyone in the group to play, send /arena without replying to a message.",
                 "",
-                "Select an anime universe and wait for your opponent to accept the challenge.",
+                "Choose a universe and match mode, then send your challenge.",
                 "",
-                "Once accepted, the game begins!",
+                "Once your opponent accepts, the game begins!",
             ]
         ),
         "2": "\n".join(
@@ -343,6 +345,90 @@ def render_help_topic(topic: str = "menu") -> str:
 # ---------------------------------------------------------------------------
 # Universe Selection & Challenge
 # ---------------------------------------------------------------------------
+
+
+def render_arena_private() -> str:
+    return clamp_text(
+        "\n".join(
+            [
+                "<b>⚔️ Enter the Arena</b>",
+                "",
+                "Battles can only be played in groups.",
+                "",
+                "Add me to a group and use /arena to challenge another player.",
+            ]
+        )
+    )
+
+
+def render_arena_config(
+    *,
+    selected_universe_id: str | None,
+    universe_name: str | None,
+    game_mode: str,
+) -> str:
+    if selected_universe_id is None:
+        universe_line = "Not selected"
+    elif selected_universe_id == "random":
+        universe_line = "🎲 Random"
+    else:
+        icon = universe_icon(selected_universe_id)
+        universe_line = f"{icon} {esc(universe_name or selected_universe_id)}"
+
+    mode_line = "🏆 Ranked" if game_mode == "ranked" else "🤝 Friendly"
+    lines = [
+        "<b>⚔️ Kayi Arena</b>",
+        "",
+        "Choose your battle preferences.",
+        "",
+        f"<b>Universe:</b> {universe_line}",
+        "",
+        f"<b>Match Mode:</b> {mode_line}",
+    ]
+    if selected_universe_id == "random":
+        lines.extend(
+            [
+                "",
+                "<i>The universe will be revealed when the challenge is accepted.</i>",
+            ]
+        )
+    return clamp_text("\n".join(lines))
+
+
+def render_universe_browser(*, has_universes: bool = True) -> str:
+    if not has_universes:
+        return clamp_text(
+            "\n".join(
+                [
+                    "🌐 <b>No Eligible Universes Available</b>",
+                    "",
+                    "There are currently no active universes with published character datasets.",
+                    "Please check back once a universe dataset is published.",
+                ]
+            )
+        )
+    return clamp_text(
+        "\n".join(
+            [
+                "<b>🌐 Select a Universe</b>",
+                "",
+                "Choose the universe you want to battle in.",
+            ]
+        )
+    )
+
+
+def render_invalid_universe(universe_arg: str, *, has_eligible_universes: bool) -> str:
+    lines = [
+        "<b>⚠️ Universe Not Found</b>",
+        "",
+        f"{esc(universe_arg)} is not an available universe.",
+        "",
+        "Please select an available universe."
+        if has_eligible_universes
+        else "No playable universes are currently available.",
+    ]
+    return clamp_text("\n".join(lines))
 
 
 def render_universe_selection(

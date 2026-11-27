@@ -39,7 +39,6 @@ logger = logging.getLogger(__name__)
 
 PUBLIC_BOT_COMMANDS: tuple[BotCommand, ...] = (
     BotCommand(command="start", description="Welcome to Kayi Arena"),
-    BotCommand(command="arena", description="Challenge another player"),
     BotCommand(command="game", description="View your active match"),
     BotCommand(command="profile", description="View your player profile"),
     BotCommand(command="leaderboard", description="View player rankings"),
@@ -48,8 +47,9 @@ PUBLIC_BOT_COMMANDS: tuple[BotCommand, ...] = (
     BotCommand(command="ping", description="Check bot response time"),
 )
 
-GROUP_BOT_COMMANDS: tuple[BotCommand, ...] = tuple(
-    cmd for cmd in PUBLIC_BOT_COMMANDS if cmd.command != "start"
+GROUP_BOT_COMMANDS: tuple[BotCommand, ...] = (
+    BotCommand(command="arena", description="Challenge another player"),
+    *(cmd for cmd in PUBLIC_BOT_COMMANDS if cmd.command != "start"),
 )
 
 ADMIN_BOT_COMMANDS: tuple[BotCommand, ...] = (

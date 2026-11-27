@@ -70,6 +70,123 @@ def build_support_keyboard() -> InlineKeyboardMarkup:
     )
 
 
+def build_arena_private_keyboard(config: BotConfig) -> InlineKeyboardMarkup:
+    add_group_url = f"https://t.me/{config.bot_username}?startgroup=true"
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [_btn("➕ Add to Group", url=add_group_url, style=STYLE_SUCCESS)]
+        ]
+    )
+
+
+def build_arena_config_keyboard(
+    *,
+    selected_universe_id: str | None,
+    game_mode: str,
+    explicit_universe_mode: bool = False,
+) -> InlineKeyboardMarkup:
+    is_ranked = game_mode == "ranked"
+    ranked_btn = _btn(
+        "✓ Ranked" if is_ranked else "Ranked",
+        callback_data=encode_cb("ac", "md", "r"),
+        style=STYLE_PRIMARY if is_ranked else None,
+    )
+    friendly_btn = _btn(
+        "✓ Friendly" if not is_ranked else "Friendly",
+        callback_data=encode_cb("ac", "md", "f"),
+        style=STYLE_PRIMARY if not is_ranked else None,
+    )
+    cancel_btn = _btn("✕ Cancel", callback_data=encode_cb("ac", "cx"), style=STYLE_DANGER)
+
+    if explicit_universe_mode:
+        return InlineKeyboardMarkup(
+            inline_keyboard=[
+                [ranked_btn, friendly_btn],
+                [
+                    _btn("⚔️ Challenge", callback_data=encode_cb("ac", "go"), style=STYLE_SUCCESS),
+                    cancel_btn,
+                ],
+            ]
+        )
+
+    is_manual = selected_universe_id is not None and selected_universe_id != "random"
+    is_random = selected_universe_id == "random"
+    row1 = [
+        _btn(
+            "🌐 Select Universe",
+            callback_data=encode_cb("ac", "br"),
+            style=STYLE_PRIMARY if is_manual else None,
+        ),
+        _btn(
+            "🎲 Random Universe",
+            callback_data=encode_cb("ac", "rn"),
+            style=STYLE_PRIMARY if is_random else None,
+        ),
+    ]
+    row2 = [ranked_btn, friendly_btn]
+    if selected_universe_id is None:
+        row3 = [cancel_btn]
+    else:
+        row3 = [
+            _btn("⚔️ Challenge", callback_data=encode_cb("ac", "go"), style=STYLE_SUCCESS),
+            cancel_btn,
+        ]
+    return InlineKeyboardMarkup(inline_keyboard=[row1, row2, row3])
+
+
+def build_universe_browser_keyboard(
+    *,
+    universes: Sequence[Universe],
+    page: int,
+    selected_universe_id: str | None = None,
+) -> InlineKeyboardMarkup:
+    if not universes:
+        return InlineKeyboardMarkup(
+            inline_keyboard=[[_btn("« Back", callback_data=encode_cb("ac", "bk"))]]
+        )
+
+    total_pages = max(1, (len(universes) + UNIVERSES_PER_PAGE - 1) // UNIVERSES_PER_PAGE)
+    safe_page = max(0, min(page, total_pages - 1))
+    start = safe_page * UNIVERSES_PER_PAGE
+    chunk = universes[start : start + UNIVERSES_PER_PAGE]
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for i in range(0, len(chunk), 2):
+        row = []
+        for u in chunk[i : i + 2]:
+            icon = universe_icon(u.universe_id)
+            row.append(
+                _btn(
+                    f"{icon} {u.name}",
+                    callback_data=encode_cb("ac", "us", u.universe_id),
+                    style=STYLE_PRIMARY if u.universe_id == selected_universe_id else None,
+                )
+            )
+        rows.append(row)
+
+    if total_pages > 1:
+        nav: list[InlineKeyboardButton] = []
+        if safe_page > 0:
+            nav.append(_btn("«", callback_data=encode_cb("ac", "bp", safe_page - 1)))
+        nav.append(_btn(f"{safe_page + 1} / {total_pages}", callback_data=encode_cb("noop")))
+        if safe_page + 1 < total_pages:
+            nav.append(_btn("»", callback_data=encode_cb("ac", "bp", safe_page + 1)))
+        rows.append(nav)
+
+    rows.append([_btn("« Back", callback_data=encode_cb("ac", "bk"))])
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def build_invalid_universe_keyboard(*, has_eligible_universes: bool) -> InlineKeyboardMarkup:
+    row: list[InlineKeyboardButton] = []
+    if has_eligible_universes:
+        row.append(
+            _btn("🌐 Select Universe", callback_data=encode_cb("ac", "br"), style=STYLE_PRIMARY)
+        )
+    row.append(_btn("✕ Cancel", callback_data=encode_cb("ac", "cx"), style=STYLE_DANGER))
+    return InlineKeyboardMarkup(inline_keyboard=[row])
+
+
 def build_universe_selection_keyboard(
     *,
     universes: Sequence[Universe],

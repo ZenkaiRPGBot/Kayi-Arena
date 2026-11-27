@@ -262,7 +262,6 @@ def test_public_commands_use_arena_not_draft() -> None:
 
     assert [(c.command, c.description) for c in PUBLIC_BOT_COMMANDS] == [
         ("start", "Welcome to Kayi Arena"),
-        ("arena", "Challenge another player"),
         ("game", "View your active match"),
         ("profile", "View your player profile"),
         ("leaderboard", "View player rankings"),
@@ -512,33 +511,49 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
     await dp.feed_update(bot, _make_message_update(2, chat_id=-1001, chat_type="supergroup", user=alex, text="/ping"))
     assert len(bot.sent_messages) == 2
 
-    # 3. /arena menu with reply-to-player preserves target across mode switch
+    # 3. /arena menu with reply-to-player preserves target across mode switch & browser
     await dp.feed_update(
         bot,
         _make_message_update(3, chat_id=-1001, chat_type="supergroup", user=alex, text="/arena", reply_to_user=kai),
     )
-    menu_msg_id = 100 + len(bot.sent_messages)
-    assert "Direct challenge target" in bot.sent_messages[-1]["text"]
-    assert "Kai &amp; Co" in bot.sent_messages[-1]["text"]  # Escaped!
+    menu_msg_id = bot.next_msg_id
+    assert "Choose your battle preferences." in bot.sent_messages[-1]["text"]
+    assert "<b>Universe:</b> Not selected" in bot.sent_messages[-1]["text"]
 
-    # Toggle to Friendly mode on universe menu
+    # Toggle to Friendly mode on battle config
     await dp.feed_update(
         bot,
         _make_callback_update(
-            4, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("um", 0, "f"), recorder=bot
+            4, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("ac", "md", "f"), recorder=bot
         ),
     )
-    assert "Friendly" in bot.edited_messages[-1]["text"]
-    assert "Kai &amp; Co" in bot.edited_messages[-1]["text"]
+    assert "🤝 Friendly" in bot.edited_messages[-1]["text"]
 
-    # Select Naruto universe -> creates direct challenge
+    # Open universe browser, select Naruto, then confirm Challenge
     await dp.feed_update(
         bot,
         _make_callback_update(
-            5, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("u", 0, "f", "naruto"), recorder=bot
+            5, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("ac", "br"), recorder=bot
         ),
     )
-    chl_msg_id = 100 + len(bot.sent_messages)
+    assert "<b>🌐 Select a Universe</b>" in bot.edited_messages[-1]["text"]
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            6, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("ac", "us", "naruto"), recorder=bot
+        ),
+    )
+    assert "🍥 Naruto" in bot.edited_messages[-1]["text"]
+    assert "🤝 Friendly" in bot.edited_messages[-1]["text"]
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            7, chat_id=-1001, chat_type="supergroup", message_id=menu_msg_id, user=alex, data=encode_cb("ac", "go"), recorder=bot
+        ),
+    )
+    chl_msg_id = bot.next_msg_id
     assert "ARENA CHALLENGE" in bot.sent_messages[-1]["text"]
     assert "Direct Challenge" in bot.sent_messages[-1]["text"]
 
@@ -552,7 +567,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
     await dp.feed_update(
         bot,
         _make_callback_update(
-            6,
+            9001,
             chat_id=-1001,
             chat_type="supergroup",
             message_id=chl_msg_id,
@@ -570,7 +585,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
     await dp.feed_update(
         bot,
         _make_callback_update(
-            7,
+            9002,
             chat_id=-1001,
             chat_type="supergroup",
             message_id=chl_msg_id,
@@ -585,7 +600,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
     await dp.feed_update(
         bot,
         _make_callback_update(
-            8,
+            9003,
             chat_id=-1001,
             chat_type="supergroup",
             message_id=chl_msg_id,
@@ -1121,6 +1136,20 @@ async def test_shuffle_photo_upgrade_then_assign_all_roles_no_error() -> None:
             upd, chat_id=chat_id, chat_type="supergroup", user=u1, text="/arena naruto", reply_to_user=u2
         ),
     )
+    config_msg_id = bot.next_msg_id
+    upd += 1
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            upd,
+            chat_id=chat_id,
+            chat_type="supergroup",
+            message_id=config_msg_id,
+            user=u1,
+            data=encode_cb("ac", "go"),
+            recorder=bot,
+        ),
+    )
     upd += 1
     chl_id = next(iter(mgr._challenges.keys()))
     await dp.feed_update(
@@ -1218,6 +1247,230 @@ async def test_shuffle_photo_upgrade_then_assign_all_roles_no_error() -> None:
         if "Something went wrong" in str(ans.get("text", ""))
     ]
     assert error_alerts == [], f"Unexpected error alerts: {error_alerts}"
+    await coordinator.shutdown()
+    store.close()
+    db.close()
+
+
+@pytest.mark.asyncio
+async def test_module_04_arena_config_group_only_browser_random_and_security() -> None:
+    import random as _random
+    from app.persistence import SqliteMatchStore
+
+    db = CharacterDatabase(":memory:")
+    universe_specs = [
+        ("naruto", "Naruto", True),
+        ("one_piece", "One Piece", True),
+        ("dragon_ball", "Dragon Ball", True),
+        ("bleach", "Bleach", True),
+        ("demon_slayer", "Demon Slayer", True),
+        ("jujutsu_kaisen", "Jujutsu Kaisen", True),
+        ("attack_on_titan", "Attack on Titan", True),
+        ("hunter_x_hunter", "Hunter x Hunter", True),
+        ("disabled_uni", "Disabled Uni", False),
+    ]
+    for uid, uname, active in universe_specs:
+        db.create_universe(universe_id=uid, name=uname, active=active)
+        for i in range(14):
+            cid = f"{uid}_c{i:02d}"
+            db.add_character(
+                character_id=cid,
+                universe_id=uid,
+                name=f"{uname} {i:02d}",
+                species=SpeciesKind.HUMAN,
+                rarity="Common",
+                power=3,
+                fit={r: 3 for r in SCORING_ROLES},
+                canonical_version="Base",
+                image=ImageMetadata(url_or_ref=f"https://example.com/{cid}.png", status=ImageValidationStatus.VERIFIED),
+            )
+            db.submit_for_review(cid)
+            db.approve_character(cid)
+        if active:
+            db.publish_dataset(universe_id=uid, dataset_version=f"{uid}-v1", kind=DatasetKind.PRODUCTION)
+
+    store = SqliteMatchStore(":memory:")
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION, store=store, universe_rng=_random.Random(7))
+    bot = MockBotRecorder()
+    cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot")
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr, store=store)
+
+    p1 = _make_user(101, "Alice")
+    p2 = _make_user(202, "Bob")
+    p3 = _make_user(303, "Eve")
+    upd = 1
+
+    # 1. Private chat restrictions (/arena, /arena Naruto, /arena random, private callbacks)
+    for cmd_text in ["/arena", "/arena Naruto", "/arena random"]:
+        await dp.feed_update(bot, _make_message_update(upd, chat_id=101, chat_type="private", user=p1, text=cmd_text))
+        upd += 1
+        assert "Battles can only be played in groups." in bot.sent_messages[-1]["text"]
+        priv_kb = bot.sent_messages[-1]["reply_markup"]
+        assert priv_kb.inline_keyboard[0][0].text == "➕ Add to Group"
+        assert priv_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "success"
+        assert len(mgr._challenges) == 0
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=101, chat_type="private", message_id=bot.next_msg_id, user=p1, data=encode_cb("ac", "go"), recorder=bot),
+    )
+    upd += 1
+    assert "only be played in groups" in bot.callback_answers[-1]["text"]
+
+    # 2. Group /arena -> initial battle config (no Challenge button yet, Ranked default)
+    await dp.feed_update(bot, _make_message_update(upd, chat_id=-1009, chat_type="supergroup", user=p1, text="/arena", reply_to_user=p2))
+    upd += 1
+    cfg_msg_id = bot.next_msg_id
+    init_text = bot.sent_messages[-1]["text"]
+    init_kb = bot.sent_messages[-1]["reply_markup"]
+    assert "<b>Universe:</b> Not selected" in init_text
+    assert "<b>Match Mode:</b> 🏆 Ranked" in init_text
+    assert [[b.text for b in r] for r in init_kb.inline_keyboard] == [
+        ["🌐 Select Universe", "🎲 Random Universe"],
+        ["✓ Ranked", "Friendly"],
+        ["✕ Cancel"],
+    ]
+    assert "style" not in init_kb.inline_keyboard[0][0].model_dump(exclude_none=True)
+    assert init_kb.inline_keyboard[1][0].model_dump(exclude_none=True)["style"] == "primary"
+    assert init_kb.inline_keyboard[2][0].model_dump(exclude_none=True)["style"] == "danger"
+    assert len(mgr._challenges) == 0
+
+    # Unauthorized user cannot modify config
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p3, data=encode_cb("ac", "md", "f"), recorder=bot),
+    )
+    upd += 1
+    assert "Only the player who opened this configuration" in bot.callback_answers[-1]["text"]
+
+    # 3. Universe browser pagination (>6 universes) & Back & selected highlighting
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "br"), recorder=bot),
+    )
+    upd += 1
+    br_kb1 = bot.edited_messages[-1]["reply_markup"]
+    assert "<b>🌐 Select a Universe</b>" in bot.edited_messages[-1]["text"]
+    assert len(br_kb1.inline_keyboard) == 5
+    assert [b.text for b in br_kb1.inline_keyboard[3]] == ["1 / 2", "»"]
+    assert [b.text for b in br_kb1.inline_keyboard[4]] == ["« Back"]
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "bp", 1), recorder=bot),
+    )
+    upd += 1
+    br_kb2 = bot.edited_messages[-1]["reply_markup"]
+    assert [b.text for b in br_kb2.inline_keyboard[1]] == ["«", "2 / 2"]
+    assert all("Disabled Uni" not in b.text for r in br_kb2.inline_keyboard for b in r)
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "us", "one_piece"), recorder=bot),
+    )
+    upd += 1
+    sel_kb = bot.edited_messages[-1]["reply_markup"]
+    assert "🏴\u200d☠️ One Piece" in bot.edited_messages[-1]["text"]
+    assert sel_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "primary"
+    assert [b.text for b in sel_kb.inline_keyboard[2]] == ["⚔️ Challenge", "✕ Cancel"]
+    assert sel_kb.inline_keyboard[2][0].model_dump(exclude_none=True)["style"] == "success"
+    assert len(mgr._challenges) == 0
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "br"), recorder=bot),
+    )
+    upd += 1
+    reopen_kb = bot.edited_messages[-1]["reply_markup"]
+    op_btns = [b for r in reopen_kb.inline_keyboard for b in r if "One Piece" in b.text]
+    assert op_btns and op_btns[0].model_dump(exclude_none=True)["style"] == "primary"
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "bk"), recorder=bot),
+    )
+    upd += 1
+    assert "One Piece" in bot.edited_messages[-1]["text"]
+
+    # 4. Cancel invalidates session & deletes message without creating challenge
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "cx"), recorder=bot),
+    )
+    upd += 1
+    assert len(mgr._challenges) == 0
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=cfg_msg_id, user=p1, data=encode_cb("ac", "go"), recorder=bot),
+    )
+    upd += 1
+    assert len(mgr._challenges) == 0
+
+    # 5. Invalid universe argument (/arena Minecraft) -> recovery opens browser
+    await dp.feed_update(bot, _make_message_update(upd, chat_id=-1009, chat_type="supergroup", user=p1, text="/arena Minecraft"))
+    upd += 1
+    assert "⚠️ Universe Not Found" in bot.sent_messages[-1]["text"]
+    assert "Minecraft is not an available universe." in bot.sent_messages[-1]["text"]
+    inv_kb = bot.sent_messages[-1]["reply_markup"]
+    assert inv_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "primary"
+    assert inv_kb.inline_keyboard[0][1].model_dump(exclude_none=True)["style"] == "danger"
+
+    # 6. Explicit /arena random -> no Select/Random buttons, deferred resolution until acceptance
+    await dp.feed_update(bot, _make_message_update(upd, chat_id=-1009, chat_type="supergroup", user=p1, text="/arena random"))
+    upd += 1
+    rand_msg_id = bot.next_msg_id
+    assert "<b>Universe:</b> 🎲 Random" in bot.sent_messages[-1]["text"]
+    assert "revealed when the challenge is accepted" in bot.sent_messages[-1]["text"]
+    rand_kb = bot.sent_messages[-1]["reply_markup"]
+    assert [[b.text for b in r] for r in rand_kb.inline_keyboard] == [
+        ["✓ Ranked", "Friendly"],
+        ["⚔️ Challenge", "✕ Cancel"],
+    ]
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=rand_msg_id, user=p1, data=encode_cb("ac", "go"), recorder=bot),
+    )
+    upd += 1
+    assert len(mgr._challenges) == 1
+    rand_chl = next(iter(mgr._challenges.values()))
+    assert rand_chl.universe_id == "random"
+    assert "🎲 Random" in bot.sent_messages[-1]["text"]
+    chl_card_msg_id = bot.next_msg_id
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(upd, chat_id=-1009, chat_type="supergroup", message_id=rand_msg_id, user=p1, data=encode_cb("ac", "go"), recorder=bot),
+    )
+    upd += 1
+    assert len(mgr._challenges) == 1
+
+    mgr2 = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION, store=store, universe_rng=_random.Random(7))
+    rep, pending_chls, *_ = await mgr2.recover_from_store()
+    assert rep.pending_challenges == 1
+    assert pending_chls[0][0].universe_id == "random"
+
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            upd,
+            chat_id=-1009,
+            chat_type="supergroup",
+            message_id=chl_card_msg_id,
+            user=p2,
+            data=encode_cb("ca", rand_chl.challenge_id, rand_chl.generation),
+            recorder=bot,
+        ),
+    )
+    upd += 1
+    accepted_chl = mgr._challenges[rand_chl.challenge_id]
+    assert accepted_chl.universe_id != "random"
+    assert accepted_chl.universe_id in {u[0] for u in universe_specs if u[2]}
+    active_m = mgr.get_active_match_for_player("101")
+    assert active_m is not None
+    assert active_m.universe_id == accepted_chl.universe_id
+    assert active_m.dataset_version == f"{accepted_chl.universe_id}-v1"
+
     await coordinator.shutdown()
     store.close()
     db.close()

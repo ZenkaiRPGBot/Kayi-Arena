@@ -50,6 +50,7 @@ MAX_CALLBACK_DATA_BYTES = 64
 UNIVERSES_PER_PAGE = 6
 CATALOGUE_PER_PAGE = 8
 LEADERBOARD_PER_PAGE = 10
+RANDOM_UNIVERSE_ID = "random"
 
 
 def role_label(role: str) -> str:
@@ -62,4 +63,7 @@ def rarity_icon(rarity: str) -> str:
 
 
 def universe_icon(universe_id: str) -> str:
-    return UNIVERSE_ICONS.get(universe_id.strip().lower(), "🌐")
+    key = universe_id.strip().lower()
+    if key == RANDOM_UNIVERSE_ID:
+        return "🎲"
+    return UNIVERSE_ICONS.get(key, "🌐")

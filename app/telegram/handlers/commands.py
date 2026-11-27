@@ -13,12 +13,16 @@ from app.scoring import DatasetKind
 from app.telegram.constants import LEADERBOARD_PER_PAGE
 from app.telegram.keyboards import (
     build_active_game_keyboard,
+    build_arena_config_keyboard,
+    build_arena_private_keyboard,
     build_catalogue_universes_keyboard,
     build_help_keyboard,
     build_home_keyboard,
+    build_invalid_universe_keyboard,
     build_leaderboard_keyboard,
     build_no_active_game_keyboard,
     build_profile_keyboard,
+    build_universe_browser_keyboard,
     build_universe_selection_keyboard,
 )
 from app.telegram.safe_api import (
@@ -29,14 +33,18 @@ from app.telegram.safe_api import (
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
 from app.telegram.texts import (
     render_active_game,
+    render_arena_config,
+    render_arena_private,
     render_catalogue_universes,
     render_help_topic,
     render_history,
     render_home_group,
     render_home_private,
+    render_invalid_universe,
     render_leaderboard,
     render_no_active_game,
     render_profile,
+    render_universe_browser,
     render_universe_selection,
 )
 
@@ -85,6 +93,14 @@ async def cmd_arena(
     player_id = coordinator.register_user(message.from_user)
     if not player_id:
         return
+    if message.chat.type not in {"group", "supergroup"}:
+        await send_message_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            text=render_arena_private(),
+            reply_markup=build_arena_private_keyboard(coordinator.config),
+        )
+        return
     if (
         coordinator.config.dataset_kind is DatasetKind.TEST
         and not coordinator.config.is_authorized_tester(player_id)
@@ -120,59 +136,145 @@ async def cmd_arena(
         target_player_id = coordinator.register_user(reply.from_user)
         target_player_name = coordinator.display_name(target_player_id)
 
+    universes = coordinator.eligible_universes()
     arg = (command.args or "").strip()
+
     if not arg:
-        universes = coordinator.eligible_universes()
-        text = render_universe_selection(
-            universes=universes,
-            game_mode="ranked",
+        if not universes:
+            await send_message_safe(
+                coordinator.bot,
+                chat_id=message.chat.id,
+                text=render_universe_browser(has_universes=False),
+                reply_to_message_id=message.message_id,
+            )
+            return
+        ctx = UniverseMenuContext(
+            owner_user_id=player_id,
+            chat_id=str(message.chat.id),
+            target_player_id=target_player_id,
             target_player_name=target_player_name,
-        )
-        markup = build_universe_selection_keyboard(
-            universes=universes,
-            page=0,
+            selected_universe_id=None,
+            explicit_universe_mode=False,
             game_mode="ranked",
+            page=0,
+            screen="config",
+            created_at=time.time(),
         )
         sent = await send_message_safe(
             coordinator.bot,
             chat_id=message.chat.id,
-            text=text,
-            reply_markup=markup,
+            text=render_arena_config(
+                selected_universe_id=None,
+                universe_name=None,
+                game_mode="ranked",
+            ),
+            reply_markup=build_arena_config_keyboard(
+                selected_universe_id=None,
+                game_mode="ranked",
+                explicit_universe_mode=False,
+            ),
             reply_to_message_id=message.message_id,
         )
-        if sent is not None and universes:
-            coordinator.save_universe_menu(
-                str(sent.chat.id),
-                sent.message_id,
-                UniverseMenuContext(
-                    owner_user_id=player_id,
-                    target_player_id=target_player_id,
-                    target_player_name=target_player_name,
-                    game_mode="ranked",
-                    page=0,
-                ),
-            )
+        if sent is not None:
+            coordinator.save_universe_menu(str(sent.chat.id), sent.message_id, ctx)
         return
 
-    _, res = await coordinator.manager.handle_draft_command(
-        player_id=player_id,
-        chat_id=str(message.chat.id),
-        universe_arg=arg,
-        reply_to_user_id=target_player_id,
-        game_mode="ranked",
-    )
-    if res is None or not res.accepted or res.challenge is None:
-        err_msg = _friendly_challenge_error(res.error_code if res else None, res.message if res else "")
-        await send_message_safe(
+    if arg.lower() == "random":
+        if not universes:
+            await send_message_safe(
+                coordinator.bot,
+                chat_id=message.chat.id,
+                text=render_universe_browser(has_universes=False),
+                reply_to_message_id=message.message_id,
+            )
+            return
+        ctx = UniverseMenuContext(
+            owner_user_id=player_id,
+            chat_id=str(message.chat.id),
+            target_player_id=target_player_id,
+            target_player_name=target_player_name,
+            selected_universe_id="random",
+            explicit_universe_mode=True,
+            game_mode="ranked",
+            page=0,
+            screen="config",
+            created_at=time.time(),
+        )
+        sent = await send_message_safe(
             coordinator.bot,
             chat_id=message.chat.id,
-            text=f"⚠️ {err_msg}",
+            text=render_arena_config(
+                selected_universe_id="random",
+                universe_name="Random",
+                game_mode="ranked",
+            ),
+            reply_markup=build_arena_config_keyboard(
+                selected_universe_id="random",
+                game_mode="ranked",
+                explicit_universe_mode=True,
+            ),
             reply_to_message_id=message.message_id,
         )
+        if sent is not None:
+            coordinator.save_universe_menu(str(sent.chat.id), sent.message_id, ctx)
         return
 
-    await coordinator.render_challenge_message(res.challenge, chat_id=str(message.chat.id))
-    coordinator.schedule_challenge_expiry(res.challenge)
+    resolved = coordinator.manager._resolve_universe_id(arg)
+    if resolved is None:
+        has_any = bool(universes)
+        ctx = UniverseMenuContext(
+            owner_user_id=player_id,
+            chat_id=str(message.chat.id),
+            target_player_id=target_player_id,
+            target_player_name=target_player_name,
+            selected_universe_id=None,
+            explicit_universe_mode=False,
+            game_mode="ranked",
+            page=0,
+            screen="invalid",
+            invalid_universe_arg=arg,
+            created_at=time.time(),
+        )
+        sent = await send_message_safe(
+            coordinator.bot,
+            chat_id=message.chat.id,
+            text=render_invalid_universe(arg, has_eligible_universes=has_any),
+            reply_markup=build_invalid_universe_keyboard(has_eligible_universes=has_any),
+            reply_to_message_id=message.message_id,
+        )
+        if sent is not None:
+            coordinator.save_universe_menu(str(sent.chat.id), sent.message_id, ctx)
+        return
+
+    ctx = UniverseMenuContext(
+        owner_user_id=player_id,
+        chat_id=str(message.chat.id),
+        target_player_id=target_player_id,
+        target_player_name=target_player_name,
+        selected_universe_id=resolved,
+        explicit_universe_mode=True,
+        game_mode="ranked",
+        page=0,
+        screen="config",
+        created_at=time.time(),
+    )
+    sent = await send_message_safe(
+        coordinator.bot,
+        chat_id=message.chat.id,
+        text=render_arena_config(
+            selected_universe_id=resolved,
+            universe_name=coordinator.universe_name(resolved),
+            game_mode="ranked",
+        ),
+        reply_markup=build_arena_config_keyboard(
+            selected_universe_id=resolved,
+            game_mode="ranked",
+            explicit_universe_mode=True,
+        ),
+        reply_to_message_id=message.message_id,
+    )
+    if sent is not None:
+        coordinator.save_universe_menu(str(sent.chat.id), sent.message_id, ctx)
 
 
 async def cmd_game(message: Message, coordinator: ArenaTelegramCoordinator) -> None:

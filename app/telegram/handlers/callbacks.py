@@ -11,6 +11,8 @@ from app.telegram.callbacks import code_to_rarity, decode_cb, index_to_role
 from app.telegram.constants import CATALOGUE_PER_PAGE, LEADERBOARD_PER_PAGE
 from app.telegram.keyboards import (
     build_active_game_keyboard,
+    build_arena_config_keyboard,
+    build_arena_private_keyboard,
     build_catalogue_page_keyboard,
     build_catalogue_universes_keyboard,
     build_forfeit_confirm_keyboard,
@@ -21,6 +23,7 @@ from app.telegram.keyboards import (
     build_match_results_keyboard,
     build_profile_keyboard,
     build_support_keyboard,
+    build_universe_browser_keyboard,
     build_universe_selection_keyboard,
 )
 from app.telegram.safe_api import (
@@ -34,6 +37,8 @@ from app.telegram.safe_api import (
 from app.telegram.service import ArenaTelegramCoordinator, UniverseMenuContext
 from app.telegram.texts import (
     render_active_game,
+    render_arena_config,
+    render_arena_private,
     render_catalogue_page,
     render_catalogue_universes,
     render_forfeit_confirmation,
@@ -45,6 +50,7 @@ from app.telegram.texts import (
     render_match_results,
     render_profile,
     render_support_home,
+    render_universe_browser,
     render_universe_selection,
 )
 
@@ -414,28 +420,263 @@ async def handle_arena_callback(
         return
 
     # ------------------------------------------------------------------
-    # Universe Selection (/arena menu)
+    # Arena Battle Configuration & Universe Browser (Module 04)
     # ------------------------------------------------------------------
+    if action == "ac":
+        import time as _time
+
+        if msg.chat.type not in {"group", "supergroup"}:
+            await answer_callback_safe(query, "Battles can only be played in groups.", show_alert=True)
+            return
+
+        ctx = coordinator.get_universe_menu(chat_id, msg_id)
+        if ctx is None:
+            await answer_callback_safe(query, "This configuration session has expired.", show_alert=True)
+            return
+        if ctx.owner_user_id != user_id:
+            await answer_callback_safe(query, "Only the player who opened this configuration can use it.", show_alert=True)
+            return
+        if ctx.chat_id and str(ctx.chat_id) != str(chat_id):
+            await answer_callback_safe(query, "This configuration is not valid in this chat.", show_alert=True)
+            return
+        if ctx.cancelled or ctx.confirmed:
+            await answer_callback_safe(query, "This configuration session is already closed.", show_alert=True)
+            return
+        if ctx.created_at and (_time.time() - ctx.created_at) > 900.0:
+            ctx.cancelled = True
+            await answer_callback_safe(query, "This configuration session has expired.", show_alert=True)
+            return
+
+        sub = args[0] if args else ""
+
+        if sub == "cx":
+            ctx.cancelled = True
+            try:
+                await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+            except Exception:
+                await edit_message_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    text="Arena selection cancelled.",
+                    reply_markup=None,
+                )
+            await answer_callback_safe(query)
+            return
+
+        if sub == "md":
+            ctx.game_mode = "friendly" if (len(args) >= 2 and args[1] == "f") else "ranked"
+            u_name = (
+                coordinator.universe_name(ctx.selected_universe_id)
+                if ctx.selected_universe_id
+                else None
+            )
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_arena_config(
+                    selected_universe_id=ctx.selected_universe_id,
+                    universe_name=u_name,
+                    game_mode=ctx.game_mode,
+                ),
+                reply_markup=build_arena_config_keyboard(
+                    selected_universe_id=ctx.selected_universe_id,
+                    game_mode=ctx.game_mode,
+                    explicit_universe_mode=ctx.explicit_universe_mode,
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if sub in {"br", "bp"}:
+            universes = coordinator.eligible_universes()
+            if sub == "bp" and len(args) >= 2:
+                ctx.page = max(0, _parse_int(args[1]) or 0)
+            ctx.screen = "browser"
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_universe_browser(has_universes=bool(universes)),
+                reply_markup=build_universe_browser_keyboard(
+                    universes=universes,
+                    page=ctx.page,
+                    selected_universe_id=ctx.selected_universe_id,
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if sub == "us":
+            uid = args[1] if len(args) >= 2 else ""
+            universes = coordinator.eligible_universes()
+            if not any(u.universe_id == uid for u in universes):
+                await answer_callback_safe(query, "That universe is no longer available.", show_alert=True)
+                return
+            ctx.selected_universe_id = uid
+            ctx.explicit_universe_mode = False
+            ctx.screen = "config"
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_arena_config(
+                    selected_universe_id=uid,
+                    universe_name=coordinator.universe_name(uid),
+                    game_mode=ctx.game_mode,
+                ),
+                reply_markup=build_arena_config_keyboard(
+                    selected_universe_id=uid,
+                    game_mode=ctx.game_mode,
+                    explicit_universe_mode=False,
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if sub == "rn":
+            if not coordinator.eligible_universes():
+                await answer_callback_safe(query, "No playable universes are available.", show_alert=True)
+                return
+            ctx.selected_universe_id = "random"
+            ctx.explicit_universe_mode = False
+            ctx.screen = "config"
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_arena_config(
+                    selected_universe_id="random",
+                    universe_name="Random",
+                    game_mode=ctx.game_mode,
+                ),
+                reply_markup=build_arena_config_keyboard(
+                    selected_universe_id="random",
+                    game_mode=ctx.game_mode,
+                    explicit_universe_mode=False,
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if sub == "bk":
+            ctx.screen = "config"
+            u_name = (
+                coordinator.universe_name(ctx.selected_universe_id)
+                if ctx.selected_universe_id
+                else None
+            )
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_arena_config(
+                    selected_universe_id=ctx.selected_universe_id,
+                    universe_name=u_name,
+                    game_mode=ctx.game_mode,
+                ),
+                reply_markup=build_arena_config_keyboard(
+                    selected_universe_id=ctx.selected_universe_id,
+                    game_mode=ctx.game_mode,
+                    explicit_universe_mode=ctx.explicit_universe_mode,
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if sub == "go":
+            if not ctx.selected_universe_id:
+                await answer_callback_safe(query, "Please select a universe first.", show_alert=True)
+                return
+            ctx.confirmed = True
+            try:
+                res = await coordinator.manager.create_challenge(
+                    challenger_id=user_id,
+                    chat_id=chat_id,
+                    universe_id=ctx.selected_universe_id,
+                    target_player_id=ctx.target_player_id,
+                    game_mode=ctx.game_mode,
+                )
+            except Exception:
+                ctx.confirmed = False
+                raise
+            if not res.accepted or res.challenge is None:
+                ctx.confirmed = False
+                await answer_callback_safe(
+                    query,
+                    _map_challenge_error(res.error_code),
+                    show_alert=True,
+                )
+                return
+            sent_chl = await coordinator.render_challenge_message(res.challenge, chat_id=chat_id)
+            if sent_chl is None:
+                await coordinator.manager.cancel_challenge(
+                    challenge_id=res.challenge.challenge_id,
+                    player_id=user_id,
+                    expected_generation=res.challenge.generation,
+                )
+                ctx.confirmed = False
+                await answer_callback_safe(
+                    query,
+                    "Could not publish challenge message. Please try again.",
+                    show_alert=True,
+                )
+                return
+            coordinator.schedule_challenge_expiry(res.challenge)
+            try:
+                await coordinator.bot.delete_message(chat_id=chat_id, message_id=msg_id)
+            except Exception:
+                await edit_message_text_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    message_id=msg_id,
+                    text=f"⚔️ Challenge created in <b>{coordinator.universe_name(res.challenge.universe_id)}</b>.",
+                    reply_markup=None,
+                )
+            await answer_callback_safe(query)
+            return
+
+        await answer_callback_safe(query, "This action is no longer available.")
+        return
+
     if action == "arena":
+        if msg.chat.type not in {"group", "supergroup"}:
+            await answer_callback_safe(query, "Battles can only be played in groups.", show_alert=True)
+            return
         universes = coordinator.eligible_universes()
         coordinator.save_universe_menu(
             chat_id,
             msg_id,
-            UniverseMenuContext(owner_user_id=user_id, game_mode="ranked", page=0),
+            UniverseMenuContext(
+                owner_user_id=user_id,
+                chat_id=chat_id,
+                game_mode="ranked",
+                page=0,
+            ),
         )
         await edit_message_text_safe(
             coordinator.bot,
             chat_id=chat_id,
             message_id=msg_id,
-            text=render_universe_selection(universes=universes, game_mode="ranked"),
-            reply_markup=build_universe_selection_keyboard(
-                universes=universes, page=0, game_mode="ranked"
+            text=render_arena_config(
+                selected_universe_id=None,
+                universe_name=None,
+                game_mode="ranked",
+            ),
+            reply_markup=build_arena_config_keyboard(
+                selected_universe_id=None,
+                game_mode="ranked",
+                explicit_universe_mode=False,
             ),
         )
         await answer_callback_safe(query)
         return
 
     if action in {"um", "u"}:
+        if msg.chat.type not in {"group", "supergroup"}:
+            await answer_callback_safe(query, "Battles can only be played in groups.", show_alert=True)
+            return
         ctx = coordinator.get_universe_menu(chat_id, msg_id)
         if ctx is not None and ctx.owner_user_id != user_id:
             await answer_callback_safe(query, "Only the command sender can use this menu.", show_alert=True)
@@ -499,6 +740,9 @@ async def handle_arena_callback(
     # Challenge Actions: Accept, Mode Switch, Cancel
     # ------------------------------------------------------------------
     if action in {"ca", "cm", "cx"}:
+        if msg.chat.type not in {"group", "supergroup"}:
+            await answer_callback_safe(query, "Battles can only be played in groups.", show_alert=True)
+            return
         if len(args) < 2:
             await answer_callback_safe(query, "Invalid challenge action.", show_alert=True)
             return

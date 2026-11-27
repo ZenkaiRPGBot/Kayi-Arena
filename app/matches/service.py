@@ -147,7 +147,7 @@ class MatchManager:
                     error_code=MatchManagementErrorCode.NO_ELIGIBLE_UNIVERSES,
                     message="No active eligible universes are available",
                 )
-            chosen = self._universe_rng.choice(eligible).universe_id
+            chosen = "random"
         else:
             chosen = self._resolve_universe_id(arg)
             if chosen is None:
@@ -181,6 +181,12 @@ class MatchManager:
         target_player_id: str | None = None,
         game_mode: str = "ranked",
     ) -> ChallengeOperationResult:
+        if str(chat_id).isdigit():
+            return ChallengeOperationResult(
+                accepted=False,
+                error_code=MatchManagementErrorCode.INVALID_GAME_MODE,
+                message="Challenges can only be created in groups",
+            )
         if game_mode not in _VALID_GAME_MODES:
             return ChallengeOperationResult(
                 accepted=False,
@@ -224,7 +230,7 @@ class MatchManager:
             eligible_ids = {
                 u.universe_id for u in self.db.list_eligible_universes(kind=self.dataset_kind)
             }
-            if universe_id not in eligible_ids:
+            if not eligible_ids or (universe_id != "random" and universe_id not in eligible_ids):
                 return ChallengeOperationResult(
                     accepted=False,
                     error_code=MatchManagementErrorCode.UNIVERSE_NOT_ELIGIBLE,
@@ -330,9 +336,22 @@ class MatchManager:
                     challenge=chl,
                 )
 
+            # Resolve deferred random universe only upon successful acceptance
+            resolved_universe_id = chl.universe_id
+            if resolved_universe_id == "random":
+                eligible_pool = self.db.list_eligible_universes(kind=self.dataset_kind)
+                if not eligible_pool:
+                    return ChallengeOperationResult(
+                        accepted=False,
+                        error_code=MatchManagementErrorCode.NO_ELIGIBLE_UNIVERSES,
+                        message="No eligible universes are available",
+                        challenge=chl,
+                    )
+                resolved_universe_id = self._universe_rng.choice(eligible_pool).universe_id
+
             # Pin exact dataset_version & rarity configuration at match creation
-            dver = self.db.get_latest_published_version(chl.universe_id, kind=self.dataset_kind)
-            universe = self.db.get_universe(chl.universe_id)
+            dver = self.db.get_latest_published_version(resolved_universe_id, kind=self.dataset_kind)
+            universe = self.db.get_universe(resolved_universe_id)
             if dver is None or (self.dataset_kind is DatasetKind.PRODUCTION and not universe.active):
                 return ChallengeOperationResult(
                     accepted=False,
@@ -347,7 +366,7 @@ class MatchManager:
             draft_res = start_draft(
                 match_id=match_id,
                 players=players,
-                universe_id=chl.universe_id,
+                universe_id=resolved_universe_id,
                 mode=chl.game_mode,
                 catalog=catalog,
                 rarity_weights=rarity_weights,
@@ -359,7 +378,7 @@ class MatchManager:
                 match_id=match_id,
                 challenge_id=challenge_id,
                 players=players,
-                universe_id=chl.universe_id,
+                universe_id=resolved_universe_id,
                 game_mode=chl.game_mode,
                 dataset_version=pinned_version,
                 status=MatchLifecycleStatus.DRAFTING,
@@ -380,6 +399,7 @@ class MatchManager:
             accepted_chl = ChallengeRecord(
                 **{
                     **{f: getattr(chl, f) for f in chl.__slots__},
+                    "universe_id": resolved_universe_id,
                     "status": ChallengeStatus.ACCEPTED,
                     "accepted_by": player_id,
                     "match_id": match_id,

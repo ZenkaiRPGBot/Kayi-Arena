@@ -65,14 +65,27 @@ async def test_draft_commands_direct_open_random_and_global_active_lock() -> Non
     assert sel.action == "list_universes"
     assert set(sel.eligible_universes) == {"naruto", "bleach"}
 
-    # /draft random -> picks an eligible universe
+    # /draft random -> defers universe resolution until acceptance
     sel_rand, res_rand = await mgr.handle_draft_command(
         player_id="p1", chat_id="c1", universe_arg="random"
     )
     assert res_rand is not None and res_rand.accepted
     assert sel_rand is not None and sel_rand.challenge is not None
-    assert sel_rand.challenge.universe_id in {"naruto", "bleach"}
+    assert sel_rand.challenge.universe_id == "random"
     assert sel_rand.challenge.game_mode == "ranked"  # default mode
+
+    # Accepting a deferred random challenge resolves from eligible pool and pins dataset
+    sel_rand2, res_rand2 = await mgr.handle_draft_command(
+        player_id="p4", chat_id="c2", universe_arg="random"
+    )
+    assert res_rand2 is not None and res_rand2.accepted and sel_rand2 is not None and sel_rand2.challenge is not None
+    assert sel_rand2.challenge.universe_id == "random"
+    acc_rand = await mgr.accept_challenge(
+        challenge_id=sel_rand2.challenge.challenge_id, player_id="p5"
+    )
+    assert acc_rand.accepted and acc_rand.match is not None and acc_rand.challenge is not None
+    assert acc_rand.challenge.universe_id in {"naruto", "bleach"}
+    assert acc_rand.match.universe_id == acc_rand.challenge.universe_id
 
     # Self-challenge forbidden
     _, self_res = await mgr.handle_draft_command(
