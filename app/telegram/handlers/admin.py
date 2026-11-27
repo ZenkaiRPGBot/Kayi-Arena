@@ -1326,16 +1326,8 @@ async def handle_admin_callback(
         entries = [
             c
             for u in universes
-            for c in coordinator.db.list_characters(
-                universe_id=u.universe_id, status=EvaluationStatus.APPROVED
-            )
+            for c in coordinator.db.list_characters(universe_id=u.universe_id)
         ]
-        if not entries:
-            entries = [
-                c
-                for u in universes
-                for c in coordinator.db.list_characters(universe_id=u.universe_id)
-            ]
         pipeline = MediaPipeline(coordinator.store)
         res = await pipeline.sync_universe_media(
             coordinator.bot,
@@ -1367,6 +1359,8 @@ async def handle_admin_callback(
             f"Skipped (cached): <b>{res.skipped}</b>",
             f"Failed: <b>{res.failed}</b>",
         ]
+        if res.deleted_duplicates:
+            lines.append(f"Duplicates removed: <b>{res.deleted_duplicates}</b>")
         if res.error_counts:
             lines.append("")
             lines.append("<b>Failure Reasons:</b>")

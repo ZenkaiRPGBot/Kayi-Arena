@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from dataclasses import replace
 from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
@@ -83,6 +84,10 @@ class FakeMediaBot:
             chat=SimpleNamespace(id=chat_id),
             video=SimpleNamespace(file_id=f"cached_vid_{mid}"),
         )
+
+    async def delete_message(self, chat_id: int | str, message_id: int) -> bool:
+        self.calls.append(("delete_message", {"chat_id": chat_id, "message_id": message_id}))
+        return True
 
 
 def _setup_env(tmp_path: Path, *, media_channel_id: int = -100999888, fail_video: bool = False):
@@ -226,7 +231,78 @@ async def test_media_pipeline_handles_403_with_browser_headers_and_telegram_url_
             resolve_dns=False,
         )
     assert file_id_2 == "tg_file_102"
-    assert bot.calls[-1][1]["photo"] == entry.image.url_or_ref
+    photo_calls = [c for c in bot.calls if c[0] == "send_photo"]
+    assert photo_calls[-1][1]["photo"] == entry.image.url_or_ref
+
+
+@pytest.mark.asyncio
+async def test_media_sync_skips_existing_and_deletes_duplicate_channel_messages(
+    tmp_path: Path,
+) -> None:
+    _, store, _, _, bot, entry = _setup_env(tmp_path)
+    png_bytes = _make_png_bytes(300, 300)
+
+    def _handler(_request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, content=png_bytes, headers={"content-type": "image/png"})
+
+    pipeline = MediaPipeline(store)
+    async with httpx.AsyncClient(transport=httpx.MockTransport(_handler)) as client:
+        first_id = await pipeline.upload_character_media(
+            bot,
+            entry,
+            channel_id=-100999888,
+            bot_username="KayiArenaBot",
+            client=client,
+            resolve_dns=False,
+        )
+    assert first_id == "tg_file_101"
+
+    # Re-sync without force (matching cache_key) -> skipped!
+    res_skip = await pipeline.sync_universe_media(
+        bot,
+        [entry],
+        channel_id=-100999888,
+        bot_username="KayiArenaBot",
+        force=False,
+        delay_seconds=0.0,
+        resolve_dns=False,
+    )
+    assert res_skip.skipped == 1
+    assert res_skip.uploaded == 0
+
+    # Changed checksum at unchanged URL -> triggers new upload (even with force=False) and deletes old channel message 101
+    updated_entry = replace(entry, image=replace(entry.image, checksum="new_checksum_v2"))
+    async with httpx.AsyncClient(transport=httpx.MockTransport(_handler)) as client:
+        changed_id, changed_err = await pipeline.upload_character_media_detailed(
+            bot,
+            updated_entry,
+            channel_id=-100999888,
+            bot_username="KayiArenaBot",
+            force=False,
+            client=client,
+            resolve_dns=False,
+        )
+    assert changed_err is None
+    assert changed_id == "tg_file_102"
+    del_calls = [c for c in bot.calls if c[0] == "delete_message"]
+    assert len(del_calls) == 1
+    assert del_calls[0][1]["message_id"] == 101
+
+    # Force re-upload deletes previous channel message 102
+    async with httpx.AsyncClient(transport=httpx.MockTransport(_handler)) as client:
+        second_id, _ = await pipeline.upload_character_media_detailed(
+            bot,
+            updated_entry,
+            channel_id=-100999888,
+            bot_username="KayiArenaBot",
+            force=True,
+            client=client,
+            resolve_dns=False,
+        )
+    assert second_id == "tg_file_103"
+    del_calls = [c for c in bot.calls if c[0] == "delete_message"]
+    assert len(del_calls) == 2
+    assert del_calls[1][1]["message_id"] == 102
 
 
 @pytest.mark.asyncio

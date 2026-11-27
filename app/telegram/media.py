@@ -164,6 +164,7 @@ class MediaSyncResult:
     uploaded: int = 0
     skipped: int = 0
     failed: int = 0
+    deleted_duplicates: int = 0
     errors: list[str] = field(default_factory=list)
     error_counts: dict[str, int] = field(default_factory=dict)
 
@@ -262,10 +263,23 @@ class MediaPipeline:
         if not raw_ref:
             return None, "missing source URL"
         cache_key = CharacterMediaResolver._cache_key(entry, raw_ref)
+        existing_asset = (
+            self._store.get_media_asset_by_character(entry.character_id)
+            if self._store is not None
+            else None
+        )
         if not force and self._store is not None:
             existing = self._store.get_media_cache(cache_key)
             if existing:
                 return existing, None
+            if (
+                existing_asset
+                and existing_asset.get("upload_status") == "uploaded"
+                and existing_asset.get("telegram_file_id")
+                and str(existing_asset.get("source_url") or "").strip() == raw_ref
+                and str(existing_asset.get("media_key") or "") == cache_key
+            ):
+                return str(existing_asset["telegram_file_id"]), None
 
         if not raw_ref.startswith(("http://", "https://")) and ":" not in raw_ref:
             if self._store is not None:
@@ -385,6 +399,13 @@ class MediaPipeline:
         best_photo = msg.photo[-1]
         file_id = str(best_photo.file_id)
         file_unique_id = str(getattr(best_photo, "file_unique_id", "") or "")
+        new_msg_id = int(msg.message_id)
+        old_msg_id = (
+            existing_asset.get("channel_message_id")
+            if existing_asset and existing_asset.get("upload_status") == "uploaded"
+            else None
+        )
+        old_ch_id = existing_asset.get("channel_id") if existing_asset else None
         if self._store is not None:
             self._store.upsert_media_asset(
                 media_key=cache_key,
@@ -394,7 +415,7 @@ class MediaPipeline:
                 telegram_file_id=file_id,
                 telegram_file_unique_id=file_unique_id,
                 channel_id=str(channel_id),
-                channel_message_id=int(msg.message_id),
+                channel_message_id=new_msg_id,
                 bot_username=bot_username,
                 image_hash=digest,
                 verification_status=entry.image.status.value,
@@ -402,6 +423,21 @@ class MediaPipeline:
                 attribution=entry.image.source_ref,
                 last_error="",
             )
+        if (
+            old_msg_id is not None
+            and int(old_msg_id) != new_msg_id
+            and str(old_ch_id or channel_id) == str(channel_id)
+            and hasattr(bot, "delete_message")
+        ):
+            try:
+                await bot.delete_message(chat_id=channel_id, message_id=int(old_msg_id))
+                self._last_deleted_duplicate = True
+            except Exception as exc:
+                logger.debug(
+                    "Could not delete duplicate media message %s: %s",
+                    old_msg_id,
+                    type(exc).__name__,
+                )
         return file_id, None
 
     async def upload_character_media(
@@ -465,16 +501,31 @@ class MediaPipeline:
                     continue
 
                 cache_key = CharacterMediaResolver._cache_key(entry, raw_ref)
-                if not force and self._store is not None and self._store.get_media_cache(cache_key):
-                    result.skipped += 1
-                    continue
-
-                if only_failed and self._store is not None:
-                    asset = self._store.get_media_asset_by_character(entry.character_id)
-                    if not asset or asset.get("upload_status") != "failed":
+                existing_asset = (
+                    self._store.get_media_asset_by_character(entry.character_id)
+                    if self._store is not None
+                    else None
+                )
+                if not force and self._store is not None:
+                    if self._store.get_media_cache(cache_key):
+                        result.skipped += 1
+                        continue
+                    if (
+                        existing_asset
+                        and existing_asset.get("upload_status") == "uploaded"
+                        and existing_asset.get("telegram_file_id")
+                        and str(existing_asset.get("source_url") or "").strip() == raw_ref
+                        and str(existing_asset.get("media_key") or "") == cache_key
+                    ):
                         result.skipped += 1
                         continue
 
+                if only_failed and self._store is not None:
+                    if not existing_asset or existing_asset.get("upload_status") != "failed":
+                        result.skipped += 1
+                        continue
+
+                self._last_deleted_duplicate = False
                 file_id, err_reason = await self.upload_character_media_detailed(
                     bot,
                     entry,
@@ -484,6 +535,8 @@ class MediaPipeline:
                     client=client,
                     resolve_dns=resolve_dns,
                 )
+                if getattr(self, "_last_deleted_duplicate", False):
+                    result.deleted_duplicates += 1
                 if file_id:
                     result.uploaded += 1
                 else:
