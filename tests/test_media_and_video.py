@@ -187,6 +187,49 @@ async def test_media_pipeline_standardizes_uploads_and_skips_cached(tmp_path: Pa
 
 
 @pytest.mark.asyncio
+async def test_media_pipeline_handles_403_with_browser_headers_and_telegram_url_fallback(
+    tmp_path: Path,
+) -> None:
+    _, store, _, _, bot, entry = _setup_env(tmp_path)
+    png_bytes = _make_png_bytes(300, 300)
+
+    # Case 1: Default UA gets 403, browser fallback UA gets 200
+    def _ua_handler(request: httpx.Request) -> httpx.Response:
+        if "Mozilla/5.0" in request.headers.get("user-agent", ""):
+            return httpx.Response(200, content=png_bytes, headers={"content-type": "image/png"})
+        return httpx.Response(403, content=b"Forbidden")
+
+    pipeline = MediaPipeline(store)
+    async with httpx.AsyncClient(transport=httpx.MockTransport(_ua_handler)) as client:
+        file_id = await pipeline.upload_character_media(
+            bot,
+            entry,
+            channel_id=-100999888,
+            bot_username="KayiArenaBot",
+            client=client,
+            resolve_dns=False,
+        )
+    assert file_id == "tg_file_101"
+
+    # Case 2: Both HTTP attempts return 403 (datacenter IP block) -> falls back to Telegram URL fetch
+    def _always_403(_request: httpx.Request) -> httpx.Response:
+        return httpx.Response(403, content=b"Forbidden")
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(_always_403)) as client:
+        file_id_2 = await pipeline.upload_character_media(
+            bot,
+            entry,
+            channel_id=-100999888,
+            bot_username="KayiArenaBot",
+            force=True,
+            client=client,
+            resolve_dns=False,
+        )
+    assert file_id_2 == "tg_file_102"
+    assert bot.calls[-1][1]["photo"] == entry.image.url_or_ref
+
+
+@pytest.mark.asyncio
 async def test_welcome_video_send_and_fallback_and_admin_media_manager(tmp_path: Path) -> None:
     _, store, coordinator, dp, bot, entry = _setup_env(tmp_path)
     now = datetime.now(timezone.utc)

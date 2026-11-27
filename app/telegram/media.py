@@ -60,8 +60,13 @@ _DEFAULT_HEADERS = {
     "Accept": "*/*",
 }
 _FALLBACK_HEADERS = {
-    "User-Agent": "curl/8.5.0",
-    "Accept": "*/*",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/131.0.0.0 Safari/537.36"
+    ),
+    "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
 }
 
 
@@ -194,10 +199,14 @@ class MediaPipeline:
                     headers=_DEFAULT_HEADERS,
                 )
                 if resp.status_code == 403:
+                    retry_headers = dict(_FALLBACK_HEADERS)
+                    host = (urlparse(current_url).hostname or "").lower()
+                    if "wikia.nocookie.net" in host or "fandom.com" in host:
+                        retry_headers["Referer"] = "https://naruto.fandom.com/"
                     resp = await client.get(
                         current_url,
                         follow_redirects=False,
-                        headers=_FALLBACK_HEADERS,
+                        headers=retry_headers,
                     )
                 if resp.status_code in {301, 302, 303, 307, 308}:
                     location = resp.headers.get("location", "").strip()
@@ -275,6 +284,12 @@ class MediaPipeline:
                 )
             return raw_ref, None
 
+        caption = (
+            f"Kayi Arena Media | {entry.name} ({entry.character_id})\n"
+            f"Universe: {entry.universe_id} | Rarity: {entry.rarity}"
+        )
+        file_obj: Any = None
+        digest = entry.image.checksum or ""
         try:
             jpg_bytes, digest = await self.download_and_prepare(
                 raw_ref,
@@ -282,9 +297,10 @@ class MediaPipeline:
                 client=client,
                 resolve_dns=resolve_dns,
             )
-        except (UnsafeMediaURLError, MediaDownloadError) as exc:
+            file_obj = BufferedInputFile(jpg_bytes, filename=f"{entry.character_id}.jpg")
+        except UnsafeMediaURLError as exc:
             err_msg = str(exc)
-            logger.warning("Media download failed for %s: %s", entry.character_id, err_msg)
+            logger.warning("Media URL rejected for %s: %s", entry.character_id, err_msg)
             if self._store is not None:
                 self._store.upsert_media_asset(
                     media_key=cache_key,
@@ -300,12 +316,37 @@ class MediaPipeline:
                     last_error=err_msg,
                 )
             return None, err_msg
+        except MediaDownloadError as exc:
+            err_msg = str(exc)
+            if "HTTP 403" in err_msg:
+                # Datacenter IP blocked by CDN: let Telegram fetch the SSRF-validated URL directly
+                try:
+                    file_obj = validate_media_url(raw_ref, resolve_dns=resolve_dns)
+                    logger.info(
+                        "HTTP 403 downloading %s locally; falling back to Telegram URL fetch",
+                        entry.character_id,
+                    )
+                except (UnsafeMediaURLError, MediaDownloadError) as val_exc:
+                    err_msg = str(val_exc)
+                    logger.warning("Fallback URL validation failed for %s: %s", entry.character_id, err_msg)
+            if file_obj is None:
+                logger.warning("Media download failed for %s: %s", entry.character_id, err_msg)
+                if self._store is not None:
+                    self._store.upsert_media_asset(
+                        media_key=cache_key,
+                        character_id=entry.character_id,
+                        universe_id=entry.universe_id,
+                        source_url=raw_ref,
+                        telegram_file_id="",
+                        channel_id=str(channel_id),
+                        bot_username=bot_username,
+                        verification_status=entry.image.status.value,
+                        upload_status="failed",
+                        attribution=entry.image.source_ref,
+                        last_error=err_msg,
+                    )
+                return None, err_msg
 
-        caption = (
-            f"Kayi Arena Media | {entry.name} ({entry.character_id})\n"
-            f"Universe: {entry.universe_id} | Rarity: {entry.rarity}"
-        )
-        file_obj = BufferedInputFile(jpg_bytes, filename=f"{entry.character_id}.jpg")
         msg = None
         last_err = "Telegram upload failed"
         for attempt in range(2):
