@@ -1,0 +1,518 @@
+{
+  "generated_at": "2026-11-27",
+  "engine": "app.engine draft engine + RES-1.0 fast resolver cross-checked with app.resolution",
+  "matches_per_dataset": 20000,
+  "datasets": {
+    "A": {
+      "dataset": "A",
+      "pool_size": 53,
+      "matches_requested": 20000,
+      "matches_completed": 20000,
+      "draft_completion_rate_pct": 100.0,
+      "seeds": {
+        "draw": 20261201,
+        "role_assignment": 20261202
+      },
+      "assignment_strategy": "uniform random role from remaining roles; skip the first Common draw per player when a non-Common character remains and skips are available",
+      "resolution_method": "canonical RES-1.0 rules via fast in-process path; cross-checked against app.resolution.resolve_match on sampled matches",
+      "resolution_crosscheck": {
+        "matches_checked": 100,
+        "matches_identical": 100,
+        "identical_pct": 100.0
+      },
+      "rarity_weights": {
+        "Common": 30.0,
+        "Uncommon": 30.0,
+        "Rare": 22.0,
+        "Epic": 13.0,
+        "Legendary": 5.0
+      },
+      "rarity_draw_distribution_pct": {
+        "Common": 0.0,
+        "Uncommon": 46.09,
+        "Rare": 33.94,
+        "Epic": 12.22,
+        "Legendary": 7.74
+      },
+      "team_score": {
+        "mean": 693.11,
+        "p10": 615,
+        "p25": 650,
+        "p50": 691,
+        "p75": 734,
+        "p90": 775
+      },
+      "average_assigned_role_scores": {
+        "assassin": 92.47,
+        "attacker": 137.53,
+        "captain": 109.6,
+        "healer": 28.91,
+        "strategist": 107.54,
+        "support": 96.81,
+        "tank": 120.25
+      },
+      "role_assignment_fit_distribution": {
+        "assassin": {
+          "0": 3654,
+          "1": 17063,
+          "2": 11166,
+          "3": 3940,
+          "4": 3724,
+          "5": 453
+        },
+        "attacker": {
+          "0": 0,
+          "1": 491,
+          "2": 3407,
+          "3": 18833,
+          "4": 12578,
+          "5": 4691
+        },
+        "captain": {
+          "0": 0,
+          "1": 11746,
+          "2": 10349,
+          "3": 13312,
+          "4": 4197,
+          "5": 396
+        },
+        "healer": {
+          "0": 36491,
+          "1": 1368,
+          "2": 0,
+          "3": 549,
+          "4": 1177,
+          "5": 415
+        },
+        "strategist": {
+          "0": 0,
+          "1": 8353,
+          "2": 11502,
+          "3": 12091,
+          "4": 5593,
+          "5": 2461
+        },
+        "support": {
+          "0": 0,
+          "1": 16490,
+          "2": 5707,
+          "3": 9430,
+          "4": 8373,
+          "5": 0
+        },
+        "tank": {
+          "0": 0,
+          "1": 6067,
+          "2": 11242,
+          "3": 16477,
+          "4": 5751,
+          "5": 463
+        }
+      },
+      "healer_quality": {
+        "mean_assigned_healer_fit": 0.245,
+        "teams_with_healer_fit_ge_3_pct": 5.35,
+        "teams_with_healer_fit_ge_4_pct": 3.98
+      },
+      "skip_utilization": {
+        "skips_used": 0,
+        "skips_per_attempt": 0.0
+      },
+      "match_outcomes": {
+        "player_1_win": 49.91,
+        "player_2_win": 49.88,
+        "draw": 0.2
+      },
+      "decided_by": {
+        "matchup_count": 83.81,
+        "combined_score": 15.98,
+        "none": 0.2
+      },
+      "role_matchups": {
+        "assassin": {
+          "count": 20000,
+          "draw_pct": 11.38,
+          "mean_abs_margin": 18.66
+        },
+        "attacker": {
+          "count": 20000,
+          "draw_pct": 24.25,
+          "mean_abs_margin": 16.58
+        },
+        "captain": {
+          "count": 20000,
+          "draw_pct": 13.76,
+          "mean_abs_margin": 18.09
+        },
+        "healer": {
+          "count": 20000,
+          "draw_pct": 32.58,
+          "mean_abs_margin": 9.73
+        },
+        "strategist": {
+          "count": 20000,
+          "draw_pct": 11.84,
+          "mean_abs_margin": 22.4
+        },
+        "support": {
+          "count": 20000,
+          "draw_pct": 12.69,
+          "mean_abs_margin": 23.3
+        },
+        "tank": {
+          "count": 20000,
+          "draw_pct": 18.55,
+          "mean_abs_margin": 16.5
+        }
+      },
+      "weak_or_unusable_assignments": {
+        "fit_0_pct": 14.34,
+        "fit_le_1_pct": 36.33
+      },
+      "winner_claim": "none",
+      "approval_claim": "none",
+      "runtime_seconds": 103.47
+    },
+    "B": {
+      "dataset": "B",
+      "pool_size": 184,
+      "matches_requested": 20000,
+      "matches_completed": 20000,
+      "draft_completion_rate_pct": 100.0,
+      "seeds": {
+        "draw": 20261201,
+        "role_assignment": 20261202
+      },
+      "assignment_strategy": "uniform random role from remaining roles; skip the first Common draw per player when a non-Common character remains and skips are available",
+      "resolution_method": "canonical RES-1.0 rules via fast in-process path; cross-checked against app.resolution.resolve_match on sampled matches",
+      "resolution_crosscheck": {
+        "matches_checked": 100,
+        "matches_identical": 100,
+        "identical_pct": 100.0
+      },
+      "rarity_weights": {
+        "Common": 30.0,
+        "Uncommon": 30.0,
+        "Rare": 22.0,
+        "Epic": 13.0,
+        "Legendary": 5.0
+      },
+      "rarity_draw_distribution_pct": {
+        "Common": 30.5,
+        "Uncommon": 30.54,
+        "Rare": 22.44,
+        "Epic": 11.42,
+        "Legendary": 5.1
+      },
+      "team_score": {
+        "mean": 630.38,
+        "p10": 536,
+        "p25": 581,
+        "p50": 631,
+        "p75": 679,
+        "p90": 724
+      },
+      "average_assigned_role_scores": {
+        "assassin": 82.85,
+        "attacker": 122.18,
+        "captain": 98.78,
+        "healer": 27.74,
+        "strategist": 101.29,
+        "support": 93.25,
+        "tank": 104.3
+      },
+      "role_assignment_fit_distribution": {
+        "assassin": {
+          "0": 6324,
+          "1": 16716,
+          "2": 10690,
+          "3": 3241,
+          "4": 2661,
+          "5": 368
+        },
+        "attacker": {
+          "0": 718,
+          "1": 4272,
+          "2": 7170,
+          "3": 14171,
+          "4": 9987,
+          "5": 3682
+        },
+        "captain": {
+          "0": 4836,
+          "1": 11025,
+          "2": 8267,
+          "3": 9910,
+          "4": 5630,
+          "5": 332
+        },
+        "healer": {
+          "0": 36308,
+          "1": 858,
+          "2": 525,
+          "3": 923,
+          "4": 1025,
+          "5": 361
+        },
+        "strategist": {
+          "0": 543,
+          "1": 8399,
+          "2": 15008,
+          "3": 9247,
+          "4": 3049,
+          "5": 3754
+        },
+        "support": {
+          "0": 453,
+          "1": 13826,
+          "2": 9223,
+          "3": 10536,
+          "4": 5962,
+          "5": 0
+        },
+        "tank": {
+          "0": 2792,
+          "1": 11691,
+          "2": 9523,
+          "3": 11316,
+          "4": 4327,
+          "5": 351
+        }
+      },
+      "healer_quality": {
+        "mean_assigned_healer_fit": 0.265,
+        "teams_with_healer_fit_ge_3_pct": 5.77,
+        "teams_with_healer_fit_ge_4_pct": 3.46
+      },
+      "skip_utilization": {
+        "skips_used": 67099,
+        "skips_per_attempt": 3.355
+      },
+      "match_outcomes": {
+        "player_1_win": 49.83,
+        "player_2_win": 49.98,
+        "draw": 0.2
+      },
+      "decided_by": {
+        "matchup_count": 86.16,
+        "combined_score": 13.64,
+        "none": 0.2
+      },
+      "role_matchups": {
+        "assassin": {
+          "count": 20000,
+          "draw_pct": 8.53,
+          "mean_abs_margin": 19.86
+        },
+        "attacker": {
+          "count": 20000,
+          "draw_pct": 17.89,
+          "mean_abs_margin": 23.11
+        },
+        "captain": {
+          "count": 20000,
+          "draw_pct": 8.86,
+          "mean_abs_margin": 22.31
+        },
+        "healer": {
+          "count": 20000,
+          "draw_pct": 24.75,
+          "mean_abs_margin": 10.76
+        },
+        "strategist": {
+          "count": 20000,
+          "draw_pct": 9.4,
+          "mean_abs_margin": 23.56
+        },
+        "support": {
+          "count": 20000,
+          "draw_pct": 7.86,
+          "mean_abs_margin": 21.85
+        },
+        "tank": {
+          "count": 20000,
+          "draw_pct": 14.11,
+          "mean_abs_margin": 22.14
+        }
+      },
+      "weak_or_unusable_assignments": {
+        "fit_0_pct": 18.56,
+        "fit_le_1_pct": 42.41
+      },
+      "winner_claim": "none",
+      "approval_claim": "none",
+      "runtime_seconds": 213.45
+    },
+    "C": {
+      "dataset": "C",
+      "pool_size": 236,
+      "matches_requested": 20000,
+      "matches_completed": 20000,
+      "draft_completion_rate_pct": 100.0,
+      "seeds": {
+        "draw": 20261201,
+        "role_assignment": 20261202
+      },
+      "assignment_strategy": "uniform random role from remaining roles; skip the first Common draw per player when a non-Common character remains and skips are available",
+      "resolution_method": "canonical RES-1.0 rules via fast in-process path; cross-checked against app.resolution.resolve_match on sampled matches",
+      "resolution_crosscheck": {
+        "matches_checked": 100,
+        "matches_identical": 100,
+        "identical_pct": 100.0
+      },
+      "rarity_weights": {
+        "Common": 30.0,
+        "Uncommon": 30.0,
+        "Rare": 22.0,
+        "Epic": 13.0,
+        "Legendary": 5.0
+      },
+      "rarity_draw_distribution_pct": {
+        "Common": 30.51,
+        "Uncommon": 30.5,
+        "Rare": 22.45,
+        "Epic": 11.45,
+        "Legendary": 5.1
+      },
+      "team_score": {
+        "mean": 618.12,
+        "p10": 518,
+        "p25": 566,
+        "p50": 618,
+        "p75": 671,
+        "p90": 718
+      },
+      "average_assigned_role_scores": {
+        "assassin": 81.05,
+        "attacker": 119.9,
+        "captain": 97.44,
+        "healer": 27.6,
+        "strategist": 98.23,
+        "support": 91.59,
+        "tank": 102.31
+      },
+      "role_assignment_fit_distribution": {
+        "assassin": {
+          "0": 7465,
+          "1": 15964,
+          "2": 10613,
+          "3": 3008,
+          "4": 2631,
+          "5": 319
+        },
+        "attacker": {
+          "0": 2117,
+          "1": 4326,
+          "2": 5628,
+          "3": 14300,
+          "4": 9988,
+          "5": 3641
+        },
+        "captain": {
+          "0": 5667,
+          "1": 10283,
+          "2": 8368,
+          "3": 9712,
+          "4": 5646,
+          "5": 324
+        },
+        "healer": {
+          "0": 36214,
+          "1": 999,
+          "2": 550,
+          "3": 749,
+          "4": 1094,
+          "5": 394
+        },
+        "strategist": {
+          "0": 2338,
+          "1": 7869,
+          "2": 14180,
+          "3": 8731,
+          "4": 3005,
+          "5": 3877
+        },
+        "support": {
+          "0": 948,
+          "1": 14476,
+          "2": 8304,
+          "3": 10199,
+          "4": 6073,
+          "5": 0
+        },
+        "tank": {
+          "0": 4435,
+          "1": 10472,
+          "2": 9140,
+          "3": 11473,
+          "4": 4113,
+          "5": 367
+        }
+      },
+      "healer_quality": {
+        "mean_assigned_healer_fit": 0.267,
+        "teams_with_healer_fit_ge_3_pct": 5.59,
+        "teams_with_healer_fit_ge_4_pct": 3.72
+      },
+      "skip_utilization": {
+        "skips_used": 67135,
+        "skips_per_attempt": 3.357
+      },
+      "match_outcomes": {
+        "player_1_win": 50.3,
+        "player_2_win": 49.61,
+        "draw": 0.09
+      },
+      "decided_by": {
+        "matchup_count": 86.48,
+        "combined_score": 13.43,
+        "none": 0.09
+      },
+      "role_matchups": {
+        "assassin": {
+          "count": 20000,
+          "draw_pct": 8.09,
+          "mean_abs_margin": 20.7
+        },
+        "attacker": {
+          "count": 20000,
+          "draw_pct": 17.55,
+          "mean_abs_margin": 24.67
+        },
+        "captain": {
+          "count": 20000,
+          "draw_pct": 8.48,
+          "mean_abs_margin": 23.35
+        },
+        "healer": {
+          "count": 20000,
+          "draw_pct": 23.53,
+          "mean_abs_margin": 10.98
+        },
+        "strategist": {
+          "count": 20000,
+          "draw_pct": 8.79,
+          "mean_abs_margin": 25.71
+        },
+        "support": {
+          "count": 20000,
+          "draw_pct": 8.03,
+          "mean_abs_margin": 22.46
+        },
+        "tank": {
+          "count": 20000,
+          "draw_pct": 13.39,
+          "mean_abs_margin": 23.52
+        }
+      },
+      "weak_or_unusable_assignments": {
+        "fit_0_pct": 21.14,
+        "fit_le_1_pct": 44.13
+      },
+      "winner_claim": "none",
+      "approval_claim": "none",
+      "runtime_seconds": 120.74
+    }
+  },
+  "strategy_note": "Simulated strategies are deterministic and do not represent human behavior."
+}

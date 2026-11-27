@@ -77,7 +77,7 @@ def test_report_exists() -> None:
     for required in (
         "Dataset construction",
         "Simulation methodology",
-        "Batch 005 impact assessment",
+        "Corrected Batch 005 impact",
         "Integration readiness",
         "Limitations",
     ):
