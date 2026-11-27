@@ -1,0 +1,2567 @@
+{
+  "batch_id": "naruto-batch-005",
+  "evaluation_details": {
+    "dattebayo:879": {
+      "name": "Suzaku Nara",
+      "canonical_version": "Uncited Part II / Fourth Shinobi World War: Confrontation arc",
+      "version_selection_reasoning": "The supplied wikitext attaches no chapter or episode citation to the Shadow Imitation Technique feat; it is described only under the Part II Island Turtle confinement arc.",
+      "core_abilities": [
+        "Shadow Imitation Technique"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Imitation Technique"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The binding was broken once Naruto entered Nine-Tails Chakra Mode; no other techniques are shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "UNCITED_CHAPTER_REFERENCES"
+      ]
+    },
+    "dattebayo:441": {
+      "name": "Iroha Hyūga",
+      "canonical_version": "Uncited Part II war arc; Fourth Databook ref applies to personality only",
+      "version_selection_reasoning": "Raw wikitext attaches <ref name='d4'/> only to personality; the Byakugan tracking and reporting feat is described without a chapter or episode citation.",
+      "core_abilities": [
+        "Byakugan reconnaissance and reporting"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Byakugan reconnaissance and reporting"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "He is noted as unable to deal well with abnormal situations; no combat application of the Byakugan is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    "dattebayo:724": {
+      "name": "Raiga Kurosuki",
+      "canonical_version": "Anime-origin character later incorporated into manga; key feats anime-only",
+      "version_selection_reasoning": "Raw wikitext cites Naruto chapter 668 pages 14-15 for the earlier swordsmen flashback, Naruto episodes 154/156/157 for kenjutsu and lightning feats, and trivia explicitly notes his anime origin and manga integration.",
+      "core_abilities": [
+        "Lightning Release: Rock Avalanche",
+        "Water Release and Hiding in Mist Technique"
+      ],
+      "conditional_abilities": [
+        "Natural lightning access enables tireless continuous combat; at the verge of death he can annihilate his own body with lightning, leaving no trace."
+      ],
+      "excluded_abilities": [
+        "Anime-only feats (episodes 154-157) used only as capped C-grade evidence"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Lightning Release: Rock Avalanche",
+          "Water Release and Hiding in Mist Technique"
+        ],
+        "K": [
+          "Natural lightning access enables tireless continuous combat; at the verge of death he can annihilate his own body with lightning, leaving no trace."
+        ],
+        "X": [
+          "Anime-only feats (episodes 154-157) used only as capped C-grade evidence"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 3-4 if anime-only Kiba/natural-lightning feats were admitted",
+      "contradictions_or_outliers": "Was defeated by Naruto's Rasengan and left unconscious; needed Ranmaru to compensate for his limited vision and later awaken him; natural lightning dependence is stated as a condition for endurance.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "POWER_3_ALT_4_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1370": {
+      "name": "Santa Yamanaka",
+      "canonical_version": "Manga (Fourth Shinobi World War: Confrontation)",
+      "version_selection_reasoning": "Raw wikitext cites Naruto chapter 523 page 8 for the body exchange and sensing-assisted positioning; the Fourth Databook ref name 'd4' applies only to his sensor reputation.",
+      "core_abilities": [
+        "Mind Body Switch Technique",
+        "Sensing Technique"
+      ],
+      "conditional_abilities": [
+        "Keen sensor noted to excel in battle even without sight, which mattered because mist made visibility very low."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Mind Body Switch Technique",
+          "Sensing Technique"
+        ],
+        "K": [
+          "Keen sensor noted to excel in battle even without sight, which mattered because mist made visibility very low."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "medium",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The planned strike was intercepted by Haku; his contribution is supportive and no independent finishing technique is shown.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:901": {
+      "name": "Nishi (sensor)",
+      "canonical_version": "Boruto-era arcs described without citations; trivia notes anime debut",
+      "version_selection_reasoning": "The supplied wikitext attaches no chapter or episode citation to the sensing duties or feats; trivia states he was named in the manga only after an anime debut with a different name in credits.",
+      "core_abilities": [
+        "Sensor-type chakra sensing",
+        "Claw Mark chakra detection and warning"
+      ],
+      "conditional_abilities": [
+        "Can expand his target search field/sensing radius when ordered."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Sensor-type chakra sensing",
+          "Claw Mark chakra detection and warning"
+        ],
+        "K": [
+          "Can expand his target search field/sensing radius when ordered."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "His focus makes him susceptible to simple deception; he was fooled by Kawaki's shadow clone and chakra suppression, and could not pinpoint the Claw Mark chakra because it was moving everywhere.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    "dattebayo:46": {
+      "name": "Shitō Akimichi",
+      "canonical_version": "Manga (Pain's Assault and Fourth Shinobi World War: Confrontation)",
+      "version_selection_reasoning": "Raw wikitext cites Naruto chapter 422 page 8 and chapter 423 pages 1-5 for the Pain confrontation and chapter 534 page 16 for the Island Turtle guard; Partial Multi-Size Technique use is tied to that confrontation without a separate citation.",
+      "core_abilities": [
+        "Partial Multi-Size Technique",
+        "Four-direction coordinated assault",
+        "Island Turtle guard duty"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Partial Multi-Size Technique",
+          "Four-direction coordinated assault",
+          "Island Turtle guard duty"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2 (jonin)",
+      "contradictions_or_outliers": "The assault was nullified immediately by Shinra Tensei; he and Maruten were sent flying by Naruto; bō skill is only inferred from carrying one.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:435": {
+      "name": "Hanabi Hyūga",
+      "canonical_version": "Manga character with anime/movie-only capability demonstrations",
+      "version_selection_reasoning": "Raw wikitext cites Naruto chapter 78 page 10 for heiress training, Naruto: Shippūden episode 389 for the Hinata duel, Boruto episode 9 for taijutsu/hiden feats, Boruto episode 45 for teaching, Naruto episode 60 and The Last for Byakugan assessments.",
+      "core_abilities": [],
+      "conditional_abilities": [
+        "Byakugan grants near-360-degree vision except a small blind spot, x-ray vision, and chakra sight accurate enough to target the chakra pathway system; her eyes were noted as exceptionally pure and were stolen for the Tenseigan."
+      ],
+      "excluded_abilities": [
+        "Anime/movie-only demonstrations used only as capped C-grade evidence"
+      ],
+      "ability_classes_used": {
+        "C": [],
+        "K": [
+          "Byakugan grants near-360-degree vision except a small blind spot, x-ray vision, and chakra sight accurate enough to target the chakra pathway system; her eyes were noted as exceptionally pure and were stolen for the Tenseigan."
+        ],
+        "X": [
+          "Anime/movie-only demonstrations used only as capped C-grade evidence"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 3 if movie/anime feats were admitted",
+      "contradictions_or_outliers": "Her duel win partly stemmed from Hinata's reluctance to harm her; the extent of her abilities is described as unseen in the manga, and most demonstrations are anime/movie-only.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:841": {
+      "name": "Mozuku",
+      "canonical_version": "Anime with a manga battlefield appearance",
+      "version_selection_reasoning": "Raw wikitext cites Naruto episode 29 for exam proctor duty, Naruto: Shippūden episodes 114/162 for anime missions, and Naruto chapter 612 for the war battlefield; the mind-reading support has no direct citation.",
+      "core_abilities": [
+        "Psycho Mind Transmission assistance",
+        "Exam proctor monitoring",
+        "Distraction and Giant Crustacean battle"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Psycho Mind Transmission assistance",
+          "Exam proctor monitoring",
+          "Distraction and Giant Crustacean battle"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The page says 'not much has been seen' of his abilities; his role in mind reading is assisting Inoichi rather than performing the technique alone.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:871": {
+      "name": "Daen Nara",
+      "canonical_version": "Manga (Fourth Shinobi World War: Climax), uncited",
+      "version_selection_reasoning": "Raw wikitext describes the Ten-Tails shadow restraint without a chapter citation; the Fourth Databook ref name 'd4' applies only to personality.",
+      "core_abilities": [
+        "Shadow Imitation Technique"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Imitation Technique"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2 (jonin Nara)",
+      "contradictions_or_outliers": "The restraint lasted only a short amount of time and required the help of other Nara clan members; no other techniques are shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "UNCITED_CHAPTER_REFERENCES"
+      ]
+    },
+    "dattebayo:874": {
+      "name": "Kasuga Nara",
+      "canonical_version": "Manga (Fourth Shinobi World War: Climax), uncited",
+      "version_selection_reasoning": "Raw wikitext describes the Ten-Tails tail shadow restraint without a chapter or episode citation.",
+      "core_abilities": [
+        "Shadow Imitation Technique"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Imitation Technique"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "The restraint was brief and dependent on cooperation with other Nara; no other techniques are shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "UNCITED_CHAPTER_REFERENCES"
+      ]
+    },
+    "dattebayo:875": {
+      "name": "Maen Nara",
+      "canonical_version": "Manga (Fourth Shinobi World War: Climax), uncited; Fourth Databook for service history",
+      "version_selection_reasoning": "Raw wikitext cites <ref name='d4'/> for his long military service and personality; the shadow restraint itself is uncited.",
+      "core_abilities": [
+        "Shadow Imitation Technique"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Imitation Technique"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "The restraint was brief and required multiple Nara; no independent technique or solo feat is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "UNCITED_CHAPTER_REFERENCES"
+      ]
+    },
+    "dattebayo:1094": {
+      "name": "Shin",
+      "canonical_version": "Manga (Fourth Shinobi World War) with anime-only death backstory",
+      "version_selection_reasoning": "Raw wikitext cites Naruto chapter 516 page 4 for his reincarnated appearance, Naruto chapter 518 pages 11/17 for quotes, and Naruto: Shippūden episode 263 for the anime fight-to-the-death; the combat prose has no separate citation.",
+      "core_abilities": [
+        "Tantō kenjutsu",
+        "Taijutsu against Anbu shadow clones",
+        "Explosive clay payload (reincarnated state)",
+        "Regeneration via Impure World Reincarnation"
+      ],
+      "conditional_abilities": [
+        "Reincarnation granted neck regeneration; his stomach was packed with explosive clay, and detonation could be suppressed by capturing him in the Sanshōuo puppet."
+      ],
+      "excluded_abilities": [
+        "Impure World Reincarnation regeneration and explosive-clay payload excluded (reanimation-specific)"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Tantō kenjutsu",
+          "Taijutsu against Anbu shadow clones",
+          "Explosive clay payload (reincarnated state)",
+          "Regeneration via Impure World Reincarnation"
+        ],
+        "K": [
+          "Reincarnation granted neck regeneration; his stomach was packed with explosive clay, and detonation could be suppressed by capturing him in the Sanshōuo puppet."
+        ],
+        "X": [
+          "Impure World Reincarnation regeneration and explosive-clay payload excluded (reanimation-specific)"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "low",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Was ambushed and driven into the ground by Sai with a broken neck, captured and contained by Kankurō's puppet, and his explosive payload was stifled; he died of illness in life.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "UNCITED_CHAPTER_REFERENCES"
+      ]
+    },
+    "dattebayo:1413": {
+      "name": "Yurui",
+      "canonical_version": "Boruto era (Chūnin Exams arc), uncited",
+      "version_selection_reasoning": "Raw wikitext attaches no chapter or episode citation to the bubblegum feats; Zai no Sho page 52 is cited only for his design/background inspiration.",
+      "core_abilities": [
+        "Bubblegum Ninjutsu projectiles and entrapment",
+        "Exploding bubbles",
+        "Bubble-based team rescue and exam tactics"
+      ],
+      "conditional_abilities": [
+        "Bubblegum Ninjutsu depends on the gum he constantly chews; bubbles can entrap, trap an enemy inside, or explode."
+      ],
+      "excluded_abilities": [
+        "Boruto-era anime evidence used only as capped C-grade evidence"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Bubblegum Ninjutsu projectiles and entrapment",
+          "Exploding bubbles",
+          "Bubble-based team rescue and exam tactics"
+        ],
+        "K": [
+          "Bubblegum Ninjutsu depends on the gum he constantly chews; bubbles can entrap, trap an enemy inside, or explode."
+        ],
+        "X": [
+          "Boruto-era anime evidence used only as capped C-grade evidence"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Defeated when Boruto used a shuriken and Shinobi Gauntlet to burst a bubble in his face, knocking him unconscious; kenjutsu skill is only assumed from carrying swords.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:464": {
+      "name": "Gaku Inuzuka",
+      "canonical_version": "databook",
+      "version_selection_reasoning": "The specialist-role statement is cited with the unresolved d4 shorthand in the supplied wikitext; the background encounter with A–B Combo has no expanded chapter or episode citation in this page.",
+      "core_abilities": [
+        "Short-range combat specialist",
+        "Team engagement with A–B Combo"
+      ],
+      "conditional_abilities": [
+        "The source speculates that he likely uses Inuzuka techniques with his large-breed ninken, but this is explicitly not a demonstrated ability."
+      ],
+      "excluded_abilities": [
+        "Speculated Inuzuka techniques excluded (source says not demonstrated)"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Short-range combat specialist",
+          "Team engagement with A–B Combo"
+        ],
+        "K": [
+          "The source speculates that he likely uses Inuzuka techniques with his large-breed ninken, but this is explicitly not a demonstrated ability."
+        ],
+        "X": [
+          "Speculated Inuzuka techniques excluded (source says not demonstrated)"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "The page does not show the outcome of his own attacks; clan techniques are described only as very likely, which is not evidence of use.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1332": {
+      "name": "Urushi",
+      "canonical_version": "mixed",
+      "version_selection_reasoning": "First-aid assistance is supported in the manga/anime material with Naruto chapter 583, page 1; taijutsu and shurikenjutsu are explicitly limited to Naruto Mobile and are not treated as primary-canon evidence.",
+      "core_abilities": [
+        "Basic first aid",
+        "Taijutsu and shurikenjutsu in Naruto Mobile"
+      ],
+      "conditional_abilities": [
+        "Combat capability is conditional to Naruto Mobile, where he uses taijutsu and demonstrates good shurikenjutsu."
+      ],
+      "excluded_abilities": [
+        "Naruto Mobile taijutsu/shurikenjutsu excluded (game material)"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Basic first aid",
+          "Taijutsu and shurikenjutsu in Naruto Mobile"
+        ],
+        "K": [
+          "Combat capability is conditional to Naruto Mobile, where he uses taijutsu and demonstrates good shurikenjutsu."
+        ],
+        "X": [
+          "Naruto Mobile taijutsu/shurikenjutsu excluded (game material)"
+        ]
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "medium"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The page says not much is known of his abilities; no named medical ninjutsu or combat technique is supplied for primary canon.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1337": {
+      "name": "Yūgao Uzuki",
+      "canonical_version": "anime",
+      "version_selection_reasoning": "The page explicitly says her skills are not displayed in the manga and that the anime greatly expands them; demonstrations cite Shippūden episodes 307, 308, 159, 64, and other anime material, with Naruto chapter 422 noted only as a manga discrepancy.",
+      "core_abilities": [
+        "Basic medical assistance"
+      ],
+      "conditional_abilities": [
+        "Most capabilities are anime-only expansions; combat effectiveness improves once she overcomes her reluctance to fight Hayate's reincarnation."
+      ],
+      "excluded_abilities": [
+        "Anime-only kenjutsu and medical expansions used only as capped C-grade evidence"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Basic medical assistance"
+        ],
+        "K": [
+          "Most capabilities are anime-only expansions; combat effectiveness improves once she overcomes her reluctance to fight Hayate's reincarnation."
+        ],
+        "X": [
+          "Anime-only kenjutsu and medical expansions used only as capped C-grade evidence"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "low",
+        "support": "low",
+        "healer": "low"
+      },
+      "plausible_alternatives": "Power 3 if anime kenjutsu feats were admitted",
+      "contradictions_or_outliers": "Hayate's death caused a combat-related emotional block requiring Sakura to force the issue; manga competence in kenjutsu is explicitly unknown.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:122": {
+      "name": "Jūzō Biwa",
+      "canonical_version": "mixed",
+      "version_selection_reasoning": "Manga evidence includes Naruto chapter 668, pages 12-13; abilities are also tied to an unresolved d4 databook shorthand, and anime demonstrations cite Shippūden episodes 455 and 456.",
+      "core_abilities": [
+        "Kubikiribōchō kenjutsu",
+        "Survival against Eight Gates Released Formation",
+        "Water Release clones and hiding in mist",
+        "Akatsuki partnership combat coordination"
+      ],
+      "conditional_abilities": [
+        "Kubikiribōchō regeneration depends on iron harvested from victims' blood; water clones and mist are anime-supported abilities."
+      ],
+      "excluded_abilities": [
+        "Kubikiribōchō regeneration treated as equipment-dependent; anime-only clones/mist not relied on"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Kubikiribōchō kenjutsu",
+          "Survival against Eight Gates Released Formation",
+          "Water Release clones and hiding in mist",
+          "Akatsuki partnership combat coordination"
+        ],
+        "K": [
+          "Kubikiribōchō regeneration depends on iron harvested from victims' blood; water clones and mist are anime-supported abilities."
+        ],
+        "X": [
+          "Kubikiribōchō regeneration treated as equipment-dependent; anime-only clones/mist not relied on"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 4 (survived Eight Gates formation; major kills) pending manga verification",
+      "contradictions_or_outliers": "His Tailed Beast Ball deflection failed and left him mortally wounded; his hatred of the Land of Water affected mission willingness.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "POWER_3_ALT_4_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:338": {
+      "name": "Gōzu",
+      "canonical_version": "manga",
+      "version_selection_reasoning": "The stealth and Land of Waves action cite Naruto chapter 9, page 13; the prologue novelisation is cited for the implied escape, and mission counts are databook trivia, not capability evidence.",
+      "core_abilities": [
+        "Coordinated shuriken chain",
+        "Poisoned claw gauntlet",
+        "Water Release: Hiding in Water Technique",
+        "Concealed infiltration near Konoha"
+      ],
+      "conditional_abilities": [
+        "The release mechanism allows individual attacks when the shared shuriken chain is neutralised."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Coordinated shuriken chain",
+          "Poisoned claw gauntlet",
+          "Water Release: Hiding in Water Technique",
+          "Concealed infiltration near Konoha"
+        ],
+        "K": [
+          "The release mechanism allows individual attacks when the shared shuriken chain is neutralised."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "medium",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Sasuke broke the chain, Kakashi used Body Replacement Technique to escape, and he was tied up with Meizu and taken into custody.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:779": {
+      "name": "Meizu",
+      "canonical_version": "manga",
+      "version_selection_reasoning": "The stealth feat cites Naruto chapter 9, page 13; the prologue novelisation is cited for the implied escape, and databook mission totals in trivia are not treated as capability evidence.",
+      "core_abilities": [
+        "Coordinated shuriken chain",
+        "Poisoned claw gauntlet",
+        "Water Release: Hiding in Water Technique",
+        "Concealed infiltration near Konoha"
+      ],
+      "conditional_abilities": [
+        "Independent attacks become available when Gōzu releases him after the shuriken chain is neutralised."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Coordinated shuriken chain",
+          "Poisoned claw gauntlet",
+          "Water Release: Hiding in Water Technique",
+          "Concealed infiltration near Konoha"
+        ],
+        "K": [
+          "Independent attacks become available when Gōzu releases him after the shuriken chain is neutralised."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "medium",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Sasuke broke the connecting chain, Kakashi's Body Replacement Technique negated the first strike, and Meizu was tied up and taken into custody.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:846": {
+      "name": "Mugino",
+      "canonical_version": "Boruto manga and anime (anime-expanded feats)",
+      "version_selection_reasoning": "Earth Release cave collapse is cited to Boruto chapter 20; taijutsu/fūinjutsu to Boruto episode 164 and endurance to episode 174; additional backstory and mission feats are explicitly flagged 'In the anime'.",
+      "core_abilities": [
+        "Earth Release: Rock Lodging Destruction (cave collapse)",
+        "Earth Release: Rock Gun Technique (anime)",
+        "Infiltration and guard disguise",
+        "Chakra-absorption counter-tactic against the demon"
+      ],
+      "conditional_abilities": [
+        "Mouth-fired Earth Release is anime-only; the chakra-absorption ploy works only against chakra-draining enemies; cave collapse is presented as a last-resort suicidal measure."
+      ],
+      "excluded_abilities": [
+        "Anime-only Rock Gun technique excluded; cave-collapse suicide measure not counted as sustainable"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Earth Release: Rock Lodging Destruction (cave collapse)",
+          "Earth Release: Rock Gun Technique (anime)",
+          "Infiltration and guard disguise",
+          "Chakra-absorption counter-tactic against the demon"
+        ],
+        "K": [
+          "Mouth-fired Earth Release is anime-only; the chakra-absorption ploy works only against chakra-draining enemies; cave collapse is presented as a last-resort suicidal measure."
+        ],
+        "X": [
+          "Anime-only Rock Gun technique excluded; cave-collapse suicide measure not counted as sustainable"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "low",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 3 pending Boruto manga check",
+      "contradictions_or_outliers": "His blunt, overly logical communication hinders working with those unused to him; was fatally injured by Ao's concealed prosthetic blade; the cave-collapse tactic killed him; several wins depend on allies finishing the target.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1374": {
+      "name": "Kokage Yanagikage",
+      "canonical_version": "Naruto Part II manga (Pain's Assault)",
+      "version_selection_reasoning": "The four-direction assault is cited to Naruto chapter 422 page 8 and Shinra Tensei defeat to chapter 423 pages 1-5; the concealed-weapon claim uses a named databook reference (d4) not defined in the supplied raw source.",
+      "core_abilities": [
+        "Wind Release: Great Breakthrough",
+        "Coordinated four-direction assault",
+        "Mouth-fired kunai / concealed weapons specialty"
+      ],
+      "conditional_abilities": [
+        "Wind Release and the concealed-weapon specialty are clan-based; mouth-fired kunai are described as more powerful than hand-thrown ones."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Wind Release: Great Breakthrough",
+          "Coordinated four-direction assault",
+          "Mouth-fired kunai / concealed weapons specialty"
+        ],
+        "K": [
+          "Wind Release and the concealed-weapon specialty are clan-based; mouth-fired kunai are described as more powerful than hand-thrown ones."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The whole group was immediately defeated by Shinra Tensei; no independent success or durability feat is recorded.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:210": {
+      "name": "Might Duy",
+      "canonical_version": "Naruto manga and Naruto: Shippūden anime (anime-only kills)",
+      "version_selection_reasoning": "The Eight Gates rescue is cited to Naruto chapter 668 page 13; killing four members of the Seven Ninja Swordsmen of the Mist is explicitly anime-only and cited to Naruto: Shippūden episode 456.",
+      "core_abilities": [
+        "Eight Gates Released Formation (all Eight Gates)",
+        "Fending off the Seven Ninja Swordsmen of the Mist",
+        "Instruction of the Eight Gates to Guy"
+      ],
+      "conditional_abilities": [
+        "Eight Gates use is bound to his self-created rule of protecting someone precious; the four kills are anime-only; Naruto Mobile data comparing his strength to an elite jōnin comes from a game profile, not the manga/anime narrative."
+      ],
+      "excluded_abilities": [
+        "Eight Gates Released Formation excluded: fatal, one-time technique that ended his life (CANON-0.1 section 3.4 / X class)",
+        "Anime-only kills of four swordsmen"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Eight Gates Released Formation (all Eight Gates)",
+          "Fending off the Seven Ninja Swordsmen of the Mist",
+          "Instruction of the Eight Gates to Guy"
+        ],
+        "K": [
+          "Eight Gates use is bound to his self-created rule of protecting someone precious; the four kills are anime-only; Naruto Mobile data comparing his strength to an elite jōnin comes from a game profile, not the manga/anime narrative."
+        ],
+        "X": [
+          "Eight Gates Released Formation excluded: fatal, one-time technique that ended his life (CANON-0.1 section 3.4 / X class)",
+          "Anime-only kills of four swordsmen"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 4 if Eight Gates (fatal technique) were admitted as sustainable",
+      "contradictions_or_outliers": "Anime states he could not use ninjutsu or genjutsu and failed simple missions; the Eight Gates weaken the user for a prolonged period; his sacrifice ended his life.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "DISPUTED_ECV_FATAL_TECHNIQUE",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1068": {
+      "name": "Makinami Senka",
+      "canonical_version": "Boruto anime (Versus Momoshiki Arc)",
+      "version_selection_reasoning": "The supplied raw page has no canonical citations at all; the arc is the Versus Momoshiki/Chūnin Exam sequence and the ability is named via the Shadow Clone Technique link.",
+      "core_abilities": [
+        "Shadow Clone Technique (two clones)",
+        "Capture-the-flag combat participation",
+        "Exam navigation and trap avoidance"
+      ],
+      "conditional_abilities": [
+        "Shadow Clone Technique is limited to two clones; the flag-protection genjutsu is a team effect, not individually attributed."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Clone Technique (two clones)",
+          "Capture-the-flag combat participation",
+          "Exam navigation and trap avoidance"
+        ],
+        "K": [
+          "Shadow Clone Technique is limited to two clones; the flag-protection genjutsu is a team effect, not individually attributed."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Disqualified after Boruto's elemental attacks defeated the brothers and Sarada captured their flag; no named genjutsu or elemental technique; no canonical reference is supplied.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1069": {
+      "name": "Sazanami Senka",
+      "canonical_version": "Boruto anime (Versus Momoshiki Arc)",
+      "version_selection_reasoning": "The supplied raw page has no canonical citations; the arc is the Versus Momoshiki/Chūnin Exam sequence and the ability is named via the Shadow Clone Technique link.",
+      "core_abilities": [
+        "Shadow Clone Technique (two clones)",
+        "Capture-the-flag combat participation",
+        "Exam navigation and trap avoidance"
+      ],
+      "conditional_abilities": [
+        "Two-clone limit for the Shadow Clone Technique; team genjutsu protection not individually attributed."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Clone Technique (two clones)",
+          "Capture-the-flag combat participation",
+          "Exam navigation and trap avoidance"
+        ],
+        "K": [
+          "Two-clone limit for the Shadow Clone Technique; team genjutsu protection not individually attributed."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Disqualified after being stopped by Boruto's elemental attacks; no named personal genjutsu or elemental technique; no canonical reference supplied.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1070": {
+      "name": "Takanami Senka",
+      "canonical_version": "Boruto anime (Versus Momoshiki Arc)",
+      "version_selection_reasoning": "The supplied raw page has no canonical citations; the arc is the Versus Momoshiki/Chūnin Exam sequence and the ability is named via the Shadow Clone Technique link.",
+      "core_abilities": [
+        "Shadow Clone Technique (two clones)",
+        "Exam route leadership and trap bypass",
+        "Capture-the-flag combat participation"
+      ],
+      "conditional_abilities": [
+        "Two-clone limit; his leadership is over his brothers within exam missions only as shown."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shadow Clone Technique (two clones)",
+          "Exam route leadership and trap bypass",
+          "Capture-the-flag combat participation"
+        ],
+        "K": [
+          "Two-clone limit; his leadership is over his brothers within exam missions only as shown."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Disqualified after Boruto's elemental attacks defeated the brothers and Sarada took their flag; no named personal genjutsu or elemental technique; no canonical citations supplied.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1232": {
+      "name": "Tonbo Tobitake",
+      "canonical_version": "Naruto manga and anime (Part I/II), with databook lead",
+      "version_selection_reasoning": "Speed and one-arm restraint are cited to Naruto chapter 42 pages 11-12; observation ability to Naruto: One Decade, One Hundred Ninja page 65; the chameleon battle assist is anime-only, Naruto: Shippūden episode 162.",
+      "core_abilities": [
+        "High-speed rush and one-arm restraint",
+        "Examiner observation",
+        "Psycho Mind Transmission assistance",
+        "Distraction of the Animal Path",
+        "Battle against Giant Snake-Tailed Chameleon (anime)"
+      ],
+      "conditional_abilities": [
+        "Functions as part of the Analysis Team alongside Inoichi; anime-only chameleon battle assistance; examiner duties rely on observation."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "High-speed rush and one-arm restraint",
+          "Examiner observation",
+          "Psycho Mind Transmission assistance",
+          "Distraction of the Animal Path",
+          "Battle against Giant Snake-Tailed Chameleon (anime)"
+        ],
+        "K": [
+          "Functions as part of the Analysis Team alongside Inoichi; anime-only chameleon battle assistance; examiner duties rely on observation."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "medium",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No named ninjutsu is given; abilities are described as mostly unseen; his eyes and upper face are covered by bandages, noted ironically against his observation reputation.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1377": {
+      "name": "Yodo",
+      "canonical_version": "Boruto manga and anime (New Era Part I/II and Two Blue Vortex)",
+      "version_selection_reasoning": "Hearing is tied to Zai no Sho leads (pages 35-36); puppet dismemberment and the hair sonic boom are anime-only (Boruto episodes 56 and 58); the film novel is cited for exam status and Two Blue Vortex chapter 21 page 35 for her death.",
+      "core_abilities": [
+        "Evasion and endurance",
+        "Sensory escort support"
+      ],
+      "conditional_abilities": [
+        "Hearing relies on posture, heartbeat and breathing cues; hair sonic boom requires whipping her hair; sensory support depends on her remaining conscious and uninjured."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Evasion and endurance",
+          "Sensory escort support"
+        ],
+        "K": [
+          "Hearing relies on posture, heartbeat and breathing cues; hair sonic boom requires whipping her hair; sensory support depends on her remaining conscious and uninjured."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Her hearing-based anticipation was deduced and neutralised by paper bombs; lost to Shikadai's Shadow Imitation Technique; knocked out by Deepa and ultimately killed by Ryō; sonic boom is anime-only.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORUTO_ERA_ECV",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:103": {
+      "name": "Shibito Azuma",
+      "canonical_version": "Naruto Part I (Third Shinobi World War background; no explicit version marker in source)",
+      "version_selection_reasoning": "The supplied raw page carries no canonical citations; the only narrative is a wartime battalion action described in the Background section.",
+      "core_abilities": [
+        "Battalion command in the Third Shinobi World War",
+        "Near breakthrough of Konoha's defences"
+      ],
+      "conditional_abilities": [
+        "His effectiveness is described in the context of leading a battalion against Konoha's forces, not in a lone duel."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Battalion command in the Third Shinobi World War",
+          "Near breakthrough of Konoha's defences"
+        ],
+        "K": [
+          "His effectiveness is described in the context of leading a battalion against Konoha's forces, not in a lone duel."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "Defeated once Minato arrived; no technique, personal duel or durability feat is supplied; no canonical citation is given.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:213": {
+      "name": "Ebizō",
+      "canonical_version": "Naruto Part II and Blank Period (manga/novel; databook lead d3)",
+      "version_selection_reasoning": "The analytical mind statement carries a named databook reference (d3) not defined in the supplied source; the Kazekage Rescue support role is in Part II and council politics in the Gaara Hiden novel period, with a quote lead to Naruto chapter 253 page 19.",
+      "core_abilities": [
+        "Analytical strategic counsel",
+        "Historical intelligence and risk assessment",
+        "Suna Council leadership"
+      ],
+      "conditional_abilities": [
+        "His value is situational: analytic counsel and crisis de-escalation in council or mission contexts; the wartime service claim is asserted rather than depicted."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Analytical strategic counsel",
+          "Historical intelligence and risk assessment",
+          "Suna Council leadership"
+        ],
+        "K": [
+          "His value is situational: analytic counsel and crisis de-escalation in council or mission contexts; the wartime service claim is asserted rather than depicted."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The page says little is known of his skills; no named technique, direct combat action or personal combat result is supplied, and the analytical trait is a databook lead.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:251": {
+      "name": "Furui",
+      "canonical_version": "Anime (Lightning Release); weighted-chain restraint unversioned in supplied wikitext",
+      "version_selection_reasoning": "Abilities section explicitly attributes Lightning Release to the anime; the chain feat has no version tag or canonical ref in the supplied raw file.",
+      "core_abilities": [
+        "Weighted chain restraint",
+        "Lightning Release movement halt"
+      ],
+      "conditional_abilities": [
+        "Lightning Release restraint is specifically an anime expansion; version status of the weighted-chain feat is not given in the supplied source."
+      ],
+      "excluded_abilities": [
+        "Anime Lightning Release movement halt used only as capped C-grade evidence"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Weighted chain restraint",
+          "Lightning Release movement halt"
+        ],
+        "K": [
+          "Lightning Release restraint is specifically an anime expansion; version status of the weighted-chain feat is not given in the supplied source."
+        ],
+        "X": [
+          "Anime Lightning Release movement halt used only as capped C-grade evidence"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Killed by the Eight-Tails about thirty years before the Fourth Shinobi World War; no named jutsu, range, or duration is given.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:473": {
+      "name": "Isago",
+      "canonical_version": "Manga (Kazekage Rescue Mission; no chapter ref in supplied wikitext)",
+      "version_selection_reasoning": "The pursuit-unit action is described in Part II without a ref; the 'most likely very skilled' claim is a databook-alias inference and is not counted as evidence.",
+      "core_abilities": [
+        "Pursuit-unit deployment and tracking mission"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Pursuit-unit deployment and tracking mission"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No named jutsu, tracking technique, combat, or result is described; the skill statement is explicitly inferential ('most likely').",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:563": {
+      "name": "Saisu Kamano",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Manga refs cover the Pain's Assault contribution (chapters 422-423); anime weapon training and Academy scenes cite Naruto: Shippūden episode 452.",
+      "core_abilities": [
+        "Collapsible kama/kusarigama wielding",
+        "Four-direction assault on the Deva Path"
+      ],
+      "conditional_abilities": [
+        "Weapon depiction is version-dependent: kusarigama in manga, kama in anime."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Collapsible kama/kusarigama wielding",
+          "Four-direction assault on the Deva Path"
+        ],
+        "K": [
+          "Weapon depiction is version-dependent: kusarigama in manga, kama in anime."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Immediately defeated by Shinra Tensei; abilities are described as mostly unknown and no named technique is given.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:787": {
+      "name": "Shinobu Mibu",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Manga/episode refs support traits and the Cypher Division battle (Naruto chapter 116, Naruto episode 73, Naruto: Shippūden episode 251); the gate defense, interception orders, and Akatsuki infiltration scenes have no ref in the supplied wikitext.",
+      "core_abilities": [
+        "Gate defense against Orochimaru's snakes",
+        "Head-on interception orders",
+        "Akatsuki hideout infiltration and report"
+      ],
+      "conditional_abilities": [
+        "Sword-related skill is only implied by carrying a sword in the anime; infiltration and reporting are explicitly anime scenes."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Gate defense against Orochimaru's snakes",
+          "Head-on interception orders",
+          "Akatsuki hideout infiltration and report"
+        ],
+        "K": [
+          "Sword-related skill is only implied by carrying a sword in the anime; infiltration and reporting are explicitly anime scenes."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "low",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No named techniques; combat against the snakes was ineffective and his interception orders were criticized as foolish.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:801": {
+      "name": "Hamaki Mimura",
+      "canonical_version": "Manga (Third Shinobi World War feat; no chapter ref in supplied wikitext)",
+      "version_selection_reasoning": "Background and Abilities recount a concrete combat feat without a canonical ref; tantō-related kenjutsu is explicitly implied and not counted.",
+      "core_abilities": [
+        "Flying Thunder God Kunai deployment behind enemy lines"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Flying Thunder God Kunai deployment behind enemy lines"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "No named personal technique; the feat depends on Minato's Flying Thunder God Kunai; sword skill is only implied by carrying a tantō.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:820": {
+      "name": "Mizunoto",
+      "canonical_version": "Anime (assassination attempt, episode 351) and manga (chapter 424, page 3)",
+      "version_selection_reasoning": "Disguise, combat, and survival during the Hiruzen assassination attempt cite Naruto: Shippūden episode 351; Root non-intervention in Pain's Assault cites Naruto chapter 424, page 3; sword skill is only inferred.",
+      "core_abilities": [
+        "Disguised infiltration and combat in the Hiruzen assassination attempt"
+      ],
+      "conditional_abilities": [
+        "Assassination/disguise details are anime-only; Root non-intervention during Pain's Assault is manga-cited."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Disguised infiltration and combat in the Hiruzen assassination attempt"
+        ],
+        "K": [
+          "Assassination/disguise details are anime-only; Root non-intervention during Pain's Assault is manga-cited."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "low",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Mission failed; no named technique; kenjutsu is only indicated by weapon possession, and 'presumably powerful' is inference.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:905": {
+      "name": "Nonota",
+      "canonical_version": "Manga canon Part II (Fourth Shinobi World War) with anime-only additions",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 546 page 5 for Cloth Binding Technique and Sealing Tag, chapter 546 page 2 panel 2 for reflex defense, and Shippūden episode 296 for the anime scene. Page-supplied leads only.",
+      "core_abilities": [
+        "Cloth Binding Technique",
+        "Sealing Tag application",
+        "Shuriken defense"
+      ],
+      "conditional_abilities": [
+        "Sealing requires an opening created by an ally; effectiveness against regenerating enemies depends on a successful tag application."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Cloth Binding Technique",
+          "Sealing Tag application",
+          "Shuriken defense"
+        ],
+        "K": [
+          "Sealing requires an opening created by an ally; effectiveness against regenerating enemies depends on a successful tag application."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Support 3",
+      "contradictions_or_outliers": "Needed rescue by Naruto and Killer B after being magnetised; prone to panic in the described encounter.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1428": {
+      "name": "Zōri",
+      "canonical_version": "Manga canon Part I (Land of Waves prologue) with anime-only additions",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 23 page 12 for iaidō, Naruto episode 13 and Shippūden episode 180 for anime demonstrations. Page-supplied leads only.",
+      "core_abilities": [
+        "Iaidō one-move slash",
+        "Swordsmanship versus shadow clones (anime)",
+        "Unarmed strike (anime)"
+      ],
+      "conditional_abilities": [
+        "Iaidō depends on drawing the katana for a decisive first strike; effectiveness depends on catching an opponent unprepared."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Iaidō one-move slash",
+          "Swordsmanship versus shadow clones (anime)",
+          "Unarmed strike (anime)"
+        ],
+        "K": [
+          "Iaidō depends on drawing the katana for a decisive first strike; effectiveness depends on catching an opponent unprepared."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Defeated and tied up by Naruto's shadow clones; unnerved by Sasuke and gave up the sword's location under threat.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:146": {
+      "name": "Chiriku",
+      "canonical_version": "Manga canon Part II (Shippūden) with anime-only technique details",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 320 page 3 for the bounty, Shippūden episode 316 for his training under Chūkaku and Kabuto's interest, and episode 73 for a quote; several named techniques are described in anime material. Page-supplied leads only.",
+      "core_abilities": [
+        "Fire Temple secret taijutsu",
+        "Sealed Iron Wall barrier",
+        "Welcoming Approach: Thousand-Armed Murder",
+        "Destruction of Evil Seal"
+      ],
+      "conditional_abilities": [
+        "Fire Temple secret teachings and sealing formulas require monk training; barrier is fixed-site protection."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Fire Temple secret taijutsu",
+          "Sealed Iron Wall barrier",
+          "Welcoming Approach: Thousand-Armed Murder",
+          "Destruction of Evil Seal"
+        ],
+        "K": [
+          "Fire Temple secret teachings and sealing formulas require monk training; barrier is fixed-site protection."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "low",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 4 pending chapter-level check of Hidan/Kakuzu fight",
+      "contradictions_or_outliers": "Eventually killed and his body taken for a bounty; the page gives no chapter-level citation for his named techniques.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "POWER_3_ALT_4_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1350": {
+      "name": "Waraji",
+      "canonical_version": "Manga canon Part I (Land of Waves prologue) with anime-only additions",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 23 page 12 for the iaijutsu wall cut, chapter 23 page 16 for killing a giant boar, First Databook ref d1 for the seiza claim and Shippūden episode 180 for shadow-clone combat. Page-supplied leads only.",
+      "core_abilities": [
+        "Iaijutsu wall cut",
+        "Giant boar kill",
+        "Swordsmanship versus shadow clones (anime)"
+      ],
+      "conditional_abilities": [
+        "Iaijutsu depends on a fast draw; the seated iai-nuki variant is only alleged by the databook, not shown."
+      ],
+      "excluded_abilities": [
+        "Databook iai-nuki-from-seiza claim not shown; excluded"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Iaijutsu wall cut",
+          "Giant boar kill",
+          "Swordsmanship versus shadow clones (anime)"
+        ],
+        "K": [
+          "Iaijutsu depends on a fast draw; the seated iai-nuki variant is only alleged by the databook, not shown."
+        ],
+        "X": [
+          "Databook iai-nuki-from-seiza claim not shown; excluded"
+        ]
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Defeated by Naruto's shadow clones and later stopped by villagers; outclassed by Haku in an earlier encounter.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:131": {
+      "name": "Bunpuku",
+      "canonical_version": "Manga Part II flashback canon for jinchūriki status; anime-only (Shippūden) for demonstrated fūinjutsu",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 660 pages 5-9 and chapter 261 for jinchūriki history, Shippūden episode 394 for sealing Shukaku into a tea kettle, and episodes 410-411 for Hōichi-attributed techniques. Page-supplied leads only.",
+      "core_abilities": [
+        "Tailed-beast containment"
+      ],
+      "conditional_abilities": [
+        "Jinchūriki access to Shukaku's sand and chakra is conditional on the beast's presence; the biwa skill is only called highly plausible by the page."
+      ],
+      "excluded_abilities": [
+        "Shukaku's sand/chakra not attributed to host; anime teakettle sealing not relied on"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Tailed-beast containment"
+        ],
+        "K": [
+          "Jinchūriki access to Shukaku's sand and chakra is conditional on the beast's presence; the biwa skill is only called highly plausible by the page."
+        ],
+        "X": [
+          "Shukaku's sand/chakra not attributed to host; anime teakettle sealing not relied on"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "low",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Died when Shukaku was extracted; never mastered the tailed beast's combat power; much of the technique detail is anime-only and hearsay from Hōichi.",
+      "uncertainty_note": "Evidence grade C (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "BORROWED_BEAST_POWER_NOT_ATTRIBUTED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1000": {
+      "name": "Sabu",
+      "canonical_version": "Manga canon Part II (Five Kage Summit arc)",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 470 pages 10 and 12 for great strength and axe handling, and chapter 471 pages 14-15 for observing Samehada absorbing chakra. Page-supplied leads only.",
+      "core_abilities": [
+        "Great strength / enormous axe handling",
+        "Yosaku Cut",
+        "Chakra-absorption observation"
+      ],
+      "conditional_abilities": [
+        "Great strength is tied to wielding his oversized axe; observational insight depends on witnessing chakra absorption."
+      ],
+      "excluded_abilities": [
+        "Naruto Mobile limited-ability profile not used as evidence"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Great strength / enormous axe handling",
+          "Yosaku Cut",
+          "Chakra-absorption observation"
+        ],
+        "K": [
+          "Great strength is tied to wielding his oversized axe; observational insight depends on witnessing chakra absorption."
+        ],
+        "X": [
+          "Naruto Mobile limited-ability profile not used as evidence"
+        ]
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "medium",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "His strikes were blocked by Samehada; the page notes a Naruto Mobile profile calling his combat abilities very limited.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:810": {
+      "name": "Mitate",
+      "canonical_version": "Manga canon Part I (Chūnin Exams) with anime-only additions",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 87 pages 5-6 for recognising Lee's fatal injury and Shippūden episode 213 for the failed memory-recovery attempt. Page-supplied leads only.",
+      "core_abilities": [
+        "Medical diagnosis",
+        "Memory-restoration genjutsu (anime)",
+        "First aid deployment (anime)"
+      ],
+      "conditional_abilities": [
+        "Genjutsu memory restoration depends on accessing the target's memories; the attempt on Menma did not succeed."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Medical diagnosis",
+          "Memory-restoration genjutsu (anime)",
+          "First aid deployment (anime)"
+        ],
+        "K": [
+          "Genjutsu memory restoration depends on accessing the target's memories; the attempt on Menma did not succeed."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "medium"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Memory restoration failed in the anime; no named healing technique is shown and medical knowledge is described as basic.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1005": {
+      "name": "Sagan",
+      "canonical_version": "Manga canon Part II (Fourth Shinobi World War) with anime-only naming",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 561 page 12 panels 5 and 6 for detecting Madara and Mū, chapter 561 page 8 panel 3 for deducing the Tsuchikage's state, and chapter 589 page 14 plus Shippūden episode 332 for later events. Page-supplied leads only.",
+      "core_abilities": [
+        "Sensor detection and alert",
+        "Injury deduction"
+      ],
+      "conditional_abilities": [
+        "Sensory detection requires proximity to the targets and was shown specifically for Madara and Mū."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Sensor detection and alert",
+          "Injury deduction"
+        ],
+        "K": [
+          "Sensory detection requires proximity to the targets and was shown specifically for Madara and Mū."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No attack or defensive jutsu of his own is shown; the page describes him feeling outclassed during the Kage battle.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    "dattebayo:1319": {
+      "name": "Ugatsu",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Infiltration skill is cited to Third Databook page 188; the infiltration and attempted assassination of Pain are cited to Naruto chapter 369. References are secondary-source leads.",
+      "core_abilities": [
+        "Infiltration",
+        "Assassination attempt on Pain"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Infiltration",
+          "Assassination attempt on Pain"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "medium",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The attempt failed and his death is only presumed; no combat technique or specific infiltration method is shown.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:812": {
+      "name": "Mitoku",
+      "canonical_version": "Manga canon Part II (Pain's Assault)",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 406 page 5 for recognising the unknown code and chapter 406 page 7 for his response to Shikamaru. Page-supplied leads only.",
+      "core_abilities": [
+        "Cryptographic recognition",
+        "Investigative guidance"
+      ],
+      "conditional_abilities": [
+        "Code analysis relies on knowledge of Konoha's cipher systems and the sender's circumstances."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Cryptographic recognition",
+          "Investigative guidance"
+        ],
+        "K": [
+          "Code analysis relies on knowledge of Konoha's cipher systems and the sender's circumstances."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "medium",
+        "strategist": "medium",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "medium",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No combat ability shown; personality notes describe him as somewhat lackadaisical about staying late.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:434": {
+      "name": "Hyūga Elder",
+      "canonical_version": "Manga canon Part I for clan status; anime-only (Naruto: Shippūden) for demonstrated combat and movement",
+      "version_selection_reasoning": "Supplied page cites First Databook page 110 and chapter 105 pages 12 and 14 for status and quotes; the Konoha Crush defense and rescue attempt are tied to Shippūden episode 192. Page-supplied leads, not primary inspection.",
+      "core_abilities": [
+        "Hyūga-style taijutsu stance (anime)",
+        "Long-distance leap (anime)"
+      ],
+      "conditional_abilities": [
+        "Possesses the Byakugan with near 360-degree vision per the page; unknown: no demonstrated use in combat in the supplied source."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Hyūga-style taijutsu stance (anime)",
+          "Long-distance leap (anime)"
+        ],
+        "K": [
+          "Possesses the Byakugan with near 360-degree vision per the page; unknown: no demonstrated use in combat in the supplied source."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "low",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The page explicitly says the extent of his abilities is unknown and calls taijutsu skill an implication; he was quickly overpowered during the invasion.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:544": {
+      "name": "Kaiza",
+      "canonical_version": "Manga canon Part I (Land of Waves prologue)",
+      "version_selection_reasoning": "Supplied page cites Naruto chapter 20 pages 4-18 for his execution and chapter 20 page 10 for a quote; the dam-gate stamina feat is described without a specific page reference. Page-supplied leads only.",
+      "core_abilities": [
+        "Flood-gate swimming feat",
+        "Exceptional stamina and resistance"
+      ],
+      "conditional_abilities": [
+        "Feat depends on exceptional stamina and swimming ability in flood conditions."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Flood-gate swimming feat",
+          "Exceptional stamina and resistance"
+        ],
+        "K": [
+          "Feat depends on exceptional stamina and swimming ability in flood conditions."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "low",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Civilian with no ninjutsu shown; his arms were mutilated and he was executed in the manga.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1236": {
+      "name": "Tessen Togeito",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime, Manga, and Game appearance. Ninja-tools fighting style is cited to Fourth Databook page 210; the assault and Shinra Tensei defeat are cited to Naruto chapter 422, page 8 and chapter 423, pages 1-5. References are secondary-source leads.",
+      "core_abilities": [
+        "Shuriken-launcher volley"
+      ],
+      "conditional_abilities": [
+        "The shuriken launcher is stored in a scroll, so the rapid volley depends on deploying that tool."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Shuriken-launcher volley"
+        ],
+        "K": [
+          "The shuriken launcher is stored in a scroll, so the rapid volley depends on deploying that tool."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2 (tokubetsu jonin)",
+      "contradictions_or_outliers": "His attack contribution ended in immediate defeat by Shinra Tensei; no independent success is recorded.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:545": {
+      "name": "Kaji",
+      "canonical_version": "Part I Land of Waves prologue canon with First Databook background",
+      "version_selection_reasoning": "Supplied page cites First Databook ref d1 for his twenty-year ferryman expertise; the covert ferry run is described in the prologue with no chapter ref supplied. Page-supplied leads only.",
+      "core_abilities": [
+        "Covert ferry operation",
+        "Waterway navigation"
+      ],
+      "conditional_abilities": [
+        "Waterway expertise depends on local conditions; rerouting is needed when a channel is impassable."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Covert ferry operation",
+          "Waterway navigation"
+        ],
+        "K": [
+          "Waterway expertise depends on local conditions; rerouting is needed when a channel is impassable."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Civilian with no ninjutsu or combat art; refused to go all the way into the Land of Waves.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1389": {
+      "name": "Yoshiteru",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance; samurai of the Land of Iron. Fourth Databook page 212 is cited for reliability, while the Five Kage Summit attack has no chapter ref supplied on the page. References are secondary-source leads.",
+      "core_abilities": [
+        "Chakra-enhanced sword attack / Flash",
+        "Squad-led capture action"
+      ],
+      "conditional_abilities": [
+        "Chakra channeled through his swords boosts reach and cutting ability and enables a long-range Flash attack when he wields them."
+      ],
+      "excluded_abilities": [
+        "Presumed kenjutsu proficiency excluded"
+      ],
+      "ability_classes_used": {
+        "C": [
+          "Chakra-enhanced sword attack / Flash",
+          "Squad-led capture action"
+        ],
+        "K": [
+          "Chakra channeled through his swords boosts reach and cutting ability and enables a long-range Flash attack when he wields them."
+        ],
+        "X": [
+          "Presumed kenjutsu proficiency excluded"
+        ]
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "low",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2",
+      "contradictions_or_outliers": "Presumed deceased; his attack was repelled and he was cut down. Kenjutsu experience and proficiency are worded as presumably, so only the actual attack and charge count as demonstrated.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:203": {
+      "name": "Mawashi Dokuraku",
+      "canonical_version": "Part II Pain's Assault canon with Fourth Databook Analysis Team role",
+      "version_selection_reasoning": "Supplied page cites the Fourth Databook (ref d4) for the Demon Sergeant nickname and junior partner; the mind-transmission assistance and Animal Path distraction are described without chapter refs. Page-supplied leads only.",
+      "core_abilities": [
+        "Psycho Mind Transmission assistance",
+        "Distraction of Animal Path"
+      ],
+      "conditional_abilities": [
+        "Intel extraction depends on a captured subject and Inoichi's technique; distraction role depended on the Animal Path's attention."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Psycho Mind Transmission assistance",
+          "Distraction of Animal Path"
+        ],
+        "K": [
+          "Intel extraction depends on a captured subject and Inoichi's technique; distraction role depended on the Animal Path's attention."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "The page states not much has been seen of his abilities; his exact contribution to mind transmission is not detailed.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1264": {
+      "name": "Tsubusa",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Excellent eyes and enemy detection at several miles are cited to Third Databook page 187; the first sighting of Akatsuki is cited to Naruto chapter 247, pages 14-15. References are secondary-source leads.",
+      "core_abilities": [
+        "Long-range visual detection"
+      ],
+      "conditional_abilities": [
+        "Detection range is specified as several miles and depends on his excellent eyes."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Long-range visual detection"
+        ],
+        "K": [
+          "Detection range is specified as several miles and depends on his excellent eyes."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Killed with the other guards by Yūra before he could raise the alert; no combat technique shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    "dattebayo:305": {
+      "name": "Genzō",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime, Manga, and Game appearance. Photographing Team Minato is cited to Naruto chapter 603, page 7, panels 1 and 5; top-quality photography is cited to First Databook page 139 and Naruto: One Decade, One Hundred Ninja page 24. References are secondary-source leads.",
+      "core_abilities": [
+        "Photography"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Photography"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Civilian with no shinobi combat, mobility, or medical capability shown; his only demonstrated capability is photography.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:1398": {
+      "name": "Shinku Yūhi",
+      "canonical_version": "Fourth Databook canon plus manga pre-series flashback (Nine-Tailed Demon Fox's Attack)",
+      "version_selection_reasoning": "Supplied page cites the Fourth Databook (ref d4) for jōnin instructor status; the barrier action during the Nine-Tails attack is described without a chapter ref. Page-supplied leads only.",
+      "core_abilities": [
+        "Barrier-tag protection"
+      ],
+      "conditional_abilities": [
+        "Barrier protection relied on pre-placed barrier tags during the village emergency."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Barrier-tag protection"
+        ],
+        "K": [
+          "Barrier protection relied on pre-placed barrier tags during the village emergency."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "low",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Power 2 (jonin instructor)",
+      "contradictions_or_outliers": "The page only infers kenjutsu skill from carrying a sword and instructor status; no actual fight or named technique is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1176": {
+      "name": "Tajiki",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. The demonstrated taijutsu clash is cited to Naruto chapter 522 (page 11, panel 5; chapter 522). References are page leads from an inspected secondary source, not primary inspection.",
+      "core_abilities": [
+        "Colossal-fist taijutsu"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Colossal-fist taijutsu"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "medium",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "medium",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "n/a (zero)",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Overconfidence is noted; he attacked before landing a hit and was blown to bits.",
+      "uncertainty_note": "Evidence grade A (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    "dattebayo:729": {
+      "name": "Kussaku",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Sensory ability and status as his village's greatest sensor are cited to Fourth Databook page 206; his death is cited to Naruto chapter 613, page 15. References are secondary-source leads.",
+      "core_abilities": [
+        "Sensing Barrier via Water Release"
+      ],
+      "conditional_abilities": [
+        "The Sensing Barrier required Water Release and cooperation with other shinobi."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Sensing Barrier via Water Release"
+        ],
+        "K": [
+          "The Sensing Barrier required Water Release and cooperation with other shinobi."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "Support 4 (greatest sensory ability in Kirigakure per databook)",
+      "contradictions_or_outliers": "Barrier setup required others' assistance; the databook mislabels him as an Iwagakure shinobi; no personal combat feat is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    "dattebayo:882": {
+      "name": "Natori",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Outstanding speed and accuracy within the Aviary are cited to Third Databook page 188; the message-handling scene in the Kazekage Rescue Mission has no chapter ref supplied on the page. References are secondary-source leads.",
+      "core_abilities": [
+        "Aviary message handling and cryptology referral"
+      ],
+      "conditional_abilities": [
+        "His bandaged left arm is described as a perch for birds without damaging his arm; no conditional combat abilities are shown."
+      ],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Aviary message handling and cryptology referral"
+        ],
+        "K": [
+          "His bandaged left arm is described as a perch for birds without damaging his arm; no conditional combat abilities are shown."
+        ],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Speed and accuracy are a reported comparative claim rather than a demonstrated feat; no combat capability is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:948": {
+      "name": "Oyone",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime, Manga, and Game appearance. The autopsy/Analysis Team scene is cited to Naruto chapter 420, page 15. References are secondary-source leads.",
+      "core_abilities": [
+        "Medical analysis of Pain's Animal Path"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Medical analysis of Pain's Animal Path"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "low"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Medical knowledge and chakra control are page inferences using proves and must; no healing technique or combat feat is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "HEALER_1_INFERRED_MEDICAL_SKILL",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:706": {
+      "name": "Kumadori",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime, Manga, and Game appearance. The autopsy/Analysis Team scene is cited to Naruto chapter 420, page 15. References are secondary-source leads.",
+      "core_abilities": [
+        "Medical analysis of Pain's Animal Path"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Medical analysis of Pain's Animal Path"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "low"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "Medical knowledge and chakra control are page inferences; no treatment technique or combat feat is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "HEALER_1_INFERRED_MEDICAL_SKILL",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1410": {
+      "name": "Yurika",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime, Manga, and Game appearance. Decoder skill is cited to Third Databook page 187; the decoding of Sunagakure's message in the Kazekage Rescue Mission has no chapter ref supplied on the page. References are secondary-source leads.",
+      "core_abilities": [
+        "Code decryption"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Code decryption"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "low",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "n/a (zero)"
+      },
+      "plausible_alternatives": "none recorded",
+      "contradictions_or_outliers": "No combat capability or other technique is demonstrated; she works in cryptology rather than direct combat.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:987": {
+      "name": "Ryōkan",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Talented medical-nin status is cited to Third Databook page 188; the Kankurō treatment in the Kazekage Rescue Mission has no chapter ref supplied on the page. References are secondary-source leads.",
+      "core_abilities": [
+        "Medical treatment assistance (Kankurō)"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Medical treatment assistance (Kankurō)"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "low"
+      },
+      "plausible_alternatives": "Healer 3",
+      "contradictions_or_outliers": "Unable to help Kankurō unaided; good chakra control is asserted generally and no named technique is demonstrated.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "HEALER_2_NEEDS_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    "dattebayo:1057": {
+      "name": "Sekka",
+      "canonical_version": "Manga and anime",
+      "version_selection_reasoning": "Page lists Anime and Manga appearance. Being a talented medical-nin who saved numerous lives is cited to Third Databook page 187; the Kankurō treatment has no chapter ref supplied on the page. References are secondary-source leads.",
+      "core_abilities": [
+        "Medical treatment (Kankurō)"
+      ],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": {
+        "C": [
+          "Medical treatment (Kankurō)"
+        ],
+        "K": [],
+        "X": []
+      },
+      "confidence": {
+        "power": "low",
+        "captain": "n/a (zero)",
+        "strategist": "n/a (zero)",
+        "attacker": "n/a (zero)",
+        "tank": "n/a (zero)",
+        "assassin": "n/a (zero)",
+        "support": "low",
+        "healer": "low"
+      },
+      "plausible_alternatives": "Healer 3",
+      "contradictions_or_outliers": "Could not counter Sasori's poison unaided; the successful cure depended on Sakura's extraction and antidote, and no named technique is shown.",
+      "uncertainty_note": "Evidence grade B (inspected secondary only; primary manga not opened). Fit zeros are unevidenced zeros (nothing in package) unless limitation text shows absence.",
+      "review_flags": [
+        "HEALER_2_NEEDS_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    }
+  }
+}

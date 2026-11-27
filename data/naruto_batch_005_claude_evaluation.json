@@ -1,0 +1,2479 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "evaluation",
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-005",
+  "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+  "scoring_version": "SCORE-1.0",
+  "canonical_policy_version": "NARUTO-CANON-0.1",
+  "batch_status": "draft",
+  "global_notes": [
+    "Fit was assigned before Power with Power values hidden (fit_reference only; Fit file frozen before power_reference was opened).",
+    "No rarity, role scores, approval or publication status is assigned in this import file.",
+    "The corrected research package contains demonstrated capabilities; secondary sources are traceable but primary material was not opened.",
+    "No Fit value was revised after Pass B."
+  ],
+  "evaluations": [
+    {
+      "character_id": "dattebayo:879",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:879",
+          "summary": "Demonstrated ability to halt Naruto's movement with Shadow Imitation Technique until Nine-Tails Chakra Mode broke the hold."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:879",
+          "summary": "Bound Naruto's movement with Shadow Imitation Technique before he could escape the temple."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Suzaku_Nara"
+      ],
+      "revision_ref": "claude-batch-005-001",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:441",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:441",
+          "summary": "Tracked the escapees' progress through the Thirty-Six Layer Self-Repairing Barrier incident and relayed it to the barrier team."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:441",
+          "summary": "Used his Byakugan to follow Naruto and Killer B as they escaped the island and reported their progress; Byakugan grants near-360-degree vision and x-ray vision per the page."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Iroha_Hyūga"
+      ],
+      "revision_ref": "claude-batch-005-002",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:724",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Highly demonstrated: former Seven Ninja Swordsman and Anbu who fought Team 7 and allies, defeated Tenten, and overwhelmed Naruto, Lee and Neji until given curry; natural lightning lets him fight continuously without tiring."
+        },
+        {
+          "target": "captain",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Led the Kurosuki Family criminal gang and imposed rule over the Katabami Gold Mine village."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Fought under Hiding in Mist while Ranmaru negated Neji's Byakugan; lured opponents using Karashi and exploited mist-obscured battlefield conditions."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Kiba twin lightning swords, long-distance and area lightning attacks, Rock Avalanche burial, mist-supported ambush, and a single lightning strike that one-shot both Neji and Naruto."
+        },
+        {
+          "target": "tank",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Defended against Lee's attacks with Kiba; used area lightning strikes defensively; could destroy his own body with natural lightning when near death, leaving no trace."
+        },
+        {
+          "target": "assassin",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Used Hiding in Mist Technique to blind targets and make them more vulnerable; served as Anbu tasked with finding infiltrating spies."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Water Release mist blanketing and rock avalanche served as battlefield control; Ranmaru acted as his eyes and ears in a mutual support arrangement."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Raiga_Kurosuki"
+      ],
+      "revision_ref": "claude-batch-005-003",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1370",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1370",
+          "summary": "Demonstrated battlefield contribution through full body swap with Kakashi and precise positioning in low-visibility mist to set up a strike on Zabuza."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1370",
+          "summary": "Integrated into Kakashi's strategy: switched bodies with Kakashi and used sensing to place Kakashi's body behind Zabuza before cancelling the technique."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1370",
+          "summary": "Used sensor-guided positioning for a surprise strike from behind in thick mist; no assassination is confirmed."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1370",
+          "summary": "Mind Body Switch Technique (full body exchange rather than consciousness-only transfer) and Sensing Technique used despite absent sight."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Santa_Yamanaka"
+      ],
+      "revision_ref": "claude-batch-005-004",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:901",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:901",
+          "summary": "Detected chakra activity inside the Claw Marks before Claw Grimes emerged and later traced Shikamaru's notebook evidence in the Post Mamushi Arc (observational, not a ninja technique)."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:901",
+          "summary": "Capable sensor entrusted with guarding and monitoring Boruto and Kawaki; detected chakra moving within the Claw Marks and warned the group; located Boruto on Naruto's request."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Nishi_(sensor)"
+      ],
+      "revision_ref": "claude-batch-005-005",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:46",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:46",
+          "summary": "Demonstrated use of an Akimichi secret technique against Pain and participation in a four-direction coordinated assault; the group was immediately defeated by Shinra Tensei."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:46",
+          "summary": "Used Partial Multi-Size Technique (expanding his arm) in the fight against Pain and joined a simultaneous assault from four directions."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:46",
+          "summary": "Assisted in Kakashi's confrontation with Pain and served on the Island Turtle guard detail to keep Naruto confined."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shitō_Akimichi"
+      ],
+      "revision_ref": "claude-batch-005-006",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:435",
+      "power": 2,
+      "fit": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "High demonstrated proficiency: fought on par with Hinata as a child and beat her in a duel, easily dodged and parried Boruto and his shadow clones, and as an adult handled dangerous animals as Team 15 captain."
+        },
+        {
+          "target": "captain",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "Captain of Team 15 and a strict jōnin sensei; trained and pushed Namida, coordinated missions, and reported to Iwagakure about Kara."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "Let her genin handle smaller animals while she took larger, dangerous ones, and waited to see how students handled a wolf before intervening."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "Gentle Fist expertise, Eight Trigrams Palms Revolving Heaven and Eight Trigrams Vacuum Palm; counter-attacked Hinata to win the heir duel."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "Byakugan perception and chakra-pathway targeting; helped dispel genjutsu affecting protesters and monitored/reported threats."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hanabi_Hyūga"
+      ],
+      "revision_ref": "claude-batch-005-007",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:841",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:841",
+          "summary": "Some demonstrated utility: aided Inoichi's mind-reading interrogation and assisted in battle against the Giant Crustacean, but no personal finishing technique is shown."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:841",
+          "summary": "Specific specialist duty: skilled enough to aid Inoichi Yamanaka's Psycho Mind Transmission of Yūdachi to retrieve information from an enemy's mind."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mozuku"
+      ],
+      "revision_ref": "claude-batch-005-008",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:871",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:871",
+          "summary": "Demonstrated aptitude with Shadow Imitation Technique by helping restrain the Ten-Tails for a short time alongside other Nara."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:871",
+          "summary": "Shadow Imitation Technique used to restrain the Ten-Tails' shadow briefly in coordination with clan members."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Daen_Nara"
+      ],
+      "revision_ref": "claude-batch-005-009",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:874",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:874",
+          "summary": "Demonstrated aptitude with Shadow Imitation Technique by helping restrain the Ten-Tails briefly with other Nara."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:874",
+          "summary": "Shadow Imitation Technique used to restrain the Ten-Tails' tail shadow in coordination with Shikamaru and other Nara."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kasuga_Nara"
+      ],
+      "revision_ref": "claude-batch-005-010",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:875",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:875",
+          "summary": "Demonstrated aptitude with Shadow Imitation Technique by helping restrain the Ten-Tails briefly with other Nara."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:875",
+          "summary": "Shadow Imitation Technique used to restrain the Ten-Tails in cooperation with Daen, Kasuga and other clan members."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Maen_Nara"
+      ],
+      "revision_ref": "claude-batch-005-011",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1094",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1094",
+          "summary": "Demonstrated kenjutsu swift slashes and taijutsu that easily defeated multiple Anbu shadow clones; as a reincarnation he engaged Omoi and Kankurō's Sasori puppet and obstructed Sai's team."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1094",
+          "summary": "Root tantō kenjutsu with swift slashes; explosive clay packed in his reincarnated stomach served as a detonation threat."
+        },
+        {
+          "target": "assassin",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1094",
+          "summary": "Serving as Root support on a surprise attack/diversion; no successful stealth kill is shown."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shin"
+      ],
+      "revision_ref": "claude-batch-005-012",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1413",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1413",
+          "summary": "Demonstrated bubblegum-based projectiles, entrapment and explosions that gained the upper hand against Boruto before a bubble was burst in his face."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1413",
+          "summary": "Used bubbles to save his team from the ink pit in round one and attacked opponents to let Toroi retrieve the flag in round two."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1413",
+          "summary": "Fired bubblegum projectiles and created multiple exploding bubbles; attacked Wasabi Izuno and Sumire Kakei during the exams."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1413",
+          "summary": "Entrapping projectiles and giant bubbles can trap an enemy inside; used to protect his team from elimination."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yurui"
+      ],
+      "revision_ref": "claude-batch-005-013",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:464",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:464",
+          "summary": "Served as the short-range combat shinobi of Minato's platoon; his team clashed with Kumogakure's A–B Combo, though no individual hit by Gaku is described."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:464",
+          "summary": "Specific short-range combat function is stated; no named offensive technique is supplied."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:464",
+          "summary": "He communicated the retreat decision to Minato."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gaku_Inuzuka"
+      ],
+      "revision_ref": "claude-batch-005-014",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1332",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 1
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1332",
+          "summary": "Primary material demonstrates first aid on the battlefield; Naruto Mobile separately shows taijutsu and good shurikenjutsu skill."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1332",
+          "summary": "Assisted Nonō and Kabuto in treating Konoha shinobi for money and later aided comrades during the Fourth Shinobi World War."
+        },
+        {
+          "target": "healer",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1332",
+          "summary": "At least competent in first aid; directly seen performing basic first aid on a comrade during the war."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Urushi"
+      ],
+      "revision_ref": "claude-batch-005-015",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 1,
+        "support": 1,
+        "healer": 1
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Anime demonstrates kenjutsu combat against reincarnated Hayate, Anbu apprehension of Sora, and protection duties; manga skill level is not displayed."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Uses Anbu coordination, sealing of corpses, tracking, and a delayed confrontation with Hayate's reincarnation to complete the KIA scroll recovery."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Uses Dance of the Crescent Moon and Hazy Moon Night in kenjutsu, striking with speed and complex movements and piercing reincarnated Hayate."
+        },
+        {
+          "target": "assassin",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Anbu membership and catching Sora while he spies in a ceiling are shown, but no named stealth or assassination technique is supplied."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Seals objects and shinobi corpses into scrolls, assists with basic medical care, tracks thieves, and protects Tsunade."
+        },
+        {
+          "target": "healer",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Assists in basic medical care while assigned to the Logistical Support and Medical Division; depth of medical skill is not shown."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yūgao_Uzuki"
+      ],
+      "revision_ref": "claude-batch-005-016",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:122",
+      "power": 3,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "One of the most powerful shinobi Kirigakure produced, a Seven Ninja Swordsman, an Akatsuki member, and a lethal Kubikiribōchō wielder with major battle feats."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "Meticulous and professional about missions, created formations to synchronize with Itachi, partnered with Itachi on missions, and attempted a sword deflection against Yagura's Tailed Beast Ball."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "Wields the regenerative Kubikiribōchō with enough skill and brutality to dye battlefields red, strikes down most of Yagura's hunter-nin, and fights with Water Release clones and mist."
+        },
+        {
+          "target": "tank",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "Survived Might Duy's Eight Gates Released Formation; could carry and wield the huge sword for long periods; failed to deflect Yagura's Tailed Beast Ball and was mortally wounded."
+        },
+        {
+          "target": "assassin",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "As an Akatsuki member and former missing-nin he undertook missions with Itachi, but no specific stealth or assassination technique is described."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "Water clones and thick mist provide battlefield control and concealment."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Jūzō_Biwa"
+      ],
+      "revision_ref": "claude-batch-005-017",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:338",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Coordinates with Meizu using a shuriken chain to bind and slice enemies, uses poisoned claws, hides undetected near Konoha's gates, and ambushes Team 7 from water."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Paragon of coordinated attacking with his twin; uses Water Release hiding to surprise the target and has a release mechanism to fight independently if the chain is neutralised."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Retractable shuriken chain can bind and slice targets; poisoned gauntlet claws shred foes."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Skilled in stealth, able to hide right outside Konoha's gates undetected; worked as Zabuza's assassin."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Chain binding restrains enemies; mist/water positioning supports ambush control."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gōzu"
+      ],
+      "revision_ref": "claude-batch-005-018",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:779",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Coordinates with Gōzu using a shared shuriken chain to bind and slice enemies, uses poisoned claws, hides undetected near Konoha's gates, and ambushes Team 7 from water."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Uses coordinated twin attacking and Water Release concealment to surprise opponents; Gōzu's release mechanism permits independent fighting if the chain is neutralised."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Retractable shuriken chain can bind and slice targets; poisoned gauntlet claws shred foes."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Skilled in stealth, capable of hiding right outside Konoha's gates without being noticed; worked as Zabuza's assassin."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Chain binding restrains enemies; puddle positioning supports ambush control."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Meizu"
+      ],
+      "revision_ref": "claude-batch-005-019",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:846",
+      "power": 2,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Demonstrated jōnin-level capability: evaded and restrained a much larger foe, fought after severe chakra absorption and a kunai to the chest, and deliberately collapsed a cave on Ao."
+        },
+        {
+          "target": "captain",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Trusted with a three-year pacification mission, assigned as senior partner to Team 7, and repeatedly mentored the genin; no formal command title is given."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Methodical in battle; identified the demon's chakra-absorption tactic and let it drain him soKonohamaru and Boruto could destroy it; infiltrated Victor's company by knocking out guards and transforming into them; exposed the…"
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Earth Release cave collapse to bury a target in rubble; anime-only earth projectiles fired from the mouth; restraint holds; suicidal cave collapse used as a finishing measure."
+        },
+        {
+          "target": "tank",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Considerable chakra reserves let him endure having most of his chakra absorbed and keep fighting; high pain tolerance allowed effective movement after a kunai to the chest with blood loss."
+        },
+        {
+          "target": "assassin",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Sneaked into Victor's facility, disguised himself as a guard, and as a child was forced into an assassination attempt on Hiruzen (anime)."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Fūinjutsu used in unison with others to destroy barriers; restrained enemies and the chakra-absorbing demon; saved Konohamaru's life more than once and guarded the daimyō."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mugino"
+      ],
+      "revision_ref": "claude-batch-005-020",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1374",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1374",
+          "summary": "Took part in a coordinated four-direction assault on the Deva Path of Pain alongside Kakashi's group, but was defeated immediately by Shinra Tensei."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1374",
+          "summary": "Used Wind Release: Great Breakthrough in the assault; his clan researches concealed weapons and his mouth-fired kunai are stronger than hand-thrown ones."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kokage_Yanagikage"
+      ],
+      "revision_ref": "claude-batch-005-021",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:210",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Despite remaining a genin his whole career, he mastered all Eight Gates over twenty years and used them to fend off the entire Seven Ninja Swordsmen of the Mist."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Taught the Eight Gates kinjutsu to his son Guy and inspired later generations; protected Ebisu and Genma alongside Guy."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Eight Gates Released Formation; in the anime his efforts killed four members of the Seven Ninja Swordsmen of the Mist."
+        },
+        {
+          "target": "tank",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Extensively trained body with high stamina and physique sufficient to withstand the Eight Gates; protected his son and teammates from a far stronger group."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Rescued Guy, Ebisu and Genma from the Seven Ninja Swordsmen of the Mist."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Might_Duy"
+      ],
+      "revision_ref": "claude-batch-005-022",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1068",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1068",
+          "summary": "Fought alongside his brothers in the capture-the-flag round, defeating Boruto's shadow clones before being stopped by Boruto's elemental attacks."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1068",
+          "summary": "Can produce two shadow clones; used them in the exam combat, and the brothers defeated Boruto's clones."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1068",
+          "summary": "Shadow clones provide numerical support; the genjutsu flag protection is credited to the team rather than to Makinami alone."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Makinami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-023",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1069",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1069",
+          "summary": "Fought with his brothers in the capture-the-flag round, defeating Boruto's shadow clones before being defeated by Boruto's elemental attacks."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1069",
+          "summary": "Can produce two shadow clones; participated with his brothers in defeating Boruto's clones."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1069",
+          "summary": "Shadow clones support the group; the flag genjutsu is a team action rather than an individual feat."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sazanami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-024",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1070",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1070",
+          "summary": "Led his brothers in the capture-the-flag round, defeating Boruto's shadow clones before being stopped by Boruto's elemental attacks."
+        },
+        {
+          "target": "captain",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1070",
+          "summary": "Led his two brothers in navigating the exam route and in the team's retrieval attempt."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1070",
+          "summary": "Can produce two shadow clones; fought alongside his brothers against Boruto's clones."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1070",
+          "summary": "Shadow clones add numerical support; flag-protection genjutsu is a team action."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Takanami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-025",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1232",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1232",
+          "summary": "Physical speed and strength let him close on Komaza in a blink, restrain him with one arm and knock him into a wall; later helped distract the Animal Path and (anime) assisted against the Giant Snake-Tailed Chameleon."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1232",
+          "summary": "Keen observation as examiner, asserting elite chūnin would not miss any cheating; monitored and tracked examinees precisely."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1232",
+          "summary": "One-arm restraint and wall impact against Komaza; no named offensive technique."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1232",
+          "summary": "Aided Inoichi Yamanaka's Psycho Mind Transmission of Yūdachi and helped distract the Animal Path so analysis could continue."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tonbo_Tobitake"
+      ],
+      "revision_ref": "claude-batch-005-026",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1377",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Reached the Chūnin Exam finals, dismembered several of Tenten's puppets, evaded all of Shikadai's kunai with minimal movement, and fought Human God Trees before being overwhelmed."
+        },
+        {
+          "target": "strategist",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Anticipated attacks from shifting posture and breathing; her hearing kept the group ahead of Ryō's iron sand, but Shikadai countered it with paper bombs and Shadow Imitation Technique."
+        },
+        {
+          "target": "attacker",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Howling Hair Sound Wave: whipping her hair generates a powerful high-frequency sonic boom that disorients and physically harms targets."
+        },
+        {
+          "target": "tank",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Survived being impaled through the stomach while retaining consciousness; was repeatedly knocked out or restrained by stronger opponents."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Used acute hearing to track approaching people and direct allies, including detecting Temari and Shikadai during the escort mission and countering sand attacks."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yodo"
+      ],
+      "revision_ref": "claude-batch-005-027",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:103",
+      "power": 1,
+      "fit": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:103",
+          "summary": "Led a battalion of Iwagakure shinobi against Konoha's and almost broke through Konoha's defences before Minato Namikaze defeated him."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:103",
+          "summary": "Demonstrated battlefield leadership of an Iwa battalion during the Third Shinobi World War."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:103",
+          "summary": "Pushed an offensive nearly to the point of breaking Konoha's defensive line; also directed comrades to toy with surviving Konoha-nin."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shibito_Azuma"
+      ],
+      "revision_ref": "claude-batch-005-028",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:213",
+      "power": 1,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:213",
+          "summary": "No personal combat is shown; his demonstrated contribution is strategic counsel during the Kazekage Rescue operation and calm assessment in a crisis."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:213",
+          "summary": "Long-serving head of the Suna Council, highly revered in Sunagakure; joined a support team during the Kazekage Rescue Mission and urged measured conduct."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:213",
+          "summary": "Strong analytical mind used in past shinobi wars; warned Temari and other Suna-nin not to panic or rush blindly into enemy territory, and recounted the chaos after the Third Kazekage's disappearance to prevent a repeat."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:213",
+          "summary": "Supported the Kazekage Rescue Team, supplied historical intelligence about the Third Kazekage and argued for patience to avoid total annihilation."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ebizō",
+        "https://naruto.fandom.com/wiki/Ebiz%C5%8D"
+      ],
+      "revision_ref": "claude-batch-005-029",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:251",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:251",
+          "summary": "Demonstrated restraint utility: halted the Eight-Tails' movements with Lightning Release and helped hold it down with a weighted chain; was ultimately killed by the beast."
+        },
+        {
+          "target": "captain",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:251",
+          "summary": "In the anime, rallied teammates to continue restraining the Eight-Tails because failure would mean Kumogakure's destruction; no other command role demonstrated."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:251",
+          "summary": "Used a chain with a weight on the end to hold down the Eight-Tails; anime Lightning Release stopped the beast's movement for the team's subdual effort."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Furui"
+      ],
+      "revision_ref": "claude-batch-005-030",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:473",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:473",
+          "summary": "Baki's right-hand man who helped mount the pursuit after Gaara's abduction."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:473",
+          "summary": "Formed/deployed a pursuit unit on Baki's orders during Gaara's abduction and went out with it to find Kankurō."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:473",
+          "summary": "Concrete mission function: organized a pursuit team and coordinated with Baki before departure; no tracking method named."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Isago"
+      ],
+      "revision_ref": "claude-batch-005-031",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:563",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:563",
+          "summary": "Joined a four-direction simultaneous assault on the Deva Path alongside Kakashi's group and was immediately defeated by Shinra Tensei."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:563",
+          "summary": "Manga: wielded a collapsible kusarigama; anime: wielded a collapsible kama; participated in a coordinated attack from four directions."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Saisu_Kamano"
+      ],
+      "revision_ref": "claude-batch-005-032",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:787",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:787",
+          "summary": "Attempted to defend Konoha's entrance against Orochimaru's giant snakes with little effect and later assisted against the revived shinobi during the second invasion."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:787",
+          "summary": "Shouted orders to intercept Furido's squad head-on; Genma Shiranui reprimanded him for sending men into the fray that way."
+        },
+        {
+          "target": "assassin",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:787",
+          "summary": "Anime: infiltrated an underground Akatsuki hideout as a Nijū Shōtai member and searched it, reporting no findings."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:787",
+          "summary": "Reported intelligence after the hideout infiltration and escorted a hostile Karin into the Intelligence Division."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shinobu_Mibu"
+      ],
+      "revision_ref": "claude-batch-005-033",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:801",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:801",
+          "summary": "Helped Minato Namikaze wipe out about fifty Iwagakure shinobi by throwing Flying Thunder God Kunai behind enemy lines."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:801",
+          "summary": "Provided kunai placement/support for Minato's attack rather than a control technique."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hamaki_Mimura"
+      ],
+      "revision_ref": "claude-batch-005-034",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:820",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:820",
+          "summary": "Fought the Anbu guarding Hiruzen, who was a disguised Kakashi, during the assassination attempt and survived the encounter even though the mission failed."
+        },
+        {
+          "target": "assassin",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:820",
+          "summary": "Disguised as a foreign shinobi as part of the mission to assassinate Hiruzen; the disguise and approach are demonstrated, the kill is not."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mizunoto"
+      ],
+      "revision_ref": "claude-batch-005-035",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:905",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:905",
+          "summary": "Sunagakure shinobi who defended against Toroi's shuriken and sealed the regenerating reincarnated enemy."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:905",
+          "summary": "Cloth Binding Technique restrains opponents; sealing tags provide the finishing containment."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:905",
+          "summary": "Concrete demonstrated support/control: bound and sealed Toroi using Cloth Binding Technique and a Sealing Tag."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Nonota"
+      ],
+      "revision_ref": "claude-batch-005-036",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1428",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1428",
+          "summary": "Samurai mercenary who executed Kaiza with a slash and later defeated several Naruto shadow clones in the anime."
+        },
+        {
+          "target": "captain",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1428",
+          "summary": "Worked as Gatō's bodyguard alongside Waraji and later led a group of kidnappers in the anime; unknown: formal command role."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1428",
+          "summary": "Iaidō provides a one-move killing sword strike; anime shows swordplay against shadow clones and a one-punch knock-out of Tsunami."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1428",
+          "summary": "Iaidō is explicitly a one-move assassination-style strike; no stealth infiltration is described."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Zōri"
+      ],
+      "revision_ref": "claude-batch-005-037",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:146",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "A highly capable fighter who defended and countered simultaneous assaults by Hidan and Kakuzu for a period before being overwhelmed."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "Served as head monk of the Fire Temple and looked after and trained Sora; tactical command in combat unknown."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "Combined barrier defense, taijutsu counters and sealing; arranged Sora's transfer to Team Yamato for monitoring."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "Mastered the Fire Temple ultimate technique Welcoming Approach: Thousand-Armed Murder; taijutsu counters are shown against two Akatsuki members."
+        },
+        {
+          "target": "tank",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "Created a powerful Sealed Iron Wall barrier around the Fire Temple and withstood Hidan and Kakuzu's joint assault briefly."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:146",
+          "summary": "Barrier ninjutsu protected the temple; fūinjutsu was used with other monks to suppress Sora's demonic chakra."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Chiriku"
+      ],
+      "revision_ref": "claude-batch-005-038",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1350",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1350",
+          "summary": "Samurai mercenary who cut through a wall in one fluid motion, killed a giant boar and defeated several shadow clones in the anime."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1350",
+          "summary": "Iaijutsu and kenjutsu with enough force to bisect a wall and a giant boar in single strikes."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1350",
+          "summary": "Iai-nuki from a seated posture is an assassination-style quick draw; no covert infiltration is shown."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Waraji"
+      ],
+      "revision_ref": "claude-batch-005-039",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:131",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 1,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:131",
+          "summary": "First jinchūriki of Shukaku with strong chakra reserves, but the page states he never mastered Shukaku's power himself."
+        },
+        {
+          "target": "tank",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:131",
+          "summary": "Contained Shukaku for a long period without a cage and resisted the mental degradation associated with the beast."
+        },
+        {
+          "target": "support",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:131",
+          "summary": "Anime shows sealing Shukaku into a tea kettle; also credited with moulding currents and a Dharma Power Sealing Technique by Hōichi."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Bunpuku"
+      ],
+      "revision_ref": "claude-batch-005-040",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1000",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1000",
+          "summary": "Confronted Kisame alongside Killer B, landed a strike opportunity and rushed to aid B; the page notes limited combat ability in a game profile."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1000",
+          "summary": "Observed that Samehada was absorbing B's chakra and accounted for it when assessing the fight."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1000",
+          "summary": "Wielded an enormous axe many times his size with ease and attacked Kisame using the Yosaku Cut."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1000",
+          "summary": "Battlefield observation identified the enemy weapon's chakra-absorption effect."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sabu"
+      ],
+      "revision_ref": "claude-batch-005-041",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:810",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 1
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:810",
+          "summary": "Diagnosed Lee's career-ending injuries (chapter 87 pages 5-6 lead)."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:810",
+          "summary": "Anime shows genjutsu-based memory restoration attempts; first aid was given to the Mizuki-injured group."
+        },
+        {
+          "target": "healer",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:810",
+          "summary": "Concrete demonstration: examined Rock Lee after Gaara fight and determined the injuries could not be fully healed; provided first aid in the anime."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mitate"
+      ],
+      "revision_ref": "claude-batch-005-042",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1005",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1005",
+          "summary": "Sensor-type shinobi who survived Madara's assault on the Fourth Division and continued tracking enemies; no personal attack shown."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1005",
+          "summary": "Concrete specialist capability: detected Madara Uchiha and Mū and alerted other shinobi on the battlefield."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sagan"
+      ],
+      "revision_ref": "claude-batch-005-043",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1319",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1319",
+          "summary": "Attempted to assassinate Pain alongside two other Amegakure remnants; the outcome is not confirmed."
+        },
+        {
+          "target": "assassin",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1319",
+          "summary": "Said to be very skilled in infiltration and actually infiltrated Amegakure with two others to attempt Pain's assassination."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ugatsu"
+      ],
+      "revision_ref": "claude-batch-005-044",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:812",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:812",
+          "summary": "Identified Jiraiya's message as non-standard and set the team on the correct decryption path (chapter 406 page 5 lead)."
+        },
+        {
+          "target": "captain",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:812",
+          "summary": "Head of the Konoha Cryptanalysis Team, directing day-to-day division work under the Hokage; no field command shown."
+        },
+        {
+          "target": "strategist",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:812",
+          "summary": "Analysed the circumstances of Jiraiya's message and redirected Shikamaru toward someone who knew Jiraiya personally."
+        },
+        {
+          "target": "support",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:812",
+          "summary": "Concrete specialist capability: recognised at a glance that Jiraiya's code matched no known Konoha algorithm."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mitoku"
+      ],
+      "revision_ref": "claude-batch-005-045",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:434",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:434",
+          "summary": "Anime shows him holding a Hyūga-style taijutsu stance while fending off invaders, after which he is struck from behind and knocked unconscious."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:434",
+          "summary": "As former clan head he devised the body-double plan; unknown: no demonstrated combat command in the supplied source."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:434",
+          "summary": "Strategic clan-protection decision (Hizashi as Hiashi's double) is shown in the chapter 105 lead; battlefield tactics unknown."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:434",
+          "summary": "Former head of the Hyūga clan and originator of the branch-family body-double arrangement (chapter 105 page 12 lead)."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hyūga_Elder"
+      ],
+      "revision_ref": "claude-batch-005-046",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:544",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 1,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:544",
+          "summary": "Civilian fisherman; Tazuna states it took Gatō's entire gang to stop one man, but no technique or fight is described."
+        },
+        {
+          "target": "tank",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:544",
+          "summary": "Exceptional stamina and physical resolve; withstood the gang's attack long enough to be publicly executed as a warning."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:544",
+          "summary": "Closed the gate alone to save the village area from flooding."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kaiza"
+      ],
+      "revision_ref": "claude-batch-005-047",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1236",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1236",
+          "summary": "Joined a simultaneous four-direction assault on the Deva Path of Pain as part of Kakashi's confrontation; the group was immediately defeated by Shinra Tensei."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1236",
+          "summary": "Main fighting style uses ninja tools: a special shuriken launcher stored in a scroll that bombards the enemy with a volley of shuriken in an instant."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tessen_Togeito"
+      ],
+      "revision_ref": "claude-batch-005-048",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:545",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:545",
+          "summary": "Twenty years of ferryman experience across the Land of Waves waterways (First Databook lead)."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:545",
+          "summary": "Concrete specialist capability: ferried Team 7 and Tazuna to the edge of the Land of Waves using local waterway knowledge."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kaji"
+      ],
+      "revision_ref": "claude-batch-005-049",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1389",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1389",
+          "summary": "Led a squad to capture the infiltrating Sasuke Uchiha, launched an attack that was repelled, then charged him and was quickly cut down."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1389",
+          "summary": "Led a squad under Urakaku's orders to seek out and capture Sasuke."
+        },
+        {
+          "target": "attacker",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1389",
+          "summary": "Two-sword kenjutsu preference plus chakra channeling through swords for extended reach/cutting power and a long-range attack (Samurai Sabre Technique/Flash); the launched attack was repelled by Sasuke's sword."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yoshiteru"
+      ],
+      "revision_ref": "claude-batch-005-050",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:203",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:203",
+          "summary": "Analysis Team shinobi who helped distract the Animal Path during Pain's assault; no personal attack described."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:203",
+          "summary": "Concrete demonstrated support: aided Inoichi Yamanaka's Psycho Mind Transmission of Yūdachi."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mawashi_Dokuraku"
+      ],
+      "revision_ref": "claude-batch-005-051",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1264",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1264",
+          "summary": "First to detect Sasori and Deidara approaching Sunagakure despite jōnin and Anbu also being present."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1264",
+          "summary": "Served as an early-warning sentinel at the village gate using exceptional eyesight."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tsubusa"
+      ],
+      "revision_ref": "claude-batch-005-052",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:305",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:305",
+          "summary": "Noted as the greatest photographer in Konohagakure; was charged with photographing Team Minato years earlier."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Genzō",
+        "https://naruto.fandom.com/wiki/Genz%C5%8D"
+      ],
+      "revision_ref": "claude-batch-005-053",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1398",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1398",
+          "summary": "Jōnin instructor who placed village youth inside a barrier during the Nine-Tails attack; no combat fight is described."
+        },
+        {
+          "target": "captain",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1398",
+          "summary": "Oversees training of Konoha genin and chūnin and directed youths to safety during the attack."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1398",
+          "summary": "Barrier placement is a concrete protective support action; no other chakra technique is shown."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shinku_Yūhi"
+      ],
+      "revision_ref": "claude-batch-005-054",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1176",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1176",
+          "summary": "Shown closing with a reincarnated Akatsuki shinobi (Gari) as a Third Division fighter, using his large-fist taijutsu; the attempt failed when he was blown apart before connecting."
+        },
+        {
+          "target": "attacker",
+          "grade": "A",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1176",
+          "summary": "Uses colossal fists as weapons in taijutsu; attempted a strike on Gari in battle."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tajiki"
+      ],
+      "revision_ref": "claude-batch-005-055",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:729",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:729",
+          "summary": "No direct combat action demonstrated; he monitored the battlefield from HQ as a sensor."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:729",
+          "summary": "Erected an immense Sensing Barrier using Water Release together with others' assistance, allowing monitoring of the war zone."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kussaku"
+      ],
+      "revision_ref": "claude-batch-005-056",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:882",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:882",
+          "summary": "First to recognise the significance of Sunagakure sending its fastest bird, which reported Gaara's kidnapping."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:882",
+          "summary": "Concrete aviary mission function: received Suna's message via Takamaru, routed it to Yurika, and flagged that something serious had happened."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Natori"
+      ],
+      "revision_ref": "claude-batch-005-057",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:948",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 1
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:948",
+          "summary": "Co-identified black receivers on the Animal Path, a key intelligence result after Pain's assault."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:948",
+          "summary": "Analytical contribution: co-determined that the black rods on Pain's Animal Path were black receivers rather than body piercings."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:948",
+          "summary": "Analysis Team member performing medical investigation of a captured enemy body alongside Shizune and Kumadori."
+        },
+        {
+          "target": "healer",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:948",
+          "summary": "Great medical ninjutsu knowledge is inferred from being selected for Shizune's analysis team; the concrete demonstrated act is the autopsy finding about black receivers."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Oyone"
+      ],
+      "revision_ref": "claude-batch-005-058",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:706",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 1
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:706",
+          "summary": "Co-identified black receivers during the autopsy of Pain's Animal Path."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:706",
+          "summary": "Analytical contribution: co-determined that the rods on Pain's Animal Path were black receivers, not piercings."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:706",
+          "summary": "Analysis Team member assisting Shizune with medical investigation of a captured enemy body."
+        },
+        {
+          "target": "healer",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:706",
+          "summary": "Great medical ninjutsu knowledge is inferred from team selection; the demonstrated act is the autopsy finding about black receivers."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kumadori"
+      ],
+      "revision_ref": "claude-batch-005-059",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1410",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1410",
+          "summary": "Decoded the report of Gaara's abduction by Akatsuki and passed it to Tsunade (told her directly in manga, handed her the message in anime)."
+        },
+        {
+          "target": "strategist",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1410",
+          "summary": "Converted an intercepted coded message into actionable intelligence about Gaara's kidnapping."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1410",
+          "summary": "Concrete cryptology mission function: decoded Sunagakure's message delivered via the Konoha Aviary."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yurika"
+      ],
+      "revision_ref": "claude-batch-005-060",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:987",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 2
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:987",
+          "summary": "Part of the medical effort that saved Kankurō alongside Sakura, after his own treatment attempt failed."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:987",
+          "summary": "Assisted Sakura Haruno in treating the poisoned Kankurō after his own and Sekka's initial treatment failed."
+        },
+        {
+          "target": "healer",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:987",
+          "summary": "Talented medical-nin: attempted to treat Sasori's poison on Kankurō with Sekka, then aided Sakura's successful poison extraction and antidote work."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ryōkan",
+        "https://naruto.fandom.com/wiki/Ry%C5%8Dkan"
+      ],
+      "revision_ref": "claude-batch-005-061",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:1057",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 2
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1057",
+          "summary": "Saved numerous lives in the past per the databook lead; took part in the medical effort that saved Kankurō."
+        },
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1057",
+          "summary": "Attempted to treat the poisoned Kankurō with Ryōkan and later assisted Sakura Haruno's treatment effort."
+        },
+        {
+          "target": "healer",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1057",
+          "summary": "Talented Sunagakure medical-nin said to have saved numerous lives; demonstrated treating Sasori's poison on Kankurō, initially without success, then aiding Sakura's extraction and antidote work."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sekka"
+      ],
+      "revision_ref": "claude-batch-005-062",
+      "submit_for_review": true
+    }
+  ]
+}

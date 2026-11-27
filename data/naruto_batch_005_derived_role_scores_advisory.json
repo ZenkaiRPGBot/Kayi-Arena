@@ -1,0 +1,573 @@
+{
+  "note": "Advisory derived values using the formula supplied in the owner's prompt. NOT part of the KA-IMPORT file; the attached assignment states SCORE-1.0 derives scores later. No rarity computed: no rarity framework/thresholds were supplied in the package.",
+  "formula": "Fit x Coefficient + Power x (20 - Coefficient)",
+  "coefficients": {
+    "captain": 12,
+    "strategist": 17,
+    "attacker": 10,
+    "tank": 10,
+    "assassin": 13,
+    "support": 17,
+    "healer": 17
+  },
+  "scores": {
+    "dattebayo:879": {
+      "captain": 16,
+      "strategist": 6,
+      "attacker": 20,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:441": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 37,
+      "healer": 3
+    },
+    "dattebayo:724": {
+      "captain": 28,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 30,
+      "assassin": 27,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:1370": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 20,
+      "tank": 20,
+      "assassin": 27,
+      "support": 40,
+      "healer": 6
+    },
+    "dattebayo:901": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 37,
+      "healer": 3
+    },
+    "dattebayo:46": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:435": {
+      "captain": 40,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:841": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:871": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:874": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:875": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1094": {
+      "captain": 16,
+      "strategist": 6,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 27,
+      "support": 6,
+      "healer": 6
+    },
+    "dattebayo:1413": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:464": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1332": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 20
+    },
+    "dattebayo:1337": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 27,
+      "support": 23,
+      "healer": 23
+    },
+    "dattebayo:122": {
+      "captain": 24,
+      "strategist": 26,
+      "attacker": 60,
+      "tank": 50,
+      "assassin": 34,
+      "support": 26,
+      "healer": 9
+    },
+    "dattebayo:338": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 40,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:779": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 40,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:846": {
+      "captain": 40,
+      "strategist": 40,
+      "attacker": 40,
+      "tank": 40,
+      "assassin": 27,
+      "support": 40,
+      "healer": 6
+    },
+    "dattebayo:1374": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:210": {
+      "captain": 28,
+      "strategist": 6,
+      "attacker": 40,
+      "tank": 40,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:1068": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1069": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1070": {
+      "captain": 20,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1232": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 30,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:1377": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 40,
+      "tank": 30,
+      "assassin": 14,
+      "support": 40,
+      "healer": 6
+    },
+    "dattebayo:103": {
+      "captain": 32,
+      "strategist": 20,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:213": {
+      "captain": 32,
+      "strategist": 37,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:251": {
+      "captain": 28,
+      "strategist": 6,
+      "attacker": 20,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:473": {
+      "captain": 20,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:563": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:787": {
+      "captain": 20,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 20,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:801": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:820": {
+      "captain": 16,
+      "strategist": 6,
+      "attacker": 20,
+      "tank": 20,
+      "assassin": 27,
+      "support": 6,
+      "healer": 6
+    },
+    "dattebayo:905": {
+      "captain": 16,
+      "strategist": 6,
+      "attacker": 30,
+      "tank": 20,
+      "assassin": 14,
+      "support": 40,
+      "healer": 6
+    },
+    "dattebayo:1428": {
+      "captain": 28,
+      "strategist": 6,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 27,
+      "support": 6,
+      "healer": 6
+    },
+    "dattebayo:146": {
+      "captain": 48,
+      "strategist": 26,
+      "attacker": 60,
+      "tank": 60,
+      "assassin": 21,
+      "support": 43,
+      "healer": 9
+    },
+    "dattebayo:1350": {
+      "captain": 16,
+      "strategist": 6,
+      "attacker": 40,
+      "tank": 20,
+      "assassin": 27,
+      "support": 6,
+      "healer": 6
+    },
+    "dattebayo:131": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 20,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1000": {
+      "captain": 16,
+      "strategist": 23,
+      "attacker": 30,
+      "tank": 20,
+      "assassin": 14,
+      "support": 23,
+      "healer": 6
+    },
+    "dattebayo:810": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 20
+    },
+    "dattebayo:1005": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 37,
+      "healer": 3
+    },
+    "dattebayo:1319": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 20,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:812": {
+      "captain": 20,
+      "strategist": 20,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:434": {
+      "captain": 20,
+      "strategist": 20,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:544": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 20,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1236": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:545": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1389": {
+      "captain": 20,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:203": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1264": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 37,
+      "healer": 3
+    },
+    "dattebayo:305": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:1398": {
+      "captain": 20,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:1176": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 20,
+      "tank": 10,
+      "assassin": 7,
+      "support": 3,
+      "healer": 3
+    },
+    "dattebayo:729": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 54,
+      "healer": 3
+    },
+    "dattebayo:882": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:948": {
+      "captain": 8,
+      "strategist": 20,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 20
+    },
+    "dattebayo:706": {
+      "captain": 8,
+      "strategist": 20,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 20
+    },
+    "dattebayo:1410": {
+      "captain": 8,
+      "strategist": 20,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 3
+    },
+    "dattebayo:987": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 37
+    },
+    "dattebayo:1057": {
+      "captain": 8,
+      "strategist": 3,
+      "attacker": 10,
+      "tank": 10,
+      "assassin": 7,
+      "support": 20,
+      "healer": 37
+    }
+  }
+}

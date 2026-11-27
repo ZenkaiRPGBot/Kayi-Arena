@@ -1,0 +1,84 @@
+{
+  "batch_id": "naruto-batch-005",
+  "generated_at": "2026-11-27",
+  "change_count": 7,
+  "changes": [
+    {
+      "character_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "field": "power",
+      "original_rating": 2,
+      "revised_rating": 1,
+      "supporting_evidence": "The only manga-supported capability is basic medical assistance. Kenjutsu competence is explicitly unknown in the manga; other material is anime-only.",
+      "calibration_justification": "Zaji (Power 1 support specialist) and non-combatant anchors support Power 1 for a support-only character with no demonstrated combat effectiveness.",
+      "confidence": "low",
+      "reason": "Power 2 was the adaptation ceiling, not demonstrated combat capability."
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "field": "attacker",
+      "original_rating": 2,
+      "revised_rating": 0,
+      "supporting_evidence": "No manga-demonstrated offensive technique or result is supplied.",
+      "calibration_justification": "Attacker Fit requires direct offensive effectiveness; comparison with Hinata and Ino anchors keeps zero where offense is not demonstrated.",
+      "confidence": "low",
+      "reason": "Anime-only kenjutsu expansion cannot support Attacker Fit under the policy."
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "field": "assassin",
+      "original_rating": 1,
+      "revised_rating": 0,
+      "supporting_evidence": "No demonstrated stealth, infiltration or precision elimination is supplied.",
+      "calibration_justification": "Kakashi and Torune anchors require concrete stealth or infiltration actions.",
+      "confidence": "low",
+      "reason": "Remove unsupported Assassin Fit."
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "field": "strategist",
+      "original_rating": 1,
+      "revised_rating": 0,
+      "supporting_evidence": "No demonstrated planning or tactical decision is supplied.",
+      "calibration_justification": "Shikamaru/Shikaku anchors require demonstrated tactical action.",
+      "confidence": "low",
+      "reason": "Remove unsupported Strategist Fit."
+    },
+    {
+      "character_id": "dattebayo:810",
+      "name": "Mitate",
+      "field": "healer",
+      "original_rating": 1,
+      "revised_rating": 0,
+      "supporting_evidence": "Manga-supplied evidence shows medical diagnosis only. First-aid deployment and memory-restoration genjutsu are anime-only and excluded by NARUTO-CANON-0.1.",
+      "calibration_justification": "Healer Fit requires demonstrated treatment of others, not diagnosis alone; Shizune and Sakura are treatment anchors.",
+      "confidence": "medium",
+      "reason": "Apply the canonical policy to anime-only healing evidence."
+    },
+    {
+      "character_id": "dattebayo:948",
+      "name": "Oyone",
+      "field": "healer",
+      "original_rating": 1,
+      "revised_rating": 0,
+      "supporting_evidence": "Supplied evidence is medical analysis of Pain's Animal Path; the page infers knowledge and chakra control but shows no treatment of a patient.",
+      "calibration_justification": "Karin (Healer 3) and Shizune (Healer 4) are treatment anchors; analysis alone does not meet Healer 1.",
+      "confidence": "low",
+      "reason": "An inferred medical role is not a demonstrated ability to treat others."
+    },
+    {
+      "character_id": "dattebayo:706",
+      "name": "Kumadori",
+      "field": "healer",
+      "original_rating": 1,
+      "revised_rating": 0,
+      "supporting_evidence": "Supplied evidence is medical analysis of Pain's Animal Path with no treatment technique or combat feat shown.",
+      "calibration_justification": "Karin (Healer 3) and Shizune (Healer 4) require actual healing actions; inference-only medical knowledge does not qualify.",
+      "confidence": "low",
+      "reason": "Remove an inferred Healer Fit that lacks a demonstrated treatment action."
+    }
+  ]
+}

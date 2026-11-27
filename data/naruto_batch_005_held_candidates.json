@@ -1,0 +1,224 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-005",
+  "generated_at": "2026-11-27",
+  "excluded_from_import": true,
+  "candidate_count": 10,
+  "candidates": [
+    {
+      "character_id": "dattebayo:901",
+      "name": "Nishi (sensor)",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era sensor with no verified Naruto-era version in the supplied package. The authoritative Naruto universe policy does not independently expand to Boruto-exclusive characters; owner decision required.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Nishi_(sensor)"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SENSOR_SUPPORT_TEMPLATE_CHECK"
+      ]
+    },
+    {
+      "character_id": "dattebayo:435",
+      "name": "Hanabi Hyūga",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Hanabi's supplied combat evidence is adaptation/Boruto-era material; no verified Naruto-era combat baseline. Hold rather than silently expanding the Naruto universe boundary.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hanabi_Hyūga"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:1413",
+      "name": "Yurui",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era anime evidence with no verified Naruto-era ability baseline; hold for owner review.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yurui"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:846",
+      "name": "Mugino",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era candidate with adaptation-sensitive evidence and disputed era eligibility.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mugino"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:1068",
+      "name": "Makinami Senka",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era Senka brother; era eligibility unresolved under NARUTO-CANON-0.1.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Makinami_Senka"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:1069",
+      "name": "Sazanami Senka",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era Senka brother; era eligibility unresolved under NARUTO-CANON-0.1.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sazanami_Senka"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:1070",
+      "name": "Takanami Senka",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era Senka brother; era eligibility unresolved under NARUTO-CANON-0.1.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Takanami_Senka"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:1377",
+      "name": "Yodo",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+      "reason": "Boruto-era hearing/support specialist; era eligibility unresolved under NARUTO-CANON-0.1.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yodo"
+      ],
+      "review_flags": [
+        "ADAPTATION_OR_ERA_EVIDENCE",
+        "AUDIT_HELD",
+        "BORUTO_ERA_ECV",
+        "BORUTO_ERA_ELIGIBILITY_UNRESOLVED",
+        "CEILING_C_APPLIED",
+        "INDEPENDENT_REVIEW",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED"
+      ]
+    },
+    {
+      "character_id": "dattebayo:801",
+      "name": "Hamaki Mimura",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "BORROWED_EQUIPMENT_ONLY",
+      "reason": "The only demonstrated action uses Minato's Flying Thunder God kunai; sword skill is merely implied and no personal technique or result is supplied. Borrowed equipment is excluded under NARUTO-CANON-0.1.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hamaki_Mimura"
+      ],
+      "review_flags": [
+        "AUDIT_HELD",
+        "BORROWED_EQUIPMENT_ONLY",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    },
+    {
+      "character_id": "dattebayo:434",
+      "name": "Hyūga Elder",
+      "importable": false,
+      "power": null,
+      "fit": null,
+      "hold_code": "INSUFFICIENT_DEMONSTRATED_ABILITY",
+      "reason": "Only anime-only, implied taijutsu and a long leap are supplied; the source explicitly says the extent of his abilities is unknown. No defensible numerical evaluation can be established.",
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hyūga_Elder"
+      ],
+      "review_flags": [
+        "AUDIT_HELD",
+        "INSUFFICIENT_DEMONSTRATED_ABILITY",
+        "LOW_CONFIDENCE_INDEPENDENT_REVIEW",
+        "PRIMARY_NOT_OPENED",
+        "SECONDARY_ONLY_GRADE_B"
+      ]
+    }
+  ]
+}
