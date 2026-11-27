@@ -1,0 +1,406 @@
+{
+  "universe_id": "one_piece",
+  "batch_id": "one-piece-batch-003",
+  "generated_at": "2026-11-27T10:03:31.377507+00:00",
+  "excluded_from_evaluation_package": true,
+  "candidate_count": 24,
+  "exclusion_summary": {
+    "adaptation_only_material_excluded_at_section_level": true,
+    "duplicate_identities_excluded": [],
+    "manual_identity_mapping_candidates": [
+      {
+        "display_name": "Lucky Roo",
+        "canonical_name": "Lucky Roux",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "San Juan Wolf",
+        "canonical_name": "Sanjuan Wolf",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Lafitte",
+        "canonical_name": "Laffitte",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Choo",
+        "canonical_name": "Chew",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Mr. 5",
+        "canonical_name": "Gem",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Miss Valentine",
+        "canonical_name": "Mikita",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Ikaros",
+        "canonical_name": "Ikaros Much",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Cindry",
+        "canonical_name": "Victoria Cindry",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Hiluluk",
+        "canonical_name": "Hiriluk",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Gyukimaru",
+        "canonical_name": "Onimaru",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Ronse",
+        "canonical_name": "Lonz",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "one_piece_lucky_roux",
+      "name": "Lucky Roo",
+      "canonical_name": "Lucky Roux",
+      "source_url": "https://onepiece.fandom.com/wiki/Lucky_Roux",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_mohji",
+      "name": "Mohji",
+      "canonical_name": "Mohji",
+      "source_url": "https://onepiece.fandom.com/wiki/Mohji",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_hammond",
+      "name": "Hammond",
+      "canonical_name": "Hammond",
+      "source_url": "https://onepiece.fandom.com/wiki/Hammond",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_darma",
+      "name": "Darma",
+      "canonical_name": "Darma",
+      "source_url": "https://onepiece.fandom.com/wiki/Darma",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_megalo",
+      "name": "Megalo",
+      "canonical_name": "Megalo",
+      "source_url": "https://onepiece.fandom.com/wiki/Megalo",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_shachi",
+      "name": "Shachi",
+      "canonical_name": "Shachi",
+      "source_url": "https://onepiece.fandom.com/wiki/Shachi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_penguin",
+      "name": "Penguin",
+      "canonical_name": "Penguin",
+      "source_url": "https://onepiece.fandom.com/wiki/Penguin",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_jean_bart",
+      "name": "Jean Bart",
+      "canonical_name": "Jean Bart",
+      "source_url": "https://onepiece.fandom.com/wiki/Jean_Bart",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_victoria_cindry",
+      "name": "Cindry",
+      "canonical_name": "Victoria Cindry",
+      "source_url": "https://onepiece.fandom.com/wiki/Victoria_Cindry",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_compote",
+      "name": "Charlotte Compote",
+      "canonical_name": "Charlotte Compote",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Compote",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_caban",
+      "name": "Charlotte Caban",
+      "canonical_name": "Charlotte Caban",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Caban",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_nougat",
+      "name": "Charlotte Nougat",
+      "canonical_name": "Charlotte Nougat",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Nougat",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_contr_le",
+      "name": "Charlotte Contrôle",
+      "canonical_name": "Charlotte Contrôle",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Contrôle",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_chibou",
+      "name": "Charlotte Chibou",
+      "canonical_name": "Charlotte Chibou",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Chibou",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_marnier",
+      "name": "Charlotte Marnier",
+      "canonical_name": "Charlotte Marnier",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Marnier",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_anglais",
+      "name": "Charlotte Anglais",
+      "canonical_name": "Charlotte Anglais",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Anglais",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_saint_marc",
+      "name": "Charlotte Saint-Marc",
+      "canonical_name": "Charlotte Saint-Marc",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Saint-Marc",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_mont_dor",
+      "name": "Charlotte Mont d'Or",
+      "canonical_name": "Charlotte Mont d'Or",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Mont_d'Or",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_toko",
+      "name": "Toko",
+      "canonical_name": "Toko",
+      "source_url": "https://onepiece.fandom.com/wiki/Toko",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_yamakaji",
+      "name": "Yamakaji",
+      "canonical_name": "Yamakaji",
+      "source_url": "https://onepiece.fandom.com/wiki/Yamakaji",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_lonz",
+      "name": "Ronse",
+      "canonical_name": "Lonz",
+      "source_url": "https://onepiece.fandom.com/wiki/Lonz",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_panto",
+      "name": "Panto",
+      "canonical_name": "Panto",
+      "source_url": "https://onepiece.fandom.com/wiki/Panto",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_nyudo",
+      "name": "Nyudo",
+      "canonical_name": "Nyudo",
+      "source_url": "https://onepiece.fandom.com/wiki/Nyudo",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_coribou",
+      "name": "Coribou",
+      "canonical_name": "Coribou",
+      "source_url": "https://onepiece.fandom.com/wiki/Coribou",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    }
+  ]
+}

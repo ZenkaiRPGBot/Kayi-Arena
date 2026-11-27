@@ -1,0 +1,4610 @@
+{
+  "universe": "One Piece",
+  "source": "onepiece_fandom",
+  "provider": "onepiece_fandom",
+  "generated_at": "2026-11-27T09:59:42.072640+00:00",
+  "stats": {
+    "targets": 72,
+    "matched": 72,
+    "unmatched": 0
+  },
+  "duplicates_removed": [],
+  "candidates": [
+    {
+      "candidate_id": "one_piece_enel",
+      "name": "Enel",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Enel",
+      "aliases": [
+        "God of Skypiea"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/ad/Enel_Anime_Infobox.png/revision/latest?cb=20230520213625"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/ad/Enel_Anime_Infobox.png/revision/latest?cb=20230520213625",
+          "source": "onepiece_fandom",
+          "sha256": "1733d35af2b4425e7b832907882086eadc1b6d951561b43e72f6f501771ba7e7",
+          "format": "webp",
+          "width": 1125,
+          "height": 1051,
+          "bytes": 246892,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 241,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Giant",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Enel",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1957,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Enel",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Birkans",
+          "Characters Aged 30–39",
+          "Deities",
+          "Featured Articles",
+          "God's Army",
+          "Logia Devil Fruit Users",
+          "Male Characters",
+          "Mechanics",
+          "Moon Residents",
+          "Observation Haki Users",
+          "Rulers",
+          "Staff Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_nefertari_vivi",
+      "name": "Nefertari Vivi",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Nefertari_Vivi",
+      "aliases": [
+        "Miss Wednesday",
+        "Vivi"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/0/09/Nefertari_Vivi_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20190505023647"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/0/09/Nefertari_Vivi_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20190505023647",
+          "source": "onepiece_fandom",
+          "sha256": "c63bb4956c9b1c483d4539f102e68db28b40133e0705efde9685fc27cf92a54b",
+          "format": "webp",
+          "width": 736,
+          "height": 2016,
+          "bytes": 207448,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 215,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Nefertari Vivi",
+        "faction": "Alabasta",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 311539,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Nefertari_Vivi",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Arabasta Saga Antagonists",
+          "Bazooka Users",
+          "Blade Users",
+          "Characters Aged 10–19",
+          "Clan of D.",
+          "Female Characters",
+          "Fighters Who Use Animals",
+          "Former Pirates",
+          "Frontier Agents",
+          "Humans",
+          "Nefertari Family",
+          "Princesses",
+          "Sand-Sand Clan",
+          "Straw Hat Pirates Members",
+          "Undercover Operators",
+          "Whisky Peak Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_daz_bonez",
+      "name": "Daz Bones",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Daz_Bonez",
+      "aliases": [
+        "The Killer",
+        "Mr. 1"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/e9/Daz_Bonez_Anime_Infobox.png/revision/latest?cb=20221102004113"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/e9/Daz_Bonez_Anime_Infobox.png/revision/latest?cb=20221102004113",
+          "source": "onepiece_fandom",
+          "sha256": "82f728380f44c6231d1bb2ce54c8779e4e5a3ffc7e46fb2520a809b556089518",
+          "format": "webp",
+          "width": 684,
+          "height": 1467,
+          "bytes": 187388,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 160,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Daz Bonez",
+        "faction": "Baroque Works",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1829,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Daz_Bonez",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Arabasta Saga Antagonists",
+          "Assassins",
+          "Characters Aged 30–39",
+          "Cross Guild",
+          "Featured Articles",
+          "Former Bounty Hunters",
+          "Former Impel Down Prisoners",
+          "Humans",
+          "Karai Bari Residents",
+          "Male Characters",
+          "Martial Artists",
+          "Officer Agents",
+          "Paramecia Devil Fruit Users",
+          "Prison Escape Team",
+          "West Blue Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_pell",
+      "name": "Pell",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Pell",
+      "aliases": [
+        "Pell the Falcon",
+        "Vivi"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/be/Pell_Anime_Infobox.png/revision/latest?cb=20240903112506"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/be/Pell_Anime_Infobox.png/revision/latest?cb=20240903112506",
+          "source": "onepiece_fandom",
+          "sha256": "c806ddb7c56b53b2428a24bd67fb004a76608255f562e4739f3182a170ab2dde",
+          "format": "webp",
+          "width": 836,
+          "height": 998,
+          "bytes": 78410,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 155,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Pell",
+        "faction": "Alabasta",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1840,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Pell",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 30–39",
+          "Gatling Gun Users",
+          "Humans",
+          "Male Characters",
+          "Nefertari Family Subordinates",
+          "Royal Guards",
+          "Swordsmen",
+          "Zoan Devil Fruit Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_chaka",
+      "name": "Chaka",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Chaka",
+      "aliases": [
+        "Chaka the Jackal"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/73/Chaka_Anime_Infobox.png/revision/latest?cb=20240922030609"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/73/Chaka_Anime_Infobox.png/revision/latest?cb=20240922030609",
+          "source": "onepiece_fandom",
+          "sha256": "ed9a481661d3a1cbdf84b08908dcc1d34b24345197e70926346504ed72a34c1a",
+          "format": "webp",
+          "width": 915,
+          "height": 924,
+          "bytes": 97920,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 155,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Chaka",
+        "faction": "Alabasta",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2981,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Chaka",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 40–49",
+          "Humans",
+          "Male Characters",
+          "Nefertari Family Subordinates",
+          "Royal Guards",
+          "Swordsmen",
+          "Zoan Devil Fruit Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_arlong",
+      "name": "Arlong",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Arlong",
+      "aliases": [
+        "Arlong the Saw"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/0/01/Arlong_Anime_Infobox.png/revision/latest?cb=20230403145629"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/0/01/Arlong_Anime_Infobox.png/revision/latest?cb=20230403145629",
+          "source": "onepiece_fandom",
+          "sha256": "54c9a5c52e6e4a78f3986b32e5e4d31c57c1ef32ad4d4b25c9f405bd8945abb0",
+          "format": "webp",
+          "width": 815,
+          "height": 1080,
+          "bytes": 146036,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 69,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Arlong",
+        "faction": "Arlong Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1781,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Arlong",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Arlong Park Residents",
+          "Arlong Pirates",
+          "Characters Aged 40–49",
+          "Featured Articles",
+          "Fish-Men",
+          "Flashback Antagonists",
+          "Former Impel Down Prisoners",
+          "Male Characters",
+          "Marine Prisoners",
+          "Pirate Captains",
+          "Sun Pirates",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_krieg",
+      "name": "Don Krieg",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Krieg",
+      "aliases": [
+        "Foul-Play Krieg",
+        "Pirate Fleet Admiral",
+        "Don Krieg"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/bb/Krieg_Anime_Infobox.png/revision/latest?cb=20230123170612"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/bb/Krieg_Anime_Infobox.png/revision/latest?cb=20230123170612",
+          "source": "onepiece_fandom",
+          "sha256": "b86ca3941d60b5e309fd381e42d860eaaa2532b2ed251025899b054551c2b544",
+          "format": "webp",
+          "width": 1610,
+          "height": 2021,
+          "bytes": 291366,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 44,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Krieg",
+        "faction": "Krieg Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 174873,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Krieg",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Canon Characters Killed in the Live-Action Series",
+          "Characters Aged 40–49",
+          "Chemical Weapon Users",
+          "Explosive Users",
+          "Featured Articles",
+          "Fighters Who Use Technology",
+          "Fist Weapon Users",
+          "Flail Users",
+          "Flamethrower Users",
+          "Former Marine Prisoners",
+          "Gatling Gun Users",
+          "Hachinosu Residents",
+          "Humans",
+          "Krieg Pirates",
+          "Male Characters",
+          "Pirate Admirals",
+          "Pistol Users",
+          "Shuriken Users",
+          "Spear Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_gin",
+      "name": "Gin",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Gin",
+      "aliases": [
+        "Gin the",
+        "Man-Eating Gin"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/49/Gin_Anime_Infobox.png/revision/latest?cb=20220920031419"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/49/Gin_Anime_Infobox.png/revision/latest?cb=20220920031419",
+          "source": "onepiece_fandom",
+          "sha256": "5dc5ae297091b8bf683034189f2d638cd19062fea66641f69e9a873df9a2dafe",
+          "format": "webp",
+          "width": 849,
+          "height": 979,
+          "bytes": 116222,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 44,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Gin",
+        "faction": "Krieg Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2184,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Gin",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Club Users",
+          "Combatants",
+          "Featured Articles",
+          "Former Marine Prisoners",
+          "Hachinosu Residents",
+          "Humans",
+          "Krieg Pirates",
+          "Male Characters",
+          "Pirate Officers",
+          "Pistol Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_kuro",
+      "name": "Kuro",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Kuro",
+      "aliases": [
+        "Kuro of a Hundred Plans",
+        "Klahadore",
+        "Captain Kuro"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/7e/Kuro_Anime_Infobox.png/revision/latest?cb=20231006042805"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/7e/Kuro_Anime_Infobox.png/revision/latest?cb=20231006042805",
+          "source": "onepiece_fandom",
+          "sha256": "89694886e666ec2912c473d1082e9d6e87d0dcbdb020bf61effac32295249bda",
+          "format": "webp",
+          "width": 333,
+          "height": 528,
+          "bytes": 26072,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 23,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Kuro",
+        "faction": "Black Cat Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1966,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Kuro",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Black Cat Pirates",
+          "Characters Aged 30–39",
+          "Claw Weapon Users",
+          "East Blue Saga Antagonists",
+          "Former Servants",
+          "Humans",
+          "Male Characters",
+          "Pirate Captains",
+          "Syrup Village Characters",
+          "Undercover Operators"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_foxy",
+      "name": "Foxy",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Foxy",
+      "aliases": [
+        "Foxy the Silver Fox",
+        "Silver-Fox Foxy"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/7d/Foxy_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20251102162706"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/7d/Foxy_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20251102162706",
+          "source": "onepiece_fandom",
+          "sha256": "3532e591a5ed79bfeab4485eec08e1c7524a89e3119f1fdb0a1ab99723b9a9df",
+          "format": "webp",
+          "width": 1092,
+          "height": 1080,
+          "bytes": 211242,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 305,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Foxy",
+        "faction": "Foxy Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2144,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Foxy",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 30–39",
+          "Featured Articles",
+          "Fighters Who Use Technology",
+          "Fist Weapon Users",
+          "Foxy Pirates",
+          "Humans",
+          "Male Characters",
+          "Martial Artists",
+          "Paramecia Devil Fruit Users",
+          "Pirate Captains",
+          "Rifle Users",
+          "South Blue Residents",
+          "Water 7 Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_hody_jones",
+      "name": "Hody Jones",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Hody_Jones",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/f/f3/Hody_Jones_Anime_Infobox.png/revision/latest?cb=20230609234039"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/f/f3/Hody_Jones_Anime_Infobox.png/revision/latest?cb=20230609234039",
+          "source": "onepiece_fandom",
+          "sha256": "01656daf70b1fb5a3ef1729aeacde6019b825143815f321fa2f0fc35190190ac",
+          "format": "webp",
+          "width": 984,
+          "height": 1047,
+          "bytes": 141904,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 608,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Hody Jones",
+        "faction": "New Fish-Man Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 56093,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Hody_Jones",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Blade Users",
+          "Characters Aged 30–39",
+          "Fish-Man District Characters",
+          "Fish-Man Island Saga Antagonists",
+          "Fish-Man Karate Users",
+          "Fish-Men",
+          "Former Royal Guards",
+          "Male Characters",
+          "New Fish-Man Pirates",
+          "Pirate Captains",
+          "Prison Tower Prisoners",
+          "Trident Users",
+          "Undercover Operators"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_neptune",
+      "name": "Neptune",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Neptune",
+      "aliases": [
+        "King Neptune",
+        "Neptune II"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/40/Neptune_Anime_Infobox.png/revision/latest?cb=20131206042454"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/40/Neptune_Anime_Infobox.png/revision/latest?cb=20131206042454",
+          "source": "onepiece_fandom",
+          "sha256": "7d7eeb5efd4a589992a69688fcff4b9a4cb9d612cc4aaa86bb3ec45a12162e3a",
+          "format": "webp",
+          "width": 1182,
+          "height": 1420,
+          "bytes": 237790,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 610,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Merfolk",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Neptune",
+        "faction": "Fish-Man Kingdom",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 58053,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Neptune",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 70–79",
+          "Former Princes",
+          "Kings",
+          "Male Characters",
+          "Martial Artists",
+          "Merfolk",
+          "Neptune Family",
+          "Trident Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_fukaboshi",
+      "name": "Fukaboshi",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Fukaboshi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/2/29/Fukaboshi_Anime_Infobox.png/revision/latest?cb=20140107021229"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/2/29/Fukaboshi_Anime_Infobox.png/revision/latest?cb=20140107021229",
+          "source": "onepiece_fandom",
+          "sha256": "7dfa5d7eb7d4d47966803e31a71b08c272fd18328583923cb255a229725a9d18",
+          "format": "webp",
+          "width": 1176,
+          "height": 1371,
+          "bytes": 188970,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 609,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Merfolk",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Fukaboshi",
+        "faction": "Fish-Man Kingdom",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 56123,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Fukaboshi",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Male Characters",
+          "Martial Artists",
+          "Merfolk",
+          "Neptune Family",
+          "Princes",
+          "Trident Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_shirahoshi",
+      "name": "Shirahoshi",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Shirahoshi",
+      "aliases": [
+        "Princess Shirahoshi",
+        "Mermaid Princess"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/c/c1/Shirahoshi_Anime_Infobox.png/revision/latest?cb=20240814220909"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/c/c1/Shirahoshi_Anime_Infobox.png/revision/latest?cb=20240814220909",
+          "source": "onepiece_fandom",
+          "sha256": "0167f4e7f2ff821dc5cadf00ff6d1d63d14b22b4dcc12c9798e33dc3e98519e2",
+          "format": "webp",
+          "width": 1879,
+          "height": 1756,
+          "bytes": 442754,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 489,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Merfolk",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Shirahoshi",
+        "faction": "Fish-Man Kingdom",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 17494,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Shirahoshi",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 10–19",
+          "Featured Articles",
+          "Female Characters",
+          "Merfolk",
+          "Neptune Family",
+          "Observation Haki Users",
+          "Princesses"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_caesar_clown",
+      "name": "Caesar Clown",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Caesar_Clown",
+      "aliases": [
+        "Master",
+        "Gas-Robber Caesar"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/a6/Caesar_Clown_Anime_Infobox.png/revision/latest?cb=20221101011307"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/a6/Caesar_Clown_Anime_Infobox.png/revision/latest?cb=20221101011307",
+          "source": "onepiece_fandom",
+          "sha256": "9cf701b8e34ccff4e5132cc7fdf41efeb03723fb508d3c026cb4e0a5d9efe66a",
+          "format": "webp",
+          "width": 1633,
+          "height": 2002,
+          "bytes": 270612,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 663,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Caesar Clown",
+        "faction": "Punk Hazard",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 149327,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Caesar_Clown",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 50–59",
+          "Donquixote Pirates",
+          "Dressrosa Saga Antagonists",
+          "Explosive Users",
+          "Featured Articles",
+          "Fighters Who Use Technology",
+          "Former Marine Prisoners",
+          "Former Marines",
+          "Former Pirates",
+          "Former World Government Workers",
+          "Humans",
+          "Logia Devil Fruit Users",
+          "MADS",
+          "Male Characters",
+          "NEO MADS",
+          "Punk Hazard Staff",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_monet",
+      "name": "Monet",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Monet",
+      "aliases": [
+        "Snow Owl Monet"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/9/98/Monet_Anime_Infobox.png/revision/latest?cb=20140616000310"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/9/98/Monet_Anime_Infobox.png/revision/latest?cb=20140616000310",
+          "source": "onepiece_fandom",
+          "sha256": "e4ad9065698f5183603f106ac5be1e9b88cf11feb4d64a992b5b10e2e9d9b7bd",
+          "format": "webp",
+          "width": 1280,
+          "height": 1993,
+          "bytes": 360148,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 657,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Monet",
+        "faction": "Donquixote Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 146906,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Monet",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 30–39",
+          "Deceased Characters",
+          "Donquixote Pirates Officers",
+          "Dressrosa Residents",
+          "Dressrosa Saga Antagonists",
+          "Featured Articles",
+          "Female Characters",
+          "Fighters Who Use Weapons",
+          "Humans",
+          "Logia Devil Fruit Users",
+          "North Blue Residents",
+          "Ope Ope no Mi Modified Characters",
+          "Punk Hazard Staff",
+          "Servants",
+          "Undercover Operators"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_bartolomeo",
+      "name": "Bartolomeo",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Bartolomeo",
+      "aliases": [
+        "Bartolomeo the Cannibal",
+        "The Cannibal"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/eb/Bartolomeo_Anime_Infobox.png/revision/latest?cb=20221027202808"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/eb/Bartolomeo_Anime_Infobox.png/revision/latest?cb=20221027202808",
+          "source": "onepiece_fandom",
+          "sha256": "f72c176c10d547ecbda895b559341a3994a9c807070e39876089014be573178d",
+          "format": "webp",
+          "width": 948,
+          "height": 2155,
+          "bytes": 210064,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 704,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Bartolomeo",
+        "faction": "Straw Hat Grand Fleet",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 199939,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Bartolomeo",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "B Block Participants",
+          "Barto Club",
+          "Characters Aged 20–29",
+          "Dagger Users",
+          "East Blue Residents",
+          "Gangsters",
+          "Humans",
+          "Male Characters",
+          "Non-Canon Former Prisoners",
+          "Paramecia Devil Fruit Users",
+          "Pirate Captains",
+          "Super Rookies"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_bellamy",
+      "name": "Bellamy",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Bellamy",
+      "aliases": [
+        "Bellamy the Hyena"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/2/27/Bellamy_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20230116235201"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/2/27/Bellamy_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20230116235201",
+          "source": "onepiece_fandom",
+          "sha256": "074441d8aded3ccbd95a47a590f29e5e6b0e342c495b9bd46aaba88b10dc045c",
+          "format": "webp",
+          "width": 1116,
+          "height": 3212,
+          "bytes": 339792,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 222,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Bellamy",
+        "faction": "Bellamy Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2079,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Bellamy",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "B Block Participants",
+          "Bellamy Pirates",
+          "Characters Aged 20–29",
+          "Craftsmen",
+          "Dagger Users",
+          "Dressrosa Residents",
+          "Former Pirate Captains",
+          "Former Pirates",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_viola",
+      "name": "Viola",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Viola",
+      "aliases": [
+        "Violet"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/d7/Viola_Anime_Infobox.png/revision/latest?cb=20221027021751"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/d7/Viola_Anime_Infobox.png/revision/latest?cb=20221027021751",
+          "source": "onepiece_fandom",
+          "sha256": "b73c9533fca00c1251cbee65bd3b425b803b6117b1a0b99ee7e390b59819b92b",
+          "format": "webp",
+          "width": 1914,
+          "height": 3059,
+          "bytes": 475746,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 703,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Viola",
+        "faction": "Dressrosa",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 198819,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Viola",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Dagger Users",
+          "Dancers",
+          "Donquixote Pirates Officers",
+          "Dressrosa Saga Antagonists",
+          "Female Characters",
+          "Former Assassins",
+          "Former Pirate Officers",
+          "Former Pirates",
+          "Humans",
+          "Paramecia Devil Fruit Users",
+          "Princesses",
+          "Riku Family"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_riku_doldo_iii",
+      "name": "Riku Doldo III",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Riku_Doldo_III",
+      "aliases": [
+        "Ricky"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/48/Riku_Doldo_III_Anime_Infobox.png/revision/latest?cb=20230114034249"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/48/Riku_Doldo_III_Anime_Infobox.png/revision/latest?cb=20230114034249",
+          "source": "onepiece_fandom",
+          "sha256": "8c6a7140b5adc614a5f47f3cd6bab8c0ef7e5ff4a5bc460c9f90d835c4ba5eb6",
+          "format": "webp",
+          "width": 927,
+          "height": 1765,
+          "bytes": 173202,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 706,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Riku Doldo III",
+        "faction": "Dressrosa",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 203411,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Riku_Doldo_III",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "B Block Participants",
+          "Characters Aged 60–69",
+          "Humans",
+          "Kings",
+          "Male Characters",
+          "Riku Family",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_diamante",
+      "name": "Diamante",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Diamante",
+      "aliases": [
+        "Hero of the Colosseum",
+        "Diamante the Spade"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/72/Diamante_Anime_Infobox.png/revision/latest?cb=20151011043134"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/72/Diamante_Anime_Infobox.png/revision/latest?cb=20151011043134",
+          "source": "onepiece_fandom",
+          "sha256": "ea061b88af4cefc78844a422e82c310c74a2675a0b4c3d92e7d3dd127231caa2",
+          "format": "webp",
+          "width": 1636,
+          "height": 2124,
+          "bytes": 385784,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 700,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Diamante",
+        "faction": "Donquixote Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 194013,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Diamante",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Business Managers",
+          "Characters Aged 40–49",
+          "Club Users",
+          "Diamante Army",
+          "Elite Officers",
+          "Gun Barrel Users",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Pistol Users",
+          "Prisoner Unit",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_pica",
+      "name": "Pica",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Pica",
+      "aliases": [
+        "Pica the Clover"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/a4/Pica_Anime_Infobox.png/revision/latest?cb=20221117040111"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/a4/Pica_Anime_Infobox.png/revision/latest?cb=20221117040111",
+          "source": "onepiece_fandom",
+          "sha256": "8c67301b04fd40de6856819da30048679a1c5ef707a8f216c3fdc1262127f54b",
+          "format": "webp",
+          "width": 1920,
+          "height": 2067,
+          "bytes": 506112,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 700,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Pica",
+        "faction": "Donquixote Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 228187,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Pica",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Dressrosa Residents",
+          "Dressrosa Saga Antagonists",
+          "Elite Officers",
+          "Humans",
+          "Male Characters",
+          "Marine Prisoners",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Spider Miles Residents",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_trebol",
+      "name": "Trebol",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Trebol",
+      "aliases": [
+        "Trebol the Club"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/f/f5/Trebol_Anime_Infobox.png/revision/latest?cb=20221117040446"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/f/f5/Trebol_Anime_Infobox.png/revision/latest?cb=20221117040446",
+          "source": "onepiece_fandom",
+          "sha256": "1590ba50a3a14addf4b828d3f8cba97051c6396cc0f9d52ae61fafa3a7ef7336",
+          "format": "webp",
+          "width": 1566,
+          "height": 1061,
+          "bytes": 203620,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 700,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Trebol",
+        "faction": "Donquixote Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 194006,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Trebol",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Bodyguards",
+          "Characters Aged 40–49",
+          "Dressrosa Residents",
+          "Dressrosa Saga Antagonists",
+          "Elite Officers",
+          "Humans",
+          "Male Characters",
+          "Marine Prisoners",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Spider Miles Residents",
+          "Staff Officers"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vergo",
+      "name": "Vergo",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vergo",
+      "aliases": [
+        "Demon Bamboo",
+        "Corazon",
+        "Bamboo"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/c/cf/Vergo_Anime_Infobox.png/revision/latest?cb=20230101232239"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/c/cf/Vergo_Anime_Infobox.png/revision/latest?cb=20230101232239",
+          "source": "onepiece_fandom",
+          "sha256": "15c0762c644acc34726a8ad592c79efb330b37a5ee5fb621d92aef587b5a34c5",
+          "format": "webp",
+          "width": 1185,
+          "height": 2695,
+          "bytes": 243686,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 671,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vergo",
+        "faction": "Navy",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 161463,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vergo",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Deceased Characters",
+          "Dressrosa Saga Antagonists",
+          "Elite Officers",
+          "Explosive Users",
+          "G-5 Marines",
+          "Humans",
+          "Male Characters",
+          "Marine Base Commanders",
+          "Marine Vice Admirals",
+          "Observation Haki Users",
+          "Six Powers Users",
+          "Spider Miles Residents",
+          "Staff Users",
+          "Undercover Operators"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_senor_pink",
+      "name": "Senor Pink",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Senor_Pink",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/48/Senor_Pink_Anime_Infobox.png/revision/latest?cb=20241014120619"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/48/Senor_Pink_Anime_Infobox.png/revision/latest?cb=20241014120619",
+          "source": "onepiece_fandom",
+          "sha256": "57f6e13aa9e218e159e4bf8818b07cbe4a8785870c68bea83fcfbd27af03fe03",
+          "format": "webp",
+          "width": 916,
+          "height": 1066,
+          "bytes": 136998,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 702,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Senor Pink",
+        "faction": "Donquixote Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 197521,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Senor_Pink",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Assassins",
+          "Characters Aged 40–49",
+          "Diamante Army",
+          "Donquixote Pirates Officers",
+          "Explosive Users",
+          "Humans",
+          "Impel Down Prisoners",
+          "Male Characters",
+          "Paramecia Devil Fruit Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_satori",
+      "name": "Satori",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Satori",
+      "aliases": [
+        "Satori of the Forest"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/1/11/Satori_Anime_Infobox.png/revision/latest?cb=20180908093921"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/1/11/Satori_Anime_Infobox.png/revision/latest?cb=20180908093921",
+          "source": "onepiece_fandom",
+          "sha256": "b88d11f7f02e4f9f5ec7fcdad13a7a743b4a69f73e86262cb17db6ed2635594c",
+          "format": "webp",
+          "width": 992,
+          "height": 936,
+          "bytes": 114392,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 241,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "unknown",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Satori",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 3113,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Satori",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Birkans",
+          "Characters Aged 20–29",
+          "Dial Weapon Users",
+          "God's Army",
+          "Male Characters",
+          "Observation Haki Users",
+          "Officers"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_ohm",
+      "name": "Ohm",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Ohm",
+      "aliases": [
+        "Skybreeder"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/4b/Ohm_Anime_Infobox.png/revision/latest?cb=20221110020611"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/4b/Ohm_Anime_Infobox.png/revision/latest?cb=20221110020611",
+          "source": "onepiece_fandom",
+          "sha256": "257ef529ad2ffd5370f8f540e9aa83c340fc00d179a16b84e3bd9cab2cd90d48",
+          "format": "webp",
+          "width": 705,
+          "height": 1212,
+          "bytes": 140020,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 241,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Giant",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Ohm",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 3111,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Ohm",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Birkans",
+          "Characters Aged 20–29",
+          "Dial Weapon Users",
+          "Featured Articles",
+          "Fighters Who Use Animals",
+          "God's Army",
+          "Male Characters",
+          "Observation Haki Users",
+          "Officers",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_shura",
+      "name": "Shura",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Shura",
+      "aliases": [
+        "Sky Rider"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/47/Shura_Anime_Infobox.png/revision/latest?cb=20221124151120"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/47/Shura_Anime_Infobox.png/revision/latest?cb=20221124151120",
+          "source": "onepiece_fandom",
+          "sha256": "71a59eaa996715b5398f15dc5fb017f475a903111d2c4e1e575426ae66a49008",
+          "format": "webp",
+          "width": 664,
+          "height": 1076,
+          "bytes": 112628,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 241,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Giant",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Shura",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 3112,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Shura",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Birkans",
+          "Characters Aged 30–39",
+          "Dial Weapon Users",
+          "Featured Articles",
+          "Fighters Who Use Animals",
+          "God's Army",
+          "Lance Users",
+          "Male Characters",
+          "Observation Haki Users",
+          "Officers"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_gedatsu",
+      "name": "Gedatsu",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Gedatsu",
+      "aliases": [
+        "Sky Boss",
+        "Chopper",
+        "Divine Soldier"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/43/Gedatsu_Anime_Infobox.png/revision/latest?cb=20230806232042"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/43/Gedatsu_Anime_Infobox.png/revision/latest?cb=20230806232042",
+          "source": "onepiece_fandom",
+          "sha256": "2d4a9e4ef9f30ad7092d1c07b59c2227d4b34fc0925cdb3421352ab7fa8ca849",
+          "format": "webp",
+          "width": 620,
+          "height": 1109,
+          "bytes": 113166,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 241,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "unknown",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Gedatsu",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2679,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Gedatsu",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Birkans",
+          "Business Managers",
+          "Characters Aged 30–39",
+          "Dial Weapon Users",
+          "Featured Articles",
+          "God's Army",
+          "Male Characters",
+          "Observation Haki Users",
+          "Officers",
+          "Ukkari Hot-Spring Island Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_wyper",
+      "name": "Wyper",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Wyper",
+      "aliases": [
+        "Berserker"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/b9/Wyper_Manga_Post_Timeskip_Infobox.png/revision/latest?cb=20231126004333"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/b9/Wyper_Manga_Post_Timeskip_Infobox.png/revision/latest?cb=20231126004333",
+          "source": "onepiece_fandom",
+          "sha256": "cda28207db10f735e654918999cb8f72ee8efce33d028031c23fc357f2b7c180",
+          "format": "webp",
+          "width": 541,
+          "height": 1029,
+          "bytes": 125368,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 237,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Wyper",
+        "faction": "Shandian Warriors",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 3104,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Wyper",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Bazooka Users",
+          "Characters Aged 20–29",
+          "Dial Weapon Users",
+          "Flamethrower Users",
+          "God's Guards",
+          "Male Characters",
+          "Shandia",
+          "Shield Users",
+          "Sky Island Saga Antagonists",
+          "Snipers"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_aisa",
+      "name": "Aisa",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Aisa",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/4e/Aisa_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20251207162352"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/4e/Aisa_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20251207162352",
+          "source": "onepiece_fandom",
+          "sha256": "49c729ab2a10216ed477505381dc49895da5a3ef9c37ebf085045d3a3ace1e31",
+          "format": "webp",
+          "width": 742,
+          "height": 1068,
+          "bytes": 107940,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 249,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Aisa",
+        "faction": "Skypiea",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 3108,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Aisa",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 10–19",
+          "Children",
+          "Featured Articles",
+          "Female Characters",
+          "Observation Haki Users",
+          "Shandia",
+          "Skypiea Characters"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_kurozumi_kanjuro",
+      "name": "Kanjuro",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Kurozumi_Kanjuro",
+      "aliases": [
+        "Evening Shower",
+        "Kurozumi Kanjuro"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/ad/Kurozumi_Kanjuro_Anime_Infobox.png/revision/latest?cb=20150503144042"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/ad/Kurozumi_Kanjuro_Anime_Infobox.png/revision/latest?cb=20150503144042",
+          "source": "onepiece_fandom",
+          "sha256": "b796d4b6d0859d0974cfac8be7a2b4724d2043d6047b569a5bc0c346bf1119ca",
+          "format": "webp",
+          "width": 1179,
+          "height": 1060,
+          "bytes": 107660,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 700,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Kurozumi Kanjuro",
+        "faction": "Nine Red Scabbards",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 194037,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Kurozumi_Kanjuro",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Actors",
+          "Armament Haki Users",
+          "Characters Aged 30–39",
+          "Craftsmen",
+          "Deceased Characters",
+          "Explosive Users",
+          "Flashback Introduction Characters",
+          "Former Kouzuki Family Subordinates",
+          "Former Prisoners",
+          "Humans",
+          "Kurozumi Family",
+          "Male Characters",
+          "Nine Red Scabbards",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Undercover Operators",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_ashura_doji",
+      "name": "Ashura Doji",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Ashura_Doji",
+      "aliases": [
+        "Shutenmaru",
+        "Ashura"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/44/Ashura_Doji_Anime_Infobox.png/revision/latest?cb=20191201102956"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/44/Ashura_Doji_Anime_Infobox.png/revision/latest?cb=20191201102956",
+          "source": "onepiece_fandom",
+          "sha256": "5b63aa9d7485c69174637fa37896ccc58a2030c1e7b234fdb91001daf008e978",
+          "format": "webp",
+          "width": 1126,
+          "height": 946,
+          "bytes": 154664,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 916,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Ashura Doji",
+        "faction": "Kozuki Clan",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 310655,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Ashura_Doji",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Bandits",
+          "Characters Aged 50–59",
+          "Deceased Characters",
+          "Flashback Introduction Characters",
+          "Humans",
+          "Male Characters",
+          "Nine Red Scabbards",
+          "Observation Haki Users",
+          "Swordsmen",
+          "Yakuza"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_kawamatsu",
+      "name": "Kawamatsu",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Kawamatsu",
+      "aliases": [
+        "Kawamatsu the Kappa"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/5/5e/Kawamatsu_Anime_Infobox.png/revision/latest?cb=20201215013006"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/5/5e/Kawamatsu_Anime_Infobox.png/revision/latest?cb=20201215013006",
+          "source": "onepiece_fandom",
+          "sha256": "624471b575d76ada0a7750776a8358d0140de9481c4d121f2cd846499ffcdeaf",
+          "format": "webp",
+          "width": 1730,
+          "height": 1440,
+          "bytes": 241174,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 920,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Kawamatsu",
+        "faction": "Nine Red Scabbards",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 310990,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Kawamatsu",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Daimyo",
+          "Fish-Man Island Characters",
+          "Fish-Men",
+          "Flashback Introduction Characters",
+          "Flower Capital Residents",
+          "Former Thieves",
+          "Hakumai Residents",
+          "Male Characters",
+          "Martial Artists",
+          "Nine Red Scabbards",
+          "Observation Haki Users",
+          "Prisoner Mine Prisoners",
+          "Ringo Residents",
+          "Swordsmen",
+          "Udon Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_kouzuki_hiyori",
+      "name": "Hiyori Kozuki",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Kouzuki_Hiyori",
+      "aliases": [
+        "Kouzuki Hiyori",
+        "Komurasaki",
+        "Hiyori"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/9/97/Kouzuki_Hiyori_Anime_Infobox.png/revision/latest?cb=20200811195812"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/9/97/Kouzuki_Hiyori_Anime_Infobox.png/revision/latest?cb=20200811195812",
+          "source": "onepiece_fandom",
+          "sha256": "de271c00d3016c48e9675b42afb3a1482bc7cb362ba7eb6825bd568a99bd4616",
+          "format": "webp",
+          "width": 1632,
+          "height": 2084,
+          "bytes": 332902,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 909,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Kouzuki Hiyori",
+        "faction": "Kozuki Clan",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 312347,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Kouzuki_Hiyori",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Female Characters",
+          "Humans",
+          "Kouzuki Family",
+          "Kuri Castle Residents",
+          "Musicians",
+          "Ninja-Pirate-Mink-Samurai Alliance",
+          "Shogun Castle Residents",
+          "Undercover Operators"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_kouzuki_sukiyaki",
+      "name": "Kouzuki Sukiyaki",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Kouzuki_Sukiyaki",
+      "aliases": [
+        "Tenguyama Hitetsu",
+        "Sukiyaki"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/0/06/Kouzuki_Sukiyaki_Anime_Infobox.png/revision/latest?cb=20231110021918"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/0/06/Kouzuki_Sukiyaki_Anime_Infobox.png/revision/latest?cb=20231110021918",
+          "source": "onepiece_fandom",
+          "sha256": "7cad4528382d691a6086605fd706851a8211d5e02308b56f5b7ab895219164dc",
+          "format": "webp",
+          "width": 682,
+          "height": 676,
+          "bytes": 67514,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 911,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Kouzuki Sukiyaki",
+        "faction": "Kozuki Clan",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 308953,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Kouzuki_Sukiyaki",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Amigasa Village Residents",
+          "Characters Aged 80–89",
+          "Former Rulers",
+          "Former Wano Country Prisoners",
+          "Humans",
+          "Kouzuki Family",
+          "Male Characters",
+          "Ninja-Pirate-Mink-Samurai Alliance",
+          "Shogun Castle Residents",
+          "Smiths",
+          "Swordsmen",
+          "Wano Government Officials"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_jack",
+      "name": "Jack",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Jack",
+      "aliases": [
+        "Jack the Drought"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/3/3f/Jack_Anime_Infobox.png/revision/latest?cb=20161009223938"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/3/3f/Jack_Anime_Infobox.png/revision/latest?cb=20161009223938",
+          "source": "onepiece_fandom",
+          "sha256": "7ee9cc43a0fdf0f739d8cab0355f6a92e9cd1be21f6fc16600cf7534f9e8d513",
+          "format": "webp",
+          "width": 1280,
+          "height": 1622,
+          "bytes": 211284,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 692,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Jack",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 276036,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Jack",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "Beasts Pirates Officers",
+          "Characters Aged 20–29",
+          "Chemical Weapon Users",
+          "Dressrosa Saga Antagonists",
+          "Fish-Men",
+          "Flashback Antagonists",
+          "Former Rulers",
+          "Male Characters",
+          "Observation Haki Users",
+          "Onigashima Residents",
+          "Swordsmen",
+          "Wano Country Saga Antagonists",
+          "Wano Government Officials",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_whos_who",
+      "name": "Who's-Who",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Who's-Who",
+      "aliases": [
+        "Who of the Droplets"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/9/94/Who%27s-Who_Anime_Infobox.png/revision/latest?cb=20211201215156"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/9/94/Who%27s-Who_Anime_Infobox.png/revision/latest?cb=20211201215156",
+          "source": "onepiece_fandom",
+          "sha256": "0fad8ecee6a870088f536ad20ea9d323fe4e16a88508b754d623ee0b99a76439",
+          "format": "webp",
+          "width": 714,
+          "height": 1060,
+          "bytes": 100170,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 977,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Who's-Who",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 321781,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Who's-Who",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "CP9",
+          "Characters Aged 30–39",
+          "Cover Story Antagonists",
+          "Dagger Users",
+          "Former Cipher Pol Agents",
+          "Former Marine Prisoners",
+          "Former Pirate Captains",
+          "Humans",
+          "Male Characters",
+          "North Blue Residents",
+          "Observation Haki Users",
+          "Onigashima Residents",
+          "Six Powers Users",
+          "Tobiroppo",
+          "Udon Residents",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_black_maria",
+      "name": "Black Maria",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Black_Maria",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/e2/Black_Maria_Anime_Infobox.png/revision/latest?cb=20210808144206"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/e2/Black_Maria_Anime_Infobox.png/revision/latest?cb=20210808144206",
+          "source": "onepiece_fandom",
+          "sha256": "f64be6817486eec83d8f3cb3ce74cc0f6e248ed86290f1992b66f8eca8b181e7",
+          "format": "webp",
+          "width": 963,
+          "height": 1080,
+          "bytes": 135564,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 977,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Black Maria",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 321780,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Black_Maria",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "Business Managers",
+          "Characters Aged 20–29",
+          "Female Characters",
+          "Fist Weapon Users",
+          "Humans",
+          "Musicians",
+          "Observation Haki Users",
+          "Onigashima Residents",
+          "Polearm Wielders",
+          "Tobiroppo",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_sasaki",
+      "name": "Sasaki",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Sasaki",
+      "aliases": [
+        "Overflowing"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/d7/Sasaki_Anime_Infobox.png/revision/latest?cb=20211205140441"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/d7/Sasaki_Anime_Infobox.png/revision/latest?cb=20211205140441",
+          "source": "onepiece_fandom",
+          "sha256": "4c3dece689a3a0af1d0c77365c7c05f03592032091d96d75d741f8a45349fe0e",
+          "format": "webp",
+          "width": 565,
+          "height": 740,
+          "bytes": 59372,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 977,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Sasaki",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 321782,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Sasaki",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "Characters Aged 30–39",
+          "Fighters Who Use Technology",
+          "Fish-Men",
+          "Former Pirate Captains",
+          "Male Characters",
+          "Observation Haki Users",
+          "Swordsmen",
+          "Tobiroppo",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_page_one",
+      "name": "Page One",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Page_One",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/46/Page_One_Anime_Infobox.png/revision/latest?cb=20211128115519"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/46/Page_One_Anime_Infobox.png/revision/latest?cb=20211128115519",
+          "source": "onepiece_fandom",
+          "sha256": "1b6b4fe6983a72c44c23cefb283a439b4f159e1c4c5fa4fbca22a0634451fb5c",
+          "format": "webp",
+          "width": 595,
+          "height": 783,
+          "bytes": 57512,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 929,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Page One",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 312775,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Page_One",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "Characters Aged 20–29",
+          "Former Pirates",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Tobiroppo",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_ulti",
+      "name": "Ulti",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Ulti",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/dc/Ulti_Anime_Infobox.png/revision/latest?cb=20240831170217"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/dc/Ulti_Anime_Infobox.png/revision/latest?cb=20240831170217",
+          "source": "onepiece_fandom",
+          "sha256": "c7b1b806a3c0ac3c1583e8a3823331df88c8d0429cac5cc0e4dd12cb4149cd71",
+          "format": "webp",
+          "width": 432,
+          "height": 896,
+          "bytes": 64676,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 977,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Ulti",
+        "faction": "Beasts Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 321783,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Ulti",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Ancient Zoan Devil Fruit Users",
+          "Armament Haki Users",
+          "Characters Aged 20–29",
+          "Club Users",
+          "Female Characters",
+          "Former Pirates",
+          "Humans",
+          "Observation Haki Users",
+          "Tobiroppo",
+          "Wano Country Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_oven",
+      "name": "Charlotte Oven",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Oven",
+      "aliases": [
+        "Minister of Browned Food"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/f/f0/Charlotte_Oven_Anime_Infobox.png/revision/latest?cb=20181028111159"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/f/f0/Charlotte_Oven_Anime_Infobox.png/revision/latest?cb=20181028111159",
+          "source": "onepiece_fandom",
+          "sha256": "140474ef0442aefd89f6cdd0e8152498cbf56dca057719de972a4f5bf3d684aa",
+          "format": "webp",
+          "width": 402,
+          "height": 769,
+          "bytes": 64858,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 861,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Oven",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 295987,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Oven",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Big Mom Pirates Officers",
+          "Characters Aged 40–49",
+          "Cover Story Antagonists",
+          "Hachinosu Residents",
+          "Halberd Users",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Totto Land Ministers",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_daifuku",
+      "name": "Charlotte Daifuku",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Daifuku",
+      "aliases": [
+        "Minister of Beans"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/c/cd/Charlotte_Daifuku_Anime_Infobox.png/revision/latest?cb=20230215154338"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/c/cd/Charlotte_Daifuku_Anime_Infobox.png/revision/latest?cb=20230215154338",
+          "source": "onepiece_fandom",
+          "sha256": "f6f7312b50802fb63307fb25ce09d04dd009df681ae018e20b191a71497b79f3",
+          "format": "webp",
+          "width": 848,
+          "height": 1065,
+          "bytes": 116790,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 861,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Daifuku",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 295984,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Daifuku",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Big Mom Pirates Officers",
+          "Characters Aged 40–49",
+          "Hachinosu Residents",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Paramecia Devil Fruit Users",
+          "Totto Land Ministers",
+          "Wano Country Saga Antagonists",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_br_l_e",
+      "name": "Charlotte Brûlée",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Brûlée",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/d9/Charlotte_Br%C3%BBl%C3%A9e_Anime_Infobox.png/revision/latest?cb=20170611174235"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/d9/Charlotte_Br%C3%BBl%C3%A9e_Anime_Infobox.png/revision/latest?cb=20170611174235",
+          "source": "onepiece_fandom",
+          "sha256": "2dbe4eb5b6988284fe9f9c632bf3417ba793f2df292e776d7c2105bc6a7b0a31",
+          "format": "webp",
+          "width": 1280,
+          "height": 2452,
+          "bytes": 410778,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 831,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Brûlée",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 287669,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Brûlée",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Big Mom Pirates Officers",
+          "Characters Aged 40–49",
+          "Cover Story Antagonists",
+          "Female Characters",
+          "Humans",
+          "Paramecia Devil Fruit Users",
+          "Scythe Users",
+          "Whole Cake Island Residents",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_pudding",
+      "name": "Charlotte Pudding",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Pudding",
+      "aliases": [
+        "Minister]] of Chocolate"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/6/60/Charlotte_Pudding_Anime_Infobox.png/revision/latest?cb=20250106015531"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/6/60/Charlotte_Pudding_Anime_Infobox.png/revision/latest?cb=20250106015531",
+          "source": "onepiece_fandom",
+          "sha256": "6a069c4e97e0b11c5ef3c54a5e8bc608b2d1b98a4f9402952c2ff03025137410",
+          "format": "webp",
+          "width": 522,
+          "height": 1001,
+          "bytes": 71316,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 651,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Pudding",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 281414,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Pudding",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Big Mom Pirates Officers",
+          "Cacao Island Residents",
+          "Characters Aged 10–19",
+          "Cooks",
+          "Cover Story Antagonists",
+          "Female Characters",
+          "Human Hybrids",
+          "Paramecia Devil Fruit Users",
+          "Pistol Users",
+          "Prisoners",
+          "Shopkeepers",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_amande",
+      "name": "Charlotte Amande",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Amande",
+      "aliases": [
+        "Demon Lady",
+        "Minister of Nuts"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/b9/Charlotte_Amande_Anime_Infobox.png/revision/latest?cb=20171016155845"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/b9/Charlotte_Amande_Anime_Infobox.png/revision/latest?cb=20171016155845",
+          "source": "onepiece_fandom",
+          "sha256": "9740ee4881435f02f88839c4e138157cb0811ae1382a00742df90b328621d770",
+          "format": "webp",
+          "width": 1485,
+          "height": 1604,
+          "bytes": 218102,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 827,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Amande",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 291755,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Amande",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Big Mom Pirates Officers",
+          "Characters Aged 40–49",
+          "Female Characters",
+          "Human Hybrids",
+          "Snakeneck Hybrids",
+          "Swordsmen",
+          "Totto Land Ministers",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_charlotte_galette",
+      "name": "Charlotte Galette",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Galette",
+      "aliases": [
+        "Minister of Butter"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/71/Charlotte_Galette_Anime_Infobox.png/revision/latest?cb=20180721222625"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/71/Charlotte_Galette_Anime_Infobox.png/revision/latest?cb=20180721222625",
+          "source": "onepiece_fandom",
+          "sha256": "66da5d27efa40f26e51b0350e38581587fa187990f108ba85e73d5a69fdc4389",
+          "format": "webp",
+          "width": 815,
+          "height": 1024,
+          "bytes": 72692,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 829,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Charlotte Galette",
+        "faction": "Big Mom Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 291326,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Charlotte_Galette",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Big Mom Pirates Officers",
+          "Characters Aged 30–39",
+          "Female Characters",
+          "Humans",
+          "Paramecia Devil Fruit Users",
+          "Totto Land Ministers",
+          "Wano Country Saga Antagonists",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vinsmoke_ichiji",
+      "name": "Ichiji",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Ichiji",
+      "aliases": [
+        "Sparking Red",
+        "Vinsmoke Ichiji",
+        "Sparkling Red"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/7c/Vinsmoke_Ichiji_Anime_Infobox.png/revision/latest?cb=20260923024233"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/7c/Vinsmoke_Ichiji_Anime_Infobox.png/revision/latest?cb=20260923024233",
+          "source": "onepiece_fandom",
+          "sha256": "d45a5c76f79b455503339fb3427b6eff232f32206f97fb5f4b14548c86bfab27",
+          "format": "webp",
+          "width": 1410,
+          "height": 2591,
+          "bytes": 388278,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 828,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vinsmoke Ichiji",
+        "faction": "Vinsmoke Family",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 289748,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Ichiji",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Germa 66",
+          "Laser Weapon Users",
+          "Male Characters",
+          "Modified Humans",
+          "Princes",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vinsmoke_niji",
+      "name": "Niji",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Niji",
+      "aliases": [
+        "Dengeki Blue",
+        "Vinsmoke Niji",
+        "Dashing Blue"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/d6/Vinsmoke_Niji_Anime_Infobox.png/revision/latest?cb=20180618054009"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/d6/Vinsmoke_Niji_Anime_Infobox.png/revision/latest?cb=20180618054009",
+          "source": "onepiece_fandom",
+          "sha256": "77596351e171e2df86b6081fb75d958c631a4ea9e9e8ac97f8546f96af55c768",
+          "format": "webp",
+          "width": 793,
+          "height": 1079,
+          "bytes": 140594,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 828,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vinsmoke Niji",
+        "faction": "Vinsmoke Family",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 289749,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Niji",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Fighters Who Use Technology",
+          "Germa 66",
+          "Male Characters",
+          "Modified Humans",
+          "Princes",
+          "Swordsmen",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vinsmoke_yonji",
+      "name": "Yonji",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Yonji",
+      "aliases": [
+        "Winch Green",
+        "Vinsmoke Yonji"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/e7/Vinsmoke_Yonji_Anime_Infobox.png/revision/latest?cb=20170416175856"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/e7/Vinsmoke_Yonji_Anime_Infobox.png/revision/latest?cb=20170416175856",
+          "source": "onepiece_fandom",
+          "sha256": "8ec27c5ec941243f7aa4640682f3e65e9e9573386e6bcf1b2efe85aef74ad920",
+          "format": "webp",
+          "width": 1113,
+          "height": 2096,
+          "bytes": 243258,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 825,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vinsmoke Yonji",
+        "faction": "Vinsmoke Family",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 285759,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Yonji",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Fighters Who Use Technology",
+          "Germa 66",
+          "Male Characters",
+          "Modified Humans",
+          "Princes",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vinsmoke_reiju",
+      "name": "Reiju",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Reiju",
+      "aliases": [
+        "Poison Pink",
+        "Vinsmoke Reiju"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/a3/Vinsmoke_Reiju_Anime_Infobox.png/revision/latest?cb=20231211104854"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/a3/Vinsmoke_Reiju_Anime_Infobox.png/revision/latest?cb=20231211104854",
+          "source": "onepiece_fandom",
+          "sha256": "9d65a3a314639a3c0f0aac60078f5b8b93c3eddaecfa85af8be47e77882bbbf0",
+          "format": "webp",
+          "width": 1054,
+          "height": 2514,
+          "bytes": 313914,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 826,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vinsmoke Reiju",
+        "faction": "Vinsmoke Family",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 285757,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Reiju",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Chemical Weapon Users",
+          "Female Characters",
+          "Fighters Who Use Technology",
+          "Germa 66",
+          "Modified Humans",
+          "Princesses"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vinsmoke_judge",
+      "name": "Judge",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Judge",
+      "aliases": [
+        "Vinsmoke Judge",
+        "Garuda"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/6/6f/Vinsmoke_Judge_Anime_Infobox.png/revision/latest?cb=20170626124958"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/6/6f/Vinsmoke_Judge_Anime_Infobox.png/revision/latest?cb=20170626124958",
+          "source": "onepiece_fandom",
+          "sha256": "a6a820897e0c957679b5aa359d46990cafd0b9012f863c81899631dfd2cddbfd",
+          "format": "webp",
+          "width": 1920,
+          "height": 3074,
+          "bytes": 486964,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 815,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vinsmoke Judge",
+        "faction": "Vinsmoke Family",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 287673,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vinsmoke_Judge",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Admirals",
+          "Characters Aged 50–59",
+          "Fighters Who Use Technology",
+          "Germa 66",
+          "Humans",
+          "Kings",
+          "MADS",
+          "Male Characters",
+          "NEO MADS",
+          "Spear Users",
+          "Whole Cake Island Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_momonga",
+      "name": "Momonga",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Momonga",
+      "aliases": [
+        "Vice Admiral Momonga",
+        "Boa Hancock"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/e8/Momonga_Anime_Infobox.png/revision/latest?cb=20221101021448"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/e8/Momonga_Anime_Infobox.png/revision/latest?cb=20221101021448",
+          "source": "onepiece_fandom",
+          "sha256": "dcadbffd1b2620f8bc872a81420b6f5e71064ec29098485da16edfc42f27ef9e",
+          "format": "webp",
+          "width": 1920,
+          "height": 2259,
+          "bytes": 279878,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 420,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Momonga",
+        "faction": "Marines",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 5980,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Momonga",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Humans",
+          "Male Characters",
+          "Marine Base Commanders",
+          "Marine Vice Admirals",
+          "New World Residents",
+          "Observation Haki Users",
+          "Paradise Residents",
+          "Six Powers Users",
+          "Summit War Saga Antagonists",
+          "Swordsmen",
+          "Water 7 Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_doberman",
+      "name": "Doberman",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Doberman",
+      "aliases": [
+        "Vice Admiral Doberman"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/e2/Doberman_Anime_Infobox.png/revision/latest?cb=20221101021412"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/e2/Doberman_Anime_Infobox.png/revision/latest?cb=20221101021412",
+          "source": "onepiece_fandom",
+          "sha256": "b4eddb49b0c150de30a3e787d9433f2e267c114a11bfb6ecc75b5fa0a5a72a82",
+          "format": "webp",
+          "width": 1920,
+          "height": 2490,
+          "bytes": 328366,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 420,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Doberman",
+        "faction": "Marines",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 5603,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Doberman",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Featured Articles",
+          "Final Saga Antagonists",
+          "Humans",
+          "Male Characters",
+          "Marine Vice Admirals",
+          "Marineford Residents",
+          "New Marineford Residents",
+          "Summit War Saga Antagonists",
+          "Swordsmen",
+          "Water 7 Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_t_bone",
+      "name": "T-Bone",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/T_Bone",
+      "aliases": [
+        "Ship Cutter"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/0/08/T_Bone_Anime_Infobox.png/revision/latest?cb=20230427165456"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/0/08/T_Bone_Anime_Infobox.png/revision/latest?cb=20230427165456",
+          "source": "onepiece_fandom",
+          "sha256": "e84b2e8c9ca499d556e3cb5be6b828b1f1e39fce34fe0dd6ead23d6f1ba9497c",
+          "format": "webp",
+          "width": 1920,
+          "height": 3053,
+          "bytes": 608646,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 362,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "T Bone",
+        "faction": "Marines",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1682,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/T_Bone",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 50–59",
+          "Deceased Characters",
+          "Featured Articles",
+          "Former Royal Guards",
+          "Humans",
+          "Male Characters",
+          "Marine Vice Admirals",
+          "Summit War Saga Antagonists",
+          "Swordsmen",
+          "Water 7 Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_stussy",
+      "name": "Stussy",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Stussy",
+      "aliases": [
+        "Queen of the Pleasure District"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/e/ee/Stussy_Anime_Infobox.png/revision/latest?cb=20240512081047"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/e/ee/Stussy_Anime_Infobox.png/revision/latest?cb=20240512081047",
+          "source": "onepiece_fandom",
+          "sha256": "016c32a3a27b6fe1e0af2b443d252a9225c7d4f430aaa7b09b09acfdf6dfb90d",
+          "format": "webp",
+          "width": 908,
+          "height": 1080,
+          "bytes": 98244,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 860,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Clone, Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Stussy",
+        "faction": "CP0",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 295771,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Stussy",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "CP0",
+          "Characters Aged 30–39",
+          "Clones",
+          "Female Characters",
+          "Final Saga Antagonists",
+          "Former Assassins",
+          "Former Cipher Pol Agents",
+          "Humans",
+          "Observation Haki Users",
+          "Six Powers Users",
+          "Undercover Operators",
+          "Underworld Emperors",
+          "Wano Country Saga Antagonists",
+          "Whole Cake Island Saga Antagonists",
+          "Zoan Devil Fruit Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_hannyabal",
+      "name": "Hannyabal",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Hannyabal",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/8/86/Hannyabal_Manga_Post_Timeskip_Infobox.png/revision/latest?cb=20230920224617"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/8/86/Hannyabal_Manga_Post_Timeskip_Infobox.png/revision/latest?cb=20230920224617",
+          "source": "onepiece_fandom",
+          "sha256": "65ec71a6cfeba1e935a7bd762aa11a197f2cd487859aea8d1efbc1469e8643c3",
+          "format": "webp",
+          "width": 824,
+          "height": 1313,
+          "bytes": 182926,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 525,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Hannyabal",
+        "faction": "Impel Down",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 11016,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Hannyabal",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 30–39",
+          "Featured Articles",
+          "Halberd Users",
+          "Humans",
+          "Impel Down Staff",
+          "Male Characters",
+          "South Blue Residents",
+          "Summit War Saga Antagonists"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_sadi",
+      "name": "Sadi",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Sadi",
+      "aliases": [
+        "{{Nihongo|Little Sadi|サディちゃん|Sadi-chan}}",
+        "{{Nihongo|Little Sadi||Sadi-chan}}"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/3/38/Sadi_Anime_Infobox.png/revision/latest?cb=20221023232535"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/3/38/Sadi_Anime_Infobox.png/revision/latest?cb=20221023232535",
+          "source": "onepiece_fandom",
+          "sha256": "85b61dc6748cc5c4deedf357ceb207cd8fabfc6cdeeaeb5130eff440231ba65d",
+          "format": "webp",
+          "width": 682,
+          "height": 1080,
+          "bytes": 161284,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 531,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Sadi",
+        "faction": "Impel Down",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 11797,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Sadi",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 20–29",
+          "Female Characters",
+          "Grand Line Residents",
+          "Humans",
+          "Impel Down Staff",
+          "Summit War Saga Antagonists",
+          "Trident Users",
+          "Whip Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_absalom",
+      "name": "Absalom",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Absalom",
+      "aliases": [
+        "Absalom of the Graveyard",
+        "Absa"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/5/56/Absalom_Anime_Infobox.png/revision/latest?cb=20230101154942"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/5/56/Absalom_Anime_Infobox.png/revision/latest?cb=20230101154942",
+          "source": "onepiece_fandom",
+          "sha256": "a950bdf076eed539232c26e09f12de0076276729ce95665c419ffa7f5180ea07",
+          "format": "webp",
+          "width": 921,
+          "height": 1080,
+          "bytes": 191300,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 444,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Absalom",
+        "faction": "Thriller Bark Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 5325,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Absalom",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Bazooka Users",
+          "Characters Aged 30–39",
+          "Deceased Characters",
+          "Humans",
+          "Male Characters",
+          "Paramecia Devil Fruit Users",
+          "Pirate Officers",
+          "Reporters",
+          "Thriller Bark Pirates",
+          "West Blue Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_hogback",
+      "name": "Hogback",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Hogback",
+      "aliases": [
+        "Genius Surgeon",
+        "Doctor Hogback"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/4a/Hogback_Anime_Infobox.png/revision/latest?cb=20240720150902"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Hogback_Anime_Infobox.png/revision/latest?cb=20240720150902",
+          "source": "onepiece_fandom",
+          "sha256": "ae77fe5faac6f2aba22430f4949c0a7f8d05026e060777942fd4e809f712b9de",
+          "format": "webp",
+          "width": 969,
+          "height": 930,
+          "bytes": 119286,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 445,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Hogback",
+        "faction": "Thriller Bark Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 5163,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Hogback",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 40–49",
+          "Doctors",
+          "Featured Articles",
+          "Humans",
+          "Male Characters",
+          "Pirate Officers",
+          "Thriller Bark Pirates",
+          "West Blue Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_shiki",
+      "name": "Shiki",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Shiki",
+      "aliases": [
+        "Flying Pirate",
+        "Shiki the Golden Lion",
+        "Golden Lion Shiki"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/3/32/Shiki_Anime_Infobox.png/revision/latest?cb=20230826192523"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/3/32/Shiki_Anime_Infobox.png/revision/latest?cb=20230826192523",
+          "source": "onepiece_fandom",
+          "sha256": "9b50d8e4b01a48c897a331a7a7a2f100053658b08ce145dc0fbcac1c2e812408",
+          "format": "webp",
+          "width": 1916,
+          "height": 1076,
+          "bytes": 309618,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 0,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Shiki",
+        "faction": "Golden Lion Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 11745,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Shiki",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 70–79",
+          "Featured Articles",
+          "Flashback Introduction Characters",
+          "Former Impel Down Level 6 Prisoners",
+          "Former Rulers",
+          "Gangsters",
+          "Golden Lion Pirates",
+          "Helmsmen",
+          "Humans",
+          "Male Characters",
+          "Movie 10 Antagonists",
+          "Paramecia Devil Fruit Users",
+          "Pirate Admirals",
+          "Rocks Pirates",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_rocks_d_xebec",
+      "name": "Rocks D. Xebec",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Rocks_D._Xebec",
+      "aliases": [
+        "Davy D. Xebec"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/f/fb/Rocks_D._Xebec_Manga_Infobox.png/revision/latest?cb=20260228213945"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/f/fb/Rocks_D._Xebec_Manga_Infobox.png/revision/latest?cb=20260228213945",
+          "source": "onepiece_fandom",
+          "sha256": "d8d774b525cb479e4c5d7cedcdb9feca99ad88600e59851a07ac4f653e4daf53",
+          "format": "webp",
+          "width": 945,
+          "height": 875,
+          "bytes": 266068,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 907,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Rocks D. Xebec",
+        "faction": "Rocks Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 308027,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Rocks_D._Xebec",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Clan of D.",
+          "Davy Family",
+          "Deceased Characters",
+          "Demons",
+          "Flashback Introduction Characters",
+          "God Valley Residents",
+          "Humans",
+          "Male Characters",
+          "Pirate Captains",
+          "Rocks Pirates",
+          "Rulers",
+          "Supreme King Haki Users",
+          "Swordsmen"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_chinjao",
+      "name": "Don Chinjao",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Chinjao",
+      "aliases": [
+        "Chinjao the Drill",
+        "Chinjao"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/b0/Chinjao_Anime_Infobox.png/revision/latest?cb=20180508221950"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/b0/Chinjao_Anime_Infobox.png/revision/latest?cb=20180508221950",
+          "source": "onepiece_fandom",
+          "sha256": "7715fe58225e733d7438e6b10aadd29b7f3db1e57da30247baa8bec0e8bf7add",
+          "format": "webp",
+          "width": 893,
+          "height": 720,
+          "bytes": 63352,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 704,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Chinjao",
+        "faction": "Happo Navy",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 199905,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Chinjao",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "C Block Participants",
+          "Characters Aged 70–79",
+          "Chinjao Family",
+          "Donquixote Pirates Slaves",
+          "Dressrosa Saga Antagonists",
+          "Former Pirate Captains",
+          "Former Pirates",
+          "Happo Navy",
+          "Humans",
+          "Male Characters",
+          "Martial Artists",
+          "Observation Haki Users",
+          "Pirate Admirals",
+          "Supreme King Haki Users",
+          "Toys"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_vegapunk",
+      "name": "Vegapunk",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vegapunk",
+      "aliases": [
+        "Stella",
+        "Dr. Vegapunk"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/b/b9/Vegapunk_Anime_Infobox.png/revision/latest?cb=20240428020834"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/b/b9/Vegapunk_Anime_Infobox.png/revision/latest?cb=20240428020834",
+          "source": "onepiece_fandom",
+          "sha256": "23c06e10b36b67f720bf90be61533d31b7f482659516280c10c9c6e72ec6a673",
+          "format": "webp",
+          "width": 451,
+          "height": 1019,
+          "bytes": 112850,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 433,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Cyborg, Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Vegapunk",
+        "faction": "World Government Science",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 7898,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Vegapunk",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 60–69",
+          "Cyborgs",
+          "Deceased Characters",
+          "Flashback Introduction Characters",
+          "Former Marines",
+          "Former World Government Workers",
+          "Humans",
+          "Karakuri Island Residents",
+          "MADS",
+          "Male Characters",
+          "Paramecia Devil Fruit Users",
+          "Punk Hazard Staff",
+          "SSG"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_hack",
+      "name": "Hack",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Hack",
+      "aliases": [
+        "Hundredth Dan"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/43/Hack_Anime_Infobox.png/revision/latest?cb=20230214000914"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/43/Hack_Anime_Infobox.png/revision/latest?cb=20230214000914",
+          "source": "onepiece_fandom",
+          "sha256": "7080bac65041d1d8a2bf32cdfd84adabdb4d3293ef7d9fa759265b88f86b942d",
+          "format": "webp",
+          "width": 894,
+          "height": 1080,
+          "bytes": 140412,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 706,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Fish-man",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Hack",
+        "faction": "Revolutionary Army",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 203535,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Hack",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "B Block Participants",
+          "Baltigo Residents",
+          "Characters Aged 30–39",
+          "Donquixote Pirates Slaves",
+          "Fish-Man Island Characters",
+          "Fish-Man Karate Users",
+          "Fish-Men",
+          "Male Characters",
+          "Momoiro Island Residents",
+          "Revolutionaries",
+          "Teachers",
+          "Toys"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_caribou",
+      "name": "Caribou",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Caribou",
+      "aliases": [
+        "Wet-Haired Caribou"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/7/76/Caribou_Anime_Infobox.png/revision/latest?cb=20221124030700"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/7/76/Caribou_Anime_Infobox.png/revision/latest?cb=20221124030700",
+          "source": "onepiece_fandom",
+          "sha256": "ae2fc3264cbdb3e0e990cdd00dc07fc6d9952c65d48663a2b2205f763d830b80",
+          "format": "webp",
+          "width": 1750,
+          "height": 2128,
+          "bytes": 354316,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 598,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Caribou",
+        "faction": "Caribou Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 47034,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Caribou",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Beasts Pirates Slaves",
+          "Caribou Pirates",
+          "Characters Aged 30–39",
+          "Fake Straw Hat Crew",
+          "Fish-Man Island Saga Antagonists",
+          "Gatling Gun Users",
+          "Humans",
+          "Kidnappers",
+          "Logia Devil Fruit Users",
+          "Male Characters",
+          "Ninja-Pirate-Mink-Samurai Alliance",
+          "North Blue Residents",
+          "Pirate Captains",
+          "Prisoner Mine Prisoners",
+          "Scythe Users",
+          "Super Rookies",
+          "Udon Residents"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_cavendish",
+      "name": "Cavendish",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Cavendish",
+      "aliases": [
+        "Cavendish of the White Horse",
+        "Pirate Prince",
+        "[[Hakuba"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/a/a1/Cavendish_Anime_Infobox.png/revision/latest?cb=20140224010824"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/a/a1/Cavendish_Anime_Infobox.png/revision/latest?cb=20140224010824",
+          "source": "onepiece_fandom",
+          "sha256": "e1624b85b93eb201164db85742254acb22ec5e7668b8741777e141c25e2dab1d",
+          "format": "webp",
+          "width": 1280,
+          "height": 2485,
+          "bytes": 263416,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 704,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Cavendish",
+        "faction": "Straw Hat Grand Fleet",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 199938,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Cavendish",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Armament Haki Users",
+          "Beautiful Pirates",
+          "Characters Aged 20–29",
+          "D Block Participants",
+          "Donquixote Pirates Slaves",
+          "Dressrosa Saga Antagonists",
+          "Featured Articles",
+          "Fighters Who Use Animals",
+          "Former Princes",
+          "Grand Line Residents",
+          "Humans",
+          "Male Characters",
+          "Observation Haki Users",
+          "Pirate Captains",
+          "Super Rookies",
+          "Swordsmen",
+          "Toys"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_orlumbus",
+      "name": "Orlumbus",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Orlumbus",
+      "aliases": [
+        "Massacre Ruler",
+        "Orlumbus the Gladiator"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/1/1b/Orlumbus_Anime_Infobox.png/revision/latest?cb=20141013213403"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/1/1b/Orlumbus_Anime_Infobox.png/revision/latest?cb=20141013213403",
+          "source": "onepiece_fandom",
+          "sha256": "aa07979a05930861525798291934b8b5414193a2c91f5227f96cb942f757291d",
+          "format": "webp",
+          "width": 1187,
+          "height": 2457,
+          "bytes": 274492,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 704,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Orlumbus",
+        "faction": "Straw Hat Grand Fleet",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 199933,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Orlumbus",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 40–49",
+          "D Block Participants",
+          "Donquixote Pirates Slaves",
+          "Humans",
+          "Male Characters",
+          "Pirate Admirals",
+          "Toys",
+          "Whip Users",
+          "Yonta Maria Grand Fleet"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_zala",
+      "name": "Ms. Doublefinger",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Zala",
+      "aliases": [
+        "Poison Spider",
+        "Miss Doublefinger",
+        "Paula"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/6/60/Zala_Anime_Infobox.png/revision/latest?cb=20221003164424"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/6/60/Zala_Anime_Infobox.png/revision/latest?cb=20221003164424",
+          "source": "onepiece_fandom",
+          "sha256": "b50f47522ba4fa9d53963a4e8c9aad3c72bd4b587972930494562c4997d22bd9",
+          "format": "webp",
+          "width": 682,
+          "height": 1380,
+          "bytes": 174316,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 155,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Zala",
+        "faction": "Baroque Works",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 1830,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Zala",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Arabasta Residents",
+          "Arabasta Saga Antagonists",
+          "Bartenders",
+          "Characters Aged 20–29",
+          "Female Characters",
+          "Former Assassins",
+          "Former Marine Prisoners",
+          "Humans",
+          "Officer Agents",
+          "Paramecia Devil Fruit Users",
+          "Spiders Cafe Staff"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_babe",
+      "name": "Mr. 4",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Babe",
+      "aliases": [
+        "Catcher-Killing"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/d/da/Babe_Anime_Infobox.png/revision/latest?cb=20230121225303"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/d/da/Babe_Anime_Infobox.png/revision/latest?cb=20230121225303",
+          "source": "onepiece_fandom",
+          "sha256": "96d51a00f7edd0ce0b6fd65f759b6cff7c69198b17ec94c29ff7a12c65f43524",
+          "format": "webp",
+          "width": 704,
+          "height": 1086,
+          "bytes": 162494,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 160,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Babe",
+        "faction": "Baroque Works",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 2682,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Babe",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Arabasta Saga Antagonists",
+          "Bazooka Users",
+          "Characters Aged 30–39",
+          "Club Users",
+          "Featured Articles",
+          "Fighters Who Use Animals",
+          "Former Marine Prisoners",
+          "Humans",
+          "Male Characters",
+          "Officer Agents",
+          "Spiders Cafe Staff"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    },
+    {
+      "candidate_id": "one_piece_catarina_devon",
+      "name": "Catarina Devon",
+      "universe": "One Piece",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Catarina_Devon",
+      "aliases": [
+        "Crescent Moon Hunter"
+      ],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/onepiece/images/4/4a/Catarina_Devon_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20200112041332"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/onepiece/images/4/4a/Catarina_Devon_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20200112041332",
+          "source": "onepiece_fandom",
+          "sha256": "37a84005547a0e843df967b75dacefa531da7aade86ec66bf5f0c9774a4eb729",
+          "format": "webp",
+          "width": 1920,
+          "height": 2141,
+          "bytes": 493234,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "first_cited_chapter_in_lead": 538,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "classification": [],
+      "species": "Human",
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "Manga-canon character with substantive demonstrated ability evidence in the inspected profile.",
+      "source_metadata": {
+        "canonical_name": "Catarina Devon",
+        "faction": "Blackbeard Pirates",
+        "era": "Manga canon through Chapter 1100",
+        "fandom_pageid": 12898,
+        "fandom_revision": null,
+        "ability_profile_url": "https://onepiece.fandom.com/wiki/Catarina_Devon",
+        "canonical_policy": "ONE-PIECE-CANON-0.1",
+        "manga_cutoff_chapter": 1100,
+        "source_categories": [
+          "Characters Aged 30–39",
+          "Featured Articles",
+          "Female Characters",
+          "Former Impel Down Level 6 Prisoners",
+          "Humans",
+          "Mythical Zoan Devil Fruit Users",
+          "South Blue Residents",
+          "Spear Users",
+          "Ten Titanic Captains",
+          "Wano Country Saga Antagonists",
+          "Whip Users"
+        ]
+      },
+      "review_status": "pending",
+      "notes": [
+        "Research-ready only; no evaluation or approval is recorded here.",
+        "Artwork requires visual identity and publication-permission review."
+      ]
+    }
+  ]
+}

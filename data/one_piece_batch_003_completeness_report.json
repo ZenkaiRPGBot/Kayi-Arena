@@ -1,0 +1,53 @@
+{
+  "batch_id": "one-piece-batch-003",
+  "stages": {
+    "catalogue": {
+      "expected_candidates": 32,
+      "actual_candidates": 32,
+      "unique_candidate_ids": 32,
+      "duplicate_ids": [],
+      "complete": true
+    },
+    "artwork": {
+      "catalogue_candidates": 32,
+      "candidates_with_valid_artwork": 32,
+      "missing_artwork_candidates": 0,
+      "complete": true
+    },
+    "research": {
+      "total_records": 32,
+      "status_counts": {
+        "INSUFFICIENT_EVIDENCE": 0,
+        "PARTIAL_RESEARCH": 0,
+        "RESEARCH_READY": 32
+      },
+      "research_ready": 32,
+      "not_ready": 0,
+      "unknown_status_ids": [],
+      "invalid_research_ready_records": [],
+      "missing_from_catalogue": [],
+      "classification_complete": true,
+      "complete": true
+    },
+    "evaluation": {
+      "status": "not_started",
+      "evaluations": 0,
+      "draft": 0,
+      "held": 0,
+      "complete": false
+    },
+    "publication": {
+      "status": "not_ready",
+      "explicit_approval": false,
+      "evaluation_complete": false,
+      "ready": false
+    }
+  },
+  "policy": {
+    "catalogue_and_artwork_do_not_imply_research_quality": true,
+    "metadata_only_fields_do_not_count_as_substantive_research": true,
+    "research_complete_requires_every_candidate_research_ready": true,
+    "power_and_fit_are_not_present_in_research": true,
+    "no_approval_or_rarity_is_allocated": true
+  }
+}

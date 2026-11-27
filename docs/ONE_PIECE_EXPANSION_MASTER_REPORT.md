@@ -10,16 +10,18 @@
 
 ## 2. Completed batches
 
-- Batch 001: research-ready package prepared; see `docs/ONE_PIECE_BATCH_001_RESEARCH_REPORT.md`.
+- one-piece-batch-001: 79 research-ready candidates; see `docs/ONE_PIECE_BATCH_001_RESEARCH_REPORT.md`.
+- one-piece-batch-002: 72 research-ready candidates; see `docs/ONE_PIECE_BATCH_002_RESEARCH_REPORT.md`.
+- one-piece-batch-003: 32 research-ready candidates; see `docs/ONE_PIECE_BATCH_003_RESEARCH_REPORT.md`.
 
 ## 3. Cumulative status
 
-- Candidates investigated: 80
-- Research-ready: 69
-- Partial research: 11
-- Insufficient evidence: 0
-- Valid artwork: 80
-- Evaluation-ready packages: 69
+- Candidates investigated: 226
+- Research-ready: 183
+- Partial research: 0
+- Insufficient evidence: 43
+- Valid artwork: 215
+- Evaluation-ready packages: 183
 - Approved: 0
 - Published: 0
 
@@ -51,7 +53,15 @@ calibration packages without altering previously approved records.
   and stealth specialists.
 - Revisit unresolved candidates when better inspected sources are available.
 
-## 8. Publication safeguard
+## 8. Practical stop point
+
+Batch 003 was intentionally kept below the 60-candidate target: 56 candidates
+were investigated and 32 were research-ready. The remaining pool was largely
+poorly documented under the strict gate, so lower-quality records were not
+added merely to reach a quota. Further expansion should wait for owner
+direction, better inspected sources or revised canonical policy.
+
+## 9. Publication safeguard
 
 One Piece is research-preparation only. It is not activated as a playable
 production universe until an evaluated dataset is approved and published.

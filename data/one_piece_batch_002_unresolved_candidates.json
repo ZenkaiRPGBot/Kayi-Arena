@@ -1,0 +1,347 @@
+{
+  "universe_id": "one_piece",
+  "batch_id": "one-piece-batch-002",
+  "generated_at": "2026-11-27T09:59:42.109759+00:00",
+  "excluded_from_evaluation_package": true,
+  "candidate_count": 18,
+  "exclusion_summary": {
+    "adaptation_only_material_excluded_at_section_level": true,
+    "duplicate_identities_excluded": [],
+    "manual_identity_mapping_candidates": [
+      {
+        "display_name": "Daz Bones",
+        "canonical_name": "Daz Bonez",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Don Krieg",
+        "canonical_name": "Krieg",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Brownbeard",
+        "canonical_name": "Chadros Higelyges",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Kanjuro",
+        "canonical_name": "Kurozumi Kanjuro",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Hiyori Kozuki",
+        "canonical_name": "Kouzuki Hiyori",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Yasuie",
+        "canonical_name": "Shimotsuki Yasuie",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Ichiji",
+        "canonical_name": "Vinsmoke Ichiji",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Niji",
+        "canonical_name": "Vinsmoke Niji",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Yonji",
+        "canonical_name": "Vinsmoke Yonji",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Reiju",
+        "canonical_name": "Vinsmoke Reiju",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Judge",
+        "canonical_name": "Vinsmoke Judge",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "T-Bone",
+        "canonical_name": "T Bone",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Ryuma",
+        "canonical_name": "Ryuma (Disambiguation)",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Don Chinjao",
+        "canonical_name": "Chinjao",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Ms. Doublefinger",
+        "canonical_name": "Zala",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      },
+      {
+        "display_name": "Mr. 4",
+        "canonical_name": "Babe",
+        "action": "Use the canonical Fandom title as the stable identity key."
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "one_piece_jango",
+      "name": "Jango",
+      "canonical_name": "Jango",
+      "source_url": "https://onepiece.fandom.com/wiki/Jango",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_morgan",
+      "name": "Morgan",
+      "canonical_name": "Morgan",
+      "source_url": "https://onepiece.fandom.com/wiki/Morgan",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_chadros_higelyges",
+      "name": "Brownbeard",
+      "canonical_name": "Chadros Higelyges",
+      "source_url": "https://onepiece.fandom.com/wiki/Chadros_Higelyges",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_braham",
+      "name": "Braham",
+      "canonical_name": "Braham",
+      "source_url": "https://onepiece.fandom.com/wiki/Braham",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_gan_fall",
+      "name": "Gan Fall",
+      "canonical_name": "Gan Fall",
+      "source_url": "https://onepiece.fandom.com/wiki/Gan_Fall",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_conis",
+      "name": "Conis",
+      "canonical_name": "Conis",
+      "source_url": "https://onepiece.fandom.com/wiki/Conis",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_shimotsuki_yasuie",
+      "name": "Yasuie",
+      "canonical_name": "Shimotsuki Yasuie",
+      "source_url": "https://onepiece.fandom.com/wiki/Shimotsuki_Yasuie",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_tobi_roppo",
+      "name": "Tobi Roppo",
+      "canonical_name": "Tobi Roppo",
+      "source_url": "https://onepiece.fandom.com/wiki/Tobi_Roppo",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_charlotte_streusen",
+      "name": "Charlotte Streusen",
+      "canonical_name": "Charlotte Streusen",
+      "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Streusen",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_thatch",
+      "name": "Thatch",
+      "canonical_name": "Thatch",
+      "source_url": "https://onepiece.fandom.com/wiki/Thatch",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_namur",
+      "name": "Namur",
+      "canonical_name": "Namur",
+      "source_url": "https://onepiece.fandom.com/wiki/Namur",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_blenheim",
+      "name": "Blenheim",
+      "canonical_name": "Blenheim",
+      "source_url": "https://onepiece.fandom.com/wiki/Blenheim",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_rakuyo",
+      "name": "Rakuyo",
+      "canonical_name": "Rakuyo",
+      "source_url": "https://onepiece.fandom.com/wiki/Rakuyo",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_strawberry",
+      "name": "Strawberry",
+      "canonical_name": "Strawberry",
+      "source_url": "https://onepiece.fandom.com/wiki/Strawberry",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_spandam",
+      "name": "Spandam",
+      "canonical_name": "Spandam",
+      "source_url": "https://onepiece.fandom.com/wiki/Spandam",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_ryuma_disambiguation",
+      "name": "Ryuma",
+      "canonical_name": "Ryuma (Disambiguation)",
+      "source_url": "https://onepiece.fandom.com/wiki/Ryuma_(Disambiguation)",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_oars",
+      "name": "Oars",
+      "canonical_name": "Oars",
+      "source_url": "https://onepiece.fandom.com/wiki/Oars",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    },
+    {
+      "candidate_id": "one_piece_bello_betty",
+      "name": "Bello Betty",
+      "canonical_name": "Bello Betty",
+      "source_url": "https://onepiece.fandom.com/wiki/Bello_Betty",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
+      "missing_evidence": [
+        "fewer than two substantive demonstrated abilities",
+        "no cited demonstrated ability"
+      ],
+      "demonstrated_ability_count": 0,
+      "preserved_for_future_research": true
+    }
+  ]
+}

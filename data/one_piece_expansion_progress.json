@@ -1,17 +1,19 @@
 {
   "universe_id": "one_piece",
-  "generated_at": "2026-11-27T09:37:33.172980+00:00",
-  "batches_completed": 1,
+  "generated_at": "2026-11-27T10:03:31.543055+00:00",
+  "batches_completed": 3,
   "batch_ids": [
-    "one-piece-batch-001"
+    "one-piece-batch-001",
+    "one-piece-batch-002",
+    "one-piece-batch-003"
   ],
   "totals": {
-    "candidates_researched": 80,
-    "research_ready": 69,
-    "partial_research": 11,
-    "insufficient_evidence": 0,
-    "artwork_valid": 80,
-    "evaluation_ready": 69,
+    "candidates_researched": 226,
+    "research_ready": 183,
+    "partial_research": 0,
+    "insufficient_evidence": 43,
+    "artwork_valid": 215,
+    "evaluation_ready": 183,
     "approved": 0,
     "published": 0
   },
@@ -19,20 +21,46 @@
     {
       "batch_id": "one-piece-batch-001",
       "candidates_researched": 80,
-      "research_ready": 69,
-      "partial_research": 11,
-      "insufficient_evidence": 0,
+      "research_ready": 79,
+      "partial_research": 0,
+      "insufficient_evidence": 1,
       "artwork_valid": 80,
-      "evaluation_ready": 69,
+      "evaluation_ready": 79,
       "approved": 0,
       "published": 0,
       "research_package": "data/one_piece_batch_001_research.json",
       "catalogue": "data/one_piece_batch_001_catalogue.json"
+    },
+    {
+      "batch_id": "one-piece-batch-002",
+      "candidates_researched": 90,
+      "research_ready": 72,
+      "partial_research": 0,
+      "insufficient_evidence": 18,
+      "artwork_valid": 86,
+      "evaluation_ready": 72,
+      "approved": 0,
+      "published": 0,
+      "research_package": "data/one_piece_batch_002_research.json",
+      "catalogue": "data/one_piece_batch_002_catalogue.json"
+    },
+    {
+      "batch_id": "one-piece-batch-003",
+      "candidates_researched": 56,
+      "research_ready": 32,
+      "partial_research": 0,
+      "insufficient_evidence": 24,
+      "artwork_valid": 49,
+      "evaluation_ready": 32,
+      "approved": 0,
+      "published": 0,
+      "research_package": "data/one_piece_batch_003_research.json",
+      "catalogue": "data/one_piece_batch_003_catalogue.json"
     }
   ],
   "remaining_expansion_opportunities": [
-    "Continue with One Piece Batch 002 using additional supporting characters, specialists and historical figures.",
-    "Revisit unresolved candidates if additional inspected sources become available.",
-    "Incorporate genuinely approved One Piece evaluations into calibration only after approval."
+    "Continue with further batches using additional well-documented supporting characters.",
+    "Revisit unresolved candidates as better inspected sources become available.",
+    "Incorporate approved One Piece evaluations only after explicit approval."
   ]
 }
