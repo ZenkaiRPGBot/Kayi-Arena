@@ -1,9 +1,9 @@
 {
   "universe_id": "one_piece",
   "batch_id": "one-piece-batch-001",
-  "generated_at": "2026-11-27T09:37:33.101467+00:00",
+  "generated_at": "2026-11-27T09:50:06.956240+00:00",
   "excluded_from_evaluation_package": true,
-  "candidate_count": 11,
+  "candidate_count": 1,
   "exclusion_summary": {
     "adaptation_only_material_excluded_at_section_level": true,
     "duplicate_identities_excluded": [],
@@ -37,148 +37,17 @@
   },
   "candidates": [
     {
-      "candidate_id": "one_piece_killer",
-      "name": "Killer",
-      "canonical_name": "Killer",
-      "source_url": "https://onepiece.fandom.com/wiki/Killer",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "fewer than two substantive demonstrated abilities"
-      ],
-      "demonstrated_ability_count": 1,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_sengoku",
-      "name": "Sengoku",
-      "canonical_name": "Sengoku",
-      "source_url": "https://onepiece.fandom.com/wiki/Sengoku",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 4,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_hina",
-      "name": "Hina",
-      "canonical_name": "Hina",
-      "source_url": "https://onepiece.fandom.com/wiki/Hina",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "fewer than two substantive demonstrated abilities"
-      ],
-      "demonstrated_ability_count": 1,
-      "preserved_for_future_research": true
-    },
-    {
       "candidate_id": "one_piece_monkey_d_dragon",
       "name": "Monkey D. Dragon",
       "canonical_name": "Monkey D. Dragon",
       "source_url": "https://onepiece.fandom.com/wiki/Monkey_D._Dragon",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "The inspected profile did not yield a substantive demonstrated ability with a traceable description.",
       "missing_evidence": [
         "fewer than two substantive demonstrated abilities",
         "no cited demonstrated ability"
       ],
-      "demonstrated_ability_count": 1,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_emporio_ivankov",
-      "name": "Emporio Ivankov",
-      "canonical_name": "Emporio Ivankov",
-      "source_url": "https://onepiece.fandom.com/wiki/Emporio_Ivankov",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 3,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_koala",
-      "name": "Koala",
-      "canonical_name": "Koala",
-      "source_url": "https://onepiece.fandom.com/wiki/Koala",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "fewer than two substantive demonstrated abilities",
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 1,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_inazuma",
-      "name": "Inazuma",
-      "canonical_name": "Inazuma",
-      "source_url": "https://onepiece.fandom.com/wiki/Inazuma",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "fewer than two substantive demonstrated abilities"
-      ],
-      "demonstrated_ability_count": 1,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_jabra",
-      "name": "Jabra",
-      "canonical_name": "Jabra",
-      "source_url": "https://onepiece.fandom.com/wiki/Jabra",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 4,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_magellan",
-      "name": "Magellan",
-      "canonical_name": "Magellan",
-      "source_url": "https://onepiece.fandom.com/wiki/Magellan",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 2,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_vista",
-      "name": "Vista",
-      "canonical_name": "Vista",
-      "source_url": "https://onepiece.fandom.com/wiki/Vista",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 2,
-      "preserved_for_future_research": true
-    },
-    {
-      "candidate_id": "one_piece_rebecca",
-      "name": "Rebecca",
-      "canonical_name": "Rebecca",
-      "source_url": "https://onepiece.fandom.com/wiki/Rebecca",
-      "research_gate": "PARTIAL_RESEARCH",
-      "reason": "Substantive capability material was found, but the record does not meet the two-ability plus cited-evidence threshold.",
-      "missing_evidence": [
-        "no cited demonstrated ability"
-      ],
-      "demonstrated_ability_count": 3,
+      "demonstrated_ability_count": 0,
       "preserved_for_future_research": true
     }
   ]

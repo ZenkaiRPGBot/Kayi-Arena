@@ -43,7 +43,7 @@ Policy:
 - `one_piece_batch_001_catalogue.json` — identity and artwork metadata.
 - `one_piece_batch_001_claude_assignment.md` — this assignment.
 
-The research package contains 69 candidates. No Power, Role Fit,
+The research package contains 79 candidates. No Power, Role Fit,
 rarity, score, approval or publication status has been allocated.
 
 ## 3. Evaluation framework
@@ -182,6 +182,7 @@ Rules:
 | `one_piece_jinbe` | Jinbe | Straw Hat Pirates | offense, defense durability, tactics |
 | `one_piece_trafalgar_d_water_law` | Trafalgar D. Water Law | Worst Generation | offense, defense durability, tactics, support control |
 | `one_piece_eustass_kid` | Eustass Kid | Worst Generation | offense, defense durability, tactics, support control |
+| `one_piece_killer` | Killer | Worst Generation | offense, defense durability |
 | `one_piece_capone_bege` | Capone Bege | Worst Generation | offense, defense durability, tactics |
 | `one_piece_jewelry_bonney` | Jewelry Bonney | Worst Generation | offense, defense durability |
 | `one_piece_scratchmen_apoo` | Scratchmen Apoo | Worst Generation | offense, defense durability, tactics |
@@ -203,6 +204,7 @@ Rules:
 | `one_piece_gecko_moria` | Gecko Moria | Thriller Bark Pirates | offense, defense durability, tactics |
 | `one_piece_bartholomew_kuma` | Bartholomew Kuma | Revolutionary Army | offense, defense durability |
 | `one_piece_monkey_d_garp` | Monkey D. Garp | Marines | offense, defense durability, tactics, support control |
+| `one_piece_sengoku` | Sengoku | Marines | offense, defense durability, tactics |
 | `one_piece_sakazuki` | Sakazuki | Marines | offense, defense durability, tactics |
 | `one_piece_kuzan` | Kuzan | Marines | offense, defense durability |
 | `one_piece_borsalino` | Borsalino | Marines | offense, defense durability, tactics |
@@ -212,16 +214,23 @@ Rules:
 | `one_piece_tashigi` | Tashigi | Marines | offense, defense durability |
 | `one_piece_koby` | Koby | Marines | offense, defense durability, tactics |
 | `one_piece_helmeppo` | Helmeppo | Marines | offense, defense durability |
+| `one_piece_hina` | Hina | Marines | offense |
 | `one_piece_tsuru` | Tsuru | Marines | offense, tactics |
 | `one_piece_sabo` | Sabo | Revolutionary Army | offense, defense durability, tactics |
+| `one_piece_emporio_ivankov` | Emporio Ivankov | Revolutionary Army | offense, defense durability |
+| `one_piece_koala` | Koala | Revolutionary Army | offense |
+| `one_piece_inazuma` | Inazuma | Revolutionary Army | offense |
 | `one_piece_rob_lucci` | Rob Lucci | CP9 | offense, defense durability, tactics |
 | `one_piece_kaku` | Kaku | CP9 | offense, defense durability, tactics |
+| `one_piece_jabra` | Jabra | CP9 | offense, defense durability |
 | `one_piece_blueno` | Blueno | CP9 | offense, defense durability |
 | `one_piece_kalifa` | Kalifa | CP9 | offense, defense durability |
+| `one_piece_magellan` | Magellan | Impel Down | offense, defense durability |
 | `one_piece_shiryu` | Shiryu | Impel Down | offense, defense durability |
 | `one_piece_bentham` | Bentham | Impel Down | offense, defense durability |
 | `one_piece_polo_marco` | Marco | Whitebeard Pirates | offense, defense durability, tactics |
 | `one_piece_jozu` | Jozu | Whitebeard Pirates | offense, defense durability |
+| `one_piece_vista` | Vista | Whitebeard Pirates | offense, defense durability |
 | `one_piece_izou` | Izo | Whitebeard Pirates | offense, defense durability |
 | `one_piece_portgas_d_ace` | Portgas D. Ace | Whitebeard Pirates | offense, defense durability, tactics |
 | `one_piece_yamato` | Yamato | Beasts Pirates | offense, defense durability, tactics |
@@ -238,11 +247,12 @@ Rules:
 | `one_piece_charlotte_perospero` | Charlotte Perospero | Big Mom Pirates | offense, defense durability, tactics |
 | `one_piece_king` | King | Beasts Pirates | offense, defense durability |
 | `one_piece_queen` | Queen | Beasts Pirates | offense, defense durability, support control, medical healing |
+| `one_piece_rebecca` | Rebecca | Dressrosa | offense, defense durability |
 | `one_piece_kyros` | Kyros | Dressrosa | offense, defense durability, tactics |
 
 ## 8. Ready-to-use prompt
 
-Evaluate all 69 candidates listed above using the attached research
+Evaluate all 79 candidates listed above using the attached research
 package and the framework in this document. Return only the required JSON object
 plus a concise exception report listing held candidates and why they are held.
 Do not approve, publish or calculate rarity. Do not rely on previous conversations.

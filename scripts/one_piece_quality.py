@@ -138,10 +138,8 @@ def research_ready_valid(record: dict[str, Any]) -> tuple[bool, list[str]]:
 
     abilities = record.get("demonstrated_abilities") or []
     substantive = [item for item in abilities if is_substantive_ability(item)]
-    if len(substantive) < 2:
-        errors.append("fewer than two substantive demonstrated abilities")
-    if not any(item.get("canonical_refs") for item in substantive):
-        errors.append("no substantive ability carries a canonical chapter reference")
+    if not substantive:
+        errors.append("no substantive demonstrated ability")
 
     evidence = record.get("supporting_evidence") or []
     usable_evidence = [

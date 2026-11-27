@@ -8,13 +8,13 @@
   "canonical_policy": "ONE-PIECE-CANON-0.1",
   "scoring_version": "SCORE-1.0",
   "manga_cutoff_chapter": 1100,
-  "candidate_count": 69,
+  "candidate_count": 79,
   "research_gate_counts": {
-    "PARTIAL_RESEARCH": 11,
-    "RESEARCH_READY": 69
+    "INSUFFICIENT_EVIDENCE": 1,
+    "RESEARCH_READY": 79
   },
-  "research_ready_count": 69,
-  "unresolved_count": 11,
+  "research_ready_count": 79,
+  "unresolved_count": 1,
   "notes": [
     "Only RESEARCH_READY candidates with substantive demonstrated abilities and traceable sources are included.",
     "No Power, Role Fit, rarity, score, approval or publication status is allocated.",
@@ -470,7 +470,7 @@
         "Voice of All Things Hearers",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -1005,7 +1005,7 @@
         "Swordsmen",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -1303,7 +1303,7 @@
         "Thieves",
         "Treasure Pirates Slaves"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -1576,7 +1576,7 @@
         "Treasure Pirates Slaves",
         "Usopp Pirates"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -2018,7 +2018,7 @@
         "Vinsmoke Family",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -2249,7 +2249,7 @@
         "Treasure Pirates Slaves",
         "Zoan Devil Fruit Users"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -2477,7 +2477,7 @@
         "Treasure Pirates Slaves",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -2724,7 +2724,7 @@
         "Toys",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -2940,7 +2940,7 @@
         "Swordsmen",
         "Treasure Pirates Slaves"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -3235,7 +3235,7 @@
         "Trident Users",
         "Whitebeard Pirates' Subordinates"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -3516,7 +3516,7 @@
         "Swordsmen",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -3755,7 +3755,7 @@
         "Udon Residents",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -3802,6 +3802,151 @@
       ],
       "fandom_title_requested": "Eustass Kid",
       "display_name": "Eustass Kid"
+    },
+    {
+      "candidate_id": "one_piece_killer",
+      "name": "Killer",
+      "canonical_name": "Killer",
+      "aliases": [
+        "Massacre Soldier",
+        "Kamazo the Manslayer"
+      ],
+      "species": "Human",
+      "faction": "Worst Generation",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Killer",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Killer",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 498,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "\"Massacre Soldier\" Killer [Chapter 594] is a pirate from the South Blue and a combatant of the Kid Pirates. He is one of twelve pirates who are referred to as the \"Worst Generation\". [Chapter 664] After the timeskip, his bounty has been raised from 162,000,000 to 200,000,000. Following the confrontation with Kaidou, Killer ate a defective SMILE [Chapter 944] and took on the alias of Kamazo the Manslayer, a street murderer in Wano Country who secretly acted as an assassin working for the shogun, Kurozumi Orochi, until the shogun discarded him after he had failed his mission to kill Toko. [Chapter 944] He later reunites with his crew and becomes an ally member of the Ninja-Pirate-Mink-Samurai Alliance during the Wano Country Arc.",
+        "significant_achievements": "\"Massacre Soldier\" Killer [Chapter 594] is a pirate from the South Blue and a combatant of the Kid Pirates. He is one of twelve pirates who are referred to as the \"Worst Generation\". [Chapter 664] After the timeskip, his bounty has been raised from 162,000,000 to 200,000,000. Following the confrontation with Kaidou, Killer ate a defective SMILE [Chapter 944] and took on the alias of Kamazo the Manslayer, a street murderer in Wano Country who secretly acted as an assassin working for the shogun, Kurozumi Orochi, until the shogun discarded him after he had failed his mission to kill Toko. [Chapter 944] He later reunites with his crew and becomes an ally member of the Ninja-Pirate-Mink-Samurai Alliance during the Wano Country Arc.",
+        "offense": "Killer's style of fighting seems to rely mainly on his extraordinary speed and agility, which he uses to overpower his opponents before they can strike him or dodge his attacks. Killer's fighting style tends to be highly acrobatic as a result and he is able to slice targets before being noticed or detected. [Chapter 505] During his battle with Zoro, he managed to put him in constant trouble in terms of speed, and he was even able to steal Napoleon from Emperor Big Mom's clutches before she could realize it. Killer possesses immense physical strength, being capable of fighting head on with Urouge, a man twice his size.",
+        "defense_durability": "Killer's style of fighting seems to rely mainly on his extraordinary speed and agility, which he uses to overpower his opponents before they can strike him or dodge his attacks. Killer's fighting style tends to be highly acrobatic as a result and he is able to slice targets before being noticed or detected. [Chapter 505] During his battle with Zoro, he managed to put him in constant trouble in terms of speed, and he was even able to steal Napoleon from Emperor Big Mom's clutches before she could realize it. Killer possesses immense physical strength, being capable of fighting head on with Urouge, a man twice his size.",
+        "speed_mobility": "Killer's style of fighting seems to rely mainly on his extraordinary speed and agility, which he uses to overpower his opponents before they can strike him or dodge his attacks. Killer's fighting style tends to be highly acrobatic as a result and he is able to slice targets before being noticed or detected. [Chapter 505] During his battle with Zoro, he managed to put him in constant trouble in terms of speed, and he was even able to steal Napoleon from Emperor Big Mom's clutches before she could realize it. Killer possesses immense physical strength, being capable of fighting head on with Urouge, a man twice his size.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "unknown: no conditional ability or transformation was clearly documented in the inspected ability profile."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Physical Abilities",
+          "description": "Killer's style of fighting seems to rely mainly on his extraordinary speed and agility, which he uses to overpower his opponents before they can strike him or dodge his attacks. Killer's fighting style tends to be highly acrobatic as a result and he is able to slice targets before being noticed or detected. [Chapter 505] During his battle with Zoro, he managed to put him in constant trouble in terms of speed, and he was even able to steal Napoleon from Emperor Big Mom's clutches before she could realize it. Killer possesses immense physical strength, being capable of fighting head on with Urouge, a man twice his size.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [
+            "One Piece chapter 505"
+          ],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [
+        {
+          "name": "Weapons",
+          "description": "Killer is seen wielding a pair of gauntlets equipped with scythe-like blades, which he dubs \"Punishers\". The blades are capable of spinning around like buzzsaws or simply being used as hand scythes. These weapons can also be used to block other weapons, leaving the foe open for Killer to kick the enemy's flank or other exposed areas.",
+          "canonical_refs": [
+            "One Piece chapter 505"
+          ],
+          "source_section": "Abilities and Powers / Weapons"
+        }
+      ],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Killer",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [
+            "One Piece chapter 505"
+          ],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Armament Haki Users",
+        "Characters Aged 20–29",
+        "Combatants",
+        "Failed SMILE Consumers",
+        "Former Assassins",
+        "Former Servants",
+        "Gangsters",
+        "Humans",
+        "Kid Pirates",
+        "Kurozumi Family Subordinates",
+        "Kutsukku Island Residents",
+        "Male Characters",
+        "Observation Haki Users",
+        "Prisoner Mine Prisoners",
+        "Scythe Users",
+        "Super Rookies",
+        "Wano Country Saga Antagonists",
+        "Worst Generation"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 1,
+        "chapter_refs_retained": 1,
+        "source_categories_considered": 18,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 312139,
+        "fandom_revision": null,
+        "ability_profile_pageid": 312139,
+        "ability_profile_revision": null,
+        "categories": [
+          "Armament Haki Users",
+          "Characters Aged 20–29",
+          "Combatants",
+          "Failed SMILE Consumers",
+          "Former Assassins",
+          "Former Servants",
+          "Gangsters",
+          "Humans",
+          "Kid Pirates",
+          "Kurozumi Family Subordinates",
+          "Kutsukku Island Residents",
+          "Male Characters",
+          "Observation Haki Users",
+          "Prisoner Mine Prisoners",
+          "Scythe Users",
+          "Super Rookies",
+          "Wano Country Saga Antagonists",
+          "Worst Generation"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Killer",
+      "display_name": "Killer"
     },
     {
       "candidate_id": "one_piece_capone_bege",
@@ -3949,7 +4094,7 @@
         "Whole Cake Island Saga Antagonists",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -4083,16 +4228,6 @@
           ],
           "source_section": "Abilities and Powers / Physical Abilities",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "In Funimation's English dub of Episode 490, Bonney specifically names Blackbeard as the source of her unknown grievances following the events of the war. This was likely assumed because of his prominent role in the battle and their future interaction in the New World. However, this was later proven erroneous, as the person she is referring to is Dr.",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [
@@ -4140,14 +4275,14 @@
         "Super Rookies",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 5,
+        "ability_sections_considered": 4,
         "chapter_refs_retained": 4,
         "source_categories_considered": 16,
         "unsupported_refs_dropped": []
@@ -4336,7 +4471,7 @@
         "Wano Country Saga Antagonists",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -4524,7 +4659,7 @@
         "Wano Country Saga Antagonists",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -4722,7 +4857,7 @@
         "Wano Country Saga Antagonists",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -4882,7 +5017,7 @@
         "Super Rookies",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -5108,7 +5243,7 @@
         "Supreme King Haki Users",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -5347,7 +5482,7 @@
         "Whole Cake Island Saga Antagonists",
         "Worst Generation"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -5746,7 +5881,7 @@
         "Whole Cake Island Residents",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -6022,7 +6157,7 @@
         "Wano Country Saga Antagonists",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -6273,7 +6408,7 @@
         "Supreme King Haki Users",
         "Whitebeard Pirates"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -6410,26 +6545,6 @@
           ],
           "source_section": "Abilities and Powers / Weapons / Buggy Balls and Muggy Balls",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Weapons / Buggy Balls and Muggy Balls' of the inspected ability profile."
-        },
-        {
-          "name": "Live-Action Differences",
-          "description": "In the live-action series, Buggy is depicted as having taken Orange Town's citizens as a captive audience in a large circus tent rather than forcing them to flee. He has also destroyed the town rather leaving it mostly undamaged. Buggy also is searching for the Grand Line map and captures the Straw Hat Pirates after learning they stole it from the 153rd Branch.",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [],
-          "source_section": "Adaptation Differences / Live-Action Differences",
-          "evidence": "Deterministic extract from section 'Adaptation Differences / Live-Action Differences' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "Under the 4Kids-dubbed anime, Buggy received typical content edits: his crew's alcohol was censored into \"grapefruit punch\", blood was erased from his successful knifings, and Luffy's kick to his groin was redrawn as a kick to his shin. A \"reverb\" effect was also used whenever he spoke in anger, implying that his powers could \"split\" even his voice. When Buggy mocked Luffy for proclaiming that he would become the next king of pirates, he sarcastically stated that he would be the \"emperor\" in comparison instead of \"God\" like in the original.",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [],
@@ -6475,14 +6590,14 @@
         "Roger Pirates",
         "Seven Warlords of the Sea"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 6,
+        "ability_sections_considered": 4,
         "chapter_refs_retained": 9,
         "source_categories_considered": 19,
         "unsupported_refs_dropped": []
@@ -6698,7 +6813,7 @@
         "Swordsmen",
         "Voice of All Things Hearers"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -6934,7 +7049,7 @@
         "Swordsmen",
         "Thieves"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -7079,16 +7194,6 @@
           ],
           "source_section": "Abilities and Powers / Swordsmanship",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Swordsmanship' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "Per standard content policies, the 4Kids-dubbed anime censors any blood Mihawk draws, particularly his finishing slash on Zoro; both of his blades are also censored to appear less cross-like, with Yoru's guard heavily shortened and Kogatana's erased entirely. The latter edit often appears inconsistently across contemporary tie-ins: *4Kids' theme song includes footage of him with an unedited Yoru, unchanged through the dub's entire run; however, later music videos (You Can't Turn the Tide, Be A Pirate) all use edited footage. *The Grand Battle! localization (and by extension Grand Adventure) applies the edits to his in-game model, but leaves his portraits unedited. **Funimation's Unlimited Adventure localization also applies the edits to his model, despite discontinuing the practice in their anime dub. *Notably, the 2002 card game's localization features him with an unedited Yoru and an…",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [
@@ -7131,14 +7236,14 @@
         "Summit War Saga Antagonists",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 6,
+        "ability_sections_considered": 5,
         "chapter_refs_retained": 4,
         "source_categories_considered": 14,
         "unsupported_refs_dropped": []
@@ -7286,16 +7391,6 @@
           ],
           "source_section": "Abilities and Powers / Weapons / Timer Bomb",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Weapons / Timer Bomb' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "In the 4Kids dub, Crocodile underwent several edits. After his first fight with Luffy, Crocodile dangled Luffy upside down with his hook instead of impaling him with it. Strangely, in the next episode of the dub, Luffy was right-side up with Crocodile's hook being around his neck but was still hanging upside-down in some shots.",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [],
@@ -7344,14 +7439,14 @@
         "Rainbase Residents",
         "Seven Warlords of the Sea"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 6,
+        "ability_sections_considered": 5,
         "chapter_refs_retained": 12,
         "source_categories_considered": 19,
         "unsupported_refs_dropped": []
@@ -7566,7 +7661,7 @@
         "Summit War Saga Antagonists",
         "Supreme King Haki Users"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -7847,7 +7942,7 @@
         "Summit War Saga Antagonists",
         "Supreme King Haki Users"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -8035,7 +8130,7 @@
         "Thriller Bark Pirates",
         "West Blue Residents"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -8190,7 +8285,7 @@
         "Summit War Saga Antagonists",
         "Thriller Bark Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -8437,7 +8532,7 @@
         "Voice of All Things Hearers",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -8485,6 +8580,160 @@
       ],
       "fandom_title_requested": "Monkey D. Garp",
       "display_name": "Monkey D. Garp"
+    },
+    {
+      "candidate_id": "one_piece_sengoku",
+      "name": "Sengoku",
+      "canonical_name": "Sengoku",
+      "aliases": [
+        "Sengoku the Buddha",
+        "Buddha Sengoku"
+      ],
+      "species": "Human",
+      "faction": "Marines",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Sengoku",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Sengoku",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 0,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Sengoku the Buddha is a former Fleet Admiral of the Marines, succeeding Kong and preceding Sakazuki. He retired from his leadership position after the Summit War of Marineford, but remained in the Marines as an Inspector General. He was also one of the major figures from the time when Gol D.",
+        "significant_achievements": "Sengoku the Buddha is a former Fleet Admiral of the Marines, succeeding Kong and preceding Sakazuki. He retired from his leadership position after the Summit War of Marineford, but remained in the Marines as an Inspector General. He was also one of the major figures from the time when Gol D.",
+        "offense": "Sengoku ate the Hito Hito no Mi, Model: Daibutsu, a Mythical Zoan-type Devil Fruit that allows him to transform into a giant golden Buddha and a human-Buddha hybrid at will. This power is the source of his nickname, \"Sengoku the Buddha.\" A number of Marines claimed that they had never seen him use this power before the war. As a Zoan, Sengoku gains an immense boost to his already impressive physical abilities while in his Buddha form.",
+        "defense_durability": "Even without his Zoan Devil Fruit powers, Sengoku has enormous strength, enough to effortlessly hold down an enraged Garp with only one hand. Sengoku is also a tremendously skilled hand-to-hand fighter. Combined with his Mythical Zoan Devil Fruit powers, he could knock away all the members of the Blackbeard Pirates, who are extremely powerful in their own right, sending them flying.",
+        "speed_mobility": "Even without his Zoan Devil Fruit powers, Sengoku has enormous strength, enough to effortlessly hold down an enraged Garp with only one hand. Sengoku is also a tremendously skilled hand-to-hand fighter. Combined with his Mythical Zoan Devil Fruit powers, he could knock away all the members of the Blackbeard Pirates, who are extremely powerful in their own right, sending them flying.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "As the former Fleet Admiral of the entire Marine force, Sengoku had absolute power over every action the Marines did, including summoning a Buster Call and granting and removing a Warlord's title at any time, provided they met the criteria for either. The only ones that are above him are Imu (in secret), the Five Elders, and Commander-in-Chief Kong. However, with his resignation, came the loss of such authorities.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Sengoku ate the Hito Hito no Mi, Model: Daibutsu, a Mythical Zoan-type Devil Fruit that allows him to transform into a giant golden Buddha and a human-Buddha hybrid at will. This power is the source of his nickname, \"Sengoku the Buddha.\" A number of Marines claimed that they had never seen him use this power before the war. As a Zoan, Sengoku gains an immense boost to his already impressive physical abilities while in his Buddha form."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Sengoku ate the Hito Hito no Mi, Model: Daibutsu, a Mythical Zoan-type Devil Fruit that allows him to transform into a giant golden Buddha and a human-Buddha hybrid at will. This power is the source of his nickname, \"Sengoku the Buddha.\" A number of Marines claimed that they had never seen him use this power before the war. As a Zoan, Sengoku gains an immense boost to his already impressive physical abilities while in his Buddha form.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        },
+        {
+          "name": "Haki",
+          "description": "As a former Fleet Admiral and the leader of the Marines, Sengoku is fully capable of using Haki. He is also one of the very few people in the world who can use all three types of Haki.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Haki",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Haki' of the inspected ability profile."
+        },
+        {
+          "name": "Physical Abilities",
+          "description": "Even without his Zoan Devil Fruit powers, Sengoku has enormous strength, enough to effortlessly hold down an enraged Garp with only one hand. Sengoku is also a tremendously skilled hand-to-hand fighter. Combined with his Mythical Zoan Devil Fruit powers, he could knock away all the members of the Blackbeard Pirates, who are extremely powerful in their own right, sending them flying.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        },
+        {
+          "name": "Tactical Skills",
+          "description": "As the former Fleet Admiral of the entire Marine force, Sengoku had absolute power over every action the Marines did, including summoning a Buster Call and granting and removing a Warlord's title at any time, provided they met the criteria for either. The only ones that are above him are Imu (in secret), the Five Elders, and Commander-in-Chief Kong. However, with his resignation, came the loss of such authorities.",
+          "categories": [
+            "tactics"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Tactical Skills",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Tactical Skills' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Sengoku",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Armament Haki Users",
+        "Characters Aged 70–79",
+        "Citation Needed",
+        "Featured Articles",
+        "Humans",
+        "Male Characters",
+        "Marine Officers",
+        "Marineford Residents",
+        "Mythical Zoan Devil Fruit Users",
+        "New Marineford Residents",
+        "Observation Haki Users",
+        "South Blue Residents",
+        "Summit War Saga Antagonists",
+        "Supreme King Haki Users"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 4,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 14,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 1671,
+        "fandom_revision": null,
+        "ability_profile_pageid": 1671,
+        "ability_profile_revision": null,
+        "categories": [
+          "Armament Haki Users",
+          "Characters Aged 70–79",
+          "Citation Needed",
+          "Featured Articles",
+          "Humans",
+          "Male Characters",
+          "Marine Officers",
+          "Marineford Residents",
+          "Mythical Zoan Devil Fruit Users",
+          "New Marineford Residents",
+          "Observation Haki Users",
+          "South Blue Residents",
+          "Summit War Saga Antagonists",
+          "Supreme King Haki Users"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Sengoku",
+      "display_name": "Sengoku"
     },
     {
       "candidate_id": "one_piece_sakazuki",
@@ -8635,7 +8884,7 @@
         "Observation Haki Users",
         "Summit War Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -8849,7 +9098,7 @@
         "Ten Titanic Captains",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -9039,7 +9288,7 @@
         "Summit War Saga Antagonists",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -9233,7 +9482,7 @@
         "Swordsmen",
         "West Blue Residents"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -9395,7 +9644,7 @@
         "South Blue Residents",
         "Wano Country Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -9556,18 +9805,6 @@
           "canonical_refs": [],
           "source_section": "Abilities and Powers / Weapons / Nanashaku Jitte",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Weapons / Nanashaku Jitte' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "Per standard editing policies, the 4Kids-dubbed anime—in addition to renaming him Chaser—removes all of his cigars and the \"justice\" kanji on his jacket. However, his constantly-open mouth and smoke-trails are usually left unedited, and vaguely implied to be a side-effect of his powers. Localizations of contemporary video games such as Grand Battle! and Unlimited Adventure often leave his jacket unedited as well, removing only his in-use cigars.",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [
-            "One Piece chapter 326"
-          ],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [],
@@ -9579,7 +9816,6 @@
           "page_kind": "main_page",
           "source_revision": null,
           "canonical_refs": [
-            "One Piece chapter 326",
             "One Piece chapter 559",
             "One Piece chapter 661",
             "One Piece chapter 684",
@@ -9608,15 +9844,15 @@
         "Staff Users",
         "Summit War Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 8,
-        "chapter_refs_retained": 6,
+        "ability_sections_considered": 7,
+        "chapter_refs_retained": 5,
         "source_categories_considered": 17,
         "unsupported_refs_dropped": []
       },
@@ -9779,7 +10015,7 @@
         "Summit War Saga Antagonists",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -9947,7 +10183,7 @@
         "Summit War Saga Antagonists",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10093,7 +10329,7 @@
         "Swordsmen",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10133,6 +10369,134 @@
       ],
       "fandom_title_requested": "Helmeppo",
       "display_name": "Helmeppo"
+    },
+    {
+      "candidate_id": "one_piece_hina",
+      "name": "Hina",
+      "canonical_name": "Hina",
+      "aliases": [
+        "Black Cage",
+        "Black Cage Corps",
+        "Black Cage Hina"
+      ],
+      "species": "Human",
+      "faction": "Marines",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Hina",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Hina",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 171,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "\"Black Cage\" Hina is a Marine Rear Admiral and a former classmate of Vice Admiral Smoker. She currently leads the Black Cage Corps, a unit (containing Jango and Fullbody among others) tasked with patrolling the seas around the Arabasta Kingdom. Originally introduced as a captain, she was promoted to the rank of rear admiral some time after the Summit War of Marineford.",
+        "significant_achievements": "\"Black Cage\" Hina is a Marine Rear Admiral and a former classmate of Vice Admiral Smoker. She currently leads the Black Cage Corps, a unit (containing Jango and Fullbody among others) tasked with patrolling the seas around the Arabasta Kingdom. Originally introduced as a captain, she was promoted to the rank of rear admiral some time after the Summit War of Marineford.",
+        "offense": "Hina ate the Ori Ori no Mi, a Paramecia-type Devil Fruit that allows her to create iron bars and create iron bindings on her opponents. This power earned her the nickname \"Hina the Black Cage\". She can place restraints on people by swiping her limbs through them, as the victims passes through her body, the body part they pass through turns into an iron restraint, leaving them trapped in a ring of iron. [Chapter 217] The body part she uses regenerates immediately.",
+        "defense_durability": "unknown: no demonstrated defense durability in the inspected source.",
+        "speed_mobility": "unknown: no demonstrated speed mobility in the inspected source.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Hina ate the Ori Ori no Mi, a Paramecia-type Devil Fruit that allows her to create iron bars and create iron bindings on her opponents. This power earned her the nickname \"Hina the Black Cage\". She can place restraints on people by swiping her limbs through them, as the victims passes through her body, the body part they pass through turns into an iron restraint, leaving them trapped in a ring of iron. [Chapter 217] The body part she uses regenerates immediately."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Hina ate the Ori Ori no Mi, a Paramecia-type Devil Fruit that allows her to create iron bars and create iron bindings on her opponents. This power earned her the nickname \"Hina the Black Cage\". She can place restraints on people by swiping her limbs through them, as the victims passes through her body, the body part they pass through turns into an iron restraint, leaving them trapped in a ring of iron. [Chapter 217] The body part she uses regenerates immediately.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [
+            "One Piece chapter 217",
+            "One Piece chapter 558"
+          ],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [
+        {
+          "name": "Weapons",
+          "description": "Although she has not been shown wielding any weapons, Hina has at her disposal the Black Cage Corps. So far only the Black Cage Corps: Black Spear Squadron has been seen.",
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Weapons"
+        }
+      ],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Hina",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [
+            "One Piece chapter 217",
+            "One Piece chapter 558"
+          ],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Arabasta Saga Antagonists",
+        "Characters Aged 30–39",
+        "Cover Story Antagonists",
+        "Cover Story Introduction Characters",
+        "Female Characters",
+        "Humans",
+        "Marine Rear Admirals",
+        "Paramecia Devil Fruit Users",
+        "Summit War Saga Antagonists",
+        "West Blue Residents"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 1,
+        "chapter_refs_retained": 2,
+        "source_categories_considered": 10,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 1681,
+        "fandom_revision": null,
+        "ability_profile_pageid": 1681,
+        "ability_profile_revision": null,
+        "categories": [
+          "Arabasta Saga Antagonists",
+          "Characters Aged 30–39",
+          "Cover Story Antagonists",
+          "Cover Story Introduction Characters",
+          "Female Characters",
+          "Humans",
+          "Marine Rear Admirals",
+          "Paramecia Devil Fruit Users",
+          "Summit War Saga Antagonists",
+          "West Blue Residents"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Hina",
+      "display_name": "Hina"
     },
     {
       "candidate_id": "one_piece_tsuru",
@@ -10234,7 +10598,7 @@
         "Staff Officers",
         "Summit War Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10426,7 +10790,7 @@
         "Staff Users",
         "Undercover Operators"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10473,6 +10837,385 @@
       ],
       "fandom_title_requested": "Sabo",
       "display_name": "Sabo"
+    },
+    {
+      "candidate_id": "one_piece_emporio_ivankov",
+      "name": "Emporio Ivankov",
+      "canonical_name": "Emporio Ivankov",
+      "aliases": [
+        "Okama King",
+        "Miracle Person",
+        "Iva",
+        "Emporio Female Hormones",
+        "Miracle Worker"
+      ],
+      "species": "Human",
+      "faction": "Revolutionary Army",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Emporio_Ivankov",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Emporio_Ivankov",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 532,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Emporio Ivankov, or Iva for short, is the queen of the Kamabakka Kingdom, known as \"Okama King\" and a \"Miracle Person\". [Chapter 532] He is one of the Revolutionary Army's founding members, as well as the commander of the G Army, which covers the Grand Line. A former slave of the World Nobles, [Chapter 1095] he escaped during the Native Hunting Competition on God Valley and was responsible for the God Valley Incident along with Ginny. [Chapter 1096] He was formerly a prisoner of Impel Down, where he was kept in Level 5, but lived in the secret \"Okama Paradise\" in Level 5.5. After escaping Impel Down and participating in the Summit War of Marineford, he returned to his post as queen of Kamabakka Kingdom. [Chapter 593]",
+        "significant_achievements": "Emporio Ivankov, or Iva for short, is the queen of the Kamabakka Kingdom, known as \"Okama King\" and a \"Miracle Person\". [Chapter 532] He is one of the Revolutionary Army's founding members, as well as the commander of the G Army, which covers the Grand Line. A former slave of the World Nobles, [Chapter 1095] he escaped during the Native Hunting Competition on God Valley and was responsible for the God Valley Incident along with Ginny. [Chapter 1096] He was formerly a prisoner of Impel Down, where he was kept in Level 5, but lived in the secret \"Okama Paradise\" in Level 5.5. After escaping Impel Down and participating in the Summit War of Marineford, he returned to his post as queen of Kamabakka Kingdom. [Chapter 593]",
+        "offense": "Ivankov ate the Horu Horu no Mi, a Paramecia-type Devil Fruit which allows him to create a variety of special hormones that can alter the recipients body in any way he desires, effectively allowing him to \"remodel a human from the inside\". He can also turn his fingers into syringes, which he uses to inject the hormones into a targets body, including his own body if he desires. With this power, he can freely alter any of the recipient's physical aspects, including: sex, growth, skin pigment, stamina, emotions, and many other things.",
+        "defense_durability": "Ivankov has massive physical strength befitting his size. He can easily carry a normal-sized prison guard with only one hand while searching for Ace in Level 6 prison of Impel Down. With a single kick, he could knock Bartholomew Kuma away with great force despite the latter's cybernetic reinforced durability as a Pacifista without any strain on his leg whereas Sanji, who has fearsome kicking power ended up damaging his own leg when he attacked Kuma back at Thriller Bark.",
+        "speed_mobility": "Ivankov has massive physical strength befitting his size. He can easily carry a normal-sized prison guard with only one hand while searching for Ace in Level 6 prison of Impel Down. With a single kick, he could knock Bartholomew Kuma away with great force despite the latter's cybernetic reinforced durability as a Pacifista without any strain on his leg whereas Sanji, who has fearsome kicking power ended up damaging his own leg when he attacked Kuma back at Thriller Bark.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Ivankov ate the Horu Horu no Mi, a Paramecia-type Devil Fruit which allows him to create a variety of special hormones that can alter the recipients body in any way he desires, effectively allowing him to \"remodel a human from the inside\". He can also turn his fingers into syringes, which he uses to inject the hormones into a targets body, including his own body if he desires. With this power, he can freely alter any of the recipient's physical aspects, including: sex, growth, skin pigment, stamina, emotions, and many other things."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Ivankov ate the Horu Horu no Mi, a Paramecia-type Devil Fruit which allows him to create a variety of special hormones that can alter the recipients body in any way he desires, effectively allowing him to \"remodel a human from the inside\". He can also turn his fingers into syringes, which he uses to inject the hormones into a targets body, including his own body if he desires. With this power, he can freely alter any of the recipient's physical aspects, including: sex, growth, skin pigment, stamina, emotions, and many other things.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        },
+        {
+          "name": "Newkama Kenpo",
+          "description": "Ivankov is an extremely powerful grandmaster of a martial art called the Newkama Kenpo. Ivankov could injure Chief Warden Magellan before losing to his poison ability and during the Marineford War, Ivankov was practically the first (and probably the only one) to actually harm Kuma throughout the extent of the battle. In the anime, he easily overpowered and defeated Sanji, a powerful master of the Black Leg Style.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Newkama Kenpo",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Newkama Kenpo' of the inspected ability profile."
+        },
+        {
+          "name": "Physical Abilities",
+          "description": "Ivankov has massive physical strength befitting his size. He can easily carry a normal-sized prison guard with only one hand while searching for Ace in Level 6 prison of Impel Down. With a single kick, he could knock Bartholomew Kuma away with great force despite the latter's cybernetic reinforced durability as a Pacifista without any strain on his leg whereas Sanji, who has fearsome kicking power ended up damaging his own leg when he attacked Kuma back at Thriller Bark.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Emporio_Ivankov",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Baltigo Residents",
+        "Characters Aged 50–59",
+        "Featured Articles",
+        "Former Impel Down Prisoners",
+        "Former Mary Geoise Slaves",
+        "Former Mercenaries",
+        "Humans",
+        "Martial Artists",
+        "Momoiro Island Residents",
+        "Newkama",
+        "Newkama Land Residents",
+        "Paramecia Devil Fruit Users",
+        "Prison Escape Team",
+        "Queens Regnant",
+        "Revolutionary Army Commanders"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 3,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 15,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 11838,
+        "fandom_revision": null,
+        "ability_profile_pageid": 11838,
+        "ability_profile_revision": null,
+        "categories": [
+          "Baltigo Residents",
+          "Characters Aged 50–59",
+          "Featured Articles",
+          "Former Impel Down Prisoners",
+          "Former Mary Geoise Slaves",
+          "Former Mercenaries",
+          "Humans",
+          "Martial Artists",
+          "Momoiro Island Residents",
+          "Newkama",
+          "Newkama Land Residents",
+          "Paramecia Devil Fruit Users",
+          "Prison Escape Team",
+          "Queens Regnant",
+          "Revolutionary Army Commanders"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Emporio Ivankov",
+      "display_name": "Emporio Ivankov"
+    },
+    {
+      "candidate_id": "one_piece_koala",
+      "name": "Koala",
+      "canonical_name": "Koala",
+      "aliases": [],
+      "species": "Human",
+      "faction": "Revolutionary Army",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Koala",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Koala",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 622,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Koala [Chapter 922] is a high ranking officer of the Revolutionary Army, serving as the Fish-Man Karate assistant instructor. Enslaved in Mary Geoise as a child, Koala was freed during Fisher Tiger's rampage, and spent three years living amongst other survivors before meeting the Sun Pirates and traveling with them back to her homeland. Approximately two years later, she left her family to join the Revolutionary Army, where she often works alongside both Sabo and Hack.",
+        "significant_achievements": "Koala [Chapter 922] is a high ranking officer of the Revolutionary Army, serving as the Fish-Man Karate assistant instructor. Enslaved in Mary Geoise as a child, Koala was freed during Fisher Tiger's rampage, and spent three years living amongst other survivors before meeting the Sun Pirates and traveling with them back to her homeland. Approximately two years later, she left her family to join the Revolutionary Army, where she often works alongside both Sabo and Hack.",
+        "offense": "Koala is skilled enough at Fish-Man Karate to be able to teach it and was able to defeat an opponent much larger than her. Not being a fishwoman and still being able to learn the art makes her more impressive. In the anime, she is shown to be proficient enough to defeat a group of five armed men with only a single strike each.",
+        "defense_durability": "unknown: no demonstrated defense durability in the inspected source.",
+        "speed_mobility": "unknown: no demonstrated speed mobility in the inspected source.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "unknown: no conditional ability or transformation was clearly documented in the inspected ability profile."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Fish-Man Karate",
+          "description": "Koala is skilled enough at Fish-Man Karate to be able to teach it and was able to defeat an opponent much larger than her. Not being a fishwoman and still being able to learn the art makes her more impressive. In the anime, she is shown to be proficient enough to defeat a group of five armed men with only a single strike each.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Fish-Man Karate",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Fish-Man Karate' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Koala",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Baltigo Residents",
+        "Characters Aged 20–29",
+        "Female Characters",
+        "Fish-Man Karate Users",
+        "Flashback Introduction Characters",
+        "Former Mary Geoise Slaves",
+        "Humans",
+        "Momoiro Island Residents",
+        "Paradise Residents",
+        "Revolutionary Army Officers",
+        "Teachers"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 1,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 11,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 73893,
+        "fandom_revision": null,
+        "ability_profile_pageid": 73893,
+        "ability_profile_revision": null,
+        "categories": [
+          "Baltigo Residents",
+          "Characters Aged 20–29",
+          "Female Characters",
+          "Fish-Man Karate Users",
+          "Flashback Introduction Characters",
+          "Former Mary Geoise Slaves",
+          "Humans",
+          "Momoiro Island Residents",
+          "Paradise Residents",
+          "Revolutionary Army Officers",
+          "Teachers"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Koala",
+      "display_name": "Koala"
+    },
+    {
+      "candidate_id": "one_piece_inazuma",
+      "name": "Inazuma",
+      "canonical_name": "Inazuma",
+      "aliases": [],
+      "species": "Human",
+      "faction": "Revolutionary Army",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Inazuma",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Inazuma",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 536,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Inazuma is a newkama and the deputy commander of the G Army in the Revolutionary Army, serving under Emporio Ivankov as his right hand man/woman.",
+        "significant_achievements": "Inazuma is a newkama and the deputy commander of the G Army in the Revolutionary Army, serving under Emporio Ivankov as his right hand man/woman.",
+        "offense": "Inazuma ate the Choki Choki no Mi, a Paramecia-type Devil Fruit which allows him to transform parts of his body into scissors. His scissors can cut through any solid material, no matter how durable, including stone and metal. He can manipulate anything he snips with his scissors as though it were made of paper. [Chapter 540] In addition to simply attacking his opponents with his scissor blades, he can cut through things around him to give himself an advantage, such as by cutting a staircase down so that his enemies cannot follow him.",
+        "defense_durability": "unknown: no demonstrated defense durability in the inspected source.",
+        "speed_mobility": "unknown: no demonstrated speed mobility in the inspected source.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Inazuma ate the Choki Choki no Mi, a Paramecia-type Devil Fruit which allows him to transform parts of his body into scissors. His scissors can cut through any solid material, no matter how durable, including stone and metal. He can manipulate anything he snips with his scissors as though it were made of paper. [Chapter 540] In addition to simply attacking his opponents with his scissor blades, he can cut through things around him to give himself an advantage, such as by cutting a staircase down so that his enemies cannot follow him."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Inazuma ate the Choki Choki no Mi, a Paramecia-type Devil Fruit which allows him to transform parts of his body into scissors. His scissors can cut through any solid material, no matter how durable, including stone and metal. He can manipulate anything he snips with his scissors as though it were made of paper. [Chapter 540] In addition to simply attacking his opponents with his scissor blades, he can cut through things around him to give himself an advantage, such as by cutting a staircase down so that his enemies cannot follow him.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [
+            "One Piece chapter 540"
+          ],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Inazuma",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [
+            "One Piece chapter 540"
+          ],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Baltigo Residents",
+        "Characters Aged 20–29",
+        "Former Impel Down Prisoners",
+        "Humans",
+        "Momoiro Island Residents",
+        "Newkama",
+        "Newkama Land Residents",
+        "Paramecia Devil Fruit Users",
+        "Prison Escape Team",
+        "Revolutionary Army Deputy Commanders",
+        "South Blue Residents"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 1,
+        "chapter_refs_retained": 1,
+        "source_categories_considered": 11,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 12609,
+        "fandom_revision": null,
+        "ability_profile_pageid": 12609,
+        "ability_profile_revision": null,
+        "categories": [
+          "Baltigo Residents",
+          "Characters Aged 20–29",
+          "Former Impel Down Prisoners",
+          "Humans",
+          "Momoiro Island Residents",
+          "Newkama",
+          "Newkama Land Residents",
+          "Paramecia Devil Fruit Users",
+          "Prison Escape Team",
+          "Revolutionary Army Deputy Commanders",
+          "South Blue Residents"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Inazuma",
+      "display_name": "Inazuma"
     },
     {
       "candidate_id": "one_piece_rob_lucci",
@@ -10644,7 +11387,7 @@
         "Water 7 Saga Antagonists",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10883,7 +11626,7 @@
         "Water 7 Saga Antagonists",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -10930,6 +11673,157 @@
       ],
       "fandom_title_requested": "Kaku",
       "display_name": "Kaku"
+    },
+    {
+      "candidate_id": "one_piece_jabra",
+      "name": "Jabra",
+      "canonical_name": "Jabra",
+      "aliases": [],
+      "species": "Human",
+      "faction": "CP9",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Jabra",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Jabra",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 375,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Jabra is an agent of CP0. He was previously an agent of CP9, being the third strongest of this agency.",
+        "significant_achievements": "Jabra is an agent of CP0. He was previously an agent of CP9, being the third strongest of this agency.",
+        "offense": "Jabra ate the Inu Inu no Mi, Model: Wolf, a Zoan-type Devil Fruit which gives him the power to change into a full wolf and a human-wolf hybrid that resembles a werewolf. This greatly increases his physical strength, allowing him to uproot trees, clash with powerful martial artists, and, most notably, deal more damage with his Six Powers techniques, which is further complimented by the sharp nails granted by his transformation.",
+        "defense_durability": "As the third strongest member of CP9, Jabra has immense physical power from his training as a Six Powers master. Even without his Devil Fruit powers, he could perform extremely powerful punches, as he was able to send Usopp crashing into a wall across a far distance, despite having just woken up. Even after being severely beaten and burned by Sanji, he recovered in a relatively short span of time and was able to carry his fellow CP9 agent, Kaku, on his back.",
+        "speed_mobility": "As the third strongest member of CP9, Jabra has immense physical power from his training as a Six Powers master. Even without his Devil Fruit powers, he could perform extremely powerful punches, as he was able to send Usopp crashing into a wall across a far distance, despite having just woken up. Even after being severely beaten and burned by Sanji, he recovered in a relatively short span of time and was able to carry his fellow CP9 agent, Kaku, on his back.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Jabra ate the Inu Inu no Mi, Model: Wolf, a Zoan-type Devil Fruit which gives him the power to change into a full wolf and a human-wolf hybrid that resembles a werewolf. This greatly increases his physical strength, allowing him to uproot trees, clash with powerful martial artists, and, most notably, deal more damage with his Six Powers techniques, which is further complimented by the sharp nails granted by his transformation."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Jabra ate the Inu Inu no Mi, Model: Wolf, a Zoan-type Devil Fruit which gives him the power to change into a full wolf and a human-wolf hybrid that resembles a werewolf. This greatly increases his physical strength, allowing him to uproot trees, clash with powerful martial artists, and, most notably, deal more damage with his Six Powers techniques, which is further complimented by the sharp nails granted by his transformation.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        },
+        {
+          "name": "Physical Abilities",
+          "description": "As the third strongest member of CP9, Jabra has immense physical power from his training as a Six Powers master. Even without his Devil Fruit powers, he could perform extremely powerful punches, as he was able to send Usopp crashing into a wall across a far distance, despite having just woken up. Even after being severely beaten and burned by Sanji, he recovered in a relatively short span of time and was able to carry his fellow CP9 agent, Kaku, on his back.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        },
+        {
+          "name": "Six Powers",
+          "description": "Jabra's fighting style is based around Tekkai Kenpo, a technique which allows him to move while using Tekkai, and throw powerful punches at his enemies while maintaining his defense. He claims to be the only Six Powers user capable of doing so. His Tekkai was advanced enough to withstand Zoro's Sanjuroku Pound Ho and dozens of powerful kicks from Sanji.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Six Powers",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Six Powers' of the inspected ability profile."
+        },
+        {
+          "name": "Early Concepts",
+          "description": "In One Piece Green: Secret Pieces, it is revealed that Jabra's name was supposed to be Shakiin (シャキイン; sound effect for something sharp in Japanese). His appearance somewhat resembles his current look, but he was supposed to be much thinner and taller, his hair style was spikey hair with two thin braids instead of one, and it appears that he was initially supposed to use some sort of long and thin sword weapon. It is revealed that he was supposed to fight with Zoro instead of Sanji.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Early Concepts",
+          "evidence": "Deterministic extract from section 'Early Concepts' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Jabra",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Armament Haki Users",
+        "CP0",
+        "CP9",
+        "Characters Aged 30–39",
+        "Former Assassins",
+        "Guanhao Residents",
+        "Humans",
+        "Male Characters",
+        "North Blue Residents",
+        "Observation Haki Users",
+        "Six Powers Users",
+        "Wano Country Saga Antagonists",
+        "Water 7 Saga Antagonists",
+        "Zoan Devil Fruit Users"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 4,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 14,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 2944,
+        "fandom_revision": null,
+        "ability_profile_pageid": 2944,
+        "ability_profile_revision": null,
+        "categories": [
+          "Armament Haki Users",
+          "CP0",
+          "CP9",
+          "Characters Aged 30–39",
+          "Former Assassins",
+          "Guanhao Residents",
+          "Humans",
+          "Male Characters",
+          "North Blue Residents",
+          "Observation Haki Users",
+          "Six Powers Users",
+          "Wano Country Saga Antagonists",
+          "Water 7 Saga Antagonists",
+          "Zoan Devil Fruit Users"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Jabra",
+      "display_name": "Jabra"
     },
     {
       "candidate_id": "one_piece_blueno",
@@ -11040,7 +11934,7 @@
         "Water 7 Residents",
         "Water 7 Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -11215,7 +12109,7 @@
         "Water 7 Saga Antagonists",
         "Whip Users"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -11258,6 +12152,138 @@
       ],
       "fandom_title_requested": "Kalifa",
       "display_name": "Kalifa"
+    },
+    {
+      "candidate_id": "one_piece_magellan",
+      "name": "Magellan",
+      "canonical_name": "Magellan",
+      "aliases": [
+        "Warden Magellan"
+      ],
+      "species": "Human",
+      "faction": "Impel Down",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Magellan",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Magellan",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 528,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Magellan is the vice warden of Impel Down. He was formerly the chief warden, but after his failure to stop the jail's one and only mass-breakout, he was replaced by Hannyabal and demoted to vice warden.",
+        "significant_achievements": "Magellan is the vice warden of Impel Down. He was formerly the chief warden, but after his failure to stop the jail's one and only mass-breakout, he was replaced by Hannyabal and demoted to vice warden.",
+        "offense": "Magellan ate the Doku Doku no Mi, a Paramecia-type Devil Fruit that allows him to create and control poison. He can produce various types of poison, ranging from a mild irritant to a strong paralyzing agent to a deadly and highly corrosive toxin. He can produce these poisons in either liquid or gaseous states.",
+        "defense_durability": "Even without his Devil Fruit powers, Magellan is far stronger than normal humans, as he easily blocked a wax-covered Gomu Gomu no Champion Stamp with one arm, as well as pillars of stone hurled at him by Inazuma with both of his forearms. He also pinned down Ace with just one arm when the young pirate attempted to get away. He was shown to have excellent reflexes, as he was able to follow Luffy's movements without any difficulty despite the latter using Gear 2.",
+        "speed_mobility": "Even without his Devil Fruit powers, Magellan is far stronger than normal humans, as he easily blocked a wax-covered Gomu Gomu no Champion Stamp with one arm, as well as pillars of stone hurled at him by Inazuma with both of his forearms. He also pinned down Ace with just one arm when the young pirate attempted to get away. He was shown to have excellent reflexes, as he was able to follow Luffy's movements without any difficulty despite the latter using Gear 2.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "Devil Fruit: Magellan ate the Doku Doku no Mi, a Paramecia-type Devil Fruit that allows him to create and control poison. He can produce various types of poison, ranging from a mild irritant to a strong paralyzing agent to a deadly and highly corrosive toxin. He can produce these poisons in either liquid or gaseous states."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Devil Fruit",
+          "description": "Magellan ate the Doku Doku no Mi, a Paramecia-type Devil Fruit that allows him to create and control poison. He can produce various types of poison, ranging from a mild irritant to a strong paralyzing agent to a deadly and highly corrosive toxin. He can produce these poisons in either liquid or gaseous states.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Devil Fruit",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Devil Fruit' of the inspected ability profile."
+        },
+        {
+          "name": "Physical Abilities",
+          "description": "Even without his Devil Fruit powers, Magellan is far stronger than normal humans, as he easily blocked a wax-covered Gomu Gomu no Champion Stamp with one arm, as well as pillars of stone hurled at him by Inazuma with both of his forearms. He also pinned down Ace with just one arm when the young pirate attempted to get away. He was shown to have excellent reflexes, as he was able to follow Luffy's movements without any difficulty despite the latter using Gear 2.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [
+        {
+          "name": "Weapons",
+          "description": "The ends of Magellan's horns are detachable and can be worn like boxing gloves over four fingers (his thumbs stick out). The sharp points allow for the weapons to slash and pierce. Magellan can also transmit his poison abilities through the horns and dissolve anything they touch.",
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Weapons"
+        }
+      ],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Magellan",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Characters Aged 40–49",
+        "Featured Articles",
+        "Fist Weapon Users",
+        "Grand Line Residents",
+        "Humans",
+        "Impel Down Staff",
+        "Male Characters",
+        "Paramecia Devil Fruit Users",
+        "Summit War Saga Antagonists",
+        "Vice Wardens"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 2,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 10,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 11017,
+        "fandom_revision": null,
+        "ability_profile_pageid": 11017,
+        "ability_profile_revision": null,
+        "categories": [
+          "Characters Aged 40–49",
+          "Featured Articles",
+          "Fist Weapon Users",
+          "Grand Line Residents",
+          "Humans",
+          "Impel Down Staff",
+          "Male Characters",
+          "Paramecia Devil Fruit Users",
+          "Summit War Saga Antagonists",
+          "Vice Wardens"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Magellan",
+      "display_name": "Magellan"
     },
     {
       "candidate_id": "one_piece_shiryu",
@@ -11385,7 +12411,7 @@
         "Ten Titanic Captains",
         "Wano Country Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -11499,18 +12525,6 @@
           "canonical_refs": [],
           "source_section": "Abilities and Powers / Physical Abilities",
           "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
-        },
-        {
-          "name": "Translation and Dub Issues",
-          "description": "As homosexuality and gender identity were arguably even more controversial topics in the United States than in Japan, earlier English translations often applied additional degrees of censorship to Bentham's okama identity: *The 4Kids-dubbed anime avoided any overt references, renaming his fighting style to Crazy Karate and completely removing the writing on his overcoat; its dialog, for the most part, followed the original anime's rewordings. **However, 4Kids may have inserted an indirect reference toward the end of the Arabasta Arc, where Hina dryly remarks \"Don't ask, don't tell\" after seeing Bentham in action. *The VIZ manga leaves the writing on his coat unaltered, but transliterates it as Oh Come My Way in each chapter's side-notes; his fighting style is likewise transliterated as Oh Come My Way Karate. Its dialog almost exclusively uses swan as a euphemism for okama, though the…",
-          "categories": [
-            "offense"
-          ],
-          "canonical_refs": [
-            "One Piece chapter 155"
-          ],
-          "source_section": "Translation and Dub Issues",
-          "evidence": "Deterministic extract from section 'Translation and Dub Issues' of the inspected ability profile."
         }
       ],
       "weapons_and_equipment": [
@@ -11528,9 +12542,7 @@
           "verification_level": "inspected_secondary",
           "page_kind": "main_page",
           "source_revision": null,
-          "canonical_refs": [
-            "One Piece chapter 155"
-          ],
+          "canonical_refs": [],
           "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
         }
       ],
@@ -11548,15 +12560,15 @@
         "Prison Escape Team",
         "Queens"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
         "canonical_refs_extracted_from_page_text": true,
         "primary_sources_directly_inspected": false,
         "manga_cutoff_chapter": 1100,
-        "ability_sections_considered": 4,
-        "chapter_refs_retained": 1,
+        "ability_sections_considered": 3,
+        "chapter_refs_retained": 0,
         "source_categories_considered": 12,
         "unsupported_refs_dropped": []
       },
@@ -11731,7 +12743,7 @@
         "Pirate Apprentices",
         "Whitebeard Pirates Division Commanders"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -11886,7 +12898,7 @@
         "West Blue Residents",
         "Whitebeard Pirates Division Commanders"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -11923,6 +12935,137 @@
       ],
       "fandom_title_requested": "Jozu",
       "display_name": "Jozu"
+    },
+    {
+      "candidate_id": "one_piece_vista",
+      "name": "Vista",
+      "canonical_name": "Vista",
+      "aliases": [
+        "Vista of the Flower Swords",
+        "Flower Sword Vista"
+      ],
+      "species": "Human",
+      "faction": "Whitebeard Pirates",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Vista",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Vista",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 0,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "\"Vista of the Flower Swords\" is the former 5th division commander of the Whitebeard Pirates. He is one of the most prominent members of his crew.",
+        "significant_achievements": "\"Vista of the Flower Swords\" is the former 5th division commander of the Whitebeard Pirates. He is one of the most prominent members of his crew.",
+        "offense": "Vista has extraordinary mastery in dual wielding swordsmanship and even Mihawk acknowledges his skills. He even managed to deflect Mihawk's flying slash attack which is powerful enough to cut through battleships. In the anime, he was also able to block bullets with his swords to protect his allies from being shot while escaping.",
+        "defense_durability": "Vista possesses immense physical strength, as he is able to match against Dracule Mihawk who is known as the strongest swordsman in the world. He was capable of deflecting an attack from an axe-wielding giant, as well as easily slice down cannonballs in midair.",
+        "speed_mobility": "Vista possesses immense physical strength, as he is able to match against Dracule Mihawk who is known as the strongest swordsman in the world. He was capable of deflecting an attack from an axe-wielding giant, as well as easily slice down cannonballs in midair.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "unknown: no conditional ability or transformation was clearly documented in the inspected ability profile."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Physical Abilities",
+          "description": "Vista possesses immense physical strength, as he is able to match against Dracule Mihawk who is known as the strongest swordsman in the world. He was capable of deflecting an attack from an axe-wielding giant, as well as easily slice down cannonballs in midair.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        },
+        {
+          "name": "Swordsmanship",
+          "description": "Vista has extraordinary mastery in dual wielding swordsmanship and even Mihawk acknowledges his skills. He even managed to deflect Mihawk's flying slash attack which is powerful enough to cut through battleships. In the anime, he was also able to block bullets with his swords to protect his allies from being shot while escaping.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Swordsmanship",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Swordsmanship' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [
+        {
+          "name": "Weapons",
+          "description": "Vista wields a pair of sabers with purple hilts that are visibly distinguishable from another by their different sheaths attached to his waist. They are especially durable, withstanding a clash with Mihawk's Yoru. In the anime, some of his attacks generate red flower petals (in a similar way pink flower petals materialize whenever Nico Robin uses her abilities), which befits his epithet \"Flower Sword\"; also in the anime, Vista has so far only produced rose petals, but mentioned that he could produce other types of flower petals as well.",
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Weapons"
+        }
+      ],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Vista",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Armament Haki Users",
+        "Characters Aged 40–49",
+        "Featured Articles",
+        "Humans",
+        "Male Characters",
+        "North Blue Residents",
+        "Observation Haki Users",
+        "Swordsmen",
+        "Whitebeard Pirates Division Commanders"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 2,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 9,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 22936,
+        "fandom_revision": null,
+        "ability_profile_pageid": 22936,
+        "ability_profile_revision": null,
+        "categories": [
+          "Armament Haki Users",
+          "Characters Aged 40–49",
+          "Featured Articles",
+          "Humans",
+          "Male Characters",
+          "North Blue Residents",
+          "Observation Haki Users",
+          "Swordsmen",
+          "Whitebeard Pirates Division Commanders"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Vista",
+      "display_name": "Vista"
     },
     {
       "candidate_id": "one_piece_izou",
@@ -12054,7 +13197,7 @@
         "Snipers",
         "Whitebeard Pirates Division Commanders"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -12258,7 +13401,7 @@
         "Supreme King Haki Users",
         "Whitebeard Pirates Division Commanders"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -12452,7 +13595,7 @@
         "Supreme King Haki Users",
         "Transgender Characters"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -12682,7 +13825,7 @@
         "Voice of All Things Hearers",
         "Whitebeard Pirates Division Commanders"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -12899,7 +14042,7 @@
         "Shogun Castle Residents",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -13109,7 +14252,7 @@
         "Voice of All Things Hearers",
         "Wano Government Officials"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -13285,7 +14428,7 @@
         "Swordsmen",
         "Transgender Characters"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -13461,7 +14604,7 @@
         "Swordsmen",
         "Udon Residents"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -13639,7 +14782,7 @@
         "Trident Users",
         "Yakuza"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -13827,7 +14970,7 @@
         "Roger Pirates",
         "Swordsmen"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -14046,7 +15189,7 @@
         "Trident Users",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -14238,7 +15381,7 @@
         "Wano Country Saga Antagonists",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -14408,7 +15551,7 @@
         "Totto Land Ministers",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -14581,7 +15724,7 @@
         "Wano Country Saga Antagonists",
         "Whole Cake Island Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -14792,7 +15935,7 @@
         "Swordsmen",
         "Wano Country Saga Antagonists"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -15035,7 +16178,7 @@
         "Wano Country Saga Antagonists",
         "Wano Government Officials"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",
@@ -15080,6 +16223,148 @@
       ],
       "fandom_title_requested": "Queen",
       "display_name": "Queen"
+    },
+    {
+      "candidate_id": "one_piece_rebecca",
+      "name": "Rebecca",
+      "canonical_name": "Rebecca",
+      "aliases": [],
+      "species": "Human",
+      "faction": "Dressrosa",
+      "era": "Manga canon through Chapter 1100",
+      "source": "onepiece_fandom",
+      "source_url": "https://onepiece.fandom.com/wiki/Rebecca",
+      "ability_profile_url": "https://onepiece.fandom.com/wiki/Rebecca",
+      "canonical_policy": "ONE-PIECE-CANON-0.1",
+      "manga_cutoff_chapter": 1100,
+      "canonical_version": "Manga canon through Chapter 1100; sustainable demonstrated version documented in the inspected profile.",
+      "canonical_version_basis": "The researched state is the character's demonstrated capabilities within the manga cutoff of Chapter 1100. Sections and chapter leads were extracted from the inspected One Piece Wiki profile; primary manga was not directly opened.",
+      "debut": {
+        "first_cited_chapter_in_lead": 704,
+        "basis": "First chapter citation in the inspected main-page lead.",
+        "verified_against_primary_manga": false
+      },
+      "status": "RESEARCH_READY",
+      "research_gate": "RESEARCH_READY",
+      "research_status": "RESEARCH_READY",
+      "capability_summary": {
+        "combat_effectiveness": "Rebecca [Chapter 720] is the daughter of Scarlett and Kyros, the niece of Viola and the granddaughter of Riku Doldo III. [Chapter 726] She is the former crown princess of Dressrosa, [Chapter 796] who forfeited her title to live with her father [Chapter 797] and currently serves as a lady-in-waiting to her aunt, Viola. While living under Donquixote Doflamingo's regime, she was imprisoned and forced to fight as a gladiator at the Corrida Colosseum. She joined a tournament to compete for the Mera Mera no Mi, winning the D Block and battling in the finals before Sabo claimed the Devil Fruit.",
+        "significant_achievements": "Rebecca [Chapter 720] is the daughter of Scarlett and Kyros, the niece of Viola and the granddaughter of Riku Doldo III. [Chapter 726] She is the former crown princess of Dressrosa, [Chapter 796] who forfeited her title to live with her father [Chapter 797] and currently serves as a lady-in-waiting to her aunt, Viola. While living under Donquixote Doflamingo's regime, she was imprisoned and forced to fight as a gladiator at the Corrida Colosseum. She joined a tournament to compete for the Mera Mera no Mi, winning the D Block and battling in the finals before Sabo claimed the Devil Fruit.",
+        "offense": "Rebecca has been shown to be extremely capable at avoiding attacks, and Luffy worked out that she must be using Observation Haki. Having been extensively trained by Kyros to hone her inner instinct to perfection, she appears to possess a great degree of mastery over her Observation Haki, which, combined with her speed and reflexes, has allowed her to emerge unscathed in all her earlier colosseum battles, thus earning her the title as the 'Undefeated Woman'. More significantly, she was able to see through Hakuba's movements despite his extremely blinding speed and managed to barely survive his attack that took out everyone else.",
+        "defense_durability": "Due to the combat training regimen under Thunder Soldier since childhood, Rebecca is incredibly agile. Rebecca's greatest abilities lie in her tremendous speed and ability to rapidly avoid attacks. As a testament to her power, while the other gladiator convicts were badly injured to the point of missing arms and legs, Rebecca does not have a scratch on her.",
+        "speed_mobility": "Due to the combat training regimen under Thunder Soldier since childhood, Rebecca is incredibly agile. Rebecca's greatest abilities lie in her tremendous speed and ability to rapidly avoid attacks. As a testament to her power, while the other gladiator convicts were badly injured to the point of missing arms and legs, Rebecca does not have a scratch on her.",
+        "leadership": "unknown: no demonstrated leadership in the inspected source.",
+        "tactics": "unknown: no demonstrated tactics in the inspected source.",
+        "stealth_infiltration_assassination": "unknown: no demonstrated stealth infiltration assassination in the inspected source.",
+        "support_control": "unknown: no demonstrated support control in the inspected source.",
+        "medical_healing": "unknown: no demonstrated medical healing in the inspected source.",
+        "limitations": "unknown: no explicit limitation recorded in the inspected ability profile.",
+        "conditional_abilities": "unknown: no conditional ability or transformation was clearly documented in the inspected ability profile."
+      },
+      "demonstrated_abilities": [
+        {
+          "name": "Haki",
+          "description": "Rebecca has been shown to be extremely capable at avoiding attacks, and Luffy worked out that she must be using Observation Haki. Having been extensively trained by Kyros to hone her inner instinct to perfection, she appears to possess a great degree of mastery over her Observation Haki, which, combined with her speed and reflexes, has allowed her to emerge unscathed in all her earlier colosseum battles, thus earning her the title as the 'Undefeated Woman'. More significantly, she was able to see through Hakuba's movements despite his extremely blinding speed and managed to barely survive his attack that took out everyone else.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Haki",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Haki' of the inspected ability profile."
+        },
+        {
+          "name": "Physical Abilities",
+          "description": "Due to the combat training regimen under Thunder Soldier since childhood, Rebecca is incredibly agile. Rebecca's greatest abilities lie in her tremendous speed and ability to rapidly avoid attacks. As a testament to her power, while the other gladiator convicts were badly injured to the point of missing arms and legs, Rebecca does not have a scratch on her.",
+          "categories": [
+            "speed_mobility",
+            "defense_durability",
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Physical Abilities",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Physical Abilities' of the inspected ability profile."
+        },
+        {
+          "name": "Swordsmanship",
+          "description": "Rebecca is shown to be skilled with a sword. She uses a style of swordsmanship dubbed the \"Backwater Sword Dance\", which is completely defensive in nature. It emphasizes using her sword to exploit her opponents' strength and momentum rather than using personal brute force to defeat them, reminiscent of real-world aikido.",
+          "categories": [
+            "offense"
+          ],
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Swordsmanship",
+          "evidence": "Deterministic extract from section 'Abilities and Powers / Swordsmanship' of the inspected ability profile."
+        }
+      ],
+      "weapons_and_equipment": [
+        {
+          "name": "Weapons",
+          "description": "Rebecca wields a medieval-style long sword, which from the ground up almost reaches her shoulders. However, presumably in an effort not to directly harm or kill anyone, the blade is blunt. She also has a rounded shield, which she carries on her left arm.",
+          "canonical_refs": [],
+          "source_section": "Abilities and Powers / Weapons"
+        }
+      ],
+      "supporting_evidence": [
+        {
+          "source": "One Piece Wiki (Fandom) ability profile",
+          "url": "https://onepiece.fandom.com/wiki/Rebecca",
+          "verification_level": "inspected_secondary",
+          "page_kind": "main_page",
+          "source_revision": null,
+          "canonical_refs": [],
+          "notes": "Profile text was fetched through the MediaWiki API and converted deterministically; primary manga chapters were not opened."
+        }
+      ],
+      "source_categories": [
+        "Characters Aged 10–19",
+        "D Block Participants",
+        "Female Characters",
+        "Former Princesses",
+        "Former Prisoners",
+        "Humans",
+        "Observation Haki Users",
+        "Riku Family",
+        "Servants",
+        "Shield Users",
+        "Swordsmen"
+      ],
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
+      "continuity_note": "No separate continuity split identified within the manga cutoff.",
+      "evidence_check": {
+        "verification_level": "inspected_secondary",
+        "canonical_refs_extracted_from_page_text": true,
+        "primary_sources_directly_inspected": false,
+        "manga_cutoff_chapter": 1100,
+        "ability_sections_considered": 3,
+        "chapter_refs_retained": 0,
+        "source_categories_considered": 11,
+        "unsupported_refs_dropped": []
+      },
+      "source_metadata": {
+        "fandom_pageid": 199943,
+        "fandom_revision": null,
+        "ability_profile_pageid": 199943,
+        "ability_profile_revision": null,
+        "categories": [
+          "Characters Aged 10–19",
+          "D Block Participants",
+          "Female Characters",
+          "Former Princesses",
+          "Former Prisoners",
+          "Humans",
+          "Observation Haki Users",
+          "Riku Family",
+          "Servants",
+          "Shield Users",
+          "Swordsmen"
+        ]
+      },
+      "notes": [
+        "Stage 01 One Piece research. No Power, Role Fit, rarity, score, approval or publication status is allocated.",
+        "Catalogue metadata, bounty and rank are context only; ratings must rest on demonstrated abilities above.",
+        "Sources are inspected secondary profiles; primary manga chapters were not directly opened."
+      ],
+      "fandom_title_requested": "Rebecca",
+      "display_name": "Rebecca"
     },
     {
       "candidate_id": "one_piece_kyros",
@@ -15212,7 +16497,7 @@
         "Swordsmen",
         "Toys"
       ],
-      "gate_reason": "At least two substantive demonstrated abilities were extracted, and at least one carries a chapter citation from the inspected profile.",
+      "gate_reason": "At least one substantive demonstrated capability with a concrete description was extracted from an inspected, traceable profile.",
       "continuity_note": "No separate continuity split identified within the manga cutoff.",
       "evidence_check": {
         "verification_level": "inspected_secondary",

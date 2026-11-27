@@ -2,26 +2,26 @@
   "batch_id": "one-piece-batch-001",
   "stages": {
     "catalogue": {
-      "expected_candidates": 69,
-      "actual_candidates": 69,
-      "unique_candidate_ids": 69,
+      "expected_candidates": 79,
+      "actual_candidates": 79,
+      "unique_candidate_ids": 79,
       "duplicate_ids": [],
       "complete": true
     },
     "artwork": {
-      "catalogue_candidates": 69,
-      "candidates_with_valid_artwork": 69,
+      "catalogue_candidates": 79,
+      "candidates_with_valid_artwork": 79,
       "missing_artwork_candidates": 0,
       "complete": true
     },
     "research": {
-      "total_records": 69,
+      "total_records": 79,
       "status_counts": {
         "INSUFFICIENT_EVIDENCE": 0,
         "PARTIAL_RESEARCH": 0,
-        "RESEARCH_READY": 69
+        "RESEARCH_READY": 79
       },
-      "research_ready": 69,
+      "research_ready": 79,
       "not_ready": 0,
       "unknown_status_ids": [],
       "invalid_research_ready_records": [],

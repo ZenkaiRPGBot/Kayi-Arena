@@ -72,6 +72,10 @@ SECTION_EXCLUDE = {
     "anime only",
     "anime differences",
     "manga differences",
+    "live action differences",
+    "translation and dub issues",
+    "dub issues",
+    "straw hat pirates",
     "other media",
     "non canon",
     "non-canon",
@@ -99,6 +103,9 @@ PATH_EXCLUDE = {
     "references",
     "anime differences",
     "manga differences",
+    "live action differences",
+    "translation and dub issues",
+    "dub issues",
     "other media",
 }
 
@@ -702,6 +709,9 @@ def _section_excluded(section: dict[str, Any]) -> bool:
                 "anime only",
                 "anime differences",
                 "manga differences",
+                "live action",
+                "translation",
+                "dub issues",
                 "other media",
                 "movies",
                 "merchandise",
@@ -723,6 +733,9 @@ def _section_excluded(section: dict[str, Any]) -> bool:
             "anime only",
             "anime differences",
             "manga differences",
+            "live action",
+            "translation",
+            "dub issues",
             "other media",
             "movies",
             "merchandise",
@@ -1210,17 +1223,17 @@ def build_research_record(
         and ability.get("name", "").lower() not in GENERIC_ABILITY_NAMES
     ]
     cited = [ability for ability in substantive if ability.get("canonical_refs")]
-    if len(substantive) >= 2 and cited:
+    if substantive:
         status = "RESEARCH_READY"
         gate_reason = (
-            "At least two substantive demonstrated abilities were extracted, and "
-            "at least one carries a chapter citation from the inspected profile."
+            "At least one substantive demonstrated capability with a concrete "
+            "description was extracted from an inspected, traceable profile."
         )
-    elif substantive:
+    elif abilities:
         status = "PARTIAL_RESEARCH"
         gate_reason = (
-            "Substantive capability material was found, but the record does not "
-            "meet the two-ability plus cited-evidence threshold."
+            "Capability-like material was found, but no ability met the "
+            "substantive description and category threshold."
         )
     else:
         status = "INSUFFICIENT_EVIDENCE"

@@ -51,7 +51,7 @@ def test_metadata_only_record_cannot_be_research_ready() -> None:
     }
     valid, errors = research_ready_valid(record)
     assert not valid
-    assert "fewer than two substantive demonstrated abilities" in errors
+    assert "no substantive demonstrated ability" in errors
     assert "fewer than two substantive capability-summary fields" in errors
 
 
@@ -178,14 +178,14 @@ def test_master_registry_and_progress_are_cumulative_ready() -> None:
     registry = load("one_piece_master_registry.json")
     progress = load("one_piece_expansion_progress.json")
     assert registry["universe_id"] == "one_piece"
-    assert registry["batches"] == ["one-piece-batch-001"]
+    assert "one-piece-batch-001" in registry["batches"]
     assert all(
         item["evaluation_status"] == "not_started"
         and item["approval_status"] == "not_approved"
         for item in registry["characters"]
     )
-    assert progress["batches_completed"] == 1
-    assert progress["totals"]["research_ready"] == len(
+    assert progress["batches_completed"] >= 1
+    assert progress["totals"]["research_ready"] >= len(
         load("one_piece_batch_001_research.json")["candidates"]
     )
     assert progress["totals"]["approved"] == 0

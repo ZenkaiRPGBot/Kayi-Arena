@@ -21,18 +21,18 @@ manga chapters were not directly opened.
 ## 3. Candidate outcomes
 
 - Candidates investigated: 80
-- Research-ready candidates: 69
-- Partial research: 11
-- Insufficient evidence: 0
+- Research-ready candidates: 79
+- Partial research: 0
+- Insufficient evidence: 1
 - Duplicate identities excluded: 0
-- Unresolved candidates preserved: 11
+- Unresolved candidates preserved: 1
 
 ## 4. Evidence coverage
 
-- Research-ready package records: 69
-- Demonstrated ability records: 421
-- Candidates with at least one canonical chapter reference: 69/69
-- Candidates with a traceable source URL: 69/69
+- Research-ready package records: 79
+- Demonstrated ability records: 436
+- Candidates with at least one canonical chapter reference: 71/79
+- Candidates with a traceable source URL: 79/79
 - Adaptation-only sections excluded at extraction time: yes
 - Primary sources directly inspected: no
 
@@ -42,30 +42,30 @@ manga chapters were not directly opened.
 - Beasts Pirates: 4
 - Big Mom Pirates: 5
 - Blackbeard Pirates: 1
-- CP9: 4
+- CP9: 5
 - Cross Guild: 3
 - Donquixote Pirates: 1
-- Dressrosa: 1
-- Impel Down: 2
+- Dressrosa: 2
+- Impel Down: 3
 - Kozuki Clan: 2
-- Marines: 11
+- Marines: 13
 - Nine Red Scabbards: 5
 - Red Hair Pirates: 1
-- Revolutionary Army: 2
+- Revolutionary Army: 5
 - Roger Pirates: 2
 - Straw Hat Pirates: 10
 - Thriller Bark Pirates: 1
-- Whitebeard Pirates: 5
-- Worst Generation: 8
+- Whitebeard Pirates: 6
+- Worst Generation: 9
 
 ## 6. Artwork coverage
 
-- Candidates in catalogue: 69
+- Candidates in catalogue: 79
 - Technical validation valid: 80
 - Duplicate images: 0
 - Invalid images: 0
 - Missing images: 0
-- Candidates covered by valid artwork: 69/69
+- Candidates covered by valid artwork: 79/79
 
 Technical validation checks format, dimensions and checksum. Visual identity
 verification and publication permission remain separate reviews and were not
@@ -102,10 +102,9 @@ were made and no evaluator ratings were generated.
 
 ## 10. Validation
 
-- Focused One Piece Batch 001 tests: 14 passed.
-- Full repository suite: 179 passed.
-- Offline deliverable validation: catalogue, artwork, research, unresolved,
-  registry and progress checks passed.
+- Focused One Piece tests: 21 passed.
+- Full repository suite: 186 passed.
+- Offline cumulative validation: all three batches, registry, progress and gallery checks passed.
 - No network access is required by the tests or validation script.
 
 ## 11. Publication status
