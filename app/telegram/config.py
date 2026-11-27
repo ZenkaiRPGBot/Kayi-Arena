@@ -36,6 +36,17 @@ def _env_bool(name: str, default: bool = False) -> bool:
     return raw in {"1", "true", "yes", "on"}
 
 
+def _env_float(name: str, default: float, *, minimum: float = 0.0) -> float:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return default
+    try:
+        val = float(raw)
+    except ValueError:
+        return default
+    return max(minimum, val)
+
+
 def _env_int_tuple(name: str) -> tuple[int, ...]:
     raw = os.getenv(name, "").strip()
     if not raw:
@@ -87,6 +98,11 @@ class BotConfig:
     webhook_base_url: str = ""
     webhook_path: str = "/telegram/webhook"
     webhook_secret: str = ""
+    enable_self_ping: bool = False
+    ping_url: str = ""
+    self_ping_initial_delay: float = 60.0
+    self_ping_interval: float = 600.0
+    self_ping_timeout: float = 10.0
 
     def all_admin_ids(self) -> tuple[int, ...]:
         ids = list(self.admin_ids)
@@ -132,6 +148,11 @@ class BotConfig:
         webhook_base = _env_str("WEBHOOK_BASE_URL", "") or _env_str("RENDER_EXTERNAL_URL", "")
         mode_raw = _env_str("TRANSPORT_MODE", "polling").lower()
         transport_mode = "webhook" if mode_raw == "webhook" and webhook_base else "polling"
+        render_external_url = _env_str("RENDER_EXTERNAL_URL", "")
+        enable_self_ping = _env_bool("ENABLE_SELF_PING", bool(render_external_url))
+        ping_url = _env_str("PING_URL", "")
+        if not ping_url and enable_self_ping and render_external_url:
+            ping_url = render_external_url.rstrip("/") + "/ping"
 
         mongodb_uri = _env_str("MONGODB_URI", "")
         db_backend_raw = _env_str("DB_BACKEND", "").lower()
@@ -172,4 +193,9 @@ class BotConfig:
             webhook_base_url=webhook_base,
             webhook_path=_env_str("WEBHOOK_PATH", "/telegram/webhook"),
             webhook_secret=_env_str("WEBHOOK_SECRET", ""),
+            enable_self_ping=enable_self_ping,
+            ping_url=ping_url,
+            self_ping_initial_delay=_env_float("SELF_PING_INITIAL_DELAY", 60.0, minimum=0.0),
+            self_ping_interval=_env_float("SELF_PING_INTERVAL", 600.0, minimum=10.0),
+            self_ping_timeout=_env_float("SELF_PING_TIMEOUT", 10.0, minimum=1.0),
         )

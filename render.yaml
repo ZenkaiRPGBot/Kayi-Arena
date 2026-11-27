@@ -64,3 +64,9 @@ services:
         value: production
       - key: LOG_LEVEL
         value: INFO
+      - key: ENABLE_SELF_PING
+        value: "true"
+      - key: SELF_PING_INITIAL_DELAY
+        value: "60"
+      - key: SELF_PING_INTERVAL
+        value: "600"

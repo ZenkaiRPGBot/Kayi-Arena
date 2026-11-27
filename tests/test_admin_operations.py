@@ -310,4 +310,102 @@ def test_transport_mode_configuration_and_webhook_app(monkeypatch: pytest.Monkey
 
     app = build_health_app(extra_status={"transport_mode": "polling"})
     routes = {r.resource.canonical for r in app.router.routes() if r.resource is not None}
-    assert "/" in routes and "/health" in routes
+    assert "/" in routes and "/ping" in routes and "/health" in routes
+
+
+@pytest.mark.asyncio
+async def test_health_endpoints_liveness_readiness_and_self_ping_config(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    import asyncio
+    from aiohttp.test_utils import TestClient, TestServer
+    from app.telegram.web import run_self_ping_loop
+
+    # Local dev defaults: self-ping disabled when RENDER_EXTERNAL_URL is unset
+    monkeypatch.delenv("RENDER_EXTERNAL_URL", raising=False)
+    monkeypatch.delenv("ENABLE_SELF_PING", raising=False)
+    monkeypatch.delenv("PING_URL", raising=False)
+    monkeypatch.delenv("SELF_PING_INITIAL_DELAY", raising=False)
+    monkeypatch.delenv("SELF_PING_INTERVAL", raising=False)
+    monkeypatch.delenv("SELF_PING_TIMEOUT", raising=False)
+    local_cfg = BotConfig.from_env()
+    assert local_cfg.enable_self_ping is False
+    assert local_cfg.ping_url == ""
+
+    # Render environment: auto-enables self-ping with /ping fallback
+    monkeypatch.setenv("RENDER_EXTERNAL_URL", "https://kayi-arena.onrender.com")
+    render_cfg = BotConfig.from_env()
+    assert render_cfg.enable_self_ping is True
+    assert render_cfg.ping_url == "https://kayi-arena.onrender.com/ping"
+    assert render_cfg.self_ping_interval == 600.0
+
+    # /ping must NOT call readiness_check (no unnecessary DB ops)
+    db_calls = 0
+    db_ok = True
+
+    def _readiness() -> tuple[bool, str]:
+        nonlocal db_calls
+        db_calls += 1
+        return (True, "mongodb-ok") if db_ok else (False, "mongodb-unreachable")
+
+    app = build_health_app(readiness_check=_readiness, extra_status={"transport_mode": "webhook"})
+    async with TestClient(TestServer(app)) as client:
+        r_root = await client.get("/")
+        assert r_root.status == 200
+        assert (await r_root.json())["status"] == "ok"
+        assert db_calls == 0
+
+        r_ping = await client.get("/ping")
+        assert r_ping.status == 200
+        ping_body = await r_ping.json()
+        assert ping_body["status"] == "ok"
+        assert "uptime" in ping_body
+        assert db_calls == 0
+
+        r_health_ok = await client.get("/health")
+        assert r_health_ok.status == 200
+        assert (await r_health_ok.json())["database"] == "mongodb-ok"
+        assert db_calls == 1
+
+        db_ok = False
+        r_health_bad = await client.get("/health")
+        assert r_health_bad.status == 503
+        assert (await r_health_bad.json())["status"] == "degraded"
+
+    # Self-ping loop reuses one session, survives failures, and stops on stop_event
+    sessions_created = 0
+    get_calls = 0
+    stop_event = asyncio.Event()
+
+    class _FakeResp:
+        status = 200
+        async def __aenter__(self):
+            return self
+        async def __aexit__(self, *args):
+            return False
+
+    class _FakeSession:
+        async def __aenter__(self):
+            nonlocal sessions_created
+            sessions_created += 1
+            return self
+        async def __aexit__(self, *args):
+            return False
+        def get(self, url: str):
+            nonlocal get_calls
+            get_calls += 1
+            if get_calls == 1:
+                raise RuntimeError("transient network error")
+            if get_calls >= 2:
+                stop_event.set()
+            return _FakeResp()
+
+    await run_self_ping_loop(
+        ping_url="https://kayi-arena.onrender.com/ping",
+        stop_event=stop_event,
+        initial_delay=0.0,
+        interval=0.01,
+        session_factory=_FakeSession,
+    )
+    assert sessions_created == 1
+    assert get_calls == 2

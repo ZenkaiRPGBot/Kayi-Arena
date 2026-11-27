@@ -15,7 +15,7 @@ from app.persistence import create_match_store
 from app.telegram.bot import create_bot, create_dispatcher, register_bot_commands
 from app.telegram.config import BotConfig
 from app.telegram.restart_notify import build_restart_notifier
-from app.telegram.web import build_health_app, start_http_server
+from app.telegram.web import build_health_app, run_self_ping_loop, start_http_server
 
 logger = logging.getLogger(__name__)
 
@@ -130,6 +130,26 @@ async def run_bot() -> None:
     )
 
     stop_event = asyncio.Event()
+    ping_task: asyncio.Task[None] | None = None
+    if config.enable_self_ping and config.ping_url:
+        ping_task = asyncio.create_task(
+            run_self_ping_loop(
+                ping_url=config.ping_url,
+                stop_event=stop_event,
+                initial_delay=config.self_ping_initial_delay,
+                interval=config.self_ping_interval,
+                timeout_seconds=config.self_ping_timeout,
+            ),
+            name="kayi-arena-self-ping",
+        )
+        logger.info(
+            "Self-ping enabled (url=%s, interval=%.0fs)",
+            config.ping_url,
+            config.self_ping_interval,
+        )
+    elif config.enable_self_ping:
+        logger.warning("ENABLE_SELF_PING is true but PING_URL and RENDER_EXTERNAL_URL are empty.")
+
     loop = asyncio.get_running_loop()
     for sig in (signal.SIGINT, signal.SIGTERM):
         try:
@@ -175,6 +195,13 @@ async def run_bot() -> None:
             for task in pending:
                 task.cancel()
     finally:
+        stop_event.set()
+        if ping_task is not None and not ping_task.done():
+            ping_task.cancel()
+            try:
+                await ping_task
+            except asyncio.CancelledError:
+                pass
         if not notify_task.done():
             notify_task.cancel()
         await coordinator.shutdown()
