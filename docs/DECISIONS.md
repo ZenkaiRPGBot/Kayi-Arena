@@ -60,3 +60,80 @@
 
 3. **Canonical Serialization**
    - `canonical_json()` uses `json.dumps(..., sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)` so UTF-8 Unicode characters serialize directly without `\uXXXX` escaping, floats/NaN/Infinity are forbidden, and optional empty `details` are omitted.
+
+## Module 4A: Database Foundation
+
+1. **Zero-dependency SQLite persistence (`app/database/`)**
+   - Uses Python 3.12 stdlib `sqlite3` with `PRAGMA foreign_keys = ON` and transactional writes, supporting both `:memory:` and persistent file databases.
+   - Implements Module 3's `DatasetReader` protocol directly (`load_manifest`, `get_character`) and exports Module 1-compatible `(catalog, rarity_weights, dataset_version)` via `export_draft_catalog()`.
+
+2. **Five rarity tiers & configurable minimums**
+   - Enforces exact 5 rarity tiers: `Common`, `Uncommon`, `Rare`, `Epic`, `Legendary` with configurable positive universe draw weights.
+   - Enforces Module 1's hard floor of `14` characters while keeping each universe's `min_pool_size` configurable (`>= 14`).
+
+3. **Publication safeguards & mandatory advisory health reports**
+   - Production datasets require active universe, `EvaluationStatus.APPROVED` records only, verified `ImageValidationStatus.VERIFIED` metadata, valid 5-tier rarities, and Module 2 `validate_manifest_for_publication()` (`DV1`–`DV8`).
+   - Generates mandatory `DatasetHealthReport` (rarity, Power, Fit, specialist, healer, concentration, tie frequencies, and Module 2 `compute_diagnostics()`) without imposing artificial caps, mandatory healer quotas, or pity systems.
+
+4. **Parallel development contract (`KA-IMPORT-1.0`)**
+   - Documented in `docs/IMPORT_FORMAT.md`; supports incomplete candidate imports (`draft` status) and AI evaluation batches independently of external providers/scrapers.
+
+## Module 5: Challenge & Match Management
+
+1. **Global & per-match concurrency isolation**
+   - `_global_lock` serializes challenge creation, acceptance, cancellation, expiration, and global `_active_match_by_player` checks.
+   - Per-match `asyncio.Lock` serializes all drafting, timeout, forfeit, and resolution transitions.
+
+2. **Timer & stale-timeout protection**
+   - `turn_started_at` is updated only when a draft starts or `assign_role` advances the turn; `skip_character` leaves `turn_started_at` unchanged.
+   - `handle_turn_timeout` revalidates `(expected_revision, expected_turn_number)` atomically under the match lock before offering an inactivity claim.
+   - `ProvisionalTimeoutPolicy` durations (`300s` challenge, `90s` turn, `60s` claim) are explicitly provisional pending owner confirmation.
+
+3. **Dataset pinning & resolution boundary**
+   - `accept_challenge` pins the universe's latest published `dataset_version` and rarity weights at match creation; later publications never affect active matches.
+   - Prematurely terminated matches (`FORFEITED`, `INACTIVITY_WIN`, `ABANDONED`, `TERMINATED_*`) never enter Module 3 resolution (`TERMINATED_MATCH_CANNOT_RESOLVE`).
+
+### Owner-Approved Updates (Timer & Rarity Defaults)
+- **Approved initial `TimeoutPolicy` (pinned per match):** `120s` turn duration, `300s` challenge expiration, `60s` inactivity response window, and `1` `60s` extension per player per match granted only by their opponent (`grant_turn_extension`).
+- **Approved initial `DEFAULT_RARITY_WEIGHTS`:** `Common` 30%, `Uncommon` 30%, `Rare` 22%, `Epic` 13%, `Legendary` 5% (configurable per universe, pinned at match creation).
+
+## Module 6: Telegram UI & User Experience
+
+1. **Framework & Kayi Bots Parity**
+   - Uses `aiogram` (`>=3.13,<4.0`) with `ParseMode.HTML`, `InlineKeyboardButton(..., style=...)` (`primary`, `success`, `danger`), and Kayi Bots links (`https://t.me/qouba`, `https://t.me/KayiBots`).
+   - Reuses the `RestartNotifier` pattern (`Kayi Arena Online 🟢`, IST time, per-commit dedup) without claiming in-memory matches are restored prior to Module 7.
+
+2. **Public Command & Two-Message Match Architecture**
+   - Public gameplay command is `/arena` (replacing `/draft` in all public commands, docs, and UI); internal engine/module naming remains unchanged.
+   - Active matches project onto two edited Telegram messages (Permanent Draft Board + Interactive Character Card) via `ArenaTelegramCoordinator`, committing `MatchManager` transitions before rendering.
+   - Detailed Results (`1/7`–`7/7`) use viewer-specific messages so one player's pagination never mutates the shared result board for others.
+
+3. **Rarity Points v0.2 (`RARITY-0.2`)**
+   - Implemented in `app/scoring/rarity_v02.py` (`classify_rarity_v02`) separately from `SCORE-1.0` and Telegram presentation, with optional provisional Naruto Healer floors (`Healer Fit 4 -> Rare`, `Healer Fit 5 -> Epic`).
+
+
+## Module 7: Durable Persistence & Recovery
+
+1. **Restart-Safe Wall-Clock Deadlines**
+   - `MatchManager` defaults `clock` to `time.time` (epoch seconds) so persisted `expires_at`, `turn_deadline_at`, and `inactivity_claim_expires_at` remain valid across process restarts while preserving `clock` injection for deterministic tests.
+
+2. **Downtime Inactivity Policy (Flagged for Owner Confirmation if Changed)**
+   - If a turn deadline expires while the bot is offline, startup recovery transitions the match to the 60s inactivity claim prompt (`now + claim_window_seconds`) rather than fabricating an automatic victory.
+   - If an already-open 60s inactivity claim window expires during downtime, startup recovery abandons the match (`MUTUAL_INACTIVITY_ABANDONMENT`, no winner, no rating change).
+
+3. **Free Render Web Service & Durable Storage Strategy**
+   - `SqliteMatchStore` uses `WAL` mode, `BEGIN IMMEDIATE`, `schema_migrations`, and database-level `active_player_locks`.
+   - `render.yaml` targets a free Render Web Service (`type: web`, `plan: free`, `healthCheckPath: /health`, without `maxShutdownDelaySeconds`) running a lightweight `aiohttp` server (`/` and `/health`) on `0.0.0.0:$PORT` alongside Telegram polling.
+   - Because Render Free Web Services have an ephemeral filesystem, SQLite state is durable within a running container but resets on redeploys; production persistence across redeploys requires a persistent disk or external managed database.
+
+
+## Module 9: Admin Operations & Deployment Readiness
+
+1. **Owner/Admin Authorization & Auditability**
+   - `/admin` and all `adm:*` callbacks independently verify `BotConfig.is_admin(user_id)` (`OWNER_ID` + `ADMIN_IDS`) and restrict operations to private chats. All mutating actions write to `admin_audit_log` (SQLite Schema v2).
+
+2. **Dual Transport Mode (`polling` vs `webhook`)**
+   - `BotConfig.from_env()` supports `TRANSPORT_MODE=polling` (calling `delete_webhook` on startup to prevent `409 Conflict`) or `TRANSPORT_MODE=webhook` (registering `SimpleRequestHandler` on `aiohttp` when `WEBHOOK_BASE_URL` or `RENDER_EXTERNAL_URL` is set, recommended for sleeping free Render Web Services). Only one mode runs at a time.
+
+3. **Deferred Module 8**
+   - Competitive ratings, rank thresholds, rewards, and seasonal progression remain explicitly deferred; existing `ProfileStatsProvider` integration ports are preserved.

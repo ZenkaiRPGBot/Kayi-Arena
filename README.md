@@ -3,8 +3,8 @@
 Competitive Telegram-based anime character drafting game under the **Kayi Bots** ecosystem.
 
 - **Bot name:** Kayi Arena (`@KayiArenaBot`)
-- **Primary gameplay command:** `/draft`
-- **Current status:** **Module 1 (Core Drafting Engine)**, **Module 2 (Character Evaluation & Scoring)**, and **Module 3 (Match Resolution)** implemented and verified; Modules 4–9 are awaiting specification.
+- **Primary gameplay command:** `/arena`
+- **Current status:** **Modules 1–7 and Module 9** (Core Drafting, Scoring `SCORE-1.0`, Match Resolution `RES-1.0`, Database Foundation, Character Content Tooling, Challenge & Match Management, Telegram UI & UX, Durable Persistence & Recovery, Admin Operations & Deployment Readiness) implemented and verified; Module 8 (Competitive Progression) is deferred.
 
 ## Setup
 
@@ -57,20 +57,43 @@ Notes:
 | 1 | Core Drafting Engine | Implemented & Tested (`v1.0`) |
 | 2 | Character Evaluation & Scoring | Implemented & Tested (`SCORE-1.0`) |
 | 3 | Match Resolution | Implemented & Tested (`RES-1.0`) |
-| 4 | Universe & Character Database | Awaiting Planning |
-| 5 | Challenge & Match Management | Awaiting Planning |
-| 6 | Telegram UI & User Experience | Awaiting Planning |
-| 7 | Persistence & Game Recovery | Awaiting Planning |
+| 4A | Universe & Character Database (Foundation) | Implemented & Tested (`SQLite` + `KA-IMPORT-1.0`) |
+| 4B | Catalogue & Image Tooling | In Progress (Parallel Branch) |
+| 5 | Challenge & Match Management | Implemented & Tested |
+| 6 | Telegram UI & User Experience | Implemented & Tested (`aiogram` 3) |
+| 7 | Persistence & Game Recovery | Implemented & Tested (`SQLite` + `WAL`) |
 | 8 | Profiles & Competitive Progression | Awaiting Planning |
-| 9 | Administration & Bot Operations | Awaiting Planning |
+| 9 | Administration & Bot Operations | Implemented & Tested (`/admin` + Render Web) |
 
 ## Documentation
 
 - [Module 1 Specification](docs/MODULE_01_CORE_DRAFTING_ENGINE.md)
 - [Module 2 Final Scoring Specification](docs/Kayi%20Arena%20%E2%80%94%20Module%202%20Final%20Scoring%20Specification%20%26%20Implementation%20Handoff%20v1.0.md)
 - [Module 3 Match Resolution Specification](docs/MODULE_03_MATCH_RESOLUTION_SPECIFICATION.md)
+- [Module 5 Challenge & Match Management Specification](docs/MODULE_05_MATCH_MANAGEMENT_SPECIFICATION.md)
+- [Module 6 Telegram UI & UX Specification](docs/MODULE_06_TELEGRAM_UI_SPECIFICATION.md)
+- [Module 7 Persistence & Recovery Specification](docs/MODULE_07_PERSISTENCE_RECOVERY_SPECIFICATION.md)
+- [Module 9 Admin Operations Specification](docs/MODULE_09_ADMIN_OPERATIONS_SPECIFICATION.md)
+- [Render Deployment Guide](docs/RENDER_DEPLOYMENT_GUIDE.md)
+- [Telegram Smoke Test Checklist](docs/TELEGRAM_SMOKE_TEST_CHECKLIST.md)
+- [Versioned JSON Import Format (`KA-IMPORT-1.0`)](docs/IMPORT_FORMAT.md)
 - [Progress Tracker](docs/PROGRESS.md)
 - [Architecture & Technical Decisions](docs/DECISIONS.md)
 - [Module 1 Implementation Report](docs/MODULE_01_IMPLEMENTATION_REPORT.md)
 - [Module 2 Implementation Report](docs/MODULE_02_IMPLEMENTATION_REPORT.md)
 - [Module 3 Implementation Report](docs/MODULE_03_IMPLEMENTATION_REPORT.md)
+- [Module 4A Implementation Report](docs/MODULE_04A_IMPLEMENTATION_REPORT.md)
+- [Module 5 Implementation Report](docs/MODULE_05_IMPLEMENTATION_REPORT.md)
+- [Module 6 Implementation Report](docs/MODULE_06_IMPLEMENTATION_REPORT.md)
+- [Module 7 Implementation Report](docs/MODULE_07_IMPLEMENTATION_REPORT.md)
+- [Module 9 Implementation Report](docs/MODULE_09_IMPLEMENTATION_REPORT.md)
+- [Naruto Initial Integration Report](docs/NARUTO_INITIAL_INTEGRATION_REPORT.md)
+- [Naruto 60 Consolidated Review Report](docs/NARUTO_60_CONSOLIDATED_REVIEW_REPORT.md)
+
+## Running the Telegram Bot
+
+```powershell
+copy .env.example .env
+# Set BOT_TOKEN (and optionally OWNER_ID / LOG_CHANNEL_ID) in .env
+python -m app.main
+```
