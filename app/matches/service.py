@@ -28,6 +28,7 @@ from app.matches.models import (
     ChallengeType,
     DraftCommandSelection,
     ManagedMatch,
+    MatchDisplayState,
     MatchLifecycleStatus,
     MatchOperationResult,
     MatchOutcomeReason,
@@ -728,6 +729,31 @@ class MatchManager:
                     match=match,
                 )
             now = self.clock()
+            held = res.snapshot.held_character
+            if held is not None:
+                try:
+                    char_rec = self.db.get_character_entry(held.character_id)
+                except Exception:
+                    char_rec = None
+                char_name = char_rec.name if char_rec is not None else held.character_id
+                char_rarity = (
+                    char_rec.rarity
+                    if char_rec is not None
+                    else getattr(getattr(held, "rarity_tier", None), "value", "Common")
+                )
+                new_display = MatchDisplayState(
+                    last_character_id=held.character_id,
+                    last_character_name=char_name,
+                    last_character_rarity=char_rarity,
+                    last_action="obtained",
+                    assigned_role=None,
+                    assigned_by_player_id=None,
+                    media_ref=None,
+                    card_is_photo=match.display_state.card_is_photo,
+                    extension_granted_note=False,
+                )
+            else:
+                new_display = match.display_state
             updated = ManagedMatch(
                 **{
                     **{f: getattr(match, f) for f in match.__slots__},
@@ -735,6 +761,7 @@ class MatchManager:
                     "public_view": res.public_view,
                     "generation": match.generation + 1,
                     "updated_at": now,
+                    "display_state": new_display,
                 }
             )
             self._persist_match(updated)
@@ -774,6 +801,18 @@ class MatchManager:
                 )
             now = self.clock()
             # Note: turn_started_at is preserved so skip never resets the turn timer.
+            ds = match.display_state
+            new_display = MatchDisplayState(
+                last_character_id=ds.last_character_id,
+                last_character_name=ds.last_character_name,
+                last_character_rarity=ds.last_character_rarity,
+                last_action="skipped",
+                assigned_role=None,
+                assigned_by_player_id=None,
+                media_ref=ds.media_ref,
+                card_is_photo=ds.card_is_photo,
+                extension_granted_note=False,
+            )
             updated = ManagedMatch(
                 **{
                     **{f: getattr(match, f) for f in match.__slots__},
@@ -781,6 +820,7 @@ class MatchManager:
                     "public_view": res.public_view,
                     "generation": match.generation + 1,
                     "updated_at": now,
+                    "display_state": new_display,
                 }
             )
             self._persist_match(updated)
@@ -875,6 +915,18 @@ class MatchManager:
                 return MatchOperationResult(accepted=True, match=completed_match)
 
             # Turn passed cleanly -> start new turn timer and clear any prior inactivity offer
+            ds = match.display_state
+            new_display = MatchDisplayState(
+                last_character_id=ds.last_character_id,
+                last_character_name=ds.last_character_name,
+                last_character_rarity=ds.last_character_rarity,
+                last_action="assigned",
+                assigned_role=role,
+                assigned_by_player_id=player_id,
+                media_ref=ds.media_ref,
+                card_is_photo=ds.card_is_photo,
+                extension_granted_note=False,
+            )
             updated = ManagedMatch(
                 **{
                     **{f: getattr(match, f) for f in match.__slots__},
@@ -887,6 +939,7 @@ class MatchManager:
                     "inactivity_claim_offered_to": None,
                     "inactivity_claim_expires_at": None,
                     "updated_at": now,
+                    "display_state": new_display,
                 }
             )
             self._persist_match(updated)
@@ -1067,6 +1120,18 @@ class MatchManager:
             new_ext = dict(match.extensions_remaining)
             new_ext[active] = remaining - 1
             new_deadline = max(now, match.turn_deadline_at) + match.timeout_policy.extension_seconds
+            ds = match.display_state
+            new_display = MatchDisplayState(
+                last_character_id=ds.last_character_id,
+                last_character_name=ds.last_character_name,
+                last_character_rarity=ds.last_character_rarity,
+                last_action=ds.last_action,
+                assigned_role=ds.assigned_role,
+                assigned_by_player_id=ds.assigned_by_player_id,
+                media_ref=ds.media_ref,
+                card_is_photo=ds.card_is_photo,
+                extension_granted_note=True,
+            )
             updated = ManagedMatch(
                 **{
                     **{f: getattr(match, f) for f in match.__slots__},
@@ -1076,6 +1141,7 @@ class MatchManager:
                     "inactivity_claim_offered_to": None,
                     "inactivity_claim_expires_at": None,
                     "updated_at": now,
+                    "display_state": new_display,
                 }
             )
             self._persist_match(updated)
@@ -1204,6 +1270,7 @@ class MatchManager:
                 winner_id=None,
                 loser_id=None,
                 affects_rating=False,
+                inactive_player_id=match.draft_snapshot.active_player_id,
                 resolution=None,
                 terminal_record=term_res.terminal_record,
             )
@@ -1401,6 +1468,47 @@ class MatchManager:
             self._matches[match_id] = updated
             return MatchOperationResult(accepted=True, match=updated)
 
+    async def update_display_state(
+        self,
+        match_id: str,
+        *,
+        media_ref: str | None = None,
+        card_is_photo: bool | None = None,
+        last_character_name: str | None = None,
+    ) -> MatchOperationResult:
+        """Persist non-gameplay display metadata (artwork file_id / photo flag) without bumping generation."""
+        async with self._lock_for_match(match_id):
+            match = self._matches.get(match_id)
+            if match is None:
+                return MatchOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.MATCH_NOT_FOUND,
+                    message="Match not found",
+                )
+            ds = match.display_state
+            new_display = MatchDisplayState(
+                last_character_id=ds.last_character_id,
+                last_character_name=last_character_name if last_character_name is not None else ds.last_character_name,
+                last_character_rarity=ds.last_character_rarity,
+                last_action=ds.last_action,
+                assigned_role=ds.assigned_role,
+                assigned_by_player_id=ds.assigned_by_player_id,
+                media_ref=media_ref if media_ref is not None else ds.media_ref,
+                card_is_photo=card_is_photo if card_is_photo is not None else ds.card_is_photo,
+                extension_granted_note=ds.extension_granted_note,
+            )
+            if new_display == ds:
+                return MatchOperationResult(accepted=True, match=match)
+            updated = ManagedMatch(
+                **{
+                    **{f: getattr(match, f) for f in match.__slots__},
+                    "display_state": new_display,
+                }
+            )
+            self._persist_match(updated)
+            self._matches[match_id] = updated
+            return MatchOperationResult(accepted=True, match=updated)
+
     async def recover_from_store(
         self,
     ) -> tuple[
@@ -1468,6 +1576,7 @@ class MatchManager:
                             winner_id=None,
                             loser_id=None,
                             affects_rating=False,
+                            inactive_player_id=match.draft_snapshot.active_player_id,
                             resolution=None,
                             terminal_record=term_res.terminal_record,
                         )

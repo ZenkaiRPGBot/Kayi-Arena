@@ -289,6 +289,7 @@ async def cmd_game(message: Message, coordinator: ArenaTelegramCoordinator) -> N
         )
         return
 
+    group_chat_id = coordinator.match_chat_id(match) or ""
     await send_message_safe(
         coordinator.bot,
         chat_id=message.chat.id,
@@ -297,6 +298,8 @@ async def cmd_game(message: Message, coordinator: ArenaTelegramCoordinator) -> N
             requester_id=player_id,
             universe_name=coordinator.universe_name(match.universe_id),
             player_names=coordinator.player_names_for_match(match),
+            group_title=coordinator.chat_title(group_chat_id) if group_chat_id else None,
+            group_link=coordinator.build_group_link(group_chat_id) if group_chat_id else None,
         ),
         reply_markup=build_active_game_keyboard(
             match,

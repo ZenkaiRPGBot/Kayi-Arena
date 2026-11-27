@@ -11,6 +11,7 @@ from app.matches.models import (
     ChallengeStatus,
     ChallengeType,
     ManagedMatch,
+    MatchDisplayState,
     MatchLifecycleStatus,
     MatchOutcomeReason,
     MatchOutcomeSummary,
@@ -219,4 +220,34 @@ def outcome_from_dict(data: Mapping[str, Any]) -> MatchOutcomeSummary:
         inactive_player_id=data.get("inactive_player_id"),
         resolution=resolution_from_dict(res_raw) if res_raw is not None else None,
         terminal_record=TerminalRecord.from_dict(term_raw) if term_raw is not None else None,
+    )
+
+
+def display_state_to_dict(state: MatchDisplayState) -> dict[str, Any]:
+    return {
+        "last_character_id": state.last_character_id,
+        "last_character_name": state.last_character_name,
+        "last_character_rarity": state.last_character_rarity,
+        "last_action": state.last_action,
+        "assigned_role": state.assigned_role,
+        "assigned_by_player_id": state.assigned_by_player_id,
+        "media_ref": state.media_ref,
+        "card_is_photo": bool(state.card_is_photo),
+        "extension_granted_note": bool(state.extension_granted_note),
+    }
+
+
+def display_state_from_dict(data: Mapping[str, Any] | None) -> MatchDisplayState:
+    if not data:
+        return MatchDisplayState()
+    return MatchDisplayState(
+        last_character_id=data.get("last_character_id"),
+        last_character_name=data.get("last_character_name"),
+        last_character_rarity=data.get("last_character_rarity"),
+        last_action=data.get("last_action"),
+        assigned_role=data.get("assigned_role"),
+        assigned_by_player_id=data.get("assigned_by_player_id"),
+        media_ref=data.get("media_ref"),
+        card_is_photo=bool(data.get("card_is_photo", False)),
+        extension_granted_note=bool(data.get("extension_granted_note", False)),
     )

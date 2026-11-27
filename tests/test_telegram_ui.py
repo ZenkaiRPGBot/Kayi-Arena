@@ -687,7 +687,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
                 recorder=bot,
             ),
         )
-        assert "expired" in bot.callback_answers[-1]["text"].lower()
+        assert "outdated" in bot.callback_answers[-1]["text"].lower()
 
         # Verify revealed card has NO hidden ratings
         last_caption = bot.edited_media[-1]["media"].caption if bot.edited_media else ""
@@ -703,7 +703,7 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
         rk = build_character_revealed_keyboard(match)
         role_btns = [b for row in rk.inline_keyboard[:-1] for b in row]
         assert len(role_btns) == len(open_roles)
-        assert all(b.model_dump(exclude_none=True)["style"] == "success" for b in role_btns)
+        assert all("style" not in b.model_dump(exclude_none=True) for b in role_btns)
 
         upd_id += 1
         await dp.feed_update(
@@ -739,10 +739,10 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
             recorder=bot,
         ),
     )
-    detail_text = bot.sent_messages[-1]["text"]
-    assert "Matchup Details" in detail_text
-    assert "Captain Fit:" in detail_text
-    assert "Healer Fit:" not in detail_text  # Other 6 fits must NOT be revealed!
+    detail_text = bot.edited_messages[-1]["text"]
+    assert "𝐁𝐀𝐓𝐓𝐋𝐄 𝐁𝐑𝐄𝐀𝐊𝐃𝐎𝐖𝐍" in detail_text
+    assert "Power / Role Fit / Score" in detail_text
+    assert "Total Score —" in detail_text
 
     await coordinator.shutdown()
     db.close()
@@ -861,10 +861,10 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
     old_state = await coordinator.start_match_ui(match, chat_id="-1001")
     assert old_state is not None
 
-    # /game -> Recover Game
+    # /game -> Recover button (gr) -> Confirm Recovery (grc)
     await dp.feed_update(bot, _make_message_update(3, chat_id=101, chat_type="private", user=alex, text="/game"))
-    game_msg_id = 100 + len(bot.sent_messages)
-    assert "Your Active Match" in bot.sent_messages[-1]["text"]
+    game_msg_id = bot.next_msg_id
+    assert "𝐀𝐂𝐓𝐈𝐕𝐄 𝐌𝐀𝐓𝐂𝐇" in bot.sent_messages[-1]["text"]
 
     await dp.feed_update(
         bot,
@@ -874,17 +874,12 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
             chat_type="private",
             message_id=game_msg_id,
             user=alex,
-            data=encode_cb("gg", match.match_id),
+            data=encode_cb("gr", match.match_id),
             recorder=bot,
         ),
     )
-    new_state = coordinator._match_ui[match.match_id]
-    assert new_state.last_action_line == "Game recovered."
-    recovered_match = mgr.get_match(match.match_id)
-    assert recovered_match is not None and recovered_match.generation > match.generation
+    assert "𝐑𝐄𝐂𝐎𝐕𝐄𝐑 𝐌𝐀𝐓𝐂𝐇" in bot.edited_messages[-1]["text"]
 
-    # Forfeit confirmation -> Yes, Forfeit (use latest generation after recovery)
-    latest_gen = recovered_match.generation
     await dp.feed_update(
         bot,
         _make_callback_update(
@@ -893,31 +888,55 @@ async def test_game_recovery_forfeit_inactivity_and_catalogue() -> None:
             chat_type="private",
             message_id=game_msg_id,
             user=alex,
+            data=encode_cb("grc", match.match_id, match.generation),
+            recorder=bot,
+        ),
+    )
+    new_state = coordinator._match_ui[match.match_id]
+    assert new_state.board_message_id != old_state.board_message_id
+    assert new_state.card_message_id != old_state.card_message_id
+    recovered_match = mgr.get_match(match.match_id)
+    assert recovered_match is not None and recovered_match.generation > match.generation
+
+    # Open fresh /game screen and press Forfeit -> separate temporary confirmation message
+    await dp.feed_update(bot, _make_message_update(6, chat_id=101, chat_type="private", user=alex, text="/game"))
+    fresh_game_msg_id = bot.next_msg_id
+    latest_gen = recovered_match.generation
+    await dp.feed_update(
+        bot,
+        _make_callback_update(
+            7,
+            chat_id=101,
+            chat_type="private",
+            message_id=fresh_game_msg_id,
+            user=alex,
             data=encode_cb("gf", match.match_id, latest_gen),
             recorder=bot,
         ),
     )
-    assert "Forfeit match?" in bot.edited_messages[-1]["text"]
+    assert "𝐂𝐎𝐍𝐅𝐈𝐑𝐌 𝐒𝐔𝐑𝐑𝐄𝐍𝐃𝐄𝐑" in bot.sent_messages[-1]["text"]
+    confirm_msg_id = bot.next_msg_id
 
     await dp.feed_update(
         bot,
         _make_callback_update(
-            6,
+            8,
             chat_id=101,
             chat_type="private",
-            message_id=game_msg_id,
+            message_id=confirm_msg_id,
             user=alex,
-            data=encode_cb("gfc", match.match_id, latest_gen),
+            data=encode_cb("gfc", match.match_id, latest_gen, "101"),
             recorder=bot,
         ),
     )
     forfeited = mgr.get_match(match.match_id)
     assert forfeited is not None
     assert forfeited.status is MatchLifecycleStatus.FORFEITED
-    # Forfeit result must NOT invent 7 matchups (board is edited before card)
-    board_result = bot.edited_messages[-2]["text"]
-    assert "WINS BY FORFEIT" in board_result
-    assert "Combined Score" not in board_result
+    # Forfeit result must NOT invent 7 matchups
+    board_result = bot.edited_messages[-1]["text"]
+    assert "𝐀𝐑𝐄𝐍𝐀 𝐑𝐄𝐒𝐔𝐋𝐓" in board_result
+    assert "Forfeit" in board_result
+    assert "𝐓𝐄𝐀𝐌 𝐒𝐂𝐎𝐑𝐄𝐒" not in board_result
 
     await coordinator.shutdown()
     db.close()

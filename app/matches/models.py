@@ -70,6 +70,21 @@ class MessageReference:
 
 
 @dataclass(frozen=True, slots=True)
+class MatchDisplayState:
+    """Durable UI display state for character artwork retention and recovery."""
+
+    last_character_id: str | None = None
+    last_character_name: str | None = None
+    last_character_rarity: str | None = None
+    last_action: str | None = None  # "obtained" | "assigned" | "skipped"
+    assigned_role: str | None = None
+    assigned_by_player_id: str | None = None
+    media_ref: str | None = None
+    card_is_photo: bool = False
+    extension_granted_note: bool = False
+
+
+@dataclass(frozen=True, slots=True)
 class ChallengeRecord:
     """Immutable challenge state snapshot."""
 
@@ -127,6 +142,7 @@ class ManagedMatch:
     inactivity_claim_expires_at: float | None = None
     message_refs: tuple[MessageReference, ...] = ()
     outcome: MatchOutcomeSummary | None = None
+    display_state: MatchDisplayState = field(default_factory=MatchDisplayState)
 
 
 @dataclass(frozen=True, slots=True)

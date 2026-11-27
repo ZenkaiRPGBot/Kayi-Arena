@@ -26,13 +26,15 @@ from app.persistence.models import (
     CorruptStateError,
     HistoricalMatchRecord,
     PersistenceError,
+    display_state_from_dict,
+    display_state_to_dict,
     outcome_from_dict,
     outcome_to_dict,
     timeout_policy_from_dict,
     timeout_policy_to_dict,
 )
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 _MIGRATIONS: dict[int, tuple[str, ...]] = {
     1: (
@@ -184,6 +186,9 @@ _MIGRATIONS: dict[int, tuple[str, ...]] = {
         """,
         "CREATE INDEX IF NOT EXISTS idx_media_assets_char ON media_assets(character_id)",
         "CREATE INDEX IF NOT EXISTS idx_media_assets_univ ON media_assets(universe_id, upload_status)",
+    ),
+    4: (
+        "ALTER TABLE matches ADD COLUMN display_state_json TEXT NOT NULL DEFAULT '{}'",
     ),
 }
 
@@ -428,6 +433,7 @@ class SqliteMatchStore:
             else None
         )
         snap_json = match.draft_snapshot.to_json()
+        display_json = json.dumps(display_state_to_dict(match.display_state), separators=(",", ":"))
 
         self._conn.execute(
             """
@@ -437,8 +443,8 @@ class SqliteMatchStore:
                 turn_started_at, turn_deadline_at, turn_number_at_start,
                 inactivity_claim_offered_to, inactivity_claim_expires_at,
                 created_at, updated_at, draft_snapshot_json, timeout_policy_json,
-                extensions_remaining_json, message_refs_json, outcome_json
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                extensions_remaining_json, message_refs_json, outcome_json, display_state_json
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(match_id) DO UPDATE SET
                 status = excluded.status,
                 generation = excluded.generation,
@@ -453,7 +459,8 @@ class SqliteMatchStore:
                 timeout_policy_json = excluded.timeout_policy_json,
                 extensions_remaining_json = excluded.extensions_remaining_json,
                 message_refs_json = excluded.message_refs_json,
-                outcome_json = excluded.outcome_json
+                outcome_json = excluded.outcome_json,
+                display_state_json = excluded.display_state_json
             """,
             (
                 match.match_id,
@@ -480,6 +487,7 @@ class SqliteMatchStore:
                 ext_json,
                 refs_json,
                 outcome_json,
+                display_json,
             ),
         )
 
@@ -498,6 +506,12 @@ class SqliteMatchStore:
             )
             outcome_raw = row["outcome_json"]
             outcome = outcome_from_dict(json.loads(outcome_raw)) if outcome_raw else None
+            display_raw = (
+                row["display_state_json"]
+                if "display_state_json" in row.keys() and row["display_state_json"]
+                else None
+            )
+            display_state = display_state_from_dict(json.loads(display_raw)) if display_raw else display_state_from_dict(None)
             return ManagedMatch(
                 match_id=str(row["match_id"]),
                 challenge_id=str(row["challenge_id"]),
@@ -520,6 +534,7 @@ class SqliteMatchStore:
                 inactivity_claim_expires_at=row["inactivity_claim_expires_at"],
                 message_refs=refs,
                 outcome=outcome,
+                display_state=display_state,
             )
         except Exception as exc:
             raise CorruptStateError(f"Corrupt match row {row['match_id']}: {exc}") from exc

@@ -75,6 +75,7 @@ class BotConfig:
     admin_ids: tuple[int, ...] = ()
     authorized_tester_ids: tuple[int, ...] = ()
     log_channel_id: int = 0
+    arena_log_channel_id: int = 0
     developer_url: str = DEFAULT_DEVELOPER_URL
     updates_url: str = DEFAULT_UPDATES_URL
     support_url: str = DEFAULT_SUPPORT_URL
@@ -168,6 +169,7 @@ class BotConfig:
             admin_ids=admin_ids,
             authorized_tester_ids=tester_ids,
             log_channel_id=_env_int("LOG_CHANNEL_ID", 0),
+            arena_log_channel_id=_env_int("ARENA_LOG_CHANNEL_ID", 0),
             developer_url=_env_str("DEVELOPER_URL", DEFAULT_DEVELOPER_URL),
             updates_url=_env_str("UPDATES_URL", DEFAULT_UPDATES_URL),
             support_url=_env_str("SUPPORT_URL", DEFAULT_SUPPORT_URL),

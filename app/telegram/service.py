@@ -33,6 +33,7 @@ from app.matches import (
 from app.persistence.models import StartupRecoveryReport
 from app.telegram.config import BotConfig
 from app.telegram.constants import ROLE_ORDER
+from app.telegram.gameplay_logs import GameplayLogger
 from app.telegram.media import CharacterMediaResolver
 from app.telegram.keyboards import (
     build_awaiting_shuffle_keyboard,
@@ -118,13 +119,19 @@ class ArenaTelegramCoordinator:
         self.stats_provider: ProfileStatsProvider = stats_provider or UnavailableStatsProvider()
         self.store = store
         self.media_resolver = CharacterMediaResolver(store)
+        self.gameplay_logger = GameplayLogger(bot, channel_id=config.arena_log_channel_id)
 
         self._player_names: dict[str, str] = {}
         self._player_first_names: dict[str, str] = {}
         self._player_usernames: dict[str, str] = {}
+        self._chat_titles: dict[str, str] = {}
+        self._chat_usernames: dict[str, str] = {}
         self._universe_menus: dict[tuple[str, int], UniverseMenuContext] = {}
         self._challenge_messages: dict[str, tuple[str, int]] = {}
         self._match_ui: dict[str, MatchUIState] = {}
+        self._forfeit_confirmations: dict[tuple[str, str], tuple[str, int, int]] = {}
+        self._forfeit_locks: dict[tuple[str, str], asyncio.Lock] = {}
+        self._terminal_rendered_matches: set[str] = set()
         self._detail_messages: dict[tuple[str, int], tuple[str, str]] = {}
         self._seen_updates: dict[int, float] = {}
         self._timer_tasks: dict[str, asyncio.Task[None]] = {}
@@ -272,9 +279,28 @@ class ArenaTelegramCoordinator:
     def get_handbook_owner(self, chat_id: int | str, message_id: int) -> str | None:
         return self._handbook_owners.get((str(chat_id), int(message_id)))
 
-    def register_chat(self, chat_id: int | str, chat_type: str, title: str | None = None) -> None:
+    def register_chat(
+        self,
+        chat_id: int | str,
+        chat_type: str,
+        title: str | None = None,
+        username: str | None = None,
+    ) -> None:
+        cid = str(chat_id)
+        if title:
+            self._chat_titles[cid] = title
+        if username:
+            self._chat_usernames[cid] = username.lstrip("@")
+        else:
+            self._chat_usernames.pop(cid, None)
         if self.store is not None:
-            self.store.upsert_known_chat(str(chat_id), chat_type, title)
+            self.store.upsert_known_chat(cid, chat_type, title)
+
+    def chat_title(self, chat_id: str) -> str | None:
+        return self._chat_titles.get(str(chat_id))
+
+    def chat_username(self, chat_id: str) -> str | None:
+        return self._chat_usernames.get(str(chat_id))
 
     # ------------------------------------------------------------------
     # Player & Metadata Helpers
@@ -308,7 +334,7 @@ class ArenaTelegramCoordinator:
         return self._player_names.get(player_id, player_id)
 
     def player_names_for_match(self, match: ManagedMatch) -> dict[str, str]:
-        return {pid: self.display_name(pid) for pid in match.players}
+        return {pid: self.first_name(pid) for pid in match.players}
 
     def universe_name(self, universe_id: str) -> str:
         if universe_id.strip().lower() == "random":
@@ -461,57 +487,218 @@ class ArenaTelegramCoordinator:
             bot_username=self.config.bot_username,
         )
 
-    async def start_match_ui(self, match: ManagedMatch, *, chat_id: str) -> MatchUIState | None:
-        """Send the two primary messages (board + card) for a newly started match."""
+    def match_chat_id(self, match: ManagedMatch) -> str | None:
+        state = self._match_ui.get(match.match_id)
+        if state is not None:
+            return state.chat_id
+        for ref in reversed(match.message_refs):
+            if ref.kind in {"board", "card", "game", "chat"}:
+                return ref.chat_id
+        return None
+
+    def forfeit_lock(self, match_id: str, user_id: str) -> asyncio.Lock:
+        key = (match_id, user_id)
+        lock = self._forfeit_locks.get(key)
+        if lock is None:
+            lock = asyncio.Lock()
+            self._forfeit_locks[key] = lock
+        return lock
+
+    async def _delete_or_strip_message(self, chat_id: str, message_id: int) -> None:
+        try:
+            await self.bot.delete_message(chat_id=chat_id, message_id=message_id)
+            return
+        except Exception:
+            pass
+        try:
+            await self.bot.edit_message_reply_markup(
+                chat_id=chat_id, message_id=message_id, reply_markup=None
+            )
+        except Exception:
+            pass
+
+    def get_forfeit_confirmation(
+        self, match_id: str, user_id: str
+    ) -> tuple[str, int, int] | None:
+        return self._forfeit_confirmations.get((match_id, user_id))
+
+    def register_forfeit_confirmation(
+        self, match_id: str, user_id: str, chat_id: str, message_id: int, generation: int
+    ) -> None:
+        self._forfeit_confirmations[(match_id, user_id)] = (chat_id, message_id, generation)
+
+    async def remove_forfeit_confirmation(self, match_id: str, user_id: str) -> None:
+        info = self._forfeit_confirmations.pop((match_id, user_id), None)
+        if info is not None:
+            await self._delete_or_strip_message(info[0], info[1])
+
+    async def cleanup_forfeit_confirmations(
+        self, match_id: str, *, match: ManagedMatch | None = None
+    ) -> None:
+        keys = [k for k in self._forfeit_confirmations if k[0] == match_id]
+        seen: set[tuple[str, int]] = set()
+        for k in keys:
+            info = self._forfeit_confirmations.pop(k, None)
+            if info is not None:
+                seen.add((info[0], info[1]))
+                await self._delete_or_strip_message(info[0], info[1])
+        if match is not None:
+            for ref in match.message_refs:
+                if ref.kind.startswith("fc:"):
+                    try:
+                        pair = (ref.chat_id, int(ref.message_id))
+                    except ValueError:
+                        continue
+                    if pair not in seen:
+                        seen.add(pair)
+                        await self._delete_or_strip_message(pair[0], pair[1])
+
+    async def _resolve_retained_photo(
+        self, match: ManagedMatch
+    ) -> tuple[CharacterEntry | None, Any | None]:
+        ds = match.display_state
+        if match.inactivity_claim_offered_to is None and match.draft_snapshot.held_character is not None:
+            held = match.draft_snapshot.held_character
+            rec = self.get_character_entry(held.character_id)
+            photo = await self._character_media_photo_async(rec) if rec is not None else None
+            if photo is None and ds.media_ref:
+                photo = ds.media_ref
+            return rec, photo
+
+        fallback_id = ds.last_character_id or match.draft_snapshot.last_skipped_id
+        if fallback_id:
+            rec = self.get_character_entry(fallback_id)
+            if ds.media_ref and ds.last_character_id:
+                return rec, ds.media_ref
+            photo = await self._character_media_photo_async(rec) if rec is not None else None
+            return rec, photo
+        return None, None
+
+    async def _persist_card_media_state(
+        self,
+        match: ManagedMatch,
+        *,
+        rec: CharacterEntry | None,
+        msg_obj: Any,
+        is_photo: bool,
+        fallback_photo: Any | None = None,
+    ) -> None:
+        media_ref: str | None = None
+        if is_photo and getattr(msg_obj, "photo", None):
+            fid = msg_obj.photo[-1].file_id
+            media_ref = fid
+            if rec is not None:
+                self.media_resolver.record_telegram_file_id(rec, fid)
+        elif is_photo and isinstance(fallback_photo, str) and fallback_photo:
+            media_ref = fallback_photo
+        await self.manager.update_display_state(
+            match.match_id,
+            media_ref=media_ref,
+            card_is_photo=is_photo,
+            last_character_name=rec.name if rec is not None else None,
+        )
+
+    async def start_match_ui(
+        self,
+        match: ManagedMatch,
+        *,
+        chat_id: str,
+        reuse_challenge_message_id: int | None = None,
+    ) -> MatchUIState | None:
+        """Send (or reuse challenge message for) the two primary messages (board + text-only card)."""
         names = self.player_names_for_match(match)
         u_name = self.universe_name(match.universe_id)
         char_lookup = self.char_lookup_for_match(match)
         remaining = max(0.0, match.turn_deadline_at - self.manager.clock())
-
-        board_msg = await send_message_safe(
-            self.bot,
-            chat_id=chat_id,
-            text=render_draft_board(
-                match,
-                universe_name=u_name,
-                player_names=names,
-                char_lookup=char_lookup,
-                seconds_remaining=remaining,
-                last_action_line="Match started!",
-            ),
-            reply_markup=build_draft_board_keyboard(match),
+        board_text = render_draft_board(
+            match,
+            universe_name=u_name,
+            player_names=names,
+            char_lookup=char_lookup,
+            seconds_remaining=remaining,
         )
-        if board_msg is None:
-            return None
+        board_markup = build_draft_board_keyboard(match)
 
-        card_caption = render_awaiting_shuffle_card(match, player_names=names)
-        card_msg, is_photo = await send_photo_or_text_safe(
+        board_chat_id = str(chat_id)
+        board_msg_id: int | None = None
+        if reuse_challenge_message_id is not None:
+            reused = await edit_message_text_safe(
+                self.bot,
+                chat_id=chat_id,
+                message_id=reuse_challenge_message_id,
+                text=board_text,
+                reply_markup=board_markup,
+            )
+            if reused:
+                board_msg_id = reuse_challenge_message_id
+
+        if board_msg_id is None:
+            board_msg = await send_message_safe(
+                self.bot,
+                chat_id=chat_id,
+                text=board_text,
+                reply_markup=board_markup,
+            )
+            if board_msg is None:
+                return None
+            board_chat_id = str(board_msg.chat.id)
+            board_msg_id = board_msg.message_id
+            if reuse_challenge_message_id is not None:
+                await self._delete_or_strip_message(board_chat_id, reuse_challenge_message_id)
+
+        await self.manager.replace_message_references(
+            match.match_id,
+            (MessageReference(chat_id=board_chat_id, message_id=str(board_msg_id), kind="board"),),
+            bump_generation=False,
+        )
+
+        card_text = render_awaiting_shuffle_card(
+            match, player_names=names, seconds_remaining=remaining
+        )
+        card_msg = await send_message_safe(
             self.bot,
-            chat_id=chat_id,
-            photo=self.config.card_back_ref or None,
-            caption=card_caption,
+            chat_id=board_chat_id,
+            text=card_text,
             reply_markup=build_awaiting_shuffle_keyboard(match),
         )
         if card_msg is None:
+            await self._delete_or_strip_message(board_chat_id, board_msg_id)
+            await self.manager.replace_message_references(
+                match.match_id,
+                (MessageReference(chat_id=board_chat_id, message_id="0", kind="chat"),),
+                bump_generation=False,
+            )
             return None
 
         state = MatchUIState(
-            chat_id=str(board_msg.chat.id),
-            board_message_id=board_msg.message_id,
+            chat_id=board_chat_id,
+            board_message_id=board_msg_id,
             card_message_id=card_msg.message_id,
-            card_is_photo=is_photo,
-            last_action_line="Match started!",
+            card_is_photo=False,
         )
         self._match_ui[match.match_id] = state
-        await self.manager.attach_message_reference(
+        await self.manager.replace_message_references(
             match.match_id,
-            MessageReference(chat_id=state.chat_id, message_id=str(state.board_message_id), kind="board"),
-        )
-        await self.manager.attach_message_reference(
-            match.match_id,
-            MessageReference(chat_id=state.chat_id, message_id=str(state.card_message_id), kind="card"),
+            (
+                MessageReference(chat_id=state.chat_id, message_id=str(state.board_message_id), kind="board"),
+                MessageReference(chat_id=state.chat_id, message_id=str(state.card_message_id), kind="card"),
+            ),
+            bump_generation=False,
         )
         self.schedule_turn_timeout(match)
+        try:
+            await self.gameplay_logger.log_match_started(
+                match,
+                universe_name=u_name,
+                player_names=names,
+                player_usernames=self._player_usernames,
+                chat_id=state.chat_id,
+                group_title=self.chat_title(state.chat_id),
+                group_username=self.chat_username(state.chat_id),
+                group_link=self.build_group_link(state.chat_id),
+            )
+        except Exception:
+            logger.warning("Failed logging #MATCH_STARTED for %s", match.match_id)
         return state
 
     async def sync_match_ui(
@@ -525,6 +712,8 @@ class ArenaTelegramCoordinator:
         """Project authoritative ManagedMatch state onto the two primary messages."""
         state = self._match_ui.get(match.match_id)
         if state is None:
+            state = self._restore_match_ui_from_refs(match)
+        if state is None:
             return
         if last_action_line is not None:
             state.last_action_line = last_action_line
@@ -535,36 +724,87 @@ class ArenaTelegramCoordinator:
         if match.status is not MatchLifecycleStatus.DRAFTING:
             self._cancel_match_timers(match.match_id)
             self._recovery_locks.pop(match.match_id, None)
+            for k in [k for k in self._forfeit_locks if k[0] == match.match_id]:
+                self._forfeit_locks.pop(k, None)
+            await self.cleanup_forfeit_confirmations(match.match_id, match=match)
+
             if update_board:
                 char_lookup = self.char_lookup_for_match(match)
-                await edit_message_text_safe(
+                result_text = render_match_results(
+                    match,
+                    universe_name=u_name,
+                    player_names=names,
+                    char_lookup=char_lookup,
+                )
+                result_markup = build_match_results_keyboard(match, player_names=names)
+                edited_ok = await edit_message_text_safe(
                     self.bot,
                     chat_id=state.chat_id,
                     message_id=state.board_message_id,
-                    text=render_match_results(
-                        match,
-                        universe_name=u_name,
-                        player_names=names,
-                        char_lookup=char_lookup,
-                    ),
-                    reply_markup=build_match_results_keyboard(match, player_names=names),
+                    text=result_text,
+                    reply_markup=result_markup,
                 )
+                replacement = None
+                if not edited_ok and match.match_id not in self._terminal_rendered_matches:
+                    replacement = await send_message_safe(
+                        self.bot,
+                        chat_id=state.chat_id,
+                        text=result_text,
+                        reply_markup=result_markup,
+                    )
+                    if replacement is not None:
+                        state.board_message_id = replacement.message_id
+                if edited_ok or replacement is not None:
+                    self._terminal_rendered_matches.add(match.match_id)
+
             if update_card:
-                retired_text = render_retired_card_text(match, player_names=names)
-                _, state.card_is_photo = await edit_card_message_safe(
-                    self.bot,
+                try:
+                    await self.bot.delete_message(
+                        chat_id=state.chat_id, message_id=state.card_message_id
+                    )
+                except Exception:
+                    retired_text = render_retired_card_text(match, player_names=names)
+                    _, state.card_is_photo = await edit_card_message_safe(
+                        self.bot,
+                        chat_id=state.chat_id,
+                        message_id=state.card_message_id,
+                        is_photo=state.card_is_photo,
+                        photo=None,
+                        caption=retired_text,
+                        reply_markup=None,
+                    )
+
+            for ref in match.message_refs:
+                if ref.kind in {"board", "card", "game"}:
+                    try:
+                        rid = int(ref.message_id)
+                    except ValueError:
+                        continue
+                    if ref.chat_id == state.chat_id and rid == state.board_message_id:
+                        continue
+                    if ref.chat_id == state.chat_id and rid == state.card_message_id:
+                        continue
+                    await self._delete_or_strip_message(ref.chat_id, rid)
+
+            try:
+                await self.gameplay_logger.log_match_terminal(
+                    match,
+                    universe_name=u_name,
+                    player_names=names,
+                    char_lookup=self.char_lookup_for_match(match),
                     chat_id=state.chat_id,
-                    message_id=state.card_message_id,
-                    is_photo=state.card_is_photo,
-                    photo=None,
-                    caption=retired_text,
-                    reply_markup=None,
+                    group_title=self.chat_title(state.chat_id),
+                    group_username=self.chat_username(state.chat_id),
+                    group_link=self.build_group_link(state.chat_id),
                 )
+            except Exception:
+                logger.warning("Failed logging terminal event for %s", match.match_id)
             return
+
+        remaining = max(0.0, match.turn_deadline_at - self.manager.clock())
 
         if update_board:
             char_lookup = self.char_lookup_for_match(match)
-            remaining = max(0.0, match.turn_deadline_at - self.manager.clock())
             await edit_message_text_safe(
                 self.bot,
                 chat_id=state.chat_id,
@@ -575,40 +815,40 @@ class ArenaTelegramCoordinator:
                     player_names=names,
                     char_lookup=char_lookup,
                     seconds_remaining=remaining,
-                    last_action_line=state.last_action_line,
                 ),
                 reply_markup=build_draft_board_keyboard(match),
             )
 
         if update_card:
-            rec: CharacterEntry | None = None
+            rec, photo = await self._resolve_retained_photo(match)
             if match.inactivity_claim_offered_to is not None:
-                caption = render_turn_expired_card(match, player_names=names)
-                markup = build_inactivity_keyboard(match)
-                photo = self.config.card_back_ref or None
-            elif match.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
-                caption = render_awaiting_shuffle_card(match, player_names=names)
-                markup = build_awaiting_shuffle_keyboard(match)
-                photo = self.config.card_back_ref or None
-            else:
-                held = match.draft_snapshot.held_character
-                rec = (
-                    self.get_character_entry(held.character_id)
-                    if held is not None
+                claim_rem = (
+                    max(0.0, match.inactivity_claim_expires_at - self.manager.clock())
+                    if match.inactivity_claim_expires_at is not None
                     else None
                 )
+                caption = render_turn_expired_card(
+                    match, player_names=names, seconds_remaining=claim_rem
+                )
+                markup = build_inactivity_keyboard(match)
+            elif match.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
+                caption = render_awaiting_shuffle_card(
+                    match, player_names=names, seconds_remaining=remaining
+                )
+                markup = build_awaiting_shuffle_keyboard(match)
+            else:
+                held = match.draft_snapshot.held_character
                 if rec is not None:
                     caption = render_revealed_character_card(
                         match,
                         character=rec,
                         universe_name=u_name,
                         player_names=names,
+                        seconds_remaining=remaining,
                     )
-                    photo = await self._character_media_photo_async(rec)
                 else:
                     cid = held.character_id if held else "Unknown"
                     caption = f"<b>{cid}</b>\n\nChoose a role."
-                    photo = None
                 markup = build_character_revealed_keyboard(match)
 
             if not state.card_is_photo and photo is not None:
@@ -619,26 +859,32 @@ class ArenaTelegramCoordinator:
                     photo=photo,
                     caption=caption,
                     reply_markup=markup,
-                    fallback_photo=self.config.card_back_ref or None,
                 )
                 if sent_card is not None:
                     state.card_message_id = sent_card.message_id
                     state.card_is_photo = now_is_photo
-                    if now_is_photo and rec is not None and getattr(sent_card, "photo", None):
-                        self.media_resolver.record_telegram_file_id(
-                            rec, sent_card.photo[-1].file_id
-                        )
-                    await self.manager.attach_message_reference(
+                    await self._persist_card_media_state(
+                        match, rec=rec, msg_obj=sent_card, is_photo=now_is_photo, fallback_photo=photo
+                    )
+                    await self.manager.replace_message_references(
                         match.match_id,
-                        MessageReference(
-                            chat_id=state.chat_id,
-                            message_id=str(state.card_message_id),
-                            kind="card",
+                        (
+                            MessageReference(
+                                chat_id=state.chat_id,
+                                message_id=str(state.board_message_id),
+                                kind="board",
+                            ),
+                            MessageReference(
+                                chat_id=state.chat_id,
+                                message_id=str(state.card_message_id),
+                                kind="card",
+                            ),
                         ),
+                        bump_generation=False,
                     )
                     return
 
-            edited_msg, state.card_is_photo = await edit_card_message_safe(
+            edited_ok, state.card_is_photo = await edit_card_message_safe(
                 self.bot,
                 chat_id=state.chat_id,
                 message_id=state.card_message_id,
@@ -646,10 +892,11 @@ class ArenaTelegramCoordinator:
                 photo=photo,
                 caption=caption,
                 reply_markup=markup,
-                fallback_photo=self.config.card_back_ref or None,
             )
-            if state.card_is_photo and rec is not None and getattr(edited_msg, "photo", None):
-                self.media_resolver.record_telegram_file_id(rec, edited_msg.photo[-1].file_id)
+            if edited_ok and state.card_is_photo:
+                await self._persist_card_media_state(
+                    match, rec=rec, msg_obj=None, is_photo=True, fallback_photo=photo
+                )
 
     def _recovery_lock(self, match_id: str) -> asyncio.Lock:
         lock = self._recovery_locks.get(match_id)
@@ -719,31 +966,73 @@ class ArenaTelegramCoordinator:
             chat_id=board_ref.chat_id,
             board_message_id=int(board_ref.message_id),
             card_message_id=int(card_ref.message_id),
-            card_is_photo=False,
+            card_is_photo=bool(match.display_state.card_is_photo),
         )
         self._match_ui[match.match_id] = state
         return state
 
-    async def recover_game_ui(self, match: ManagedMatch) -> MatchUIState | None:
-        """Reconstruct missing/unusable messages in original chat & invalidate old controls."""
+    async def recover_game_ui(
+        self, match: ManagedMatch, *, requester_id: str = ""
+    ) -> MatchUIState | None:
+        """Full-match recovery: invalidate old generation, remove/disable old UI, send fresh Board + Action Card."""
         async with self._recovery_lock(match.match_id):
             latest = self.manager.get_match(match.match_id) or match
+            if latest.status is not MatchLifecycleStatus.DRAFTING:
+                return None
             state = self._match_ui.get(latest.match_id) or self._restore_match_ui_from_refs(latest)
-            if state is None:
+            target_chat_id = state.chat_id if state is not None else self.match_chat_id(latest)
+            if not target_chat_id or target_chat_id.isdigit():
                 return None
 
             names = self.player_names_for_match(latest)
             u_name = self.universe_name(latest.universe_id)
             char_lookup = self.char_lookup_for_match(latest)
-            remaining = max(0.0, latest.turn_deadline_at - self.manager.clock())
+            actor_id = requester_id or latest.players[0]
 
-            # Bump generation FIRST so obsolete controls cannot mutate the match
+            # 1. Bump generation FIRST so obsolete controls cannot mutate the match
             refs_res = await self.manager.replace_message_references(
                 latest.match_id, latest.message_refs, bump_generation=True
             )
             if not refs_res.accepted or refs_res.match is None:
                 return None
-            latest = refs_res.match
+            latest = self.manager.get_match(latest.match_id) or refs_res.match
+            if latest.status is not MatchLifecycleStatus.DRAFTING:
+                return None
+
+            # 2. Remove or disable obsolete messages & temporary forfeit confirmations
+            self._match_ui.pop(latest.match_id, None)
+            await self.cleanup_forfeit_confirmations(latest.match_id, match=latest)
+            if state is not None:
+                await self._delete_or_strip_message(state.chat_id, state.board_message_id)
+                await self._delete_or_strip_message(state.chat_id, state.card_message_id)
+            for ref in latest.message_refs:
+                if ref.kind in {"board", "card", "game"}:
+                    try:
+                        rid = int(ref.message_id)
+                    except ValueError:
+                        continue
+                    if state is not None and ref.chat_id == state.chat_id and rid in {
+                        state.board_message_id,
+                        state.card_message_id,
+                    }:
+                        continue
+                    await self._delete_or_strip_message(ref.chat_id, rid)
+
+            # Invalidate stale board/card refs while retaining group chat_id for retries
+            try:
+                await self.manager.replace_message_references(
+                    latest.match_id,
+                    (MessageReference(chat_id=target_chat_id, message_id="0", kind="chat"),),
+                    bump_generation=False,
+                )
+            except Exception:
+                pass
+
+            # Reconcile latest durable state & deadline right before sending controls
+            latest = self.manager.get_match(latest.match_id) or latest
+            if latest.status is not MatchLifecycleStatus.DRAFTING:
+                return None
+            remaining = max(0.0, latest.turn_deadline_at - self.manager.clock())
 
             board_text = render_draft_board(
                 latest,
@@ -751,99 +1040,176 @@ class ArenaTelegramCoordinator:
                 player_names=names,
                 char_lookup=char_lookup,
                 seconds_remaining=remaining,
-                last_action_line="Game recovered.",
             )
             board_markup = build_draft_board_keyboard(latest)
 
+            rec, photo = await self._resolve_retained_photo(latest)
             if latest.inactivity_claim_offered_to is not None:
-                caption = render_turn_expired_card(latest, player_names=names)
-                markup = build_inactivity_keyboard(latest)
-                photo = self.config.card_back_ref or None
-            elif latest.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
-                caption = render_awaiting_shuffle_card(latest, player_names=names)
-                markup = build_awaiting_shuffle_keyboard(latest)
-                photo = self.config.card_back_ref or None
-            else:
-                held = latest.draft_snapshot.held_character
-                rec = (
-                    self.get_character_entry(held.character_id)
-                    if held is not None
+                claim_rem = (
+                    max(0.0, latest.inactivity_claim_expires_at - self.manager.clock())
+                    if latest.inactivity_claim_expires_at is not None
                     else None
                 )
+                caption = render_turn_expired_card(
+                    latest, player_names=names, seconds_remaining=claim_rem
+                )
+                markup = build_inactivity_keyboard(latest)
+            elif latest.draft_snapshot.phase is DraftPhase.AWAITING_SHUFFLE:
+                caption = render_awaiting_shuffle_card(
+                    latest, player_names=names, seconds_remaining=remaining
+                )
+                markup = build_awaiting_shuffle_keyboard(latest)
+            else:
+                held = latest.draft_snapshot.held_character
                 caption = (
                     render_revealed_character_card(
-                        latest, character=rec, universe_name=u_name, player_names=names
+                        latest,
+                        character=rec,
+                        universe_name=u_name,
+                        player_names=names,
+                        seconds_remaining=remaining,
                     )
                     if rec is not None
-                    else "Choose a role."
+                    else f"<b>{held.character_id if held else 'Character'}</b>\n\nChoose a role."
                 )
-                photo = await self._character_media_photo_async(rec)
                 markup = build_character_revealed_keyboard(latest)
 
-            # Reuse surviving board/card if still editable; recreate only missing/unusable ones
-            board_ok = await edit_message_text_safe(
+            # 3. Send fresh Draft Board in original group
+            new_board = await send_message_safe(
                 self.bot,
-                chat_id=state.chat_id,
-                message_id=state.board_message_id,
+                chat_id=target_chat_id,
                 text=board_text,
                 reply_markup=board_markup,
             )
-            board_msg_id = state.board_message_id
-            if not board_ok:
-                new_board = await send_message_safe(
-                    self.bot,
-                    chat_id=state.chat_id,
-                    text=board_text,
-                    reply_markup=board_markup,
-                )
-                if new_board is None:
-                    return None
-                board_msg_id = new_board.message_id
+            if new_board is None:
+                try:
+                    await self.gameplay_logger.log_recovery(
+                        latest,
+                        succeeded=False,
+                        requester_id=actor_id,
+                        player_names=names,
+                        chat_id=target_chat_id,
+                        group_title=self.chat_title(target_chat_id),
+                        group_username=self.chat_username(target_chat_id),
+                        detail="Failed sending replacement Draft Board.",
+                    )
+                except Exception:
+                    pass
+                return None
 
-            card_ok, is_photo = await edit_card_message_safe(
-                self.bot,
-                chat_id=state.chat_id,
-                message_id=state.card_message_id,
-                is_photo=state.card_is_photo,
-                photo=photo,
-                caption=caption,
-                reply_markup=markup,
-                fallback_photo=self.config.card_back_ref or None,
-            )
-            card_msg_id = state.card_message_id
-            if not card_ok:
+            # 4. Send fresh Action Card immediately afterward
+            if photo is not None:
                 new_card, is_photo = await send_photo_or_text_safe(
                     self.bot,
-                    chat_id=state.chat_id,
+                    chat_id=target_chat_id,
                     photo=photo,
                     caption=caption,
                     reply_markup=markup,
-                    fallback_photo=self.config.card_back_ref or None,
                 )
-                if new_card is None:
-                    return None
-                card_msg_id = new_card.message_id
+            else:
+                new_card = await send_message_safe(
+                    self.bot,
+                    chat_id=target_chat_id,
+                    text=caption,
+                    reply_markup=markup,
+                )
+                is_photo = False
+
+            if new_card is None:
+                await self._delete_or_strip_message(target_chat_id, new_board.message_id)
+                try:
+                    await self.gameplay_logger.log_recovery(
+                        latest,
+                        succeeded=False,
+                        requester_id=actor_id,
+                        player_names=names,
+                        chat_id=target_chat_id,
+                        group_title=self.chat_title(target_chat_id),
+                        group_username=self.chat_username(target_chat_id),
+                        detail="Draft Board sent but Action Card creation failed.",
+                    )
+                except Exception:
+                    pass
+                return None
+
+            # 5. Persist both new message IDs before reporting success
+            try:
+                persist_res = await self.manager.replace_message_references(
+                    latest.match_id,
+                    (
+                        MessageReference(
+                            chat_id=target_chat_id,
+                            message_id=str(new_board.message_id),
+                            kind="board",
+                        ),
+                        MessageReference(
+                            chat_id=target_chat_id,
+                            message_id=str(new_card.message_id),
+                            kind="card",
+                        ),
+                    ),
+                    bump_generation=False,
+                )
+            except Exception:
+                persist_res = None
+            if persist_res is None or not persist_res.accepted:
+                await self._delete_or_strip_message(target_chat_id, new_board.message_id)
+                await self._delete_or_strip_message(target_chat_id, new_card.message_id)
+                try:
+                    await self.gameplay_logger.log_recovery(
+                        latest,
+                        succeeded=False,
+                        requester_id=actor_id,
+                        player_names=names,
+                        chat_id=target_chat_id,
+                        group_title=self.chat_title(target_chat_id),
+                        group_username=self.chat_username(target_chat_id),
+                        detail="Failed persisting replacement message IDs.",
+                    )
+                except Exception:
+                    pass
+                return None
 
             new_state = MatchUIState(
-                chat_id=state.chat_id,
-                board_message_id=board_msg_id,
-                card_message_id=card_msg_id,
+                chat_id=target_chat_id,
+                board_message_id=new_board.message_id,
+                card_message_id=new_card.message_id,
                 card_is_photo=is_photo,
-                last_action_line="Game recovered.",
             )
             self._match_ui[latest.match_id] = new_state
-            await self.manager.replace_message_references(
-                latest.match_id,
-                (
-                    MessageReference(chat_id=new_state.chat_id, message_id=str(board_msg_id), kind="board"),
-                    MessageReference(chat_id=new_state.chat_id, message_id=str(card_msg_id), kind="card"),
-                ),
-                bump_generation=False,
+            await self._persist_card_media_state(
+                latest, rec=rec, msg_obj=new_card, is_photo=is_photo, fallback_photo=photo
             )
+
+            # Re-arm claim or turn timer with the new generation
+            post = self.manager.get_match(latest.match_id) or latest
+            if post.status is not MatchLifecycleStatus.DRAFTING or (
+                post.draft_snapshot.revision != latest.draft_snapshot.revision
+                or post.inactivity_claim_offered_to != latest.inactivity_claim_offered_to
+            ):
+                await self.sync_match_ui(post, update_board=True, update_card=True)
+            if post.status is MatchLifecycleStatus.DRAFTING:
+                if post.inactivity_claim_offered_to is not None:
+                    self.schedule_claim_window_timeout(post)
+                else:
+                    self.schedule_turn_timeout(post)
+
+            try:
+                await self.gameplay_logger.log_recovery(
+                    latest,
+                    succeeded=True,
+                    requester_id=actor_id,
+                    player_names=names,
+                    chat_id=target_chat_id,
+                    group_title=self.chat_title(target_chat_id),
+                    group_username=self.chat_username(target_chat_id),
+                )
+            except Exception:
+                pass
             return new_state
 
     def build_game_link(self, match: ManagedMatch) -> str | None:
-        state = self._match_ui.get(match.match_id)
+        state = self._match_ui.get(match.match_id) or self._restore_match_ui_from_refs(match)
         if state is None:
             return None
         try:
@@ -851,13 +1217,26 @@ class ArenaTelegramCoordinator:
         except ValueError:
             return None
         # Telegram c/<internal_id>/<msg_id> links work for supergroups/channels (-100...)
+        if cid < -1000000000000 and state.card_message_id:
+            internal = str(abs(cid) - 1000000000000)
+            return f"https://t.me/c/{internal}/{state.card_message_id}"
+        return None
+
+    def build_group_link(self, chat_id: str) -> str | None:
+        uname = self.chat_username(chat_id)
+        if uname:
+            return f"https://t.me/{uname}"
+        try:
+            cid = int(chat_id)
+        except ValueError:
+            return None
         if cid < -1000000000000:
             internal = str(abs(cid) - 1000000000000)
-            return f"https://t.me/c/{internal}/{state.board_message_id}"
+            return f"https://t.me/c/{internal}"
         return None
 
     # ------------------------------------------------------------------
-    # Viewer-Specific Detailed Results
+    # Shared Result Battle Breakdown Navigation (Screen 11)
     # ------------------------------------------------------------------
 
     async def show_detailed_results(
@@ -875,26 +1254,13 @@ class ArenaTelegramCoordinator:
             match, role_index=role_index, player_names=names, char_lookup=char_lookup
         )
         markup = build_detailed_results_keyboard(match.match_id, role_index)
-
-        owner_info = self._detail_messages.get((chat_id, source_message_id))
-        if owner_info is not None and owner_info[0] == viewer_id and owner_info[1] == match.match_id:
-            await edit_message_text_safe(
-                self.bot,
-                chat_id=chat_id,
-                message_id=source_message_id,
-                text=text,
-                reply_markup=markup,
-            )
-            return
-
-        sent = await send_message_safe(
+        await edit_message_text_safe(
             self.bot,
             chat_id=chat_id,
+            message_id=source_message_id,
             text=text,
             reply_markup=markup,
         )
-        if sent is not None:
-            self._detail_messages[(str(sent.chat.id), sent.message_id)] = (viewer_id, match.match_id)
 
     def is_viewer_detail_message(self, chat_id: str, message_id: int, viewer_id: str) -> bool:
         info = self._detail_messages.get((chat_id, message_id))

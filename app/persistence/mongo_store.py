@@ -26,6 +26,8 @@ from app.matches.models import (
 from app.persistence.models import (
     HistoricalMatchRecord,
     PersistenceError,
+    display_state_from_dict,
+    display_state_to_dict,
     outcome_from_dict,
     outcome_to_dict,
     timeout_policy_from_dict,
@@ -116,6 +118,7 @@ def _serialize_match(m: ManagedMatch) -> dict[str, Any]:
             for r in m.message_refs
         ],
         "outcome": outcome_to_dict(m.outcome) if m.outcome is not None else None,
+        "display_state": display_state_to_dict(m.display_state),
     }
 
 
@@ -155,6 +158,7 @@ def _doc_to_match(doc: dict[str, Any]) -> ManagedMatch:
         inactivity_claim_expires_at=doc.get("inactivity_claim_expires_at"),
         message_refs=refs,
         outcome=outcome,
+        display_state=display_state_from_dict(doc.get("display_state")),
     )
 
 

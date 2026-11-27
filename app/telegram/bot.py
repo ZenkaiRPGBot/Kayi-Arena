@@ -77,7 +77,10 @@ class UpdateDedupMiddleware(BaseMiddleware):
             msg = event.message or (event.callback_query.message if event.callback_query else None)
             if msg is not None:
                 self._coordinator.register_chat(
-                    msg.chat.id, msg.chat.type, getattr(msg.chat, "title", None)
+                    msg.chat.id,
+                    msg.chat.type,
+                    getattr(msg.chat, "title", None),
+                    getattr(msg.chat, "username", None),
                 )
         t0 = time.perf_counter()
         try:

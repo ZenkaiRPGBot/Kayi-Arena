@@ -22,7 +22,9 @@ from app.telegram.constants import (
     STYLE_SUCCESS,
     UNIVERSES_PER_PAGE,
     rarity_icon,
+    role_button_label,
     role_label,
+    to_bold_sans,
     universe_icon,
 )
 
@@ -286,7 +288,13 @@ def build_challenge_keyboard(challenge: ChallengeRecord) -> InlineKeyboardMarkup
 def build_draft_board_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [_btn("ℹ️ Match Information", callback_data=encode_cb("mi", match.match_id))]
+            [
+                _btn(
+                    f"⚑ {to_bold_sans('Forfeit')}",
+                    callback_data=encode_cb("gf", match.match_id, match.generation),
+                    style=STYLE_DANGER,
+                )
+            ]
         ]
     )
 
@@ -296,7 +304,7 @@ def build_awaiting_shuffle_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup
         inline_keyboard=[
             [
                 _btn(
-                    "🎲 Shuffle",
+                    f"🎲 {to_bold_sans('Shuffle')}",
                     callback_data=encode_cb("sh", match.match_id, match.generation),
                     style=STYLE_PRIMARY,
                 )
@@ -316,23 +324,24 @@ def build_character_revealed_keyboard(match: ManagedMatch) -> InlineKeyboardMark
         rows.append(
             [
                 _btn(
-                    role_label(role),
+                    role_button_label(role),
                     callback_data=encode_cb(
                         "as", match.match_id, match.generation, role_to_index(role)
                     ),
-                    style=STYLE_SUCCESS,
                 )
                 for role in pair
             ]
         )
 
     skips_left = match.public_view.skips_remaining.get(active_id, 0)
-    if skips_left > 0:
+    skip_eligible = getattr(match.draft_snapshot, "skip_eligible", True)
+    if skips_left > 0 and skip_eligible:
         rows.append(
             [
                 _btn(
-                    f"⏭ Skip ({skips_left}/2)",
+                    f"⏭ {to_bold_sans('SKIP')}",
                     callback_data=encode_cb("sk", match.match_id, match.generation),
+                    style=STYLE_DANGER,
                 )
             ]
         )
@@ -342,75 +351,48 @@ def build_character_revealed_keyboard(match: ManagedMatch) -> InlineKeyboardMark
 
 def build_inactivity_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup:
     inactive_id = match.draft_snapshot.active_player_id or ""
-    rows: list[list[InlineKeyboardButton]] = [
-        [
-            _btn(
-                "🏆 Claim Victory",
-                callback_data=encode_cb("cv", match.match_id, match.generation),
-                style=STYLE_SUCCESS,
-            )
-        ]
+    row: list[InlineKeyboardButton] = [
+        _btn(
+            f"🏆 {to_bold_sans('Claim Victory')}",
+            callback_data=encode_cb("cv", match.match_id, match.generation),
+            style=STYLE_SUCCESS,
+        )
     ]
     if match.extensions_remaining.get(inactive_id, 0) > 0:
-        rows.append(
-            [
-                _btn(
-                    "⏳ Grant 60 More Seconds",
-                    callback_data=encode_cb("ex", match.match_id, match.generation),
-                    style=STYLE_PRIMARY,
-                )
-            ]
+        row.append(
+            _btn(
+                f"⏳ {to_bold_sans('Wait 1m')}",
+                callback_data=encode_cb("ex", match.match_id, match.generation),
+                style=STYLE_PRIMARY,
+            )
         )
-    return InlineKeyboardMarkup(inline_keyboard=rows)
+    return InlineKeyboardMarkup(inline_keyboard=[row])
 
 
 def build_match_results_keyboard(
     match: ManagedMatch,
     *,
-    player_names: Mapping[str, str],
-) -> InlineKeyboardMarkup:
-    p1_id, p2_id = match.players
-    p1_name = player_names.get(p1_id, p1_id)[:20]
-    p2_name = player_names.get(p2_id, p2_id)[:20]
-    rows: list[list[InlineKeyboardButton]] = [
-        [
-            _btn(
-                "🔁 Rematch",
-                callback_data=encode_cb("rm", match.match_id),
-                style=STYLE_SUCCESS,
-            )
-        ]
-    ]
-    if match.outcome and match.outcome.resolution is not None:
-        rows.append(
-            [
-                _btn(
-                    "📊 Detailed Results",
-                    callback_data=encode_cb("dr", match.match_id, 0),
-                )
-            ]
-        )
-    rows.append(
-        [
-            _btn(f"👤 {p1_name}", callback_data=encode_cb("pr", p1_id)),
-            _btn(f"👤 {p2_name}", callback_data=encode_cb("pr", p2_id)),
-        ]
-    )
-    return InlineKeyboardMarkup(inline_keyboard=rows)
-
-
-def build_detailed_results_keyboard(match_id: str, role_index: int) -> InlineKeyboardMarkup:
-    nav: list[InlineKeyboardButton] = []
-    if role_index > 0:
-        nav.append(_btn("‹ Previous", callback_data=encode_cb("dr", match_id, role_index - 1)))
-    nav.append(_btn(f"{role_index + 1}/7", callback_data=encode_cb("noop")))
-    if role_index < 6:
-        nav.append(_btn("Next ›", callback_data=encode_cb("dr", match_id, role_index + 1)))
-
+    player_names: Mapping[str, str] | None = None,
+) -> InlineKeyboardMarkup | None:
+    if match.outcome is None or match.outcome.resolution is None:
+        return None
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            nav,
-            [_btn("« Back to Results", callback_data=encode_cb("mr", match_id))],
+            [
+                _btn(
+                    to_bold_sans("Battle Breakdown"),
+                    callback_data=encode_cb("dr", match.match_id, 0),
+                    style=STYLE_PRIMARY,
+                )
+            ]
+        ]
+    )
+
+
+def build_detailed_results_keyboard(match_id: str, role_index: int = 0) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [_btn(f"« {to_bold_sans('Back to Result')}", callback_data=encode_cb("mr", match_id))]
         ]
     )
 
@@ -422,50 +404,78 @@ def build_active_game_keyboard(
 ) -> InlineKeyboardMarkup:
     rows: list[list[InlineKeyboardButton]] = []
     if game_link:
-        rows.append([_btn("🎯 Go to Game", url=game_link, style=STYLE_PRIMARY)])
-    else:
-        rows.append(
-            [
-                _btn(
-                    "🎯 Go to Game",
-                    callback_data=encode_cb("gg", match.match_id),
-                    style=STYLE_PRIMARY,
-                )
-            ]
-        )
-    rows.append([_btn("🔄 Recover Game", callback_data=encode_cb("gg", match.match_id))])
+        rows.append([_btn(f"↗ {to_bold_sans('Go to Match')}", url=game_link, style=STYLE_PRIMARY)])
     rows.append(
         [
+            _btn(f"🔄 {to_bold_sans('Recover')}", callback_data=encode_cb("gr", match.match_id)),
             _btn(
-                "🏳️ Forfeit Match",
+                f"⚑ {to_bold_sans('Forfeit')}",
                 callback_data=encode_cb("gf", match.match_id, match.generation),
                 style=STYLE_DANGER,
-            )
+            ),
         ]
     )
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
-def build_no_active_game_keyboard() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [_btn("⚔️ Enter Arena", callback_data=encode_cb("arena"), style=STYLE_PRIMARY)]
-        ]
-    )
-
-
-def build_forfeit_confirm_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup:
+def build_recover_confirm_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
                 _btn(
-                    "Yes, Forfeit",
-                    callback_data=encode_cb("gfc", match.match_id, match.generation),
+                    to_bold_sans("Recover"),
+                    callback_data=encode_cb("grc", match.match_id, match.generation),
+                    style=STYLE_PRIMARY,
+                ),
+                _btn(
+                    f"« {to_bold_sans('Back')}",
+                    callback_data=encode_cb("grb", match.match_id),
+                ),
+            ]
+        ]
+    )
+
+
+def build_recover_success_keyboard(*, game_link: str | None = None) -> InlineKeyboardMarkup | None:
+    if not game_link:
+        return None
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [_btn(f"↗ {to_bold_sans('Go to Match')}", url=game_link, style=STYLE_PRIMARY)]
+        ]
+    )
+
+
+def build_no_active_game_keyboard() -> InlineKeyboardMarkup | None:
+    return None
+
+
+def build_forfeit_confirm_keyboard(
+    match: ManagedMatch,
+    *,
+    requester_id: str = "",
+) -> InlineKeyboardMarkup:
+    cb_confirm = (
+        encode_cb("gfc", match.match_id, match.generation, requester_id)
+        if requester_id
+        else encode_cb("gfc", match.match_id, match.generation)
+    )
+    cb_cancel = (
+        encode_cb("gfk", match.match_id, match.generation, requester_id)
+        if requester_id
+        else encode_cb("gfk", match.match_id, match.generation)
+    )
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                _btn(
+                    to_bold_sans("FORFEIT"),
+                    callback_data=cb_confirm,
                     style=STYLE_DANGER,
                 ),
                 _btn(
-                    "Cancel",
-                    callback_data=encode_cb("gfk", match.match_id, match.generation),
+                    f"✕ {to_bold_sans('Cancel')}",
+                    callback_data=cb_cancel,
                 ),
             ]
         ]

@@ -6,7 +6,7 @@ from aiogram import F, Router
 from aiogram.types import CallbackQuery
 
 from app.engine import ErrorCode as DraftErrorCode
-from app.matches import MatchLifecycleStatus, MatchManagementErrorCode
+from app.matches import MatchLifecycleStatus, MatchManagementErrorCode, MessageReference
 from app.telegram.callbacks import code_to_rarity, decode_cb, index_to_role
 from app.telegram.constants import CATALOGUE_PER_PAGE, LEADERBOARD_PER_PAGE
 from app.telegram.keyboards import (
@@ -22,6 +22,8 @@ from app.telegram.keyboards import (
     build_leaderboard_keyboard,
     build_match_results_keyboard,
     build_profile_keyboard,
+    build_recover_confirm_keyboard,
+    build_recover_success_keyboard,
     build_support_keyboard,
     build_universe_browser_keyboard,
     build_universe_selection_keyboard,
@@ -49,6 +51,9 @@ from app.telegram.texts import (
     render_leaderboard,
     render_match_results,
     render_profile,
+    render_recover_confirmation,
+    render_recover_failed,
+    render_recover_success,
     render_support_home,
     render_universe_browser,
     render_universe_selection,
@@ -67,8 +72,8 @@ def _parse_int(value: str) -> int | None:
 def _map_match_error(code: MatchManagementErrorCode | None, draft_code: DraftErrorCode | None) -> str:
     if code is MatchManagementErrorCode.NOT_MATCH_PARTICIPANT:
         return "You are not a participant in this match."
-    if code is MatchManagementErrorCode.STALE_CONTROL_GENERATION:
-        return "This action has expired."
+    if code is MatchManagementErrorCode.STALE_CONTROL_GENERATION or draft_code is DraftErrorCode.STALE_REVISION:
+        return "This gameplay interface is outdated.\nUse /game to access the latest match messages."
     if code is MatchManagementErrorCode.MATCH_NOT_ACTIVE:
         return "This match has already ended."
     if code is MatchManagementErrorCode.SELF_EXTENSION_FORBIDDEN:
@@ -85,8 +90,6 @@ def _map_match_error(code: MatchManagementErrorCode | None, draft_code: DraftErr
         return "No skips remaining."
     if draft_code is DraftErrorCode.WRONG_PHASE:
         return "That action is not available right now."
-    if draft_code is DraftErrorCode.STALE_REVISION:
-        return "This action has expired."
     return "Action could not be completed."
 
 
@@ -780,21 +783,13 @@ async def handle_arena_callback(
                 )
                 return
             coordinator.cancel_challenge_expiry(challenge_id)
-            try:
-                await coordinator.render_challenge_message(
-                    res.challenge, chat_id=chat_id, message_id=msg_id
-                )
-            except Exception as exc:
-                import logging
-
-                logging.getLogger(__name__).warning(
-                    "Post-commit challenge card update error on %s: %s",
-                    challenge_id,
-                    type(exc).__name__,
-                )
             ui_state = None
             try:
-                ui_state = await coordinator.start_match_ui(res.match, chat_id=chat_id)
+                ui_state = await coordinator.start_match_ui(
+                    res.match,
+                    chat_id=chat_id,
+                    reuse_challenge_message_id=msg_id,
+                )
             except Exception as exc:
                 import logging
 
@@ -883,11 +878,34 @@ async def handle_arena_callback(
             await answer_callback_safe(query, "Invalid match state.", show_alert=True)
             return
 
+        current = coordinator.manager.get_match(match_id)
+        if current is None:
+            await answer_callback_safe(query, "This match has already ended.", show_alert=True)
+            return
+        if current.status is not MatchLifecycleStatus.DRAFTING:
+            await answer_callback_safe(query, "This match has already ended.", show_alert=True)
+            return
+        if user_id not in current.players:
+            await answer_callback_safe(query, "You are not a participant in this match.", show_alert=True)
+            return
+        match_chat = coordinator.match_chat_id(current)
+        if match_chat is not None and chat_id != match_chat:
+            await answer_callback_safe(
+                query,
+                "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                show_alert=True,
+            )
+            return
+        current_ui = coordinator._match_ui.get(match_id)
+        if current_ui is not None and msg_id != current_ui.card_message_id:
+            await answer_callback_safe(
+                query,
+                "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                show_alert=True,
+            )
+            return
+
         if action == "sh":
-            current = coordinator.manager.get_match(match_id)
-            if current is None:
-                await answer_callback_safe(query, "Match not found.", show_alert=True)
-                return
             res = await coordinator.manager.shuffle_match(
                 match_id=match_id,
                 player_id=user_id,
@@ -901,18 +919,13 @@ async def handle_arena_callback(
                 return
             await coordinator.sync_match_ui(
                 res.match,
-                last_action_line=f"{coordinator.display_name(user_id)} shuffled a character.",
-                update_board=False,
+                update_board=True,
                 update_card=True,
             )
             await answer_callback_safe(query)
             return
 
         if action == "sk":
-            current = coordinator.manager.get_match(match_id)
-            if current is None:
-                await answer_callback_safe(query, "Match not found.", show_alert=True)
-                return
             res = await coordinator.manager.skip_match_character(
                 match_id=match_id,
                 player_id=user_id,
@@ -926,7 +939,6 @@ async def handle_arena_callback(
                 return
             await coordinator.sync_match_ui(
                 res.match,
-                last_action_line=f"{coordinator.display_name(user_id)} skipped their character.",
                 update_board=True,
                 update_card=True,
             )
@@ -937,10 +949,6 @@ async def handle_arena_callback(
             role = index_to_role(args[2]) if len(args) >= 3 else None
             if role is None:
                 await answer_callback_safe(query, "Invalid role.", show_alert=True)
-                return
-            current = coordinator.manager.get_match(match_id)
-            if current is None:
-                await answer_callback_safe(query, "Match not found.", show_alert=True)
                 return
             res = await coordinator.manager.assign_match_role(
                 match_id=match_id,
@@ -958,7 +966,6 @@ async def handle_arena_callback(
                 coordinator.schedule_turn_timeout(res.match)
             await coordinator.sync_match_ui(
                 res.match,
-                last_action_line=f"{coordinator.display_name(user_id)} assigned {role}.",
                 update_board=True,
                 update_card=True,
             )
@@ -976,7 +983,6 @@ async def handle_arena_callback(
                 return
             await coordinator.sync_match_ui(
                 res.match,
-                last_action_line=f"{coordinator.display_name(user_id)} claimed victory by inactivity.",
                 update_board=True,
                 update_card=True,
             )
@@ -995,27 +1001,90 @@ async def handle_arena_callback(
             coordinator.schedule_turn_timeout(res.match)
             await coordinator.sync_match_ui(
                 res.match,
-                last_action_line=f"{coordinator.display_name(user_id)} granted +60s extension.",
                 update_board=True,
                 update_card=True,
             )
             await answer_callback_safe(query, "Granted 60 more seconds.")
             return
 
-    if action == "gg":
+    if action in {"gr", "grb", "grc", "gg"}:
         match_id = args[0] if args else ""
         match = coordinator.manager.get_match(match_id)
         if match is None or match.status is not MatchLifecycleStatus.DRAFTING:
-            await answer_callback_safe(query, "Match is no longer active.", show_alert=True)
+            await answer_callback_safe(query, "This match has already ended.", show_alert=True)
             return
         if user_id not in match.players:
             await answer_callback_safe(query, "You are not a participant in this match.", show_alert=True)
             return
-        recovered = await coordinator.recover_game_ui(match)
-        if recovered is None:
-            await answer_callback_safe(query, "Unable to recover match messages.", show_alert=True)
+
+        if action == "gr":
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_recover_confirmation(),
+                reply_markup=build_recover_confirm_keyboard(match),
+            )
+            await answer_callback_safe(query)
             return
-        await answer_callback_safe(query, "Game recovered!")
+
+        if action == "grb":
+            group_chat_id = coordinator.match_chat_id(match) or ""
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_active_game(
+                    match,
+                    requester_id=user_id,
+                    universe_name=coordinator.universe_name(match.universe_id),
+                    player_names=coordinator.player_names_for_match(match),
+                    group_title=coordinator.chat_title(group_chat_id) if group_chat_id else None,
+                    group_link=coordinator.build_group_link(group_chat_id) if group_chat_id else None,
+                ),
+                reply_markup=build_active_game_keyboard(
+                    match, game_link=coordinator.build_game_link(match)
+                ),
+            )
+            await answer_callback_safe(query)
+            return
+
+        if action == "grc":
+            gen = _parse_int(args[1]) if len(args) >= 2 else None
+            if gen is None or gen != match.generation:
+                await answer_callback_safe(
+                    query,
+                    "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                    show_alert=True,
+                )
+                return
+
+        recovered = await coordinator.recover_game_ui(match, requester_id=user_id)
+        if recovered is None:
+            await edit_message_text_safe(
+                coordinator.bot,
+                chat_id=chat_id,
+                message_id=msg_id,
+                text=render_recover_failed(),
+                reply_markup=None,
+            )
+            await answer_callback_safe(query, "Recovery could not be completed.", show_alert=True)
+            return
+        latest = coordinator.manager.get_match(match_id) or match
+        group_chat_id = recovered.chat_id
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=render_recover_success(
+                group_title=coordinator.chat_title(group_chat_id),
+                group_link=coordinator.build_group_link(group_chat_id),
+            ),
+            reply_markup=build_recover_success_keyboard(
+                game_link=coordinator.build_game_link(latest)
+            ),
+        )
+        await answer_callback_safe(query, "Match recovered!")
         return
 
     if action in {"gf", "gfc", "gfk"}:
@@ -1032,64 +1101,126 @@ async def handle_arena_callback(
             await answer_callback_safe(query, "You are not a participant in this match.", show_alert=True)
             return
         if gen is None or gen != match.generation:
-            await answer_callback_safe(query, "This action has expired.", show_alert=True)
-            return
-
-        if action == "gf":
-            await edit_message_text_safe(
-                coordinator.bot,
-                chat_id=chat_id,
-                message_id=msg_id,
-                text=render_forfeit_confirmation(),
-                reply_markup=build_forfeit_confirm_keyboard(match),
-            )
-            await answer_callback_safe(query)
-            return
-
-        if action == "gfk":
-            await edit_message_text_safe(
-                coordinator.bot,
-                chat_id=chat_id,
-                message_id=msg_id,
-                text=render_active_game(
-                    match,
-                    requester_id=user_id,
-                    universe_name=coordinator.universe_name(match.universe_id),
-                    player_names=coordinator.player_names_for_match(match),
-                ),
-                reply_markup=build_active_game_keyboard(
-                    match, game_link=coordinator.build_game_link(match)
-                ),
-            )
-            await answer_callback_safe(query, "Forfeit cancelled.")
-            return
-
-        res = await coordinator.manager.forfeit_match(
-            match_id=match_id, player_id=user_id, expected_generation=gen
-        )
-        if not res.accepted or res.match is None:
             await answer_callback_safe(
-                query, _map_match_error(res.error_code, res.draft_error_code), show_alert=True
+                query,
+                "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                show_alert=True,
             )
             return
-        await edit_message_text_safe(
-            coordinator.bot,
-            chat_id=chat_id,
-            message_id=msg_id,
-            text="🏳️ Match forfeited.",
-            reply_markup=None,
-        )
-        await coordinator.sync_match_ui(
-            res.match,
-            last_action_line=f"{coordinator.display_name(user_id)} forfeited.",
-            update_board=True,
-            update_card=True,
-        )
-        await answer_callback_safe(query, "You forfeited the match.")
-        return
+
+        async with coordinator.forfeit_lock(match_id, user_id):
+            latest_match = coordinator.manager.get_match(match_id)
+            if latest_match is None or latest_match.status is not MatchLifecycleStatus.DRAFTING:
+                await answer_callback_safe(query, "This match has already ended.", show_alert=True)
+                return
+            if gen != latest_match.generation:
+                await answer_callback_safe(
+                    query,
+                    "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                    show_alert=True,
+                )
+                return
+
+            if action == "gf":
+                if msg.chat.type in {"group", "supergroup"}:
+                    match_chat = coordinator.match_chat_id(latest_match)
+                    if match_chat is not None and chat_id != match_chat:
+                        await answer_callback_safe(
+                            query,
+                            "This gameplay interface is outdated.\nUse /game to access the latest match messages.",
+                            show_alert=True,
+                        )
+                        return
+                existing = coordinator.get_forfeit_confirmation(match_id, user_id)
+                if existing is not None and existing[2] == latest_match.generation:
+                    await answer_callback_safe(
+                        query,
+                        "You already have an open forfeit confirmation.",
+                        show_alert=True,
+                    )
+                    return
+                opp_id = (
+                    latest_match.players[1]
+                    if latest_match.players[0] == user_id
+                    else latest_match.players[0]
+                )
+                sent = await send_message_safe(
+                    coordinator.bot,
+                    chat_id=chat_id,
+                    text=render_forfeit_confirmation(
+                        requester_id=user_id,
+                        requester_name=coordinator.first_name(user_id),
+                        opponent_id=opp_id,
+                        opponent_name=coordinator.first_name(opp_id),
+                    ),
+                    reply_markup=build_forfeit_confirm_keyboard(latest_match, requester_id=user_id),
+                )
+                if sent is None:
+                    await answer_callback_safe(
+                        query,
+                        "Could not open forfeit confirmation. Please try again.",
+                        show_alert=True,
+                    )
+                    return
+                coordinator.register_forfeit_confirmation(
+                    match_id, user_id, str(sent.chat.id), sent.message_id, latest_match.generation
+                )
+                await coordinator.manager.attach_message_reference(
+                    match_id,
+                    MessageReference(
+                        chat_id=str(sent.chat.id),
+                        message_id=str(sent.message_id),
+                        kind=f"fc:{user_id}",
+                    ),
+                )
+                await answer_callback_safe(query)
+                return
+
+            requester_arg = args[2] if len(args) >= 3 else ""
+            if requester_arg and user_id != requester_arg:
+                await answer_callback_safe(
+                    query,
+                    "Only the player who requested this confirmation can respond.",
+                    show_alert=True,
+                )
+                return
+
+            existing = coordinator.get_forfeit_confirmation(match_id, user_id)
+            if existing is None or (
+                existing[0] != chat_id or existing[1] != msg_id or existing[2] != gen
+            ):
+                await answer_callback_safe(
+                    query,
+                    "This forfeit confirmation is no longer active.",
+                    show_alert=True,
+                )
+                return
+            # Consume registration before awaiting cancel/confirm to prevent cancel-vs-confirm races
+            coordinator._forfeit_confirmations.pop((match_id, user_id), None)
+
+            if action == "gfk":
+                await coordinator._delete_or_strip_message(chat_id, msg_id)
+                await answer_callback_safe(query, "Forfeit cancelled.")
+                return
+
+            res = await coordinator.manager.forfeit_match(
+                match_id=match_id, player_id=user_id, expected_generation=gen
+            )
+            if not res.accepted or res.match is None:
+                await answer_callback_safe(
+                    query, _map_match_error(res.error_code, res.draft_error_code), show_alert=True
+                )
+                return
+            await coordinator.sync_match_ui(
+                res.match,
+                update_board=True,
+                update_card=True,
+            )
+            await answer_callback_safe(query, "You forfeited the match.")
+            return
 
     # ------------------------------------------------------------------
-    # Results: Detailed Results & Rematch
+    # Results: Battle Breakdown (Screen 11) & Back to Result
     # ------------------------------------------------------------------
     if action == "dr":
         if len(args) < 2:
@@ -1100,6 +1231,13 @@ async def handle_arena_callback(
         match = coordinator.manager.get_match(match_id)
         if match is None or idx is None:
             await answer_callback_safe(query, "Match details unavailable.", show_alert=True)
+            return
+        if user_id not in match.players:
+            await answer_callback_safe(
+                query,
+                "Only match participants can view Battle Breakdown.",
+                show_alert=True,
+            )
             return
         await coordinator.show_detailed_results(
             match=match,
@@ -1117,20 +1255,26 @@ async def handle_arena_callback(
         if match is None:
             await answer_callback_safe(query, "Match not found.", show_alert=True)
             return
-        if coordinator.is_viewer_detail_message(chat_id, msg_id, user_id):
-            names = coordinator.player_names_for_match(match)
-            await edit_message_text_safe(
-                coordinator.bot,
-                chat_id=chat_id,
-                message_id=msg_id,
-                text=render_match_results(
-                    match,
-                    universe_name=coordinator.universe_name(match.universe_id),
-                    player_names=names,
-                    char_lookup=coordinator.char_lookup_for_match(match),
-                ),
-                reply_markup=build_match_results_keyboard(match, player_names=names),
+        if user_id not in match.players:
+            await answer_callback_safe(
+                query,
+                "Only match participants can navigate match results.",
+                show_alert=True,
             )
+            return
+        names = coordinator.player_names_for_match(match)
+        await edit_message_text_safe(
+            coordinator.bot,
+            chat_id=chat_id,
+            message_id=msg_id,
+            text=render_match_results(
+                match,
+                universe_name=coordinator.universe_name(match.universe_id),
+                player_names=names,
+                char_lookup=coordinator.char_lookup_for_match(match),
+            ),
+            reply_markup=build_match_results_keyboard(match, player_names=names),
+        )
         await answer_callback_safe(query)
         return
 
