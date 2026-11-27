@@ -140,3 +140,46 @@ def test_no_expansion_record_is_approved_or_published() -> None:
     ka_import = load("naruto_expansion_003_004_ka_import.json")
     for entry in ka_import["characters"] + ka_import["held_records"]:
         assert entry["review_status"] == "pending"
+
+
+def test_idempotent_expansion_import_and_batch_filtering(tmp_path: Path) -> None:
+    from app.database import (
+        CharacterDatabase,
+        EvaluationStatus,
+        HELD_NARUTO_NAMES,
+        bootstrap_naruto_database,
+        get_naruto_batch_map,
+        load_naruto_expansion_003_004_into_db,
+    )
+    from app.scoring import DatasetKind
+
+    db = CharacterDatabase(tmp_path / "chars.sqlite3")
+    # Initial 60 + approve 53 non-held
+    summary = bootstrap_naruto_database(db, dataset_kind=DatasetKind.PRODUCTION)
+    assert summary.total_loaded == 60
+    for ch in db.list_characters("naruto"):
+        if ch.name not in HELD_NARUTO_NAMES:
+            db.submit_for_review(ch.character_id)
+            db.approve_character(ch.character_id)
+    db.publish_dataset("naruto", "naruto-prod-initial", kind=DatasetKind.PRODUCTION)
+
+    # Idempotent expansion import adds 131 Draft characters without touching existing 53 approved
+    loaded, held_cnt = load_naruto_expansion_003_004_into_db(db)
+    assert loaded == 131
+    assert held_cnt == 17
+    all_chars = db.list_characters("naruto")
+    assert len(all_chars) == 191
+    assert len(db.list_characters("naruto", status=EvaluationStatus.APPROVED)) == 53
+    assert len(db.list_characters("naruto", status=EvaluationStatus.DRAFT)) == 138
+    assert db.get_latest_published_version("naruto", kind=DatasetKind.PRODUCTION) == "naruto-prod-initial"
+
+    # Re-running is idempotent
+    loaded2, _ = load_naruto_expansion_003_004_into_db(db)
+    assert loaded2 == 131
+    assert len(db.list_characters("naruto")) == 191
+
+    # Batch map covers initial_60, 003, 004-A, 004-B
+    bmap = get_naruto_batch_map()
+    assert sum(1 for v in bmap.values() if v == "initial_60") == 60
+    assert sum(1 for v in bmap.values() if v in {"003", "004-A", "004-B"}) == 131
+    db.close()

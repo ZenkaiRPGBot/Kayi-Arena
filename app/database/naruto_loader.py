@@ -19,7 +19,29 @@ from app.database.models import (
     SpeciesKind,
 )
 from app.database.repository import CharacterDatabase
-from app.scoring import DatasetKind
+from app.scoring import DatasetKind, SCORING_ROLES
+
+HELD_EXPANSION_003_004_NAMES: frozenset[str] = frozenset(
+    {
+        "White Zetsu",
+        "Tajima Uchiha",
+        "Butsuma Senju",
+        "Itama Senju",
+        "Kawarama Senju",
+        "Ashina Uzumaki",
+        "Nawaki",
+        "Baiu",
+        "Midare",
+        "Mubi",
+        "Kagari",
+        "Karura",
+        "Reto — First Kazekage",
+        "Byakuren — First Mizukage",
+        "A — First Raikage",
+        "A — Second Raikage",
+        "Ishikawa — First Tsuchikage",
+    }
+)
 
 HELD_NARUTO_NAMES: frozenset[str] = frozenset(
     {
@@ -32,6 +54,8 @@ HELD_NARUTO_NAMES: frozenset[str] = frozenset(
         "Izuna Uchiha",
     }
 )
+
+ALL_HELD_NARUTO_NAMES: frozenset[str] = HELD_NARUTO_NAMES | HELD_EXPANSION_003_004_NAMES
 
 _NON_HUMAN_IDS: frozenset[str] = frozenset(
     {
@@ -48,6 +72,7 @@ class NarutoLoadSummary:
     approved_for_testing: int
     published_testing_version: str | None = None
     published_production_version: str | None = None
+    expansion_loaded: int = 0
 
 
 def _best_manifest_image(entry: dict[str, Any] | None) -> ImageMetadata:
@@ -201,11 +226,122 @@ def export_approved_snapshot(
     return payload
 
 
+_ROLE_BY_LOWER: dict[str, str] = {r.lower(): r for r in SCORING_ROLES}
+
+
+def get_naruto_batch_map(
+    *,
+    initial_path: Path = Path("data/naruto_evaluated_60_dataset.json"),
+    ka_import_path: Path = Path("data/naruto_expansion_003_004_ka_import.json"),
+) -> dict[str, str]:
+    """Return a character_id -> batch label mapping ('initial_60', '003', '004-A', '004-B')."""
+    mapping: dict[str, str] = {}
+    if initial_path.exists():
+        init_data = json.loads(initial_path.read_text(encoding="utf-8"))
+        for item in init_data.get("characters", []):
+            cid = str(item.get("character_id", "")).strip()
+            if cid:
+                mapping[cid] = "initial_60"
+    if ka_import_path.exists():
+        exp_data = json.loads(ka_import_path.read_text(encoding="utf-8"))
+        for item in exp_data.get("characters", []):
+            cid = str(item.get("character_id", "")).strip()
+            batch = str(item.get("batch", "")).strip()
+            if cid and batch:
+                mapping[cid] = batch
+    return mapping
+
+
+def load_naruto_expansion_003_004_into_db(
+    db: CharacterDatabase,
+    *,
+    ka_import_path: Path = Path("data/naruto_expansion_003_004_ka_import.json"),
+    manifest_path: Path = Path("data/naruto_expansion_003_004_image_manifest.json"),
+) -> tuple[int, int]:
+    """Idempotently import Batches 003-004 Draft characters without touching existing approvals.
+
+    - Imports only `importable` Draft records (131 characters).
+    - Never imports or fabricates scores for the 17 Held records.
+    - Never overwrites existing characters' evaluation status, ratings, or approved records.
+    """
+    if not ka_import_path.exists():
+        return 0, 0
+    try:
+        db.get_universe("naruto")
+    except Exception:
+        db.create_universe("naruto", "Naruto", active=True)
+
+    ka_data = json.loads(ka_import_path.read_text(encoding="utf-8"))
+    manifest_by_id: dict[str, dict[str, Any]] = {}
+    if manifest_path.exists():
+        manifest_data = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for c in manifest_data.get("characters", []):
+            cand_id = str(c.get("candidate_id", "")).strip()
+            if cand_id:
+                manifest_by_id[cand_id] = c
+                manifest_by_id[cand_id.replace(":", "_")] = c
+
+    existing_map = {c.character_id: c for c in db.list_characters("naruto")}
+    loaded = 0
+    for item in ka_data.get("characters", []):
+        if not item.get("importable"):
+            continue
+        cid = str(item["character_id"])
+        if item.get("name") in ALL_HELD_NARUTO_NAMES:
+            continue
+
+        manifest_entry = manifest_by_id.get(cid) or manifest_by_id.get(cid.replace("_", ":"))
+        img_meta = _best_manifest_image(manifest_entry)
+        existing = existing_map.get(cid)
+        if existing is not None:
+            if not existing.image.url_or_ref and img_meta.url_or_ref:
+                db.update_image_metadata(cid, img_meta)
+            loaded += 1
+            continue
+
+        species_raw = str(item.get("species", "human")).strip().lower()
+        species = SpeciesKind.NON_HUMAN if species_raw == SpeciesKind.NON_HUMAN.value else SpeciesKind.HUMAN
+        raw_fit = item.get("fit") or {}
+        fit = {
+            _ROLE_BY_LOWER[k.lower()]: int(v)
+            for k, v in raw_fit.items()
+            if k.lower() in _ROLE_BY_LOWER
+        }
+        ev_items = tuple(
+            EvidenceItem(
+                target=str(e.get("target", "overall")),
+                grade=str(e.get("grade", "C")),
+                source_ref=str(e.get("source_ref", "")),
+                summary=str(e.get("summary") or e.get("claim") or ""),
+            )
+            for e in (item.get("evidence") or ())
+            if isinstance(e, dict) and (e.get("summary") or e.get("claim"))
+        )
+        db.add_character(
+            character_id=cid,
+            universe_id="naruto",
+            name=str(item["name"]),
+            aliases=tuple(str(a) for a in (item.get("aliases") or ())),
+            species=species,
+            rarity=str(item["rarity"]),
+            power=int(item["power"]),
+            fit=fit,
+            canonical_version=str(item.get("canonical_version", "")),
+            image=img_meta,
+            evidence=ev_items,
+        )
+        loaded += 1
+
+    held_count = len(ka_data.get("held_records", []))
+    return loaded, held_count
+
+
 def bootstrap_naruto_database(
     db: CharacterDatabase,
     *,
     dataset_kind: DatasetKind = DatasetKind.PRODUCTION,
     snapshot_path: Path | None = None,
+    include_expansion: bool = False,
 ) -> NarutoLoadSummary:
     """Idempotent startup bootstrap for ephemeral filesystems (e.g., Render Free).
 
@@ -219,6 +355,10 @@ def bootstrap_naruto_database(
         db,
         publish_testing_dataset=(dataset_kind is DatasetKind.TEST),
     )
+
+    exp_loaded = 0
+    if include_expansion:
+        exp_loaded, _ = load_naruto_expansion_003_004_into_db(db)
 
     if dataset_kind is DatasetKind.PRODUCTION and snapshot_path is not None and snapshot_path.exists():
         snap = json.loads(snapshot_path.read_text(encoding="utf-8"))
@@ -250,4 +390,5 @@ def bootstrap_naruto_database(
         approved_for_testing=summary.approved_for_testing,
         published_testing_version=summary.published_testing_version,
         published_production_version=db.get_latest_published_version("naruto", kind=DatasetKind.PRODUCTION),
+        expansion_loaded=exp_loaded,
     )

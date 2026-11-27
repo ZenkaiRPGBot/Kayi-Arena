@@ -24,11 +24,14 @@ from app.database.models import (
     Universe,
 )
 from app.database.naruto_loader import (
+    ALL_HELD_NARUTO_NAMES,
     HELD_NARUTO_NAMES,
     NarutoLoadSummary,
     bootstrap_naruto_database,
     export_approved_snapshot,
+    get_naruto_batch_map,
     load_naruto_60_into_db,
+    load_naruto_expansion_003_004_into_db,
 )
 from pathlib import Path
 from typing import Any
@@ -62,6 +65,7 @@ __all__ = [
     "EvaluationStatus",
     "generate_dataset_version",
     "EvidenceItem",
+    "ALL_HELD_NARUTO_NAMES",
     "HELD_NARUTO_NAMES",
     "IMPORT_FORMAT_VERSION",
     "ImageMetadata",
@@ -77,7 +81,9 @@ __all__ = [
     "export_approved_snapshot",
     "export_published_dataset",
     "export_universe_bundle",
+    "get_naruto_batch_map",
     "import_catalogue_batch",
     "import_evaluation_batch",
     "load_naruto_60_into_db",
+    "load_naruto_expansion_003_004_into_db",
 ]

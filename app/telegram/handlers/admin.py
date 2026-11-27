@@ -23,12 +23,14 @@ from aiogram.types import (
 )
 
 from app.database import (
+    ALL_HELD_NARUTO_NAMES,
     EvaluationStatus,
     HELD_NARUTO_NAMES,
     ImageMetadata,
     ImageValidationStatus,
     RARITY_TIERS,
     generate_dataset_version,
+    get_naruto_batch_map,
 )
 from app.engine import TerminationReason
 from app.scoring import DatasetKind, SCORING_ROLES
@@ -151,13 +153,17 @@ def _render_char_browser(
     st_flt = flt["status"]
     rar_flt = flt["rarity"]
     img_flt = flt["image"]
+    batch_flt = flt.get("batch", "all")
     q_flt = flt["query"].strip().lower()
+    batch_map = get_naruto_batch_map() if uid == "naruto" else {}
 
     filtered = []
     for ch in all_chars:
         if st_flt != "all" and ch.status.value != st_flt:
             continue
         if rar_flt != "all" and ch.rarity != rar_flt:
+            continue
+        if batch_flt != "all" and batch_map.get(ch.character_id, "other") != batch_flt:
             continue
         has_cached = bool(coordinator.media_resolver.resolve_media_ref(ch))
         if img_flt == "cached" and not has_cached:
@@ -176,7 +182,7 @@ def _render_char_browser(
     lines = [
         f"📚 <b>Manage Characters — {esc(uid)}</b>",
         f"Total: <b>{len(all_chars)}</b> | Draft: <b>{counts['draft']}</b> | Review: <b>{counts['review']}</b> | Approved: <b>{counts['approved']}</b>",
-        f"Filters: Status=<code>{esc(st_flt)}</code> | Rarity=<code>{esc(rar_flt)}</code> | Img=<code>{esc(img_flt)}</code>"
+        f"Filters: Status=<code>{esc(st_flt)}</code> | Rarity=<code>{esc(rar_flt)}</code> | Img=<code>{esc(img_flt)}</code> | Batch=<code>{esc(batch_flt)}</code>"
         + (f" | Search=<code>{esc(q_flt)}</code>" if q_flt else ""),
         f"Matching: <b>{len(filtered)}</b>",
         "",
@@ -206,6 +212,8 @@ def _render_char_browser(
             _btn(f"🖼️ Img: {img_flt.title()}", f"adm:chflt:{uid}:image:cycle"),
         ]
     )
+    if uid == "naruto":
+        rows.append([_btn(f"📦 Batch: {batch_flt}", f"adm:chflt:{uid}:batch:cycle")])
     rows.append(
         [
             _btn("🔍 Search Name", f"adm:chsearch:{uid}"),
@@ -630,6 +638,11 @@ async def handle_admin_callback(
             cur = flt.get("image", "all")
             nxt = order_img[(order_img.index(cur) + 1) % len(order_img)] if cur in order_img else "all"
             coordinator.set_char_browser_filter(actor_id, uid, image=nxt)
+        elif key == "batch":
+            order_b = ("all", "initial_60", "003", "004-A", "004-B")
+            cur = flt.get("batch", "all")
+            nxt = order_b[(order_b.index(cur) + 1) % len(order_b)] if cur in order_b else "all"
+            coordinator.set_char_browser_filter(actor_id, uid, batch=nxt)
         text, kb = _render_char_browser(coordinator, actor_id, uid, page=0)
         await edit_message_text_safe(
             coordinator.bot, chat_id=chat_id, message_id=msg_id, text=text, reply_markup=kb
@@ -640,7 +653,7 @@ async def handle_admin_callback(
     if action == "chreset" and args:
         uid = args[0]
         coordinator.set_char_browser_filter(
-            actor_id, uid, status="all", rarity="all", image="all", query=""
+            actor_id, uid, status="all", rarity="all", image="all", batch="all", query=""
         )
         text, kb = _render_char_browser(coordinator, actor_id, uid, page=0)
         await edit_message_text_safe(
@@ -791,11 +804,16 @@ async def handle_admin_callback(
 
     if action == "chsuball" and args:
         uid = args[0]
+        flt = coordinator.get_char_browser_filter(actor_id, uid)
+        batch_flt = flt.get("batch", "all")
+        batch_map = get_naruto_batch_map() if (uid == "naruto" and batch_flt != "all") else {}
         drafts = coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.DRAFT)
         submitted = 0
         held_skipped = 0
         for ch in drafts:
-            if ch.name in HELD_NARUTO_NAMES:
+            if batch_flt != "all" and batch_map.get(ch.character_id, "other") != batch_flt:
+                continue
+            if ch.name in ALL_HELD_NARUTO_NAMES:
                 held_skipped += 1
                 continue
             coordinator.db.submit_for_review(ch.character_id)
@@ -806,13 +824,13 @@ async def handle_admin_callback(
                 action="batch_submit_review",
                 target_type="universe",
                 target_id=uid,
-                details={"submitted": submitted, "held_skipped": held_skipped},
+                details={"submitted": submitted, "held_skipped": held_skipped, "batch": batch_flt},
             )
         await edit_message_text_safe(
             coordinator.bot,
             chat_id=chat_id,
             message_id=msg_id,
-            text=f"📤 Submitted <b>{submitted}</b> non-held Draft characters to Review.\n⏸ Held preserved: <b>{held_skipped}</b>.",
+            text=f"📤 Submitted <b>{submitted}</b> non-held Draft characters to Review (Batch: <code>{esc(batch_flt)}</code>).\n⏸ Held preserved: <b>{held_skipped}</b>.",
             reply_markup=InlineKeyboardMarkup(
                 inline_keyboard=[
                     [_btn("✅ Batch Approve Review", f"adm:chappall:{uid}", style=STYLE_SUCCESS)],
@@ -825,15 +843,19 @@ async def handle_admin_callback(
 
     if action == "chappall" and args:
         uid = args[0]
+        flt = coordinator.get_char_browser_filter(actor_id, uid)
+        batch_flt = flt.get("batch", "all")
+        batch_map = get_naruto_batch_map() if (uid == "naruto" and batch_flt != "all") else {}
         in_review = [
             c
             for c in coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.REVIEW)
-            if c.name not in HELD_NARUTO_NAMES
+            if c.name not in ALL_HELD_NARUTO_NAMES
+            and (batch_flt == "all" or batch_map.get(c.character_id, "other") == batch_flt)
         ]
         kb = InlineKeyboardMarkup(
             inline_keyboard=[
                 [
-                    _btn(f"Confirm Approve ({len(in_review)})", f"adm:chappallc:{uid}", style=STYLE_SUCCESS),
+                    _btn(f"Confirm Approve ({len(in_review)})", f"adm:chappallc:{uid}:{batch_flt}", style=STYLE_SUCCESS),
                     _btn("Cancel", f"adm:chars:{uid}:review:0"),
                 ]
             ]
@@ -842,7 +864,7 @@ async def handle_admin_callback(
             coordinator.bot,
             chat_id=chat_id,
             message_id=msg_id,
-            text=f"⚠️ Approve <b>{len(in_review)}</b> non-held Review characters in <code>{esc(uid)}</code> for publication?\n\nHeld characters remain excluded.",
+            text=f"⚠️ Approve <b>{len(in_review)}</b> non-held Review characters in <code>{esc(uid)}</code> (Batch: <code>{esc(batch_flt)}</code>) for publication?\n\nHeld characters remain excluded.",
             reply_markup=kb,
         )
         await answer_callback_safe(query)
@@ -850,10 +872,14 @@ async def handle_admin_callback(
 
     if action == "chappallc" and args:
         uid = args[0]
+        batch_flt = args[1] if len(args) > 1 and args[1] in {"all", "initial_60", "003", "004-A", "004-B"} else "all"
+        batch_map = get_naruto_batch_map() if (uid == "naruto" and batch_flt != "all") else {}
         in_review = coordinator.db.list_characters(universe_id=uid, status=EvaluationStatus.REVIEW)
         approved = 0
         for ch in in_review:
-            if ch.name in HELD_NARUTO_NAMES:
+            if ch.name in ALL_HELD_NARUTO_NAMES:
+                continue
+            if batch_flt != "all" and batch_map.get(ch.character_id, "other") != batch_flt:
                 continue
             coordinator.db.approve_character(ch.character_id)
             approved += 1
@@ -863,7 +889,7 @@ async def handle_admin_callback(
                 action="batch_approve_characters",
                 target_type="universe",
                 target_id=uid,
-                details={"approved": approved},
+                details={"approved": approved, "batch": batch_flt},
             )
         await edit_message_text_safe(
             coordinator.bot,
@@ -924,7 +950,7 @@ async def handle_admin_callback(
         eligible_ids = [
             c.character_id
             for c in coordinator.db.list_characters(universe_id=uid)
-            if c.name not in HELD_NARUTO_NAMES and c.power is not None and c.fit is not None
+            if c.name not in ALL_HELD_NARUTO_NAMES and c.power is not None and c.fit is not None
         ]
         ver = generate_dataset_version(uid, DatasetKind.TEST)
         try:

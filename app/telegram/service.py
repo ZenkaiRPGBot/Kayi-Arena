@@ -206,6 +206,7 @@ class ArenaTelegramCoordinator:
                 "status": "all",
                 "rarity": "all",
                 "image": "all",
+                "batch": "all",
                 "query": "",
             }
             self._char_browser_filters[admin_id] = flt

@@ -62,10 +62,12 @@ async def run_bot() -> None:
         db,
         dataset_kind=config.dataset_kind,
         snapshot_path=snap_path,
+        include_expansion=True,
     )
     logger.info(
-        "Naruto bootstrap complete: loaded=%d draft=%d held=%d testing=%s prod=%s",
+        "Naruto bootstrap complete: loaded=%d expansion=%d draft=%d held=%d testing=%s prod=%s",
         boot_summary.total_loaded,
+        boot_summary.expansion_loaded,
         boot_summary.draft_count,
         boot_summary.held_count,
         boot_summary.published_testing_version,
