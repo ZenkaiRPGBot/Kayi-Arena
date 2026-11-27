@@ -1,0 +1,22 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-005",
+  "generated_at": "2026-11-27",
+  "schema": "KA-IMPORT-1.0",
+  "integration_target": "in-memory CharacterDatabase (no production publication)",
+  "checks": {
+    "catalogue_unique_ids": 62,
+    "importable_evaluation_count": 52,
+    "held_count": 10,
+    "catalogue_imported": 62,
+    "evaluations_updated": 52,
+    "importable_ids_match_audited": true,
+    "held_ids_absent_from_evaluations": true,
+    "no_duplicate_ids_in_dataset_c": true,
+    "no_overlap_batch005_with_existing_datasets": true,
+    "held_candidates_kept_without_ratings": true,
+    "role_keys_exact": true,
+    "audited_evaluations_unmodified": true
+  },
+  "recommendation": "Import-ready from a schema and identity perspective. Owner approval and visual/canonical artwork review are still required before production publication."
+}
