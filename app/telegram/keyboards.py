@@ -11,7 +11,7 @@ from typing import Mapping, Sequence
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from app.database import Universe
-from app.matches import ChallengeRecord, ChallengeStatus, ManagedMatch
+from app.matches import ChallengeRecord, ChallengeStatus, ChallengeType, ManagedMatch
 from app.telegram.callbacks import encode_cb, rarity_to_code, role_to_index
 from app.telegram.config import BotConfig
 from app.telegram.constants import (
@@ -259,29 +259,28 @@ def build_universe_selection_keyboard(
 def build_challenge_keyboard(challenge: ChallengeRecord) -> InlineKeyboardMarkup | None:
     if challenge.status is not ChallengeStatus.OPEN:
         return None
-    switch_label = "🤝 Friendly" if challenge.game_mode == "ranked" else "🏆 Ranked"
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [
-                _btn(
-                    "⚔️ Accept Challenge",
-                    callback_data=encode_cb("ca", challenge.challenge_id, challenge.generation),
-                    style=STYLE_SUCCESS,
-                )
-            ],
-            [
-                _btn(
-                    switch_label,
-                    callback_data=encode_cb("cm", challenge.challenge_id, challenge.generation),
-                ),
-                _btn(
-                    "✖ Cancel",
-                    callback_data=encode_cb("cx", challenge.challenge_id, challenge.generation),
-                    style=STYLE_DANGER,
-                ),
-            ],
-        ]
+    accept_btn = _btn(
+        "⚔️ Accept",
+        callback_data=encode_cb("ca", challenge.challenge_id, challenge.generation),
+        style=STYLE_SUCCESS,
     )
+    cancel_btn = _btn(
+        "✕ Cancel",
+        callback_data=encode_cb("cx", challenge.challenge_id, challenge.generation),
+        style=STYLE_DANGER,
+    )
+    if challenge.challenge_type is ChallengeType.DIRECT:
+        decline_btn = _btn(
+            "Decline",
+            callback_data=encode_cb("cd", challenge.challenge_id, challenge.generation),
+        )
+        return InlineKeyboardMarkup(
+            inline_keyboard=[
+                [accept_btn, decline_btn],
+                [cancel_btn],
+            ]
+        )
+    return InlineKeyboardMarkup(inline_keyboard=[[accept_btn, cancel_btn]])
 
 
 def build_draft_board_keyboard(match: ManagedMatch) -> InlineKeyboardMarkup:

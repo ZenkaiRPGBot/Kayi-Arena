@@ -90,13 +90,19 @@ def _map_match_error(code: MatchManagementErrorCode | None, draft_code: DraftErr
     return "Action could not be completed."
 
 
-def _map_challenge_error(code: MatchManagementErrorCode | None) -> str:
+def _map_challenge_error(
+    code: MatchManagementErrorCode | None,
+    *,
+    action: str | None = None,
+) -> str:
     if code is MatchManagementErrorCode.SELF_CHALLENGE_FORBIDDEN:
         return "You cannot accept your own challenge."
     if code is MatchManagementErrorCode.NOT_CHALLENGE_TARGET:
-        return "This direct challenge is for another player."
+        if action == "cd":
+            return "Only the challenged player can decline."
+        return "Only the challenged player can accept."
     if code is MatchManagementErrorCode.NOT_CHALLENGER:
-        return "Only the challenger can do that."
+        return "Only the challenger can cancel."
     if code is MatchManagementErrorCode.PLAYER_ALREADY_IN_MATCH:
         return "You already have an active match."
     if code in {
@@ -105,7 +111,7 @@ def _map_challenge_error(code: MatchManagementErrorCode | None) -> str:
         MatchManagementErrorCode.STALE_CONTROL_GENERATION,
         MatchManagementErrorCode.CHALLENGE_NOT_FOUND,
     }:
-        return "This action has expired."
+        return "This challenge has already ended."
     return "Unable to update challenge."
 
 
@@ -737,9 +743,9 @@ async def handle_arena_callback(
         return
 
     # ------------------------------------------------------------------
-    # Challenge Actions: Accept, Mode Switch, Cancel
+    # Challenge Actions: Accept, Decline, Cancel (and obsolete Mode Switch)
     # ------------------------------------------------------------------
-    if action in {"ca", "cm", "cx"}:
+    if action in {"ca", "cd", "cm", "cx"}:
         if msg.chat.type not in {"group", "supergroup"}:
             await answer_callback_safe(query, "Battles can only be played in groups.", show_alert=True)
             return
@@ -752,6 +758,14 @@ async def handle_arena_callback(
             await answer_callback_safe(query, "Invalid challenge state.", show_alert=True)
             return
 
+        if action == "cm":
+            await answer_callback_safe(
+                query,
+                "Match mode cannot be changed after sending a challenge.",
+                show_alert=True,
+            )
+            return
+
         if action == "ca":
             res = await coordinator.manager.accept_challenge(
                 challenge_id=challenge_id,
@@ -759,41 +773,86 @@ async def handle_arena_callback(
                 expected_generation=gen,
             )
             if not res.accepted or res.challenge is None or res.match is None:
-                await answer_callback_safe(query, _map_challenge_error(res.error_code), show_alert=True)
+                await answer_callback_safe(
+                    query,
+                    _map_challenge_error(res.error_code, action="ca"),
+                    show_alert=True,
+                )
                 return
-            await coordinator.render_challenge_message(
-                res.challenge, chat_id=chat_id, message_id=msg_id
-            )
-            await coordinator.start_match_ui(res.match, chat_id=chat_id)
+            coordinator.cancel_challenge_expiry(challenge_id)
+            try:
+                await coordinator.render_challenge_message(
+                    res.challenge, chat_id=chat_id, message_id=msg_id
+                )
+            except Exception as exc:
+                import logging
+
+                logging.getLogger(__name__).warning(
+                    "Post-commit challenge card update error on %s: %s",
+                    challenge_id,
+                    type(exc).__name__,
+                )
+            ui_state = None
+            try:
+                ui_state = await coordinator.start_match_ui(res.match, chat_id=chat_id)
+            except Exception as exc:
+                import logging
+
+                logging.getLogger(__name__).warning(
+                    "Post-commit start_match_ui error on %s: %s",
+                    res.match.match_id,
+                    type(exc).__name__,
+                )
+            if ui_state is None:
+                coordinator.schedule_turn_timeout(res.match)
+                await answer_callback_safe(
+                    query,
+                    "Match started! Use /game if the board did not appear.",
+                    show_alert=True,
+                )
+                return
             await answer_callback_safe(query, "Challenge accepted!")
             return
 
-        if action == "cm":
-            res = await coordinator.manager.switch_challenge_mode(
+        if action == "cd":
+            res = await coordinator.manager.decline_challenge(
                 challenge_id=challenge_id,
                 player_id=user_id,
                 expected_generation=gen,
             )
             if not res.accepted or res.challenge is None:
-                await answer_callback_safe(query, _map_challenge_error(res.error_code), show_alert=True)
+                await answer_callback_safe(
+                    query,
+                    _map_challenge_error(res.error_code, action="cd"),
+                    show_alert=True,
+                )
                 return
+            coordinator.cancel_challenge_expiry(challenge_id)
             await coordinator.render_challenge_message(
                 res.challenge, chat_id=chat_id, message_id=msg_id
             )
-            await answer_callback_safe(query, f"Mode set to {res.challenge.game_mode.title()}.")
+            await answer_callback_safe(query, "Challenge declined.")
             return
 
-        res = await coordinator.manager.cancel_challenge(
-            challenge_id=challenge_id,
-            player_id=user_id,
-            expected_generation=gen,
-        )
-        if not res.accepted or res.challenge is None:
-            await answer_callback_safe(query, _map_challenge_error(res.error_code), show_alert=True)
+        if action == "cx":
+            res = await coordinator.manager.cancel_challenge(
+                challenge_id=challenge_id,
+                player_id=user_id,
+                expected_generation=gen,
+            )
+            if not res.accepted or res.challenge is None:
+                await answer_callback_safe(
+                    query,
+                    _map_challenge_error(res.error_code, action="cx"),
+                    show_alert=True,
+                )
+                return
+            coordinator.cancel_challenge_expiry(challenge_id)
+            await coordinator.render_challenge_message(
+                res.challenge, chat_id=chat_id, message_id=msg_id
+            )
+            await answer_callback_safe(query, "Challenge cancelled.")
             return
-        await coordinator.render_challenge_message(res.challenge, chat_id=chat_id, message_id=msg_id)
-        await answer_callback_safe(query, "Challenge cancelled.")
-        return
 
     # ------------------------------------------------------------------
     # Active Match Actions: Shuffle, Skip, Assign, Inactivity, Forfeit, Recover

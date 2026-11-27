@@ -554,15 +554,17 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
         ),
     )
     chl_msg_id = bot.next_msg_id
-    assert "ARENA CHALLENGE" in bot.sent_messages[-1]["text"]
-    assert "Direct Challenge" in bot.sent_messages[-1]["text"]
+    assert "⚔️ Battle Challenge" in bot.sent_messages[-1]["text"]
+    assert "has challenged" in bot.sent_messages[-1]["text"]
+    assert 'href="tg://user?id=101"' in bot.sent_messages[-1]["text"]
+    assert 'href="tg://user?id=202"' in bot.sent_messages[-1]["text"]
 
     # Find challenge ID
     chl = next(iter(mgr._challenges.values()))
     assert chl.game_mode == "friendly"
     original_expires_at = chl.expires_at
 
-    # Switch challenge mode back to Ranked without resetting expiration
+    # Obsolete mode-switch callback must NOT modify challenge
     clock.advance(25.0)
     await dp.feed_update(
         bot,
@@ -578,8 +580,9 @@ async def test_start_arena_challenge_and_full_e2e_match() -> None:
     )
     chl = mgr.get_challenge(chl.challenge_id)
     assert chl is not None
-    assert chl.game_mode == "ranked"
+    assert chl.game_mode == "friendly"
     assert chl.expires_at == original_expires_at
+    assert "cannot be changed" in bot.callback_answers[-1]["text"]
 
     # Spectator cannot accept direct challenge
     await dp.feed_update(
@@ -1470,6 +1473,158 @@ async def test_module_04_arena_config_group_only_browser_random_and_security() -
     assert active_m is not None
     assert active_m.universe_id == accepted_chl.universe_id
     assert active_m.dataset_version == f"{accepted_chl.universe_id}-v1"
+
+    await coordinator.shutdown()
+    store.close()
+    db.close()
+
+
+@pytest.mark.asyncio
+async def test_modules_05_06_08_challenge_interfaces_mentions_and_lifecycle() -> None:
+    import asyncio
+    from app.persistence import SqliteMatchStore
+    from app.telegram.texts import format_user_mention
+
+    # 1. Mention formatting: HTML-escaped first_name, Unicode/emoji, no username, fallback
+    assert format_user_mention(123456789, "Obito") == '<a href="tg://user?id=123456789">Obito</a>'
+    assert format_user_mention("99", "Alex <Pro>") == '<a href="tg://user?id=99">Alex &lt;Pro&gt;</a>'
+    assert format_user_mention("77", "Naruto 🍥") == '<a href="tg://user?id=77">Naruto 🍥</a>'
+    assert format_user_mention("55", None) == '<a href="tg://user?id=55">Player</a>'
+    assert format_user_mention("55", "55") == '<a href="tg://user?id=55">Player</a>'
+
+    db = CharacterDatabase(":memory:")
+    _seed_naruto_db(db)
+    clock = FakeClock()
+    store = SqliteMatchStore(":memory:")
+    mgr = MatchManager(db, dataset_kind=DatasetKind.PRODUCTION, store=store, clock=clock)
+    bot = MockBotRecorder()
+    cfg = BotConfig(bot_token="fake:token", bot_username="KayiArenaBot")
+    dp, coordinator = create_dispatcher(bot=bot, config=cfg, db=db, manager=mgr, store=store)
+
+    u_chal = User(id=101, is_bot=False, first_name="Obito <Uchiha>", last_name="Last")
+    u_opp = User(id=202, is_bot=False, first_name="Kakashi 🍥", last_name="Hatake")
+    u_other = User(id=303, is_bot=False, first_name="Sasuke")
+    upd = 1
+
+    # 2. Direct Challenge (Naruto, Ranked) -> exact layout, styles, mentions, permissions, Decline
+    await dp.feed_update(
+        bot, _make_message_update(upd, chat_id=-1001, chat_type="supergroup", user=u_chal, text="/arena Naruto", reply_to_user=u_opp)
+    )
+    upd += 1
+    cfg_id = bot.next_msg_id
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=cfg_id, user=u_chal, data=encode_cb("ac", "go"), recorder=bot)
+    )
+    upd += 1
+    dir_msg_id = bot.next_msg_id
+    dir_text = bot.sent_messages[-1]["text"]
+    dir_kb = bot.sent_messages[-1]["reply_markup"]
+    assert "<b>⚔️ Battle Challenge</b>" in dir_text
+    assert '<a href="tg://user?id=101">Obito &lt;Uchiha&gt;</a> has challenged <a href="tg://user?id=202">Kakashi 🍥</a> to a battle.' in dir_text
+    assert "<b>Universe:</b> 🍥 Naruto" in dir_text
+    assert "<b>Mode:</b> 🏆 Ranked" in dir_text
+    assert "<i>⏳ Expires in 5 minutes.</i>" in dir_text
+    assert "ARENA CHALLENGE" not in dir_text and "#" not in dir_text
+    assert [[b.text for b in r] for r in dir_kb.inline_keyboard] == [["⚔️ Accept", "Decline"], ["✕ Cancel"]]
+    assert dir_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "success"
+    assert "style" not in dir_kb.inline_keyboard[0][1].model_dump(exclude_none=True)
+    assert dir_kb.inline_keyboard[1][0].model_dump(exclude_none=True)["style"] == "danger"
+
+    dir_chl = next(iter(mgr._challenges.values()))
+    # Unrelated user cannot decline or cancel
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=dir_msg_id, user=u_other, data=encode_cb("cd", dir_chl.challenge_id, dir_chl.generation), recorder=bot)
+    )
+    upd += 1
+    assert bot.callback_answers[-1]["text"] == "Only the challenged player can decline."
+
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=dir_msg_id, user=u_opp, data=encode_cb("cx", dir_chl.challenge_id, dir_chl.generation), recorder=bot)
+    )
+    upd += 1
+    assert bot.callback_answers[-1]["text"] == "Only the challenger can cancel."
+
+    # Opponent declines using emitted Decline button payload -> removes keyboard, shows Challenge Declined
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=dir_msg_id, user=u_opp, data=dir_kb.inline_keyboard[0][1].callback_data, recorder=bot)
+    )
+    upd += 1
+    assert "<b>Challenge Declined</b>" in bot.edited_messages[-1]["text"]
+    assert '<a href="tg://user?id=202">Kakashi 🍥</a> declined the challenge.' in bot.edited_messages[-1]["text"]
+    assert bot.edited_messages[-1]["reply_markup"] is None
+
+    # Stale accept after decline is rejected
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=dir_msg_id, user=u_opp, data=encode_cb("ca", dir_chl.challenge_id, dir_chl.generation), recorder=bot)
+    )
+    upd += 1
+    assert bot.callback_answers[-1]["text"] == "This challenge has already ended."
+    assert mgr.get_active_match_for_player("101") is None
+
+    # 3. Open Challenge (Random, Friendly) -> single-row Accept/Cancel, no Decline, Cancel flow
+    await dp.feed_update(
+        bot, _make_message_update(upd, chat_id=-1001, chat_type="supergroup", user=u_chal, text="/arena random")
+    )
+    upd += 1
+    cfg_open_id = bot.next_msg_id
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=cfg_open_id, user=u_chal, data=encode_cb("ac", "md", "f"), recorder=bot)
+    )
+    upd += 1
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=cfg_open_id, user=u_chal, data=encode_cb("ac", "go"), recorder=bot)
+    )
+    upd += 1
+    open_msg_id = bot.next_msg_id
+    open_text = bot.sent_messages[-1]["text"]
+    open_kb = bot.sent_messages[-1]["reply_markup"]
+    assert "<b>⚔️ Open Challenge</b>" in open_text
+    assert '<a href="tg://user?id=101">Obito &lt;Uchiha&gt;</a> is looking for an opponent.' in open_text
+    assert "<b>Universe:</b> 🎲 Random" in open_text
+    assert "<b>Mode:</b> 🤝 Friendly" in open_text
+    assert "<i>The universe will be revealed upon acceptance.</i>" in open_text
+    assert [[b.text for b in r] for r in open_kb.inline_keyboard] == [["⚔️ Accept", "✕ Cancel"]]
+    assert open_kb.inline_keyboard[0][0].model_dump(exclude_none=True)["style"] == "success"
+    assert open_kb.inline_keyboard[0][1].model_dump(exclude_none=True)["style"] == "danger"
+
+    open_chl = [c for c in mgr._challenges.values() if c.challenge_id != dir_chl.challenge_id][0]
+    # Self-accept rejected
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=open_msg_id, user=u_chal, data=encode_cb("ca", open_chl.challenge_id, open_chl.generation), recorder=bot)
+    )
+    upd += 1
+    assert bot.callback_answers[-1]["text"] == "You cannot accept your own challenge."
+
+    # Challenger cancels -> removes keyboard, shows Challenge Cancelled
+    await dp.feed_update(
+        bot, _make_callback_update(upd, chat_id=-1001, chat_type="supergroup", message_id=open_msg_id, user=u_chal, data=encode_cb("cx", open_chl.challenge_id, open_chl.generation), recorder=bot)
+    )
+    upd += 1
+    assert "<b>❌ Challenge Cancelled</b>" in bot.edited_messages[-1]["text"]
+    assert '<a href="tg://user?id=101">Obito &lt;Uchiha&gt;</a> cancelled the challenge.' in bot.edited_messages[-1]["text"]
+    assert bot.edited_messages[-1]["reply_markup"] is None
+
+    # 4. Concurrent acceptance on open challenge -> only one match created
+    _, open_res = await mgr.handle_draft_command(player_id="101", chat_id="-1001", universe_arg="random", game_mode="ranked")
+    assert open_res and open_res.challenge
+    c_id = open_res.challenge.challenge_id
+    r1, r2 = await asyncio.gather(
+        mgr.accept_challenge(challenge_id=c_id, player_id="202"),
+        mgr.accept_challenge(challenge_id=c_id, player_id="303"),
+    )
+    assert sum(1 for r in (r1, r2) if r.accepted) == 1
+    assert sum(1 for r in (r1, r2) if not r.accepted) == 1
+
+    # 5. Expiration renders ⌛ Challenge Expired without keyboard
+    _, exp_res = await mgr.handle_draft_command(player_id="404", chat_id="-1001", universe_arg="naruto", game_mode="ranked")
+    assert exp_res and exp_res.challenge
+    clock.advance(301.0)
+    expired = await mgr.expire_challenge(exp_res.challenge.challenge_id)
+    assert expired.accepted and expired.challenge is not None
+    await coordinator.render_challenge_message(expired.challenge, chat_id="-1001", message_id=999)
+    assert "<b>⌛ Challenge Expired</b>" in bot.edited_messages[-1]["text"]
+    assert "The challenge was not accepted in time." in bot.edited_messages[-1]["text"]
+    assert bot.edited_messages[-1]["reply_markup"] is None
 
     await coordinator.shutdown()
     store.close()

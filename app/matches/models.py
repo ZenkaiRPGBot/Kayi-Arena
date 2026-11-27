@@ -19,6 +19,7 @@ class ChallengeType(str, Enum):
 class ChallengeStatus(str, Enum):
     OPEN = "open"
     ACCEPTED = "accepted"
+    DECLINED = "declined"
     CANCELLED = "cancelled"
     EXPIRED = "expired"
 

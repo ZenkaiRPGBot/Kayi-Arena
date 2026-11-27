@@ -13,6 +13,7 @@ from app.database import CharacterEntry, Universe
 from app.matches import (
     ChallengeRecord,
     ChallengeStatus,
+    ChallengeType,
     ManagedMatch,
     MatchLifecycleStatus,
     MatchOutcomeReason,
@@ -464,6 +465,29 @@ def render_universe_selection(
     return clamp_text("\n".join(lines))
 
 
+def format_user_mention(user_id: str | int, first_name: str | None) -> str:
+    """Render a clickable Telegram tg://user mention using escaped first_name."""
+    uid_str = str(user_id).strip()
+    label = (first_name or "").strip()
+    if not label or label == uid_str:
+        label = "Player"
+    safe_label = esc(label)
+    if uid_str.isdigit():
+        return f'<a href="tg://user?id={uid_str}">{safe_label}</a>'
+    return safe_label
+
+
+def _format_challenge_ttl(seconds: float) -> str:
+    total = max(1, int(round(seconds)))
+    if total >= 60 and total % 60 == 0:
+        mins = total // 60
+        return "1 minute" if mins == 1 else f"{mins} minutes"
+    if total >= 60:
+        mins = total // 60
+        return "1 minute" if mins == 1 else f"{mins} minutes"
+    return "1 second" if total == 1 else f"{total} seconds"
+
+
 def render_challenge_card(
     challenge: ChallengeRecord,
     *,
@@ -472,38 +496,91 @@ def render_challenge_card(
     target_name: str | None = None,
     seconds_remaining: float = 300.0,
 ) -> str:
-    u_icon = universe_icon(challenge.universe_id)
-    opponent_line = (
-        f"Opponent: <b>{esc(target_name)}</b> (Direct Challenge)"
-        if target_name
-        else "Opponent: Waiting for a challenger..."
+    challenger_mention = format_user_mention(challenge.challenger_id, challenger_name)
+    opponent_mention = (
+        format_user_mention(challenge.target_player_id, target_name)
+        if challenge.target_player_id
+        else "Player"
     )
+
+    if challenge.status is ChallengeStatus.DECLINED:
+        return clamp_text(
+            "\n".join(
+                [
+                    "<b>Challenge Declined</b>",
+                    "",
+                    f"{opponent_mention} declined the challenge.",
+                ]
+            )
+        )
 
     if challenge.status is ChallengeStatus.CANCELLED:
-        status_block = "✖ <b>Challenge Cancelled</b>"
-    elif challenge.status is ChallengeStatus.EXPIRED:
-        status_block = "⌛ <b>Challenge Expired</b>"
-    elif challenge.status is ChallengeStatus.ACCEPTED:
-        status_block = "✅ <b>Challenge Accepted</b> — Match started!"
-    else:
-        status_block = f"Expires in: {format_duration_short(seconds_remaining)}\n\nWho will enter the arena?"
-
-    return clamp_text(
-        "\n".join(
-            [
-                "⚔️ <b>ARENA CHALLENGE</b>",
-                "",
-                f"Challenger: <b>{esc(challenger_name)}</b>",
-                opponent_line,
-                f"Universe: {u_icon} {esc(universe_name)}",
-                f"Mode: {format_mode_label(challenge.game_mode)}",
-                "Format: 1v1 • 7 Roles",
-                status_block,
-                "",
-                f"Challenge <code>#{esc(challenge.challenge_id)}</code>",
-            ]
+        return clamp_text(
+            "\n".join(
+                [
+                    "<b>❌ Challenge Cancelled</b>",
+                    "",
+                    f"{challenger_mention} cancelled the challenge.",
+                ]
+            )
         )
-    )
+
+    if challenge.status is ChallengeStatus.EXPIRED:
+        return clamp_text(
+            "\n".join(
+                [
+                    "<b>⌛ Challenge Expired</b>",
+                    "",
+                    "The challenge was not accepted in time.",
+                ]
+            )
+        )
+
+    u_icon = universe_icon(challenge.universe_id)
+    mode_line = "🏆 Ranked" if challenge.game_mode == "ranked" else "🤝 Friendly"
+
+    if challenge.status is ChallengeStatus.ACCEPTED:
+        return clamp_text(
+            "\n".join(
+                [
+                    "✅ <b>Challenge Accepted</b> — Match started!",
+                    "",
+                    f"<b>Universe:</b> {u_icon} {esc(universe_name)}",
+                    f"<b>Mode:</b> {mode_line}",
+                ]
+            )
+        )
+
+    is_direct = challenge.challenge_type is ChallengeType.DIRECT and challenge.target_player_id
+    ttl_seconds = max(1.0, seconds_remaining if seconds_remaining > 0 else (challenge.expires_at - challenge.created_at))
+    ttl_str = _format_challenge_ttl(ttl_seconds)
+
+    if is_direct:
+        lines = [
+            "<b>⚔️ Battle Challenge</b>",
+            "",
+            f"{challenger_mention} has challenged {opponent_mention} to a battle.",
+            "",
+            f"<b>Universe:</b> {u_icon} {esc(universe_name)}",
+            "",
+            f"<b>Mode:</b> {mode_line}",
+        ]
+    else:
+        lines = [
+            "<b>⚔️ Open Challenge</b>",
+            "",
+            f"{challenger_mention} is looking for an opponent.",
+            "",
+            f"<b>Universe:</b> {u_icon} {esc(universe_name)}",
+            "",
+            f"<b>Mode:</b> {mode_line}",
+        ]
+
+    if challenge.universe_id == "random":
+        lines.extend(["", "<i>The universe will be revealed upon acceptance.</i>"])
+
+    lines.extend(["", f"<i>⏳ Expires in {ttl_str}.</i>"])
+    return clamp_text("\n".join(lines))
 
 
 # ---------------------------------------------------------------------------

@@ -120,6 +120,7 @@ class ArenaTelegramCoordinator:
         self.media_resolver = CharacterMediaResolver(store)
 
         self._player_names: dict[str, str] = {}
+        self._player_first_names: dict[str, str] = {}
         self._player_usernames: dict[str, str] = {}
         self._universe_menus: dict[tuple[str, int], UniverseMenuContext] = {}
         self._challenge_messages: dict[str, tuple[str, int]] = {}
@@ -282,13 +283,25 @@ class ArenaTelegramCoordinator:
         if user is None:
             return ""
         uid = str(user.id)
-        name = (user.full_name or user.first_name or user.username or uid).strip()
+        first = (user.first_name or "").strip()
+        if first:
+            self._player_first_names[uid] = first
+        name = (user.full_name or first or user.username or uid).strip()
         self._player_names[uid] = name
         if user.username:
             self._player_usernames[uid] = user.username
         if self.store is not None:
             self.store.upsert_player_profile(uid, name, user.username)
         return uid
+
+    def first_name(self, player_id: str) -> str:
+        first = self._player_first_names.get(player_id, "").strip()
+        if first:
+            return first
+        full = self._player_names.get(player_id, "").strip()
+        if full and full != str(player_id):
+            return full.split()[0]
+        return "Player"
 
     def display_name(self, player_id: str) -> str:
         return self._player_names.get(player_id, player_id)
@@ -379,9 +392,9 @@ class ArenaTelegramCoordinator:
         text = render_challenge_card(
             challenge,
             universe_name=self.universe_name(challenge.universe_id),
-            challenger_name=self.display_name(challenge.challenger_id),
+            challenger_name=self.first_name(challenge.challenger_id),
             target_name=(
-                self.display_name(challenge.target_player_id)
+                self.first_name(challenge.target_player_id)
                 if challenge.target_player_id
                 else None
             ),
@@ -406,6 +419,9 @@ class ArenaTelegramCoordinator:
         if sent is not None:
             self.register_challenge_message(challenge.challenge_id, str(sent.chat.id), sent.message_id)
         return sent
+
+    def cancel_challenge_expiry(self, challenge_id: str) -> None:
+        self._cancel_timer(f"chl:{challenge_id}")
 
     def schedule_challenge_expiry(self, challenge: ChallengeRecord) -> None:
         key = f"chl:{challenge.challenge_id}"

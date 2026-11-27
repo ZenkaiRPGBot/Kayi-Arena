@@ -465,6 +465,72 @@ class MatchManager:
             self._challenges[challenge_id] = cancelled
             return ChallengeOperationResult(accepted=True, challenge=cancelled)
 
+    async def decline_challenge(
+        self,
+        *,
+        challenge_id: str,
+        player_id: str,
+        expected_generation: int | None = None,
+    ) -> ChallengeOperationResult:
+        async with self._global_lock:
+            chl = self._challenges.get(challenge_id)
+            if chl is None:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_NOT_FOUND,
+                    message="Challenge not found",
+                )
+            if chl.challenge_type is not ChallengeType.DIRECT or player_id != chl.target_player_id:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.NOT_CHALLENGE_TARGET,
+                    message="Only the challenged player may decline",
+                    challenge=chl,
+                )
+            now = self.clock()
+            if chl.status is ChallengeStatus.OPEN and now >= chl.expires_at:
+                expired = ChallengeRecord(
+                    **{
+                        **{f: getattr(chl, f) for f in chl.__slots__},
+                        "status": ChallengeStatus.EXPIRED,
+                        "generation": chl.generation + 1,
+                    }
+                )
+                self._persist_challenge(expired)
+                self._challenges[challenge_id] = expired
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_EXPIRED,
+                    message="Challenge has expired",
+                    challenge=expired,
+                )
+            if chl.status is ChallengeStatus.DECLINED:
+                return ChallengeOperationResult(accepted=True, challenge=chl)
+            if chl.status is not ChallengeStatus.OPEN:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.CHALLENGE_NOT_OPEN,
+                    message=f"Challenge is already {chl.status.value}",
+                    challenge=chl,
+                )
+            if expected_generation is not None and expected_generation != chl.generation:
+                return ChallengeOperationResult(
+                    accepted=False,
+                    error_code=MatchManagementErrorCode.STALE_CONTROL_GENERATION,
+                    message="Challenge control is outdated",
+                    challenge=chl,
+                )
+            declined = ChallengeRecord(
+                **{
+                    **{f: getattr(chl, f) for f in chl.__slots__},
+                    "status": ChallengeStatus.DECLINED,
+                    "generation": chl.generation + 1,
+                }
+            )
+            self._persist_challenge(declined)
+            self._challenges[challenge_id] = declined
+            return ChallengeOperationResult(accepted=True, challenge=declined)
+
     async def switch_challenge_mode(
         self,
         *,
