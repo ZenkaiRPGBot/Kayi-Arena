@@ -1,0 +1,2953 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-expansion-003-004",
+  "prepared_date": "2026-11-27",
+  "change_count": 219,
+  "changes": [
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part I Yoroi Akadō: chakra absorption through physical contact; Chunin Exams arc.",
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "justification",
+      "previous": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "proposed": "Otogakure spy and former Konoha genin. Absorbs an opponent's physical and spiritual energy through direct contact, a genuine disruption tool in the Chunin Exams. Limited ranged and defensive showings keep Power at 2.",
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Yoroi_Akad%C5%8D",
+          "lead": "Chakra absorption through physical contact; Chunin Exams appearance.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and Chakra Absorption Techniques search summaries",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yoroi Akado",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "reason": "Documented chakra-absorption ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Yoroi Akadō; Chakra Absorption Techniques"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 3,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part I Misumi Tsurugi: Soft Physique Modification; Chunin Exams preliminaries.",
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "justification",
+      "previous": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "proposed": "Otogakure spy with surgical Soft Physique Modification: dislocates joints, stretches and bends his body for infiltration and grappling. Defeated by Kankurō in the preliminaries. Assassin 3 reflects infiltration and constriction; Power 2 reflects limited direct combat.",
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Misumi_Tsurugi",
+          "lead": "Soft Physique Modification; fought Kankurō in the Chunin Exams preliminaries.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and ScreenRant search summaries",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Misumi Tsurugi",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "reason": "Documented body-modification ability supports a conservative Draft evaluation.",
+      "source": "Narutopedia: Misumi Tsurugi; Soft Physique Modification"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ibiki Morino",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Ibiki_Morino",
+          "lead": "Head of Konoha's Torture and Interrogation Force; master of physical and psychological interrogation.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary; page not directly fetched",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Strategist 4 is retained but explicitly interpreted as interrogation/intelligence planning, not battlefield command.",
+      "source": "Narutopedia: Ibiki Morino"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torune Aburame",
+      "field": "power",
+      "previous": 4,
+      "proposed": 3,
+      "reason": "Power 4 overstated a contact-kill specialist as Kage-level; high-jōnin is the supported tier.",
+      "source": "Narutopedia: Torune Aburame; Shino Aburame (rinkaichū counter); secondary power discussions"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torune Aburame",
+      "field": "justification",
+      "previous": "Root member using rinkaichu with one-touch lethality. Secondary rankings describe his rinkaichu ability as among the deadliest Aburame techniques and note he fought Shino and Naruto (Nine-Tails mode). Power 4 is supported by these secondary rankings, though not verified against chapters. Note sources describe him as lost to Shino.",
+      "proposed": "Root operative using rinkaichū nano-insects with one-touch lethality. The contact threat supports Attacker 4 and Assassin 4, but Power 4 implied Kage-level overall combat; secondary accounts place him at high-jōnin level and note Shino defeated him with specially bred counter-insects. Power lowered to 3.",
+      "reason": "Power 4 overstated a contact-kill specialist as Kage-level; high-jōnin is the supported tier.",
+      "source": "Narutopedia: Torune Aburame; Shino Aburame (rinkaichū counter); secondary power discussions"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part II Kō Hyūga: Byakugan and Gentle Fist; Hinata's bodyguard.",
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "justification",
+      "previous": "Held: Identity and role not confidently established; insufficient knowledge for reasonable ratings.",
+      "proposed": "Branch-house Hyūga with the Byakugan and Gentle Fist. Entrusted with Hinata's protection, which implies competence, but individual combat showings are limited. Power 2, Attacker 2, Support 2 as a perception and guard package.",
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/K%C5%8D_Hy%C5%ABga",
+          "lead": "Byakugan and Gentle Fist; tasked with protecting Hinata.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary and derivative profile",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Ko Hyuga",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "LIMITED_INDIVIDUAL_FEATS"
+      ],
+      "reason": "Clan abilities and bodyguard role provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kō Hyūga"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part II Iwashi Tatami: chunin; Flying Thunder Formation Technique with a three-person squad.",
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "justification",
+      "previous": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "proposed": "Konoha chunin and member of the Fourth Hokage's guard. Uses the three-person Flying Thunder Formation Technique for space-time transport, a strong support utility. Individually a conventional chunin, so Power 2 and Support 3.",
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Iwashi_Tatami",
+          "lead": "Chunin; Flying Thunder Formation Technique taught to the Hokage guard squad.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary; derivative profiles repeat the same claim",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Iwashi Tatami",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "TEAM_TECHNIQUE_DEPENDENT"
+      ],
+      "reason": "Documented space-time support technique provides a reasonable preliminary basis.",
+      "source": "Narutopedia: Iwashi Tatami"
+    },
+    {
+      "batch": "004-A",
+      "character": "Nono Yakushi",
+      "field": "fit",
+      "previous": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 3
+      },
+      "proposed": {
+        "captain": 3,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 3
+      },
+      "reason": "Documented captain of the Medic Corps supports Captain 3.",
+      "source": "Narutopedia: Nonō Yakushi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Nono Yakushi",
+      "field": "justification",
+      "previous": "Captain of the Konoha Medic Corps and former Root operative. Sources describe her as a balanced, all-round medical ninja with no standout unique technique. Healing is conditional and does not include miracle-level restoration. Evidence is weaker than for the sourced fighting characters, so ratings are conservative. Medical capability is supported by secondary ranking articles, not inspected chapters.",
+      "proposed": "Jōnin and captain of the Konoha Medic Corps, later caretaker of the Konoha Orphanage; skilled medical-nin with excellent chakra control. Captain raised from 2 to 3 to reflect documented Medic Corps command. Healing remains 3: capable, not miracle-level.",
+      "reason": "Documented captain of the Medic Corps supports Captain 3.",
+      "source": "Narutopedia: Nonō Yakushi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Nono Yakushi",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "url": "https://daddyjim.ai/naruto/group/Medic-Corps",
+          "lead": "Captain role in the Medic Corps",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://fandomwire.com/naruto-strongest-medical-ninjas-of-all-time-ranked/",
+          "lead": "Ranked as an all-round medic without unique standout technique",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary editorial",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://myanimelist.net/character/93627",
+          "lead": "Manga debut chapter 582; anime debut episode 335; captain of Medic Corps",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary database",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Non%C5%8D_Yakushi",
+          "lead": "Jōnin; captain of the Konoha Medic Corps; former Root Anbu; skilled medical-nin.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and Sportskeeda search summaries",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented captain of the Medic Corps supports Captain 3.",
+      "source": "Narutopedia: Nonō Yakushi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "power",
+      "previous": null,
+      "proposed": 1,
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 3
+      },
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Biwako Sarutobi: Konoha jōnin and medical-nin; pre-series, limited combat showings.",
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "justification",
+      "previous": "Held: Medical capability cannot be established from occupation or family role. Requires investigation of demonstrated abilities.",
+      "proposed": "Konoha jōnin and accomplished medical-nin chosen to lead the midwife team for Kushina's delivery. Databook-derived summaries support the medical skill; no combat exchanges are documented, so Power 1 and Healer 3.",
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Biwako_Sarutobi",
+          "lead": "Jōnin and skilled medical-nin; led the midwife team for Kushina's delivery.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and Sportskeeda search summaries; databook-derived",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Biwako Sarutobi",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "NO_COMBAT_SHOWINGS"
+      ],
+      "reason": "Medical capability is documented by databook-derived secondary sources, not inferred from family role.",
+      "source": "Narutopedia: Biwako Sarutobi; Sportskeeda character profile"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "power",
+      "previous": null,
+      "proposed": 1,
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 2,
+        "support": 2,
+        "healer": 2
+      },
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Taji: Konoha Anbu medical-nin; pre-series, limited combat showings.",
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "justification",
+      "previous": "Held: Identity and demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Anbu medical-nin present at Kushina's delivery. Anbu membership implies infiltration and combat training; medical-nin status implies chakra-control training. No individual feats, so Power 1, Assassin 2, Support 2, Healer 2.",
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Taji",
+          "lead": "Anbu and medical-nin of Konohagakure; present at Kushina's delivery.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "low",
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Taji",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "NO_INDIVIDUAL_FEATS"
+      ],
+      "reason": "Anbu and medical-nin roles are documented, supporting a conservative Draft evaluation.",
+      "source": "Narutopedia: Taji"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part I Tekka Uchiha: Sharingan and sensor abilities; Konoha Military Police.",
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "justification",
+      "previous": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Uchiha police-force member who awakened the Sharingan; described as sensor-type. Sharingan perception and genjutsu support Strategist 2 and Attacker 2. No named signature technique, so Power 2.",
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Tekka_Uchiha",
+          "lead": "Sharingan; Konoha Military Police; sensor-type.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Tekka Uchiha",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "GENERIC_SHARINGAN_KIT"
+      ],
+      "reason": "Sharingan and police/sensor role are documented.",
+      "source": "Narutopedia: Tekka Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part I Inabi Uchiha: Sharingan; Konoha Military Police.",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "justification",
+      "previous": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Uchiha police-force member with the Sharingan. Generic Uchiha perception and genjutsu support a conventional chunin-level combatant; no individual feats. Power 2.",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Inabi_Uchiha",
+          "lead": "Sharingan; Konoha Military Police.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Inabi Uchiha",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "GENERIC_SHARINGAN_KIT"
+      ],
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Inabi Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Part I Yashiro Uchiha: Sharingan; Konoha Military Police.",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "justification",
+      "previous": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Uchiha police-force member with the Sharingan. Generic Uchiha perception and genjutsu support a conventional chunin-level combatant; no individual feats. Power 2.",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Yashiro_Uchiha",
+          "lead": "Sharingan; Konoha Military Police.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Yashiro Uchiha",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "GENERIC_SHARINGAN_KIT"
+      ],
+      "reason": "Sharingan and police role are documented.",
+      "source": "Narutopedia: Yashiro Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Mito Uzumaki",
+      "field": "fit",
+      "previous": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 1,
+        "assassin": 0,
+        "support": 4,
+        "healer": 0
+      },
+      "reason": "Sealing Kurama is a demonstrated top-tier fūinjutsu feat and supports Support 4.",
+      "source": "Narutopedia: Mito Uzumaki"
+    },
+    {
+      "batch": "004-A",
+      "character": "Mito Uzumaki",
+      "field": "justification",
+      "previous": "First Kurama jinchuriki and Uzumaki fuinjutsu user. Secondary sources show she sealed Kurama within herself. No demonstrated combat exchanges are documented in the sources reviewed, so Power 2 and the Support 3 rating rest on sealing and containment. Kurama's full capabilities are not assumed, per working policy.",
+      "proposed": "First Kurama jinchūriki and exceptional Uzumaki fūinjutsu user; sealed the entirety of Kurama within herself. Support raised from 3 to 4 for demonstrated top-tier sealing. Power remains 2 because no combat exchanges are documented.",
+      "reason": "Sealing Kurama is a demonstrated top-tier fūinjutsu feat and supports Support 4.",
+      "source": "Narutopedia: Mito Uzumaki"
+    },
+    {
+      "batch": "004-A",
+      "character": "Mito Uzumaki",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Mito_Uzumaki",
+          "lead": "Debut chapter 500; anime episode 247; first Kurama jinchuriki",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://criticalhits.com.br/anime/naruto-quem-era-a-jinchuriki-de-kurama-antes-de-kushina/",
+          "lead": "Mito sealed Kurama using fuinjutsu; later replaced by Kushina",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary article (Portuguese)",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://iota.msp.org/?p=32047",
+          "lead": "Uzumaki sealing mastery attributed to Mito's fuinjutsu",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary article",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Mito_Uzumaki",
+          "lead": "Exceptional fūinjutsu; sealed Kurama within herself; powerful unique chakra.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary; page not directly fetched",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Sealing Kurama is a demonstrated top-tier fūinjutsu feat and supports Support 4.",
+      "source": "Narutopedia: Mito Uzumaki"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Warring States/War-era Kagami Uchiha: Sharingan; member of Tobirama's unit.",
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "justification",
+      "previous": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Uchiha with powerful chakra and the Sharingan, selected for Tobirama's unit alongside Hiruzen and Danzō. The Sharingan and elite-unit selection support jōnin-level Power 3; no named signature technique, so the fit stays broad.",
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Kagami_Uchiha",
+          "lead": "Sharingan; powerful chakra; member of Tobirama's unit.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Kagami Uchiha",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "NO_NAMED_TECHNIQUE"
+      ],
+      "reason": "Sharingan and elite-unit service provide a reasonable preliminary basis.",
+      "source": "Narutopedia: Kagami Uchiha"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 3,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "canonical_version",
+      "previous": "unresolved",
+      "proposed": "Warring States/War-era Torifu Akimichi: Akimichi calorie control, staff and shield.",
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "justification",
+      "previous": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "proposed": "Akimichi with notably high physical prowess, calorie-to-chakra conversion, and documented use of a staff and shield. Tank 3 reflects the defensive equipment and Akimichi durability; Power 2 because the full scope of his abilities is unrecorded.",
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "evidence_leads",
+      "previous": [],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Torifu_Akimichi",
+          "lead": "Akimichi calorie control; high physical prowess; staff and shield.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and Sportskeeda search summaries",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-A",
+      "character": "Torifu Akimichi",
+      "field": "review_flags",
+      "previous": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "LIMITED_FEATS"
+      ],
+      "reason": "Documented Akimichi abilities and equipment support a conservative Draft evaluation.",
+      "source": "Narutopedia: Torifu Akimichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Chūkichi (reanimated): master sensor; Water Release and Hiding in Frost.",
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "justification",
+      "previous": "Identity and village unclear (listed with Hidden Stone shinobi in one listing). Abilities not recalled; ratings unresolved.",
+      "proposed": "Renowned Kumogakure sensor able to detect subtle chakra signatures and minute details; also uses Water Release and the anime Hiding in Frost technique. Sensor mastery supports Strategist 3 and Support 3; Power 3 as a jōnin-level operative.",
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Establish village, appearance and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Ch%C5%ABkichi",
+          "lead": "Master sensor; Water Release; Hiding in Frost (anime).",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia and Sportskeeda search summaries",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Chukichi",
+      "field": "review_flags",
+      "previous": [
+        "identity_needs_check"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "ANIME_TECHNIQUE_FLAGGED"
+      ],
+      "reason": "Documented sensor mastery supports a Draft evaluation.",
+      "source": "Narutopedia: Chūkichi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Gari (reanimated): Explosion Release kekkei genkai.",
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "justification",
+      "previous": "Appears as a kekkei genkai user in reanimated context; kekkei genkai and feats not verified. Ratings unresolved.",
+      "proposed": "Iwagakure shinobi with Explosion Release, combining earth and lightning chakra. Uses Explosion Release: Landmine Fist and a defensive explosion technique. Jōnin-level Power 3; Attacker 3 and Assassin 2 for explosive close combat.",
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Mentioned among kekkei genkai users",
+          "check": "Verify Gari's kekkei genkai and manga feats",
+          "source_note": "Narutopedia: Zaji",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Zaji"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Gari",
+          "lead": "Explosion Release kekkei genkai; Landmine Fist; reanimated in the Fourth War.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Gari",
+      "field": "review_flags",
+      "previous": [
+        "reanimation_only_appearance",
+        "identity_needs_check"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "KEKKEI_GENKAI"
+      ],
+      "reason": "Documented Explosion Release supports a Draft evaluation.",
+      "source": "Narutopedia: Gari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Toroi (reanimated): Magnet Release shuriken.",
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "justification",
+      "previous": "Insufficient recollection and no source inspected; abilities and village unverified.",
+      "proposed": "Famed Kumogakure shinobi with Magnet Release. Magnetised shuriken make subsequent metal weapons nearly impossible to evade. Power 3 and Attacker 3 for a lethal ranged gimmick; limited versatility keeps other roles low.",
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Toroi",
+          "lead": "Magnet Release; magnetised shuriken; famed Kumo shinobi.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Toroi",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "KEKKEI_GENKAI"
+      ],
+      "reason": "Documented Magnet Release supports a Draft evaluation.",
+      "source": "Narutopedia: Toroi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 3,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Dodai: Lava Release rubber; Kumogakure jōnin and division commander.",
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "justification",
+      "previous": "Insufficient recollection and no source inspected; abilities unverified.",
+      "proposed": "Kumogakure jōnin and division commander with Lava Release in the form of durable, elastic rubber. Rubber walls and balls provide strong protection and battlefield control. Tank 3 and Support 3; Power 3.",
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Dodai",
+          "lead": "Lava Release rubber; Rubber Wall; jōnin and division commander.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Dodai",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "KEKKEI_GENKAI"
+      ],
+      "reason": "Documented Lava Release and command role support a Draft evaluation.",
+      "source": "Narutopedia: Dodai"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Part II Motoi: Kumogakure chunin tracker; island security and barrier duty.",
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "justification",
+      "previous": "Mentioned only via Blue B's incident (father lost); no combat feats established.",
+      "proposed": "Kumogakure chunin and expert tracker stationed on Genbu. Uses barrier/security duties and tracking rather than direct combat. Support 3 and Strategist 2; Power 2.",
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Motoi",
+          "lead": "Chunin; expert tracker; stationed on Genbu; barrier duties.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Motoi",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "NON_COMBAT_FOCUS"
+      ],
+      "reason": "Documented tracking and security role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Motoi"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Third War Kakkō: Iwagakure jōnin; Earth and Yin Release.",
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "justification",
+      "previous": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "proposed": "Iwagakure jōnin who excelled in ninjutsu, taijutsu and genjutsu; used Earth Release and Yin Release. A well-rounded jōnin, so Power 3 with balanced but unspectacular role fits.",
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Kakk%C5%8D",
+          "lead": "Jōnin; excels in ninjutsu, taijutsu and genjutsu; Earth and Yin Release.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kakko",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "GENERALIST"
+      ],
+      "reason": "Documented all-round jōnin abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kakkō"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 3,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Third War Taiseki: Hiding with Camouflage; Iwagakure shinobi.",
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "justification",
+      "previous": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "proposed": "Iwagakure shinobi who uses Hiding with Camouflage to become invisible by manipulating light. Invisibility supports Assassin 3; direct combat is conventional, so Power 2.",
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Taiseki",
+          "lead": "Hiding with Camouflage; light manipulation for invisibility.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Taiseki",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY"
+      ],
+      "reason": "Documented invisibility technique supports a Draft evaluation.",
+      "source": "Narutopedia: Taiseki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Third War Mahiru: kenjutsu, Shadow Clone Technique, Earth Release.",
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "justification",
+      "previous": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "proposed": "Iwagakure shinobi skilled in kenjutsu and high-level ninjutsu, able to field up to twenty shadow clones and use Earth Release. Overpowered young Kakashi with speed and swordwork. Power 3, Attacker 3, Assassin 2.",
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Mahiru",
+          "lead": "Kenjutsu; up to twenty shadow clones; Earth Release; fast swordsman.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Mahiru",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY"
+      ],
+      "reason": "Documented clone and kenjutsu abilities support a Draft evaluation.",
+      "source": "Narutopedia: Mahiru"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Urakaku: Land of Iron samurai; kenjutsu and Mifune's guard.",
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "justification",
+      "previous": "Debut ch.456 as Mifune's bodyguard, but no combat ability is documented in inspected sources; ratings unresolved.",
+      "proposed": "Land of Iron samurai and one of Mifune's right-hand men. Trained in kenjutsu with sharp reflexes; samurai armour supports Tank 2. No named technique, so Power 2.",
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Identity and debut",
+          "check": "Find demonstrated combat feats",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/77441/Urakaku",
+          "chapter_reference": "Manga ch.456"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Urakaku",
+          "lead": "Samurai; kenjutsu; sharp reflexes; Mifune's bodyguard.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Urakaku",
+      "field": "review_flags",
+      "previous": [
+        "no_combat_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "NO_NAMED_TECHNIQUE"
+      ],
+      "reason": "Documented samurai training and guard role support a conservative Draft evaluation.",
+      "source": "Narutopedia: Urakaku"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Part II Yūra: Sunagakure jōnin and council member; Sasori's sleeper agent.",
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "justification",
+      "previous": "Identity and abilities not recalled; no source inspected.",
+      "proposed": "Sunagakure jōnin and trusted council member, selected by Sasori as a long-term sleeper agent and used to command Suna's defence. Power 3; Strategist 2 and Support 2 for command and coordination rather than a named combat technique.",
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Y%C5%ABra",
+          "lead": "Jōnin; Suna council member; Sasori's sleeper agent; commanded village defence.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Yura",
+      "field": "review_flags",
+      "previous": [
+        "no_evidence"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "SLEEPER_AGENT"
+      ],
+      "reason": "Documented rank and command role support a Draft evaluation.",
+      "source": "Narutopedia: Yūra"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Part II Matsuri: Sunagakure genin; jōhyō (anime) and above-average strength.",
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "justification",
+      "previous": "Specific techniques not verified this session.",
+      "proposed": "Sunagakure genin with above-average physical strength in the manga; in the anime she trains with the jōhyō, a rope-dart used for range control and defence. Power 2, Attacker 2.",
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Verify techniques in manga",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Matsuri",
+          "lead": "Above-average strength; jōhyō training (anime).",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Matsuri",
+      "field": "review_flags",
+      "previous": [
+        "recollection_too_thin"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "ANIME_TECHNIQUE_FLAGGED"
+      ],
+      "reason": "Documented strength and weapon training support a conservative Draft evaluation.",
+      "source": "Narutopedia: Matsuri"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "power",
+      "previous": null,
+      "proposed": 2,
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Fourth War Maki: Sunagakure elite jōnin; cloth binding and sealing.",
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "justification",
+      "previous": "Identity and abilities not recalled; no source inspected.",
+      "proposed": "Elite Sunagakure kunoichi who manipulates binding cloth for restraint, concealment and protective domes, and serves on sealing teams. Support 3 and Strategist 2; Power 2 because her showings are support-oriented.",
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Maki",
+          "lead": "Elite jōnin; Cloth Binding Technique; Protective Cloth Dome; Sealing Team.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Maki",
+      "field": "review_flags",
+      "previous": [
+        "identity_needs_check"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "SUPPORT_ORIENTED"
+      ],
+      "reason": "Documented cloth and sealing abilities support a Draft evaluation.",
+      "source": "Narutopedia: Maki"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Second Kazekage Shamon: puppet technique and tailed-beast research.",
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "justification",
+      "previous": "Known for tailed-beast research and puppet focus; combat abilities undocumented.",
+      "proposed": "Second Kazekage who developed Sunagakure's puppet corps and researched tailed-beast military use. Deployed puppets in battle; exact skill is unrecorded. Kage rank supports Power 3, Strategist 3 for institutional and battlefield planning.",
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Identity and background",
+          "check": "Find demonstrated feats",
+          "source_note": "Narutopedia: Shamon",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Shamon",
+          "chapter_reference": "Manga ch.648"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Shamon",
+          "lead": "Second Kazekage; puppet deployment; tailed-beast research.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Shamon — Second Kazekage",
+      "field": "review_flags",
+      "previous": [
+        "no_demonstrated_abilities"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "KAGE_RANK_CONSERVATIVE"
+      ],
+      "reason": "Documented puppet development and Kage rank support a Draft evaluation.",
+      "source": "Narutopedia: Shamon"
+    },
+    {
+      "batch": "004-B",
+      "character": "Zaji",
+      "field": "canonical_version",
+      "previous": "Part II Konoha sensor, Surprise Attack Division",
+      "proposed": "Fourth War Zaji: Konohagakure sensor; Fifth Division.",
+      "reason": "Identity resolved to the Konoha sensor; the gambler is a separate catalogue entry.",
+      "source": "Narutopedia: Zaji"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kiri — Allied Shinobi Forces",
+      "field": "canonical_version",
+      "previous": "Part II Allied Shinobi Forces member, Surprise Attack Division",
+      "proposed": "Allied Shinobi Forces Kiri: Kirigakure medical-nin; Fifth Division.",
+      "reason": "Identity resolved to the Kirigakure medical-nin; the Boruto villager is a different person. Healer 3 retained.",
+      "source": "Narutopedia: Kiri (ninja)"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "power",
+      "previous": null,
+      "proposed": 3,
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "fit",
+      "previous": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "proposed": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "canonical_version",
+      "previous": "Not established",
+      "proposed": "Kamatari: Temari's sickle-weasel summon; wind techniques and giant sickle.",
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "justification",
+      "previous": "Identity unclear; no evidence inspected.",
+      "proposed": "Temari's one-eyed sickle-weasel summon, summoned through her Giant Folding Fan. Wields a sickle nearly its own length and generates the Sickle Weasel Technique's cutting wind. Power 3, Attacker 3 as a dedicated offensive summon.",
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "evidence_leads",
+      "previous": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "proposed": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Kamatari",
+          "lead": "Temari's sickle-weasel summon; giant sickle; Sickle Weasel Technique.",
+          "check": "snippet_inspected",
+          "source_note": "Narutopedia search summary",
+          "verification_level": "search_result_summary"
+        }
+      ],
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "confidence",
+      "previous": "low",
+      "proposed": "medium",
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "004-B",
+      "character": "Kamatari",
+      "field": "review_flags",
+      "previous": [
+        "identity_needs_check"
+      ],
+      "proposed": [
+        "HELD_TO_DRAFT",
+        "SECONDARY_SOURCE_ONLY",
+        "SUMMON_EQUIPMENT"
+      ],
+      "reason": "Documented summon abilities support a Draft evaluation.",
+      "source": "Narutopedia: Kamatari"
+    },
+    {
+      "batch": "003",
+      "character": "Choji Akimichi",
+      "field": "canonical_version",
+      "previous": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded (review: Butterfly Mode without pills, ch.533)",
+      "proposed": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded (review: Butterfly Mode without pills, ch.533)",
+      "reason": "War-era Butterfly Mode without pills (chapter 533). Ratings may need review.",
+      "source": "Naruto chapter 533"
+    },
+    {
+      "batch": "003",
+      "character": "Shizune",
+      "field": "fit.captain",
+      "previous": 2,
+      "proposed": 3,
+      "reason": "Captain of the Allied Shinobi Forces Logistical Support and Medical Division; talented medical-nin.",
+      "source": "Narutopedia: Shizune; Shikaku's revised battle strategy"
+    },
+    {
+      "batch": "003",
+      "character": "Shizune",
+      "field": "fit.healer",
+      "previous": 3,
+      "proposed": 4,
+      "reason": "Captain of the Allied Shinobi Forces Logistical Support and Medical Division; talented medical-nin.",
+      "source": "Narutopedia: Shizune; Shikaku's revised battle strategy"
+    },
+    {
+      "batch": "003",
+      "character": "Dan Kato",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Ghost Transformation Jutsu (S-rank) demonstrated in the Fourth War arc; not flashback-only.",
+      "source": "Narutopedia: Dan Kato; chapter 591 context"
+    },
+    {
+      "batch": "003",
+      "character": "Jugo",
+      "field": "fit.healer",
+      "previous": 0,
+      "proposed": 2,
+      "reason": "Cellular Regeneration Ejection (chapter 414) heals compatible allies conditionally.",
+      "source": "Narutopedia: Cellular Regeneration Ejection; chapter 414"
+    },
+    {
+      "batch": "003",
+      "character": "Mabui",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Heavenly Transfer Technique (chapter 562) provides transport/support; demonstrated in war arc.",
+      "source": "Narutopedia: Heavenly Transfer Technique; chapter 562"
+    },
+    {
+      "batch": "003",
+      "character": "Mabui",
+      "field": "fit.support",
+      "previous": 2,
+      "proposed": 3,
+      "reason": "Heavenly Transfer Technique (chapter 562) provides transport/support; demonstrated in war arc.",
+      "source": "Narutopedia: Heavenly Transfer Technique; chapter 562"
+    },
+    {
+      "batch": "003",
+      "character": "Yugito Nii",
+      "field": "evidence_leads",
+      "previous": "captured by Deidara",
+      "proposed": "captured by Hidan and Kakuzu",
+      "reason": "Captured by Hidan and Kakuzu, not Deidara. Evidence lead corrected.",
+      "source": "Narutopedia: Yugito Nii; Akatsuki Suppression Mission arc"
+    }
+  ]
+}

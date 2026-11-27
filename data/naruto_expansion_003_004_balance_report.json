@@ -1,0 +1,147 @@
+{
+  "simulation": {
+    "engine": "app.engine start_draft / shuffle / assign_role",
+    "drafts_per_scenario": 10000,
+    "total_drafts": 20000,
+    "strategy": "Each turn the active player shuffles with a seeded draw source, then assigns a uniformly random remaining role. Both players follow the same policy. Team strength is the sum of SCORE-1.0 role scores for the assigned roles.",
+    "seeds": {
+      "expansion_only": 42,
+      "combined": 43
+    }
+  },
+  "catalog": {
+    "original_60_playable": 53,
+    "expansion_playable": 131,
+    "combined_playable": 184,
+    "rarity_weights": {
+      "Common": 30.0,
+      "Uncommon": 30.0,
+      "Rare": 22.0,
+      "Epic": 13.0,
+      "Legendary": 5.0
+    },
+    "combined_rarity_pool_counts": {
+      "Legendary": 7,
+      "Epic": 3,
+      "Rare": 32,
+      "Uncommon": 83,
+      "Common": 59
+    }
+  },
+  "expansion_only": {
+    "drafts_requested": 10000,
+    "completed": 10000,
+    "failed": 0,
+    "failure_reasons": {},
+    "average_actions_per_draft": 28.0,
+    "first_player_wins": 4974,
+    "ties": 63,
+    "first_player_win_rate_all_completed": 0.4974,
+    "first_player_win_rate_decisive": 0.5006,
+    "first_player_advantage_decisive": 0.0006,
+    "average_team_score": {
+      "p1": 269.61,
+      "p2": 269.68
+    },
+    "role_distribution": {
+      "Captain": 20000,
+      "Healer": 20000,
+      "Assassin": 20000,
+      "Strategist": 20000,
+      "Support": 20000,
+      "Attacker": 20000,
+      "Tank": 20000
+    },
+    "rarity_distribution": {
+      "Uncommon": 48082,
+      "Epic": 8758,
+      "Common": 47960,
+      "Rare": 35200
+    },
+    "effective_rarity_share": {
+      "Uncommon": 0.3434,
+      "Epic": 0.0626,
+      "Common": 0.3426,
+      "Rare": 0.2514
+    },
+    "healing": {
+      "healer_fit_4_plus_picks": 4946,
+      "player_drafts_with_healer_specialist": 4946,
+      "share_of_player_drafts_with_healer_specialist": 0.2473
+    }
+  },
+  "combined": {
+    "drafts_requested": 10000,
+    "completed": 10000,
+    "failed": 0,
+    "failure_reasons": {},
+    "average_actions_per_draft": 28.0,
+    "first_player_wins": 4890,
+    "ties": 58,
+    "first_player_win_rate_all_completed": 0.489,
+    "first_player_win_rate_decisive": 0.4919,
+    "first_player_advantage_decisive": -0.0081,
+    "average_team_score": {
+      "p1": 289.78,
+      "p2": 291.63
+    },
+    "role_distribution": {
+      "Tank": 20000,
+      "Support": 20000,
+      "Captain": 20000,
+      "Healer": 20000,
+      "Attacker": 20000,
+      "Strategist": 20000,
+      "Assassin": 20000
+    },
+    "rarity_distribution": {
+      "Rare": 31217,
+      "Uncommon": 42600,
+      "Epic": 16855,
+      "Common": 42336,
+      "Legendary": 6992
+    },
+    "effective_rarity_share": {
+      "Rare": 0.223,
+      "Uncommon": 0.3043,
+      "Epic": 0.1204,
+      "Common": 0.3024,
+      "Legendary": 0.0499
+    },
+    "healing": {
+      "healer_fit_4_plus_picks": 3987,
+      "player_drafts_with_healer_specialist": 3720,
+      "share_of_player_drafts_with_healer_specialist": 0.186
+    }
+  },
+  "healing": {
+    "healer_fit_4_plus_pool": [
+      {
+        "name": "Tsunade",
+        "healer_fit": 5,
+        "rarity": "Legendary"
+      },
+      {
+        "name": "Sakura Haruno",
+        "healer_fit": 4,
+        "rarity": "Rare"
+      },
+      {
+        "name": "Katsuyu",
+        "healer_fit": 4,
+        "rarity": "Rare"
+      },
+      {
+        "name": "Shizune",
+        "healer_fit": 4,
+        "rarity": "Rare"
+      }
+    ],
+    "pool_size": 4
+  },
+  "notes": [
+    "Only Draft records with complete ratings enter each pool; Held records are excluded.",
+    "Balance analysis does not modify any canonical rating.",
+    "Effective rarity share is empirical picks / total picks in that scenario."
+  ]
+}
