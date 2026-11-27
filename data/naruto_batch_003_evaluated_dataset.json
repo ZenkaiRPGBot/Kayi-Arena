@@ -1,0 +1,2791 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "evaluation_integrated",
+  "universe_id": "naruto",
+  "batch_id": "naruto_batch_003",
+  "status": "draft",
+  "record_count": 49,
+  "held_count": 1,
+  "characters": [
+    {
+      "character_id": "dattebayo:444",
+      "name": "Neji Hyuga",
+      "universe_id": "naruto",
+      "canonical_version": "War-era Neji (Fourth War arc, until his death): Byakugan, Gentle Fist, Eight Trigrams Heavenly Spin",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 4,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 70,
+        "assassin": 47,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "TANK_SACRIFICE_EVIDENCE"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc: shields and intercepts an attack for Naruto and Hinata",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        },
+        {
+          "lead": "Sasuke Retrieval arc: defeats Kidomaru",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Neji_Hyūga"
+    },
+    {
+      "character_id": "dattebayo:437",
+      "name": "Hinata Hyuga",
+      "universe_id": "naruto",
+      "canonical_version": "War-era Hinata: Byakugan, Gentle Fist, Twin Lion Fists",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 3,
+        "healer": 1
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 60,
+        "healer": 26
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "HEALER_MINOR_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Pain's Assault arc: attacks Pain and takes a blow meant for Naruto",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        },
+        {
+          "lead": "Fourth War arc: fights beside Naruto, Byakugan support",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Hinata_Hyūga"
+    },
+    {
+      "character_id": "dattebayo:1365",
+      "name": "Ino Yamanaka",
+      "universe_id": "naruto",
+      "canonical_version": "War-era Ino: Mind Transfer, Mind Body Disturbance, information relay, basic medical training",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 1,
+        "support": 4,
+        "healer": 2
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 40,
+        "attacker": 30,
+        "tank": 20,
+        "assassin": 27,
+        "support": 74,
+        "healer": 40
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 74,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 74,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_ROLE_WITH_INOICHI",
+        "SUPPORT_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc: mind-transmission relay for the Alliance",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Ino_Yamanaka"
+    },
+    {
+      "character_id": "dattebayo:13",
+      "name": "Shino Aburame",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Shino: Kikaichu insects",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 40,
+        "assassin": 60,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam arc and Part II missions: Kikaichu tracking and chakra drain",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Shino_Aburame"
+    },
+    {
+      "character_id": "dattebayo:466",
+      "name": "Kiba Inuzuka",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Kiba with Akamaru: Fang Over Fang",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 23,
+        "attacker": 50,
+        "tank": 30,
+        "assassin": 40,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 50,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 50,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akamaru-based missions and the Sasuke Retrieval arc",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Kiba_Inuzuka"
+    },
+    {
+      "character_id": "dattebayo:40",
+      "name": "Choji Akimichi",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded (review: Butterfly Mode without pills, ch.533)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FATAL_PILL_EXCLUDED",
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc: Jirobo fight (fatal pill, excluded)",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        },
+        {
+          "lead": "Part II and war arcs: Expansion jutsu and Butterfly Mode",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Chōji_Akimichi"
+    },
+    {
+      "character_id": "dattebayo:1216",
+      "name": "Tenten",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Tenten: Weapon Summoning and Rising Twin Dragons",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 40,
+        "attacker": 50,
+        "tank": 30,
+        "assassin": 40,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 50,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 50,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam arc and Part II/war arcs: weapon summoning barrages",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Tenten"
+    },
+    {
+      "character_id": "dattebayo:1034",
+      "name": "Asuma Sarutobi",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Asuma (Hidan and Kakuzu arc): Chakra Blades, Wind Release",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Hidan and Kakuzu arc: fights Hidan and Kakuzu, leads Team 10",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Asuma_Sarutobi"
+    },
+    {
+      "character_id": "dattebayo:1397",
+      "name": "Kurenai Yuhi",
+      "universe_id": "naruto",
+      "canonical_version": "Kurenai Yuhi, genjutsu specialist (Part I-II)",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 52,
+        "strategist": 57,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 40,
+        "support": 57,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 57,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 57,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam arc and Part I missions: genjutsu use, Team 8 leadership",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Kurenai_Yūhi"
+    },
+    {
+      "character_id": "dattebayo:877",
+      "name": "Shikaku Nara",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Shikaku (Fourth War arc): Shadow Possession family, Chief Strategist of the Allied Shinobi Forces",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 4,
+        "strategist": 5,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 64,
+        "strategist": 91,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 27,
+        "support": 57,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Epic",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 94,
+        "base_rarity": "Epic",
+        "final_rarity": "Epic",
+        "highest_role_score": 91,
+        "combat_bonus": 0,
+        "specialist_bonus": 3,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "FIT_5:strategist",
+        "FIT_5_REVIEW",
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chief Strategist of the Allied Shinobi Forces; redesigns formations around ch. 525",
+          "check": "secondary_source_confirmed",
+          "source_note": "Narutopedia-style pages, daddyjim.ai, Sportskeeda"
+        },
+        {
+          "lead": "Fourth War arc: headquarters planning",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Shikaku_Nara"
+    },
+    {
+      "character_id": "dattebayo:1367",
+      "name": "Inoichi Yamanaka",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Inoichi (Fourth War arc): Mind Transfer, Mind Reading, sensor network",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 2,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 52,
+        "strategist": 57,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 40,
+        "support": 74,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 74,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 74,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_ROLE_WITH_INO",
+        "SUPPORT_ALT_5"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc: Alliance headquarters mind network",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Inoichi_Yamanaka"
+    },
+    {
+      "character_id": "dattebayo:42",
+      "name": "Choza Akimichi",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Choza (Fourth War arc): Expansion jutsu",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc: fights alongside Shikaku and Inoichi",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Chōza_Akimichi"
+    },
+    {
+      "character_id": "dattebayo:1122",
+      "name": "Shizune",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Shizune: medical ninjutsu, poison needles",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 2,
+        "support": 3,
+        "healer": 4
+      },
+      "scores": {
+        "captain": 52,
+        "strategist": 57,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 40,
+        "support": 57,
+        "healer": 74
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 74,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Rare",
+        "highest_role_score": 74,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": "healer_fit_4_min_rare"
+      },
+      "confidence": "low",
+      "review_flags": [
+        "HEALER_ALT_4",
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Konoha arcs: medical work as Tsunade's apprentice",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Shizune"
+    },
+    {
+      "character_id": "dattebayo:809",
+      "name": "Anko Mitarashi",
+      "universe_id": "naruto",
+      "canonical_version": "Anko Mitarashi, special jonin (Part I-II); Twin Snake Mutual Death excluded",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 60,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FATAL_TECHNIQUE_EXCLUDED",
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam and Konoha Invasion arcs: Snake Hands, pursuit of Orochimaru",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Anko_Mitarashi"
+    },
+    {
+      "character_id": "dattebayo:1325",
+      "name": "Iruka Umino",
+      "universe_id": "naruto",
+      "canonical_version": "Iruka Umino, chunin and Academy teacher (Part I-II)",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 40,
+        "strategist": 40,
+        "attacker": 40,
+        "tank": 40,
+        "assassin": 27,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 40,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 40,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Land of Waves to Part II: protects Naruto, teaches and mentors",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Iruka_Umino"
+    },
+    {
+      "character_id": "dattebayo:212",
+      "name": "Ebisu",
+      "universe_id": "naruto",
+      "canonical_version": "Ebisu, elite jonin tutor (Part I-II)",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 40,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 27,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 40,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 40,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam arc and Part II appearances",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Ebisu"
+    },
+    {
+      "character_id": "dattebayo:1037",
+      "name": "Konohamaru Sarutobi",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Konohamaru: Rasengan, Shadow Clones",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 23,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 27,
+        "support": 23,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 40,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 40,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II: Rasengan and Pain's Assault arc contributions",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Konohamaru_Sarutobi"
+    },
+    {
+      "character_id": "dattebayo:1373",
+      "name": "Yamato",
+      "universe_id": "naruto",
+      "canonical_version": "Yamato, Wood Release user (Part II, Hashirama-cell implant is permanent)",
+      "aliases": [
+        "Tenzo"
+      ],
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 3,
+        "support": 4,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 60,
+        "support": 77,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 77,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 77,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "ALIAS_TENZO",
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval and Pain's Assault arcs: Wood Release, Kurama suppression",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        },
+        {
+          "lead": "ANBU flashbacks: Tenzo background",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Yamato"
+    },
+    {
+      "character_id": "dattebayo:1008",
+      "name": "Sai",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Sai: Super Beast Scroll ink art, former Root",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 3,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 50,
+        "tank": 40,
+        "assassin": 60,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Team Kakashi arcs and Fourth War arc: ink techniques",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Sai"
+    },
+    {
+      "character_id": "dattebayo:605",
+      "name": "Dan Kato",
+      "universe_id": "naruto",
+      "canonical_version": "Dan Kato (flashback only)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 50,
+        "tank": 40,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 50,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 50,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FLASHBACK_ONLY",
+        "HELD_NO_DEMONSTRATED_ABILITIES",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Tsunade's lover and Shizune's uncle; died of battle injuries",
+          "check": "secondary_source_confirmed",
+          "source_note": "Narutopedia-style pages, Looper"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Dan_Katō"
+    },
+    {
+      "character_id": "dattebayo:1208",
+      "name": "Temari",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Temari: Wind Release with giant fan",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 40,
+        "assassin": 34,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Chunin Exam arc and Part II/war arcs: fan-based wind techniques",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Temari"
+    },
+    {
+      "character_id": "dattebayo:577",
+      "name": "Kankuro",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Kankuro: puppetry and poison",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 60,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasori arc (Part II): fights alongside Sakura and Chiyo",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Kankurō"
+    },
+    {
+      "character_id": "dattebayo:107",
+      "name": "Baki",
+      "universe_id": "naruto",
+      "canonical_version": "Baki, Sand jonin (Part I): wind blade",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 40,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Konoha Invasion arc (Part I): Sand jonin leader",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Baki"
+    },
+    {
+      "character_id": "dattebayo:967",
+      "name": "Rasa",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Rasa (Edo evidence): Gold Dust",
+      "aliases": [
+        "Fourth Kazekage"
+      ],
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 46,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 41,
+        "support": 46,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ALIAS_FOURTH_KAZEKAGE",
+        "EDO_ONLY_EVIDENCE",
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc (Edo): Gold Dust against the Alliance",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Rasa"
+    },
+    {
+      "character_id": "dattebayo:950",
+      "name": "Pakura",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Pakura (Edo evidence): Scorch Release",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 70,
+        "tank": 50,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "EDO_ONLY_EVIDENCE",
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Fourth War arc (Edo): Scorch Release against Alliance divisions",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Pakura"
+    },
+    {
+      "character_id": "dattebayo:388",
+      "name": "Hidan",
+      "universe_id": "naruto",
+      "canonical_version": "Akatsuki-era Hidan: Jashin ritual and immortality, scythe",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 4,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 70,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 70,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 70,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "IMMORTALITY_POLICY_QUESTION",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "TANK_ALT_3"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Hidan and Kakuzu arc: fights Asuma, defeated by Shikamaru's plan",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Hidan"
+    },
+    {
+      "character_id": "dattebayo:831",
+      "name": "Zabuza Momochi",
+      "universe_id": "naruto",
+      "canonical_version": "Prime Zabuza (Land of Waves arc): Executioner's Blade, Hidden Mist, Silent Killing",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 4,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 73,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 73,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 73,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Land of Waves arc: fights Kakashi, Silent Killing and Hidden Mist",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Zabuza_Momochi"
+    },
+    {
+      "character_id": "dattebayo:356",
+      "name": "Haku",
+      "universe_id": "naruto",
+      "canonical_version": "Haku (Land of Waves arc): Ice Release",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 2,
+        "healer": 1
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 60,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 60,
+        "support": 43,
+        "healer": 26
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Land of Waves arc: Crystal Ice Mirrors fight against Naruto and Sasuke",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Haku"
+    },
+    {
+      "character_id": "dattebayo:593",
+      "name": "Karin",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Karin: sensor and Heal Bite",
+      "aliases": [
+        "Karin Uzumaki"
+      ],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 4,
+        "healer": 3
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 40,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 27,
+        "support": 74,
+        "healer": 57
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 74,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 74,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "HEALER_ALT_4",
+        "HEAL_BITE_SECONDARY_CONFIRMED",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Heal Bite restores wounds of others, used on Sasuke; ch. 663 cited",
+          "check": "secondary_source_confirmed",
+          "source_note": "Narutopedia Heal Bite page, Sportskeeda, ComicVine"
+        },
+        {
+          "lead": "Sasuke Retrieval and war arcs: chakra sensing",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Karin"
+    },
+    {
+      "character_id": "dattebayo:430",
+      "name": "Suigetsu Hozuki",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Suigetsu: Hydrification, sword",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc and Part II: Hydrification and sword fighting",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Suigetsu_Hōzuki"
+    },
+    {
+      "character_id": "dattebayo:521",
+      "name": "Jugo",
+      "universe_id": "naruto",
+      "canonical_version": "Part II Jugo: natural energy and Curse Mark transformations (berserk risk)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 2,
+        "healer": 2
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 43,
+        "healer": 43
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc and Part II: transformations",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Jūgo"
+    },
+    {
+      "character_id": "dattebayo:637",
+      "name": "Kimimaro",
+      "universe_id": "naruto",
+      "canonical_version": "Kimimaro (Part I): Shikotsumyaku; illness limits stamina",
+      "aliases": [],
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 4,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 56,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 70,
+        "assassin": 80,
+        "support": 29,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "ILLNESS_VERSION_QUESTION",
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc: fights Rock Lee, Gaara and Shikamaru's group",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Kimimaro"
+    },
+    {
+      "character_id": "dattebayo:517",
+      "name": "Jirobo",
+      "universe_id": "naruto",
+      "canonical_version": "Sound Four Jirobo (Part I)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc: fights Choji",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Jirōbō"
+    },
+    {
+      "character_id": "dattebayo:626",
+      "name": "Kidomaru",
+      "universe_id": "naruto",
+      "canonical_version": "Sound Four Kidomaru (Part I)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 40,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc: fights Neji",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Kidōmaru"
+    },
+    {
+      "character_id": "dattebayo:1203",
+      "name": "Tayuya",
+      "universe_id": "naruto",
+      "canonical_version": "Sound Four Tayuya (Part I)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 50,
+        "tank": 40,
+        "assassin": 34,
+        "support": 43,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 50,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 50,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Sasuke Retrieval arc: fights Shikamaru's team",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Tayuya"
+    },
+    {
+      "character_id": "dattebayo:1426",
+      "name": "White Zetsu",
+      "universe_id": "naruto",
+      "canonical_version": "White Zetsu (identity unresolved)",
+      "aliases": [
+        "Zetsu",
+        "White Zetsu Army"
+      ],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 3,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 23,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 53,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 53,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 53,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "DUPLICATE_IDENTITY_AMBIGUITY",
+        "MINDLESS_CLONE_ELIGIBILITY_QUESTION",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "RELATED_TO_BLACK_ZETSU"
+      ],
+      "evaluation_status": "held",
+      "held": true,
+      "evidence": [
+        {
+          "lead": "Fourth War arc: White Zetsu Army and spy scenes",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/White_Zetsu"
+    },
+    {
+      "character_id": "dattebayo:920",
+      "name": "Omoi",
+      "universe_id": "naruto",
+      "canonical_version": "Omoi, Kumogakure (Part II)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Kage Summit and Fourth War arcs",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Omoi"
+    },
+    {
+      "character_id": "dattebayo:596",
+      "name": "Karui",
+      "universe_id": "naruto",
+      "canonical_version": "Karui, Kumogakure (Part II)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Kage Summit and Fourth War arcs",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Karui"
+    },
+    {
+      "character_id": "dattebayo:190",
+      "name": "Darui",
+      "universe_id": "naruto",
+      "canonical_version": "Darui, Fourth War arc: Black Lightning, First Division commander",
+      "aliases": [],
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 80,
+        "strategist": 63,
+        "attacker": 80,
+        "tank": 60,
+        "assassin": 54,
+        "support": 63,
+        "healer": 12
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Rare",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 85,
+        "base_rarity": "Rare",
+        "final_rarity": "Rare",
+        "highest_role_score": 80,
+        "combat_bonus": 3,
+        "specialist_bonus": 0,
+        "versatility_bonus": 2,
+        "floor_applied": null
+      },
+      "confidence": "medium",
+      "review_flags": [
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Commander of the First (Mid-Range Battle) Division",
+          "check": "secondary_source_confirmed",
+          "source_note": "Narutopedia ASF page"
+        },
+        {
+          "lead": "Fourth War arc: fights Edo Kage",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Darui"
+    },
+    {
+      "character_id": "dattebayo:749",
+      "name": "Mabui",
+      "universe_id": "naruto",
+      "canonical_version": "Mabui, Raikage's assistant (Part II)",
+      "aliases": [],
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 20,
+        "strategist": 37,
+        "attacker": 20,
+        "tank": 10,
+        "assassin": 7,
+        "support": 54,
+        "healer": 3
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 54,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 54,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "HELD_NO_DEMONSTRATED_ABILITIES",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Kage Summit and Fourth War arcs: administrative roles",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Mabui"
+    },
+    {
+      "character_id": "dattebayo:80",
+      "name": "Ao",
+      "universe_id": "naruto",
+      "canonical_version": "Ao, Hidden Mist (Part II): stolen Byakugan",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 50,
+        "tank": 40,
+        "assassin": 47,
+        "support": 60,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_2",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Kage Summit arc: Byakugan tracking",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Ao"
+    },
+    {
+      "character_id": "dattebayo:152",
+      "name": "Chojuro",
+      "universe_id": "naruto",
+      "canonical_version": "War-era Chojuro: Hiramekarei",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Kage Summit and Fourth War arcs: Hiramekarei",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Chōjūrō"
+    },
+    {
+      "character_id": "dattebayo:898",
+      "name": "Yugito Nii",
+      "universe_id": "naruto",
+      "canonical_version": "Yugito Nii with Matatabi chakra (Conditional)",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 48,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_MATATABI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akatsuki arc: captured by Hidan and Kakuzu",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Yugito_Nii"
+    },
+    {
+      "character_id": "dattebayo:591",
+      "name": "Yagura Karatachi",
+      "universe_id": "naruto",
+      "canonical_version": "Yagura Karatachi as Isobu host, uncontrolled prime inferred",
+      "aliases": [
+        "Fourth Mizukage"
+      ],
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 60,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "CONTROLLED_STATE_EVIDENCE",
+        "POWER_ALT_4",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_ISOBU"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Mist backstory in the war arc and Obito flashbacks",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Yagura_Karatachi"
+    },
+    {
+      "character_id": "dattebayo:983",
+      "name": "Roshi",
+      "universe_id": "naruto",
+      "canonical_version": "Roshi with Son Goku chakra (Conditional): Lava Release",
+      "aliases": [
+        "Old Man Roshi"
+      ],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_SON_GOKU"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akatsuki arc and Fourth War arc",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Rōshi"
+    },
+    {
+      "character_id": "dattebayo:363",
+      "name": "Han",
+      "universe_id": "naruto",
+      "canonical_version": "Han with Kokuo chakra (Conditional): Steam Armor",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 26,
+        "attacker": 60,
+        "tank": 60,
+        "assassin": 34,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_KOKUO"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akatsuki arc",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Han"
+    },
+    {
+      "character_id": "dattebayo:1335",
+      "name": "Utakata",
+      "universe_id": "naruto",
+      "canonical_version": "Utakata with Saiken chakra (Conditional): bubble techniques",
+      "aliases": [],
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 36,
+        "strategist": 43,
+        "attacker": 60,
+        "tank": 50,
+        "assassin": 47,
+        "support": 26,
+        "healer": 9
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Uncommon",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 60,
+        "base_rarity": "Uncommon",
+        "final_rarity": "Uncommon",
+        "highest_role_score": 60,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_SAIKEN"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akatsuki arc",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Utakata"
+    },
+    {
+      "character_id": "dattebayo:221",
+      "name": "Fu",
+      "universe_id": "naruto",
+      "canonical_version": "Fu with Chomei chakra (Conditional)",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 23,
+        "attacker": 40,
+        "tank": 30,
+        "assassin": 27,
+        "support": 40,
+        "healer": 6
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 40,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 40,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "LIMITED_EVIDENCE",
+        "POWER_ALT_3",
+        "PRIMARY_MANGA_UNVERIFIED",
+        "SHARED_EVENT_WITH_CHOMEI"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Part II Akatsuki arc and war arc",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Fū"
+    },
+    {
+      "character_id": "dattebayo:903",
+      "name": "Rin Nohara",
+      "universe_id": "naruto",
+      "canonical_version": "Rin Nohara, Team Minato medic (Kakashi Gaiden); Three-Tails host state excluded",
+      "aliases": [],
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 3
+      },
+      "scores": {
+        "captain": 28,
+        "strategist": 40,
+        "attacker": 30,
+        "tank": 30,
+        "assassin": 27,
+        "support": 40,
+        "healer": 57
+      },
+      "scoring_version": "SCORE-1.0",
+      "rarity": "Common",
+      "rarity_detail": {
+        "version": "RARITY-0.2",
+        "rarity_points": 57,
+        "base_rarity": "Common",
+        "final_rarity": "Common",
+        "highest_role_score": 57,
+        "combat_bonus": 0,
+        "specialist_bonus": 0,
+        "versatility_bonus": 0,
+        "floor_applied": null
+      },
+      "confidence": "low",
+      "review_flags": [
+        "FLASHBACK_ONLY",
+        "HEALER_ALT_2",
+        "JINCHURIKI_STATE_EXCLUDED",
+        "PRIMARY_MANGA_UNVERIFIED"
+      ],
+      "evaluation_status": "draft",
+      "held": false,
+      "evidence": [
+        {
+          "lead": "Medical ninja on Team Minato; implants Obito's Sharingan into Kakashi; carries a medical kit",
+          "check": "secondary_source_confirmed",
+          "source_note": "Narutopedia-style pages, MyAnimeList, ch. 239-244"
+        },
+        {
+          "lead": "Kakashi Gaiden: Three-Tails host plot",
+          "check": "recollection_only",
+          "source_note": "recollection, arc-level"
+        }
+      ],
+      "image_status": "valid",
+      "source_url": "https://naruto.fandom.com/wiki/Rin_Nohara"
+    }
+  ],
+  "issues": [
+    {
+      "name": "C (Kumogakure shinobi)",
+      "issue": "no catalogue match"
+    }
+  ],
+  "rarity_distribution": {
+    "Uncommon": 32,
+    "Common": 12,
+    "Epic": 1,
+    "Rare": 4
+  }
+}

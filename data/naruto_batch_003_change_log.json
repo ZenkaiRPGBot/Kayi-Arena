@@ -1,0 +1,68 @@
+{
+  "changes": [
+    {
+      "character": "Choji Akimichi",
+      "field": "canonical_version",
+      "previous": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded (review: Butterfly Mode without pills, ch.533)",
+      "proposed": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded (review: Butterfly Mode without pills, ch.533)",
+      "reason": "War-era Butterfly Mode without pills (chapter 533). Ratings may need review.",
+      "source": "Naruto chapter 533"
+    },
+    {
+      "character": "Shizune",
+      "field": "fit.captain",
+      "previous": 2,
+      "proposed": 3,
+      "reason": "Captain of the Allied Shinobi Forces Logistical Support and Medical Division; talented medical-nin.",
+      "source": "Narutopedia: Shizune; Shikaku's revised battle strategy"
+    },
+    {
+      "character": "Shizune",
+      "field": "fit.healer",
+      "previous": 3,
+      "proposed": 4,
+      "reason": "Captain of the Allied Shinobi Forces Logistical Support and Medical Division; talented medical-nin.",
+      "source": "Narutopedia: Shizune; Shikaku's revised battle strategy"
+    },
+    {
+      "character": "Dan Kato",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Ghost Transformation Jutsu (S-rank) demonstrated in the Fourth War arc; not flashback-only.",
+      "source": "Narutopedia: Dan Kato; chapter 591 context"
+    },
+    {
+      "character": "Jugo",
+      "field": "fit.healer",
+      "previous": 0,
+      "proposed": 2,
+      "reason": "Cellular Regeneration Ejection (chapter 414) heals compatible allies conditionally.",
+      "source": "Narutopedia: Cellular Regeneration Ejection; chapter 414"
+    },
+    {
+      "character": "Mabui",
+      "field": "evaluation_status",
+      "previous": "held",
+      "proposed": "draft",
+      "reason": "Heavenly Transfer Technique (chapter 562) provides transport/support; demonstrated in war arc.",
+      "source": "Narutopedia: Heavenly Transfer Technique; chapter 562"
+    },
+    {
+      "character": "Mabui",
+      "field": "fit.support",
+      "previous": 2,
+      "proposed": 3,
+      "reason": "Heavenly Transfer Technique (chapter 562) provides transport/support; demonstrated in war arc.",
+      "source": "Narutopedia: Heavenly Transfer Technique; chapter 562"
+    },
+    {
+      "character": "Yugito Nii",
+      "field": "evidence_leads",
+      "previous": "captured by Deidara",
+      "proposed": "captured by Hidan and Kakuzu",
+      "reason": "Captured by Hidan and Kakuzu, not Deidara. Evidence lead corrected.",
+      "source": "Narutopedia: Yugito Nii; Akatsuki Suppression Mission arc"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-expansion-003-004",
+  "generated_at": "2026-11-27T03:47:41.209876+00:00",
+  "summary": {
+    "characters": 148,
+    "with_valid_image": 148,
+    "without_valid_image": 0,
+    "total_images": 181,
+    "valid_images": 180,
+    "invalid_images": 0,
+    "missing_images": 1,
+    "duplicate_images": 0
+  },
+  "identity_verification": {
+    "method": "source catalogue name/alias match plus documented ambiguity flags",
+    "visual_identity_verified": false,
+    "counts": {
+      "source_name_match": 143,
+      "uncertain": 1,
+      "resolved_alias": 3,
+      "combined_record": 1
+    },
+    "uncertain_characters": [
+      {
+        "candidate_id": "dattebayo:1426",
+        "name": "White Zetsu",
+        "identity_check": "uncertain"
+      }
+    ]
+  },
+  "non_valid_images": [
+    {
+      "candidate_id": "dattebayo:266",
+      "name": "Gamakichi",
+      "identity_check": "source_name_match",
+      "url": "https://static.wikia.nocookie.net/naruto/images/e/e1/Gamakichi.png",
+      "status": "missing",
+      "error": "http 404"
+    }
+  ],
+  "notes": [
+    "source_accessible means the image downloaded and decoded; it does not prove the image depicts the intended character.",
+    "Identity verification is a source-record name/alias match, not a visual review.",
+    "One missing secondary image is non-blocking because every character has a valid primary image."
+  ]
+}

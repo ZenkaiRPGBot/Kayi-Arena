@@ -2,7 +2,7 @@
   "universe": "Naruto",
   "source": "dattebayo",
   "provider": "dattebayo",
-  "generated_at": "2026-11-26T04:24:37.616523+00:00",
+  "generated_at": "2026-11-26T07:58:37.311854+00:00",
   "stats": {},
   "duplicates_removed": [],
   "candidates": [
@@ -1038,8 +1038,22 @@
       "source": "dattebayo",
       "source_url": "https://naruto.fandom.com/wiki/Kurama",
       "aliases": [],
-      "image_urls": [],
-      "images": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest/scale-to-width-down/1200?cb=20140818171718"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest/scale-to-width-down/1200?cb=20140818171718",
+          "source": "manual-narutopedia",
+          "sha256": "c0b5a8329a228704c0114ea8fb3eced583d409df8616204cf2a217a89d49171b",
+          "format": "webp",
+          "width": 1200,
+          "height": 685,
+          "bytes": 33964,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
       "debut": {
         "manga": "Naruto Chapter #1",
         "anime": "Naruto Episode #1",
@@ -2517,7 +2531,8 @@
       "source_url": "https://naruto.fandom.com/wiki/Jiraiya",
       "aliases": [],
       "image_urls": [
-        "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png"
+        "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
+        "https://static.wikia.nocookie.net/naruto/images/1/1f/Jiraiya_Young.png/revision/latest?cb=20260220182003"
       ],
       "images": [
         {
@@ -2525,6 +2540,17 @@
           "source": "dattebayo",
           "status": "missing",
           "error": "http 404",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/1f/Jiraiya_Young.png/revision/latest?cb=20260220182003",
+          "source": "manual-narutopedia",
+          "sha256": "682a4481c13b2ff4ad82d7d21e10819e3ac0cec7ede82cc18eed9bea6d21ee15",
+          "format": "webp",
+          "width": 399,
+          "height": 502,
+          "bytes": 47676,
+          "status": "valid",
           "rights": "source-dependent; review before publication"
         }
       ],
@@ -4256,8 +4282,22 @@
       "source": "dattebayo",
       "source_url": "https://naruto.fandom.com/wiki/Chiyo",
       "aliases": [],
-      "image_urls": [],
-      "images": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest/scale-to-width-down/1200?cb=20160113171702"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest/scale-to-width-down/1200?cb=20160113171702",
+          "source": "manual-narutopedia",
+          "sha256": "2f83116e409fd580ebcbb78fe62883270f155f1047da409160c10bd71159f0a8",
+          "format": "webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 52676,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
       "debut": {
         "manga": "Naruto Chapter #252",
         "anime": "Naruto Shippūden Episode #9",

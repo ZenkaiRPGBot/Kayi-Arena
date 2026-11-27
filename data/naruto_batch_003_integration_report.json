@@ -1,0 +1,17 @@
+{
+  "total_evaluated": 49,
+  "held": 1,
+  "draft": 48,
+  "rarity_distribution": {
+    "Uncommon": 32,
+    "Common": 12,
+    "Epic": 1,
+    "Rare": 4
+  },
+  "issues": [
+    {
+      "name": "C (Kumogakure shinobi)",
+      "issue": "no catalogue match"
+    }
+  ]
+}

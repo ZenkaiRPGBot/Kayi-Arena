@@ -1,0 +1,1749 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-004-b",
+  "mode": "bulk_preliminary",
+  "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+  "scoring_version": "SCORE-1.0",
+  "rarity_version": "RARITY-0.2",
+  "canonical_policy_version": "NARUTO-CANON-0.1",
+  "prepared_date": "2026-11-27",
+  "batch_status": "draft",
+  "notes": "Preliminary bulk evaluation. Evidence levels: secondary_snippet_inspected = search-result text from a secondary page read this session (not full-page or primary manga inspection); recollection_only / primary_manga_unverified = not verified. No manga chapter was directly inspected. Held records have null power and fit values by design. No rarity or role scores calculated.",
+  "characters": [
+    {
+      "id": "naruto:kinkaku",
+      "name": "Kinkaku",
+      "canonical_name": "Kinkaku",
+      "aliases": [
+        "Gold Brother",
+        "Gold General",
+        "Two Lights (with Ginkaku)"
+      ],
+      "canonical_version": "Living Hidden Cloud prime as shown at war; reanimation regeneration excluded",
+      "power": 4,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Sources describe Kinkaku gaining Kyuubi chakra by surviving being swallowed and eating its flesh, and entering a six-tailed Kyuubi shroud when enraged. Cloak counted as repeatable inherent jinchuriki-like power; Six Paths tools treated as borrowed equipment and not credited to Power or Support. Tank 3 reflects cloak durability only.",
+      "evidence_leads": [
+        {
+          "lead": "Debut chapter and identity (Cloud, Gold and Silver Brothers)",
+          "check": "Confirm ch.525 debut and cloak scene in manga",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/65139/Kinkaku",
+          "chapter_reference": "Manga ch.525 (per MAL/Narutopedia)"
+        },
+        {
+          "lead": "Cloak triggered when Ginkaku is sealed; Kyuubi chakra via ingestion",
+          "check": "Chapter-level manga check of Kyuubi cloak scenes and tool usage",
+          "source_note": "TheTVDB episode summary (anime)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://thetvdb.com/series/naruto-shippuden/episodes/4346841",
+          "chapter_reference": "Shippuden episode (anime summary; manga unverified)"
+        },
+        {
+          "lead": "Brothers' ingestion of Kyuubi flesh and Six Paths lineage",
+          "check": "Cross-check with Narutopedia Gold and Silver Brothers page",
+          "source_note": "Sportskeeda Ginkaku profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wiki.sportskeeda.com/naruto/who-is-ginkaku"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "conditional_tailed_beast_power",
+        "borrowed_equipment_excluded",
+        "only_seen_reanimated_extrapolated_living_version",
+        "manga_cloak_scene_unverified",
+        "power_4_needs_review"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:ginkaku",
+      "name": "Ginkaku",
+      "canonical_name": "Ginkaku",
+      "aliases": [
+        "Silver Brother",
+        "Silver General"
+      ],
+      "canonical_version": "Living Hidden Cloud prime; reanimation regeneration excluded",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Shares Kyuubi-flesh ingestion with Kinkaku but is not shown cloaking; main threat comes from the Six Paths tools (borrowed equipment, excluded). Rated below Kinkaku for lacking a demonstrated shroud. Sealed quickly by his own tool.",
+      "evidence_leads": [
+        {
+          "lead": "Tool use and Kyuubi-chakra background",
+          "check": "Chapter-level manga check of Kyuubi cloak scenes and tool usage",
+          "source_note": "Sportskeeda Ginkaku profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wiki.sportskeeda.com/naruto/who-is-ginkaku"
+        },
+        {
+          "lead": "Sealed in Benihisago after speaking his brother's name",
+          "check": "Manga chapter check",
+          "source_note": "TheTVDB episode summary (anime)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://thetvdb.com/series/naruto-shippuden/episodes/4346841"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "conditional_tailed_beast_power",
+        "borrowed_equipment_excluded",
+        "manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:mangetsu_hozuki",
+      "name": "Mangetsu Hozuki",
+      "canonical_name": "Mangetsu Hozuki",
+      "aliases": [
+        "Hozuki Mangetsu",
+        "Hiramekarei wielder"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist; Edo Tensei effects excluded",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Hozuki water-body techniques and Hiramekarei dual swords. Hiramekarei treated as equipment; Hydrification gives some durability. Feats are thin.",
+      "evidence_leads": [
+        {
+          "lead": "Hiramekarei and Hydrification Technique",
+          "check": "Verify manga appearances and feats on Narutopedia/chapters",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability",
+        "manga_appearance_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:fuguki_suikazan",
+      "name": "Fuguki Suikazan",
+      "canonical_name": "Fuguki Suikazan",
+      "aliases": [
+        "Samehada wielder (pre-Kisame)"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Samehada wielder with large chakra reserves and water techniques. Samehada is equipment and not credited beyond ordinary swordsman skill plus flagged chakra-drain handling.",
+      "evidence_leads": [
+        {
+          "lead": "Samehada use and Water Release",
+          "check": "Verify manga appearance and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability",
+        "manga_appearance_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:jinin_akebino",
+      "name": "Jinin Akebino",
+      "canonical_name": "Jinin Akebino",
+      "aliases": [
+        "Kabutowari wielder"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Seven Swordsmen member wielding Kabutowari. Minimal remembered feats; deliberately conservative ratings.",
+      "evidence_leads": [
+        {
+          "lead": "Kabutowari wielder, Seven Swordsmen membership",
+          "check": "Verify manga feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:jinpachi_munashi",
+      "name": "Jinpachi Munashi",
+      "canonical_name": "Jinpachi Munashi",
+      "aliases": [
+        "Shibuki wielder"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Seven Swordsmen member with the explosive-tag sword Shibuki. Assassin 2 for explosive-tag ambush use; remaining values conservative.",
+      "evidence_leads": [
+        {
+          "lead": "Shibuki explosive-tag blade",
+          "check": "Verify manga feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kushimaru_kuriarare",
+      "name": "Kushimaru Kuriarare",
+      "canonical_name": "Kushimaru Kuriarare",
+      "aliases": [
+        "Nuibari wielder"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Seven Swordsmen member wielding the thread sword Nuibari. Conservative values pending verification.",
+      "evidence_leads": [
+        {
+          "lead": "Nuibari thread-sword use",
+          "check": "Verify manga feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:ameyuri_ringo",
+      "name": "Ameyuri Ringo",
+      "canonical_name": "Ameyuri Ringo",
+      "aliases": [
+        "Kiba wielder"
+      ],
+      "canonical_version": "Prime Seven Swordsmen of the Mist; no Edo Tensei effects",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 4,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: wielder of the lightning-conducting twin blades Kiba with strong lightning offense. Kiba is equipment; Attacker 4 reflects demonstrated lightning output.",
+      "evidence_leads": [
+        {
+          "lead": "Kiba lightning offense",
+          "check": "Verify manga feats and chapter",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "equipment_vs_ability"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:chukichi",
+      "name": "Chukichi",
+      "canonical_name": "Chukichi",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Identity and village unclear (listed with Hidden Stone shinobi in one listing). Abilities not recalled; ratings unresolved.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish village, appearance and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "identity_needs_check"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:gari",
+      "name": "Gari",
+      "canonical_name": "Gari",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Appears as a kekkei genkai user in reanimated context; kekkei genkai and feats not verified. Ratings unresolved.",
+      "evidence_leads": [
+        {
+          "lead": "Mentioned among kekkei genkai users",
+          "check": "Verify Gari's kekkei genkai and manga feats",
+          "source_note": "Narutopedia: Zaji",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Zaji"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "reanimation_only_appearance",
+        "identity_needs_check"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:toroi",
+      "name": "Toroi",
+      "canonical_name": "Toroi",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Insufficient recollection and no source inspected; abilities and village unverified.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:dodai",
+      "name": "Dodai",
+      "canonical_name": "Dodai",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Insufficient recollection and no source inspected; abilities unverified.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:atsui",
+      "name": "Atsui",
+      "canonical_name": "Atsui",
+      "aliases": [],
+      "canonical_version": "Naruto-era Hidden Cloud shinobi",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Named in sources as one of Darui's backup against the Gold and Silver Brothers. Abilities remembered only vaguely; kept conservative.",
+      "evidence_leads": [
+        {
+          "lead": "Backup to Darui in the Gold and Silver fight",
+          "check": "Verify Atsui's own techniques in manga",
+          "source_note": "TheTVDB episode summary (anime)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://thetvdb.com/series/naruto-shippuden/episodes/4346841"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "thin_evidence",
+        "recollection_only_for_techniques"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:samui",
+      "name": "Samui",
+      "canonical_name": "Samui",
+      "aliases": [],
+      "canonical_version": "Naruto-era Hidden Cloud shinobi (Boruto material excluded)",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Named with Atsui as Darui's backup against the Gold and Silver Brothers. Remaining ratings from recollection of her Naruto-era role; conservative.",
+      "evidence_leads": [
+        {
+          "lead": "Backup to Darui in the Gold and Silver fight",
+          "check": "Verify manga feats and Samui's leadership scenes",
+          "source_note": "TheTVDB episode summary (anime)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://thetvdb.com/series/naruto-shippuden/episodes/4346841"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only_for_techniques",
+        "boruto_era_excluded"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:motoi",
+      "name": "Motoi",
+      "canonical_name": "Motoi",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Mentioned only via Blue B's incident (father lost); no combat feats established.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:blue_b",
+      "name": "Blue B",
+      "canonical_name": "Blue B",
+      "aliases": [
+        "Fukai (alias per fan-derived wiki)"
+      ],
+      "canonical_version": "Prime Eight-Tails jinchuriki with accessible Version-2; Edo Tensei horn restoration and regeneration excluded",
+      "power": 4,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 1,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Identified as A's cousin and Killer B's predecessor as Eight-Tails host; manga debut ch.494. Shown reaching Eight-Tails Version 2 at will with personality retained, but only while reanimated, and in life he failed to control the beast. Rated on accessible cloak and elite rank, not reanimation boosts.",
+      "evidence_leads": [
+        {
+          "lead": "Identity, jinchuriki predecessor, A's cousin",
+          "check": "Verify cloak scenes against manga chapters",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/77433",
+          "chapter_reference": "Manga ch.494; anime ep.244 (per MAL)"
+        },
+        {
+          "lead": "Described as high-ranking Cloud shinobi and former Eight-Tails host",
+          "check": "Confirm rank",
+          "source_note": "Sportskeeda Kumogakure page",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wiki.sportskeeda.com/naruto/kumogakure"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "conditional_tailed_beast_power",
+        "lost_control_in_life",
+        "reanimation_benefits_excluded",
+        "power_4_needs_review",
+        "version_ambiguity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kurotsuchi",
+      "name": "Kurotsuchi",
+      "canonical_name": "Kurotsuchi",
+      "aliases": [
+        "Fourth Tsuchikage (Boruto era, excluded)"
+      ],
+      "canonical_version": "Naruto-era Iwagakure jonin",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Recollection: Lava Release user and Iwa commander in the war; Boruto-era Tsuchikage status and abilities excluded. Captain 3 reflects command roles.",
+      "evidence_leads": [
+        {
+          "lead": "Lava Release and war command roles",
+          "check": "Verify chapters; confirm Lava Release shown in Naruto manga",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "boruto_era_excluded"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:akatsuchi",
+      "name": "Akatsuchi",
+      "canonical_name": "Akatsuchi",
+      "aliases": [],
+      "canonical_version": "Naruto-era Iwagakure shinobi",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Recollection: Earth Release user capable of giant golem forms and fortress-style defence, tied to Ōnoki's team.",
+      "evidence_leads": [
+        {
+          "lead": "Earth Release golem techniques",
+          "check": "Verify manga feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kitsuchi",
+      "name": "Kitsuchi",
+      "canonical_name": "Kitsuchi",
+      "aliases": [],
+      "canonical_version": "Naruto-era Iwagakure shinobi",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Recollection: Ōnoki's son and commander of the Second Division in the war; Earth Release specialist. Eligibility and details need chapter check.",
+      "evidence_leads": [
+        {
+          "lead": "Second Division leadership; Earth Release",
+          "check": "Verify manga feats and rank",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kakko",
+      "name": "Kakko",
+      "canonical_name": "Kakkō",
+      "aliases": [
+        "Kakkou"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "evidence_leads": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:taiseki",
+      "name": "Taiseki",
+      "canonical_name": "Taiseki",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "evidence_leads": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:mahiru",
+      "name": "Mahiru",
+      "canonical_name": "Mahiru",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Named in a roster listing as an Iwagakure ninja; abilities not verified.",
+      "evidence_leads": [
+        {
+          "lead": "Listed among Iwa ninja",
+          "check": "Establish feats",
+          "source_note": "Wikimonde character list",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wikimonde.com/article/Liste_des_personnages_de_Naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:ittan",
+      "name": "Ittan",
+      "canonical_name": "Ittan",
+      "aliases": [],
+      "canonical_version": "Part II Iwagakure shinobi, Surprise Attack Division",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Narutopedia lists him in the Surprise Attack Division using Earth Release: Moving Earth Core and protecting teammates. Limited feats.",
+      "evidence_leads": [
+        {
+          "lead": "Identity, debut, abilities",
+          "check": "Confirm manga feats",
+          "source_note": "Narutopedia: Ittan",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Ittan",
+          "chapter_reference": "Manga ch.515"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:mifune",
+      "name": "Mifune",
+      "canonical_name": "Mifune",
+      "aliases": [
+        "General of the Land of Iron"
+      ],
+      "canonical_version": "Naruto-era samurai general",
+      "power": 4,
+      "fit": {
+        "captain": 4,
+        "strategist": 3,
+        "attacker": 4,
+        "tank": 3,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Land of Iron general and head of the Fifth Division; sources note he stood firm against Hanzo and that Hanzo spared him. Recollection supports iaido swordsmanship and chakra-blade technique.",
+      "evidence_leads": [
+        {
+          "lead": "General of the samurai; Hanzo encounter",
+          "check": "Verify manga chapters and techniques",
+          "source_note": "ComicVine profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://comicvine.gamespot.com/mifune/4005-76697/"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "power_4_needs_review",
+        "samurai_chakra_technique_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:okisuke",
+      "name": "Okisuke",
+      "canonical_name": "Okisuke",
+      "aliases": [],
+      "canonical_version": "Naruto-era Land of Iron samurai",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "justification": "Narutopedia (via MAL) lists him as Mifune's bodyguard with manga debut ch.456; secondary sources credit Samurai Sabre and a one-stroke kill of an armoured White Zetsu clone, which is anime-sourced.",
+      "evidence_leads": [
+        {
+          "lead": "Identity and debut",
+          "check": "Confirm combat feats are manga canon",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/67285",
+          "chapter_reference": "Manga ch.456"
+        },
+        {
+          "lead": "Samurai Sabre and Zetsu kill",
+          "check": "Anime-only likelihood",
+          "source_note": "EcuRed article",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://www.ecured.cu/Okisuke"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "anime_only_feats_possible",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:urakaku",
+      "name": "Urakaku",
+      "canonical_name": "Urakaku",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Debut ch.456 as Mifune's bodyguard, but no combat ability is documented in inspected sources; ratings unresolved.",
+      "evidence_leads": [
+        {
+          "lead": "Identity and debut",
+          "check": "Find demonstrated combat feats",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/77441/Urakaku",
+          "chapter_reference": "Manga ch.456"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_combat_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:yahiko",
+      "name": "Yahiko",
+      "canonical_name": "Yahiko",
+      "aliases": [
+        "Akatsuki founder (original)"
+      ],
+      "canonical_version": "Young Amegakure shinobi",
+      "power": 2,
+      "fit": {
+        "captain": 3,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Founded Akatsuki as a leader of the orphan trio; demonstrated combat feats are modest. Captain 3 reflects leadership and charisma.",
+      "evidence_leads": [
+        {
+          "lead": "Identity, Akatsuki founding",
+          "check": "Verify combat feats",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/23050",
+          "chapter_reference": "Manga ch.372"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "thin_combat_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:shigure",
+      "name": "Shigure",
+      "canonical_name": "Shigure",
+      "aliases": [],
+      "canonical_version": "Genin-level Amegakure shinobi",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 2,
+        "support": 0,
+        "healer": 0
+      },
+      "justification": "Genin from Team Shigure killed by Gaara in the Forest of Death; used senbon-based attacks. Chunin Exams record confirms team and elimination.",
+      "evidence_leads": [
+        {
+          "lead": "Team and death by Gaara",
+          "check": "Confirm Team Shigure scene and senbon attack exist in manga",
+          "source_note": "Narutopedia Chunin Exams",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Ch%C5%ABnin_Exams"
+        },
+        {
+          "lead": "Profile",
+          "check": "Confirm manga vs anime",
+          "source_note": "Sportskeeda profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wiki.sportskeeda.com/naruto/shigure-in-naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "manga_vs_anime_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:baiu",
+      "name": "Baiu",
+      "canonical_name": "Baiu",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Source states he never showcased abilities; only claimed to be a close-range fighter.",
+      "evidence_leads": [
+        {
+          "lead": "Profile",
+          "check": "Confirm manga appearance",
+          "source_note": "Sportskeeda profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://www.sportskeeda.com/naruto-wiki/baiu-in-naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence",
+        "manga_vs_anime_unverified"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:midare",
+      "name": "Midare",
+      "canonical_name": "Midare",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Little shown beyond dying with Team Shigure; no ratable abilities.",
+      "evidence_leads": [
+        {
+          "lead": "Profile",
+          "check": "Confirm abilities",
+          "source_note": "Sportskeeda profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://wiki.sportskeeda.com/naruto/midare-in-naruto"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:oboro",
+      "name": "Oboro",
+      "canonical_name": "Oboro",
+      "aliases": [
+        "Team Oboro leader"
+      ],
+      "canonical_version": "Genin-level Amegakure shinobi",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Leader of a Rain genin team using haze-clone/genjutsu tactics; defeated by Team 7. Support 2 for the shared decoy tactic.",
+      "evidence_leads": [
+        {
+          "lead": "Genjutsu and team defeated by Naruto",
+          "check": "Confirm techniques in manga",
+          "source_note": "MyAnimeList profile",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/17619"
+        },
+        {
+          "lead": "Haze clones used by team",
+          "check": "Attribution to Oboro individually uncertain",
+          "source_note": "Narutopedia volume summary",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/The_Path_That_Should_Be_Followed%E2%80%A6!!_(volume)"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "shared_team_technique"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:mubi",
+      "name": "Mubi",
+      "canonical_name": "Mubi",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Team Oboro techniques are shared; Mubi's individual abilities unattributed.",
+      "evidence_leads": [
+        {
+          "lead": "Team Oboro listing",
+          "check": "Attribute individual techniques",
+          "source_note": "MyAnimeList (Oboro page)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/17619"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "shared_team_technique"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:kagari",
+      "name": "Kagari",
+      "canonical_name": "Kagari",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Team Oboro techniques are shared; Kagari's individual abilities unattributed.",
+      "evidence_leads": [
+        {
+          "lead": "Team Oboro listing",
+          "check": "Attribute individual techniques",
+          "source_note": "MyAnimeList (Oboro page)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/17619"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "shared_team_technique"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:yura",
+      "name": "Yura",
+      "canonical_name": "Yura",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Identity and abilities not recalled; no source inspected.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:yashamaru",
+      "name": "Yashamaru",
+      "canonical_name": "Yashamaru",
+      "aliases": [],
+      "canonical_version": "Sunagakure jonin",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Recollection: Gaara's uncle who attempted assassination under orders. Few demonstrated techniques; ratings conservative.",
+      "evidence_leads": [
+        {
+          "lead": "Assassination attempt on Gaara; explosive-based attack",
+          "check": "Verify chapters and techniques",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:karura",
+      "name": "Karura",
+      "canonical_name": "Karura",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Gaara's mother; no combat abilities established.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Verify any demonstrated ability",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:matsuri",
+      "name": "Matsuri",
+      "canonical_name": "Matsuri",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Specific techniques not verified this session.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Verify techniques in manga",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_too_thin"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:maki",
+      "name": "Maki",
+      "canonical_name": "Maki",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Identity and abilities not recalled; no source inspected.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "identity_needs_check"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:reto",
+      "name": "Reto — First Kazekage",
+      "canonical_name": "Reto",
+      "aliases": [
+        "First Kazekage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Described as having overwhelming strength, but no specific demonstrated abilities in inspected sources.",
+      "evidence_leads": [
+        {
+          "lead": "Identity and reputation only",
+          "check": "Find demonstrated feats",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/93629"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_demonstrated_abilities",
+        "distinct_from_other_kazekage"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:shamon",
+      "name": "Shamon — Second Kazekage",
+      "canonical_name": "Shamon",
+      "aliases": [
+        "Second Kazekage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Known for tailed-beast research and puppet focus; combat abilities undocumented.",
+      "evidence_leads": [
+        {
+          "lead": "Identity and background",
+          "check": "Find demonstrated feats",
+          "source_note": "Narutopedia: Shamon",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Shamon",
+          "chapter_reference": "Manga ch.648"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_demonstrated_abilities"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:byakuren",
+      "name": "Byakuren — First Mizukage",
+      "canonical_name": "Byakuren",
+      "aliases": [
+        "First Mizukage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "No evidence inspected; abilities not recalled reliably.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:a_first_raikage",
+      "name": "A — First Raikage",
+      "canonical_name": "A (First Raikage)",
+      "aliases": [
+        "First Raikage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "No evidence inspected; must stay distinct from the Second and Fourth Raikage.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "duplicate_name_A",
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:a_second_raikage",
+      "name": "A — Second Raikage",
+      "canonical_name": "A (Second Raikage)",
+      "aliases": [
+        "Second Raikage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "No evidence inspected; must stay distinct from the First and Fourth Raikage.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "duplicate_name_A",
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:ishikawa",
+      "name": "Ishikawa — First Tsuchikage",
+      "canonical_name": "Ishikawa",
+      "aliases": [
+        "First Tsuchikage"
+      ],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "No evidence inspected; abilities not recalled reliably.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Establish feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "no_evidence"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:zaji_konoha_sensor",
+      "name": "Zaji",
+      "canonical_name": "Zaji (Konoha shinobi)",
+      "aliases": [
+        "Zaji (Konoha sensor)"
+      ],
+      "canonical_version": "Part II Konoha sensor, Surprise Attack Division",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Narutopedia lists him as a sensor-type detecting chakra within a range, serving as the division's sensor. Distinct from a gambler also named Zaji.",
+      "evidence_leads": [
+        {
+          "lead": "Identity, sensor ability",
+          "check": "Confirm manga feats",
+          "source_note": "Narutopedia: Zaji",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Zaji",
+          "chapter_reference": "Manga ch.515"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "disambiguation_zaji_gambler"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kiri_allied_shinobi_forces",
+      "name": "Kiri — Allied Shinobi Forces",
+      "canonical_name": "Kiri (Allied Shinobi Forces)",
+      "aliases": [
+        "Kiri"
+      ],
+      "canonical_version": "Part II Allied Shinobi Forces member, Surprise Attack Division",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 1,
+        "assassin": 0,
+        "support": 2,
+        "healer": 3
+      },
+      "justification": "Division description has Kiri assisting Kankurō with battle strategy; Hoheto carries a wounded ally to Kiri for medical treatment. Healer 3 rests on this single scene and needs verification.",
+      "evidence_leads": [
+        {
+          "lead": "Strategy assistance role",
+          "check": "Confirm Kiri's village and role",
+          "source_note": "Narutopedia: Surprise Attack Division",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Kish%C5%AB_Butai"
+        },
+        {
+          "lead": "Medical treatment scene",
+          "check": "Unusual healing claim — check chapter",
+          "source_note": "Narutopedia: Surprise Attack Division",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Kish%C5%AB_Butai"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "healer_claim_unverified",
+        "name_collision_with_Kirigakure",
+        "identity_needs_check"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:hoheto_hyuga",
+      "name": "Hoheto Hyuga",
+      "canonical_name": "Hoheto Hyūga",
+      "aliases": [],
+      "canonical_version": "Part II Konoha Hyūga, Surprise Attack Division",
+      "power": 2,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Surprise Attack Division sensor/observer who used Byakugan to find explosive clay in a gourd. Fit values conservative.",
+      "evidence_leads": [
+        {
+          "lead": "Identity and debut",
+          "check": "Confirm Gentle Fist feats",
+          "source_note": "MyAnimeList (citing Narutopedia)",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://myanimelist.net/character/62635",
+          "chapter_reference": "Manga ch.515"
+        },
+        {
+          "lead": "Byakugan scouting",
+          "check": "Chapter check",
+          "source_note": "Narutopedia: Surprise Attack Division",
+          "verification": "secondary_snippet_inspected",
+          "url": "https://naruto.fandom.com/wiki/Kish%C5%AB_Butai"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kamatari",
+      "name": "Kamatari",
+      "canonical_name": "Kamatari",
+      "aliases": [],
+      "canonical_version": "Not established",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Identity unclear; no evidence inspected.",
+      "evidence_leads": [
+        {
+          "lead": "Name only",
+          "check": "Identify canonical entry",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "identity_needs_check"
+      ],
+      "evaluation_status": "held"
+    },
+    {
+      "id": "naruto:enma",
+      "name": "Enma",
+      "canonical_name": "Enma",
+      "aliases": [
+        "Monkey King"
+      ],
+      "canonical_version": "Independent sentient summon (Monkey King)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Recollection: Hiruzen's sentient monkey summon who can become the adamantine staff. Eligible as an independent sentient non-human; staff form treated as equipment-like transformation.",
+      "evidence_leads": [
+        {
+          "lead": "Sentient summon and staff form",
+          "check": "Verify manga chapters and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "eligibility_summon_check"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:aoda",
+      "name": "Aoda",
+      "canonical_name": "Aoda",
+      "aliases": [],
+      "canonical_version": "Independent sentient summon (giant snake)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 1,
+        "support": 0,
+        "healer": 0
+      },
+      "justification": "Recollection: sentient giant snake summon associated with Orochimaru's camp. Details are thin.",
+      "evidence_leads": [
+        {
+          "lead": "Giant snake summon",
+          "check": "Verify manga appearances and feats",
+          "source_note": "No source inspected this session",
+          "verification": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "eligibility_summon_check",
+        "thin_evidence"
+      ],
+      "evaluation_status": "draft"
+    }
+  ]
+}

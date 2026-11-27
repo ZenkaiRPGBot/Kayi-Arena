@@ -123,7 +123,7 @@
       "status": "matched",
       "aliases": [],
       "source_url": "https://naruto.fandom.com/wiki/Kurama",
-      "image_count": 0,
+      "image_count": 1,
       "canonical_eligibility": "uncertain",
       "review_status": "pending"
     },
@@ -333,7 +333,7 @@
       "status": "matched",
       "aliases": [],
       "source_url": "https://naruto.fandom.com/wiki/Jiraiya",
-      "image_count": 1,
+      "image_count": 2,
       "canonical_eligibility": "eligible",
       "review_status": "pending"
     },
@@ -571,7 +571,7 @@
       "status": "matched",
       "aliases": [],
       "source_url": "https://naruto.fandom.com/wiki/Chiyo",
-      "image_count": 0,
+      "image_count": 1,
       "canonical_eligibility": "eligible",
       "review_status": "pending"
     },

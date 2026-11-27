@@ -1,0 +1,1651 @@
+{
+ "universe_id": "naruto",
+ "batch_id": "naruto-batch-003",
+ "mode": "bulk_preliminary",
+ "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+ "scoring_version": "SCORE-1.0",
+ "canonical_policy_version": "NARUTO-CANON-0.1",
+ "prepared_date": "2026-11-27",
+ "batch_status": "draft",
+ "notes": [
+  "Compatible with batches 002 and the 60-character review. Rarity and role scores are omitted; RARITY-0.2 and SCORE-1.0 derive them.",
+  "No character was checked against the primary manga. secondary_source_confirmed means a fan wiki, news site or official anime site agreed; it is not primary verification.",
+  "Only a minority of evidence leads were checked in this session; the rest are recollection and are labelled recollection_only.",
+  "Every record is Draft or Held. Three records are Held (Dan Kato, White Zetsu, Mabui)."
+ ],
+ "characters": [
+  {
+   "id": "naruto:neji_hyuga",
+   "name": "Neji Hyuga",
+   "canonical_name": "Neji Hyuga",
+   "aliases": [],
+   "canonical_version": "War-era Neji (Fourth War arc, until his death): Byakugan, Gentle Fist, Eight Trigrams Heavenly Spin",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 4,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Byakugan and Gentle Fist specialist with sound tactical reading; his shield technique and final interception protect allies, though the fatal act is a one-time demonstration.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc: shields and intercepts an attack for Naruto and Hinata",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    },
+    {
+     "lead": "Sasuke Retrieval arc: defeats Kidomaru",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "TANK_SACRIFICE_EVIDENCE"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hinata_hyuga",
+   "name": "Hinata Hyuga",
+   "canonical_name": "Hinata Hyuga",
+   "aliases": [],
+   "canonical_version": "War-era Hinata: Byakugan, Gentle Fist, Twin Lion Fists",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 3,
+    "healer": 1
+   },
+   "justification": "Byakugan scouting and Gentle Fist offense; intercepted Pain's attack for Naruto; carries minor medical supplies only.",
+   "evidence_leads": [
+    {
+     "lead": "Pain's Assault arc: attacks Pain and takes a blow meant for Naruto",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    },
+    {
+     "lead": "Fourth War arc: fights beside Naruto, Byakugan support",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "HEALER_MINOR_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:ino_yamanaka",
+   "name": "Ino Yamanaka",
+   "canonical_name": "Ino Yamanaka",
+   "aliases": [],
+   "canonical_version": "War-era Ino: Mind Transfer, Mind Body Disturbance, information relay, basic medical training",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 1,
+    "tank": 0,
+    "assassin": 1,
+    "support": 4,
+    "healer": 2
+   },
+   "justification": "Relays information between Alliance units and links minds; limited medical training; weak direct combat.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc: mind-transmission relay for the Alliance",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_ROLE_WITH_INOICHI",
+    "SUPPORT_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:shino_aburame",
+   "name": "Shino Aburame",
+   "canonical_name": "Shino Aburame",
+   "aliases": [],
+   "canonical_version": "Part II Shino: Kikaichu insects",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 3,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Parasitic insects track, drain chakra and scout; analytical fighter.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam arc and Part II missions: Kikaichu tracking and chakra drain",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kiba_inuzuka",
+   "name": "Kiba Inuzuka",
+   "canonical_name": "Kiba Inuzuka",
+   "aliases": [],
+   "canonical_version": "Part II Kiba with Akamaru: Fang Over Fang",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Tracking and fast ram attacks with Akamaru; modest durability and planning.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akamaru-based missions and the Sasuke Retrieval arc",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:choji_akimichi",
+   "name": "Choji Akimichi",
+   "canonical_name": "Choji Akimichi",
+   "aliases": [],
+   "canonical_version": "Part II Choji: Expansion jutsu and Butterfly Mode via non-fatal pills; fatal Chili pill excluded",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Strong Expansion offense and durability; Butterfly Mode boosts him at a cost. Fatal pill state excluded.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc: Jirobo fight (fatal pill, excluded)",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    },
+    {
+     "lead": "Part II and war arcs: Expansion jutsu and Butterfly Mode",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FATAL_PILL_EXCLUDED",
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:tenten",
+   "name": "Tenten",
+   "canonical_name": "Tenten",
+   "aliases": [],
+   "canonical_version": "Part II Tenten: Weapon Summoning and Rising Twin Dragons",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Long-range multi-weapon offense with strong accuracy; limited durability and leadership.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam arc and Part II/war arcs: weapon summoning barrages",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:asuma_sarutobi",
+   "name": "Asuma Sarutobi",
+   "canonical_name": "Asuma Sarutobi",
+   "aliases": [],
+   "canonical_version": "Prime Asuma (Hidan and Kakuzu arc): Chakra Blades, Wind Release",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Jonin leader of Team 10 with strong blade and wind techniques; guides Shikamaru's tactics.",
+   "evidence_leads": [
+    {
+     "lead": "Hidan and Kakuzu arc: fights Hidan and Kakuzu, leads Team 10",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kurenai_yuhi",
+   "name": "Kurenai Yuhi",
+   "canonical_name": "Kurenai Yuhi",
+   "aliases": [],
+   "canonical_version": "Kurenai Yuhi, genjutsu specialist (Part I-II)",
+   "power": 2,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Genjutsu specialist who leads Team 8; illusions trap and control targets.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam arc and Part I missions: genjutsu use, Team 8 leadership",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:shikaku_nara",
+   "name": "Shikaku Nara",
+   "canonical_name": "Shikaku Nara",
+   "aliases": [],
+   "canonical_version": "Prime Shikaku (Fourth War arc): Shadow Possession family, Chief Strategist of the Allied Shinobi Forces",
+   "power": 2,
+   "fit": {
+    "captain": 4,
+    "strategist": 5,
+    "attacker": 1,
+    "tank": 1,
+    "assassin": 1,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Chief Strategist who redesigns battle formations for the Alliance and is praised for it; shadow binding assists.",
+   "evidence_leads": [
+    {
+     "lead": "Chief Strategist of the Allied Shinobi Forces; redesigns formations around ch. 525",
+     "check": "secondary_source_confirmed",
+     "source_note": "Narutopedia-style pages, daddyjim.ai, Sportskeeda"
+    },
+    {
+     "lead": "Fourth War arc: headquarters planning",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "FIT_5:strategist",
+    "FIT_5_REVIEW",
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:inoichi_yamanaka",
+   "name": "Inoichi Yamanaka",
+   "canonical_name": "Inoichi Yamanaka",
+   "aliases": [],
+   "canonical_version": "Prime Inoichi (Fourth War arc): Mind Transfer, Mind Reading, sensor network",
+   "power": 2,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 1,
+    "tank": 1,
+    "assassin": 2,
+    "support": 4,
+    "healer": 0
+   },
+   "justification": "Links Alliance sensors and interrogates through mind techniques; headquarters-based enabler.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc: Alliance headquarters mind network",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_ROLE_WITH_INO",
+    "SUPPORT_ALT_5"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:choza_akimichi",
+   "name": "Choza Akimichi",
+   "canonical_name": "Choza Akimichi",
+   "aliases": [],
+   "canonical_version": "Prime Choza (Fourth War arc): Expansion jutsu",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Expansion fighter and Ino-Shika-Cho veteran; thin independent evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc: fights alongside Shikaku and Inoichi",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:shizune",
+   "name": "Shizune",
+   "canonical_name": "Shizune",
+   "aliases": [],
+   "canonical_version": "Part II Shizune: medical ninjutsu, poison needles",
+   "power": 2,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 1,
+    "tank": 1,
+    "assassin": 2,
+    "support": 3,
+    "healer": 3
+   },
+   "justification": "Tsunade's medic apprentice and aide; competent treatment and poison use; modest combat power.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Konoha arcs: medical work as Tsunade's apprentice",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "HEALER_ALT_4",
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:anko_mitarashi",
+   "name": "Anko Mitarashi",
+   "canonical_name": "Anko Mitarashi",
+   "aliases": [],
+   "canonical_version": "Anko Mitarashi, special jonin (Part I-II); Twin Snake Mutual Death excluded",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 3,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Snake-based offense and infiltration skill; sacrificial technique excluded.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam and Konoha Invasion arcs: Snake Hands, pursuit of Orochimaru",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FATAL_TECHNIQUE_EXCLUDED",
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:iruka_umino",
+   "name": "Iruka Umino",
+   "canonical_name": "Iruka Umino",
+   "aliases": [],
+   "canonical_version": "Iruka Umino, chunin and Academy teacher (Part I-II)",
+   "power": 2,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 2,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Capable chunin with strong teaching and protective instincts; not a leading fighter.",
+   "evidence_leads": [
+    {
+     "lead": "Land of Waves to Part II: protects Naruto, teaches and mentors",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:ebisu",
+   "name": "Ebisu",
+   "canonical_name": "Ebisu",
+   "aliases": [],
+   "canonical_version": "Ebisu, elite jonin tutor (Part I-II)",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Tutor with solid jonin skills; little war-scale evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam arc and Part II appearances",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:konohamaru_sarutobi",
+   "name": "Konohamaru Sarutobi",
+   "canonical_name": "Konohamaru Sarutobi",
+   "aliases": [],
+   "canonical_version": "Part II Konohamaru: Rasengan, Shadow Clones",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Developing fighter with Rasengan; limited roles beyond basic offense.",
+   "evidence_leads": [
+    {
+     "lead": "Part II: Rasengan and Pain's Assault arc contributions",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:yamato",
+   "name": "Yamato",
+   "canonical_name": "Yamato",
+   "aliases": [
+    "Tenzo"
+   ],
+   "canonical_version": "Yamato, Wood Release user (Part II, Hashirama-cell implant is permanent)",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 3,
+    "support": 4,
+    "healer": 0
+   },
+   "justification": "Wood Release binds, shields and restrains, including suppressing Kurama's chakra; ANBU background supports infiltration; leads Team Kakashi.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval and Pain's Assault arcs: Wood Release, Kurama suppression",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    },
+    {
+     "lead": "ANBU flashbacks: Tenzo background",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "ALIAS_TENZO",
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:sai",
+   "name": "Sai",
+   "canonical_name": "Sai",
+   "aliases": [],
+   "canonical_version": "Part II Sai: Super Beast Scroll ink art, former Root",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 3,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Ink beasts scout, carry allies and strike; Root training supports infiltration.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Team Kakashi arcs and Fourth War arc: ink techniques",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:dan_kato",
+   "name": "Dan Kato",
+   "canonical_name": "Dan Kato",
+   "aliases": [],
+   "canonical_version": "Dan Kato (flashback only)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Known only through Tsunade's backstory: a jonin who advocated medical ninja. No abilities are demonstrated, so ratings are placeholders.",
+   "evidence_leads": [
+    {
+     "lead": "Tsunade's lover and Shizune's uncle; died of battle injuries",
+     "check": "secondary_source_confirmed",
+     "source_note": "Narutopedia-style pages, Looper"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FLASHBACK_ONLY",
+    "HELD_NO_DEMONSTRATED_ABILITIES",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:temari",
+   "name": "Temari",
+   "canonical_name": "Temari",
+   "aliases": [],
+   "canonical_version": "Part II Temari: Wind Release with giant fan",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 1,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Wind Release offense, mobility and area control; good battlefield sense.",
+   "evidence_leads": [
+    {
+     "lead": "Chunin Exam arc and Part II/war arcs: fan-based wind techniques",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kankuro",
+   "name": "Kankuro",
+   "canonical_name": "Kankuro",
+   "aliases": [],
+   "canonical_version": "Part II Kankuro: puppetry and poison",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 3,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Puppet and poison specialist with tactical use of traps.",
+   "evidence_leads": [
+    {
+     "lead": "Sasori arc (Part II): fights alongside Sakura and Chiyo",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:baki",
+   "name": "Baki",
+   "canonical_name": "Baki",
+   "aliases": [],
+   "canonical_version": "Baki, Sand jonin (Part I): wind blade",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Sand jonin who leads the invasion force; wind-blade offense.",
+   "evidence_leads": [
+    {
+     "lead": "Konoha Invasion arc (Part I): Sand jonin leader",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:rasa",
+   "name": "Rasa",
+   "canonical_name": "Rasa",
+   "aliases": [
+    "Fourth Kazekage"
+   ],
+   "canonical_version": "Prime Rasa (Edo evidence): Gold Dust",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Fourth Kazekage with Gold Dust offense and defense; battlefield evidence is Edo-only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo): Gold Dust against the Alliance",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ALIAS_FOURTH_KAZEKAGE",
+    "EDO_ONLY_EVIDENCE",
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:pakura",
+   "name": "Pakura",
+   "canonical_name": "Pakura",
+   "aliases": [],
+   "canonical_version": "Prime Pakura (Edo evidence): Scorch Release",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Scorch Release incinerates targets; battlefield evidence is Edo-only.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc (Edo): Scorch Release against Alliance divisions",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "EDO_ONLY_EVIDENCE",
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:hidan",
+   "name": "Hidan",
+   "canonical_name": "Hidan",
+   "aliases": [],
+   "canonical_version": "Akatsuki-era Hidan: Jashin ritual and immortality, scythe",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 4,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Immortal under his ritual, which makes him exceptionally hard to stop; offense relies on the scythe and curse link.",
+   "evidence_leads": [
+    {
+     "lead": "Hidan and Kakuzu arc: fights Asuma, defeated by Shikamaru's plan",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "IMMORTALITY_POLICY_QUESTION",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "TANK_ALT_3"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:zabuza_momochi",
+   "name": "Zabuza Momochi",
+   "canonical_name": "Zabuza Momochi",
+   "aliases": [],
+   "canonical_version": "Prime Zabuza (Land of Waves arc): Executioner's Blade, Hidden Mist, Silent Killing",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 4,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Silent-killing swordsman with mist infiltration; matched Kakashi in Part I.",
+   "evidence_leads": [
+    {
+     "lead": "Land of Waves arc: fights Kakashi, Silent Killing and Hidden Mist",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:haku",
+   "name": "Haku",
+   "canonical_name": "Haku",
+   "aliases": [],
+   "canonical_version": "Haku (Land of Waves arc): Ice Release",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 3,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 3,
+    "support": 2,
+    "healer": 1
+   },
+   "justification": "Ice mirrors and precise senbon strikes incapacitate opponents; strong tactical use.",
+   "evidence_leads": [
+    {
+     "lead": "Land of Waves arc: Crystal Ice Mirrors fight against Naruto and Sasuke",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:karin",
+   "name": "Karin",
+   "canonical_name": "Karin",
+   "aliases": [
+    "Karin Uzumaki"
+   ],
+   "canonical_version": "Part II Karin: sensor and Heal Bite",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 1,
+    "tank": 1,
+    "assassin": 1,
+    "support": 4,
+    "healer": 3
+   },
+   "justification": "Sensor who locates targets and heals others through her Heal Bite at a cost to herself.",
+   "evidence_leads": [
+    {
+     "lead": "Heal Bite restores wounds of others, used on Sasuke; ch. 663 cited",
+     "check": "secondary_source_confirmed",
+     "source_note": "Narutopedia Heal Bite page, Sportskeeda, ComicVine"
+    },
+    {
+     "lead": "Sasuke Retrieval and war arcs: chakra sensing",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "HEALER_ALT_4",
+    "HEAL_BITE_SECONDARY_CONFIRMED",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:suigetsu_hozuki",
+   "name": "Suigetsu Hozuki",
+   "canonical_name": "Suigetsu Hozuki",
+   "aliases": [],
+   "canonical_version": "Part II Suigetsu: Hydrification, sword",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Water-body durability and sword offense; limited leadership or support.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc and Part II: Hydrification and sword fighting",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:jugo",
+   "name": "Jugo",
+   "canonical_name": "Jugo",
+   "aliases": [],
+   "canonical_version": "Part II Jugo: natural energy and Curse Mark transformations (berserk risk)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Natural-energy transformation offense with a berserk risk; communicates with animals.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc and Part II: transformations",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kimimaro",
+   "name": "Kimimaro",
+   "canonical_name": "Kimimaro",
+   "aliases": [],
+   "canonical_version": "Kimimaro (Part I): Shikotsumyaku; illness limits stamina",
+   "power": 4,
+   "fit": {
+    "captain": 2,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 3,
+    "assassin": 4,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Bone-based offense and defense; Orochimaru's top warrior; illness limits stamina but is not removed.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc: fights Rock Lee, Gaara and Shikamaru's group",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ILLNESS_VERSION_QUESTION",
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:jirobo",
+   "name": "Jirobo",
+   "canonical_name": "Jirobo",
+   "aliases": [],
+   "canonical_version": "Sound Four Jirobo (Part I)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Earth techniques and chakra absorption; durable bruiser.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc: fights Choji",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:kidomaru",
+   "name": "Kidomaru",
+   "canonical_name": "Kidomaru",
+   "aliases": [],
+   "canonical_version": "Sound Four Kidomaru (Part I)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 1,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Spider-web traps and ranged bow attacks.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc: fights Neji",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:tayuya",
+   "name": "Tayuya",
+   "canonical_name": "Tayuya",
+   "aliases": [],
+   "canonical_version": "Sound Four Tayuya (Part I)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Flute genjutsu and summoned Doki.",
+   "evidence_leads": [
+    {
+     "lead": "Sasuke Retrieval arc: fights Shikamaru's team",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:white_zetsu",
+   "name": "White Zetsu",
+   "canonical_name": "White Zetsu",
+   "aliases": [
+    "Zetsu",
+    "White Zetsu Army"
+   ],
+   "canonical_version": "White Zetsu (identity unresolved)",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 3,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Infiltration and information-gathering strength; unclear whether this entry means the army clones or one individual.",
+   "evidence_leads": [
+    {
+     "lead": "Fourth War arc: White Zetsu Army and spy scenes",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "DUPLICATE_IDENTITY_AMBIGUITY",
+    "MINDLESS_CLONE_ELIGIBILITY_QUESTION",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "RELATED_TO_BLACK_ZETSU"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:omoi",
+   "name": "Omoi",
+   "canonical_name": "Omoi",
+   "aliases": [],
+   "canonical_version": "Omoi, Kumogakure (Part II)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Swordsman with lightning release and cautious analysis; Raikage's guard.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit and Fourth War arcs",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:karui",
+   "name": "Karui",
+   "canonical_name": "Karui",
+   "aliases": [],
+   "canonical_version": "Karui, Kumogakure (Part II)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Swordswoman with lightning release; led a small squad.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit and Fourth War arcs",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:darui",
+   "name": "Darui",
+   "canonical_name": "Darui",
+   "aliases": [],
+   "canonical_version": "Darui, Fourth War arc: Black Lightning, First Division commander",
+   "power": 4,
+   "fit": {
+    "captain": 4,
+    "strategist": 3,
+    "attacker": 4,
+    "tank": 2,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Raikage's right hand with Black Lightning; commanded the First Division.",
+   "evidence_leads": [
+    {
+     "lead": "Commander of the First (Mid-Range Battle) Division",
+     "check": "secondary_source_confirmed",
+     "source_note": "Narutopedia ASF page"
+    },
+    {
+     "lead": "Fourth War arc: fights Edo Kage",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "medium",
+   "review_flags": [
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:c_kumogakure_shinobi",
+   "name": "C (Kumogakure shinobi)",
+   "canonical_name": "C",
+   "aliases": [
+    "C",
+    "Cee"
+   ],
+   "canonical_version": "C, Kumogakure (Part II)",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 2,
+    "support": 2,
+    "healer": 2
+   },
+   "justification": "Cloud guard who fought Sasuke and reportedly treated A; very limited evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit arc: ordered to eliminate Karin, fights Sasuke",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    },
+    {
+     "lead": "Healing of A shown in an image caption on a secondary ranking page",
+     "check": "secondary_source_confirmed",
+     "source_note": "FandomWire"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "ALIAS_IDENTITY_CHECK",
+    "HEALER_LOW_CONFIDENCE",
+    "LIMITED_EVIDENCE",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:mabui",
+   "name": "Mabui",
+   "canonical_name": "Mabui",
+   "aliases": [],
+   "canonical_version": "Mabui, Raikage's assistant (Part II)",
+   "power": 1,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 1,
+    "tank": 0,
+    "assassin": 0,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Raikage's assistant; no combat or specialist abilities established.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit and Fourth War arcs: administrative roles",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "HELD_NO_DEMONSTRATED_ABILITIES",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "held"
+  },
+  {
+   "id": "naruto:ao",
+   "name": "Ao",
+   "canonical_name": "Ao",
+   "aliases": [],
+   "canonical_version": "Ao, Hidden Mist (Part II): stolen Byakugan",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 2,
+    "support": 3,
+    "healer": 0
+   },
+   "justification": "Byakugan sensor serving Mei; limited independent combat evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit arc: Byakugan tracking",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_2",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:chojuro",
+   "name": "Chojuro",
+   "canonical_name": "Chojuro",
+   "aliases": [],
+   "canonical_version": "War-era Chojuro: Hiramekarei",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Seven Swordsmen successor with Hiramekarei; Mei's bodyguard.",
+   "evidence_leads": [
+    {
+     "lead": "Kage Summit and Fourth War arcs: Hiramekarei",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:yugito_nii",
+   "name": "Yugito Nii",
+   "canonical_name": "Yugito Nii",
+   "aliases": [],
+   "canonical_version": "Yugito Nii with Matatabi chakra (Conditional)",
+   "power": 3,
+   "fit": {
+    "captain": 2,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Jinchuriki with partner-dependent Matatabi access; beast feats stay with Matatabi.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akatsuki arc: captured by Deidara",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_MATATABI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:yagura_karatachi",
+   "name": "Yagura Karatachi",
+   "canonical_name": "Yagura Karatachi",
+   "aliases": [
+    "Fourth Mizukage"
+   ],
+   "canonical_version": "Yagura Karatachi as Isobu host, uncontrolled prime inferred",
+   "power": 3,
+   "fit": {
+    "captain": 3,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Fourth Mizukage and Isobu host; evidence is largely under Obito's control.",
+   "evidence_leads": [
+    {
+     "lead": "Mist backstory in the war arc and Obito flashbacks",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "CONTROLLED_STATE_EVIDENCE",
+    "POWER_ALT_4",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_ISOBU"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:roshi",
+   "name": "Roshi",
+   "canonical_name": "Roshi",
+   "aliases": [
+    "Old Man Roshi"
+   ],
+   "canonical_version": "Roshi with Son Goku chakra (Conditional): Lava Release",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Lava Release and partner-dependent Four-Tails power.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akatsuki arc and Fourth War arc",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_SON_GOKU"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:han",
+   "name": "Han",
+   "canonical_name": "Han",
+   "aliases": [],
+   "canonical_version": "Han with Kokuo chakra (Conditional): Steam Armor",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 3,
+    "tank": 3,
+    "assassin": 1,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Steam armor offense and defense; partner-dependent Five-Tails power.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akatsuki arc",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_KOKUO"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:utakata",
+   "name": "Utakata",
+   "canonical_name": "Utakata",
+   "aliases": [],
+   "canonical_version": "Utakata with Saiken chakra (Conditional): bubble techniques",
+   "power": 3,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 3,
+    "tank": 2,
+    "assassin": 2,
+    "support": 1,
+    "healer": 0
+   },
+   "justification": "Bubble techniques and slug partner Saiken; skilled evasion.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akatsuki arc",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_SAIKEN"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:fu",
+   "name": "Fu",
+   "canonical_name": "Fu",
+   "aliases": [],
+   "canonical_version": "Fu with Chomei chakra (Conditional)",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 1,
+    "attacker": 2,
+    "tank": 1,
+    "assassin": 1,
+    "support": 2,
+    "healer": 0
+   },
+   "justification": "Flight-capable jinchuriki; very limited evidence.",
+   "evidence_leads": [
+    {
+     "lead": "Part II Akatsuki arc and war arc",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "LIMITED_EVIDENCE",
+    "POWER_ALT_3",
+    "PRIMARY_MANGA_UNVERIFIED",
+    "SHARED_EVENT_WITH_CHOMEI"
+   ],
+   "evaluation_status": "draft"
+  },
+  {
+   "id": "naruto:rin_nohara",
+   "name": "Rin Nohara",
+   "canonical_name": "Rin Nohara",
+   "aliases": [],
+   "canonical_version": "Rin Nohara, Team Minato medic (Kakashi Gaiden); Three-Tails host state excluded",
+   "power": 2,
+   "fit": {
+    "captain": 1,
+    "strategist": 2,
+    "attacker": 1,
+    "tank": 1,
+    "assassin": 1,
+    "support": 2,
+    "healer": 3
+   },
+   "justification": "Medical ninja who transplanted Obito's eye into Kakashi in battle; the unwilling jinchuriki state is excluded.",
+   "evidence_leads": [
+    {
+     "lead": "Medical ninja on Team Minato; implants Obito's Sharingan into Kakashi; carries a medical kit",
+     "check": "secondary_source_confirmed",
+     "source_note": "Narutopedia-style pages, MyAnimeList, ch. 239-244"
+    },
+    {
+     "lead": "Kakashi Gaiden: Three-Tails host plot",
+     "check": "recollection_only",
+     "source_note": "recollection, arc-level"
+    }
+   ],
+   "confidence": "low",
+   "review_flags": [
+    "FLASHBACK_ONLY",
+    "HEALER_ALT_2",
+    "JINCHURIKI_STATE_EXCLUDED",
+    "PRIMARY_MANGA_UNVERIFIED"
+   ],
+   "evaluation_status": "draft"
+  }
+ ]
+}

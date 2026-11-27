@@ -188,12 +188,13 @@
       "image_count": 1,
       "images": [
         {
-          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest?cb=20140818171718",
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Kurama2.png/revision/latest/scale-to-width-down/1200?cb=20140818171718",
           "status": "valid",
-          "format": "png",
-          "width": 1891,
-          "height": 1080,
-          "source_ref": "https://naruto.fandom.com/wiki/Kurama"
+          "format": "webp",
+          "width": 1200,
+          "height": 685,
+          "sha256": "c0b5a8329a228704c0114ea8fb3eced583d409df8616204cf2a217a89d49171b",
+          "bytes": 33964
         }
       ]
     },
@@ -230,7 +231,7 @@
       ]
     },
     {
-      "target_name": "Kaguya \u014ctsutsuki",
+      "target_name": "Kaguya Ōtsutsuki",
       "candidate_id": "dattebayo:940",
       "image_count": 1,
       "images": [
@@ -246,7 +247,7 @@
       ]
     },
     {
-      "target_name": "Hagoromo \u014ctsutsuki",
+      "target_name": "Hagoromo Ōtsutsuki",
       "candidate_id": "dattebayo:935",
       "image_count": 1,
       "images": [
@@ -351,7 +352,7 @@
       ]
     },
     {
-      "target_name": "Hamura \u014ctsutsuki",
+      "target_name": "Hamura Ōtsutsuki",
       "candidate_id": "dattebayo:936",
       "image_count": 1,
       "images": [
@@ -367,7 +368,7 @@
       ]
     },
     {
-      "target_name": "Indra \u014ctsutsuki",
+      "target_name": "Indra Ōtsutsuki",
       "candidate_id": "dattebayo:938",
       "image_count": 1,
       "images": [
@@ -383,7 +384,7 @@
       ]
     },
     {
-      "target_name": "Asura \u014ctsutsuki",
+      "target_name": "Asura Ōtsutsuki",
       "candidate_id": "dattebayo:934",
       "image_count": 1,
       "images": [
@@ -399,7 +400,7 @@
       ]
     },
     {
-      "target_name": "Gy\u016bki",
+      "target_name": "Gyūki",
       "candidate_id": "dattebayo:345",
       "image_count": 1,
       "images": [
@@ -433,15 +434,25 @@
     {
       "target_name": "Jiraiya",
       "candidate_id": "dattebayo:515",
-      "image_count": 1,
+      "image_count": 2,
       "images": [
         {
-          "url": "https://static.wikia.nocookie.net/naruto/images/d/d7/Jiraiya_Posing.png/revision/latest?cb=20191209054336",
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Profile_Jiraiya.png",
+          "status": "missing",
+          "format": null,
+          "width": null,
+          "height": null,
+          "sha256": null,
+          "bytes": null
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/1f/Jiraiya_Young.png/revision/latest?cb=20260220182003",
           "status": "valid",
-          "format": "png",
-          "width": 1916,
-          "height": 1076,
-          "source_ref": "https://naruto.fandom.com/wiki/Jiraiya"
+          "format": "webp",
+          "width": 399,
+          "height": 502,
+          "sha256": "682a4481c13b2ff4ad82d7d21e10819e3ac0cec7ede82cc18eed9bea6d21ee15",
+          "bytes": 47676
         }
       ]
     },
@@ -571,7 +582,7 @@
       ]
     },
     {
-      "target_name": "\u014cnoki",
+      "target_name": "Ōnoki",
       "candidate_id": "dattebayo:925",
       "image_count": 2,
       "images": [
@@ -596,7 +607,7 @@
       ]
     },
     {
-      "target_name": "M\u016b",
+      "target_name": "Mū",
       "candidate_id": "dattebayo:844",
       "image_count": 1,
       "images": [
@@ -612,7 +623,7 @@
       ]
     },
     {
-      "target_name": "Gengetsu H\u014dzuki",
+      "target_name": "Gengetsu Hōzuki",
       "candidate_id": "dattebayo:428",
       "image_count": 1,
       "images": [
@@ -749,7 +760,7 @@
       ]
     },
     {
-      "target_name": "Danz\u014d Shimura",
+      "target_name": "Danzō Shimura",
       "candidate_id": "dattebayo:1093",
       "image_count": 1,
       "images": [
@@ -770,17 +781,18 @@
       "image_count": 1,
       "images": [
         {
-          "url": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest?cb=20160113171702",
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/73/Chiyo.png/revision/latest/scale-to-width-down/1200?cb=20160113171702",
           "status": "valid",
-          "format": "png",
-          "width": 1440,
-          "height": 1080,
-          "source_ref": "https://naruto.fandom.com/wiki/Chiyo"
+          "format": "webp",
+          "width": 1200,
+          "height": 900,
+          "sha256": "2f83116e409fd580ebcbb78fe62883270f155f1047da409160c10bd71159f0a8",
+          "bytes": 52676
         }
       ]
     },
     {
-      "target_name": "Hanz\u014d",
+      "target_name": "Hanzō",
       "candidate_id": "dattebayo:368",
       "image_count": 1,
       "images": [
@@ -796,7 +808,7 @@
       ]
     },
     {
-      "target_name": "Mei Terum\u012b",
+      "target_name": "Mei Terumī",
       "candidate_id": "dattebayo:1223",
       "image_count": 2,
       "images": [
@@ -965,7 +977,7 @@
       ]
     },
     {
-      "target_name": "Son Gok\u016b",
+      "target_name": "Son Gokū",
       "candidate_id": "dattebayo:1134",
       "image_count": 1,
       "images": [
@@ -981,7 +993,7 @@
       ]
     },
     {
-      "target_name": "Koku\u014d",
+      "target_name": "Kokuō",
       "candidate_id": "dattebayo:669",
       "image_count": 1,
       "images": [
@@ -1013,7 +1025,7 @@
       ]
     },
     {
-      "target_name": "Ch\u014dmei",
+      "target_name": "Chōmei",
       "candidate_id": "dattebayo:153",
       "image_count": 1,
       "images": [

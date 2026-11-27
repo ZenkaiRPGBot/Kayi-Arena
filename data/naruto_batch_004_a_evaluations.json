@@ -1,0 +1,1648 @@
+{
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-004-a",
+  "mode": "bulk_preliminary",
+  "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+  "scoring_version": "SCORE-1.0",
+  "canonical_policy_version": "NARUTO-CANON-0.1",
+  "prepared_date": "2026-11-27",
+  "batch_status": "draft",
+  "notes": "Preliminary bulk evaluations (bulk_preliminary, draft). Sakon and Ukon merged into one combined playable character with source identities preserved. Draft status is not production approval. Records marked recollection_only are knowledge-based ratings not verified this session. Held records lack reasonable preliminary basis.",
+  "characters": [
+    {
+      "id": "naruto:dosu_kinuta",
+      "name": "Dosu Kinuta",
+      "canonical_name": "Dosu Kinuta",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Sound Five member using a sound-based weapon (kinuta) for ranged attacks. Preliminary rating from established knowledge. Not verified this session.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:zaku_abumi",
+      "name": "Zaku Abumi",
+      "canonical_name": "Zaku Abumi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Sound Five member using sound-wave ninjutsu for area attacks. Preliminary rating from established knowledge. Not verified this session.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kin_tsuchi",
+      "name": "Kin Tsuchi",
+      "canonical_name": "Kin Tsuchi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Sound Five member using a cursed-seal and bond-based technique. Preliminary rating from established knowledge. Not verified this session.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:yoroi_akado",
+      "name": "Yoroi Akado",
+      "canonical_name": "Yoroi Akado",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Insufficient established knowledge of abilities and role to rate reliably without targeted research."
+    },
+    {
+      "id": "naruto:misumi_tsurugi",
+      "name": "Misumi Tsurugi",
+      "canonical_name": "Misumi Tsurugi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Insufficient established knowledge of abilities and role to rate reliably without targeted research."
+    },
+    {
+      "id": "naruto:hayate_gekko",
+      "name": "Hayate Gekko",
+      "canonical_name": "Hayate Gekko",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha special jonin with sensor-type support and combat roles. Preliminary rating from established knowledge. Not verified this session.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:genma_shiranui",
+      "name": "Genma Shiranui",
+      "canonical_name": "Genma Shiranui",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 0,
+        "assassin": 2,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha jonin known for senbon and combat versatility, shown in the Konoha Crush. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:raido_namiashi",
+      "name": "Raido Namiashi",
+      "canonical_name": "Raido Namiashi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Konoha jonin shown in the Konoha Crush and in Sasuke's arrest. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:aoba_yamashiro",
+      "name": "Aoba Yamashiro",
+      "canonical_name": "Aoba Yamashiro",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "justification": "Konoha jonin, Chunin Exams examiner role. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:ibiki_morino",
+      "name": "Ibiki Morino",
+      "canonical_name": "Ibiki Morino",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 4,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Interrogation and intelligence specialist. Combat is not a documented focus, so strategist rating is high and attacker is low. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "interrogation_specialist",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:izumo_kamizuki",
+      "name": "Izumo Kamizuki",
+      "canonical_name": "Izumo Kamizuki",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha chunin/jonin, long-time partner of Kotetsu. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:kotetsu_hagane",
+      "name": "Kotetsu Hagane",
+      "canonical_name": "Kotetsu Hagane",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha chunin/jonin, long-time partner of Izumo. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:mizuki",
+      "name": "Mizuki",
+      "canonical_name": "Mizuki",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha chunin with a sealing-linked role and a documented betrayal arc. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:shibi_aburame",
+      "name": "Shibi Aburame",
+      "canonical_name": "Shibi Aburame",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 2,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Jonin of the Aburame clan. Insect-based sensing and support are the expected specialisms, with limited direct combat detail. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:tsume_inuzuka",
+      "name": "Tsume Inuzuka",
+      "canonical_name": "Tsume Inuzuka",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 3,
+        "tank": 0,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Jonin and clan head of the Inuzuka. Combat with ninken and tracking. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:hana_inuzuka",
+      "name": "Hana Inuzuka",
+      "canonical_name": "Hana Inuzuka",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Inuzuka jonin and tracker with ninken support. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:hiashi_hyuga",
+      "name": "Hiashi Hyuga",
+      "canonical_name": "Hiashi Hyuga",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 1,
+        "assassin": 2,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Hyuga clan head and Byakugan user, with Gentle Fist and clan leadership. Leadership is documented; combat is less documented in the sources reviewed. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": "https://myanimelist.net/character/15039",
+          "lead": "Clan head; twin of Hizashi; father of Hinata",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary database",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "partial_source_support",
+        "preliminary_knowledge_ratings",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:hizashi_hyuga",
+      "name": "Hizashi Hyuga",
+      "canonical_name": "Hizashi Hyuga",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 2,
+        "strategist": 2,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Hyuga twin of Hiashi who sacrificed his life. Gentle Fist and Byakugan. Preliminary rating from established knowledge with partial source support.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Neji_Hy%C5%ABga",
+          "lead": "Hizashi volunteered as body double; cursed seal",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "partial_source_support",
+        "preliminary_knowledge_ratings",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:tokuma_hyuga",
+      "name": "Tokuma Hyuga",
+      "canonical_name": "Tokuma Hyuga",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Hyuga clan member with Byakugan and Gentle Fist. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:muta_aburame",
+      "name": "Muta Aburame",
+      "canonical_name": "Muta Aburame",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Aburame clan member using kikaichu and shokaichu. Support is the expected specialism from insect-based sensing and swarm control. Preliminary rating from established knowledge with partial source support.",
+      "evidence_leads": [
+        {
+          "url": "https://vsbattles.fandom.com/wiki/Shino_Aburame",
+          "lead": "Muta uses kikaichu and shokaichu",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "partial_source_support",
+        "preliminary_knowledge_ratings",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:torune_aburame",
+      "name": "Torune Aburame",
+      "canonical_name": "Torune Aburame",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 4,
+      "fit": {
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 4,
+        "tank": 1,
+        "assassin": 4,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Root member using rinkaichu with one-touch lethality. Secondary rankings describe his rinkaichu ability as among the deadliest Aburame techniques and note he fought Shino and Naruto (Nine-Tails mode). Power 4 is supported by these secondary rankings, though not verified against chapters. Note sources describe him as lost to Shino.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/File:Torune_Online.png",
+          "lead": "Rinkaichu use; Root membership; debut chapter 454",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://fandomwire.com/naruto-every-major-konoha-clan-strongest-member-ranked-by-power/",
+          "lead": "Ranks Torune as Aburame's most fearsome shinobi",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary editorial ranking",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "partial_source_support",
+        "secondary_ranking_dependency",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:fu_yamanaka",
+      "name": "Fu Yamanaka",
+      "canonical_name": "Fu Yamanaka",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 3,
+        "attacker": 1,
+        "tank": 0,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Root member and Yamanaka clan member, partnered with Torune. Support and strategy are expected specialisms. Distinct from Fu the Seven-Tails jinchuriki. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "distinct_from_fu_seven_tails_jinchuriki",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:ko_hyuga",
+      "name": "Ko Hyuga",
+      "canonical_name": "Ko Hyuga",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Identity and role not confidently established; insufficient knowledge for reasonable ratings.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Identity and role not confidently established; insufficient knowledge for reasonable ratings."
+    },
+    {
+      "id": "naruto:iwashi_tatami",
+      "name": "Iwashi Tatami",
+      "canonical_name": "Iwashi Tatami",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Insufficient established knowledge of abilities and role to rate reliably without targeted research.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Insufficient established knowledge of abilities and role to rate reliably without targeted research."
+    },
+    {
+      "id": "naruto:nono_yakushi",
+      "name": "Nono Yakushi",
+      "canonical_name": "Nono Yakushi",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 2,
+      "fit": {
+        "captain": 2,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 3
+      },
+      "justification": "Captain of the Konoha Medic Corps and former Root operative. Sources describe her as a balanced, all-round medical ninja with no standout unique technique. Healing is conditional and does not include miracle-level restoration. Evidence is weaker than for the sourced fighting characters, so ratings are conservative. Medical capability is supported by secondary ranking articles, not inspected chapters.",
+      "evidence_leads": [
+        {
+          "url": "https://daddyjim.ai/naruto/group/Medic-Corps",
+          "lead": "Captain role in the Medic Corps",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://fandomwire.com/naruto-strongest-medical-ninjas-of-all-time-ranked/",
+          "lead": "Ranked as an all-round medic without unique standout technique",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary editorial",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://myanimelist.net/character/93627",
+          "lead": "Manga debut chapter 582; anime debut episode 335; captain of Medic Corps",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary database",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "medical_capabilities_must_be_investigated_not_inferred_from_occupation",
+        "medical_ability_secondary_only",
+        "healer_rating_relies_on_editorial_ranking",
+        "root_affiliation_secondary_only"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:biwako_sarutobi",
+      "name": "Biwako Sarutobi",
+      "canonical_name": "Biwako Sarutobi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Medical capability cannot be established from occupation or family role. Requires investigation of demonstrated abilities.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Medical capability cannot be established from occupation or family role. Requires investigation of demonstrated abilities."
+    },
+    {
+      "id": "naruto:taji",
+      "name": "Taji",
+      "canonical_name": "Taji",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Identity and demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Identity and demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:mikoto_uchiha",
+      "name": "Mikoto Uchiha",
+      "canonical_name": "Mikoto Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Uchiha kunoichi with Sharingan. Preliminary rating from established knowledge; combat detail limited.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:fugaku_uchiha",
+      "name": "Fugaku Uchiha",
+      "canonical_name": "Fugaku Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 3,
+      "fit": {
+        "captain": 3,
+        "strategist": 3,
+        "attacker": 3,
+        "tank": 0,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Uchiha clan head and Military Police leader with Sharingan. Captain and strategy reflect the leadership role. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:tekka_uchiha",
+      "name": "Tekka Uchiha",
+      "canonical_name": "Tekka Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:inabi_uchiha",
+      "name": "Inabi Uchiha",
+      "canonical_name": "Inabi Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:yashiro_uchiha",
+      "name": "Yashiro Uchiha",
+      "canonical_name": "Yashiro Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:tajima_uchiha",
+      "name": "Tajima Uchiha",
+      "canonical_name": "Tajima Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:butsuma_senju",
+      "name": "Butsuma Senju",
+      "canonical_name": "Butsuma Senju",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Clan leadership established; demonstrated combat or medical abilities not established. Historical leadership alone does not support ratings.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Clan leadership established; demonstrated combat or medical abilities not established. Historical leadership alone does not support ratings."
+    },
+    {
+      "id": "naruto:itama_senju",
+      "name": "Itama Senju",
+      "canonical_name": "Itama Senju",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:kawarama_senju",
+      "name": "Kawarama Senju",
+      "canonical_name": "Kawarama Senju",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:mito_uzumaki",
+      "name": "Mito Uzumaki",
+      "canonical_name": "Mito Uzumaki",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 1,
+        "assassin": 0,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "First Kurama jinchuriki and Uzumaki fuinjutsu user. Secondary sources show she sealed Kurama within herself. No demonstrated combat exchanges are documented in the sources reviewed, so Power 2 and the Support 3 rating rest on sealing and containment. Kurama's full capabilities are not assumed, per working policy.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Mito_Uzumaki",
+          "lead": "Debut chapter 500; anime episode 247; first Kurama jinchuriki",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://criticalhits.com.br/anime/naruto-quem-era-a-jinchuriki-de-kurama-antes-de-kushina/",
+          "lead": "Mito sealed Kurama using fuinjutsu; later replaced by Kushina",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary article (Portuguese)",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://iota.msp.org/?p=32047",
+          "lead": "Uzumaki sealing mastery attributed to Mito's fuinjutsu",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary article",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "jinchuriki_policy_applied_demonstrated_only",
+        "no_documented_combat_exchanges_in_reviewed_sources",
+        "kurama_capabilities_not_assumed",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:ashina_uzumaki",
+      "name": "Ashina Uzumaki",
+      "canonical_name": "Ashina Uzumaki",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:kagami_uchiha",
+      "name": "Kagami Uchiha",
+      "canonical_name": "Kagami Uchiha",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:torifu_akimichi",
+      "name": "Torifu Akimichi",
+      "canonical_name": "Torifu Akimichi",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Demonstrated abilities not established in knowledge or sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Demonstrated abilities not established in knowledge or sources reviewed."
+    },
+    {
+      "id": "naruto:homura_mitokado",
+      "name": "Homura Mitokado",
+      "canonical_name": "Homura Mitokado",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 1,
+      "fit": {
+        "captain": 2,
+        "strategist": 3,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha council elder. Rating reflects advisory and leadership role; combat ability not established. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "limited_combat_evidence",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:koharu_utatane",
+      "name": "Koharu Utatane",
+      "canonical_name": "Koharu Utatane",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": 1,
+      "fit": {
+        "captain": 1,
+        "strategist": 3,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Konoha council elder. Rating reflects advisory role; combat ability not established. Preliminary rating from established knowledge.",
+      "evidence_leads": [
+        {
+          "url": null,
+          "lead": "Established knowledge, not verified this session",
+          "check": "not_checked",
+          "source_note": "Established knowledge, not verified this session",
+          "verification_level": "recollection_only"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "recollection_only",
+        "preliminary_no_search",
+        "limited_combat_evidence",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:nawaki",
+      "name": "Nawaki",
+      "canonical_name": "Nawaki",
+      "aliases": [],
+      "canonical_version": "unresolved",
+      "power": null,
+      "fit": {
+        "captain": null,
+        "strategist": null,
+        "attacker": null,
+        "tank": null,
+        "assassin": null,
+        "support": null,
+        "healer": null
+      },
+      "justification": "Held: Very limited appearance; demonstrated abilities not established in sources reviewed.",
+      "evidence_leads": [],
+      "confidence": "low",
+      "review_flags": [
+        "insufficient_evidence_or_knowledge",
+        "targeted_research_needed"
+      ],
+      "evaluation_status": "held",
+      "held_reason": "Very limited appearance; demonstrated abilities not established in sources reviewed."
+    },
+    {
+      "id": "naruto:akamaru",
+      "name": "Akamaru",
+      "canonical_name": "Akamaru",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 1,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Kiba's ninken and combat partner. Sources show him fighting alongside Kiba (including Beast Human Clone teamwork against Naruto), being knocked out in the finals, and fighting Sakon and Ukon. He does not speak. Independent draft eligibility is uncertain because he is a companion animal rather than a clearly self-directed character, though he acts on his own initiative in sources.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/File:Akamaru_p1.png",
+          "lead": "Exam fights, finals knockout, and antidote episode; Sakon/Ukon battle",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://breezewiki.discard.no/naruto/wiki/Ninken",
+          "lead": "Inuzuka ninken roster and lifespan notes",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "eligible_under_working_policy",
+        "named_summon_or_ninken_with_distinct_identity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:pakkun",
+      "name": "Pakkun",
+      "canonical_name": "Pakkun",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 1,
+        "support": 3,
+        "healer": 0
+      },
+      "justification": "Kakashi's ninken and tracker. Sources describe him as a non-fighter whose smell-based tracking is his main value, and as a speaking, reasoning ninken who acts with autonomy. Support 3 reflects tracking and sensory assistance. Power 1 reflects the lack of combat evidence. Eligibility is stronger than Akamaru's because he speaks and reasons, but still needs a policy decision.",
+      "evidence_leads": [
+        {
+          "url": "https://daddyjim.ai/naruto/character/Pakkun",
+          "lead": "Non-fighter tracker; ninken status",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://criticalhits.com.br/anime/naruto-entenda-por-que-pakkun-consegue-falar-e-akamaru-nao/",
+          "lead": "Speech and autonomy versus Akamaru",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary article (Portuguese)",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "eligible_under_working_policy",
+        "named_summon_or_ninken_with_distinct_identity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:gamakichi",
+      "name": "Gamakichi",
+      "canonical_name": "Gamakichi",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 2,
+        "tank": 1,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Naruto's personal toad summon. Early in the series he was too small to be a major combatant. Secondary sources say he matured as an adult and became a dependable partner, with notable contributions to human-toad combination techniques (Wind Release: Toad Oil Flame Bullet). Sources note he has his own personality and independent judgement. Eligibility as an independent sentient summon needs policy review.",
+      "evidence_leads": [
+        {
+          "url": "https://wiki.sportskeeda.com/naruto/gamakichi-in-naruto",
+          "lead": "Development, Flame Bullet contribution, adult-stage growth",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://naruto.fandom.com/wiki/Gamahiro",
+          "lead": "Comparative toad context (sibling roster)",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "combat_evidence_mostly_combination_techniques",
+        "eligible_under_working_policy",
+        "named_summon_or_ninken_with_distinct_identity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:gamahiro",
+      "name": "Gamahiro",
+      "canonical_name": "Gamahiro",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 3,
+      "fit": {
+        "captain": 0,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 3,
+        "assassin": 0,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Giant Mount Myoboku toad. Secondary sources show him being summoned by Jiraiya during the Konoha Crush and during Pain's Assault. He pinned large summons, used a stick to hold down the Six Paths' summons, and crushed morphed White Zetsu clones. Size is inconsistently depicted, so Power is conservative. Eligibility as an independent summon needs review.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Gamahiro",
+          "lead": "Debut chapter 124; anime episode 73; Pain's Assault role; size inconsistency",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://www.sportskeeda.com/naruto/gamahiro-in-naruto",
+          "lead": "Konoha Crush summoning and Pain's Assault role",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "size_inconsistency_in_sources",
+        "eligible_under_working_policy",
+        "named_summon_or_ninken_with_distinct_identity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:gamaken",
+      "name": "Gamaken",
+      "canonical_name": "Gamaken",
+      "aliases": [],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 2,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 2,
+        "tank": 2,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "justification": "Giant Mount Myoboku toad, also called Ken. Sources describe him as quiet, clumsy and nervous, and say he spent much of his time commenting on his own weakness. He still fought Pain's Animal Path summons alongside Gamabunta and Gamahiro. Power 2 reflects the self-described weakness set against actual combat defeats. Eligibility as an independent summon needs review.",
+      "evidence_leads": [
+        {
+          "url": "https://wiki.sportskeeda.com/naruto/gamaken-in-naruto",
+          "lead": "Personality, Pain's Assault role, Jiraiya summoning context",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://naruto.fandom.com/wiki/Ajisai",
+          "lead": "Defeat of Animal Path summons alongside Gamabunta and Gamahiro",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "low",
+      "review_flags": [
+        "canonical_version_unresolved",
+        "limited_direct_evidence",
+        "eligible_under_working_policy",
+        "named_summon_or_ninken_with_distinct_identity"
+      ],
+      "evaluation_status": "draft"
+    },
+    {
+      "id": "naruto:sakon_and_ukon",
+      "name": "Sakon and Ukon",
+      "canonical_name": "Sakon and Ukon",
+      "aliases": [
+        "Sakon",
+        "Ukon",
+        "Sakon & Ukon",
+        "Sakon to Ukon"
+      ],
+      "source_identities": [
+        "naruto:sakon",
+        "naruto:ukon"
+      ],
+      "canonical_version": "Naruto/Shippuden manga continuity (provisional; primary manga unverified)",
+      "power": 3,
+      "fit": {
+        "captain": 1,
+        "strategist": 1,
+        "attacker": 3,
+        "tank": 2,
+        "assassin": 3,
+        "support": 2,
+        "healer": 0
+      },
+      "justification": "Single combined playable character under the working policy. Sakon is the usually active body and can extend limbs and merge with opponents. Ukon is stealthy, can dissolve into an enemy, and gives authority within the pair, but is weaker and tires quickly when separated. Power 3 reflects the pair's combined output. Source identities are kept for mapping.",
+      "evidence_leads": [
+        {
+          "url": "https://naruto.fandom.com/wiki/Sakon_and_Ukon's_Kekkei_Genkai?so=search",
+          "lead": "Body-sharing mechanics, separation weakness; debut chapter 203 given",
+          "check": "search_snippet_reviewed",
+          "source_note": "Conflicts with chapter 115 on the file page",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://naruto.fandom.com/wiki/File:Kabuto_using_Sakon%27s_and_Ukon%27s_powers.png",
+          "lead": "Level 2 cursed seal, stealth, taijutsu; debut chapter 115",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary wiki summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        },
+        {
+          "url": "https://manga.fandom.com/wiki/Madara_Uchiha",
+          "lead": "Shared-body mechanics and fight outcome",
+          "check": "search_snippet_reviewed",
+          "source_note": "Secondary summary",
+          "verification_level": "secondary_search_snippet_only;primary_manga_unverified"
+        }
+      ],
+      "confidence": "medium",
+      "review_flags": [
+        "combined_playable_policy_applied",
+        "source_identities_preserved_for_mapping",
+        "debut_chapter_conflict_115_vs_203",
+        "primary_manga_unverified"
+      ],
+      "evaluation_status": "draft"
+    }
+  ],
+  "rarity_version": "RARITY-0.2"
+}
