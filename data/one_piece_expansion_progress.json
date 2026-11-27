@@ -1,0 +1,38 @@
+{
+  "universe_id": "one_piece",
+  "generated_at": "2026-11-27T09:37:33.172980+00:00",
+  "batches_completed": 1,
+  "batch_ids": [
+    "one-piece-batch-001"
+  ],
+  "totals": {
+    "candidates_researched": 80,
+    "research_ready": 69,
+    "partial_research": 11,
+    "insufficient_evidence": 0,
+    "artwork_valid": 80,
+    "evaluation_ready": 69,
+    "approved": 0,
+    "published": 0
+  },
+  "batches": [
+    {
+      "batch_id": "one-piece-batch-001",
+      "candidates_researched": 80,
+      "research_ready": 69,
+      "partial_research": 11,
+      "insufficient_evidence": 0,
+      "artwork_valid": 80,
+      "evaluation_ready": 69,
+      "approved": 0,
+      "published": 0,
+      "research_package": "data/one_piece_batch_001_research.json",
+      "catalogue": "data/one_piece_batch_001_catalogue.json"
+    }
+  ],
+  "remaining_expansion_opportunities": [
+    "Continue with One Piece Batch 002 using additional supporting characters, specialists and historical figures.",
+    "Revisit unresolved candidates if additional inspected sources become available.",
+    "Incorporate genuinely approved One Piece evaluations into calibration only after approval."
+  ]
+}

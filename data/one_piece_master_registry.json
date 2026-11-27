@@ -1,0 +1,2077 @@
+{
+  "universe_id": "one_piece",
+  "generated_at": "2026-11-27T09:37:33.170279+00:00",
+  "batches": [
+    "one-piece-batch-001"
+  ],
+  "character_count": 80,
+  "characters": [
+    {
+      "character_id": "one_piece_monkey_d_luffy",
+      "canonical_name": "Monkey D. Luffy",
+      "display_name": "Monkey D. Luffy",
+      "aliases": [
+        "Straw Hat Luffy",
+        "Straw Hat",
+        "Luffy"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1444,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Monkey_D._Luffy"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_roronoa_zoro",
+      "canonical_name": "Roronoa Zoro",
+      "display_name": "Roronoa Zoro",
+      "aliases": [
+        "Pirate Hunter",
+        "Zoro"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1520,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Roronoa_Zoro"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_nami",
+      "canonical_name": "Nami",
+      "display_name": "Nami",
+      "aliases": [
+        "Cat Burglar"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1584,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Nami"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_usopp",
+      "canonical_name": "Usopp",
+      "display_name": "Usopp",
+      "aliases": [
+        "God",
+        "God Usopp",
+        "Sogeking"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1630,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Usopp"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_sanji",
+      "canonical_name": "Sanji",
+      "display_name": "Vinsmoke Sanji",
+      "aliases": [
+        "Black Leg",
+        "Sanji"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1621,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Sanji"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": "Display name maps to canonical Fandom title Sanji."
+    },
+    {
+      "character_id": "one_piece_tony_tony_chopper",
+      "canonical_name": "Tony Tony Chopper",
+      "display_name": "Tony Tony Chopper",
+      "aliases": [
+        "Cotton Candy Lover",
+        "Chopper"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1626,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Tony_Tony_Chopper"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Reindeer",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_nico_robin",
+      "canonical_name": "Nico Robin",
+      "display_name": "Nico Robin",
+      "aliases": [
+        "Devil Child",
+        "Light of the Revolution",
+        "Miss All Sunday",
+        "Robin"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1558,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Nico_Robin"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_franky",
+      "canonical_name": "Franky",
+      "display_name": "Franky",
+      "aliases": [
+        "Iron Man",
+        "Cutty Flam"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1959,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Franky"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Cyborg, Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_brook",
+      "canonical_name": "Brook",
+      "display_name": "Brook",
+      "aliases": [
+        "Soul King"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 4866,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Brook"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_jinbe",
+      "canonical_name": "Jinbe",
+      "display_name": "Jinbe",
+      "aliases": [
+        "Knight of the Sea"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 2044,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Jinbe"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Straw Hat Pirates",
+      "species": "Fish-man",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_trafalgar_d_water_law",
+      "canonical_name": "Trafalgar D. Water Law",
+      "display_name": "Trafalgar D. Water Law",
+      "aliases": [
+        "Surgeon of Death",
+        "Trafalgar Law",
+        "Law"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8554,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Trafalgar_D._Water_Law"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_eustass_kid",
+      "canonical_name": "Eustass Kid",
+      "display_name": "Eustass Kid",
+      "aliases": [
+        "Eustass",
+        "Captain Kid",
+        "Eustass Kidd"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8550,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Eustass_Kid"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Cyborg, Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_killer",
+      "canonical_name": "Killer",
+      "display_name": "Killer",
+      "aliases": [
+        "Massacre Soldier",
+        "Kamazo the Manslayer"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 312139,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Killer"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_capone_bege",
+      "canonical_name": "Capone Bege",
+      "display_name": "Capone Bege",
+      "aliases": [
+        "Capone",
+        "Gang Bege"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8548,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Capone_Bege"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_jewelry_bonney",
+      "canonical_name": "Jewelry Bonney",
+      "display_name": "Jewelry Bonney",
+      "aliases": [
+        "Big Eater"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8549,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Jewelry_Bonney"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_scratchmen_apoo",
+      "canonical_name": "Scratchmen Apoo",
+      "display_name": "Scratchmen Apoo",
+      "aliases": [
+        "Roar of the Sea"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8551,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Scratchmen_Apoo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Mink",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_basil_hawkins",
+      "canonical_name": "Basil Hawkins",
+      "display_name": "Basil Hawkins",
+      "aliases": [
+        "Magician"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8556,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Basil_Hawkins"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_x_drake",
+      "canonical_name": "X Drake",
+      "display_name": "X Drake",
+      "aliases": [
+        "Red Flag",
+        "Dory",
+        "Diez Drake"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8547,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/X_Drake"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_urouge",
+      "canonical_name": "Urouge",
+      "display_name": "Urouge",
+      "aliases": [
+        "Mad Monk"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8552,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Urouge"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Worst Generation",
+      "species": "Cyborg",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_shanks",
+      "canonical_name": "Shanks",
+      "display_name": "Shanks",
+      "aliases": [
+        "Red-Haired",
+        "Red Hair",
+        "Saint Shanks",
+        "Red-Haired Shanks"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1617,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Shanks"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Red Hair Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_marshall_d_teach",
+      "canonical_name": "Marshall D. Teach",
+      "display_name": "Marshall D. Teach",
+      "aliases": [
+        "Blackbeard",
+        "Teach"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1698,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Marshall_D._Teach"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Blackbeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_charlotte_linlin",
+      "canonical_name": "Charlotte Linlin",
+      "display_name": "Charlotte Linlin",
+      "aliases": [
+        "Big Mom"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 32174,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Linlin"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Big Mom Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kaidou",
+      "canonical_name": "Kaidou",
+      "display_name": "Kaidou",
+      "aliases": [
+        "Strongest Creature",
+        "Kaidou of the Beasts",
+        "Kaido"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 10603,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kaidou"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Beasts Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_edward_newgate",
+      "canonical_name": "Edward Newgate",
+      "display_name": "Edward Newgate",
+      "aliases": [
+        "Whitebeard",
+        "Strongest Man in the World",
+        "Man Closest to [[One Piece]]",
+        "Man Closest to [[One Piece"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 327212,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Edward_Newgate"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_buggy",
+      "canonical_name": "Buggy",
+      "display_name": "Buggy",
+      "aliases": [
+        "Buggy the Star Clown",
+        "Genius Jester",
+        "Buggy the Clown"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 319192,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Buggy"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Cross Guild",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_gol_d_roger",
+      "canonical_name": "Gol D. Roger",
+      "display_name": "Gol D. Roger",
+      "aliases": [
+        "Gold Roger",
+        "Pirate King"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1670,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Gol_D._Roger"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Roger Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_silvers_rayleigh",
+      "canonical_name": "Silvers Rayleigh",
+      "display_name": "Silvers Rayleigh",
+      "aliases": [
+        "Dark King",
+        "Right Hand of the Pirate King"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 8693,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Silvers_Rayleigh"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Roger Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_dracule_mihawk",
+      "canonical_name": "Dracule Mihawk",
+      "display_name": "Dracule Mihawk",
+      "aliases": [
+        "Marine Hunter",
+        "Dracule",
+        "Hawk-Eyes Mihawk",
+        "Mihawk"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 11821,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Dracule_Mihawk"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Cross Guild",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_crocodile",
+      "canonical_name": "Crocodile",
+      "display_name": "Crocodile",
+      "aliases": [
+        "Desert King",
+        "Mr. 0",
+        "Sir Crocodile"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 324831,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Crocodile"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Cross Guild",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_boa_hancock",
+      "canonical_name": "Boa Hancock",
+      "display_name": "Boa Hancock",
+      "aliases": [
+        "Pirate Empress",
+        "Snake Princess"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 10318,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Boa_Hancock"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Amazon Lily",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_donquixote_doflamingo",
+      "canonical_name": "Donquixote Doflamingo",
+      "display_name": "Donquixote Doflamingo",
+      "aliases": [
+        "Heavenly Yaksha",
+        "Joker"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1837,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Donquixote_Doflamingo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Donquixote Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_gecko_moria",
+      "canonical_name": "Gecko Moria",
+      "display_name": "Gecko Moria",
+      "aliases": [
+        "Kouzuki Moria",
+        "Shadow Master"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 352569,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Gecko_Moria"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Thriller Bark Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_bartholomew_kuma",
+      "canonical_name": "Bartholomew Kuma",
+      "display_name": "Bartholomew Kuma",
+      "aliases": [
+        "Tyrant",
+        "PX-0"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1838,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Bartholomew_Kuma"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Cyborg",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_monkey_d_garp",
+      "canonical_name": "Monkey D. Garp",
+      "display_name": "Monkey D. Garp",
+      "aliases": [
+        "Garp the Fist",
+        "Hero of the Marines",
+        "Garp"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1703,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Monkey_D._Garp"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_sengoku",
+      "canonical_name": "Sengoku",
+      "display_name": "Sengoku",
+      "aliases": [
+        "Sengoku the Buddha",
+        "Buddha Sengoku"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1671,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Sengoku"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_sakazuki",
+      "canonical_name": "Sakazuki",
+      "display_name": "Sakazuki",
+      "aliases": [
+        "Akainu"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1672,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Sakazuki"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kuzan",
+      "canonical_name": "Kuzan",
+      "display_name": "Kuzan",
+      "aliases": [
+        "Aokiji"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 2160,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kuzan"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_borsalino",
+      "canonical_name": "Borsalino",
+      "display_name": "Borsalino",
+      "aliases": [
+        "Kizaru"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1673,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Borsalino"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_issho",
+      "canonical_name": "Issho",
+      "display_name": "Issho",
+      "aliases": [
+        "Fujitora"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 194047,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Issho"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_aramaki",
+      "canonical_name": "Aramaki",
+      "display_name": "Aramaki",
+      "aliases": [
+        "Ryokugyu"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 215592,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Aramaki"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_smoker",
+      "canonical_name": "Smoker",
+      "display_name": "Smoker",
+      "aliases": [
+        "Smoker the White Hunter",
+        "White Hunter"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 327207,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Smoker"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_tashigi",
+      "canonical_name": "Tashigi",
+      "display_name": "Tashigi",
+      "aliases": [
+        "Captain Tashigi"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1684,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Tashigi"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_koby",
+      "canonical_name": "Koby",
+      "display_name": "Koby",
+      "aliases": [
+        "★★★★★",
+        "Koby the Hero",
+        "Coby"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1686,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Koby"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_helmeppo",
+      "canonical_name": "Helmeppo",
+      "display_name": "Helmeppo",
+      "aliases": [
+        "Lieutenant Commander Helmeppo"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1687,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Helmeppo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_hina",
+      "canonical_name": "Hina",
+      "display_name": "Hina",
+      "aliases": [
+        "Black Cage",
+        "Black Cage Corps",
+        "Black Cage Hina"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1681,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Hina"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_tsuru",
+      "canonical_name": "Tsuru",
+      "display_name": "Tsuru",
+      "aliases": [
+        "Great Staff Officer",
+        "Great Staff Officer Tsuru"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1675,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Tsuru"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Marines",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_monkey_d_dragon",
+      "canonical_name": "Monkey D. Dragon",
+      "display_name": "Monkey D. Dragon",
+      "aliases": [
+        "Rebellious Dragon",
+        "Revolutionary Dragon",
+        "Dragon"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1813,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Monkey_D._Dragon"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_sabo",
+      "canonical_name": "Sabo",
+      "display_name": "Sabo",
+      "aliases": [
+        "Flame Emperor"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 9532,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Sabo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_emporio_ivankov",
+      "canonical_name": "Emporio Ivankov",
+      "display_name": "Emporio Ivankov",
+      "aliases": [
+        "Okama King",
+        "Miracle Person",
+        "Iva",
+        "Emporio Female Hormones",
+        "Miracle Worker"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 11838,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Emporio_Ivankov"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_koala",
+      "canonical_name": "Koala",
+      "display_name": "Koala",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 73893,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Koala"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_inazuma",
+      "canonical_name": "Inazuma",
+      "display_name": "Inazuma",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 12609,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Inazuma"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Revolutionary Army",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_rob_lucci",
+      "canonical_name": "Rob Lucci",
+      "display_name": "Rob Lucci",
+      "aliases": [
+        "Massacre Weapon"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1528,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Rob_Lucci"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "CP9",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kaku",
+      "canonical_name": "Kaku",
+      "display_name": "Kaku",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 2078,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kaku"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "CP9",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_jabra",
+      "canonical_name": "Jabra",
+      "display_name": "Jabra",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 2944,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Jabra"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "CP9",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_blueno",
+      "canonical_name": "Blueno",
+      "display_name": "Blueno",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 2795,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Blueno"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "CP9",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kalifa",
+      "canonical_name": "Kalifa",
+      "display_name": "Kalifa",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 2687,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kalifa"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "CP9",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_magellan",
+      "canonical_name": "Magellan",
+      "display_name": "Magellan",
+      "aliases": [
+        "Warden Magellan"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 11017,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Magellan"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Impel Down",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_shiryu",
+      "canonical_name": "Shiryu",
+      "display_name": "Shiryu",
+      "aliases": [
+        "Shiryu of the Rain"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 12878,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Shiryu"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Impel Down",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_bentham",
+      "canonical_name": "Bentham",
+      "display_name": "Bentham",
+      "aliases": [
+        "Bentham of the Wild",
+        "Mr. 2 Bon Kurei",
+        "Bon Clay"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 1831,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Bentham"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Impel Down",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_polo_marco",
+      "canonical_name": "Polo Marco",
+      "display_name": "Marco",
+      "aliases": [
+        "Polo Marco",
+        "Marco the Phoenix",
+        "Phoenix Marco"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 2240,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Polo_Marco"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": "Display name maps to canonical Fandom title Polo Marco."
+    },
+    {
+      "character_id": "one_piece_jozu",
+      "canonical_name": "Jozu",
+      "display_name": "Jozu",
+      "aliases": [
+        "Diamond",
+        "Diamond Jozu"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 2592,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Jozu"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_vista",
+      "canonical_name": "Vista",
+      "display_name": "Vista",
+      "aliases": [
+        "Vista of the Flower Swords",
+        "Flower Sword Vista"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 22936,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Vista"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_izou",
+      "canonical_name": "Izou",
+      "display_name": "Izo",
+      "aliases": [
+        "Izou"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 35456,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Izou"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": "Display name maps to canonical Fandom title Izou."
+    },
+    {
+      "character_id": "one_piece_portgas_d_ace",
+      "canonical_name": "Portgas D. Ace",
+      "display_name": "Portgas D. Ace",
+      "aliases": [
+        "Fire Fist",
+        "Gol D. Ace",
+        "Fire Fist Ace",
+        "Ace"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 306850,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Portgas_D._Ace"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Whitebeard Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_yamato",
+      "canonical_name": "Yamato",
+      "display_name": "Yamato",
+      "aliases": [
+        "Oni Princess"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 322112,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Yamato"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Beasts Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kouzuki_oden",
+      "canonical_name": "Kouzuki Oden",
+      "display_name": "Kozuki Oden",
+      "aliases": [
+        "Kouzuki Oden",
+        "Kozuki Oden"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 283205,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kouzuki_Oden"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Kozuki Clan",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": "Display name maps to canonical Fandom title Kouzuki Oden."
+    },
+    {
+      "character_id": "one_piece_kinemon",
+      "canonical_name": "Kin'emon",
+      "display_name": "Kin'emon",
+      "aliases": [
+        "Foxfire",
+        "Ashimaro"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 324999,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kin'emon"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Nine Red Scabbards",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kouzuki_momonosuke",
+      "canonical_name": "Kouzuki Momonosuke",
+      "display_name": "Kozuki Momonosuke",
+      "aliases": [
+        "Kouzuki Momonosuke",
+        "Momonosuke"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 140659,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kouzuki_Momonosuke"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Kozuki Clan",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": "Display name maps to canonical Fandom title Kouzuki Momonosuke."
+    },
+    {
+      "character_id": "one_piece_kikunojo",
+      "canonical_name": "Kikunojo",
+      "display_name": "Kikunojo",
+      "aliases": [
+        "Kikunojo of the Lingering Snow",
+        "Kiku"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 309124,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kikunojo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Nine Red Scabbards",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_raizo",
+      "canonical_name": "Raizo",
+      "display_name": "Raizo",
+      "aliases": [
+        "Raizo of the Mist"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 277094,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Raizo"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Nine Red Scabbards",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_nekomamushi",
+      "canonical_name": "Nekomamushi",
+      "display_name": "Nekomamushi",
+      "aliases": [
+        "Ruler of Night",
+        "Master Nekomamushi"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 278402,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Nekomamushi"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Nine Red Scabbards",
+      "species": "Cyborg",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_inuarashi",
+      "canonical_name": "Inuarashi",
+      "display_name": "Inuarashi",
+      "aliases": [
+        "Duke Inuarashi",
+        "Ruler of Day"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 279068,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Inuarashi"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Nine Red Scabbards",
+      "species": "Mink",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_charlotte_katakuri",
+      "canonical_name": "Charlotte Katakuri",
+      "display_name": "Charlotte Katakuri",
+      "aliases": [
+        "Minister of Flour",
+        "CHARLOTTE",
+        "Sweet Commander"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 291389,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Katakuri"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Big Mom Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_charlotte_smoothie",
+      "canonical_name": "Charlotte Smoothie",
+      "display_name": "Charlotte Smoothie",
+      "aliases": [
+        "Minister of Juice",
+        "Smoothie"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 291332,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Smoothie"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Big Mom Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_charlotte_cracker",
+      "canonical_name": "Charlotte Cracker",
+      "display_name": "Charlotte Cracker",
+      "aliases": [
+        "Thousand Arms",
+        "Minister of Biscuits",
+        "Cracker"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 288690,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Cracker"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Big Mom Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_charlotte_perospero",
+      "canonical_name": "Charlotte Perospero",
+      "display_name": "Charlotte Perospero",
+      "aliases": [
+        "Minister of Candy",
+        "Perospero"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 288395,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Charlotte_Perospero"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Big Mom Pirates",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_king",
+      "canonical_name": "King",
+      "display_name": "King",
+      "aliases": [
+        "King the Conflagration",
+        "Arber"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 311916,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/King"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Beasts Pirates",
+      "species": "Lunarian",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_queen",
+      "canonical_name": "Queen",
+      "display_name": "Queen",
+      "aliases": [
+        "Queen the Plague",
+        "Scien"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 311946,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Queen"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Beasts Pirates",
+      "species": "Cyborg, Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_rebecca",
+      "canonical_name": "Rebecca",
+      "display_name": "Rebecca",
+      "aliases": [],
+      "source_identifiers": {
+        "fandom_pageid": 199943,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Rebecca"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Dressrosa",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "PARTIAL_RESEARCH",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    },
+    {
+      "character_id": "one_piece_kyros",
+      "canonical_name": "Kyros",
+      "display_name": "Kyros",
+      "aliases": [
+        "One-Legged Soldier",
+        "Thunder Soldier of Rage",
+        "Thunder Soldier"
+      ],
+      "source_identifiers": {
+        "fandom_pageid": 199974,
+        "fandom_revision": null,
+        "source_url": "https://onepiece.fandom.com/wiki/Kyros"
+      },
+      "batch_membership": [
+        "one-piece-batch-001"
+      ],
+      "faction": "Dressrosa",
+      "species": "Human",
+      "canonical_identity": "resolved",
+      "research_status": "RESEARCH_READY",
+      "artwork_status": "valid",
+      "evaluation_status": "not_started",
+      "approval_status": "not_approved",
+      "unresolved_identity_issues": [],
+      "identity_mapping_note": null
+    }
+  ]
+}
