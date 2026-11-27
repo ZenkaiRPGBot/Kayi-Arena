@@ -1,49 +1,52 @@
-# Naruto Batch 005 — self-contained Claude evaluation assignment
+# Naruto Batch 005 — self-contained Claude evaluation assignment (corrected research package)
 
 ## Ready-to-use prompt
 
-> You are evaluating **Naruto Batch 005 Stage 02**. Work only from the files listed below. This is an independent evaluation: no Power, Role Fit, rarity, score or approval has been assigned in the Stage 01 package.
+> You are evaluating **Naruto Batch 005 Stage 02** from the corrected research package. Work only from the files listed below. The earlier metadata-only package and its placeholder evaluation are preserved for reference but are **not** the evaluation basis.
 >
-> 1. Read `naruto_batch_005_research.json` (100 candidates), `naruto_batch_005_catalogue.json` (identity/image cross-check), `naruto_batch_005_calibration.json` and `naruto_batch_005_image_manifest.json`. Read `NARUTO_BATCH_005_RESEARCH_REPORT.md` if available in the same delivery folder.
+> 1. Read `naruto_batch_005_research.json` (**62 research-ready candidates**), `naruto_batch_005_catalogue.json`, `naruto_batch_005_calibration.json`, `naruto_batch_005_image_manifest.json`, `naruto_batch_005_completeness_report.json` and `naruto_batch_005_selection_summary.json`. Read `NARUTO_BATCH_005_RESEARCH_REPORT.md` if present in the same delivery folder.
 > 2. Apply the embedded `EVAL-FRAMEWORK-1.0`, `NARUTO-CANON-0.1`, `SCORE-1.0` boundary rules and `KA-IMPORT-1.0` output contract in this document.
-> 3. Evaluate exactly the 100 `candidate_id` values in the research file. Do not add, remove, merge or rename candidates. `Enma` is a manual identity-mapping note only and is **not** one of the 100.
-> 4. Use the two-pass procedure: **Pass A — Fit only, with all Power values hidden** (use only `fit_reference` in the calibration file). **Pass B — Power** (then open `power_reference`). Do not revise Fit after seeing Power except to correct a documented error; cite the evidence, never the Power value.
-> 5. Treat the Stage 01 evidence as leads, not verified feats. Most records are `search_result_summary`; only two are `inspected_secondary`. No primary manga, databook or anime page was directly inspected in Stage 01. If independently verified evidence cannot be produced, grade it `C`/unverified, keep confidence `low`, and prefer Fit 0 unevidenced or the supported lower level. Never invent feats.
-> 6. Do not allocate rarity, role scores, matchups or publication status. Set `submit_for_review: true` for every Draft record if the import contract requires it; that is **not** approval.
+> 3. Evaluate exactly the 62 `candidate_id` values in the research file, in order. Do not add, remove, merge or rename candidates. `naruto_batch_005_unresolved_candidates.json` and `Enma` are **not** part of this evaluation.
+> 4. Use the two-pass procedure: **Pass A — Fit only, with Power values hidden** (use only `fit_reference` in the calibration file). **Pass B — Power** (then open `power_reference`). Do not revise Fit after seeing Power except to correct a documented factual error; cite the evidence, never the Power value.
+> 5. Each research-ready record contains demonstrated capabilities and a traceable inspected-secondary source; 39 records also carry canonical chapter/episode/databook references checked against that page text. Primary manga, databook and anime material was not directly opened in Stage 01B. Treat page citations as leads, not primary quotations. If a rating depends on an unverified detail, grade it `C`, keep confidence low and prefer the supported lower level. Never invent feats.
+> 6. Do not allocate rarity, role scores, matchups or publication status. Set `submit_for_review: true` for Draft records if the import contract requires it; that is **not** approval.
 > 7. Output one JSON file named `naruto_batch_005_claude_evaluation.json` with exactly the structure in section 8. Return the JSON as a fenced code block and state that you used Fit-first/Power-hidden ordering.
 
 ## 1. Files in this self-contained package
 
 | File | Purpose |
 |---|---|
-| `data/naruto_batch_005_selected_names.json` | Frozen 100-name selection input (reproduction only; no ratings). |
-| `data/naruto_batch_005_catalogue.json` | 100 selected candidates, source URLs, aliases, debut, rank/affiliation metadata, image records. |
-| `data/naruto_batch_005_research.json` | Per-candidate research summaries, evidence leads, `image_status`, manual Enma note. No ratings. |
+| `data/naruto_batch_005_research.json` | 62 gated research-ready records: canonical version, demonstrated abilities, capability summaries, limitations and traceable evidence. No ratings. |
+| `data/naruto_batch_005_catalogue.json` | The same 62 identities with source URLs, aliases, debut/rank metadata and validated image records. |
+| `data/naruto_batch_005_calibration.json` | Compact reviewed-draft anchors, split into fit-only and power sections for the two-pass workflow. |
 | `data/naruto_batch_005_image_manifest.json` | Per-image URL, hash, dimensions, accessibility, identity-review and usage-permission status. |
-| `data/naruto_batch_005_calibration.json` | Compact reviewed-reference anchors, preliminary/disputed records, and calibration policy. Split into fit-only and power sections for the two-pass workflow. |
-| `data/naruto_batch_005_claude_assignment.md` | This document: embedded framework, canon policy, policies and output contract. |
-| `docs/NARUTO_BATCH_005_RESEARCH_REPORT.md` | Coverage, selection, source quality, unresolved cases and commit traceability. |
+| `data/naruto_batch_005_completeness_report.json` | Separate catalogue/artwork/research/evaluation/publication status. Research gate passed; evaluation and publication not started. |
+| `data/naruto_batch_005_selection_summary.json` | Actual coverage: 156 researched, 87 initially ready, 62 final after canon/continuity/artwork exclusions; no padding. |
+| `data/naruto_batch_005_unresolved_candidates.json` | Preserved partial, insufficient, continuity-sensitive, adaptation-only and artwork-failed candidates. Not for evaluation. |
+| `data/naruto_batch_005_original_claude_evaluation.json` | Preserved earlier placeholder evaluation (1 Draft, 99 Held, Power 1 floors). Reference only; never import. |
+| `data/naruto_batch_005_claude_assignment.md` | This document. |
+| `docs/NARUTO_BATCH_005_RESEARCH_REPORT.md` | Coverage, source quality, exclusions, replacements and limitations. |
 
-If the files are delivered into one folder for Claude, use the bare filenames above.
+If delivered into one folder for Claude, use the bare filenames above.
 
 ## 2. Hard constraints
 
 - Universe: `naruto`. Batch: `naruto-batch-005`. Framework: `EVAL-FRAMEWORK-1.0`. Canon: `NARUTO-CANON-0.1`. Scoring version referenced for boundary purposes: `SCORE-1.0`. Rarity version is out of scope.
-- **No ratings or rarity exist in Stage 01.** Claude creates the first ratings.
+- **No ratings or rarity exist in Stage 01B.** Claude creates the first real ratings.
 - Power is an integer **1–5**. Each of the seven Role Fit values is an integer **0–5**.
 - Seven roles only: `captain`, `strategist`, `attacker`, `tank`, `assassin`, `support`, `healer`.
 - **No distribution caps.** Any number of characters may reach any level if evidence meets the standard.
-- **Fit first, Power hidden.** General strength counts only in Power; no Fit rating may use “this character is strong” as its reason.
+- **Fit first, Power hidden.** General strength counts only in Power; no Fit rating may use "this character is strong" as its reason.
 - Do not calculate or insert role scores, ECV scores or rarity. `SCORE-1.0`/Module 2 derives scores later.
 - Do not evaluate, approve, reject or publish. Imported records are `draft`; `submit_for_review: true` only moves a draft toward review.
-- Do not composite incompatible versions. Do not use anime-only, game-only or movie-only additions as canonical feats unless the canon policy below admits them.
+- Do not composite incompatible versions. Anime-only or game-only additions are excluded by default unless the research record's manga/databook references support the same capability.
 - Rank, title, reputation and popularity are context only, not evidence of ability or leadership.
-- For minor/low-evidence characters, a defensible `Held`/Draft, low-confidence outcome is preferred to invented detail.
+- For low-evidence minors, a defensible `Held`/Draft, low-confidence outcome is preferred to invented detail.
 
 ## 3. `NARUTO-CANON-0.1` — canon and version policy
 
 1. **Source tiers.** Original manga is decisive. Official databooks and licensed novels/support material may clarify or support but cannot override clear manga. Official adaptations may confirm but adaptation-only additions are excluded by default. Wikis, games, films and fan material are not independent evidence.
-2. **One Eligible Canonical Version (ECV) per character.** Choose a coherent period/state and state it explicitly in the companion notes. The ECV is the character’s **prime**: the highest reasonably sustainable canonical state across a meaningful stretch of story time or multiple engagements, not a single peak moment.
+2. **One Eligible Canonical Version (ECV) per character.** Use the `canonical_version` and `canonical_version_basis` supplied for each record. Choose a coherent period/state and state it explicitly in companion notes. The ECV is the character’s **prime**: the highest reasonably sustainable canonical state across a meaningful stretch of story time or multiple engagements, not a single peak moment.
 3. **No cross-version compositing.** Abilities, techniques and equipment from rejected versions do not carry into the ECV. Persistent traits such as intelligence, training, experience and leadership habits may cross versions only if they do not depend on abilities the ECV lacks, and the source period must be noted.
 4. **Ability classes.** Before an ability supports a rating, classify it:
    - **Core (C):** on demand/routine, repeatable, sustainable through a typical engagement, no unusual cost or outside help — counts fully.
@@ -51,8 +54,8 @@ If the files are delivered into one folder for Claude, use the bare filenames ab
    - **Excluded (X):** one-time, unrepeatable, externally dependent, borrowed, non-prime or outside the ECV — does not count.
    - Normal operating requirements (a healer touching a patient, a sensor’s range) are not conditions.
 5. **Conditional test.** Ask: how effective when used; how easily reached; how long sustained and what recovery; what cost/risk; how reliably canon shows it working. Include only if reusable, sustainable, character-owned and within the ECV.
-6. **Identity check.** Verify that the name, aliases and page identity match. Specifically distinguish `Kosuke` (Kirigakure Anbu, `dattebayo:695`) from `Kōsuke` (messenger toad, not selected). Do not merge identities on macron/spelling similarity.
-7. **Artwork check.** The manifest confirms 104 valid images covering all 100 candidates. Artwork confirms the selected source record; it is not feat evidence and does not grant publication rights.
+6. **Identity check.** Verify that the name, aliases and page identity match. Do not merge identities on macron/spelling similarity. In particular, `Kosuke` (Kirigakure Anbu) is unresolved and not in this package; `Kōsuke` the messenger toad was never selected. `Shin Uchiha` is unresolved because of clone-group/continuity ambiguity; `Shin` (Root, Sai’s brother) is a different selected identity.
+7. **Artwork check.** The manifest confirms 63 valid images covering all 62 candidates. Artwork confirms the selected source record; it is not feat evidence and does not grant publication rights.
 
 ## 4. `EVAL-FRAMEWORK-1.0` — Power
 
@@ -134,7 +137,7 @@ Default Fit ceilings follow the evidence grade: A → up to 4, B → up to 3, C 
 
 **Pass A — Fit only.** Open `naruto_batch_005_calibration.json` and read only `fit_reference`. It contains 20 reviewed-draft anchors (R1=6, R2=7, R3=7) with Power values withheld. Treat them as Draft records reviewed locally, **not** Approved. The 93 non-anchor preliminary drafts, 18 disputed names and 49 held-excluded names are cautionary research targets only, never anchors.
 
-**Pass B — Power.** After the seven Fit ratings for all 100 candidates are fixed, read `power_reference`. Assign Power using the same tier policy. Do not revisit Fit except for a documented factual error.
+**Pass B — Power.** After the seven Fit ratings for all 62 candidates are fixed, read `power_reference`. Assign Power using the same tier policy. Do not revisit Fit except for a documented factual error.
 
 If evidence supports two adjacent levels equally, choose the lower and record the higher as the plausible alternative in the companion notes. Do not force a distribution.
 
@@ -155,37 +158,37 @@ Output one JSON object. Required top-level keys: `format_version`, `batch_type`,
   "global_notes": [
     "Fit was assigned before Power with Power values hidden.",
     "No rarity, role scores, approval or publication status is assigned.",
-    "Stage 01 evidence is largely search_result_summary; unverified leads were not treated as feats."
+    "The corrected research package contains demonstrated capabilities; secondary sources are traceable but primary material was not opened."
   ],
   "evaluations": [
     {
-      "character_id": "dattebayo:43",
+      "character_id": "dattebayo:879",
       "power": 2,
       "fit": {
-        "captain": 1,
-        "strategist": 1,
-        "attacker": 2,
-        "tank": 1,
+        "captain": 0,
+        "strategist": 2,
+        "attacker": 0,
+        "tank": 0,
         "assassin": 0,
-        "support": 1,
+        "support": 2,
         "healer": 0
       },
       "evidence": [
         {
-          "target": "attacker",
-          "grade": "C",
-          "source_ref": "data/naruto_batch_005_research.json:dattebayo:43",
-          "summary": "Jōnin rank and Akimichi affiliation are context only; no specific offensive feat was verified."
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:879",
+          "summary": "Bound Naruto's movement with Shadow Imitation Technique until Nine-Tails Chakra Mode broke the hold."
         },
         {
           "target": "power",
-          "grade": "C",
-          "source_ref": "data/naruto_batch_005_catalogue.json:dattebayo:43",
-          "summary": "Manga debut and rank recorded; no independently verified combat demonstration."
+          "grade": "B",
+          "source_ref": "naruto_batch_005_catalogue.json:dattebayo:879",
+          "summary": "Single demonstrated restraint against Naruto; no broader combat record supplied."
         }
       ],
-      "source_references": ["naruto.fandom.com/wiki/Dōtō_Akimichi"],
-      "revision_ref": "claude-batch-005-001",
+      "source_references": ["https://naruto.fandom.com/wiki/Suzaku_Nara"],
+      "revision_ref": "claude-batch-005-002",
       "submit_for_review": true
     }
   ]
@@ -194,7 +197,7 @@ Output one JSON object. Required top-level keys: `format_version`, `batch_type`,
 
 Field rules:
 
-- `character_id` must be copied exactly from `candidate_id` in the research/catalogue files (for example `dattebayo:43`). Produce exactly 100 objects in the same order as the research file.
+- `character_id` must be copied exactly from `candidate_id` in the research/catalogue files (for example `dattebayo:879`). Produce exactly **62** objects in the same order as the research file.
 - `power` is integer 1–5. `fit` has exactly the seven lowercase keys shown, each integer 0–5.
 - `evidence[].target` is `power` or one of the seven lowercase role keys. Provide at least one evidence item for `power` and for each non-zero Fit rating; provide a short note for unevidenced zeros in the companion notes.
 - `evidence[].grade` is `A`, `B` or `C`. `source_ref` must be a real locator in the supplied files or an actual chapter/page URL you verified. `summary` must be factual and concise.
@@ -208,11 +211,11 @@ Because `KA-IMPORT-1.0` is intentionally compact, also return a second JSON obje
 
 ## 9. Final QA checklist before returning
 
-- [ ] Exactly 100 `evaluations`; IDs match the research file exactly and in order.
+- [ ] Exactly 62 `evaluations`; IDs match the research file exactly and in order.
 - [ ] All seven Fit keys present for every record; values are integers in 0–5; Power is integer 1–5.
 - [ ] Fit was completed before Power; no Fit was raised because of Power.
 - [ ] No cross-version composites; ECV stated for every record in companion notes.
-- [ ] No invented feats; unverified Stage 01 leads graded C or left unevidenced.
+- [ ] No invented feats; the preserved placeholder evaluation was not reused.
+- [ ] No unresolved, adaptation-only, continuity-excluded, artwork-failed, Enma or Kōsuke record was evaluated.
 - [ ] No rarity, scores, matchups, approval or publication status.
-- [ ] Kosuke/Kōsuke identities not merged; Enma not evaluated.
-- [ ] Low-confidence/held candidates flagged for independent review.
+- [ ] Low-confidence candidates flagged for independent review.

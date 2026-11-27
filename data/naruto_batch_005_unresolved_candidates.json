@@ -1,0 +1,993 @@
+{
+  "batch_id": "naruto-batch-005",
+  "prepared_date": "2026-11-27",
+  "excluded_from_evaluation_package": true,
+  "policy": "Preserved for traceability. No placeholder rating is imported and no identity is permanently excluded unless stated.",
+  "continuity_exclusions": [
+    {
+      "candidate_id": "dattebayo:1309",
+      "name": "Shin Uchiha",
+      "reason": "Shin Uchiha is a Boruto-era arc antagonist whose clone group creates an identity/ECV ambiguity. Preserved as unresolved, not silently merged or rated."
+    }
+  ],
+  "canon_exclusions": [
+    {
+      "candidate_id": "dattebayo:880",
+      "name": "Yoshino Nara",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:873",
+      "name": "Ensui Nara",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:24",
+      "name": "Ajisai",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:432",
+      "name": "Hyō",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:457",
+      "name": "Inaho",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:1033",
+      "name": "Tsuzumi Sarugaku",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:328",
+      "name": "Dōshu Goetsu",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:618",
+      "name": "Moegi Kazamatsuri",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:477",
+      "name": "Udon Ise",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:391",
+      "name": "Shimon Hijiri",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:1155",
+      "name": "Sumashi",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:301",
+      "name": "Gennai",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:681",
+      "name": "Komugi",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:727",
+      "name": "Kurozuka",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:736",
+      "name": "Kyūsuke",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:1086",
+      "name": "Shiho",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:964",
+      "name": "Ranka",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:824",
+      "name": "Mogusa",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:554",
+      "name": "Kakoi",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:494",
+      "name": "Iyashi",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:733",
+      "name": "Kusushi",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:652",
+      "name": "Kitō",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    },
+    {
+      "candidate_id": "dattebayo:291",
+      "name": "Gazeru",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability."
+    }
+  ],
+  "artwork_exclusions": [
+    {
+      "candidate_id": "dattebayo:855",
+      "name": "Musai",
+      "reason": "Source image URL returns HTTP 404 and the inspected page has no single-character infobox image; preserved as unresolved rather than substituted with a group image."
+    }
+  ],
+  "manual_identity_mapping_candidates": [
+    {
+      "name": "Enma",
+      "status": "manual_identity_mapping_required",
+      "reason": "Appears in prior Batch 004-B files with no exact Dattebayo catalogue record; not a permanent exclusion.",
+      "action_for_integration": "Resolve identity manually before any future evaluation."
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "dattebayo:43",
+      "name": "Dōtō Akimichi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only reputation (influential, front-line placement), clan-based assumption, and 'seemingly proficient' bō use; no demonstrated technique, personal combat action, or mission function.",
+      "source_url": "https://naruto.fandom.com/wiki/Dōtō_Akimichi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:880",
+      "name": "Yoshino Nara",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Yoshino_Nara",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:279",
+      "name": "Gantetsu (Iwagakure)",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only catalogue/reputational metadata, personality and appearance, plus a defeat; no demonstrated capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Gantetsu_(Iwagakure)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:850",
+      "name": "Mukade",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific mission duty (Kisame decoy to stall Team Guy) exists, but no demonstrated personal technique, combat action, or use detail is supplied; talent claim is vague.",
+      "source_url": "https://naruto.fandom.com/wiki/Mukade",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:873",
+      "name": "Ensui Nara",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Ensui_Nara",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:14",
+      "name": "Tatsuma Aburame",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only reputation, affiliation-based inference and 'implies'/'stands to reason' prose; no demonstrated technique or action.",
+      "source_url": "https://naruto.fandom.com/wiki/Tatsuma_Aburame",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:24",
+      "name": "Ajisai",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Ajisai",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:44",
+      "name": "Makaro Akimichi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only rank, affiliation-based assumption and catalogue prose; no demonstrated capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Makaro_Akimichi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:45",
+      "name": "Maruten Akimichi",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific guard duty and physical intervention exist with a canonical citation, but no demonstrated technique, capability detail, or successful use is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Maruten_Akimichi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:432",
+      "name": "Hyō",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Hyō",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:30",
+      "name": "Iwana Akame",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: specific mission-history and duty details exist, but demonstrated-use information about his actual capabilities is absent.",
+      "source_url": "https://naruto.fandom.com/wiki/Iwana_Akame",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:109",
+      "name": "Baku (Anbu)",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific surveillance duty and a concrete but uncited/undemonstrated perception claim exist; demonstrated-use information is missing.",
+      "source_url": "https://naruto.fandom.com/wiki/Baku_(Anbu)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:231",
+      "name": "Fuki",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only catalogue metadata, flashback appearance, personality, and appearance details are present; no demonstrated ability, technique, combat action, mission function, or specialist capability is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Fuki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:249",
+      "name": "Daikoku Funeno",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Specific duties exist, but the source gives no demonstrated use of a shinobi ability, technique, combat action, or observable performance of the lookout duty.",
+      "source_url": "https://naruto.fandom.com/wiki/Daikoku_Funeno",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:386",
+      "name": "Hibari",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only Academy affiliation, a conversational question, appearance, and trivia appear; no demonstrated capability of any qualifying category is present.",
+      "source_url": "https://naruto.fandom.com/wiki/Hibari",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:392",
+      "name": "Hikaru",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A concrete ship-captain duty and informational actions are given, but no demonstrated shinobi ability, combat action, or use of a specialist skill is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Hikaru",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:416",
+      "name": "Hōki (Takigakure)",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Exam participation and pass/fail outcomes are given, but no demonstrated ability, technique, combat action, mission function, or specialist capability is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Hōki_(Takigakure)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:457",
+      "name": "Inaho",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Inaho",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:601",
+      "name": "Kasumi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only Academy affiliation, flashback appearance, appearance details, and name trivia are present; no demonstrated capability is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Kasumi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:666",
+      "name": "Kōji",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Concrete training and mission participation exist, but no demonstrated skill, result, technique, or combat action qualifies for research readiness.",
+      "source_url": "https://naruto.fandom.com/wiki/Kōji",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:775",
+      "name": "Matsuri (Konoha)",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only conversations, evacuation, training-trip presence, and group-attack context are supplied; no demonstrated ability or action attributable to Matsuri qualifies.",
+      "source_url": "https://naruto.fandom.com/wiki/Matsuri_(Konoha)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:792",
+      "name": "Midori",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A bodyguard assignment and a concrete coercion action are stated, but no demonstrated shinobi ability, combat action, or specialist performance is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Midori",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1033",
+      "name": "Tsuzumi Sarugaku",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Tsuzumi_Sarugaku",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1045",
+      "name": "Satetsu",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A specific search assignment is present, but no demonstrated technique, combat action, or concrete specialist execution is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Satetsu",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1080",
+      "name": "Shiba (Kusagakure)",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A bodyguard assignment and a concrete coercion action are stated, but no demonstrated shinobi ability, combat action, or specialist performance is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Shiba_(Kusagakure)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1220",
+      "name": "Terai",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A databook-level comparison and a search assignment are specific, but no named ability or demonstrated use is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Terai",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1252",
+      "name": "Tora (Anbu)",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "The strength/movement and no-escape description is more than generic praise, but it is a claim without demonstrated use; the Anbu surveillance duty is likewise unshown.",
+      "source_url": "https://naruto.fandom.com/wiki/Tora_(Anbu)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1392",
+      "name": "Kiyoi Yotsuki",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Clan, affiliation, loyalty, personality, and being a genjutsu victim are not demonstrated capabilities; no qualifying evidence is present.",
+      "source_url": "https://naruto.fandom.com/wiki/Kiyoi_Yotsuki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:328",
+      "name": "Dōshu Goetsu",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Dōshu_Goetsu",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:618",
+      "name": "Moegi Kazamatsuri",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Moegi_Kazamatsuri",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:154",
+      "name": "Chōseki",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Former-shinobi status, personality, yakuza detail, and being defeated are not demonstrated capabilities; no qualifying action or technique is attributed to him.",
+      "source_url": "https://naruto.fandom.com/wiki/Chōseki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:802",
+      "name": "Tomaru Minakura",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only catalogue metadata, personality, appearance and a background pass-by are given; the supplied source shows no ability, technique, combat action, mission function or specialist capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Tomaru_Minakura",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:814",
+      "name": "Dango Mitsuki",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific mission function is present (member of the Infiltration and Reconnaissance Party tracking Kabuto), but the source gives no demonstrated personal technique, combat action, or individual result; the observational-skills claim is a databook lead, not a shown feat.",
+      "source_url": "https://naruto.fandom.com/wiki/Dango_Mitsuki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1308",
+      "name": "Setsuna Uchiha",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a named ability is confirmed (Sharingan awakening), but demonstrated use is absent and kenjutsu is expressly speculative; rank, clan, police-force affiliation and the large sword do not qualify as demonstrated capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Setsuna_Uchiha",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1309",
+      "name": "Shin Uchiha",
+      "research_gate": "RESEARCH_READY",
+      "reason": "Shin Uchiha is a Boruto-era arc antagonist whose clone group creates an identity/ECV ambiguity. Preserved as unresolved, not silently merged or rated.",
+      "source_url": "https://naruto.fandom.com/wiki/Shin_Uchiha",
+      "origin": "original_batch_005",
+      "continuity_note": "Shin Uchiha is a Boruto-era arc antagonist whose clone group creates an identity/ECV ambiguity. Preserved as unresolved, not silently merged or rated."
+    },
+    {
+      "candidate_id": "dattebayo:477",
+      "name": "Udon Ise",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Udon_Ise",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:391",
+      "name": "Shimon Hijiri",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Shimon_Hijiri",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1155",
+      "name": "Sumashi",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Sumashi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:888",
+      "name": "Nejiri",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only affiliation, appearance, exam attendance and a withdrawn question are supplied; no ability, technique, combat action, mission function or specialist capability is demonstrated.",
+      "source_url": "https://naruto.fandom.com/wiki/Nejiri",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:7",
+      "name": "Abiru",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only Academy status, personality, appearance and childhood anecdotes are supplied, with an explicit statement of ninjutsu inexperience rather than any demonstrated capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Abiru",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:18",
+      "name": "Agara",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a concrete mission detail exists (three-man mission and pursuit of an infiltrator), but no demonstrated personal technique, combat action with result, or specialist capability is supplied.",
+      "source_url": "https://naruto.fandom.com/wiki/Agara",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:26",
+      "name": "Manabu Akado",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only rank, exam history, appearance and trivia are provided; test progress is not a demonstrated ability, technique, combat action, mission function or specialist capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Manabu_Akado",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:64",
+      "name": "Ami",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only catalogue metadata, personality, appearance and childhood incidents are supplied; no demonstrated capability of any kind appears in the source.",
+      "source_url": "https://naruto.fandom.com/wiki/Ami",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:118",
+      "name": "Bekkō",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: generic membership in a tracking group, arrival at an Academy scene and breaking up a fight are not demonstrated shinobi abilities, techniques, command functions or specialist capabilities.",
+      "source_url": "https://naruto.fandom.com/wiki/Bekk%C5%8D",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:137",
+      "name": "Gyokurō Chabashira",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: catalogue metadata, personality, appearance and spectating are the entirety of the supplied source; no demonstrated capability is present.",
+      "source_url": "https://naruto.fandom.com/wiki/Gyokur%C5%8D_Chabashira",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:167",
+      "name": "Daichi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: intentions, classroom participation and training practice are not demonstrated abilities, techniques, combat actions, mission functions or specialist capabilities.",
+      "source_url": "https://naruto.fandom.com/wiki/Daichi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:253",
+      "name": "Futaba",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only personality, appearance, classroom dialogue, and observation of Neji's skill; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Futaba",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:301",
+      "name": "Gennai",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Gennai",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:337",
+      "name": "Gōza",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only rank, personality, council attendance, and inferred wisdom; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/G%C5%8Dza",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:361",
+      "name": "Hakui (medic)",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Specific medical specialty and a concrete examination duty exist, but the healing technique and demonstrated-use information are missing; PARTIAL_RESEARCH.",
+      "source_url": "https://naruto.fandom.com/wiki/Hakui_(medic)",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:379",
+      "name": "Hayase",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "One specific exam-duty detail exists, but demonstrated-use/combat information is missing; PARTIAL_RESEARCH.",
+      "source_url": "https://naruto.fandom.com/wiki/Hayase",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:384",
+      "name": "Heki",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only generic battle experience, inferred intelligence, rank, and a political request; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Heki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:420",
+      "name": "Hōsei",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only personality, appearance, and exam withdrawal; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/H%C5%8Dsei",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:486",
+      "name": "Ittetsu",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only squad membership, bravery as personality, and an emotional reaction; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Ittetsu",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:520",
+      "name": "Jōseki",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Specific strategic/political details exist, but no demonstrated ninja technique or combat action; PARTIAL_RESEARCH.",
+      "source_url": "https://naruto.fandom.com/wiki/J%C5%8Dseki",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:567",
+      "name": "Jin Kaminari",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only appearance, personality, and spectating; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Jin_Kaminari",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:599",
+      "name": "Kashike",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only background, personality, and victim/childhood scenes; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Kashike",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:676",
+      "name": "Komaza",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only exam misconduct and being attacked; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Komaza",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:681",
+      "name": "Komugi",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Komugi",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:695",
+      "name": "Kosuke",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Explicitly vague 'presumably skilled' and 'implying skill in kenjutsu' do not qualify; unknown: no demonstrated ability, technique, combat action, mission function execution, or specialist capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kosuke",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:698",
+      "name": "Kōta",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only personality, appearance, and background dialogue; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/K%C5%8Dta",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:727",
+      "name": "Kurozuka",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kurozuka",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:805",
+      "name": "Minoji",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only exam participation and failure are described; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Minoji",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:817",
+      "name": "Third Mizukage",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only rank, succession, bodyguard role, and inferred kenjutsu; unknown: no demonstrated technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Third_Mizukage",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:825",
+      "name": "Kunugi Mokume",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only background, personality, and an unspecified physical restraint; unknown: no demonstrated ability, technique, combat action, mission function, or specialist capability in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Kunugi_Mokume",
+      "origin": "original_batch_005",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:195",
+      "name": "Demonic Statue of the Outer Path",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Non-character summoned object/entity rather than a shinobi character; per the strict rule it is INSUFFICIENT_EVIDENCE for playable evaluation despite documented feats.",
+      "source_url": "https://naruto.fandom.com/wiki/Demonic_Statue_of_the_Outer_Path",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:736",
+      "name": "Kyūsuke",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kyūsuke",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:855",
+      "name": "Musai",
+      "research_gate": "RESEARCH_READY",
+      "reason": "Source image URL returns HTTP 404 and the inspected page has no single-character infobox image; preserved as unresolved rather than substituted with a group image.",
+      "source_url": "https://naruto.fandom.com/wiki/Musai",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1086",
+      "name": "Shiho",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Shiho",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:964",
+      "name": "Ranka",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Ranka",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:996",
+      "name": "Ryūsui",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A specific duty exists, but no demonstrated technique, combat action or concrete specialist capability beyond routine delivery is given; the genin-level statement is only Jiraiya's assessment.",
+      "source_url": "https://naruto.fandom.com/wiki/Ryūsui",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:143",
+      "name": "Monzaemon Chikamatsu",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Named techniques and a concrete inventor role exist, but demonstrated use by him is missing and the page relies on reported feats and later wielders; classified partial.",
+      "source_url": "https://naruto.fandom.com/wiki/Monzaemon_Chikamatsu",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:728",
+      "name": "Kusabi",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "Only catalogue metadata, personality and an inferred weapon skill are given; no demonstrated ability, technique, combat action or mission function qualifies.",
+      "source_url": "https://naruto.fandom.com/wiki/Kusabi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1395",
+      "name": "Yūdachi",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "A specific duty exists, but no demonstrated technique or combat action by him is supplied; rank-level statements and passive interrogation barriers do not qualify.",
+      "source_url": "https://naruto.fandom.com/wiki/Yūdachi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:824",
+      "name": "Mogusa",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Mogusa",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:554",
+      "name": "Kakoi",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kakoi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:150",
+      "name": "Chiyomatsu",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "Only a databook style statement and an unsuccessful decoy strike are supplied; demonstrated-use information is thin, so this is partial rather than research-ready.",
+      "source_url": "https://naruto.fandom.com/wiki/Chiyomatsu",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:494",
+      "name": "Iyashi",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Iyashi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:733",
+      "name": "Kusushi",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kusushi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:652",
+      "name": "Kitō",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Kit%C5%8D",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:995",
+      "name": "Ryūsa",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific advisory-council duty and concrete council actions are given, but 'most likely one of wisest' is speculative and no demonstrated ability or technique is shown.",
+      "source_url": "https://naruto.fandom.com/wiki/Ry%C5%ABsa",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:291",
+      "name": "Gazeru",
+      "research_gate": "RESEARCH_READY",
+      "reason": "NARUTO-CANON-0.1 excludes adaptation-only additions by default; no verified manga chapter or databook reference supports the demonstrated ability.",
+      "source_url": "https://naruto.fandom.com/wiki/Gazeru",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1067",
+      "name": "Tōka Senju",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific capability type (genjutsu) is named, but no demonstrated use and no extent are given; the page explicitly leaves her skills unknown.",
+      "source_url": "https://naruto.fandom.com/wiki/T%C5%8Dka_Senju",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:969",
+      "name": "Reki",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a named Poison Mist technique is given for Naruto Mobile only with no demonstrated-use detail, while the manga/anime evidence is generic battle experience.",
+      "source_url": "https://naruto.fandom.com/wiki/Reki",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:425",
+      "name": "Hōshō",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific medical-unit assignment and reporting action exist, but the abilities are only presumably described and no demonstrated medical technique is shown.",
+      "source_url": "https://naruto.fandom.com/wiki/H%C5%8Dsh%C5%8D",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:968",
+      "name": "Rashii",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only a generic ninjutsu knowledge/ability claim and lore exposition are provided; no demonstrated capability is shown.",
+      "source_url": "https://naruto.fandom.com/wiki/Rashii",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:795",
+      "name": "Migaki",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific hospital duty and a concrete report are present, but the capability description is only presumably phrased and no medical technique is demonstrated.",
+      "source_url": "https://naruto.fandom.com/wiki/Migaki",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1318",
+      "name": "Ugai",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: basic medical knowledge and a locating action are specific details, but no demonstrated medical technique or treatment exists in the supplied source.",
+      "source_url": "https://naruto.fandom.com/wiki/Ugai",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1013",
+      "name": "Sajō",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific advisory duty and recommendation are given, but the ability statement is speculative and no demonstrated capability is shown.",
+      "source_url": "https://naruto.fandom.com/wiki/Saj%C5%8D",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1018",
+      "name": "Unmo Samidare",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: abilities are explicitly unknown and only affiliation, rank, and a vague reputation are supplied; no demonstrated capability exists.",
+      "source_url": "https://naruto.fandom.com/wiki/Unmo_Samidare",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1316",
+      "name": "Yakumi Uchiha",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only clan/police affiliation and an implied-skill statement are provided; no demonstrated capability exists.",
+      "source_url": "https://naruto.fandom.com/wiki/Yakumi_Uchiha",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:583",
+      "name": "Kanpō",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific post-match medical attendance duty is shown, but the abilities are only presumably described and no treatment technique or outcome is given.",
+      "source_url": "https://naruto.fandom.com/wiki/Kanp%C5%8D",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:451",
+      "name": "Ichigen",
+      "research_gate": "INSUFFICIENT_EVIDENCE",
+      "reason": "INSUFFICIENT_EVIDENCE: only immature-skills wording and a warning action are supplied; no demonstrated capability is shown.",
+      "source_url": "https://naruto.fandom.com/wiki/Ichigen",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    },
+    {
+      "candidate_id": "dattebayo:1334",
+      "name": "Ushi",
+      "research_gate": "PARTIAL_RESEARCH",
+      "reason": "PARTIAL_RESEARCH: a specific Anbu surveillance duty is given, but strength and power are only implied by rank and mission, with no demonstrated capability.",
+      "source_url": "https://naruto.fandom.com/wiki/Ushi",
+      "origin": "replacement_pool",
+      "continuity_note": "none"
+    }
+  ]
+}

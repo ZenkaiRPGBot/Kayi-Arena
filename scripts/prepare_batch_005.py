@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from app.content.models import CandidateCatalogue
+from scripts.batch_005_quality import assess_catalogue, assess_research
 from scripts.consolidate_expansion import candidate_to_model
 
 ROOT = Path("data")
@@ -313,6 +314,9 @@ def main() -> None:
                 "canonical_eligibility": candidate.get("canonical_eligibility", "eligible"),
                 "eligibility_reason": candidate.get("eligibility_reason", ""),
                 "image_status": "pending",
+                # This generator intentionally produces metadata-only research.
+                # It must never be reported as research-complete.
+                "research_gate": "INSUFFICIENT_EVIDENCE",
                 "research": research,
                 "evidence_level": evidence_level,
                 "evidence_leads": evidence_leads,
@@ -371,9 +375,24 @@ def main() -> None:
     }
     OUT_RESEARCH.write_text(json.dumps(research, indent=2, ensure_ascii=False), encoding="utf-8")
 
+    catalogue_status = assess_catalogue(json.loads(OUT_CAT.read_text(encoding="utf-8")))
+    research_status = assess_research(research)
     print(f"matched={len(matched_candidates)} unmatched={len(missing)}")
     if missing:
         print("MISSING:", missing)
+    print(
+        "catalogue_complete={catalogue} research_classification_valid={research} "
+        "research_ready={ready} research_complete=False "
+        "evaluation_complete=False publication_ready=False".format(
+            catalogue=catalogue_status["complete"],
+            research=research_status["classification_complete"],
+            ready=research_status["status_counts"]["RESEARCH_READY"],
+        )
+    )
+    print(
+        "warning: this generator only maps catalogue metadata; it does not produce "
+        "substantive research or a Claude-ready package."
+    )
     print(f"wrote {OUT_CAT}")
     print(f"wrote {OUT_RESEARCH}")
 

@@ -1,0 +1,43 @@
+{
+  "batch_id": "naruto-batch-005",
+  "date": "2026-11-27",
+  "change_type": "corrective_research_stage_01b",
+  "changes": [
+    {
+      "id": "diagnosis",
+      "summary": "Confirmed original research was catalogue metadata only; preserved Claude's 1 Draft / 99 Held placeholder evaluation for reference."
+    },
+    {
+      "id": "research",
+      "summary": "Researched 156 candidates from inspected secondary profiles with canonical-reference leads; classified 87 research-ready, 31 partial, 38 insufficient."
+    },
+    {
+      "id": "gate",
+      "summary": "Applied substantive-evidence gate, canon default against adaptation-only evidence, and continuity/artwork exclusions. Final count is 62, with no padding to 100."
+    },
+    {
+      "id": "replacements",
+      "summary": "Retained 35 original candidates and added 27 better-documented Naruto-era replacements; 65 original candidates moved to unresolved."
+    },
+    {
+      "id": "continuity",
+      "summary": "Excluded Shin Uchiha as clone-group/Boruto-era ambiguity, distinguished Shin (Root), kept Kosuke/Kōsuke identities separate, and kept Enma as manual identity mapping."
+    },
+    {
+      "id": "artwork",
+      "summary": "Reused validated artwork, excluded Musai after HTTP 404, and revalidated the final set: 63 valid images covering all 62 candidates."
+    },
+    {
+      "id": "pipeline",
+      "summary": "Added staged completeness validation and focused tests so metadata-only fields cannot be reported as substantive research."
+    },
+    {
+      "id": "handoff",
+      "summary": "Rebuilt the self-contained Claude assignment for 62 candidates; no ratings, rarity, approval or dataset integration performed."
+    }
+  ],
+  "ratings_allocated": false,
+  "rarity_allocated": false,
+  "approved": false,
+  "published": false
+}

@@ -54,7 +54,8 @@ def main() -> None:
             record["image_status"] = image_status
 
         identity_status = DIRECTLY_INSPECTED_PAGES.get(
-            candidate["candidate_id"], "exact_name_match; page not directly inspected"
+            candidate["candidate_id"],
+            "inspected_secondary; capability page reviewed in Stage 01B",
         )
         for index, img in enumerate(candidate.get("images", [])):
             status = img.get("status", "pending")
@@ -105,9 +106,9 @@ def main() -> None:
         },
         "policies": {
             "identity_review": (
-                "Exact catalogue-name matching was used for selection. The two directly inspected "
-                "secondary pages are flagged; other identities rely on catalogue metadata and remain "
-                "subject to Claude's identity check before evaluation."
+                "Exact catalogue-name matching was used for selection. Stage 01B reviewed each "
+                "selected candidate's secondary character page for capability evidence. Artwork "
+                "confirms the selected source record but is not feat evidence."
             ),
             "source_accessibility": (
                 "true means the validated image was downloaded successfully by the existing image "

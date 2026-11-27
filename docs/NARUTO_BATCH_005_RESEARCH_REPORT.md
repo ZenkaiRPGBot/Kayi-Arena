@@ -1,108 +1,141 @@
-# Naruto Batch 005 — Stage 01 research report
+# Naruto Batch 005 — corrective research quality report
 
 **Date:** 2026-11-27  
 **Branch:** `content/naruto-batch-005`  
 **Frameworks:** `EVAL-FRAMEWORK-1.0` · `NARUTO-CANON-0.1` · `SCORE-1.0` (boundary reference) · `RARITY-0.2` (out of scope)  
-**Status:** Stage 01 research and artwork preparation only. No Power, Role Fit, rarity, score, approval or publication has been assigned.
+**Status:** Corrective Stage 01B complete. No Power, Role Fit, rarity, score, approval or publication status has been allocated.
 
-## 1. Scope and outcome
+## 1. Diagnosis of the original deficiency
 
-Batch 005 adds **100 distinct eligible Naruto candidates** without modifying the original catalogue or Batches 003–004. The package is intentionally self-contained for one Claude conversation: it embeds the framework, canon policy, evidence rules, calibration, exact output contract and a ready-to-use assignment prompt.
+The first Batch 005 package was structurally complete but substantively incomplete.
 
-| Deliverable | Status |
-|---|---|
-| `data/naruto_batch_005_selected_names.json` | Frozen 100-name selection input for reproduction. |
-| `data/naruto_batch_005_catalogue.json` | 100 candidates, 0 unmatched |
-| `data/naruto_batch_005_research.json` | 100 research records, no ratings |
-| `data/naruto_batch_005_image_manifest.json` | 104 per-image records, full candidate coverage |
-| `data/naruto_batch_005_calibration.json` | 20 reviewed-draft anchors; fit/power sections separated |
-| `data/naruto_batch_005_claude_assignment.md` | Self-contained assignment and exact JSON contract |
-| `docs/NARUTO_BATCH_005_RESEARCH_REPORT.md` | This report |
-| `scripts/prepare_batch_005.py` | Reproducible catalogue/research generation |
-| `scripts/finalize_batch_005.py` | Reproducible per-image manifest/status finalisation |
+- `naruto_batch_005_research.json` contained 100 records whose fields were generated from Dattebayo catalogue metadata: rank, affiliation, clan, titles, debut, classification and image status.
+- Capability fields used boilerplate such as “No individual jutsu or combat feats are transcribed here”, “Claude must verify…”, “Rank: …”, “Affiliation: …” and “not recorded”. Those strings satisfy a JSON field check but are not research.
+- Claude’s preserved evaluation correctly returned **1 Draft and 99 Held** records, with Power `1` for all 100 as a schema floor, Fit `0` for nearly all roles, and no A-grade evidence.
+- The review notes explicitly identified the cause: no combat feats, durability feats or demonstrated abilities were supplied; rank, clan and affiliation were the only differentiators.
 
-## 2. Selection method
+The defect was in the preparation pipeline, not in Claude’s evaluation. The old scripts treated “all fields present” as completion and did not distinguish catalogue, artwork, research, evaluation and publication readiness.
 
-The candidate pool came from the existing Dattebayo-derived `naruto_candidates.json`. Selection:
+The original evaluation files are preserved unchanged for reference:
 
-1. Excluded all identities in the original catalogue and Batches 003, 004-A and 004-B, using exact names plus normalised aliases (macrons, spelling variants and documented alias pairs).
-2. Removed generic/rank-only entries, major Boruto-era protagonists, obvious filler categories and non-character entries.
-3. Kept candidates with usable metadata: rank, affiliation, clan, title, classification or debut. This yielded 284 metadata-rich candidates.
-4. Ranked by documented metadata richness and selected the top 100, with attention to specialist coverage (sensor, medical, Anbu, clan, swordsman, team/command roles).
+- `data/naruto_batch_005_original_claude_evaluation.json`
+- `data/naruto_batch_005_original_evaluation_details.json`
+- `data/naruto_batch_005_original_review_notes.md`
 
-This is an evidence-limited expansion, not a claim that every selected character has deep combat documentation. Many are minor canon characters. The assignment explicitly tells Claude not to invent feats and to prefer low-confidence/Held outcomes where evidence is thin.
+Their placeholder ratings have **not** been imported into any playable catalogue. The copies are byte-identical to the supplied Downloads files.
 
-### Identity checks
+## 2. Corrective research method
 
-- Exact source-page names were preferred over normalised matching. This caught a collision where `Kosuke` (Kirigakure Anbu, `dattebayo:695`) could be wrongly matched to `Kōsuke` (messenger toad, `dattebayo:697`). The correct Kiri-nin is selected; the toad is not.
-- `Nishi (sensor)` is a Boruto-era Konoha sensor/Jōnin and is retained for specialist coverage rather than treated as generic filler.
-- `Third Mizukage`, `Mizunoto`, `Shin` and similar terse names refer to distinct source character pages, not generic rank labels.
-- No duplicate identities were included in the final 100.
+1. Reused the existing stable character IDs, catalogue mappings and validated artwork from Stage 01. No artwork or catalogue identity work was repeated unnecessarily.
+2. Fetched 284 eligible Naruto Fandom character pages through the MediaWiki API and produced cleaned, sectioned digests plus raw wikitext. Canonical chapter/episode/databook strings were retained from the raw page text.
+3. Researched 156 candidates: the original 100 plus 56 non-duplicate Naruto-era replacement candidates from the same eligible pool.
+4. Applied a strict gate:
+   - **RESEARCH_READY** — at least one actually demonstrated technique, combat action, mission function or concrete specialist capability, plus a traceable inspected-secondary source.
+   - **PARTIAL_RESEARCH** — specific detail exists but important demonstrated-use information is missing or vague.
+   - **INSUFFICIENT_EVIDENCE** — only metadata, reputation, appearance, personality or generic statements.
+5. Excluded adaptation-only evidence by default under `NARUTO-CANON-0.1` unless the same capability had a verified manga chapter or databook reference.
+6. Checked every retained canonical reference against the inspected page text. Formatting differences such as doubled apostrophes and “pages” versus “page” were normalised, but a bare number elsewhere in the article was not accepted as proof. In final records, 16 unsupported reference strings were dropped.
+7. Rebuilt the catalogue and research package from only research-ready candidates, then revalidated artwork for the final set.
 
-## 3. Research quality and evidence
+No primary manga chapter, databook page or anime episode was directly opened in this stage. Fandom pages are treated as inspected secondary sources; chapter/databook references on those pages are leads, not primary quotations.
 
-Each research record contains factual metadata only: identity, aliases, debut, rank, classification, affiliation, clan, titles, status, team/occupation and evidence leads. No individual feat was invented or inferred as fact.
+## 3. Actual research coverage
 
-| Evidence level | Count | Meaning |
-|---|---:|---|
-| `inspected_secondary` | 2 | Fandom character page directly inspected during Stage 01; primary citations on that page were not opened. |
-| `search_result_summary` | 98 | Dattebayo-derived metadata from the existing catalogue; source page not directly inspected in Stage 01. |
+| Metric | Actual result |
+|---|---:|
+| Candidates researched | 156 |
+| Original candidates researched | 100 |
+| Replacement candidates researched | 56 |
+| Initially RESEARCH_READY | 87 |
+| PARTIAL_RESEARCH | 31 |
+| INSUFFICIENT_EVIDENCE | 38 |
+| Final research-ready candidates | **62** |
+| Original candidates retained | 35 |
+| Replacement candidates selected | 27 |
+| Original candidates removed | 65 |
+| Unresolved candidates preserved | 94 |
+| Target of 100 reached | No — no padding used |
 
-Directly inspected secondary pages:
+The final research package contains **150 demonstrated ability records** across 62 candidates. **39 of 62** records carry canonical chapter/episode/databook references checked against the inspected page text; all 62 carry a traceable source URL. The remaining 23 have only the inspected character page as a source locator.
 
-- **Kosuke** (`dattebayo:695`): Kirigakure Anbu; page cites Fourth Databook p.207 and *Naruto* chapters 604–605 / *Shippūden* episode 345. The page states he was killed during Obito’s rampage and implies kenjutsu from his sword.
-- **Nishi (sensor)** (`dattebayo:901`): Konoha sensor/Jōnin; page cites *Boruto* chapter 39 and anime episode 205 credits, and describes monitoring Kawaki and Boruto.
+Capability coverage includes 35 offensive, 24 defensive/durability, 18 speed/mobility, 27 leadership, 57 tactical, 17 stealth/infiltration, 52 support/control and 7 medical/healing summaries. Coverage is uneven and does not imply that every character has every capability.
 
-No primary manga chapter, databook page or anime episode was directly inspected in Stage 01. All chapter/databook references are leads, not verified primary quotations. Wiki/Fandom material is Tier 4 under the framework and cannot by itself establish a rating.
+## 4. Candidate quality and exclusions
 
-## 4. Artwork preparation
+### Excluded from the final package
 
-The existing image pipeline validated and downloaded artwork:
+- **38** insufficient-evidence original/replacement candidates: metadata, reputation or generic prose only.
+- **31** partial-research candidates: one duty or vague capability without sufficient demonstrated use.
+- **23** adaptation-only research-ready candidates: demonstrated ability existed, but only in anime/game/movie material with no verified manga chapter or databook reference. Examples include Yoshino Nara and Ensui Nara.
+- **1** continuity exclusion: **Shin Uchiha** (`dattebayo:1309`) is a Boruto-era arc antagonist whose clone group creates an identity and ECV ambiguity. It is preserved as unresolved, not permanently deleted.
+- **1** artwork exclusion: **Musai** (`dattebayo:855`) had a source image URL returning HTTP 404 and no single-character infobox image on the inspected page; a two-character group image was not substituted.
 
-- **104 images total**: 103 from the original source URLs plus one corrected URL.
-- **104 valid**, 0 invalid, 0 missing, 0 duplicates.
-- **100/100 candidates have at least one valid image**; four candidates have two valid images.
+Some research-ready candidates were not selected because better-documented replacements scored higher; they remain in the unresolved file without placeholder ratings. All 94 unresolved cases are in `data/naruto_batch_005_unresolved_candidates.json` with their gate status, origin and reason.
 
-Two source issues were found and resolved:
+### Identity and continuity decisions
 
-1. `Nishi (sensor)` source URL `.../f/f5/Nishi.png` returned HTTP 404. The manifest now uses `.../b/b2/Nishi_Infobox.png`, taken from the directly inspected character page.
-2. `Kosuke` was initially mis-mapped to `Kōsuke` because normalised names collapsed. Correcting exact-name matching restored the valid `.../d/d0/Kosuke.png` image.
+- `Kosuke` (`dattebayo:695`) is the Kirigakure Anbu. The inspected page only says Anbu status is “presumably” skilled and that a sword implies kenjutsu; he is unresolved rather than rated from implication.
+- `Kōsuke` the messenger toad was never selected. Macron/spelling similarity is not an identity merge.
+- `Shin` (`dattebayo:1094`) is Sai’s Root brother and is distinct from Shin Uchiha. He remains research-ready based on demonstrated kenjutsu, taijutsu against Anbu clones and reincarnation-war actions.
+- `Nishi (sensor)` (`dattebayo:901`) remains as a Boruto-era sensor/Jōnin with an explicit ECV and no verified chapter citation; she is traceable but is not treated as a Naruto-era combat anchor.
+- `Enma` remains `manual_identity_mapping_required`; it is not a permanent exclusion and is not one of the 62.
 
-The per-image manifest records URL, source, status, dimensions, format, bytes, SHA-256 hash, local validated path, source accessibility, identity-review status, usage permissions and any error. **No publication permission was granted or claimed**; all rights remain “source-dependent; review before publication”. Artwork binaries are gitignored and were not committed.
+## 5. Artwork
 
-## 5. Calibration
+After the final research gate, the revised catalogue was revalidated:
 
-`naruto_batch_005_calibration.json` was derived from five local evaluation datasets. It separates:
+- **63 images total**, 63 valid, 0 invalid, 0 missing, 0 duplicates.
+- **62/62 candidates** have at least one validated image; one candidate has two.
+- Per-image manifest records URL, source, status, dimensions, format, bytes, SHA-256 hash, local path, accessibility, identity-review status and usage permissions.
+- Rights remain **source-dependent; review before publication**. No publication permission was granted or claimed.
 
-- **reviewed_reference**: 20 Draft anchors, tiered R1 (6), R2 (7), R3 (7). They are local review references, not Approved records.
-- **fit_reference**: the same anchors with Power values withheld, for the Fit-first pass.
-- **power_reference**: the same anchors with Power values, opened only after Fit is fixed.
-- **preliminary/disputed**: 93 non-anchor bulk drafts and an 18-name disputed watchlist. These are not anchors.
-- **held_excluded**: 49 unique names held in any inspected snapshot, excluded from every rating example even where a later file promoted them to Draft.
+Artwork confirms the selected source record only; it is not ability evidence.
 
-Source counts are non-unique because the expansion file integrates 003/004 records. Nothing in the calibration is labelled approved, production-ready or publication-ready.
+## 6. Pipeline improvement
 
-## 6. Unresolved cases and handoff constraints
+New and updated scripts now keep the five completion concepts separate:
 
-- **Claude evaluation has not been supplied.** Integration into any production or evaluated dataset is intentionally not started.
-- **Evidence depth is uneven.** Most records have only metadata-level evidence. High Fit/Power values must not be produced from rank, clan, affiliation or popularity alone.
-- **Primary verification remains outstanding.** Claude should independently verify any feat used above the lower evidence bands, especially for disputed ECVs, conditional abilities and high ratings.
-- **Enma is not a permanent exclusion.** Enma appears in prior Batch 004-B review/evaluation files but has no exact Dattebayo catalogue record and was unmatched during expansion integration. The research file and calibration both flag Enma as `manual_identity_mapping_required`. Resolve the identity manually before any future addition; do not fold Enma into Batch 005 by assumption.
-- **No approval path has been executed.** All future Claude output must remain Draft/review until the owner explicitly approves it.
+- `scripts/batch_005_quality.py` — substantive-field detection, research-ready validation, staged completion report builder.
+- `scripts/validate_batch_005_quality.py` — writes `data/naruto_batch_005_completeness_report.json`.
+- `scripts/build_batch_005_corrected.py` — rebuilds the package from gated research only.
+- `scripts/write_batch_005_artwork_exclusions.py` — records artwork failures for the build.
+- `scripts/prepare_batch_005.py` — now marks its output `INSUFFICIENT_EVIDENCE` and reports `research_ready=0`; it can no longer be mistaken for a Claude-ready package.
+- `tests/test_batch_005_research_quality.py` — focused gate tests.
 
-## 7. Reproduction
+The completeness report currently records:
 
-```powershell
-python -m scripts.prepare_batch_005
-python -m scripts.validate_naruto_images --catalogue data/naruto_batch_005_catalogue.json --output-dir data/naruto_images --report data/naruto_batch_005_image_manifest.json --concurrency 8
-python -m scripts.finalize_batch_005
-python -m pytest tests -q
-```
+- catalogue: complete
+- artwork: complete
+- research gate: complete, with 62 research-ready records
+- evaluation: not complete
+- publication: not ready
 
-`finalize_batch_005.py` must be run after image validation: it converts the validation summary into the per-image manifest and refreshes `image_status` in the research package.
+Fields containing only “not recorded”, “unknown”, rank/affiliation/clan/debut boilerplate, “Claude should…” or similar placeholders no longer count as substantive research.
 
-## 8. Commit traceability
+## 7. Deliverables
 
-Stage 01 package commit on `content/naruto-batch-005`: `7a38d111866581bd79ba9058dfc6b222cf8a28c8`.
+- `data/naruto_batch_005_research.json` — 62 research-ready candidates, no ratings.
+- `data/naruto_batch_005_catalogue.json` — updated 62-candidate catalogue.
+- `data/naruto_batch_005_unresolved_candidates.json` — 94 unresolved/excluded cases.
+- `data/naruto_batch_005_selection_summary.json` — actual counts and exclusions.
+- `data/naruto_batch_005_completeness_report.json` — five-stage completion status.
+- `data/naruto_batch_005_claude_assignment.md` — revised self-contained assignment.
+- `data/naruto_batch_005_change_log.json` — concise change log.
+- `docs/NARUTO_BATCH_005_RESEARCH_REPORT.md` — this report.
+- Preserved original evaluation files listed in section 1.
 
-The hash is recorded in a documentation-only follow-up commit so that it refers to a real package commit rather than a self-referential hash.
+## 8. Remaining limitations
+
+- Evidence is secondary-source based; no primary chapter/databook/anime verification was performed.
+- 23 of 62 records have no canonical ref beyond the source page URL.
+- 11 of 62 records describe an anime-only or adaptation-sensitive ECV; Claude must state the ECV and avoid cross-version composites.
+- Low-evidence minors remain low-confidence even after passing the gate.
+- Claude must perform the first real evaluation. No placeholder Power 1 or Fit 0 from the preserved evaluation is a rating decision.
+
+## 9. Verification
+
+- Focused quality tests: **7 passed**.
+- Full suite result: **167 passed**.
+- Stage 01B package commit: `PENDING_PACKAGE_COMMIT`.
+
+The test line and commit are populated after verification so the report refers to real results and a real commit.
