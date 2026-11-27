@@ -103,6 +103,6 @@ python -m pytest tests -q
 
 ## 8. Commit traceability
 
-Stage 01 package commit on `content/naruto-batch-005`: `PENDING_PACKAGE_COMMIT`.
+Stage 01 package commit on `content/naruto-batch-005`: `7a38d111866581bd79ba9058dfc6b222cf8a28c8`.
 
-The report hash line is populated after the package commit so that the recorded value refers to a real pushed commit rather than a self-referential hash.
+The hash is recorded in a documentation-only follow-up commit so that it refers to a real package commit rather than a self-referential hash.
