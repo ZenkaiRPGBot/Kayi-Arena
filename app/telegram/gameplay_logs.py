@@ -1,6 +1,6 @@
-"""Dedicated Kayi Arena Gameplay Logs (Part VII — ARENA_LOG_CHANNEL_ID).
+"""Dedicated Kayi Arena Gameplay Logs (Arena Logs 2.0 — ARENA_LOG_CHANNEL_ID).
 
-Sends structured, non-blocking HTML match logs to a dedicated private Telegram
+Sends compact, self-contained HTML match logs to a dedicated private Telegram
 channel without exposing secrets, blocking gameplay, or polluting restart logs.
 """
 
@@ -27,6 +27,7 @@ from app.matches import ManagedMatch, MatchOutcomeReason
 from app.resolution import MatchupWinner
 from app.telegram.constants import (
     MAX_MESSAGE_LENGTH,
+    ROLE_ICONS,
     ROLE_ORDER,
     SECTION_SEPARATOR,
     STATUS_DEFEAT,
@@ -35,6 +36,7 @@ from app.telegram.constants import (
     STATUS_TIMEOUT,
     STATUS_VICTORY,
     to_bold_serif_upper,
+    universe_icon,
 )
 
 logger = logging.getLogger(__name__)
@@ -151,77 +153,27 @@ class GameplayLogger:
         return False
 
     def _timestamp_str(self) -> str:
-        return self.clock().astimezone(IST).strftime("%Y-%m-%d %I:%M:%S %p IST")
+        return self.clock().astimezone(IST).strftime("%d %b %Y · %I:%M:%S %p IST")
 
     @staticmethod
-    def _group_lines(
+    def _group_line(
         *,
         chat_id: str,
         group_title: str | None,
-        group_username: str | None,
         group_link: str | None = None,
-    ) -> list[str]:
+    ) -> str:
         title_str = _esc(group_title) if group_title else "Unknown Group"
         if group_link:
             title_str = f'<a href="{_esc(group_link)}">{title_str}</a>'
-        username_str = f"@{_esc(group_username.lstrip('@'))}" if group_username else "Not available"
-        return [
-            f"<b>{to_bold_serif_upper('GROUP INFO')}</b>",
-            "",
-            f"▪ <b>Group:</b> {title_str}",
-            f"▪ <b>Group ID:</b> <code>{_esc(chat_id)}</code>",
-            f"▪ <b>Username:</b> {username_str}",
-        ]
+        return f"<b>Group:</b> {title_str} (<code>{_esc(chat_id)}</code>)"
 
     async def log_match_started(
         self,
         match: ManagedMatch,
-        *,
-        universe_name: str,
-        player_names: Mapping[str, str],
-        player_usernames: Mapping[str, str] | None = None,
-        chat_id: str,
-        group_title: str | None = None,
-        group_username: str | None = None,
-        group_link: str | None = None,
+        **_: object,
     ) -> bool:
-        p1_id, p2_id = match.players
-        p1_m = _mention(p1_id, player_names.get(p1_id))
-        p2_m = _mention(p2_id, player_names.get(p2_id))
-        mode_str = "Ranked" if match.game_mode == "ranked" else "Friendly"
-        starter_id = match.draft_snapshot.starting_player_id or p1_id
-        starter_m = _mention(starter_id, player_names.get(starter_id))
-
-        lines = [
-            f"<b>📋 {to_bold_serif_upper('MATCH LOG')}</b> · #MATCH_STARTED",
-            "",
-            f"◆ <b>Match ID:</b> <code>{_esc(match.match_id)}</code>",
-            f"◆ <b>Challenge ID:</b> <code>{_esc(match.challenge_id)}</code>",
-            f"◆ <b>Universe:</b> {_esc(universe_name)}",
-            f"◆ <b>Mode:</b> {mode_str}",
-            f"◆ <b>Dataset:</b> <code>{_esc(match.dataset_version)}</code>",
-            "",
-            SECTION_SEPARATOR,
-            "",
-            *self._group_lines(
-                chat_id=chat_id,
-                group_title=group_title,
-                group_username=group_username,
-                group_link=group_link,
-            ),
-            "",
-            f"<b>{to_bold_serif_upper('PLAYERS')}</b>",
-            "",
-            f"🔵 {p1_m} · <b>User ID:</b> <code>{_esc(p1_id)}</code>",
-            f"🔴 {p2_m} · <b>User ID:</b> <code>{_esc(p2_id)}</code>",
-            f"▪ <b>Starting Player:</b> {starter_m}",
-            "",
-            f"<i>{_esc(self._timestamp_str())}</i>",
-        ]
-        return await self._send_text(
-            "\n".join(lines),
-            dedup_key=f"MATCH_STARTED:{match.match_id}",
-        )
+        """Deprecated in Arena Logs 2.0: match-start channel notifications are disabled."""
+        return False
 
     async def log_match_terminal(
         self,
@@ -235,6 +187,7 @@ class GameplayLogger:
         group_username: str | None = None,
         group_link: str | None = None,
     ) -> bool:
+        del group_username  # Arena Logs 2.0 omits separate username line
         outcome = match.outcome
         if outcome is None:
             return False
@@ -245,18 +198,32 @@ class GameplayLogger:
             MatchOutcomeReason.NORMAL_DRAW,
         }:
             tag = "#COMPLETED"
+            header = f"<b>📋 {to_bold_serif_upper('MATCH COMPLETED')}</b> · {tag}"
         elif outcome.reason is MatchOutcomeReason.VOLUNTARY_FORFEITURE:
             tag = "#FORFEITED"
+            header = f"<b>🏳️ {to_bold_serif_upper('MATCH FORFEITED')}</b> · {tag}"
         elif outcome.reason is MatchOutcomeReason.INACTIVITY_VICTORY:
             tag = "#INACTIVITY"
+            header = f"<b>⌛ {to_bold_serif_upper('INACTIVITY VICTORY')}</b> · {tag}"
         elif outcome.reason is MatchOutcomeReason.MUTUAL_INACTIVITY_ABANDONMENT:
             tag = "#ABANDONED"
+            header = f"<b>🚫 {to_bold_serif_upper('MATCH ABANDONED')}</b> · {tag}"
         else:
-            tag = "#ERROR"
+            return await self.log_error(
+                match_id=match.match_id,
+                context="Terminal match resolution",
+                error_name=outcome.reason.value,
+                chat_id=chat_id,
+                group_title=group_title,
+                group_link=group_link,
+                state_note="Match terminated",
+                dedup_key=f"TERMINAL:{match.match_id}:#ERROR",
+            )
 
         p1_id, p2_id = match.players
         p1_m = _mention(p1_id, player_names.get(p1_id))
         p2_m = _mention(p2_id, player_names.get(p2_id))
+        u_icon = universe_icon(match.universe_id)
         mode_str = "Ranked" if match.game_mode == "ranked" else "Friendly"
         duration_str = _format_duration_hms(max(0.0, match.updated_at - match.created_at))
 
@@ -281,127 +248,139 @@ class GameplayLogger:
             p1_status = p2_status = STATUS_DRAW
 
         lines = [
-            f"<b>📋 {to_bold_serif_upper('MATCH LOG')}</b> · {tag}",
+            header,
             "",
             f"◆ <b>Match ID:</b> <code>{_esc(match.match_id)}</code>",
-            f"◆ <b>Challenge ID:</b> <code>{_esc(match.challenge_id)}</code>",
-            f"◆ <b>Universe:</b> {_esc(universe_name)}",
-            f"◆ <b>Mode:</b> {mode_str}",
-            f"◆ <b>Dataset:</b> <code>{_esc(match.dataset_version)}</code>",
+            f"{u_icon} {_esc(universe_name)} · {mode_str} · {duration_str}",
             "",
             SECTION_SEPARATOR,
             "",
-            *self._group_lines(
-                chat_id=chat_id,
-                group_title=group_title,
-                group_username=group_username,
-                group_link=group_link,
-            ),
-            "",
-            f"<b>{to_bold_serif_upper('PLAYERS')}</b>",
+            self._group_line(chat_id=chat_id, group_title=group_title, group_link=group_link),
             "",
         ]
 
         res = outcome.resolution
-        p1_lines = [
-            f"🔵 {p1_m} 〔{p1_status}〕",
-            f"▪ <b>User ID:</b> <code>{_esc(p1_id)}</code>",
-        ]
-        p2_lines = [
-            f"🔴 {p2_m} 〔{p2_status}〕",
-            f"▪ <b>User ID:</b> <code>{_esc(p2_id)}</code>",
-        ]
         if res is not None:
-            p1_lines.append(f"▪ <b>Team score:</b> {res.summary.total_player_1}/700")
-            p2_lines.append(f"▪ <b>Team score:</b> {res.summary.total_player_2}/700")
-        p1_lines.append(f"▪ <b>Skips used:</b> {p1_skips_used}/2 · <b>Extensions:</b> {p1_ext_used}")
-        p2_lines.append(f"▪ <b>Skips used:</b> {p2_skips_used}/2 · <b>Extensions:</b> {p2_ext_used}")
-        lines.extend(p1_lines + [""] + p2_lines)
-
-        lines.extend(["", SECTION_SEPARATOR, "", f"<b>{to_bold_serif_upper('ROLE ASSIGNMENTS')}</b>", ""])
-        if res is not None:
-            for m in res.matchups:
+            decided_by_label = {
+                MatchOutcomeReason.NORMAL_MATCHUP_COUNT: "Role wins",
+                MatchOutcomeReason.NORMAL_COMBINED_SCORE: "Total team score",
+                MatchOutcomeReason.NORMAL_DRAW: "Equal role wins and team scores",
+            }.get(outcome.reason, "Role wins")
+            lines.extend(
+                [
+                    f"🔵 <b>{p1_m}</b> 〔{p1_status}〕 · <code>{_esc(p1_id)}</code>",
+                    f"▸ <b>Score:</b> {res.summary.total_player_1}/700 · <b>Roles won:</b> {res.summary.wins_player_1}",
+                    f"▸ <b>Skips:</b> {p1_skips_used}/2 · <b>Extensions:</b> {p1_ext_used}",
+                    "",
+                    f"🔴 <b>{p2_m}</b> 〔{p2_status}〕 · <code>{_esc(p2_id)}</code>",
+                    f"▸ <b>Score:</b> {res.summary.total_player_2}/700 · <b>Roles won:</b> {res.summary.wins_player_2}",
+                    f"▸ <b>Skips:</b> {p2_skips_used}/2 · <b>Extensions:</b> {p2_ext_used}",
+                    "",
+                    f"▸ <b>Drawn roles:</b> {res.summary.draws}",
+                    f"▸ <b>Decided by:</b> {decided_by_label}",
+                    "",
+                    SECTION_SEPARATOR,
+                    "",
+                    f"<b>{to_bold_serif_upper('ROLE ASSIGNMENTS')}</b>",
+                    "",
+                ]
+            )
+            for idx, m in enumerate(res.matchups):
+                if idx > 0:
+                    lines.append("")
+                role_title = m.role.title()
+                r_icon = ROLE_ICONS.get(role_title, "🎭")
                 c1 = char_lookup.get(m.player_1.character_id)
                 c2 = char_lookup.get(m.player_2.character_id)
-                c1_name = c1.name if c1 is not None else m.player_1.character_id
-                c2_name = c2.name if c2 is not None else m.player_2.character_id
+                c1_name = _esc(c1.name if c1 is not None else m.player_1.character_id)
+                c2_name = _esc(c2.name if c2 is not None else m.player_2.character_id)
+                s1 = m.player_1.score
+                s2 = m.player_2.score
                 if m.winner is MatchupWinner.PLAYER_1:
-                    role_note = f" ({_esc(player_names.get(p1_id, 'P1'))})"
+                    left_str = f"<b>〔{c1_name} · {s1}〕</b>"
+                    right_str = f"{c2_name} · {s2}"
                 elif m.winner is MatchupWinner.PLAYER_2:
-                    role_note = f" ({_esc(player_names.get(p2_id, 'P2'))})"
+                    left_str = f"{c1_name} · {s1}"
+                    right_str = f"<b>〔{c2_name} · {s2}〕</b>"
                 else:
-                    role_note = f" ({STATUS_DRAW})"
+                    left_str = f"{c1_name} · {s1}"
+                    right_str = f"{c2_name} · {s2}"
+                lines.append(f"{r_icon} <b>{_esc(role_title)}:</b> {left_str} — {right_str}")
+        else:
+            f1 = sum(1 for r in ROLE_ORDER if match.public_view.teams[p1_id].get(r) is not None)
+            f2 = sum(1 for r in ROLE_ORDER if match.public_view.teams[p2_id].get(r) is not None)
+            lines.extend(
+                [
+                    f"🔵 <b>{p1_m}</b> 〔{p1_status}〕 · <code>{_esc(p1_id)}</code>",
+                    f"▸ <b>Assigned:</b> {f1}/7 · <b>Skips:</b> {p1_skips_used}/2 · <b>Extensions:</b> {p1_ext_used}",
+                    "",
+                    f"🔴 <b>{p2_m}</b> 〔{p2_status}〕 · <code>{_esc(p2_id)}</code>",
+                    f"▸ <b>Assigned:</b> {f2}/7 · <b>Skips:</b> {p2_skips_used}/2 · <b>Extensions:</b> {p2_ext_used}",
+                    "",
+                ]
+            )
+            if tag == "#FORFEITED":
+                forfeiter_id = outcome.forfeiting_player_id or ""
+                forfeiter_m = _mention(forfeiter_id, player_names.get(forfeiter_id))
+                lines.append(f"▸ <b>Reason:</b> {forfeiter_m} surrendered.")
+            elif tag == "#INACTIVITY":
+                inactive_id = outcome.inactive_player_id or ""
+                winner_id = outcome.winner_id or ""
+                inactive_m = _mention(inactive_id, player_names.get(inactive_id))
+                winner_m = _mention(winner_id, player_names.get(winner_id))
                 lines.extend(
                     [
-                        f"<b>✦ {_esc(m.role.title())}</b>{role_note}",
-                        f"{p1_m} — {_esc(c1_name)} ({m.player_1.score})",
-                        f"{p2_m} — {_esc(c2_name)} ({m.player_2.score})",
-                        "",
+                        f"▸ <b>Reason:</b> {inactive_m}'s turn expired.",
+                        f"▸ <b>Decision:</b> Victory claimed by {winner_m}.",
                     ]
                 )
-        else:
+            else:
+                lines.extend(
+                    [
+                        "▸ <b>Reason:</b> Response window expired.",
+                        "▸ <b>Result:</b> No win or loss recorded.",
+                    ]
+                )
+
+            role_rows: list[str] = []
             for role in ROLE_ORDER:
                 cid1 = match.public_view.teams[p1_id].get(role)
                 cid2 = match.public_view.teams[p2_id].get(role)
                 if cid1 is None and cid2 is None:
                     continue
-                c1_name = char_lookup[cid1].name if cid1 and cid1 in char_lookup else (cid1 or "—")
-                c2_name = char_lookup[cid2].name if cid2 and cid2 in char_lookup else (cid2 or "—")
+                r_icon = ROLE_ICONS.get(role, "🎭")
+                c1_name = _esc(
+                    char_lookup[cid1].name if cid1 and cid1 in char_lookup else (cid1 or "Unassigned")
+                )
+                c2_name = _esc(
+                    char_lookup[cid2].name if cid2 and cid2 in char_lookup else (cid2 or "Unassigned")
+                )
+                role_rows.append(f"{r_icon} <b>{_esc(role)}:</b> {c1_name} — {c2_name}")
+
+            if role_rows:
                 lines.extend(
                     [
-                        f"<b>✦ {_esc(role)}</b>",
-                        f"{p1_m} — {_esc(c1_name)}",
-                        f"{p2_m} — {_esc(c2_name)}",
+                        "",
+                        SECTION_SEPARATOR,
+                        "",
+                        f"<b>{to_bold_serif_upper('ROLE ASSIGNMENTS')}</b>",
                         "",
                     ]
                 )
-            if not any(
-                match.public_view.teams[pid].get(r) is not None
-                for pid in (p1_id, p2_id)
-                for r in ROLE_ORDER
-            ):
-                lines.extend(["<i>No characters assigned.</i>", ""])
+                for idx, row in enumerate(role_rows):
+                    if idx > 0:
+                        lines.append("")
+                    lines.append(row)
 
-        lines.extend([SECTION_SEPARATOR, "", f"<b>{to_bold_serif_upper('CONCLUSION')}</b>", ""])
-        if res is not None:
-            if outcome.winner_id:
-                winner_str = _mention(outcome.winner_id, player_names.get(outcome.winner_id))
-            else:
-                winner_str = STATUS_DRAW
-            reason_label = {
-                MatchOutcomeReason.NORMAL_MATCHUP_COUNT: "Role wins",
-                MatchOutcomeReason.NORMAL_COMBINED_SCORE: "Total team score tiebreaker",
-                MatchOutcomeReason.NORMAL_DRAW: "Exact draw",
-            }.get(outcome.reason, outcome.reason.value)
-            lines.extend(
-                [
-                    f"▪ <b>Winner:</b> {winner_str}",
-                    f"▪ <b>Final score:</b> {res.summary.wins_player_1} — {res.summary.wins_player_2}",
-                    f"▪ <b>Drawn roles:</b> {res.summary.draws}",
-                    f"▪ <b>Duration:</b> {duration_str}",
-                    f"▪ <b>Reason:</b> {_esc(reason_label)}",
-                ]
-            )
-        else:
-            winner_str = (
-                _mention(outcome.winner_id, player_names.get(outcome.winner_id))
-                if outcome.winner_id
-                else "None"
-            )
-            reason_label = {
-                MatchOutcomeReason.VOLUNTARY_FORFEITURE: "Forfeit",
-                MatchOutcomeReason.INACTIVITY_VICTORY: "Turn timeout",
-                MatchOutcomeReason.MUTUAL_INACTIVITY_ABANDONMENT: "Match abandoned (mutual inactivity)",
-            }.get(outcome.reason, outcome.reason.value)
-            lines.extend(
-                [
-                    f"▪ <b>Winner:</b> {winner_str}",
-                    f"▪ <b>Duration:</b> {duration_str}",
-                    f"▪ <b>Reason:</b> {_esc(reason_label)}",
-                ]
-            )
-
-        lines.extend(["", f"<i>{_esc(self._timestamp_str())}</i>"])
+        lines.extend(
+            [
+                "",
+                SECTION_SEPARATOR,
+                "",
+                f"<b>Dataset:</b> <code>{_esc(match.dataset_version)}</code>",
+                f"<i>{_esc(self._timestamp_str())}</i>",
+            ]
+        )
         return await self._send_text(
             "\n".join(lines),
             dedup_key=f"TERMINAL:{match.match_id}:{tag}",
@@ -417,30 +396,45 @@ class GameplayLogger:
         chat_id: str,
         group_title: str | None = None,
         group_username: str | None = None,
+        group_link: str | None = None,
+        stage: str = "",
         detail: str = "",
     ) -> bool:
-        tag = "#RECOVERED" if succeeded else "#RECOVERY_FAILED"
+        del group_username  # Arena Logs 2.0 omits separate username line
         req_m = _mention(requester_id, player_names.get(requester_id))
-        lines = [
-            f"<b>📋 {to_bold_serif_upper('MATCH LOG')}</b> · {tag}",
-            "",
-            f"◆ <b>Match ID:</b> <code>{_esc(match.match_id)}</code>",
-            f"◆ <b>Requested by:</b> {req_m} (<code>{_esc(requester_id)}</code>)",
-            f"◆ <b>Generation:</b> {match.generation}",
-            "",
-            *self._group_lines(
-                chat_id=chat_id,
-                group_title=group_title,
-                group_username=group_username,
-            ),
-        ]
-        if detail:
-            lines.extend(["", f"▪ <b>Detail:</b> {_esc(detail)}"])
-        lines.extend(["", f"<i>{_esc(self._timestamp_str())}</i>"])
-        return await self._send_text(
-            "\n".join(lines),
-            dedup_key=f"{tag}:{match.match_id}:{match.generation}",
+        group_line = self._group_line(
+            chat_id=chat_id, group_title=group_title, group_link=group_link
         )
+        if succeeded:
+            lines = [
+                f"<b>🔄 {to_bold_serif_upper('MATCH RECOVERED')}</b> · #RECOVERED",
+                "",
+                f"◆ <b>Match ID:</b> <code>{_esc(match.match_id)}</code>",
+                "",
+                group_line,
+                "",
+                f"<b>Requested by:</b> {req_m} (<code>{_esc(requester_id)}</code>)",
+                "",
+                f"<i>{_esc(self._timestamp_str())}</i>",
+            ]
+            dedup_key = f"#RECOVERED:{match.match_id}:{match.generation}"
+        else:
+            lines = [
+                f"<b>⚠️ {to_bold_serif_upper('RECOVERY FAILED')}</b> · #RECOVERY_FAILED",
+                "",
+                f"◆ <b>Match ID:</b> <code>{_esc(match.match_id)}</code>",
+                "",
+                group_line,
+                f"<b>Requested by:</b> {req_m} (<code>{_esc(requester_id)}</code>)",
+                "",
+                f"▸ <b>Stage:</b> {_esc(stage or 'Match recovery')}",
+                f"▸ <b>Reason:</b> {_esc(detail or 'Telegram API request failed')}",
+                "▸ <b>State:</b> Match preserved; recovery incomplete",
+                "",
+                f"<i>{_esc(self._timestamp_str())}</i>",
+            ]
+            dedup_key = f"#RECOVERY_FAILED:{match.match_id}:{match.generation}"
+        return await self._send_text("\n".join(lines), dedup_key=dedup_key)
 
     async def log_error(
         self,
@@ -448,19 +442,32 @@ class GameplayLogger:
         match_id: str | None = None,
         context: str,
         error_name: str,
+        chat_id: str | None = None,
+        group_title: str | None = None,
+        group_link: str | None = None,
+        state_note: str | None = None,
+        dedup_key: str | None = None,
     ) -> bool:
         lines = [
-            f"<b>📋 {to_bold_serif_upper('MATCH LOG')}</b> · #ERROR",
+            f"<b>⚠️ {to_bold_serif_upper('GAMEPLAY ERROR')}</b> · #ERROR",
             "",
         ]
         if match_id:
             lines.append(f"◆ <b>Match ID:</b> <code>{_esc(match_id)}</code>")
+        if chat_id:
+            if match_id:
+                lines.append("")
+            lines.append(
+                self._group_line(chat_id=chat_id, group_title=group_title, group_link=group_link)
+            )
         lines.extend(
             [
-                f"▪ <b>Context:</b> {_esc(context)}",
-                f"▪ <b>Error:</b> <code>{_esc(error_name)}</code>",
                 "",
-                f"<i>{_esc(self._timestamp_str())}</i>",
+                f"▸ <b>Operation:</b> {_esc(context)}",
+                f"▸ <b>Error:</b> <code>{_esc(error_name)}</code>",
             ]
         )
-        return await self._send_text("\n".join(lines))
+        if state_note:
+            lines.append(f"▸ <b>State:</b> {_esc(state_note)}")
+        lines.extend(["", f"<i>{_esc(self._timestamp_str())}</i>"])
+        return await self._send_text("\n".join(lines), dedup_key=dedup_key)

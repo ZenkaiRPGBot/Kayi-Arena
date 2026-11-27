@@ -686,19 +686,6 @@ class ArenaTelegramCoordinator:
             bump_generation=False,
         )
         self.schedule_turn_timeout(match)
-        try:
-            await self.gameplay_logger.log_match_started(
-                match,
-                universe_name=u_name,
-                player_names=names,
-                player_usernames=self._player_usernames,
-                chat_id=state.chat_id,
-                group_title=self.chat_title(state.chat_id),
-                group_username=self.chat_username(state.chat_id),
-                group_link=self.build_group_link(state.chat_id),
-            )
-        except Exception:
-            logger.warning("Failed logging #MATCH_STARTED for %s", match.match_id)
         return state
 
     async def sync_match_ui(
@@ -1099,8 +1086,9 @@ class ArenaTelegramCoordinator:
                         player_names=names,
                         chat_id=target_chat_id,
                         group_title=self.chat_title(target_chat_id),
-                        group_username=self.chat_username(target_chat_id),
-                        detail="Failed sending replacement Draft Board.",
+                        group_link=self.build_group_link(target_chat_id),
+                        stage="Draft Board restoration",
+                        detail="Telegram API request failed.",
                     )
                 except Exception:
                     pass
@@ -1134,8 +1122,9 @@ class ArenaTelegramCoordinator:
                         player_names=names,
                         chat_id=target_chat_id,
                         group_title=self.chat_title(target_chat_id),
-                        group_username=self.chat_username(target_chat_id),
-                        detail="Draft Board sent but Action Card creation failed.",
+                        group_link=self.build_group_link(target_chat_id),
+                        stage="Action Card restoration",
+                        detail="Telegram API request failed.",
                     )
                 except Exception:
                     pass
@@ -1172,7 +1161,8 @@ class ArenaTelegramCoordinator:
                         player_names=names,
                         chat_id=target_chat_id,
                         group_title=self.chat_title(target_chat_id),
-                        group_username=self.chat_username(target_chat_id),
+                        group_link=self.build_group_link(target_chat_id),
+                        stage="Persistence commit",
                         detail="Failed persisting replacement message IDs.",
                     )
                 except Exception:
@@ -1211,7 +1201,7 @@ class ArenaTelegramCoordinator:
                     player_names=names,
                     chat_id=target_chat_id,
                     group_title=self.chat_title(target_chat_id),
-                    group_username=self.chat_username(target_chat_id),
+                    group_link=self.build_group_link(target_chat_id),
                 )
             except Exception:
                 pass

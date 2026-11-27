@@ -544,6 +544,7 @@ async def test_gameplay_logger_formats_dedups_and_isolates_failures() -> None:
 
     logger_inst = GameplayLogger(bot, channel_id=-100999888777)
     names = {"101": "Obito", "202": "Kiyomi"}
+    # Arena Logs 2.0: Match Started channel notification is disabled
     ok1 = await logger_inst.log_match_started(
         match,
         universe_name="Naruto",
@@ -551,19 +552,8 @@ async def test_gameplay_logger_formats_dedups_and_isolates_failures() -> None:
         chat_id="-1001234567890",
         group_title="Chulbuli Duniya",
     )
-    assert ok1 is True
-    assert "#MATCH_STARTED" in bot.sent_messages[-1]["text"]
-    assert "<code>101</code>" in bot.sent_messages[-1]["text"]
-
-    # Duplicate #MATCH_STARTED for same match is suppressed
-    ok_dup = await logger_inst.log_match_started(
-        match,
-        universe_name="Naruto",
-        player_names=names,
-        chat_id="-1001234567890",
-        group_title="Chulbuli Duniya",
-    )
-    assert ok_dup is False
+    assert ok1 is False
+    assert len(bot.sent_messages) == 0
 
     # Failure isolation (TelegramForbiddenError never raises)
     async def _raise_forbidden(**_kwargs: Any) -> Any:
