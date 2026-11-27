@@ -6,14 +6,21 @@
 
 ---
 
-## 1. Pre-Implementation Crash-Consistency Fix
+## 1. Pre-Implementation & Final Crash-Consistency Fix
 
-- **Commit `e5f5e62` + CodeRabbit follow-up fix in `app/persistence/mongo_store.py`:**
-  - `accept_challenge_and_create_match()` writes `"pending_commit": True` on the match document before inserting `active_player_locks` and saving the `accepted` challenge, clearing `pending_commit` to `False` only after all steps succeed.
-  - If an error occurs after `save_challenge()` succeeds, the handler attempts to roll back the challenge to `open`; if challenge rollback fails, the `pending_commit=True` match and locks are preserved for startup reconciliation rather than leaving a dangling `accepted` challenge.
+- **Commits `e5f5e62`, `4fa80da`, and final verification fix in `app/persistence/mongo_store.py`:**
+  - `accept_challenge_and_create_match()` writes `"pending_commit": True` and numeric epoch `"pending_since"` on the match document before inserting `active_player_locks` and saving the `accepted` challenge, clearing `pending_commit` to `False` only after all steps succeed.
+  - If an error occurs after `save_challenge()` may have run, the handler checks whether `pending_commit=False` already persisted (preserving the committed match on uncertain write timeouts); otherwise it attempts an ownership-filtered challenge rollback and, if rollback fails, marks `pending_since = 0.0` while preserving `pending_commit=True` for recovery.
   - `load_active_matches()` excludes `pending_commit: True` matches.
-  - `reconcile_orphan_locks()` guards each recovery step on `"pending_commit": True`, reopens the matching `accepted` challenge and cleans up partial locks first, and deletes the pending match last (preventing dangling `accepted` challenges or cross-process lock removal on concurrently committed matches).
-  - Verified in `tests/test_mongo_and_migration.py::test_mongo_shared_client_without_uri_and_orphan_lock_recovery`.
+  - `reconcile_orphan_locks(*, min_age_seconds: float = 0.0)` guards each recovery step on `"pending_commit": True`, reopens the matching `accepted` challenge and cleans up partial locks first, and deletes the pending match last. Live lock-conflict reconciliation uses `min_age_seconds=30.0` so an in-progress match creation in another process is never mistaken for an abandoned operation.
+  - Verified in `tests/test_mongo_and_migration.py::test_mongo_shared_client_without_uri_and_orphan_lock_recovery` and `test_pending_commit_live_conflict_uncertain_writes_and_same_second_publish`.
+
+## 1A. Dataset Version Collision Fix
+
+- **`app/database/models.py`, `app/database/__init__.py`, `app/database/mongo_repository.py`, `app/telegram/handlers/admin.py`:**
+  - Added `generate_dataset_version(universe_id, kind)` using nanosecond-derived millisecond timestamps + 6-hex `uuid4` suffix (`{universe_id}-{prod|test}-{ts_ms}-{suffix}`), eliminating `VERSION_EXISTS` collisions for multiple publications within the same second.
+  - Updated `MongoCharacterDatabase.publish_dataset()` to assign strictly monotonic `seq` values (`max(time.time(), max_seq + 1e-6)`) and projected `seq` / `dataset_version` queries.
+  - Verified in `tests/test_admin_operations.py` and `tests/test_mongo_and_migration.py`.
 
 ---
 
@@ -78,6 +85,11 @@
     2. *Minor* (`app/persistence/mongo_store.py`): Guard recovery steps on `pending_commit=True` — **Fixed**.
     3. *Minor* (`app/persistence/mongo_store.py`): Delete pending match only after challenge reopen — **Fixed**.
     4. *Minor* (`app/telegram/keyboards.py:54`): Keep `config.support_url` in Support menu — **Skipped intentionally** per owner-approved Module 01 specification (no support chat exists yet; Support menu uses `Report a Bug`, `Suggest an Idea`, and `« Back`).
-- **Tests:**
-  - Targeted post-fix suites: `tests/test_mongo_and_migration.py` (5 passed), `tests/test_telegram_ui.py` + `tests/test_media_and_video.py` (25 passed).
-  - Full suite (`pytest tests -v`): 148 passed, 1 pre-existing failure (`tests/test_admin_operations.py::test_admin_workflows_universe_character_dataset_match_maintenance_broadcast_backup` due to 1-second timestamp collision when two dataset publications run within the same second).
+- **CodeRabbit CLI (`coderabbit review --agent --uncommitted` on final fixes):**
+  - 4 findings reported and all 4 fixed:
+    1. *Major* (`app/persistence/mongo_store.py`): Use numeric epoch timestamps for `pending_since` age checks (with ISO string fallback) — **Fixed**.
+    2. *Major* (`tests/test_mongo_and_migration.py`): Import `DatasetKind` in test scope — **Fixed**.
+    3. *Major* (`tests/test_mongo_and_migration.py`): Fix `PersistenceConflictError` import path — **Fixed**.
+    4. *Trivial* (`app/database/mongo_repository.py`): Project `seq` / `dataset_version` fields in `publish_dataset` and `get_latest_published_version` — **Fixed**.
+- **Final Regression Suite (`pytest tests -v`):**
+  - **150 passed, 0 failed** (including all UI 2.0, MongoDB, SQLite, admin, scoring, draft, and 100k simulation tests).

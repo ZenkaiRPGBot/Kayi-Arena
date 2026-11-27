@@ -22,7 +22,14 @@ from aiogram.types import (
     User,
 )
 
-from app.database import EvaluationStatus, HELD_NARUTO_NAMES, ImageMetadata, ImageValidationStatus, RARITY_TIERS
+from app.database import (
+    EvaluationStatus,
+    HELD_NARUTO_NAMES,
+    ImageMetadata,
+    ImageValidationStatus,
+    RARITY_TIERS,
+    generate_dataset_version,
+)
 from app.engine import TerminationReason
 from app.scoring import DatasetKind, SCORING_ROLES
 from app.telegram.constants import STYLE_DANGER, STYLE_PRIMARY, STYLE_SUCCESS
@@ -919,7 +926,7 @@ async def handle_admin_callback(
             for c in coordinator.db.list_characters(universe_id=uid)
             if c.name not in HELD_NARUTO_NAMES and c.power is not None and c.fit is not None
         ]
-        ver = f"{uid}-test-{int(time.time())}"
+        ver = generate_dataset_version(uid, DatasetKind.TEST)
         try:
             manifest, _health = coordinator.db.publish_dataset(
                 universe_id=uid,
@@ -975,7 +982,7 @@ async def handle_admin_callback(
 
     if action == "dpubc" and args:
         uid = args[0]
-        ver = f"{uid}-prod-{int(time.time())}"
+        ver = generate_dataset_version(uid, DatasetKind.PRODUCTION)
         try:
             manifest, _health = coordinator.db.publish_dataset(
                 universe_id=uid,

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -320,7 +321,7 @@ class MongoMatchStore:
         if existing_locks:
             lock_mids = list({str(l.get("match_id", "")) for l in existing_locks if l.get("match_id")})
             if lock_mids and self._db["matches"].find_one({"_id": {"$in": lock_mids}, "pending_commit": True}) is not None:
-                self.reconcile_orphan_locks()
+                self.reconcile_orphan_locks(min_age_seconds=30.0)
                 existing_locks = list(
                     self._db["active_player_locks"].find({"_id": {"$in": list(match.players)}})
                 )
@@ -329,12 +330,14 @@ class MongoMatchStore:
                 f"Active match lock conflict: player {existing_locks[0]['_id']} already locked."
             )
         now = _utc_now()
+        now_epoch = time.time()
         acquired: list[str] = []
         match_written = False
         challenge_attempted = False
         try:
             doc = _serialize_match(match)
             doc["pending_commit"] = True
+            doc["pending_since"] = now_epoch
             self._db["matches"].replace_one({"_id": match.match_id}, doc, upsert=True)
             match_written = True
             for pid in match.players:
@@ -387,6 +390,14 @@ class MongoMatchStore:
                     self._db["matches"].delete_many(
                         {"_id": match.match_id, "pending_commit": True}
                     )
+            elif match_written:
+                try:
+                    self._db["matches"].update_one(
+                        {"_id": match.match_id, "pending_commit": True},
+                        {"$set": {"pending_since": 0.0}},
+                    )
+                except Exception:
+                    pass
             raise PersistenceConflictError(
                 f"Active match lock conflict for match {match.match_id}: {exc}"
             ) from exc
@@ -434,11 +445,27 @@ class MongoMatchStore:
             for d in self._db["active_player_locks"].find({})
         }
 
-    def reconcile_orphan_locks(self) -> int:
+    def reconcile_orphan_locks(self, *, min_age_seconds: float = 0.0) -> int:
         """Clean up incomplete (pending_commit) matches and orphan active_player_locks."""
         removed = 0
+        now_iso = _utc_now()
+        now_epoch = time.time()
+        in_progress_mids: set[str] = set()
         for inc_doc in list(self._db["matches"].find({"pending_commit": True})):
             inc_mid = str(inc_doc.get("match_id", inc_doc.get("_id", "")))
+            pending_since = inc_doc.get("pending_since")
+            if min_age_seconds > 0.0 and pending_since is not None:
+                pending_epoch: float | None = None
+                if isinstance(pending_since, (int, float)):
+                    pending_epoch = float(pending_since)
+                elif isinstance(pending_since, str) and pending_since:
+                    try:
+                        pending_epoch = datetime.fromisoformat(pending_since).timestamp()
+                    except ValueError:
+                        pending_epoch = None
+                if pending_epoch is not None and (now_epoch - pending_epoch) < min_age_seconds:
+                    in_progress_mids.add(inc_mid)
+                    continue
             inc_cid = inc_doc.get("challenge_id")
             if inc_cid and self._db["matches"].find_one({"_id": inc_mid, "pending_commit": True}) is not None:
                 self._db["challenges"].update_one(
@@ -452,7 +479,7 @@ class MongoMatchStore:
                             "status": ChallengeStatus.OPEN.value,
                             "accepted_by": None,
                             "match_id": None,
-                            "updated_at": _utc_now(),
+                            "updated_at": now_iso,
                         }
                     },
                 )
@@ -466,7 +493,7 @@ class MongoMatchStore:
         active_by_id = {m.match_id: m for m in active_matches}
         for lock_doc in list(self._db["active_player_locks"].find({})):
             mid = str(lock_doc.get("match_id", ""))
-            if mid not in active_by_id:
+            if mid not in active_by_id and mid not in in_progress_mids:
                 live_doc = self._db["matches"].find_one(
                     {
                         "_id": mid,

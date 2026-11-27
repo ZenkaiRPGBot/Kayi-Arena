@@ -23,7 +23,7 @@ from app.persistence import (
     create_match_store,
     migrate_sqlite_to_mongo,
 )
-from app.scoring import SCORING_ROLES
+from app.scoring import DatasetKind, SCORING_ROLES
 from app.telegram.config import BotConfig
 
 
@@ -59,7 +59,7 @@ class _FakeCollection:
                 return dict(doc)
         return None
 
-    def find(self, query: dict[str, Any]) -> list[dict[str, Any]]:
+    def find(self, query: dict[str, Any], projection: dict[str, Any] | None = None) -> list[dict[str, Any]]:
         return [dict(doc) for doc in self.docs.values() if self._matches(doc, query)]
 
     def replace_one(self, query: dict[str, Any], doc: dict[str, Any], upsert: bool = False) -> None:
@@ -355,3 +355,129 @@ async def test_mongo_shared_client_without_uri_and_orphan_lock_recovery(tmp_path
     restored_chl, _ = mstore.load_challenge("chl-crashed")
     assert restored_chl.status.value == "open"
     assert restored_chl.match_id is None
+
+
+@pytest.mark.asyncio
+async def test_pending_commit_live_conflict_uncertain_writes_and_same_second_publish() -> None:
+    from app.database import generate_dataset_version
+
+    fake_db = _FakeMongoDatabase()
+
+    class _FakeClient:
+        def __getitem__(self, name: str) -> _FakeMongoDatabase:
+            return fake_db
+
+    mdb = MongoCharacterDatabase(database_name="kayi_arena", client=_FakeClient())
+    mstore = MongoMatchStore(database_name="kayi_arena", client=_FakeClient())
+    mdb.create_universe("naruto", "Naruto", active=True)
+    for idx in range(1, 15):
+        c = mdb.add_character(
+            character_id=f"c_{idx}",
+            universe_id="naruto",
+            name=f"Ninja {idx}",
+            canonical_version="Base",
+            rarity="Common",
+            power=3,
+            fit={r: 3 for r in SCORING_ROLES},
+            image=ImageMetadata(url_or_ref=f"https://cdn.example.org/{idx}.png", status=ImageValidationStatus.VERIFIED),
+        )
+        mdb.submit_for_review(c.character_id)
+        mdb.approve_character(c.character_id)
+
+    # 1. Multiple publications within the same second on MongoDB get distinct versions & strict ordering
+    v1 = generate_dataset_version("naruto", DatasetKind.PRODUCTION)
+    v2 = generate_dataset_version("naruto", DatasetKind.PRODUCTION)
+    assert v1 != v2
+    m1, _ = mdb.publish_dataset("naruto", v1, kind=DatasetKind.PRODUCTION)
+    m2, _ = mdb.publish_dataset("naruto", v2, kind=DatasetKind.PRODUCTION)
+    assert mdb.get_latest_published_version("naruto", kind=DatasetKind.PRODUCTION) == v2
+    assert mdb.load_manifest(v1).content_hash == m1.content_hash
+    assert mdb.load_manifest(v2).content_hash == m2.content_hash
+
+    # 2. Live lock-conflict reconciliation MUST NOT disrupt a fresh in-progress pending_commit in another process
+    mgr = MatchManager(mdb, store=mstore)
+    _, chl_inprog = await mgr.handle_draft_command(
+        player_id="1001", chat_id="-200", universe_arg="naruto", reply_to_user_id="1002"
+    )
+    import time as _time
+    fake_db["matches"].insert_one(
+        {
+            "_id": "match-other-proc-live",
+            "match_id": "match-other-proc-live",
+            "challenge_id": "chl-other-proc",
+            "status": "drafting",
+            "pending_commit": True,
+            "pending_since": _time.time(),
+            "player_1_id": "1001",
+            "player_2_id": "1003",
+        }
+    )
+    fake_db["active_player_locks"].insert_one(
+        {"_id": "1001", "player_id": "1001", "match_id": "match-other-proc-live"}
+    )
+    # Attempting to accept a challenge for player 1001 must fail with PersistenceConflictError, NOT delete the in-progress match/lock
+    with pytest.raises(PersistenceConflictError):
+        mstore.accept_challenge_and_create_match(
+            chl_inprog.challenge,
+            (await mgr.accept_challenge(challenge_id=chl_inprog.challenge.challenge_id, player_id="1002")).match
+            if False
+            else _make_dummy_match("match-competing", chl_inprog.challenge.challenge_id, ("1001", "1002"), v2, mdb),
+        )
+    assert fake_db["matches"].find_one({"_id": "match-other-proc-live"}) is not None
+    assert "1001" in mstore.load_active_player_locks()
+
+    # 3. Uncertain final update (pending_commit=False persisted before exception): match, locks, and challenge stay intact
+    fake_db["active_player_locks"].delete_many({})
+    fake_db["matches"].delete_many({})
+    _, chl_unc = await mgr.handle_draft_command(
+        player_id="2001", chat_id="-200", universe_arg="naruto", reply_to_user_id="2002"
+    )
+    dummy_match = _make_dummy_match("match-uncertain", chl_unc.challenge.challenge_id, ("2001", "2002"), v2, mdb)
+    orig_update = fake_db["matches"].update_one
+
+    def _timeout_after_commit(flt, upd, *args, **kwargs):
+        orig_update(flt, upd, *args, **kwargs)
+        raise TimeoutError("Simulated PyMongo ack timeout after pending_commit=False")
+
+    fake_db["matches"].update_one = _timeout_after_commit  # type: ignore[method-assign]
+    mstore.accept_challenge_and_create_match(chl_unc.challenge, dummy_match)
+    fake_db["matches"].update_one = orig_update  # type: ignore[method-assign]
+    assert [m.match_id for m in mstore.load_active_matches()] == ["match-uncertain"]
+    assert mstore.load_active_player_locks().get("2001") == "match-uncertain"
+    assert mstore.load_active_player_locks().get("2002") == "match-uncertain"
+
+
+def _make_dummy_match(match_id: str, challenge_id: str, players: tuple[str, str], dver: str, db: MongoCharacterDatabase):
+    from app.engine import start_draft
+    from app.matches import ManagedMatch, MatchLifecycleStatus, TimeoutPolicy
+
+    catalog, _, _ = db.export_draft_catalog(dver)
+    res = start_draft(
+        match_id=match_id,
+        players=players,
+        universe_id="naruto",
+        mode="ranked",
+        catalog=catalog,
+        rarity_weights=db.get_universe("naruto").rarity_weights,
+        dataset_version=dver,
+        forced_starter=players[0],
+    )
+    return ManagedMatch(
+        match_id=match_id,
+        challenge_id=challenge_id,
+        players=players,
+        universe_id="naruto",
+        game_mode="ranked",
+        dataset_version=dver,
+        status=MatchLifecycleStatus.DRAFTING,
+        draft_snapshot=res.snapshot,
+        public_view=res.public_view,
+        generation=1,
+        turn_started_at=1.0,
+        turn_deadline_at=121.0,
+        turn_number_at_start=0,
+        extensions_remaining={players[0]: 1, players[1]: 1},
+        timeout_policy=TimeoutPolicy(),
+        created_at=1.0,
+        updated_at=1.0,
+    )

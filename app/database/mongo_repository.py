@@ -644,6 +644,14 @@ class MongoCharacterDatabase:
             scored_outputs=scored_outputs,
         )
 
+        existing_docs = list(
+            self._db["published_datasets"].find(
+                {"universe_id": universe_id, "kind": kind.value},
+                projection={"seq": 1},
+            )
+        )
+        max_seq = max((float(d.get("seq", 0.0)) for d in existing_docs), default=0.0)
+        seq = max(time.time(), max_seq + 1e-6)
         self._db["published_datasets"].replace_one(
             {"_id": dver},
             {
@@ -658,7 +666,7 @@ class MongoCharacterDatabase:
                 "rarities": {e.character_id: e.rarity for e in entries},
                 "created_at": ts,
                 "predecessor_version": predecessor_version,
-                "seq": time.time(),
+                "seq": seq,
             },
             upsert=True,
         )
@@ -710,7 +718,10 @@ class MongoCharacterDatabase:
         kind: DatasetKind = DatasetKind.PRODUCTION,
     ) -> str | None:
         docs = list(
-            self._db["published_datasets"].find({"universe_id": universe_id, "kind": kind.value})
+            self._db["published_datasets"].find(
+                {"universe_id": universe_id, "kind": kind.value},
+                projection={"dataset_version": 1, "seq": 1},
+            )
         )
         if not docs:
             return None

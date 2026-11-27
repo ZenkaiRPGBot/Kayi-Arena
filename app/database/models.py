@@ -4,10 +4,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
+import time
 from types import MappingProxyType
 from typing import Any, Mapping
+import uuid
 
-from app.scoring import SCORING_ROLES
+from app.scoring import DatasetKind, SCORING_ROLES
 
 RARITY_TIERS: tuple[str, ...] = (
     "Common",
@@ -25,6 +27,14 @@ DEFAULT_RARITY_WEIGHTS: dict[str, float] = {
     "Epic": 13.0,
     "Legendary": 5.0,
 }
+
+
+def generate_dataset_version(universe_id: str, kind: DatasetKind) -> str:
+    """Generate a collision-resistant immutable dataset version identifier."""
+    tag = "prod" if kind is DatasetKind.PRODUCTION else "test"
+    ts_ms = time.time_ns() // 1_000_000
+    suffix = uuid.uuid4().hex[:6]
+    return f"{universe_id}-{tag}-{ts_ms}-{suffix}"
 
 
 class EvaluationStatus(str, Enum):

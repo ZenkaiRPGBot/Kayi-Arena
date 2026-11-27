@@ -218,6 +218,16 @@ async def test_admin_workflows_universe_character_dataset_match_maintenance_broa
     latest_prod = db.get_latest_published_version("naruto", kind=DatasetKind.PRODUCTION)
     assert latest_prod is not None
     assert db.load_manifest(latest_prod).kind is DatasetKind.PRODUCTION
+
+    # Multiple testing publications within the same second must also succeed without VERSION_EXISTS
+    await dp.feed_update(
+        bot, _cb_upd(61, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:dpubt:naruto")
+    )
+    assert "Published preliminary testing dataset" in bot.edited_messages[-1]["text"]
+    await dp.feed_update(
+        bot, _cb_upd(62, chat_id=1000, chat_type="private", msg_id=panel_id, user=admin, data="adm:dpubt:naruto")
+    )
+    assert "Published preliminary testing dataset" in bot.edited_messages[-1]["text"]
     coordinator.config = cfg
     assert mgr.get_match(match.match_id).dataset_version == "naruto-v1"
 
