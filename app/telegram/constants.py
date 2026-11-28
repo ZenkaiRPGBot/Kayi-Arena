@@ -102,6 +102,24 @@ def role_button_label(role: str) -> str:
     return f"{icon} {to_bold_sans(role)}"
 
 
+_SMALL_CAPS_ALPHA = str.maketrans(
+    "abcdefghijklmnopqrstuvwxyz",
+    "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ",
+)
+
+
+def to_small_caps_digits(text: str) -> str:
+    """Convert ASCII lowercase/uppercase letters to small-caps and digits to monospace."""
+    out: list[str] = []
+    for ch in text.lower():
+        code = ord(ch)
+        if 0x30 <= code <= 0x39:
+            out.append(chr(0x1D7F6 + (code - 0x30)))
+        else:
+            out.append(ch.translate(_SMALL_CAPS_ALPHA))
+    return "".join(out)
+
+
 def role_label(role: str) -> str:
     icon = ROLE_ICONS.get(role, "🎭")
     return f"{icon} {role}"

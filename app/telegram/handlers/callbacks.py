@@ -304,6 +304,47 @@ async def handle_arena_callback(
         await answer_callback_safe(query)
         return
 
+    if action == "pf":
+        if len(args) < 3:
+            await answer_callback_safe(query, "Invalid profile action.", show_alert=True)
+            return
+        sid = args[0]
+        rev = _parse_int(args[1])
+        subaction = args[2]
+        arg = args[3] if len(args) >= 4 else ""
+        session = coordinator.get_profile_session(sid)
+        if session is None:
+            await answer_callback_safe(
+                query,
+                "This profile session has expired. Use /profile or /history to open a fresh view.",
+                show_alert=True,
+            )
+            return
+        if user_id != session.requester_id:
+            await answer_callback_safe(
+                query,
+                "Only the player who opened this profile can navigate it.",
+                show_alert=True,
+            )
+            return
+        if session.closed or chat_id != session.chat_id or msg_id != session.message_id or rev != session.revision:
+            await answer_callback_safe(
+                query,
+                "This profile interface is outdated. Use /profile or /history to open a fresh view.",
+                show_alert=True,
+            )
+            return
+        ok, alert_msg = await coordinator.handle_profile_action(
+            session=session,
+            subaction=subaction,
+            arg=arg,
+            chat_id=chat_id,
+            msg_id=msg_id,
+            expected_revision=rev,
+        )
+        await answer_callback_safe(query, alert_msg, show_alert=bool(alert_msg and not ok))
+        return
+
     if action == "pr":
         target_id = user_id if (not args or args[0] == "self") else args[0]
         profile = await coordinator.stats_provider.get_profile(target_id)

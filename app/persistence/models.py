@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Mapping
+from typing import Any, Mapping, Sequence
 
 from app.engine import DraftSnapshot, TerminalRecord, TerminationReason
 from app.matches.models import (
@@ -250,4 +250,81 @@ def display_state_from_dict(data: Mapping[str, Any] | None) -> MatchDisplayState
         media_ref=data.get("media_ref"),
         card_is_photo=bool(data.get("card_is_photo", False)),
         extension_granted_note=bool(data.get("extension_granted_note", False)),
+    )
+
+
+COUNTED_HISTORY_STATUSES: frozenset[MatchLifecycleStatus] = frozenset(
+    {
+        MatchLifecycleStatus.COMPLETED,
+        MatchLifecycleStatus.FORFEITED,
+        MatchLifecycleStatus.INACTIVITY_WIN,
+    }
+)
+
+
+@dataclass(frozen=True, slots=True)
+class PlayerStatsSummary:
+    """Authoritative filtered player statistics derived from HistoricalMatchRecord."""
+
+    battles_played: int = 0
+    victories: int = 0
+    defeats: int = 0
+    draws: int = 0
+    win_rate_pct: float | None = None
+    current_streak: int = 0
+    best_streak: int = 0
+    avg_team_score: int | None = None
+    highest_team_score: int | None = None
+
+
+def summarize_player_records(
+    records: Sequence[HistoricalMatchRecord], player_id: str
+) -> PlayerStatsSummary:
+    """Compute victories, defeats, draws, win rate, streaks, and team scores."""
+    counted = [r for r in records if r.status in COUNTED_HISTORY_STATUSES]
+    if not counted:
+        return PlayerStatsSummary()
+
+    ordered = sorted(counted, key=lambda r: (float(r.completed_at), r.match_id))
+    victories = 0
+    defeats = 0
+    draws = 0
+    cur_streak = 0
+    best_streak = 0
+    team_scores: list[int] = []
+
+    for rec in ordered:
+        if rec.winner_id == player_id:
+            victories += 1
+            cur_streak += 1
+            if cur_streak > best_streak:
+                best_streak = cur_streak
+        elif rec.winner_id is not None:
+            defeats += 1
+            cur_streak = 0
+        elif rec.status is MatchLifecycleStatus.COMPLETED:
+            draws += 1
+            cur_streak = 0
+
+        if rec.status is MatchLifecycleStatus.COMPLETED and rec.outcome.resolution is not None:
+            score = (
+                rec.total_player_1 if rec.player_1_id == player_id else rec.total_player_2
+            )
+            if score is not None and 0 <= score <= 700:
+                team_scores.append(int(score))
+
+    battles_played = victories + defeats + draws
+    win_rate = (100.0 * victories / battles_played) if battles_played > 0 else None
+    avg_score = round(sum(team_scores) / len(team_scores)) if team_scores else None
+    high_score = max(team_scores) if team_scores else None
+    return PlayerStatsSummary(
+        battles_played=battles_played,
+        victories=victories,
+        defeats=defeats,
+        draws=draws,
+        win_rate_pct=win_rate,
+        current_streak=cur_streak,
+        best_streak=best_streak,
+        avg_team_score=avg_score,
+        highest_team_score=high_score,
     )

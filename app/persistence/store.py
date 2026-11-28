@@ -23,13 +23,16 @@ from app.matches.models import (
     MessageReference,
 )
 from app.persistence.models import (
+    COUNTED_HISTORY_STATUSES,
     CorruptStateError,
     HistoricalMatchRecord,
     PersistenceError,
+    PlayerStatsSummary,
     display_state_from_dict,
     display_state_to_dict,
     outcome_from_dict,
     outcome_to_dict,
+    summarize_player_records,
     timeout_policy_from_dict,
     timeout_policy_to_dict,
 )
@@ -647,6 +650,99 @@ class SqliteMatchStore:
                 (player_id, player_id, limit, offset),
             ).fetchall()
         return [self._row_to_history(r) for r in rows]
+
+    def query_player_history(
+        self,
+        player_id: str,
+        *,
+        game_mode: str = "ranked",
+        universe_id: str | None = None,
+        limit: int = 5,
+        offset: int = 0,
+    ) -> tuple[list[HistoricalMatchRecord], int]:
+        statuses = tuple(s.value for s in COUNTED_HISTORY_STATUSES)
+        placeholders = ",".join("?" for _ in statuses)
+        where = (
+            f"(player_1_id = ? OR player_2_id = ?) AND game_mode = ? "
+            f"AND status IN ({placeholders})"
+        )
+        params: list[Any] = [player_id, player_id, game_mode, *statuses]
+        if universe_id and universe_id != "all":
+            where += " AND universe_id = ?"
+            params.append(universe_id)
+
+        total_row = self._conn.execute(
+            f"SELECT COUNT(*) AS cnt FROM match_history WHERE {where}",
+            tuple(params),
+        ).fetchone()
+        total = int(total_row["cnt"]) if total_row is not None else 0
+
+        rows = self._conn.execute(
+            f"""
+            SELECT * FROM match_history
+            WHERE {where}
+            ORDER BY completed_at DESC, match_id DESC
+            LIMIT ? OFFSET ?
+            """,
+            (*params, max(1, int(limit)), max(0, int(offset))),
+        ).fetchall()
+        return [self._row_to_history(r) for r in rows], total
+
+    def compute_player_statistics(
+        self,
+        player_id: str,
+        *,
+        game_mode: str = "ranked",
+        universe_id: str | None = None,
+    ) -> PlayerStatsSummary:
+        statuses = tuple(s.value for s in COUNTED_HISTORY_STATUSES)
+        placeholders = ",".join("?" for _ in statuses)
+        where = (
+            f"(player_1_id = ? OR player_2_id = ?) AND game_mode = ? "
+            f"AND status IN ({placeholders})"
+        )
+        params: list[Any] = [player_id, player_id, game_mode, *statuses]
+        if universe_id and universe_id != "all":
+            where += " AND universe_id = ?"
+            params.append(universe_id)
+        rows = self._conn.execute(
+            f"SELECT * FROM match_history WHERE {where} ORDER BY completed_at ASC, match_id ASC",
+            tuple(params),
+        ).fetchall()
+        return summarize_player_records([self._row_to_history(r) for r in rows], player_id)
+
+    def list_player_history_universes(self, player_id: str) -> list[str]:
+        statuses = tuple(s.value for s in COUNTED_HISTORY_STATUSES)
+        placeholders = ",".join("?" for _ in statuses)
+        rows = self._conn.execute(
+            f"""
+            SELECT DISTINCT universe_id FROM match_history
+            WHERE (player_1_id = ? OR player_2_id = ?) AND status IN ({placeholders})
+            ORDER BY universe_id ASC
+            """,
+            (player_id, player_id, *statuses),
+        ).fetchall()
+        return [str(r["universe_id"]) for r in rows]
+
+    def get_match_duration_seconds(self, match_id: str) -> float | None:
+        row = self._conn.execute(
+            "SELECT created_at, updated_at FROM matches WHERE match_id = ?",
+            (match_id,),
+        ).fetchone()
+        if row is None:
+            return None
+        return max(0.0, float(row["updated_at"]) - float(row["created_at"]))
+
+    def get_player_display_names(self, player_ids: list[str] | tuple[str, ...]) -> dict[str, str]:
+        cleaned = [str(pid) for pid in player_ids if pid]
+        if not cleaned:
+            return {}
+        placeholders = ",".join("?" for _ in cleaned)
+        rows = self._conn.execute(
+            f"SELECT player_id, display_name FROM player_profiles WHERE player_id IN ({placeholders})",
+            tuple(cleaned),
+        ).fetchall()
+        return {str(r["player_id"]): str(r["display_name"]) for r in rows}
 
     # ------------------------------------------------------------------
     # Player Profiles & Media Cache

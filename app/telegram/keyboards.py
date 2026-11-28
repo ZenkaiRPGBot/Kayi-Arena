@@ -623,3 +623,308 @@ def build_history_keyboard(
         rows.append(nav)
     rows.append([_btn("« Back to Profile", callback_data=encode_cb("pr", target_id))])
     return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+# ---------------------------------------------------------------------------
+# Player Profile 2.0 Keyboards
+# ---------------------------------------------------------------------------
+
+
+def build_profile_card_keyboard(*, session_id: str, revision: int) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                _btn(
+                    f"📜 {to_bold_sans('History')}",
+                    callback_data=encode_cb("pf", session_id, revision, "hs"),
+                    style=STYLE_PRIMARY,
+                ),
+                _btn(
+                    f"📊 {to_bold_sans('Statistics')}",
+                    callback_data=encode_cb("pf", session_id, revision, "st"),
+                    style=STYLE_PRIMARY,
+                ),
+            ],
+            [
+                _btn(
+                    f"✕ {to_bold_sans('Close')}",
+                    callback_data=encode_cb("pf", session_id, revision, "cl"),
+                    style=STYLE_DANGER,
+                )
+            ],
+        ]
+    )
+
+
+def build_profile_stats_keyboard(
+    *,
+    session_id: str,
+    revision: int,
+    game_mode: str,
+    universe_id: str,
+    universe_label: str,
+) -> InlineKeyboardMarkup:
+    is_ranked = game_mode == "ranked"
+    u_icon = "🌐" if universe_id == "all" else universe_icon(universe_id)
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                _btn(
+                    f"🏆 {to_bold_sans('Ranked')}",
+                    callback_data=encode_cb("pf", session_id, revision, "md", "r"),
+                    style=STYLE_PRIMARY if is_ranked else None,
+                ),
+                _btn(
+                    f"🤝 {to_bold_sans('Friendly')}",
+                    callback_data=encode_cb("pf", session_id, revision, "md", "f"),
+                    style=STYLE_PRIMARY if not is_ranked else None,
+                ),
+            ],
+            [
+                _btn(
+                    f"{u_icon} {to_bold_sans(universe_label)}",
+                    callback_data=encode_cb("pf", session_id, revision, "uv"),
+                )
+            ],
+            [
+                _btn(
+                    f"« {to_bold_sans('Back')}",
+                    callback_data=encode_cb("pf", session_id, revision, "bk"),
+                ),
+                _btn(
+                    f"✕ {to_bold_sans('Close')}",
+                    callback_data=encode_cb("pf", session_id, revision, "cl"),
+                    style=STYLE_DANGER,
+                ),
+            ],
+        ]
+    )
+
+
+def build_profile_universe_keyboard(
+    *,
+    session_id: str,
+    revision: int,
+    universes: Sequence[Universe],
+    selected_universe_id: str,
+    page: int = 0,
+) -> InlineKeyboardMarkup:
+    rows: list[list[InlineKeyboardButton]] = [
+        [
+            _btn(
+                f"🌐 {to_bold_sans('All Universes')}",
+                callback_data=encode_cb("pf", session_id, revision, "us", "all"),
+                style=STYLE_PRIMARY if selected_universe_id == "all" else None,
+            )
+        ]
+    ]
+    total_pages = max(1, (len(universes) + UNIVERSES_PER_PAGE - 1) // UNIVERSES_PER_PAGE)
+    safe_page = max(0, min(page, total_pages - 1))
+    start = safe_page * UNIVERSES_PER_PAGE
+    chunk = universes[start : start + UNIVERSES_PER_PAGE]
+    for i in range(0, len(chunk), 2):
+        row: list[InlineKeyboardButton] = []
+        for offset, u in enumerate(chunk[i : i + 2]):
+            icon = universe_icon(u.universe_id)
+            try:
+                cb_data = encode_cb("pf", session_id, revision, "us", u.universe_id)
+            except ValueError:
+                cb_data = encode_cb("pf", session_id, revision, "us", f"#{start + i + offset}")
+            row.append(
+                _btn(
+                    f"{icon} {to_bold_sans(u.name)}",
+                    callback_data=cb_data,
+                    style=STYLE_PRIMARY if u.universe_id == selected_universe_id else None,
+                )
+            )
+        rows.append(row)
+
+    if total_pages > 1:
+        nav: list[InlineKeyboardButton] = []
+        if safe_page > 0:
+            nav.append(
+                _btn(
+                    f"« {to_bold_sans('Prev')}",
+                    callback_data=encode_cb("pf", session_id, revision, "up", safe_page - 1),
+                    style=STYLE_PRIMARY,
+                )
+            )
+        nav.append(
+            _btn(
+                to_bold_sans(f"{safe_page + 1}/{total_pages}"),
+                callback_data=encode_cb("noop"),
+            )
+        )
+        if safe_page + 1 < total_pages:
+            nav.append(
+                _btn(
+                    f"{to_bold_sans('Next')} »",
+                    callback_data=encode_cb("pf", session_id, revision, "up", safe_page + 1),
+                    style=STYLE_PRIMARY,
+                )
+            )
+        rows.append(nav)
+
+    rows.append(
+        [
+            _btn(
+                f"« {to_bold_sans('Back')}",
+                callback_data=encode_cb("pf", session_id, revision, "bk"),
+            ),
+            _btn(
+                f"✕ {to_bold_sans('Close')}",
+                callback_data=encode_cb("pf", session_id, revision, "cl"),
+                style=STYLE_DANGER,
+            ),
+        ]
+    )
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def build_profile_history_keyboard(
+    *,
+    session_id: str,
+    revision: int,
+    owner_id: str,
+    records: Sequence[object],
+    page: int,
+    total_pages: int,
+    game_mode: str,
+    universe_id: str,
+    universe_label: str,
+) -> InlineKeyboardMarkup:
+    rows: list[list[InlineKeyboardButton]] = []
+    if records:
+        num_row: list[InlineKeyboardButton] = []
+        for idx, rec in enumerate(records):
+            winner_id = getattr(rec, "winner_id", None)
+            if winner_id == owner_id:
+                st = STYLE_SUCCESS
+            elif winner_id is not None:
+                st = STYLE_DANGER
+            else:
+                st = None
+            num_row.append(
+                _btn(
+                    to_bold_sans(str(idx + 1)),
+                    callback_data=encode_cb("pf", session_id, revision, "hm", idx),
+                    style=st,
+                )
+            )
+        rows.append(num_row)
+
+    if total_pages > 1:
+        nav: list[InlineKeyboardButton] = []
+        if page > 0:
+            nav.append(
+                _btn(
+                    f"« {to_bold_sans('Prev')}",
+                    callback_data=encode_cb("pf", session_id, revision, "hp", page - 1),
+                    style=STYLE_PRIMARY,
+                )
+            )
+        nav.append(
+            _btn(
+                to_bold_sans(f"{page + 1}/{total_pages}"),
+                callback_data=encode_cb("noop"),
+            )
+        )
+        if page + 1 < total_pages:
+            nav.append(
+                _btn(
+                    f"{to_bold_sans('Next')} »",
+                    callback_data=encode_cb("pf", session_id, revision, "hp", page + 1),
+                    style=STYLE_PRIMARY,
+                )
+            )
+        rows.append(nav)
+
+    is_ranked = game_mode == "ranked"
+    u_icon = "🌐" if universe_id == "all" else universe_icon(universe_id)
+    rows.append(
+        [
+            _btn(
+                f"🏆 {to_bold_sans('Ranked')}",
+                callback_data=encode_cb("pf", session_id, revision, "md", "r"),
+                style=STYLE_PRIMARY if is_ranked else None,
+            ),
+            _btn(
+                f"🤝 {to_bold_sans('Friendly')}",
+                callback_data=encode_cb("pf", session_id, revision, "md", "f"),
+                style=STYLE_PRIMARY if not is_ranked else None,
+            ),
+        ]
+    )
+    rows.append(
+        [
+            _btn(
+                f"{u_icon} {to_bold_sans(universe_label)}",
+                callback_data=encode_cb("pf", session_id, revision, "uv"),
+            )
+        ]
+    )
+    rows.append(
+        [
+            _btn(
+                f"« {to_bold_sans('Back')}",
+                callback_data=encode_cb("pf", session_id, revision, "bk"),
+            ),
+            _btn(
+                f"✕ {to_bold_sans('Close')}",
+                callback_data=encode_cb("pf", session_id, revision, "cl"),
+                style=STYLE_DANGER,
+            ),
+        ]
+    )
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def build_historical_match_keyboard(
+    *,
+    session_id: str,
+    revision: int,
+    has_breakdown: bool,
+) -> InlineKeyboardMarkup:
+    rows: list[list[InlineKeyboardButton]] = []
+    if has_breakdown:
+        rows.append(
+            [
+                _btn(
+                    to_bold_sans("Battle Breakdown"),
+                    callback_data=encode_cb("pf", session_id, revision, "bd"),
+                    style=STYLE_PRIMARY,
+                )
+            ]
+        )
+    rows.append(
+        [
+            _btn(
+                f"« {to_bold_sans('Back')}",
+                callback_data=encode_cb("pf", session_id, revision, "bk"),
+            ),
+            _btn(
+                f"✕ {to_bold_sans('Close')}",
+                callback_data=encode_cb("pf", session_id, revision, "cl"),
+                style=STYLE_DANGER,
+            ),
+        ]
+    )
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+def build_historical_breakdown_keyboard(*, session_id: str, revision: int) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                _btn(
+                    f"« {to_bold_sans('Back to Result')}",
+                    callback_data=encode_cb("pf", session_id, revision, "bk"),
+                ),
+                _btn(
+                    f"✕ {to_bold_sans('Close')}",
+                    callback_data=encode_cb("pf", session_id, revision, "cl"),
+                    style=STYLE_DANGER,
+                ),
+            ]
+        ]
+    )

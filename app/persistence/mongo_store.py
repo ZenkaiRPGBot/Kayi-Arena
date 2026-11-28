@@ -24,12 +24,15 @@ from app.matches.models import (
     MessageReference,
 )
 from app.persistence.models import (
+    COUNTED_HISTORY_STATUSES,
     HistoricalMatchRecord,
     PersistenceError,
+    PlayerStatsSummary,
     display_state_from_dict,
     display_state_to_dict,
     outcome_from_dict,
     outcome_to_dict,
+    summarize_player_records,
     timeout_policy_from_dict,
     timeout_policy_to_dict,
 )
@@ -538,6 +541,74 @@ class MongoMatchStore:
         docs = list(self._db["match_history"].find(query))
         docs.sort(key=lambda d: float(d.get("completed_at", 0.0)), reverse=True)
         return [_doc_to_history(d) for d in docs[offset : offset + limit]]
+
+    def query_player_history(
+        self,
+        player_id: str,
+        *,
+        game_mode: str = "ranked",
+        universe_id: str | None = None,
+        limit: int = 5,
+        offset: int = 0,
+    ) -> tuple[list[HistoricalMatchRecord], int]:
+        statuses = [s.value for s in COUNTED_HISTORY_STATUSES]
+        query: dict[str, Any] = {
+            "$or": [{"player_1_id": player_id}, {"player_2_id": player_id}],
+            "game_mode": game_mode,
+            "status": {"$in": statuses},
+        }
+        if universe_id and universe_id != "all":
+            query["universe_id"] = universe_id
+        docs = list(self._db["match_history"].find(query))
+        docs.sort(
+            key=lambda d: (float(d.get("completed_at", 0.0)), str(d.get("match_id", ""))),
+            reverse=True,
+        )
+        total = len(docs)
+        return [_doc_to_history(d) for d in docs[offset : offset + limit]], total
+
+    def compute_player_statistics(
+        self,
+        player_id: str,
+        *,
+        game_mode: str = "ranked",
+        universe_id: str | None = None,
+    ) -> PlayerStatsSummary:
+        statuses = [s.value for s in COUNTED_HISTORY_STATUSES]
+        query: dict[str, Any] = {
+            "$or": [{"player_1_id": player_id}, {"player_2_id": player_id}],
+            "game_mode": game_mode,
+            "status": {"$in": statuses},
+        }
+        if universe_id and universe_id != "all":
+            query["universe_id"] = universe_id
+        docs = list(self._db["match_history"].find(query))
+        return summarize_player_records([_doc_to_history(d) for d in docs], player_id)
+
+    def list_player_history_universes(self, player_id: str) -> list[str]:
+        statuses = [s.value for s in COUNTED_HISTORY_STATUSES]
+        docs = list(
+            self._db["match_history"].find(
+                {
+                    "$or": [{"player_1_id": player_id}, {"player_2_id": player_id}],
+                    "status": {"$in": statuses},
+                }
+            )
+        )
+        return sorted({str(d.get("universe_id", "")) for d in docs if d.get("universe_id")})
+
+    def get_match_duration_seconds(self, match_id: str) -> float | None:
+        doc = self._db["matches"].find_one({"_id": match_id})
+        if doc is None:
+            return None
+        return max(0.0, float(doc.get("updated_at", 0.0)) - float(doc.get("created_at", 0.0)))
+
+    def get_player_display_names(self, player_ids: list[str] | tuple[str, ...]) -> dict[str, str]:
+        cleaned = [str(pid) for pid in player_ids if pid]
+        if not cleaned:
+            return {}
+        docs = list(self._db["player_profiles"].find({"_id": {"$in": cleaned}}))
+        return {str(d["player_id"]): str(d["display_name"]) for d in docs if d.get("display_name")}
 
     def upsert_player_profile(
         self, player_id: str, display_name: str, username: str | None = None

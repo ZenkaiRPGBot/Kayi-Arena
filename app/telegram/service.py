@@ -9,13 +9,14 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import secrets
 import time
 from collections import deque
 from dataclasses import dataclass
-from typing import TYPE_CHECKING, Mapping
+from typing import TYPE_CHECKING, Any, Mapping, Sequence
 
 from aiogram import Bot
-from aiogram.types import Message, User
+from aiogram.types import BufferedInputFile, Message, User
 
 from app.database import CharacterDatabase, CharacterEntry, Universe
 from app.engine import DraftPhase
@@ -30,19 +31,30 @@ from app.matches import (
     MatchOperationResult,
     MessageReference,
 )
-from app.persistence.models import StartupRecoveryReport
+from app.persistence.models import HistoricalMatchRecord, PlayerStatsSummary, StartupRecoveryReport
 from app.telegram.config import BotConfig
-from app.telegram.constants import ROLE_ORDER
+from app.telegram.constants import ROLE_ORDER, UNIVERSES_PER_PAGE
 from app.telegram.gameplay_logs import GameplayLogger
 from app.telegram.media import CharacterMediaResolver
+from app.telegram.profile_card import (
+    PlayerCardCache,
+    fetch_telegram_avatar_bytes,
+    render_player_card_async,
+)
 from app.telegram.keyboards import (
     build_awaiting_shuffle_keyboard,
     build_challenge_keyboard,
     build_character_revealed_keyboard,
     build_detailed_results_keyboard,
     build_draft_board_keyboard,
+    build_historical_breakdown_keyboard,
+    build_historical_match_keyboard,
     build_inactivity_keyboard,
     build_match_results_keyboard,
+    build_profile_card_keyboard,
+    build_profile_history_keyboard,
+    build_profile_stats_keyboard,
+    build_profile_universe_keyboard,
 )
 from app.telegram.ports import ProfileStatsProvider, UnavailableStatsProvider
 from app.telegram.safe_api import (
@@ -57,7 +69,13 @@ from app.telegram.texts import (
     render_challenge_card,
     render_detailed_result_page,
     render_draft_board,
+    render_historical_battle_breakdown,
+    render_historical_match_details,
     render_match_results,
+    render_profile_history,
+    render_profile_statistics,
+    render_profile_text_fallback,
+    render_profile_universe_selection,
     render_retired_card_text,
     render_revealed_character_card,
     render_turn_expired_card,
@@ -97,6 +115,28 @@ class MatchUIState:
     card_message_id: int
     card_is_photo: bool = False
     last_action_line: str | None = None
+
+
+@dataclass(slots=True)
+class ProfileSession:
+    """Tracks an isolated, revision-protected Player Profile 2.0 navigation session."""
+
+    session_id: str
+    requester_id: str
+    owner_id: str
+    chat_id: str
+    message_id: int
+    is_photo: bool
+    revision: int = 1
+    screen: str = "card"
+    origin: str = "stats"
+    mode: str = "ranked"
+    universe_id: str = "all"
+    history_page: int = 0
+    univ_page: int = 0
+    selected_match_id: str | None = None
+    page_match_ids: tuple[str, ...] = ()
+    closed: bool = False
 
 
 class ArenaTelegramCoordinator:
@@ -148,6 +188,9 @@ class ArenaTelegramCoordinator:
         self._handbook_illustrations: dict[str, str] = {}
         self._handbook_owners: dict[tuple[str, int], str] = {}
         self._char_browser_filters: dict[str, dict[str, str]] = {}
+        self._profile_card_cache = PlayerCardCache(max_entries=64)
+        self._profile_sessions: dict[str, ProfileSession] = {}
+        self._profile_locks: dict[str, asyncio.Lock] = {}
         self._latency_samples: deque[float] = deque(maxlen=100)
 
     def record_latency_ms(self, ms: float) -> None:
@@ -1342,3 +1385,490 @@ class ArenaTelegramCoordinator:
     async def shutdown(self) -> None:
         for key in list(self._timer_tasks):
             self._cancel_timer(key)
+
+    # ------------------------------------------------------------------
+    # Player Profile 2.0 (Card, Stats, Universe Filter, History, Details)
+    # ------------------------------------------------------------------
+
+    def get_profile_session(self, session_id: str) -> ProfileSession | None:
+        return self._profile_sessions.get(session_id)
+
+    def _profile_lock(self, session_id: str) -> asyncio.Lock:
+        lock = self._profile_locks.get(session_id)
+        if lock is None:
+            lock = asyncio.Lock()
+            self._profile_locks[session_id] = lock
+        return lock
+
+    def _save_profile_session(self, session: ProfileSession) -> None:
+        if len(self._profile_sessions) >= 500:
+            oldest = next(iter(self._profile_sessions))
+            self._profile_sessions.pop(oldest, None)
+            self._profile_locks.pop(oldest, None)
+        self._profile_sessions[session.session_id] = session
+
+    def resolve_player_names(self, player_ids: Sequence[str]) -> dict[str, str]:
+        result: dict[str, str] = {}
+        missing: list[str] = []
+        for pid in player_ids:
+            if not pid:
+                continue
+            first = self._player_first_names.get(pid, "").strip()
+            if first:
+                result[pid] = first
+                continue
+            full = self._player_names.get(pid, "").strip()
+            if full and full != str(pid):
+                result[pid] = full.split()[0]
+                continue
+            missing.append(pid)
+        if missing and self.store is not None and hasattr(self.store, "get_player_display_names"):
+            stored = self.store.get_player_display_names(missing)
+            for pid, disp in stored.items():
+                clean = (disp or "").strip()
+                if clean and clean != str(pid):
+                    result[pid] = clean.split()[0]
+        for pid in player_ids:
+            if pid and pid not in result:
+                result[pid] = "Player"
+        return result
+
+    def profile_universes(self, owner_id: str) -> tuple[Any, ...]:
+        from types import SimpleNamespace
+
+        by_id: dict[str, Any] = {u.universe_id: u for u in self.eligible_universes()}
+        if self.store is not None and hasattr(self.store, "list_player_history_universes"):
+            for uid in self.store.list_player_history_universes(owner_id):
+                if uid and uid not in by_id:
+                    try:
+                        by_id[uid] = self.db.get_universe(uid)
+                    except Exception:
+                        by_id[uid] = SimpleNamespace(
+                            universe_id=uid,
+                            name=uid.replace("_", " ").title(),
+                        )
+        items = list(by_id.values())
+        items.sort(key=lambda u: (u.name.lower(), u.universe_id))
+        return tuple(items)
+
+    def _universe_label_for_profile(self, universe_id: str) -> str:
+        if universe_id == "all":
+            return "All Universes"
+        return self.universe_name(universe_id)
+
+    def _compute_profile_stats(
+        self, owner_id: str, *, game_mode: str = "ranked", universe_id: str = "all"
+    ) -> PlayerStatsSummary:
+        if self.store is not None and hasattr(self.store, "compute_player_statistics"):
+            return self.store.compute_player_statistics(
+                owner_id,
+                game_mode=game_mode,
+                universe_id=None if universe_id == "all" else universe_id,
+            )
+        return PlayerStatsSummary()
+
+    def _history_char_lookup(self, rec: HistoricalMatchRecord) -> dict[str, CharacterEntry]:
+        lookup: dict[str, CharacterEntry] = {}
+        res = rec.outcome.resolution
+        if res is None:
+            return lookup
+        for m in res.matchups:
+            for cid in (m.player_1.character_id, m.player_2.character_id):
+                if cid and cid not in lookup:
+                    entry = self.get_character_entry(cid)
+                    if entry is not None:
+                        lookup[cid] = entry
+        return lookup
+
+    async def _send_profile_card_message(
+        self,
+        *,
+        chat_id: str | int,
+        owner_id: str,
+        session_id: str,
+        revision: int,
+    ) -> tuple[Message | None, bool]:
+        stats = self._compute_profile_stats(owner_id, game_mode="ranked", universe_id="all")
+        owner_name = self.resolve_player_names([owner_id]).get(owner_id, "Player")
+        markup = build_profile_card_keyboard(session_id=session_id, revision=revision)
+
+        try:
+            avatar_bytes = await fetch_telegram_avatar_bytes(self.bot, owner_id, timeout=3.0)
+            key, cached = await render_player_card_async(
+                cache=self._profile_card_cache,
+                player_id=owner_id,
+                name=owner_name,
+                wins=stats.victories,
+                losses=stats.defeats,
+                draws=stats.draws,
+                avatar_bytes=avatar_bytes,
+            )
+            media = (
+                cached.telegram_file_id
+                if cached.telegram_file_id
+                else BufferedInputFile(cached.png_bytes, filename="profile_card.png")
+            )
+            sent, is_photo = await send_photo_or_text_safe(
+                self.bot,
+                chat_id=chat_id,
+                photo=media,
+                caption="",
+                reply_markup=markup,
+            )
+            if sent is not None and is_photo and getattr(sent, "photo", None):
+                self._profile_card_cache.set_file_id(key, sent.photo[-1].file_id)
+            if sent is not None and is_photo:
+                return sent, True
+        except Exception as exc:
+            logger.warning("Profile card render failed for %s: %s", owner_id, type(exc).__name__)
+
+        fallback_text = render_profile_text_fallback(
+            player_id=owner_id, player_name=owner_name, stats=stats
+        )
+        sent_fb = await send_message_safe(
+            self.bot,
+            chat_id=chat_id,
+            text=fallback_text,
+            reply_markup=markup,
+        )
+        return sent_fb, False
+
+    def _build_profile_text_screen(
+        self,
+        session: ProfileSession,
+        *,
+        screen: str,
+        revision: int,
+    ) -> tuple[str, Any, tuple[str, ...]]:
+        owner_id = session.owner_id
+        owner_name = self.resolve_player_names([owner_id]).get(owner_id, "Player")
+        u_label = self._universe_label_for_profile(session.universe_id)
+
+        if screen == "stats":
+            stats = self._compute_profile_stats(
+                owner_id, game_mode=session.mode, universe_id=session.universe_id
+            )
+            text = render_profile_statistics(
+                player_id=owner_id,
+                player_name=owner_name,
+                universe_label=u_label,
+                game_mode=session.mode,
+                stats=stats,
+            )
+            markup = build_profile_stats_keyboard(
+                session_id=session.session_id,
+                revision=revision,
+                game_mode=session.mode,
+                universe_id=session.universe_id,
+                universe_label=u_label,
+            )
+            return text, markup, session.page_match_ids
+
+        if screen == "univ":
+            universes = self.profile_universes(owner_id)
+            total_pages = max(1, (len(universes) + UNIVERSES_PER_PAGE - 1) // UNIVERSES_PER_PAGE)
+            session.univ_page = max(0, min(session.univ_page, total_pages - 1))
+            text = render_profile_universe_selection(
+                player_id=owner_id,
+                player_name=owner_name,
+                selected_label=u_label,
+                game_mode=session.mode,
+                origin=session.origin,
+            )
+            markup = build_profile_universe_keyboard(
+                session_id=session.session_id,
+                revision=revision,
+                universes=universes,
+                selected_universe_id=session.universe_id,
+                page=session.univ_page,
+            )
+            return text, markup, session.page_match_ids
+
+        if screen == "history":
+            per_page = 5
+            records: list[HistoricalMatchRecord] = []
+            total_count = 0
+            if self.store is not None and hasattr(self.store, "query_player_history"):
+                _, total_count = self.store.query_player_history(
+                    owner_id,
+                    game_mode=session.mode,
+                    universe_id=None if session.universe_id == "all" else session.universe_id,
+                    limit=1,
+                    offset=0,
+                )
+            total_pages = max(1, (total_count + per_page - 1) // per_page)
+            session.history_page = max(0, min(session.history_page, total_pages - 1))
+            if total_count > 0 and self.store is not None:
+                records, _ = self.store.query_player_history(
+                    owner_id,
+                    game_mode=session.mode,
+                    universe_id=None if session.universe_id == "all" else session.universe_id,
+                    limit=per_page,
+                    offset=session.history_page * per_page,
+                )
+            opp_ids = [
+                r.player_2_id if r.player_1_id == owner_id else r.player_1_id for r in records
+            ]
+            names = self.resolve_player_names([owner_id, *opp_ids])
+            text = render_profile_history(
+                player_id=owner_id,
+                player_name=owner_name,
+                universe_id=session.universe_id,
+                universe_label=u_label,
+                game_mode=session.mode,
+                records=records,
+                player_names=names,
+            )
+            markup = build_profile_history_keyboard(
+                session_id=session.session_id,
+                revision=revision,
+                owner_id=owner_id,
+                records=records,
+                page=session.history_page,
+                total_pages=total_pages,
+                game_mode=session.mode,
+                universe_id=session.universe_id,
+                universe_label=u_label,
+            )
+            return text, markup, tuple(r.match_id for r in records)
+
+        if screen in {"detail", "breakdown"}:
+            rec = (
+                self.store.get_historical_match(session.selected_match_id)
+                if (self.store is not None and session.selected_match_id)
+                else None
+            )
+            if rec is None:
+                text = "<b>Battle Record Unavailable</b>\n\nThis match record could not be loaded."
+                markup = build_historical_match_keyboard(
+                    session_id=session.session_id, revision=revision, has_breakdown=False
+                )
+                return text, markup, session.page_match_ids
+
+            names = self.resolve_player_names([rec.player_1_id, rec.player_2_id])
+            chars = self._history_char_lookup(rec)
+            if screen == "detail":
+                dur = (
+                    self.store.get_match_duration_seconds(rec.match_id)
+                    if (self.store is not None and hasattr(self.store, "get_match_duration_seconds"))
+                    else None
+                )
+                text = render_historical_match_details(
+                    rec,
+                    universe_name=self.universe_name(rec.universe_id),
+                    player_names=names,
+                    char_lookup=chars,
+                    duration_seconds=dur,
+                )
+                markup = build_historical_match_keyboard(
+                    session_id=session.session_id,
+                    revision=revision,
+                    has_breakdown=(rec.outcome.resolution is not None),
+                )
+            else:
+                text = render_historical_battle_breakdown(
+                    rec, player_names=names, char_lookup=chars
+                )
+                markup = build_historical_breakdown_keyboard(
+                    session_id=session.session_id, revision=revision
+                )
+            return text, markup, session.page_match_ids
+
+        # Fallback text card
+        stats = self._compute_profile_stats(owner_id, game_mode="ranked", universe_id="all")
+        return (
+            render_profile_text_fallback(player_id=owner_id, player_name=owner_name, stats=stats),
+            build_profile_card_keyboard(session_id=session.session_id, revision=revision),
+            session.page_match_ids,
+        )
+
+    async def open_profile_session(
+        self,
+        *,
+        chat_id: int | str,
+        requester_id: str,
+        owner_id: str,
+        start_screen: str = "card",
+    ) -> ProfileSession | None:
+        sid = secrets.token_hex(4)
+        session = ProfileSession(
+            session_id=sid,
+            requester_id=requester_id,
+            owner_id=owner_id,
+            chat_id=str(chat_id),
+            message_id=0,
+            is_photo=(start_screen == "card"),
+            revision=1,
+            screen=start_screen,
+        )
+        if start_screen == "card":
+            sent, is_photo = await self._send_profile_card_message(
+                chat_id=chat_id, owner_id=owner_id, session_id=sid, revision=1
+            )
+            if sent is None:
+                return None
+            session.message_id = sent.message_id
+            session.is_photo = is_photo
+            session.chat_id = str(sent.chat.id)
+        else:
+            text, markup, page_ids = self._build_profile_text_screen(
+                session, screen="history", revision=1
+            )
+            sent = await send_message_safe(
+                self.bot, chat_id=chat_id, text=text, reply_markup=markup
+            )
+            if sent is None:
+                return None
+            session.message_id = sent.message_id
+            session.is_photo = False
+            session.chat_id = str(sent.chat.id)
+            session.page_match_ids = page_ids
+
+        self._save_profile_session(session)
+        return session
+
+    async def handle_profile_action(
+        self,
+        *,
+        session: ProfileSession,
+        subaction: str,
+        arg: str,
+        chat_id: str,
+        msg_id: int,
+        expected_revision: int | None = None,
+    ) -> tuple[bool, str | None]:
+        async with self._profile_lock(session.session_id):
+            if session.closed:
+                return False, "This profile view has been closed."
+            if (
+                chat_id != session.chat_id
+                or msg_id != session.message_id
+                or (expected_revision is not None and expected_revision != session.revision)
+            ):
+                return False, "This profile interface is outdated. Use /profile or /history to open a fresh view."
+
+            if subaction == "cl":
+                session.closed = True
+                session.revision += 1
+                await self._delete_or_strip_message(chat_id, msg_id)
+                return True, None
+
+            target_screen = session.screen
+            if subaction == "st":
+                target_screen = "stats"
+            elif subaction == "hs":
+                target_screen = "history"
+                session.history_page = 0
+            elif subaction == "md":
+                session.mode = "friendly" if arg == "f" else "ranked"
+                if session.screen == "history":
+                    session.history_page = 0
+                target_screen = session.screen
+            elif subaction == "uv":
+                session.origin = session.screen if session.screen in {"stats", "history"} else "stats"
+                session.univ_page = 0
+                target_screen = "univ"
+            elif subaction == "us":
+                if arg.startswith("#"):
+                    try:
+                        uidx = int(arg[1:])
+                    except ValueError:
+                        return False, "Invalid universe selection."
+                    universes = self.profile_universes(session.owner_id)
+                    if uidx < 0 or uidx >= len(universes):
+                        return False, "This universe selection is no longer available."
+                    session.universe_id = universes[uidx].universe_id
+                else:
+                    session.universe_id = arg or "all"
+                if session.origin == "history":
+                    session.history_page = 0
+                target_screen = session.origin
+            elif subaction == "up":
+                try:
+                    session.univ_page = max(0, int(arg))
+                except ValueError:
+                    return False, "Invalid page."
+                target_screen = "univ"
+            elif subaction == "hp":
+                try:
+                    session.history_page = max(0, int(arg))
+                except ValueError:
+                    return False, "Invalid page."
+                target_screen = "history"
+            elif subaction == "hm":
+                try:
+                    idx = int(arg)
+                except ValueError:
+                    return False, "Invalid match selection."
+                if idx < 0 or idx >= len(session.page_match_ids):
+                    return False, "This match selection is no longer available."
+                session.selected_match_id = session.page_match_ids[idx]
+                target_screen = "detail"
+            elif subaction == "bd":
+                if not session.selected_match_id:
+                    return False, "Match details are unavailable."
+                target_screen = "breakdown"
+            elif subaction == "bk":
+                if session.screen == "breakdown":
+                    target_screen = "detail"
+                elif session.screen == "detail":
+                    target_screen = "history"
+                elif session.screen == "univ":
+                    target_screen = session.origin
+                elif session.screen in {"stats", "history"}:
+                    target_screen = "card"
+                else:
+                    return False, None
+            else:
+                return False, "Unknown profile action."
+
+            next_rev = session.revision + 1
+            if target_screen == "card":
+                if not session.is_photo:
+                    sent, is_photo = await self._send_profile_card_message(
+                        chat_id=chat_id,
+                        owner_id=session.owner_id,
+                        session_id=session.session_id,
+                        revision=next_rev,
+                    )
+                    if sent is None:
+                        return False, "Could not restore Player Card. Please try again."
+                    old_msg_id = session.message_id
+                    session.message_id = sent.message_id
+                    session.is_photo = is_photo
+                    session.screen = "card"
+                    session.revision = next_rev
+                    await self._delete_or_strip_message(chat_id, old_msg_id)
+                return True, None
+
+            text, markup, page_ids = self._build_profile_text_screen(
+                session, screen=target_screen, revision=next_rev
+            )
+            if session.is_photo:
+                sent = await send_message_safe(
+                    self.bot, chat_id=chat_id, text=text, reply_markup=markup
+                )
+                if sent is None:
+                    return False, "Could not open view. Please try again."
+                old_msg_id = session.message_id
+                session.message_id = sent.message_id
+                session.is_photo = False
+                session.screen = target_screen
+                session.page_match_ids = page_ids
+                session.revision = next_rev
+                await self._delete_or_strip_message(chat_id, old_msg_id)
+                return True, None
+
+            edited = await edit_message_text_safe(
+                self.bot,
+                chat_id=chat_id,
+                message_id=session.message_id,
+                text=text,
+                reply_markup=markup,
+            )
+            if not edited:
+                return False, "Could not update view. Please try again."
+            session.screen = target_screen
+            session.page_match_ids = page_ids
+            session.revision = next_rev
+            return True, None

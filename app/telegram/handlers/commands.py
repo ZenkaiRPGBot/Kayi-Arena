@@ -330,13 +330,22 @@ async def cmd_list(message: Message, coordinator: ArenaTelegramCoordinator) -> N
 
 
 async def cmd_profile(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
-    player_id = coordinator.register_user(message.from_user)
-    profile = await coordinator.stats_provider.get_profile(player_id)
-    await send_message_safe(
-        coordinator.bot,
+    requester_id = coordinator.register_user(message.from_user)
+    target_user = (
+        message.reply_to_message.from_user
+        if (
+            message.reply_to_message is not None
+            and message.reply_to_message.from_user is not None
+            and not message.reply_to_message.from_user.is_bot
+        )
+        else message.from_user
+    )
+    owner_id = coordinator.register_user(target_user) or requester_id
+    await coordinator.open_profile_session(
         chat_id=message.chat.id,
-        text=render_profile(profile, fallback_name=coordinator.display_name(player_id)),
-        reply_markup=build_profile_keyboard(player_id),
+        requester_id=requester_id,
+        owner_id=owner_id,
+        start_screen="card",
     )
 
 
@@ -361,13 +370,22 @@ async def cmd_leaderboard(message: Message, coordinator: ArenaTelegramCoordinato
 
 
 async def cmd_history(message: Message, coordinator: ArenaTelegramCoordinator) -> None:
-    player_id = coordinator.register_user(message.from_user)
-    available = coordinator.stats_provider.is_available()
-    entries, _ = await coordinator.stats_provider.get_history(player_id, page=0, per_page=10)
-    await send_message_safe(
-        coordinator.bot,
+    requester_id = coordinator.register_user(message.from_user)
+    target_user = (
+        message.reply_to_message.from_user
+        if (
+            message.reply_to_message is not None
+            and message.reply_to_message.from_user is not None
+            and not message.reply_to_message.from_user.is_bot
+        )
+        else message.from_user
+    )
+    owner_id = coordinator.register_user(target_user) or requester_id
+    await coordinator.open_profile_session(
         chat_id=message.chat.id,
-        text=render_history(entries, available=available),
+        requester_id=requester_id,
+        owner_id=owner_id,
+        start_screen="history",
     )
 
 

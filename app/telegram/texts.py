@@ -7,7 +7,8 @@ Messages are bounded to Telegram's 4096-char limit and photo captions to 1024 ch
 from __future__ import annotations
 
 import html
-from typing import Mapping, Sequence
+from datetime import datetime, timedelta, timezone
+from typing import TYPE_CHECKING, Mapping, Sequence
 
 from app.database import CharacterEntry, Universe
 from app.matches import (
@@ -35,8 +36,14 @@ from app.telegram.constants import (
     rarity_icon,
     role_label,
     to_bold_serif_upper,
+    to_small_caps_digits,
     universe_icon,
 )
+
+if TYPE_CHECKING:
+    from app.persistence.models import HistoricalMatchRecord, PlayerStatsSummary
+
+_IST = timezone(timedelta(hours=5, minutes=30))
 from app.telegram.ports import (
     LeaderboardEntryView,
     MatchHistoryEntryView,
@@ -1444,4 +1451,415 @@ def render_history(entries: Sequence[MatchHistoryEntryView], *, available: bool)
         lines.append(
             f"• <code>#{esc(item.match_id)}</code> — {esc(item.universe_name)} ({esc(item.game_mode)}) vs {esc(item.opponent_name)}: <b>{esc(item.outcome_label)}</b>"
         )
+    return clamp_text("\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
+# Player Profile 2.0 (Screens 01-05 & Historical Battle Breakdown)
+# ---------------------------------------------------------------------------
+
+
+def render_profile_text_fallback(
+    *,
+    player_id: str,
+    player_name: str,
+    stats: PlayerStatsSummary,
+) -> str:
+    """Compact text fallback if Player Card PNG generation fails."""
+    mention = format_user_mention(player_id, player_name)
+    rate_str = f"{stats.win_rate_pct:.1f}%" if stats.win_rate_pct is not None else "—"
+    return clamp_text(
+        "\n".join(
+            [
+                f"<b>⚔️ {to_bold_serif_upper('KAYI ARENA')}</b>",
+                "",
+                f"◆ <b>Player:</b> {mention}",
+                f"◆ <b>Ranked Battles:</b> {stats.battles_played}",
+                "",
+                f"▸ <b>Victories:</b> {stats.victories}",
+                f"▸ <b>Defeats:</b> {stats.defeats}",
+                f"▸ <b>Draws:</b> {stats.draws}",
+                f"▸ <b>Win rate:</b> {rate_str}",
+            ]
+        )
+    )
+
+
+def render_profile_statistics(
+    *,
+    player_id: str,
+    player_name: str,
+    universe_label: str,
+    game_mode: str,
+    stats: PlayerStatsSummary,
+) -> str:
+    mention = format_user_mention(player_id, player_name)
+    mode_label = "Ranked" if game_mode == "ranked" else "Friendly"
+    rate_str = f"{stats.win_rate_pct:.2f}%" if stats.win_rate_pct is not None else "—"
+    if stats.current_streak == 0:
+        streak_str = "0"
+    elif stats.current_streak == 1:
+        streak_str = "1 win"
+    else:
+        streak_str = f"{stats.current_streak} wins"
+    avg_str = f"{stats.avg_team_score}/700" if stats.avg_team_score is not None else "—"
+    high_str = f"{stats.highest_team_score}/700" if stats.highest_team_score is not None else "—"
+
+    return clamp_text(
+        "\n".join(
+            [
+                f"<b>📊 {to_bold_serif_upper('PLAYER STATISTICS')}</b>",
+                "",
+                f"◆ <b>Player:</b> {mention}",
+                f"◆ <b>Universe:</b> {esc(universe_label)}",
+                f"◆ <b>Mode:</b> {mode_label}",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                f"<b>{to_bold_serif_upper('BATTLE RECORD')}</b>",
+                "",
+                f"▸ <b>Battles played:</b> {stats.battles_played}",
+                f"▸ <b>Victories:</b> {stats.victories}",
+                f"▸ <b>Defeats:</b> {stats.defeats}",
+                f"▸ <b>Draws:</b> {stats.draws}",
+                f"▸ <b>Win rate:</b> {rate_str}",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                f"<b>{to_bold_serif_upper('PERFORMANCE')}</b>",
+                "",
+                f"▸ <b>Current streak:</b> {streak_str}",
+                f"▸ <b>Best win streak:</b> {stats.best_streak}",
+                f"▸ <b>Average team score:</b> {avg_str}",
+                f"▸ <b>Highest team score:</b> {high_str}",
+            ]
+        )
+    )
+
+
+def render_profile_universe_selection(
+    *,
+    player_id: str,
+    player_name: str,
+    selected_label: str,
+    game_mode: str,
+    origin: str,
+) -> str:
+    mention = format_user_mention(player_id, player_name)
+    noun = "match history" if origin == "history" else "battle statistics"
+    return clamp_text(
+        "\n".join(
+            [
+                f"<b>🌐 {to_bold_serif_upper('SELECT UNIVERSE')}</b>",
+                "",
+                f"Choose a universe to view {mention}'s {noun}.",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                f"◆ <b>Selected:</b> {esc(selected_label)}",
+                f"◆ <b>Mode:</b> {format_mode_label(game_mode)}",
+            ]
+        )
+    )
+
+
+def _history_reason_short(rec: HistoricalMatchRecord) -> str:
+    return {
+        MatchOutcomeReason.NORMAL_MATCHUP_COUNT: "role wins",
+        MatchOutcomeReason.NORMAL_COMBINED_SCORE: "total score",
+        MatchOutcomeReason.NORMAL_DRAW: "draw",
+        MatchOutcomeReason.VOLUNTARY_FORFEITURE: "forfeit",
+        MatchOutcomeReason.INACTIVITY_VICTORY: "inactivity",
+    }.get(rec.outcome_reason, rec.outcome_reason.value.replace("_", " "))
+
+
+def render_profile_history(
+    *,
+    player_id: str,
+    player_name: str,
+    universe_id: str,
+    universe_label: str,
+    game_mode: str,
+    records: Sequence[HistoricalMatchRecord],
+    player_names: Mapping[str, str],
+) -> str:
+    mention = format_user_mention(player_id, player_name)
+    u_icon = "🌐" if universe_id == "all" else universe_icon(universe_id)
+
+    lines = [
+        f"<b>{to_bold_serif_upper('MATCH HISTORY')}</b>",
+        "",
+        f"✦ <b>{mention}</b>",
+        "",
+        f"{u_icon} <b>{esc(universe_label)}</b> · {format_mode_label(game_mode)}",
+        "",
+        SECTION_SEPARATOR,
+        "",
+    ]
+    if not records:
+        lines.append("No battles found for this selection.")
+        return clamp_text("\n".join(lines))
+
+    last_date_str = ""
+    for idx, rec in enumerate(records, start=1):
+        dt = datetime.fromtimestamp(float(rec.completed_at), tz=_IST)
+        date_str = to_small_caps_digits(dt.strftime("%d %B %Y"))
+        if date_str != last_date_str:
+            if last_date_str:
+                lines.append("")
+            lines.extend([date_str, ""])
+            last_date_str = date_str
+        else:
+            lines.append("")
+
+        opp_id = rec.player_2_id if rec.player_1_id == player_id else rec.player_1_id
+        opp_mention = format_user_mention(opp_id, player_names.get(opp_id))
+        m_icon = universe_icon(rec.universe_id)
+
+        if rec.winner_id == player_id:
+            outcome_dot = "🟢"
+        elif rec.winner_id is not None:
+            outcome_dot = "🔴"
+        else:
+            outcome_dot = "⚪"
+
+        score_badge = ""
+        if rec.outcome.resolution is not None and rec.wins_player_1 is not None and rec.wins_player_2 is not None:
+            owner_w = rec.wins_player_1 if rec.player_1_id == player_id else rec.wins_player_2
+            opp_w = rec.wins_player_2 if rec.player_1_id == player_id else rec.wins_player_1
+            score_badge = f" 〔{to_bold_serif_upper(str(owner_w))} — {to_bold_serif_upper(str(opp_w))}〕"
+
+        time_str = to_small_caps_digits(dt.strftime("%I:%M %p"))
+        reason_str = to_small_caps_digits(_history_reason_short(rec))
+        num_str = to_bold_serif_upper(f"{idx:02d}")
+        lines.append(f"{outcome_dot} <b>{num_str}.</b> {m_icon} <b>{opp_mention}</b>{score_badge}")
+        lines.append(f"{time_str} · {reason_str}")
+
+    lines.extend(
+        [
+            "",
+            SECTION_SEPARATOR,
+            "",
+            f"🟢 {STATUS_VICTORY} · 🔴 {STATUS_DEFEAT} · ⚪ {STATUS_DRAW}",
+        ]
+    )
+    return clamp_text("\n".join(lines))
+
+
+def _format_hist_duration(seconds: float | None) -> str | None:
+    if seconds is None:
+        return None
+    secs = max(0, int(round(seconds)))
+    hours, rem = divmod(secs, 3600)
+    mins, s = divmod(rem, 60)
+    if hours > 0:
+        return f"{hours}h {mins}m {s}s"
+    if mins > 0:
+        return f"{mins}m {s}s"
+    return f"{s}s"
+
+
+def render_historical_match_details(
+    rec: HistoricalMatchRecord,
+    *,
+    universe_name: str,
+    player_names: Mapping[str, str],
+    char_lookup: Mapping[str, CharacterEntry],
+    duration_seconds: float | None = None,
+) -> str:
+    """Screen 05 — Historical Match Details preserving original blue/red player order."""
+    p1_id, p2_id = rec.player_1_id, rec.player_2_id
+    p1_mention = format_user_mention(p1_id, player_names.get(p1_id))
+    p2_mention = format_user_mention(p2_id, player_names.get(p2_id))
+    mode_plain = "Ranked" if rec.game_mode == "ranked" else "Friendly"
+    dur_str = _format_hist_duration(duration_seconds)
+    dt = datetime.fromtimestamp(float(rec.completed_at), tz=_IST)
+    ts_str = to_small_caps_digits(dt.strftime("%d %b %Y · %I:%M %p IST"))
+
+    header_lines = [
+        f"<b>{to_bold_serif_upper('BATTLE RECORD')}</b>",
+        "",
+        f"◆ <b>Universe</b> — {esc(universe_name)}",
+        f"◆ <b>Mode</b> — {mode_plain}",
+    ]
+    if dur_str is not None:
+        header_lines.append(f"◆ <b>Duration</b> — {dur_str}")
+    header_lines.extend(["", SECTION_SEPARATOR, ""])
+
+    res = rec.outcome.resolution
+    if res is None:
+        if rec.outcome.reason is MatchOutcomeReason.VOLUNTARY_FORFEITURE:
+            winner_id = rec.winner_id or ""
+            forfeiter_id = rec.outcome.forfeiting_player_id or ""
+            winner_m = format_user_mention(winner_id, player_names.get(winner_id))
+            forfeiter_m = format_user_mention(forfeiter_id, player_names.get(forfeiter_id))
+            body = [
+                f"🟢 <b>{winner_m}</b> 〔{STATUS_VICTORY}〕",
+                "",
+                f"🔴 <b>{forfeiter_m}</b> 〔{STATUS_DEFEAT}〕",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                "▪ <b>Reason:</b> Forfeit",
+                "",
+                f"<i>{forfeiter_m} surrendered the match.</i>",
+            ]
+        elif rec.outcome.reason is MatchOutcomeReason.INACTIVITY_VICTORY:
+            winner_id = rec.winner_id or ""
+            inactive_id = rec.outcome.inactive_player_id or ""
+            winner_m = format_user_mention(winner_id, player_names.get(winner_id))
+            inactive_m = format_user_mention(inactive_id, player_names.get(inactive_id))
+            body = [
+                f"🟢 <b>{winner_m}</b> 〔{STATUS_VICTORY}〕",
+                "",
+                f"🔴 <b>{inactive_m}</b> 〔{STATUS_DEFEAT}〕",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                "▪ <b>Reason:</b> Turn timeout",
+                "",
+                "<i>Victory claimed by the opponent.</i>",
+            ]
+        else:
+            body = [
+                f"🔵 <b>{p1_mention}</b>",
+                "",
+                f"🔴 <b>{p2_mention}</b>",
+                "",
+                SECTION_SEPARATOR,
+                "",
+                f"▪ <b>Result:</b> {esc(rec.status.value)}",
+            ]
+        return clamp_text("\n".join([*header_lines, *body, "", ts_str]))
+
+    summary = res.summary
+    score_badge = f"〔{to_bold_serif_upper(str(summary.wins_player_1))} — {to_bold_serif_upper(str(summary.wins_player_2))}〕"
+    if res.outcome is MatchOutcome.PLAYER_1_WIN:
+        outcome_line = f"✦ <b>{p1_mention}</b> — {STATUS_VICTORY}"
+        winner_mention = p1_mention
+    elif res.outcome is MatchOutcome.PLAYER_2_WIN:
+        outcome_line = f"✦ <b>{p2_mention}</b> — {STATUS_VICTORY}"
+        winner_mention = p2_mention
+    else:
+        outcome_line = f"✦ <b>{to_bold_serif_upper('BATTLE DRAW')}</b>"
+        winner_mention = ""
+
+    if res.decided_by is DecidedBy.MATCHUP_COUNT:
+        explanation = "<i>Victory by role wins.</i>"
+    elif res.decided_by is DecidedBy.COMBINED_SCORE:
+        explanation = f"<i>Both players won an equal number of roles. {winner_mention} wins by a higher total team score.</i>"
+    else:
+        explanation = "<i>Both players finished with equal role wins and equal team scores.</i>"
+
+    lines = [
+        *header_lines,
+        f"<b>{p1_mention}</b> {score_badge} <b>{p2_mention}</b>",
+        "",
+        outcome_line,
+        "",
+        SECTION_SEPARATOR,
+        "",
+    ]
+
+    for m in res.matchups:
+        role_title = m.role.title()
+        raw_c1 = char_lookup[m.player_1.character_id].name if m.player_1.character_id in char_lookup else m.player_1.character_id
+        raw_c2 = char_lookup[m.player_2.character_id].name if m.player_2.character_id in char_lookup else m.player_2.character_id
+        c1_name = raw_c1 if len(raw_c1) <= 64 else f"{raw_c1[:63].rstrip()}…"
+        c2_name = raw_c2 if len(raw_c2) <= 64 else f"{raw_c2[:63].rstrip()}…"
+        s1 = m.player_1.score
+        s2 = m.player_2.score
+        if m.winner is MatchupWinner.PLAYER_1:
+            role_hdr = f"<b>✦ {esc(role_title)}</b>"
+            matchup_line = f"<b>〔{esc(c1_name)} · {s1}〕</b> — {esc(c2_name)} · {s2}"
+        elif m.winner is MatchupWinner.PLAYER_2:
+            role_hdr = f"<b>✦ {esc(role_title)}</b>"
+            matchup_line = f"{esc(c1_name)} · {s1} — <b>〔{esc(c2_name)} · {s2}〕</b>"
+        else:
+            role_hdr = f"<b>✦ {esc(role_title)}</b> · {STATUS_DRAW}"
+            matchup_line = f"{esc(c1_name)} · {s1} — {esc(c2_name)} · {s2}"
+        lines.extend([role_hdr, matchup_line, ""])
+
+    lines.extend(
+        [
+            SECTION_SEPARATOR,
+            "",
+            f"<b>{to_bold_serif_upper('TEAM SCORES')}</b>",
+            "",
+            f"▸ {p1_mention} — <b>{summary.total_player_1}/700</b>",
+            f"▸ {p2_mention} — <b>{summary.total_player_2}/700</b>",
+            "",
+            explanation,
+            "",
+            ts_str,
+        ]
+    )
+    rendered = "\n".join(lines)
+    if len(rendered) <= 4096:
+        return rendered
+    # Preserve complete HTML lines if a message ever exceeds Telegram's 4096-char cap.
+    kept: list[str] = []
+    total_len = 0
+    for line in lines:
+        add_len = len(line) + (1 if kept else 0)
+        if total_len + add_len > 4096:
+            break
+        kept.append(line)
+        total_len += add_len
+    return "\n".join(kept)
+
+
+def render_historical_battle_breakdown(
+    rec: HistoricalMatchRecord,
+    *,
+    player_names: Mapping[str, str],
+    char_lookup: Mapping[str, CharacterEntry],
+) -> str:
+    res = rec.outcome.resolution
+    if res is None:
+        return clamp_text(
+            f"<b>{to_bold_serif_upper('BATTLE BREAKDOWN')}</b>\n\nDetailed role matchups are unavailable for this match."
+        )
+    summary = res.summary
+    p1_mention = format_user_mention(rec.player_1_id, player_names.get(rec.player_1_id))
+    p2_mention = format_user_mention(rec.player_2_id, player_names.get(rec.player_2_id))
+
+    lines = [
+        f"<b>{to_bold_serif_upper('BATTLE BREAKDOWN')}</b>",
+        "",
+        f"<b>{p1_mention}</b> 〔{summary.wins_player_1} — {summary.wins_player_2}〕 <b>{p2_mention}</b>",
+        "",
+        SECTION_SEPARATOR,
+        "",
+        "<i>Power / Role Fit / Score</i>",
+        "",
+    ]
+    for m in res.matchups:
+        role_title = m.role.title()
+        c1_raw = char_lookup[m.player_1.character_id].name if m.player_1.character_id in char_lookup else m.player_1.character_id
+        c2_raw = char_lookup[m.player_2.character_id].name if m.player_2.character_id in char_lookup else m.player_2.character_id
+        c1_name = c1_raw if len(c1_raw) <= 48 else c1_raw[:47] + "…"
+        c2_name = c2_raw if len(c2_raw) <= 48 else c2_raw[:47] + "…"
+        s1_disp = f"<b>〔{m.player_1.score}〕</b>" if m.winner is MatchupWinner.PLAYER_1 else str(m.player_1.score)
+        s2_disp = f"<b>〔{m.player_2.score}〕</b>" if m.winner is MatchupWinner.PLAYER_2 else str(m.player_2.score)
+        role_hdr = (
+            f"◆ <b>{esc(role_title)}</b> ┊ {STATUS_DRAW}"
+            if m.winner is MatchupWinner.DRAW
+            else f"◆ <b>{esc(role_title)}</b>"
+        )
+        lines.extend(
+            [
+                role_hdr,
+                f"▸ {esc(c1_name)} — {m.player_1.power} / {m.player_1.fit} / {s1_disp}",
+                f"▸ {esc(c2_name)} — {m.player_2.power} / {m.player_2.fit} / {s2_disp}",
+                "",
+            ]
+        )
+    lines.extend(
+        [
+            SECTION_SEPARATOR,
+            "",
+            f"<b>Total Score — {summary.total_player_1} : {summary.total_player_2}</b>",
+        ]
+    )
     return clamp_text("\n".join(lines))

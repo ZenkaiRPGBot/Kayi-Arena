@@ -333,10 +333,10 @@ async def test_register_bot_commands_scopes_and_profile_history() -> None:
 
     await dp.feed_update(bot, _make_message_update(1, chat_id=101, chat_type="private", user=alex, text="/profile"))
     prof_msg_id = bot.next_msg_id
-    prof_markup = bot.sent_messages[-1]["reply_markup"]
+    prof_markup = bot.sent_photos[-1]["reply_markup"]
     hist_btn = prof_markup.inline_keyboard[0][0]
-    assert hist_btn.text == "📜 Match History"
-    assert "style" not in hist_btn.model_dump(exclude_none=True)
+    assert hist_btn.text == "📜 𝗛𝗶𝘀𝘁𝗼𝗿𝘆"
+    assert hist_btn.model_dump(exclude_none=True)["style"] == "primary"
 
     await dp.feed_update(
         bot,
@@ -350,10 +350,10 @@ async def test_register_bot_commands_scopes_and_profile_history() -> None:
             recorder=bot,
         ),
     )
-    assert "Match History" in bot.edited_messages[-1]["text"]
+    assert "𝐌𝐀𝐓𝐂𝐇 𝐇𝐈𝐒𝐓𝐎𝐑𝐘" in bot.sent_messages[-1]["text"]
 
     await dp.feed_update(bot, _make_message_update(3, chat_id=101, chat_type="private", user=alex, text="/history"))
-    assert "Match History" in bot.sent_messages[-1]["text"]
+    assert "𝐌𝐀𝐓𝐂𝐇 𝐇𝐈𝐒𝐓𝐎𝐑𝐘" in bot.sent_messages[-1]["text"]
     await coordinator.shutdown()
     db.close()
 
