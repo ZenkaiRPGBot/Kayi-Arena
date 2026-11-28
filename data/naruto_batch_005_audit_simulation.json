@@ -1,0 +1,42 @@
+{
+  "simulation": "naruto_batch_005_audited_importable_pool",
+  "engine": "app.engine deterministic draft engine",
+  "matches_requested": 1000,
+  "matches_completed": 1000,
+  "seed": 20261127,
+  "role_selection": "uniform random from remaining roles with Python random.Random(seed)",
+  "rarity_weights": {
+    "Common": 30.0,
+    "Uncommon": 30.0,
+    "Rare": 22.0,
+    "Epic": 13.0,
+    "Legendary": 5.0
+  },
+  "pool_size": 52,
+  "rarity_draw_pct": {
+    "Common": 85.71,
+    "Uncommon": 14.29,
+    "Rare": 0.0,
+    "Epic": 0.0,
+    "Legendary": 0.0
+  },
+  "role_avg_score": {
+    "assassin": 14.3,
+    "attacker": 22.98,
+    "captain": 17.0,
+    "healer": 6.34,
+    "strategist": 10.83,
+    "support": 21.57,
+    "tank": 19.87
+  },
+  "healer_availability": {
+    "teams_with_healer_fit_ge_3_pct": 0.0,
+    "teams_with_healer_fit_ge_4_pct": 0.0
+  },
+  "team_score_advantage": {
+    "player_1_higher_score_pct": 48.9,
+    "note": "Draft-order comparison of summed SCORE-1.0 role scores, not canonical match resolution."
+  },
+  "winner_claim": "none",
+  "approval_claim": "none"
+}

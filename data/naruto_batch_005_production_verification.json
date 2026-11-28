@@ -1,0 +1,41 @@
+{
+  "batch_id": "naruto-batch-005",
+  "live_database": {
+    "database_path": "data\\kayi_arena.sqlite3",
+    "available": false,
+    "published_character_count": null,
+    "pending_character_count": null,
+    "draft_count": null,
+    "review_count": null,
+    "current_dataset_version": null,
+    "character_ids": [],
+    "note": "No live SQLite database file found in the workspace; production counts are unavailable."
+  },
+  "reconstructed_draft_snapshot": {
+    "initial_60_records": 60,
+    "initial_60_held": 7,
+    "expansion_003_004_records": 148,
+    "expansion_003_004_held": 17,
+    "non_held_unique_characters": 184,
+    "verified_published_snapshot": false
+  },
+  "batch_005": {
+    "catalogue_candidates": 62,
+    "importable_evaluations": 52,
+    "held_candidates": 10,
+    "overlap_with_reconstructed_ids": [],
+    "artwork_summary": {
+      "total_images": 63,
+      "downloaded": 63,
+      "valid": 63,
+      "invalid": 0,
+      "missing": 0,
+      "duplicates": 0,
+      "candidates_total": 62,
+      "candidates_with_valid_artwork": 62,
+      "candidates_without_valid_artwork": 0
+    }
+  },
+  "expected_reconstructed_roster_after_publication": 236,
+  "publication_performed": false
+}

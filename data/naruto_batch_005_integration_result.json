@@ -1,0 +1,18 @@
+{
+  "batch_id": "naruto-batch-005",
+  "staging_database": "C:\\Users\\2024\\AppData\\Local\\Temp\\opencode\\naruto_batch_005_staging.sqlite3",
+  "production_database_modified": false,
+  "catalogue_first_import": 62,
+  "characters_after_first_catalogue": 62,
+  "duplicate_catalogue_import_blocked": true,
+  "characters_after_duplicate_catalogue": 62,
+  "evaluation_first_import": 52,
+  "characters_after_evaluation": 62,
+  "held_candidates_without_ratings": true,
+  "imported_ratings_match_audited": true,
+  "repeat_evaluation_raised_schema_error": true,
+  "characters_after_repeat_evaluation": 62,
+  "ratings_unchanged_after_repeat": true,
+  "approval_performed": false,
+  "publication_performed": false
+}

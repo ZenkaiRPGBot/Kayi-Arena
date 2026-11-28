@@ -1,0 +1,2624 @@
+{
+  "format_version": "KA-IMPORT-1.0",
+  "batch_type": "evaluation",
+  "universe_id": "naruto",
+  "batch_id": "naruto-batch-005",
+  "evaluation_framework_version": "EVAL-FRAMEWORK-1.0",
+  "scoring_version": "SCORE-1.0",
+  "canonical_policy_version": "NARUTO-CANON-0.1",
+  "batch_status": "draft",
+  "global_notes": [
+    "Fit was assigned before Power with Power values hidden (Pass A used research only).",
+    "No rarity, role scores, approval or publication status is assigned.",
+    "Stage 01 evidence is metadata-only; no feats were verified. Power 1 values are schema floors for held records."
+  ],
+  "evaluations": [
+    {
+      "character_id": "dattebayo:43",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:43",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Dōtō_Akimichi"
+      ],
+      "revision_ref": "claude-batch-005-001",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:879",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:879",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Suzaku_Nara"
+      ],
+      "revision_ref": "claude-batch-005-002",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:880",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:880",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yoshino_Nara"
+      ],
+      "revision_ref": "claude-batch-005-003",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:441",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:441",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Iroha_Hyūga"
+      ],
+      "revision_ref": "claude-batch-005-004",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:724",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:724",
+          "summary": "Metadata only (Part I: Anbu; Part II: Jōnin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Raiga_Kurosuki"
+      ],
+      "revision_ref": "claude-batch-005-005",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1370",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1370",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Santa_Yamanaka"
+      ],
+      "revision_ref": "claude-batch-005-006",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:901",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 1,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "support",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:901",
+          "summary": "Inspected Fandom page states the character is a Konoha sensor-type shinobi tasked with monitoring Kawaki and Boruto. Duty-based sensing only; no sensing feat or effect shown."
+        },
+        {
+          "target": "power",
+          "grade": "B",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:901",
+          "summary": "Inspected role is sensor/monitoring; no combat feat recorded. Power 1 is the schema floor for a non-combat sensor role, not a demonstrated level."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Nishi_(sensor)",
+        "https://naruto.fandom.com/wiki/Nishi_(sensor)"
+      ],
+      "revision_ref": "claude-batch-005-007",
+      "submit_for_review": true
+    },
+    {
+      "character_id": "dattebayo:279",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:279",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Iwagakure, Land of Fire). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gantetsu_(Iwagakure)"
+      ],
+      "revision_ref": "claude-batch-005-008",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:850",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:850",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Sunagakure, Akatsuki). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mukade"
+      ],
+      "revision_ref": "claude-batch-005-009",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:46",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:46",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shitō_Akimichi"
+      ],
+      "revision_ref": "claude-batch-005-010",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:873",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:873",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ensui_Nara"
+      ],
+      "revision_ref": "claude-batch-005-011",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:435",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:435",
+          "summary": "Metadata only (Blank Period: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hanabi_Hyūga"
+      ],
+      "revision_ref": "claude-batch-005-012",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:14",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:14",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure, Root). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tatsuma_Aburame"
+      ],
+      "revision_ref": "claude-batch-005-013",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:24",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:24",
+          "summary": "Metadata only (Part I: Genin; Part II: Chūnin; affiliation Amegakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ajisai"
+      ],
+      "revision_ref": "claude-batch-005-014",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:44",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:44",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Makaro_Akimichi"
+      ],
+      "revision_ref": "claude-batch-005-015",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:45",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:45",
+          "summary": "Metadata only (Part II: Tokubetsu Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Maruten_Akimichi"
+      ],
+      "revision_ref": "claude-batch-005-016",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:432",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:432",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure, Root). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hyō"
+      ],
+      "revision_ref": "claude-batch-005-017",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:841",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:841",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mozuku"
+      ],
+      "revision_ref": "claude-batch-005-018",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:871",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:871",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Daen_Nara"
+      ],
+      "revision_ref": "claude-batch-005-019",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:874",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:874",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kasuga_Nara"
+      ],
+      "revision_ref": "claude-batch-005-020",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:875",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:875",
+          "summary": "Metadata only (Part II: Tokubetsu Jōnin; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Maen_Nara"
+      ],
+      "revision_ref": "claude-batch-005-021",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1094",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1094",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure, Root). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shin"
+      ],
+      "revision_ref": "claude-batch-005-022",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1413",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1413",
+          "summary": "Metadata only (Gaiden: Genin; affiliation Kumogakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yurui"
+      ],
+      "revision_ref": "claude-batch-005-023",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:30",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:30",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Iwana_Akame"
+      ],
+      "revision_ref": "claude-batch-005-024",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:109",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:109",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Baku_(Anbu)"
+      ],
+      "revision_ref": "claude-batch-005-025",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:231",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:231",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Fuki"
+      ],
+      "revision_ref": "claude-batch-005-026",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:249",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:249",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Daikoku_Funeno"
+      ],
+      "revision_ref": "claude-batch-005-027",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:386",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:386",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hibari"
+      ],
+      "revision_ref": "claude-batch-005-028",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:392",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:392",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Kumogakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hikaru"
+      ],
+      "revision_ref": "claude-batch-005-029",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:416",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:416",
+          "summary": "Metadata only (Part I: Genin; affiliation Takigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hōki_(Takigakure)"
+      ],
+      "revision_ref": "claude-batch-005-030",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:457",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:457",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Inaho"
+      ],
+      "revision_ref": "claude-batch-005-031",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:464",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:464",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gaku_Inuzuka"
+      ],
+      "revision_ref": "claude-batch-005-032",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:601",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:601",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kasumi"
+      ],
+      "revision_ref": "claude-batch-005-033",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:666",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:666",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kōji"
+      ],
+      "revision_ref": "claude-batch-005-034",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:775",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:775",
+          "summary": "Metadata only (Part I: Academy Student; Part II: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Matsuri_(Konoha)"
+      ],
+      "revision_ref": "claude-batch-005-035",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:792",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:792",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Kusagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Midori"
+      ],
+      "revision_ref": "claude-batch-005-036",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1033",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1033",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tsuzumi_Sarugaku"
+      ],
+      "revision_ref": "claude-batch-005-037",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1045",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1045",
+          "summary": "Metadata only (Part I: Jōnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Satetsu"
+      ],
+      "revision_ref": "claude-batch-005-038",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1080",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1080",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Kusagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shiba_(Kusagakure)"
+      ],
+      "revision_ref": "claude-batch-005-039",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1220",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1220",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure, Root). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Terai"
+      ],
+      "revision_ref": "claude-batch-005-040",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1252",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1252",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tora_(Anbu)"
+      ],
+      "revision_ref": "claude-batch-005-041",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1332",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1332",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure, Konoha Orphanage, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Urushi"
+      ],
+      "revision_ref": "claude-batch-005-042",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1392",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1392",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Kumogakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kiyoi_Yotsuki"
+      ],
+      "revision_ref": "claude-batch-005-043",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1337",
+          "summary": "Metadata only (Part I: Anbu; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yūgao_Uzuki"
+      ],
+      "revision_ref": "claude-batch-005-044",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:328",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:328",
+          "summary": "Metadata only (Gaiden: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Dōshu_Goetsu"
+      ],
+      "revision_ref": "claude-batch-005-045",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:122",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:122",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Kirigakure, Akatsuki  (Anime only)). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Jūzō_Biwa"
+      ],
+      "revision_ref": "claude-batch-005-046",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:618",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:618",
+          "summary": "Metadata only (Part I: Academy Student; Part II: Genin; Gaiden: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Moegi_Kazamatsuri"
+      ],
+      "revision_ref": "claude-batch-005-047",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:338",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:338",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gōzu"
+      ],
+      "revision_ref": "claude-batch-005-048",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:779",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:779",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Meizu"
+      ],
+      "revision_ref": "claude-batch-005-049",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:154",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:154",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Iwagakure, Land of Fire). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Chōseki"
+      ],
+      "revision_ref": "claude-batch-005-050",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:802",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:802",
+          "summary": "Metadata only (Part II: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tomaru_Minakura"
+      ],
+      "revision_ref": "claude-batch-005-051",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:814",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:814",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Dango_Mitsuki"
+      ],
+      "revision_ref": "claude-batch-005-052",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1308",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1308",
+          "summary": "Metadata only (not recorded; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Setsuna_Uchiha"
+      ],
+      "revision_ref": "claude-batch-005-053",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:846",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:846",
+          "summary": "Metadata only (Boruto Manga: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mugino"
+      ],
+      "revision_ref": "claude-batch-005-054",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1309",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1309",
+          "summary": "Metadata only (not recorded; affiliation Otogakure, Akatsuki). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shin_Uchiha"
+      ],
+      "revision_ref": "claude-batch-005-055",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1374",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1374",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kokage_Yanagikage"
+      ],
+      "revision_ref": "claude-batch-005-056",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:477",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:477",
+          "summary": "Metadata only (Part I: Academy Student; Part II: Genin; Gaiden: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Udon_Ise"
+      ],
+      "revision_ref": "claude-batch-005-057",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:210",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:210",
+          "summary": "Metadata only (Part II: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Might_Duy"
+      ],
+      "revision_ref": "claude-batch-005-058",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:391",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:391",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shimon_Hijiri"
+      ],
+      "revision_ref": "claude-batch-005-059",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1068",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1068",
+          "summary": "Metadata only (Gaiden: Genin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Makinami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-060",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1069",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1069",
+          "summary": "Metadata only (Gaiden: Genin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sazanami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-061",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1070",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1070",
+          "summary": "Metadata only (Gaiden: Genin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Takanami_Senka"
+      ],
+      "revision_ref": "claude-batch-005-062",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1155",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1155",
+          "summary": "Metadata only (Part I: Tokubetsu Jōnin; affiliation Iwagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Sumashi"
+      ],
+      "revision_ref": "claude-batch-005-063",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1232",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1232",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Tonbo_Tobitake"
+      ],
+      "revision_ref": "claude-batch-005-064",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:1377",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:1377",
+          "summary": "Metadata only (Gaiden: Chūnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Yodo"
+      ],
+      "revision_ref": "claude-batch-005-065",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:888",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:888",
+          "summary": "Metadata only (Part I: Genin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Nejiri"
+      ],
+      "revision_ref": "claude-batch-005-066",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:7",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:7",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Abiru"
+      ],
+      "revision_ref": "claude-batch-005-067",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:18",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:18",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Takigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Agara"
+      ],
+      "revision_ref": "claude-batch-005-068",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:26",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:26",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Manabu_Akado"
+      ],
+      "revision_ref": "claude-batch-005-069",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:64",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:64",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ami"
+      ],
+      "revision_ref": "claude-batch-005-070",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:103",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:103",
+          "summary": "Metadata only (Part I: Jōnin; affiliation Iwagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shibito_Azuma"
+      ],
+      "revision_ref": "claude-batch-005-071",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:118",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:118",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Bekkō"
+      ],
+      "revision_ref": "claude-batch-005-072",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:137",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:137",
+          "summary": "Metadata only (Boruto Manga: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gyokurō_Chabashira"
+      ],
+      "revision_ref": "claude-batch-005-073",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:167",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:167",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Daichi"
+      ],
+      "revision_ref": "claude-batch-005-074",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:213",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:213",
+          "summary": "Metadata only (Blank Period: Jōnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ebizō"
+      ],
+      "revision_ref": "claude-batch-005-075",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:251",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:251",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Kumogakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Furui"
+      ],
+      "revision_ref": "claude-batch-005-076",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:253",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:253",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Futaba"
+      ],
+      "revision_ref": "claude-batch-005-077",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:301",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:301",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gennai"
+      ],
+      "revision_ref": "claude-batch-005-078",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:337",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:337",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Gōza"
+      ],
+      "revision_ref": "claude-batch-005-079",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:361",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:361",
+          "summary": "Metadata only (not recorded; affiliation Konohagakure, Allied Shinobi Forces). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hakui_(medic)"
+      ],
+      "revision_ref": "claude-batch-005-080",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:379",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:379",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hayase"
+      ],
+      "revision_ref": "claude-batch-005-081",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:384",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:384",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Heki"
+      ],
+      "revision_ref": "claude-batch-005-082",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:420",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:420",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hōsei"
+      ],
+      "revision_ref": "claude-batch-005-083",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:473",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:473",
+          "summary": "Metadata only (Part II: Jōnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Isago"
+      ],
+      "revision_ref": "claude-batch-005-084",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:486",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:486",
+          "summary": "Metadata only (Part II: Genin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Ittetsu"
+      ],
+      "revision_ref": "claude-batch-005-085",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:520",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:520",
+          "summary": "Metadata only (Part I: Jōnin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Jōseki"
+      ],
+      "revision_ref": "claude-batch-005-086",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:563",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:563",
+          "summary": "Metadata only (Part II: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Saisu_Kamano"
+      ],
+      "revision_ref": "claude-batch-005-087",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:567",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:567",
+          "summary": "Metadata only (Boruto Manga: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Jin_Kaminari"
+      ],
+      "revision_ref": "claude-batch-005-088",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:599",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:599",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kashike"
+      ],
+      "revision_ref": "claude-batch-005-089",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:676",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:676",
+          "summary": "Metadata only (Part I: Genin; affiliation Sunagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Komaza"
+      ],
+      "revision_ref": "claude-batch-005-090",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:681",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:681",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Komugi"
+      ],
+      "revision_ref": "claude-batch-005-091",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:695",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:695",
+          "summary": "Metadata only (Part II: Anbu; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kosuke"
+      ],
+      "revision_ref": "claude-batch-005-092",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:698",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:698",
+          "summary": "Metadata only (Part I: Academy Student; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kōta"
+      ],
+      "revision_ref": "claude-batch-005-093",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:727",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:727",
+          "summary": "Metadata only (Part II: Anbu; affiliation Land of Woods). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kurozuka"
+      ],
+      "revision_ref": "claude-batch-005-094",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:787",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:787",
+          "summary": "Metadata only (Part I: Chūnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Shinobu_Mibu"
+      ],
+      "revision_ref": "claude-batch-005-095",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:801",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:801",
+          "summary": "Metadata only (Part I: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Hamaki_Mimura"
+      ],
+      "revision_ref": "claude-batch-005-096",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:805",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:805",
+          "summary": "Metadata only (Part I: Genin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Minoji"
+      ],
+      "revision_ref": "claude-batch-005-097",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:817",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:817",
+          "summary": "Metadata only (Part II: Kage; affiliation Kirigakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Third_Mizukage"
+      ],
+      "revision_ref": "claude-batch-005-098",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:820",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:820",
+          "summary": "Metadata only (Part II: Anbu; affiliation Konohagakure, Root). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Mizunoto"
+      ],
+      "revision_ref": "claude-batch-005-099",
+      "submit_for_review": false
+    },
+    {
+      "character_id": "dattebayo:825",
+      "power": 1,
+      "fit": {
+        "captain": 0,
+        "strategist": 0,
+        "attacker": 0,
+        "tank": 0,
+        "assassin": 0,
+        "support": 0,
+        "healer": 0
+      },
+      "evidence": [
+        {
+          "target": "power",
+          "grade": "C",
+          "source_ref": "naruto_batch_005_research.json:dattebayo:825",
+          "summary": "Metadata only (Part I: Jōnin; affiliation Konohagakure). No combat feat or durability recorded. Power 1 is the schema floor; no combat demonstration exists in the supplied evidence."
+        }
+      ],
+      "source_references": [
+        "https://naruto.fandom.com/wiki/Kunugi_Mokume"
+      ],
+      "revision_ref": "claude-batch-005-100",
+      "submit_for_review": false
+    }
+  ]
+}

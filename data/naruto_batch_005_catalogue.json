@@ -1,0 +1,4309 @@
+{
+  "universe": "Naruto",
+  "source": "dattebayo",
+  "provider": "dattebayo",
+  "generated_at": "2026-11-27",
+  "stats": {
+    "targets": 62,
+    "matched": 62,
+    "unmatched": 0
+  },
+  "duplicates_removed": [],
+  "candidates": [
+    {
+      "candidate_id": "dattebayo:879",
+      "name": "Suzaku Nara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Suzaku_Nara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/67/Suzaku_Nara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/67/Suzaku_Nara.png",
+          "source": "dattebayo",
+          "sha256": "eefce8fcd33a0fc20d145199ef24ffa9e5f687f40776d1c265886577f75090ca",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 73550,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #534",
+        "anime": "Naruto Shippūden Episode #275",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 879,
+        "debut": {
+          "manga": "Naruto Chapter #534",
+          "anime": "Naruto Shippūden Episode #275",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "奈良スザクNaraSuzaku"
+        ],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "42"
+          },
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Nara",
+          "titles": [
+            "奈良スザクNaraSuzaku"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Nara",
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:441",
+      "name": "Iroha Hyūga",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Iroha_Hyūga",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/98/Iroha_Hyuga.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/98/Iroha_Hyuga.png",
+          "source": "dattebayo",
+          "sha256": "a5e43a3ccd36b0c80061429a7cd199b8320e9ae27c83a4b5ebd7bd4679e68cfc",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 104090,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #536",
+        "anime": "Naruto Shippūden Episode #275",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 441,
+        "debut": {
+          "manga": "Naruto Chapter #536",
+          "anime": "Naruto Shippūden Episode #275",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "日向イロハHyūgaIroha"
+        ],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "27"
+          },
+          "kekkeiGenkai": "Byakugan",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Kumo Barrier Team",
+          "clan": "Hyūga",
+          "titles": [
+            "日向イロハHyūgaIroha"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Hyūga",
+        "collected_at": "2026-11-26T01:40:23.557303+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:724",
+      "name": "Raiga Kurosuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Raiga_Kurosuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/41/Raiga_Kurosuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/41/Raiga_Kurosuki.png",
+          "source": "dattebayo",
+          "sha256": "8c0144cf52005ba864a49fb3ef602eefdae2f1872d112875628064a4fa2d446c",
+          "format": "webp",
+          "width": 920,
+          "height": 790,
+          "bytes": 40318,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #668",
+        "anime": "Naruto Episode #152",
+        "novel": "School Trip Bloodwind Records  (mentioned)",
+        "appearsIn": "Anime, Manga, Novel"
+      },
+      "classification": [
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 724,
+        "debut": {
+          "manga": "Naruto Chapter #668",
+          "anime": "Naruto Episode #152",
+          "novel": "School Trip Bloodwind Records  (mentioned)",
+          "appearsIn": "Anime, Manga, Novel"
+        },
+        "classification": [
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [
+          "黒鋤雷牙KurosukiRaiga",
+          "thunderOfTheHiddenMist(霧隠れの雷人kirigakureNoRaijin)"
+        ],
+        "personal": {
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part I": "195cm"
+          },
+          "classification": "Missing-nin",
+          "occupation": "Head of Kurosuki Family  (Anime only)",
+          "affiliation": "Kirigakure",
+          "team": [
+            "Seven Ninja Swordsmen of the Mist",
+            "Kurosuki Family  (Anime only)"
+          ],
+          "partner": "Ranmaru",
+          "titles": [
+            "黒鋤雷牙KurosukiRaiga",
+            "thunderOfTheHiddenMist(霧隠れの雷人kirigakureNoRaijin)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Anbu",
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:17.921456+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1370",
+      "name": "Santa Yamanaka",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Santa_Yamanaka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/c/cd/Santa_Yamanaka.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/c/cd/Santa_Yamanaka.png",
+          "source": "dattebayo",
+          "sha256": "4e30fe8487abc1d5fa3540bde7c8c5811934bf2fdcc95e6499d69783b7677aeb",
+          "format": "webp",
+          "width": 455,
+          "height": 537,
+          "bytes": 17978,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #523",
+        "anime": "Naruto Shippūden Episode #266",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1370,
+        "debut": {
+          "manga": "Naruto Chapter #523",
+          "anime": "Naruto Shippūden Episode #266",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "27"
+          },
+          "classification": "Sensor Type",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Third Division",
+          "clan": "Yamanaka"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Yamanaka",
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:901",
+      "name": "Nishi (sensor)",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Nishi_(sensor)",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/b2/Nishi_Infobox.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b2/Nishi_Infobox.png",
+          "source": "dattebayo",
+          "sha256": "a83b6c5897b1362b419ccd31d96f8086d897b71f6289cd1f38d404e2b206115f",
+          "format": "webp",
+          "width": 1440,
+          "height": 1078,
+          "bytes": 117832,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #39",
+        "anime": "Boruto Episode #205",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 901,
+        "debut": {
+          "manga": "Boruto Chapter #39",
+          "anime": "Boruto Episode #205",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [
+          "nishi",
+          "hariko(ハリコ)"
+        ],
+        "personal": {
+          "sex": "Male",
+          "classification": "Sensor Type",
+          "affiliation": "Konohagakure",
+          "titles": [
+            "nishi",
+            "hariko(ハリコ)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Boruto Manga": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review.",
+        "Stage 01 artwork URL corrected from source catalogue after a 404 check."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:46",
+      "name": "Shitō Akimichi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shitō_Akimichi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/04/Shit%C5%8D_Akimichi.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/04/Shit%C5%8D_Akimichi.png",
+          "source": "dattebayo",
+          "sha256": "fc57f6ec7f0a7b418bbcc7c537517a0bf156f5f176d72c3cdecea1d9c4f5ecfc",
+          "format": "webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 114082,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #422",
+        "anime": "Naruto Shippūden Episode #159",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 46,
+        "debut": {
+          "manga": "Naruto Chapter #422",
+          "anime": "Naruto Shippūden Episode #159",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "32"
+          },
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Akimichi"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Akimichi",
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:435",
+      "name": "Hanabi Hyūga",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hanabi_Hyūga",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/da/Hanabi_Hyuga.png",
+        "https://static.wikia.nocookie.net/naruto/images/0/02/Hanabi_Hyuga_Part_II.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/da/Hanabi_Hyuga.png",
+          "source": "dattebayo",
+          "sha256": "4da35b615e6dd5d3e9585e55ff64e5d744a348f3eff627bee13854addca2eef4",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 94530,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/02/Hanabi_Hyuga_Part_II.png",
+          "source": "dattebayo",
+          "sha256": "21391918637a06cc83c866cd5a511054a66d6a7e2be8fb9c5be2b02f53da3e03",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 103744,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #78",
+        "anime": "Naruto Episode #46",
+        "novel": "The Last: Naruto the Movie",
+        "movie": "The Last: Naruto the Movie",
+        "game": "Naruto: Ultimate Ninja 3",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 435,
+        "debut": {
+          "manga": "Naruto Chapter #78",
+          "anime": "Naruto Episode #46",
+          "novel": "The Last: Naruto the Movie",
+          "movie": "The Last: Naruto the Movie",
+          "game": "Naruto: Ultimate Ninja 3",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "March 27",
+          "sex": "Female",
+          "age": {
+            "Part I": "7"
+          },
+          "height": {
+            "Part I": "132.4cm",
+            "Blank Period": "150cm",
+            "Gaiden": "170cm"
+          },
+          "weight": {
+            "Part I": "28.9kg"
+          },
+          "bloodType": "A",
+          "kekkeiGenkai": "Byakugan",
+          "occupation": "Heiress of the Hyūga Clan",
+          "affiliation": "Konohagakure",
+          "team": "Team 15  (Anime only)",
+          "clan": "Hyūga"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Blank Period": "Genin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": "Hyūga",
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:841",
+      "name": "Mozuku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mozuku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/16/Mozuku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/16/Mozuku.png",
+          "source": "dattebayo",
+          "sha256": "a3fbae4fd43400f38515799989603e2b6bcf6ec044207d52b90ee329e29c3f8e",
+          "format": "webp",
+          "width": 670,
+          "height": 670,
+          "bytes": 44348,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #40",
+        "anime": "Naruto Episode #21",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto Mobile",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 841,
+        "debut": {
+          "manga": "Naruto Chapter #40",
+          "anime": "Naruto Episode #21",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto Mobile",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "モズクMozuku"
+        ],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "19"
+          },
+          "height": {
+            "Part I": "170cm"
+          },
+          "occupation": "Chūnin Exams Assistant",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Konoha Torture and Interrogation Force",
+          "titles": [
+            "モズクMozuku"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:871",
+      "name": "Daen Nara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Daen_Nara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/76/Daen_Nara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/76/Daen_Nara.png",
+          "source": "dattebayo",
+          "sha256": "5867f0551a9947d87b6f5588a9f4cb9ddd4888149d087257a9d383b51702b1a2",
+          "format": "webp",
+          "width": 1345,
+          "height": 940,
+          "bytes": 127402,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #616",
+        "anime": "Naruto Shippūden Episode #365",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 871,
+        "debut": {
+          "manga": "Naruto Chapter #616",
+          "anime": "Naruto Shippūden Episode #365",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "30"
+          },
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Nara"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Nara",
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:874",
+      "name": "Kasuga Nara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kasuga_Nara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/97/Kasuga_Nara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/97/Kasuga_Nara.png",
+          "source": "dattebayo",
+          "sha256": "f6a61cc265ce1ffb0aacc9029624ca9a866ef257f6af766b109dfa7995715ba3",
+          "format": "webp",
+          "width": 1159,
+          "height": 939,
+          "bytes": 115258,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #616",
+        "anime": "Naruto Shippūden Episode #365",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 874,
+        "debut": {
+          "manga": "Naruto Chapter #616",
+          "anime": "Naruto Shippūden Episode #365",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "25"
+          },
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Nara"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Nara",
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:875",
+      "name": "Maen Nara",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Maen_Nara",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/08/Maen_Nara.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/08/Maen_Nara.png",
+          "source": "dattebayo",
+          "sha256": "43b5456f46d59a8b9443c8f086357e591323ede0df585c514b490680176e9164",
+          "format": "webp",
+          "width": 1243,
+          "height": 937,
+          "bytes": 127564,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #616",
+        "anime": "Naruto Shippūden Episode #365",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 875,
+        "debut": {
+          "manga": "Naruto Chapter #616",
+          "anime": "Naruto Shippūden Episode #365",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "27"
+          },
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "clan": "Nara"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Tokubetsu Jōnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": "Nara",
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1094",
+      "name": "Shin",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shin",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/13/Shin_Revived.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/13/Shin_Revived.png",
+          "source": "dattebayo",
+          "sha256": "5d6d83e9937492877126d0c8730443407ab73ae5568bf3861b54d724b56345cd",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 97614,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #310",
+        "anime": "Naruto Shippūden Episode #50",
+        "novel": "The Last: Naruto the Movie  (Mentioned)",
+        "movie": "The Last: Naruto the Movie  (Mentioned)",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1094,
+        "debut": {
+          "manga": "Naruto Chapter #310",
+          "anime": "Naruto Shippūden Episode #50",
+          "novel": "The Last: Naruto the Movie  (Mentioned)",
+          "movie": "The Last: Naruto the Movie  (Mentioned)",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 2",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "シンShin"
+        ],
+        "personal": {
+          "birthdate": "September 6",
+          "sex": "Male",
+          "status": "Deceased",
+          "height": {
+            "Part II": "174cm"
+          },
+          "weight": {
+            "Part II": "55.4kg"
+          },
+          "bloodType": "B",
+          "affiliation": [
+            "Konohagakure",
+            "Root"
+          ],
+          "team": "Surprise Attack and Diversion Platoon",
+          "titles": [
+            "シンShin"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Anbu"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1413",
+      "name": "Yurui",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Yurui",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/49/Yurui_movie.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/49/Yurui_movie.png",
+          "source": "dattebayo",
+          "sha256": "c4ff7cf56c2b5ca7b09d6ddb26bb8e47f248d58177f9d20d9cc25c6a2e111cd8",
+          "format": "webp",
+          "width": 772,
+          "height": 624,
+          "bytes": 43840,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #3",
+        "anime": "Boruto Episode #56",
+        "novel": "Boruto: Naruto the Movie",
+        "movie": "Boruto: Naruto the Movie",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1413,
+        "debut": {
+          "manga": "Boruto Chapter #3",
+          "anime": "Boruto Episode #56",
+          "novel": "Boruto: Naruto the Movie",
+          "movie": "Boruto: Naruto the Movie",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "ユルイYurui"
+        ],
+        "personal": {
+          "sex": "Male",
+          "height": {
+            "Gaiden": "152cm"
+          },
+          "affiliation": "Kumogakure",
+          "team": "Team Yurui",
+          "titles": [
+            "ユルイYurui"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Gaiden": "Genin"
+          }
+        },
+        "affiliation": "Kumogakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:464",
+      "name": "Gaku Inuzuka",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gaku_Inuzuka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/6a/Gaku_Inuzuka.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6a/Gaku_Inuzuka.png",
+          "source": "dattebayo",
+          "sha256": "fed143edec1ccc5688530f45450a02af4a02b2c033d236b240feffa2fa212ebf",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 89080,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #542",
+        "anime": "Naruto Shippūden Episode #282",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 464,
+        "debut": {
+          "manga": "Naruto Chapter #542",
+          "anime": "Naruto Shippūden Episode #282",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "31"
+          },
+          "affiliation": "Konohagakure",
+          "clan": "Inuzuka"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": "Inuzuka",
+        "collected_at": "2026-11-26T01:40:23.558301+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1332",
+      "name": "Urushi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Urushi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/f7/Urushi_Part_II.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f7/Urushi_Part_II.png",
+          "source": "dattebayo",
+          "sha256": "f361c2d5dc23f15f2ec9519a1116a94715f7ffbd5710c89f819f022ac8fe7a2c",
+          "format": "webp",
+          "width": 1914,
+          "height": 1080,
+          "bytes": 98214,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #582",
+        "anime": "Naruto Shippūden Episode #335",
+        "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1332,
+        "debut": {
+          "manga": "Naruto Chapter #582",
+          "anime": "Naruto Shippūden Episode #335",
+          "game": "Naruto Shippūden: Ultimate Ninja Storm 4",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [
+          "ウルシUrushi"
+        ],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "25"
+          },
+          "occupation": "Caretaker of the Konoha Orphanage",
+          "affiliation": [
+            "Konohagakure",
+            "Konoha Orphanage",
+            "Allied Shinobi Forces"
+          ],
+          "titles": [
+            "ウルシUrushi"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Konoha Orphanage",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:26.198195+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Yūgao_Uzuki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/f3/Y%C5%ABgao_Uzuki.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/f3/Y%C5%ABgao_Uzuki.png",
+          "source": "dattebayo",
+          "sha256": "c3c59c61ce0bb93f34728d73aae36f39b3ced5d0d8641d44979a79898d35ed75",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 166638,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #137",
+        "anime": "Naruto Episode #54",
+        "game": "Naruto: Clash of Ninja Revolution 2",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1337,
+        "debut": {
+          "manga": "Naruto Chapter #137",
+          "anime": "Naruto Episode #54",
+          "game": "Naruto: Clash of Ninja Revolution 2",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "November 3",
+          "sex": "Female",
+          "age": {
+            "Part I": "22"
+          },
+          "height": {
+            "Part I": "169.2cm"
+          },
+          "weight": {
+            "Part I": "50.5kg"
+          },
+          "bloodType": "A",
+          "classification": "Sensor Type",
+          "affiliation": [
+            "Konohagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": [
+            "Team Ro  (Anime only)",
+            "Logistical Support and Medical Division  (Anime only)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Anbu"
+          },
+          "ninjaRegistration": "012161"
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:122",
+      "name": "Jūzō Biwa",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Jūzō_Biwa",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/c/c2/J%C5%ABz%C5%8D_Biwa.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/c/c2/J%C5%ABz%C5%8D_Biwa.png",
+          "source": "dattebayo",
+          "sha256": "8f2260b656c78251d389947ba5e009d653a184e69bd5a66d22723f25d014f051",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 90632,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #668",
+        "anime": "Naruto Shippūden Episode #419",
+        "game": "Naruto Shippūden: Ultimate Ninja Blazing",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Missing-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 122,
+        "debut": {
+          "manga": "Naruto Chapter #668",
+          "anime": "Naruto Shippūden Episode #419",
+          "game": "Naruto Shippūden: Ultimate Ninja Blazing",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Missing-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "31"
+          },
+          "status": "Deceased",
+          "classification": "Missing-nin",
+          "affiliation": [
+            "Kirigakure",
+            "Akatsuki  (Anime only)"
+          ],
+          "team": "Seven Ninja Swordsmen of the Mist",
+          "partner": "Itachi Uchiha  (Anime only)"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": [
+          "Kirigakure",
+          "Akatsuki  (Anime only)"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:338",
+      "name": "Gōzu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Gōzu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/7b/Gozu_profile_pic.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/7b/Gozu_profile_pic.png",
+          "source": "dattebayo",
+          "sha256": "ee6b9b89b4bf039bbbc75aed901c34d5e1435537ecc4bfe88261801a67796770",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 75342,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #9",
+        "anime": "Naruto Episode #6",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [
+        "Missing-nin",
+        "Mercenary Ninja"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 338,
+        "debut": {
+          "manga": "Naruto Chapter #9",
+          "anime": "Naruto Episode #6",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [
+          "Missing-nin",
+          "Mercenary Ninja"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "June 6",
+          "sex": "Male",
+          "age": {
+            "Part I": "25",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "18"
+          },
+          "height": {
+            "Part I": "178cm"
+          },
+          "weight": {
+            "Part I": "73.3kg"
+          },
+          "bloodType": "B",
+          "classification": [
+            "Missing-nin",
+            "Mercenary Ninja"
+          ],
+          "occupation": "Zabuza's subordinate",
+          "affiliation": "Kirigakure",
+          "team": "Demon Brothers",
+          "partner": "Meizu"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:779",
+      "name": "Meizu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Meizu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/59/Meizu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/59/Meizu.png",
+          "source": "dattebayo",
+          "sha256": "50b71fc302d32355e6c9262154c24aa7843d982cdbf07ec9196071e9b1f935f4",
+          "format": "webp",
+          "width": 1389,
+          "height": 1050,
+          "bytes": 85130,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #9",
+        "anime": "Naruto Episode #6",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [
+        "Missing-nin",
+        "Mercenary Ninja"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 779,
+        "debut": {
+          "manga": "Naruto Chapter #9",
+          "anime": "Naruto Episode #6",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [
+          "Missing-nin",
+          "Mercenary Ninja"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "June 6",
+          "sex": "Male",
+          "age": {
+            "Part I": "25",
+            "Academy Graduate": "12",
+            "Chunin Promotion": "18"
+          },
+          "height": {
+            "Part I": "178cm"
+          },
+          "weight": {
+            "Part I": "73.6kg"
+          },
+          "bloodType": "B",
+          "classification": [
+            "Missing-nin",
+            "Mercenary Ninja"
+          ],
+          "occupation": "Zabuza's subordinate",
+          "affiliation": "Kirigakure",
+          "team": "Demon Brothers",
+          "partner": "Gōzu"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:846",
+      "name": "Mugino",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mugino",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/19/Mugino.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/19/Mugino.png",
+          "source": "dattebayo",
+          "sha256": "6625bc6ac95455e36e660d68b0f69ab2dc4017ab28a7b5b29b4fd768964783cb",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 77538,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #16",
+        "anime": "Boruto Episode #158",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 846,
+        "debut": {
+          "manga": "Boruto Chapter #16",
+          "anime": "Boruto Episode #158",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "status": "Deceased",
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Boruto Manga": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1374",
+      "name": "Kokage Yanagikage",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kokage_Yanagikage",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/1c/Kokage_Yanagikage.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/1c/Kokage_Yanagikage.png",
+          "source": "dattebayo",
+          "sha256": "d1a3416ec5ecd706722365ec6420a88183fe32290c095066fc9f278ab8d118a7",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 83274,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #423",
+        "anime": "Naruto Shippūden Episode #159",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1374,
+        "debut": {
+          "manga": "Naruto Chapter #423",
+          "anime": "Naruto Shippūden Episode #159",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "24"
+          },
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:210",
+      "name": "Might Duy",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Might_Duy",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/b7/Might_Duy.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b7/Might_Duy.png",
+          "source": "dattebayo",
+          "sha256": "16c6bb84f9b4885fbc0a6c45167e91ccaf1fd5c3102bdd7c2182a273bae7062c",
+          "format": "webp",
+          "width": 1854,
+          "height": 1076,
+          "bytes": 167616,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #668",
+        "anime": "Naruto Shippūden Episode #418",
+        "game": "Naruto: Shinobi Collection Shippū Ranbu",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 210,
+        "debut": {
+          "manga": "Naruto Chapter #668",
+          "anime": "Naruto Shippūden Episode #418",
+          "game": "Naruto: Shinobi Collection Shippū Ranbu",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "December 10",
+          "sex": "Male",
+          "age": {
+            "Part II": "35"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "186.4cm"
+          },
+          "weight": {
+            "Part II": "78.4kg"
+          },
+          "bloodType": "B",
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Genin"
+          },
+          "ninjaRegistration": "003001"
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1068",
+      "name": "Makinami Senka",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Makinami_Senka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/21/Makinami_Senka.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/21/Makinami_Senka.png",
+          "source": "dattebayo",
+          "sha256": "8eeee8f787b954499b11503ff9a0a87f3aeb5d4d5ae0c10af71da086701de746",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 126520,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #3",
+        "anime": "Boruto Episode #56",
+        "movie": "Boruto: Naruto the Movie",
+        "appearsIn": "Anime, Manga, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1068,
+        "debut": {
+          "manga": "Boruto Chapter #3",
+          "anime": "Boruto Episode #56",
+          "movie": "Boruto: Naruto the Movie",
+          "appearsIn": "Anime, Manga, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "affiliation": "Kirigakure",
+          "team": "Three Senka Brothers"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Gaiden": "Genin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1069",
+      "name": "Sazanami Senka",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sazanami_Senka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/03/Sazanami_Senka.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/03/Sazanami_Senka.png",
+          "source": "dattebayo",
+          "sha256": "7bac77493aa4c053d9785c1bac55c6da2d8610780783fcf5942261585cf23698",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 124020,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #3",
+        "anime": "Boruto Episode #56",
+        "movie": "Boruto: Naruto the Movie",
+        "appearsIn": "Anime, Manga, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1069,
+        "debut": {
+          "manga": "Boruto Chapter #3",
+          "anime": "Boruto Episode #56",
+          "movie": "Boruto: Naruto the Movie",
+          "appearsIn": "Anime, Manga, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "affiliation": "Kirigakure",
+          "team": "Three Senka Brothers"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Gaiden": "Genin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1070",
+      "name": "Takanami Senka",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Takanami_Senka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/0e/Takanami.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0e/Takanami.png",
+          "source": "dattebayo",
+          "sha256": "7463e2c860b2f221301fa197bdec7c3a506058e301fea6f796cfeae13c55162c",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 91022,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #3",
+        "anime": "Boruto Episode #56",
+        "movie": "Boruto: Naruto the Movie",
+        "appearsIn": "Anime, Manga, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1070,
+        "debut": {
+          "manga": "Boruto Chapter #3",
+          "anime": "Boruto Episode #56",
+          "movie": "Boruto: Naruto the Movie",
+          "appearsIn": "Anime, Manga, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "affiliation": "Kirigakure",
+          "team": "Three Senka Brothers"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Gaiden": "Genin"
+          }
+        },
+        "affiliation": "Kirigakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:1232",
+      "name": "Tonbo Tobitake",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tonbo_Tobitake",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/db/Tonbo_Tobitake.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/db/Tonbo_Tobitake.png",
+          "source": "dattebayo",
+          "sha256": "3cef26b016b3ef0fffec421d93f48e891f8a321fd48e8cbe817560f597a0f492",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 57474,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #40",
+        "anime": "Naruto Episode #3",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto Mobile",
+        "ova": "The Day Naruto Became Hokage (OVA)",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1232,
+        "debut": {
+          "manga": "Naruto Chapter #40",
+          "anime": "Naruto Episode #3",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto Mobile",
+          "ova": "The Day Naruto Became Hokage (OVA)",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "April 4",
+          "sex": "Male",
+          "age": {
+            "Part I": "27",
+            "Part II": "31"
+          },
+          "height": {
+            "Part I": "167cm"
+          },
+          "weight": {
+            "Part I": "55kg"
+          },
+          "bloodType": "A",
+          "occupation": "Chūnin Exams Assistant",
+          "affiliation": "Konohagakure",
+          "team": "Analysis Team"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          },
+          "ninjaRegistration": "010997"
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1377",
+      "name": "Yodo",
+      "universe": "Boruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Yodo",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/ff/Yodo.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/ff/Yodo.png",
+          "source": "dattebayo",
+          "sha256": "84dba58f9a7369172cbc41fa4b0dfe9bb4323c1237a96d96347e4ee8c51c2916",
+          "format": "webp",
+          "width": 1440,
+          "height": 1076,
+          "bytes": 156488,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Boruto Chapter #3",
+        "anime": "Boruto Episode #55",
+        "novel": "Boruto: Naruto the Movie",
+        "movie": "Boruto: Naruto the Movie",
+        "appearsIn": "Anime, Manga, Novel, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1377,
+        "debut": {
+          "manga": "Boruto Chapter #3",
+          "anime": "Boruto Episode #55",
+          "novel": "Boruto: Naruto the Movie",
+          "movie": "Boruto: Naruto the Movie",
+          "appearsIn": "Anime, Manga, Novel, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "December 1",
+          "sex": "Female",
+          "height": {
+            "Gaiden": "147.5cm"
+          },
+          "affiliation": "Sunagakure",
+          "team": "Team Shinki"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Gaiden": "Chūnin"
+          }
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": [
+        "Boruto-era character; separated for review."
+      ]
+    },
+    {
+      "candidate_id": "dattebayo:103",
+      "name": "Shibito Azuma",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shibito_Azuma",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/02/Shibito_Azuma.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/02/Shibito_Azuma.png",
+          "source": "dattebayo",
+          "sha256": "b4c351afa287b2b7dd197696fe0e88b032f9a9d2270bf7a3f6bc09af4c5e53dc",
+          "format": "webp",
+          "width": 835,
+          "height": 540,
+          "bytes": 29950,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #242",
+        "anime": "Naruto Shippūden Episode #120",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 103,
+        "debut": {
+          "manga": "Naruto Chapter #242",
+          "anime": "Naruto Shippūden Episode #120",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "25"
+          },
+          "status": "Deceased",
+          "affiliation": "Iwagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin"
+          }
+        },
+        "affiliation": "Iwagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:213",
+      "name": "Ebizō",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Ebizō",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/02/Ebiz%C5%8D.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/02/Ebiz%C5%8D.png",
+          "source": "dattebayo",
+          "sha256": "ee1dcc7a00063e7616548c53bd204fed536818878a9b9efdd6751ce0e13243d6",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 84828,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #252",
+        "anime": "Naruto Shippūden Episode #9",
+        "novel": "Gaara Hiden: A Sandstorm Mirage",
+        "movie": "Naruto Shippūden the Movie: The Will of Fire",
+        "game": "Naruto Shippūden: Ultimate Ninja 4",
+        "appearsIn": "Anime, Manga, Novel, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 213,
+        "debut": {
+          "manga": "Naruto Chapter #252",
+          "anime": "Naruto Shippūden Episode #9",
+          "novel": "Gaara Hiden: A Sandstorm Mirage",
+          "movie": "Naruto Shippūden the Movie: The Will of Fire",
+          "game": "Naruto Shippūden: Ultimate Ninja 4",
+          "appearsIn": "Anime, Manga, Novel, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "January 6",
+          "sex": "Male",
+          "age": {
+            "Part II": "72"
+          },
+          "height": {
+            "Part II": "158cm"
+          },
+          "weight": {
+            "Part II": "45kg"
+          },
+          "bloodType": "B",
+          "occupation": [
+            "Senior  (Novel only)",
+            "Head of the Suna Council  (Novel only)"
+          ],
+          "affiliation": "Sunagakure",
+          "team": [
+            "Honoured Siblings",
+            "Suna Council  (Novel only)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Blank Period": "Jōnin"
+          },
+          "ninjaRegistration": "02-002"
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:23.079206+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:251",
+      "name": "Furui",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Furui",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/9/96/Furui.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/9/96/Furui.png",
+          "source": "dattebayo",
+          "sha256": "baf45684c196c32c1d9861b5d074567e5a0b68b844e979c89d5bb780b45eafa2",
+          "format": "webp",
+          "width": 1241,
+          "height": 768,
+          "bytes": 60052,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #494",
+        "anime": "Naruto Shippūden Episode #244",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 251,
+        "debut": {
+          "manga": "Naruto Chapter #494",
+          "anime": "Naruto Shippūden Episode #244",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "35"
+          },
+          "status": "Deceased",
+          "affiliation": "Kumogakure",
+          "team": "Eight-Tails Subduing Team"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Kumogakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:23.079206+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:473",
+      "name": "Isago",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Isago",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4d/Isago.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4d/Isago.png",
+          "source": "dattebayo",
+          "sha256": "da3083e87556df0dc4c84c3243cdc9c35ff4eec2f52224dbcf2beb698ad0457a",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 103740,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #250",
+        "anime": "Naruto Shippūden Episode #7",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 473,
+        "debut": {
+          "manga": "Naruto Chapter #250",
+          "anime": "Naruto Shippūden Episode #7",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "38"
+          },
+          "affiliation": "Sunagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:23.558301+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:563",
+      "name": "Saisu Kamano",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Saisu_Kamano",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/41/Saisu_Kamano.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/41/Saisu_Kamano.png",
+          "source": "dattebayo",
+          "sha256": "1be1cf397ca05af1d3dcea9f3cab0b26b349ead108d2595f41bc1f34032bdeb4",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 101094,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #423",
+        "anime": "Naruto Shippūden Episode #159",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 563,
+        "debut": {
+          "manga": "Naruto Chapter #423",
+          "anime": "Naruto Shippūden Episode #159",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "21"
+          },
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.066432+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:787",
+      "name": "Shinobu Mibu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shinobu_Mibu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/b9/Shinobu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b9/Shinobu.png",
+          "source": "dattebayo",
+          "sha256": "9c8daf45e70327353075f05ef4e87d1a341ffb5d7d6319c38697b40752a23274",
+          "format": "webp",
+          "width": 661,
+          "height": 815,
+          "bytes": 52484,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #116",
+        "anime": "Naruto Episode #73",
+        "novel": "Naruto Shippūden the Movie: Bonds",
+        "movie": "Naruto Shippūden the Movie: Bonds",
+        "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+        "appearsIn": "Anime, Manga, Novel, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 787,
+        "debut": {
+          "manga": "Naruto Chapter #116",
+          "anime": "Naruto Episode #73",
+          "novel": "Naruto Shippūden the Movie: Bonds",
+          "movie": "Naruto Shippūden the Movie: Bonds",
+          "ova": "Finally a clash! Jōnin vs. Genin!! Indiscriminate Grand Melee Tournament Meeting!!",
+          "appearsIn": "Anime, Manga, Novel, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "25"
+          },
+          "height": {
+            "Part I": "175cm"
+          },
+          "affiliation": "Konohagakure",
+          "team": [
+            "Konoha Torture and Interrogation Force  (Anime only)",
+            "Twenty Platoons  (Anime only)"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Chūnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.629303+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:801",
+      "name": "Hamaki Mimura",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hamaki_Mimura",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/5d/Hamaki_Mimura2.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/5d/Hamaki_Mimura2.png",
+          "source": "dattebayo",
+          "sha256": "fa4142ac699473dd14bf3fafbd1a2a81ba910c1b0cc0c025f33313e8ce3ed114",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 91074,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #242",
+        "anime": "Naruto Shippūden Episode #120",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 801,
+        "debut": {
+          "manga": "Naruto Chapter #242",
+          "anime": "Naruto Shippūden Episode #120",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "33"
+          },
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part I": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.633839+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:820",
+      "name": "Mizunoto",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mizunoto",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/b/b4/Mizunoto.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/b/b4/Mizunoto.png",
+          "source": "dattebayo",
+          "sha256": "13d36a2478fcf982c6c3394cac9b9bbec1ef0114fba24fc4e33121a3ecc00f1a",
+          "format": "webp",
+          "width": 1357,
+          "height": 1080,
+          "bytes": 96416,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #424",
+        "anime": "Naruto Shippūden Episode #160",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 820,
+        "debut": {
+          "manga": "Naruto Chapter #424",
+          "anime": "Naruto Shippūden Episode #160",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "affiliation": [
+            "Konohagakure",
+            "Root"
+          ]
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Anbu"
+          }
+        },
+        "affiliation": [
+          "Konohagakure",
+          "Root"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.633839+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:905",
+      "name": "Nonota",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Nonota",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/53/Nonota_HDShot.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/53/Nonota_HDShot.png",
+          "source": "dattebayo",
+          "sha256": "1d8f337536d696b1ecff496ba58d2492c4f704502e3041ebb0d0b0e58a4ad310",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 140044,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #546",
+        "anime": "Naruto Shippūden Episode #296",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 905,
+        "debut": {
+          "manga": "Naruto Chapter #546",
+          "anime": "Naruto Shippūden Episode #296",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "affiliation": [
+            "Sunagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Sealing Team"
+        },
+        "rank": {},
+        "affiliation": [
+          "Sunagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1428",
+      "name": "Zōri",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Zōri",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/d9/Zori.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d9/Zori.png",
+          "source": "dattebayo",
+          "sha256": "ca81552440321fa4e048becd75fa55dbc87430c4de316bef5fe7844ebebc7463",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 83342,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #18",
+        "anime": "Naruto Episode #10",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [
+        "Samurai"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1428,
+        "debut": {
+          "manga": "Naruto Chapter #18",
+          "anime": "Naruto Episode #10",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [
+          "Samurai"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "December 1",
+          "sex": "Male",
+          "age": {
+            "Part I": "28"
+          },
+          "height": {
+            "Part I": "172cm"
+          },
+          "weight": {
+            "Part I": "63kg"
+          },
+          "bloodType": "A",
+          "classification": "Samurai",
+          "occupation": "Gatō's bodyguard  (Mercenary)",
+          "affiliation": "Land of Waves",
+          "team": "Gatō Company",
+          "partner": "Waraji"
+        },
+        "rank": {},
+        "affiliation": "Land of Waves",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:146",
+      "name": "Chiriku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Chiriku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/5d/Chiriku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/5d/Chiriku.png",
+          "source": "dattebayo",
+          "sha256": "47597745eec63c1d629f252074d434ec976989e68835656e77953a80cd211729",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 73170,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #314",
+        "anime": "Naruto Shippūden Episode #57",
+        "game": "Naruto Shippūden: Ultimate Ninja Heroes 3  (Mentioned)",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Ninja monk"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 146,
+        "debut": {
+          "manga": "Naruto Chapter #314",
+          "anime": "Naruto Shippūden Episode #57",
+          "game": "Naruto Shippūden: Ultimate Ninja Heroes 3  (Mentioned)",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Ninja monk"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "July 1",
+          "sex": "Male",
+          "age": {
+            "Part II": "31"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part II": "179cm"
+          },
+          "weight": {
+            "Part II": "59.1kg"
+          },
+          "bloodType": "A",
+          "classification": "Ninja monk",
+          "occupation": "Head Monk",
+          "affiliation": [
+            "Land of Fire",
+            "Fire Temple"
+          ],
+          "team": "Twelve Guardian Ninja"
+        },
+        "rank": {},
+        "affiliation": [
+          "Land of Fire",
+          "Fire Temple"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.198994+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1350",
+      "name": "Waraji",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Waraji",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/db/Waraji.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/db/Waraji.png",
+          "source": "dattebayo",
+          "sha256": "fd1a8623933aceee1ab44f3cbb595305737615fcce95554250cba89f29db201c",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 109708,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #18",
+        "anime": "Naruto Episode #10",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "ova": "Hidden Leaf Village Grand Sports Festival!",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [
+        "Samurai"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1350,
+        "debut": {
+          "manga": "Naruto Chapter #18",
+          "anime": "Naruto Episode #10",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "ova": "Hidden Leaf Village Grand Sports Festival!",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [
+          "Samurai"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "April 6",
+          "sex": "Male",
+          "age": {
+            "Part I": "33"
+          },
+          "height": {
+            "Part I": "181.4cm"
+          },
+          "weight": {
+            "Part I": "71.1kg"
+          },
+          "bloodType": "O",
+          "classification": "Samurai",
+          "occupation": "Gatō's bodyguard  (Mercenary)",
+          "affiliation": "Land of Waves",
+          "team": "Gatō Company",
+          "partner": "Zōri"
+        },
+        "rank": {},
+        "affiliation": "Land of Waves",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.613815+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:131",
+      "name": "Bunpuku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Bunpuku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/5/5e/Bunpuku_anime.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/5/5e/Bunpuku_anime.png",
+          "source": "dattebayo",
+          "sha256": "6e572f430b2705c72f6273934857a09b46eeccf03849900edfef56d6221ba6fb",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 56990,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #660",
+        "anime": "Naruto Shippūden Episode #392",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Jinchūriki"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 131,
+        "debut": {
+          "manga": "Naruto Chapter #660",
+          "anime": "Naruto Shippūden Episode #392",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Jinchūriki"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "February 9",
+          "sex": "Male",
+          "status": "Deceased",
+          "weight": {
+            "Part II": "38.2kg"
+          },
+          "bloodType": "O",
+          "classification": "Jinchūriki",
+          "tailedBeast": "Shukaku (Forms)",
+          "occupation": "Priest",
+          "affiliation": "Sunagakure"
+        },
+        "rank": {},
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:19.748655+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1000",
+      "name": "Sabu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sabu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/8/8a/Sabu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/8/8a/Sabu.png",
+          "source": "dattebayo",
+          "sha256": "b521ad8d4e2c0f6a8e97ddc51144734c92915e6e676cb63e19a9ea98050e153e",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 70272,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #468",
+        "anime": "Naruto Shippūden Episode #206",
+        "game": "Naruto Shippūden: Ultimate Ninja Impact",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1000,
+        "debut": {
+          "manga": "Naruto Chapter #468",
+          "anime": "Naruto Shippūden Episode #206",
+          "game": "Naruto Shippūden: Ultimate Ninja Impact",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "October 4",
+          "sex": "Male",
+          "age": {
+            "Part II": "61"
+          },
+          "height": {
+            "Part II": "130.5cm"
+          },
+          "weight": {
+            "Part II": "37kg"
+          },
+          "bloodType": "O",
+          "occupation": "Enka Singer",
+          "affiliation": "Enka Ninja\"Enka Ninja\" is not in the list (Allied Shinobi Forces, Akatsuki, Root, Kara, Pale Blue Valley, Daidai Village, Aburame Clan, Academy, Advanced Technology Research Institute, Akagahara, ...) of allowed values for the \"Affiliation\" property.",
+          "partner": "Ponta"
+        },
+        "rank": {},
+        "affiliation": "Enka Ninja\"Enka Ninja\" is not in the list (Allied Shinobi Forces, Akatsuki, Root, Kara, Pale Blue Valley, Daidai Village, Aburame Clan, Academy, Advanced Technology Research Institute, Akagahara, ...) of allowed values for the \"Affiliation\" property.",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:810",
+      "name": "Mitate",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mitate",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/39/Mitate.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/39/Mitate.png",
+          "source": "dattebayo",
+          "sha256": "08d0706cdc97fe1ecd405ece3459b69eae85c35a7464db929ac08126dbe85516",
+          "format": "webp",
+          "width": 1429,
+          "height": 1080,
+          "bytes": 89588,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #87",
+        "anime": "Naruto Episode #50",
+        "game": "Naruto: Ultimate Ninja Online",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 810,
+        "debut": {
+          "manga": "Naruto Chapter #87",
+          "anime": "Naruto Episode #50",
+          "game": "Naruto: Ultimate Ninja Online",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "24"
+          },
+          "height": {
+            "Part I": "170cm"
+          },
+          "classification": "Medical-nin",
+          "affiliation": "Konohagakure",
+          "team": "Medic Corps"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1005",
+      "name": "Sagan",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sagan",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/f/fb/Sagan.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/f/fb/Sagan.png",
+          "source": "dattebayo",
+          "sha256": "e977f732150050309037a76938688c7349c163751d85ba6de1a03b7a90f269d3",
+          "format": "webp",
+          "width": 826,
+          "height": 956,
+          "bytes": 36172,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #561",
+        "anime": "Naruto Shippūden Episode #322",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1005,
+        "debut": {
+          "manga": "Naruto Chapter #561",
+          "anime": "Naruto Shippūden Episode #322",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "classification": "Sensor Type",
+          "affiliation": [
+            "Iwagakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Fourth Division"
+        },
+        "rank": {},
+        "affiliation": [
+          "Iwagakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:22.162973+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1319",
+      "name": "Ugatsu",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Ugatsu",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/32/Ugatsu.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/32/Ugatsu.png",
+          "source": "dattebayo",
+          "sha256": "4317690d7842d92d5ed0ad806317713f1a086714dc82ae732316be8acc0f71ba",
+          "format": "webp",
+          "width": 646,
+          "height": 676,
+          "bytes": 35626,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #369",
+        "anime": "Naruto Shippūden Episode #129",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1319,
+        "debut": {
+          "manga": "Naruto Chapter #369",
+          "anime": "Naruto Shippūden Episode #129",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "28"
+          },
+          "status": "Presumed Deceased",
+          "affiliation": "Amegakure"
+        },
+        "rank": {},
+        "affiliation": "Amegakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:26.198195+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:812",
+      "name": "Mitoku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mitoku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/7/72/Mitoku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/7/72/Mitoku.png",
+          "source": "dattebayo",
+          "sha256": "0e55aaf7c3f2219f25d062de29299db3add520e1843a96a6b2f788a10fa054e0",
+          "format": "webp",
+          "width": 973,
+          "height": 730,
+          "bytes": 75928,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #406",
+        "anime": "Naruto Shippūden Episode #153",
+        "movie": "Naruto the Movie: Blood Prison",
+        "game": "Naruto: Ultimate Ninja Online",
+        "appearsIn": "Anime, Manga, Game, Movie"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 812,
+        "debut": {
+          "manga": "Naruto Chapter #406",
+          "anime": "Naruto Shippūden Episode #153",
+          "movie": "Naruto the Movie: Blood Prison",
+          "game": "Naruto: Ultimate Ninja Online",
+          "appearsIn": "Anime, Manga, Game, Movie"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "52"
+          },
+          "occupation": "Head of the Konoha Cryptanalysis Team",
+          "affiliation": "Konohagakure",
+          "team": "Konoha Cryptanalysis Team"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.633839+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:434",
+      "name": "Hyūga Elder",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Hyūga_Elder",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/25/Hy%C5%ABga_Elder.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/25/Hy%C5%ABga_Elder.png",
+          "source": "dattebayo",
+          "sha256": "19efb8981ab3c9abc8e5cbf240d90987a175d78620d7bd0584ef85d657eefba7",
+          "format": "webp",
+          "width": 1432,
+          "height": 1078,
+          "bytes": 102124,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #105",
+        "anime": "Naruto Episode #61",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 434,
+        "debut": {
+          "manga": "Naruto Chapter #105",
+          "anime": "Naruto Episode #61",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "kekkeiGenkai": "Byakugan",
+          "occupation": "Head of the Hyūga clan  (Former)",
+          "affiliation": "Konohagakure",
+          "clan": "Hyūga"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": "Hyūga",
+        "collected_at": "2026-11-26T01:40:23.557303+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:544",
+      "name": "Kaiza",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kaiza",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4f/Kaiza.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4f/Kaiza.png",
+          "source": "dattebayo",
+          "sha256": "7e6173cd5715976fcdf4f679c23cab8457b61aba4a700f47a177e7084e9f1f54",
+          "format": "webp",
+          "width": 1388,
+          "height": 1050,
+          "bytes": 103140,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #20",
+        "anime": "Naruto Episode #11",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 544,
+        "debut": {
+          "manga": "Naruto Chapter #20",
+          "anime": "Naruto Episode #11",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "birthdate": "August 21",
+          "sex": "Male",
+          "age": {
+            "Part I": "30"
+          },
+          "status": "Deceased",
+          "height": {
+            "Part I": "183cm"
+          },
+          "weight": {
+            "Part I": "75kg"
+          },
+          "bloodType": "A",
+          "occupation": "Fisherman",
+          "affiliation": "Land of Waves"
+        },
+        "rank": {},
+        "affiliation": "Land of Waves",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.066432+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1236",
+      "name": "Tessen Togeito",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tessen_Togeito",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/27/Tessen_Togeito.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/27/Tessen_Togeito.png",
+          "source": "dattebayo",
+          "sha256": "5a8c95e0cb04e4f5bf67e3c1209a8775ed13e603f73569e30b27f32d811da2f8",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 98132,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #423",
+        "anime": "Naruto Shippūden Episode #159",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1236,
+        "debut": {
+          "manga": "Naruto Chapter #423",
+          "anime": "Naruto Shippūden Episode #159",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "26"
+          },
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Tokubetsu Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.653724+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:545",
+      "name": "Kaji",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kaji",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/4/4e/Kaji.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/4/4e/Kaji.png",
+          "source": "dattebayo",
+          "sha256": "c765f33eb61ac456be8a35740a02b358b17eb9a97c7b779afbff5b67ec29c129",
+          "format": "webp",
+          "width": 1388,
+          "height": 1050,
+          "bytes": 55764,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #11",
+        "anime": "Naruto Episode #7",
+        "novel": "Naruto: Innocent Heart, Demonic Blood",
+        "game": "Naruto: Konoha Ninpōchō",
+        "appearsIn": "Anime, Manga, Novel, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 545,
+        "debut": {
+          "manga": "Naruto Chapter #11",
+          "anime": "Naruto Episode #7",
+          "novel": "Naruto: Innocent Heart, Demonic Blood",
+          "game": "Naruto: Konoha Ninpōchō",
+          "appearsIn": "Anime, Manga, Novel, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "39"
+          },
+          "affiliation": "Land of Waves"
+        },
+        "rank": {},
+        "affiliation": "Land of Waves",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.066432+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1389",
+      "name": "Yoshiteru",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Yoshiteru",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/37/Yoshiteru.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/37/Yoshiteru.png",
+          "source": "dattebayo",
+          "sha256": "701c4656b848d6fb5894945bbb199a86eb07c9f89a978d1e24b985063390ae5d",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 59042,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #460",
+        "anime": "Naruto Shippūden Episode #202",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Samurai"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1389,
+        "debut": {
+          "manga": "Naruto Chapter #460",
+          "anime": "Naruto Shippūden Episode #202",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Samurai"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "37"
+          },
+          "status": "Presumed Deceased",
+          "classification": "Samurai",
+          "affiliation": "Land of Iron"
+        },
+        "rank": {},
+        "affiliation": "Land of Iron",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:20.430211+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:203",
+      "name": "Mawashi Dokuraku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Mawashi_Dokuraku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/d/d5/Mawashi_Dokuraku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/d/d5/Mawashi_Dokuraku.png",
+          "source": "dattebayo",
+          "sha256": "336dc3123017d5435de41b6c46bf1d3e4d02f6988187a0562b7e91c1e05ed6e0",
+          "format": "webp",
+          "width": 449,
+          "height": 410,
+          "bytes": 14616,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #418",
+        "anime": "Naruto Shippūden Episode #157",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 203,
+        "debut": {
+          "manga": "Naruto Chapter #418",
+          "anime": "Naruto Shippūden Episode #157",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "36"
+          },
+          "affiliation": "Konohagakure",
+          "team": "Analysis Team"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1264",
+      "name": "Tsubusa",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tsubusa",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/65/Tsubusa.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/65/Tsubusa.png",
+          "source": "dattebayo",
+          "sha256": "e069efb58a15341775de7cc05f2378ccce8fa320bf24af6f2a1765113e60ca0b",
+          "format": "webp",
+          "width": 750,
+          "height": 750,
+          "bytes": 55144,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #247",
+        "anime": "Naruto Shippūden Episode #2",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1264,
+        "debut": {
+          "manga": "Naruto Chapter #247",
+          "anime": "Naruto Shippūden Episode #2",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "25"
+          },
+          "status": "Deceased",
+          "affiliation": "Sunagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.653724+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:305",
+      "name": "Genzō",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Genzō",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/ec/Genzo.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/ec/Genzo.png",
+          "source": "dattebayo",
+          "sha256": "fbebb688dfbec632d877c377a5e075b6737634502f919d987a660a84f788691e",
+          "format": "webp",
+          "width": 1429,
+          "height": 1080,
+          "bytes": 133006,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #2",
+        "anime": "Naruto Episode #2",
+        "game": "Naruto: Ultimate Ninja",
+        "ova": "The Day Naruto Became Hokage (OVA)",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 305,
+        "debut": {
+          "manga": "Naruto Chapter #2",
+          "anime": "Naruto Episode #2",
+          "game": "Naruto: Ultimate Ninja",
+          "ova": "The Day Naruto Became Hokage (OVA)",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part I": "58"
+          },
+          "occupation": "Photographer",
+          "affiliation": "Konohagakure"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:23.554266+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1398",
+      "name": "Shinku Yūhi",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Shinku_Yūhi",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/0f/Shinku_Y%C5%ABhi.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/0f/Shinku_Y%C5%ABhi.png",
+          "source": "dattebayo",
+          "sha256": "2ba9d3f5a403cb5b5debc305d8c5b6ffa835ea395fe427d8e1a4c8363d666aca",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 78940,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #503",
+        "anime": "Naruto Shippūden Episode #248",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1398,
+        "debut": {
+          "manga": "Naruto Chapter #503",
+          "anime": "Naruto Shippūden Episode #248",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "45"
+          },
+          "occupation": "Instructor",
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Jōnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:26.198195+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1176",
+      "name": "Tajiki",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Tajiki",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/2/26/Tajik_mugshot.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/2/26/Tajik_mugshot.png",
+          "source": "dattebayo",
+          "sha256": "d942bce370602a56621094656d3b00dfe0e68aaf88e63f74dfa375063cb810d2",
+          "format": "webp",
+          "width": 506,
+          "height": 529,
+          "bytes": 16664,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #522",
+        "anime": "Naruto Shippūden Episode #265",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1176,
+        "debut": {
+          "manga": "Naruto Chapter #522",
+          "anime": "Naruto Shippūden Episode #265",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "34"
+          },
+          "status": "Deceased",
+          "affiliation": [
+            "Kumogakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Third Division"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": [
+          "Kumogakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.653724+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:729",
+      "name": "Kussaku",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kussaku",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/a/a5/Kussaku.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/a/a5/Kussaku.png",
+          "source": "dattebayo",
+          "sha256": "a7a9cad5f989966a1802c69a2c2cea8e37789b827018673c483d1a2e476279e9",
+          "format": "webp",
+          "width": 1064,
+          "height": 910,
+          "bytes": 43938,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #515",
+        "anime": "Naruto Shippūden Episode #256",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Sensor Type"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 729,
+        "debut": {
+          "manga": "Naruto Chapter #515",
+          "anime": "Naruto Shippūden Episode #256",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Sensor Type"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "20"
+          },
+          "status": "Deceased",
+          "classification": "Sensor Type",
+          "affiliation": [
+            "Kirigakure",
+            "Allied Shinobi Forces"
+          ],
+          "team": "Sensor Division"
+        },
+        "rank": {},
+        "affiliation": [
+          "Kirigakure",
+          "Allied Shinobi Forces"
+        ],
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:21.082048+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:882",
+      "name": "Natori",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Natori",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/c/c6/Natori.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/c/c6/Natori.png",
+          "source": "dattebayo",
+          "sha256": "be4db15cd2bf6e55143e9d046cb8c2a9ab78d44b064fcf1af4e81ab28fb59f73",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 100630,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #250",
+        "anime": "Naruto Shippūden Episode #8",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 882,
+        "debut": {
+          "manga": "Naruto Chapter #250",
+          "anime": "Naruto Shippūden Episode #8",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "24"
+          },
+          "affiliation": "Konohagakure"
+        },
+        "rank": {
+          "ninjaRank": {
+            "Part II": "Chūnin"
+          }
+        },
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.633839+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:948",
+      "name": "Oyone",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Oyone",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/1/19/Oyone.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/1/19/Oyone.png",
+          "source": "dattebayo",
+          "sha256": "f18a6fbd5d81cc2089f2177108c5749f8592c28c19b60b62036279bdea0acd2d",
+          "format": "webp",
+          "width": 440,
+          "height": 446,
+          "bytes": 22470,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #406",
+        "anime": "Naruto Shippūden Episode #154",
+        "game": "Naruto: Ultimate Ninja Online",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 948,
+        "debut": {
+          "manga": "Naruto Chapter #406",
+          "anime": "Naruto Shippūden Episode #154",
+          "game": "Naruto: Ultimate Ninja Online",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Female",
+          "classification": "Medical-nin",
+          "affiliation": "Konohagakure",
+          "team": [
+            "Medic Corps",
+            "Analysis Team"
+          ]
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.147528+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:706",
+      "name": "Kumadori",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Kumadori",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/6/6d/Kumadori.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/6/6d/Kumadori.png",
+          "source": "dattebayo",
+          "sha256": "40ba778ac11f2ac0d9289d7f5ab68366466a78a477044023f5a5c9c747df9987",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 69832,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #406",
+        "anime": "Naruto Shippūden Episode #154",
+        "game": "Naruto: Ultimate Ninja Online",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 706,
+        "debut": {
+          "manga": "Naruto Chapter #406",
+          "anime": "Naruto Shippūden Episode #154",
+          "game": "Naruto: Ultimate Ninja Online",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "26"
+          },
+          "classification": "Medical-nin",
+          "affiliation": "Konohagakure",
+          "team": [
+            "Medic Corps",
+            "Analysis Team"
+          ]
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:24.629303+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1410",
+      "name": "Yurika",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Yurika",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/3/3f/Yurika.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/3/3f/Yurika.png",
+          "source": "dattebayo",
+          "sha256": "4cdb07a6b8bc7902dcb5517748b5bf827ccce77957688804cf2576a4ed7e38d7",
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 115394,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #250",
+        "anime": "Naruto Shippūden Episode #8",
+        "game": "Naruto: Ultimate Ninja Online",
+        "appearsIn": "Anime, Manga, Game"
+      },
+      "classification": [],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1410,
+        "debut": {
+          "manga": "Naruto Chapter #250",
+          "anime": "Naruto Shippūden Episode #8",
+          "game": "Naruto: Ultimate Ninja Online",
+          "appearsIn": "Anime, Manga, Game"
+        },
+        "classification": [],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Female",
+          "age": {
+            "Part II": "24"
+          },
+          "occupation": "Message Decoder",
+          "affiliation": "Konohagakure",
+          "team": "Konoha Cryptanalysis Team"
+        },
+        "rank": {},
+        "affiliation": "Konohagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:26.198195+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:987",
+      "name": "Ryōkan",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Ryōkan",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/0/03/Ryokan.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/0/03/Ryokan.png",
+          "source": "dattebayo",
+          "sha256": "818792bc8e34d24427533ff2ada00a25a465cbc09ed4e0f5ef9a781a00c9a2d9",
+          "format": "webp",
+          "width": 690,
+          "height": 690,
+          "bytes": 33926,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #251",
+        "anime": "Naruto Shippūden Episode #10",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 987,
+        "debut": {
+          "manga": "Naruto Chapter #251",
+          "anime": "Naruto Shippūden Episode #10",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "25"
+          },
+          "classification": "Medical-nin",
+          "affiliation": "Sunagakure"
+        },
+        "rank": {},
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.147528+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    },
+    {
+      "candidate_id": "dattebayo:1057",
+      "name": "Sekka",
+      "universe": "Naruto",
+      "source": "dattebayo",
+      "source_url": "https://naruto.fandom.com/wiki/Sekka",
+      "aliases": [],
+      "image_urls": [
+        "https://static.wikia.nocookie.net/naruto/images/e/ee/Sekka.png"
+      ],
+      "images": [
+        {
+          "url": "https://static.wikia.nocookie.net/naruto/images/e/ee/Sekka.png",
+          "source": "dattebayo",
+          "sha256": "79c15d0cd1e62481c0fd00b2f1fd21e5037762be1fd796fd38e99407ba319b34",
+          "format": "webp",
+          "width": 700,
+          "height": 700,
+          "bytes": 36050,
+          "status": "valid",
+          "rights": "source-dependent; review before publication"
+        }
+      ],
+      "debut": {
+        "manga": "Naruto Chapter #251",
+        "anime": "Naruto Shippūden Episode #10",
+        "appearsIn": "Anime, Manga"
+      },
+      "classification": [
+        "Medical-nin"
+      ],
+      "species": null,
+      "canonical_eligibility": "eligible",
+      "eligibility_reason": "manga debut recorded by source",
+      "source_metadata": {
+        "dattebayo_id": 1057,
+        "debut": {
+          "manga": "Naruto Chapter #251",
+          "anime": "Naruto Shippūden Episode #10",
+          "appearsIn": "Anime, Manga"
+        },
+        "classification": [
+          "Medical-nin"
+        ],
+        "species": null,
+        "titles": [],
+        "personal": {
+          "sex": "Male",
+          "age": {
+            "Part II": "36"
+          },
+          "classification": "Medical-nin",
+          "affiliation": "Sunagakure"
+        },
+        "rank": {},
+        "affiliation": "Sunagakure",
+        "clan": null,
+        "collected_at": "2026-11-26T01:40:25.147528+00:00"
+      },
+      "review_status": "pending",
+      "notes": []
+    }
+  ]
+}

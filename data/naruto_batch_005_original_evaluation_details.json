@@ -1,0 +1,3542 @@
+{
+  "format_version": "KA-COMPANION-005-DETAILS",
+  "batch_id": "naruto-batch-005",
+  "evaluation_details": [
+    {
+      "character_id": "dattebayo:43",
+      "name": "Dōtō Akimichi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #542). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:879",
+      "name": "Suzaku Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #534). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:880",
+      "name": "Yoshino Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #182). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:441",
+      "name": "Iroha Hyūga",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #536). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Recorded kekkei genkai Byakugan (trait only, not demonstrated in supplied evidence)"
+      ],
+      "ability_classes_used": [
+        "X (recorded trait, unevidenced)"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:724",
+      "name": "Raiga Kurosuki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Anbu; Part II: Jōnin; debut: Naruto Chapter #668). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1370",
+      "name": "Santa Yamanaka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #523). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:901",
+      "name": "Nishi (sensor)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Boruto Manga: Jōnin; debut: Boruto Chapter #39). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "draft_single_inspected_duty_evidence"
+      ],
+      "held": false
+    },
+    {
+      "character_id": "dattebayo:279",
+      "name": "Gantetsu (Iwagakure)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #150). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:850",
+      "name": "Mukade",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #260). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:46",
+      "name": "Shitō Akimichi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #422). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:873",
+      "name": "Ensui Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #523). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:435",
+      "name": "Hanabi Hyūga",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Blank Period: Genin; debut: Naruto Chapter #78). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Recorded kekkei genkai Byakugan (trait only, not demonstrated in supplied evidence)",
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "X (recorded trait, unevidenced)"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:14",
+      "name": "Tatsuma Aburame",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #583). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:24",
+      "name": "Ajisai",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; Part II: Chūnin; debut: Naruto Chapter #407). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:44",
+      "name": "Makaro Akimichi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #631). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:45",
+      "name": "Maruten Akimichi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Tokubetsu Jōnin; debut: Naruto Chapter #534). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:432",
+      "name": "Hyō",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #285). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:841",
+      "name": "Mozuku",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #40). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:871",
+      "name": "Daen Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #616). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:874",
+      "name": "Kasuga Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #616). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:875",
+      "name": "Maen Nara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Tokubetsu Jōnin; debut: Naruto Chapter #616). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1094",
+      "name": "Shin",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #310). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1413",
+      "name": "Yurui",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Genin; debut: Boruto Chapter #3). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:30",
+      "name": "Iwana Akame",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #1). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:109",
+      "name": "Baku (Anbu)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #399). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:231",
+      "name": "Fuki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #71). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:249",
+      "name": "Daikoku Funeno",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #221). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:386",
+      "name": "Hibari",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #94). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:392",
+      "name": "Hikaru",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #491). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:416",
+      "name": "Hōki (Takigakure)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:457",
+      "name": "Inaho",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:464",
+      "name": "Gaku Inuzuka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #542). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:601",
+      "name": "Kasumi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #71). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:666",
+      "name": "Kōji",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #94). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:775",
+      "name": "Matsuri (Konoha)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; Part II: Genin; debut: Naruto Chapter #94). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:792",
+      "name": "Midori",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #110). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1033",
+      "name": "Tsuzumi Sarugaku",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #109). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1045",
+      "name": "Satetsu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Jōnin; debut: Naruto Chapter #140). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1080",
+      "name": "Shiba (Kusagakure)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #110). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1220",
+      "name": "Terai",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #454). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1252",
+      "name": "Tora (Anbu)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #399). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1332",
+      "name": "Urushi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #582). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1392",
+      "name": "Kiyoi Yotsuki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #408). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1337",
+      "name": "Yūgao Uzuki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Anbu; debut: Naruto Chapter #137). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:328",
+      "name": "Dōshu Goetsu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Genin; debut: Naruto Chapter #700+1). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [
+        "Medical classification recorded but no medical feat supplied; Healer 0 left unevidenced."
+      ],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:122",
+      "name": "Jūzō Biwa",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #668). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:618",
+      "name": "Moegi Kazamatsuri",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; Part II: Genin; Gaiden: Jōnin; debut: Naruto Chapter #34). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Recorded kekkei genkai Wood Release (trait only, not demonstrated in supplied evidence)",
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "X (recorded trait, unevidenced)"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:338",
+      "name": "Gōzu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #9). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:779",
+      "name": "Meizu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #9). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:154",
+      "name": "Chōseki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #150). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:802",
+      "name": "Tomaru Minakura",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Academy Student; debut: Naruto Chapter #247). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:814",
+      "name": "Dango Mitsuki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #490). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1308",
+      "name": "Setsuna Uchiha",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: not recorded; debut: Naruto Chapter #399). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Recorded kekkei genkai Sharingan (trait only, not demonstrated in supplied evidence)"
+      ],
+      "ability_classes_used": [
+        "X (recorded trait, unevidenced)"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [
+        "Rank field empty in source metadata."
+      ],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:846",
+      "name": "Mugino",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Boruto Manga: Jōnin; debut: Boruto Chapter #16). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1309",
+      "name": "Shin Uchiha",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: not recorded; debut: Naruto Chapter #700+2). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Recorded kekkei genkai Sharingan, Mangekyō Sharingan (trait only, not demonstrated in supplied evidence)"
+      ],
+      "ability_classes_used": [
+        "X (recorded trait, unevidenced)"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [
+        "Medical classification recorded but no medical feat supplied; Healer 0 left unevidenced.",
+        "Rank field empty in source metadata."
+      ],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1374",
+      "name": "Kokage Yanagikage",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #423). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:477",
+      "name": "Udon Ise",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; Part II: Genin; Gaiden: Jōnin; debut: Naruto Chapter #34). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:210",
+      "name": "Might Duy",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Genin; debut: Naruto Chapter #668). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:391",
+      "name": "Shimon Hijiri",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #40). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1068",
+      "name": "Makinami Senka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Genin; debut: Boruto Chapter #3). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1069",
+      "name": "Sazanami Senka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Genin; debut: Boruto Chapter #3). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1070",
+      "name": "Takanami Senka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Genin; debut: Boruto Chapter #3). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1155",
+      "name": "Sumashi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Tokubetsu Jōnin; debut: Naruto Chapter #244). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1232",
+      "name": "Tonbo Tobitake",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #40). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:1377",
+      "name": "Yodo",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Gaiden: Chūnin; debut: Boruto Chapter #3). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:888",
+      "name": "Nejiri",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #41). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:7",
+      "name": "Abiru",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #129). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:18",
+      "name": "Agara",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #487). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:26",
+      "name": "Manabu Akado",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:64",
+      "name": "Ami",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #71). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:103",
+      "name": "Shibito Azuma",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Jōnin; debut: Naruto Chapter #242). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:118",
+      "name": "Bekkō",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #1). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:137",
+      "name": "Gyokurō Chabashira",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Boruto Manga: Genin; debut: Boruto Chapter #16). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:167",
+      "name": "Daichi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #94). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:213",
+      "name": "Ebizō",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Blank Period: Jōnin; debut: Naruto Chapter #252). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:251",
+      "name": "Furui",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #494). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:253",
+      "name": "Futaba",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #94). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:301",
+      "name": "Gennai",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:337",
+      "name": "Gōza",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #266). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:361",
+      "name": "Hakui (medic)",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: not recorded; debut: Naruto Chapter #539). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [
+        "Medical classification recorded but no medical feat supplied; Healer 0 left unevidenced.",
+        "Rank field empty in source metadata."
+      ],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:379",
+      "name": "Hayase",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #44). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:384",
+      "name": "Heki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #454). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:420",
+      "name": "Hōsei",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:473",
+      "name": "Isago",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Jōnin; debut: Naruto Chapter #250). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:486",
+      "name": "Ittetsu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Genin; debut: Naruto Chapter #280). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:520",
+      "name": "Jōseki",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Jōnin; debut: Naruto Chapter #266). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:563",
+      "name": "Saisu Kamano",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Chūnin; debut: Naruto Chapter #423). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:567",
+      "name": "Jin Kaminari",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Boruto Manga: Genin; debut: Boruto Chapter #16). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:599",
+      "name": "Kashike",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #129). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:676",
+      "name": "Komaza",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #42). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:681",
+      "name": "Komugi",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #43). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:695",
+      "name": "Kosuke",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #605). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:698",
+      "name": "Kōta",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Academy Student; debut: Naruto Chapter #221). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:727",
+      "name": "Kurozuka",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #456). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:787",
+      "name": "Shinobu Mibu",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Chūnin; debut: Naruto Chapter #116). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [
+        "Anime-only team/occupation entries excluded per canon policy"
+      ],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:801",
+      "name": "Hamaki Mimura",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Jōnin; debut: Naruto Chapter #242). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:805",
+      "name": "Minoji",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Genin; debut: Naruto Chapter #60). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:817",
+      "name": "Third Mizukage",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Kage; debut: Naruto Chapter #648). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:820",
+      "name": "Mizunoto",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part II: Anbu; debut: Naruto Chapter #424). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    },
+    {
+      "character_id": "dattebayo:825",
+      "name": "Kunugi Mokume",
+      "canonical_version": "Recorded manga-era state at recorded rank (no feat-verified prime established)",
+      "version_selection_reasoning": "Only metadata supplied (rank: Part I: Jōnin; debut: Naruto Chapter #160). No feats to select a prime from. ECV is provisional and rests on rank and debut only.",
+      "core_abilities": [],
+      "conditional_abilities": [],
+      "excluded_abilities": [],
+      "ability_classes_used": [
+        "none"
+      ],
+      "confidence": {
+        "power": "low",
+        "roles": {
+          "captain": "low",
+          "strategist": "low",
+          "attacker": "low",
+          "tank": "low",
+          "assassin": "low",
+          "support": "low",
+          "healer": "low"
+        }
+      },
+      "plausible_alternatives": [
+        "Power 2 (Trained fighter) would be plausible only if combat feats are verified at grade A or B; no such evidence supplied."
+      ],
+      "contradictions_or_outliers": [],
+      "uncertainty_note": "Research supplies metadata only. Fit 0 entries are unevidenced zeros; Power 1 is a schema floor. Held pending a feat-level verification pass.",
+      "review_flags": [
+        "held_no_feat_evidence",
+        "power_is_schema_floor",
+        "unevidenced_fit_zeros"
+      ],
+      "held": true
+    }
+  ]
+}
