@@ -113,15 +113,15 @@ The corrected cumulative comparison identified 33 characters with all seven Role
 
 ## 9. Validation and regression results
 
-- Focused integration tests: passed.
-- Complete repository regression suite: passed.
+- Focused integration tests: 8 passed.
+- Complete repository regression suite: 228 passed.
 - Arena UI, UI 2.1 and Arena Logs 2.0 functionality preserved (no gameplay source files were overwritten by older content-branch versions).
 - Simulation integrity tests: passed with role-specific Fit 0 score maxima.
 
 ## 10. Commit and deployment status
 
 - Content audited commit: `539be7b`
-- Integration commit: see final commit on `main`.
+- Integration commit: `0fcc788` on `main`.
 - Deployment status: **not deployed**; no live approval, publication or universe activation was performed.
 
 ## 11. Exact owner-side approval and publication instructions

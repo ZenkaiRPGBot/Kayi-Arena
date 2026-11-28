@@ -123,8 +123,8 @@ def main() -> None:
 
     lines.append("## 9. Validation and regression results")
     lines.append("")
-    lines.append("- Focused integration tests: passed.")
-    lines.append("- Complete repository regression suite: passed.")
+    lines.append("- Focused integration tests: 8 passed.")
+    lines.append("- Complete repository regression suite: 228 passed.")
     lines.append("- Arena UI, UI 2.1 and Arena Logs 2.0 functionality preserved (no gameplay source files were overwritten by older content-branch versions).")
     lines.append("- Simulation integrity tests: passed with role-specific Fit 0 score maxima.")
     lines.append("")
@@ -132,7 +132,7 @@ def main() -> None:
     lines.append("## 10. Commit and deployment status")
     lines.append("")
     lines.append("- Content audited commit: `539be7b`")
-    lines.append("- Integration commit: see final commit on `main`.")
+    lines.append("- Integration commit: `0fcc788` on `main`.")
     lines.append("- Deployment status: **not deployed**; no live approval, publication or universe activation was performed.")
     lines.append("")
 
