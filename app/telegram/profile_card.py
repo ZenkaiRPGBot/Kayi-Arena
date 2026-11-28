@@ -1,9 +1,9 @@
-"""Production 1900x600 esports Player Card renderer for Kayi Arena Profile 2.0.
+"""Production 1900x800 esports Player Card V2 renderer for Kayi Arena Profile 2.0.
 
-Preserves the approved standalone prototype composition, neon accents, gradient
-typography, and static artwork while adding cross-platform font resolution,
-Unicode/emoji fallback, EXIF-safe avatar cropping, bounded caching, and
-off-event-loop async rendering.
+Preserves the approved standalone 19:8 prototype composition, neon accents,
+gradient typography, and static artwork while adding cross-platform font
+resolution, Unicode/emoji fallback, EXIF-safe avatar cropping, bounded caching,
+and off-event-loop async rendering.
 """
 
 from __future__ import annotations
@@ -25,8 +25,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 logger = logging.getLogger(__name__)
 
 CARD_WIDTH = 1900
-CARD_HEIGHT = 600
-RENDERER_VERSION = "2.0.0"
+CARD_HEIGHT = 800
+RENDERER_VERSION = "2.1.0"
 
 _ASSETS_ROOT = Path(__file__).resolve().parent / "assets"
 _PROFILE_ASSETS = _ASSETS_ROOT / "profile"
@@ -212,9 +212,10 @@ def _get_static_layers() -> tuple[Image.Image, Image.Image, Image.Image]:
         Image.open(bg_path).convert("RGBA"),
         (CARD_WIDTH, CARD_HEIGHT),
         Image.Resampling.LANCZOS,
+        centering=(0.70, 0.5),
     )
-    emblem = Image.open(em_path).convert("RGBA").resize((100, 100), Image.Resampling.LANCZOS)
-    frame = Image.open(fr_path).convert("RGBA").resize((420, 420), Image.Resampling.LANCZOS)
+    emblem = Image.open(em_path).convert("RGBA").resize((160, 160), Image.Resampling.LANCZOS)
+    frame = Image.open(fr_path).convert("RGBA").resize((480, 480), Image.Resampling.LANCZOS)
     _STATIC_CACHE["layers"] = (bg, emblem, frame)
     return bg, emblem, frame
 
@@ -319,9 +320,9 @@ def _draw_icon(base: Image.Image, kind: str, cx: int, cy: int, color: tuple[int,
         ln([(10, 46), (33, 29), (48, 35), (82, 12), (65, 12)])
         ln([(82, 12), (82, 29)])
 
-    resized = im.resize((65, 65), Image.Resampling.LANCZOS)
-    base.alpha_composite(resized.filter(ImageFilter.GaussianBlur(3)), (cx - 32, cy - 32))
-    base.alpha_composite(resized, (cx - 32, cy - 32))
+    resized = im.resize((83, 83), Image.Resampling.LANCZOS)
+    base.alpha_composite(resized.filter(ImageFilter.GaussianBlur(4)), (cx - 41, cy - 41))
+    base.alpha_composite(resized, (cx - 41, cy - 41))
 
 
 def _format_card_count(value: int) -> str:
@@ -332,7 +333,7 @@ def _format_card_count(value: int) -> str:
     return str(value)
 
 
-def _prepare_avatar_layer(avatar_bytes: bytes | None, diameter: int = 304) -> Image.Image:
+def _prepare_avatar_layer(avatar_bytes: bytes | None, diameter: int = 348) -> Image.Image:
     av: Image.Image | None = None
     if avatar_bytes:
         try:
@@ -345,8 +346,8 @@ def _prepare_avatar_layer(avatar_bytes: bytes | None, diameter: int = 304) -> Im
     if av is None:
         av = Image.new("RGBA", (diameter, diameter), (7, 27, 73, 255))
         ad = ImageDraw.Draw(av)
-        ad.ellipse((108, 56, 196, 144), fill=(138, 205, 241, 255))
-        ad.ellipse((60, 155, 244, 355), fill=(138, 205, 241, 255))
+        ad.ellipse((124, 64, 224, 164), fill=(138, 205, 241, 255))
+        ad.ellipse((69, 178, 279, 406), fill=(138, 205, 241, 255))
 
     mask = Image.new("L", (diameter, diameter))
     ImageDraw.Draw(mask).ellipse((0, 0, diameter - 1, diameter - 1), fill=255)
@@ -365,7 +366,7 @@ def render_player_card_png(
     draws: int,
     avatar_bytes: bytes | None = None,
 ) -> bytes:
-    """Synchronously render a 1900x600 PNG player card for authoritative Ranked stats."""
+    """Synchronously render a 1900x800 PNG player card (V2 19:8) for authoritative Ranked stats."""
     if any(type(v) is not int or v < 0 for v in (wins, losses, draws)):
         raise ValueError("Counts must be nonnegative integers")
 
@@ -376,73 +377,75 @@ def render_player_card_png(
 
     base = bg_layer.copy()
     shade = _layer()
-    ImageDraw.Draw(shade).rounded_rectangle((430, 105, 1205, 480), radius=55, fill=(2, 14, 50, 150))
-    base.alpha_composite(shade.filter(ImageFilter.GaussianBlur(35)))
+    sd = ImageDraw.Draw(shade)
+    sd.rounded_rectangle((24, 18, 890, 166), radius=45, fill=(2, 10, 42, 180))
+    sd.rounded_rectangle((465, 190, 1285, 696), radius=65, fill=(2, 14, 50, 145))
+    base.alpha_composite(shade.filter(ImageFilter.GaussianBlur(37)))
 
-    # Brand header
-    base.alpha_composite(emblem_layer, (257, 10))
-    _neon_path(base, [(371, 26), (371, 91)], CYAN, 2, 4)
-    _draw_gradient_text(base, "KAYI", (389, 22, 128, 55), primary_font, fallback_fonts, 43, WHITE, (181, 223, 250), align="left")
-    _draw_gradient_text(base, "ARENA", (519, 22, 200, 55), primary_font, fallback_fonts, 43, CYAN, (0, 179, 248), align="left")
-    _neon_path(base, [(394, 85), (703, 85), (720, 78)], PINK, 3, 5)
+    # Enlarged brand header: 160 px emblem and 82 px KAYI ARENA wordmark
+    base.alpha_composite(emblem_layer, (45, 20))
+    _neon_path(base, [(221, 43), (221, 151)], CYAN, 3, 5)
+    _draw_gradient_text(base, "KAYI", (245, 38, 220, 91), primary_font, fallback_fonts, 82, WHITE, (190, 230, 255), align="left")
+    _draw_gradient_text(base, "ARENA", (467, 38, 375, 91), primary_font, fallback_fonts, 82, CYAN, (0, 179, 248), align="left")
+    _neon_path(base, [(251, 143), (804, 143), (828, 131)], PINK, 4, 6)
 
-    # Circular avatar + illuminated frame
-    frame_size = 420
-    fx, fy = 61, 111
+    # Circular avatar + illuminated 480 px frame
+    frame_size = 480
+    fx, fy = 31, 207
     center = (fx + frame_size // 2, fy + frame_size // 2)
-    diameter = 304
+    diameter = 348
     av = _prepare_avatar_layer(avatar_bytes, diameter=diameter)
     base.alpha_composite(av, (center[0] - diameter // 2, center[1] - diameter // 2))
     base.alpha_composite(frame_layer, (fx, fy))
 
     # Identity & battle count strip
     panel = _layer()
-    namepoly = [(530, 129), (1217, 129), (1201, 221), (1176, 239), (510, 239), (510, 150)]
+    namepoly = [(553, 206), (1300, 206), (1282, 318), (1257, 338), (528, 338), (528, 231)]
     ImageDraw.Draw(panel).polygon(namepoly, fill=(4, 17, 54, 235))
     base.alpha_composite(panel)
-    _neon_path(base, [(510, 239), (510, 150), (530, 129), (1217, 129), (1201, 221)], CYAN, 2, 5)
-    _neon_path(base, [(510, 239), (1176, 239), (1201, 221)], PINK, 2, 5)
+    _neon_path(base, [(528, 338), (528, 231), (553, 206), (1300, 206), (1282, 318)], CYAN, 3, 6)
+    _neon_path(base, [(528, 338), (1257, 338), (1282, 318)], PINK, 3, 6)
 
     _draw_gradient_text(
-        base, name, (531, 139, 480, 59), primary_font, fallback_fonts, 68, WHITE, (159, 219, 255), align="left", min_size=22
+        base, name, (550, 218, 513, 76), primary_font, fallback_fonts, 85, WHITE, (159, 219, 255), align="left", min_size=22
     )
     _draw_gradient_text(
-        base, "ARENA PLAYER", (532, 201, 330, 25), label_font, fallback_fonts, 22, (148, 234, 255), align="left"
+        base, "ARENA PLAYER", (551, 294, 425, 33), label_font, fallback_fonts, 30, (148, 234, 255), align="left"
     )
-    _neon_path(base, [(1023, 148), (1023, 220)], (69, 152, 221), 1, 3)
+    _neon_path(base, [(1077, 226), (1077, 316)], (69, 152, 221), 2, 4)
     _draw_gradient_text(
-        base, _format_card_count(total), (1037, 139, 151, 59), primary_font, fallback_fonts, 55, WHITE, (159, 219, 255), min_size=18
+        base, _format_card_count(total), (1093, 216, 177, 75), primary_font, fallback_fonts, 71, WHITE, (159, 219, 255), min_size=18
     )
-    _draw_gradient_text(base, "BATTLES", (1037, 200, 151, 26), label_font, fallback_fonts, 23, WHITE)
+    _draw_gradient_text(base, "BATTLES", (1093, 293, 177, 33), label_font, fallback_fonts, 30, WHITE)
 
-    # Two-row stat board
+    # Taller two-row stat board
     p = _layer()
-    poly = [(532, 262), (1194, 262), (1217, 284), (1217, 452), (1195, 474), (532, 474), (510, 452), (510, 284)]
-    ImageDraw.Draw(p).polygon(poly, fill=(4, 17, 54, 241))
+    poly = [(553, 362), (1275, 362), (1300, 387), (1300, 622), (1275, 647), (553, 647), (528, 622), (528, 387)]
+    ImageDraw.Draw(p).polygon(poly, fill=(4, 17, 54, 238))
     base.alpha_composite(p)
-    _neon_path(base, poly + [poly[0]], CYAN, 2, 5)
-    _neon_path(base, [(1149, 262), (1194, 262), (1217, 284), (1217, 307)], PINK, 5, 6)
-    _neon_path(base, [(510, 430), (510, 452), (532, 474), (570, 474)], CYAN, 5, 6)
-    _neon_path(base, [(1158, 474), (1195, 474), (1217, 452), (1217, 430)], PINK, 5, 6)
-    _neon_path(base, [(521, 368), (1205, 368)], (57, 174, 255), 2, 4)
-    _neon_path(base, [(860, 281), (860, 350)], PINK, 2, 4)
-    _neon_path(base, [(860, 386), (860, 455)], CYAN, 2, 4)
+    _neon_path(base, poly + [poly[0]], CYAN, 3, 6)
+    _neon_path(base, [(1224, 362), (1275, 362), (1300, 387), (1300, 414)], PINK, 6, 7)
+    _neon_path(base, [(528, 595), (528, 622), (553, 647), (602, 647)], CYAN, 6, 7)
+    _neon_path(base, [(1224, 647), (1275, 647), (1300, 622), (1300, 595)], PINK, 6, 7)
+    _neon_path(base, [(541, 504), (1287, 504)], (57, 174, 255), 2, 5)
+    _neon_path(base, [(914, 386), (914, 480)], PINK, 2, 4)
+    _neon_path(base, [(914, 528), (914, 623)], CYAN, 2, 4)
 
     stats_rows = [
-        (530, 265, "trophy", _format_card_count(wins), "VICTORIES", CYAN),
-        (878, 265, "swords", _format_card_count(losses), "DEFEATS", (255, 91, 162)),
-        (530, 370, "draw", _format_card_count(draws), "DRAWS", WHITE),
-        (878, 370, "chart", rate, "WIN RATE", CYAN),
+        (547, 366, "trophy", _format_card_count(wins), "VICTORIES", CYAN),
+        (932, 366, "swords", _format_card_count(losses), "DEFEATS", (255, 91, 162)),
+        (547, 507, "draw", _format_card_count(draws), "DRAWS", WHITE),
+        (932, 507, "chart", rate, "WIN RATE", CYAN),
     ]
     for sx, sy, kind, val, lbl, col in stats_rows:
-        _draw_icon(base, kind, sx + 49, sy + 52, col)
+        _draw_icon(base, kind, sx + 53, sy + 68, col)
         _draw_gradient_text(
             base,
             val,
-            (sx + 91, sy + 4, 220, 63),
+            (sx + 97, sy + 6, 245, 85),
             primary_font,
             fallback_fonts,
-            58,
+            82,
             col,
             (255, 255, 255) if kind == "draw" else col,
             glow=col,
@@ -451,10 +454,10 @@ def render_player_card_png(
         _draw_gradient_text(
             base,
             lbl,
-            (sx + 91, sy + 65, 220, 28),
+            (sx + 97, sy + 91, 245, 37),
             label_font,
             fallback_fonts,
-            29,
+            37,
             WHITE,
             glow=(83, 140, 220),
         )
@@ -462,10 +465,10 @@ def render_player_card_png(
     _draw_gradient_text(
         base,
         "RANKED  •  ALL UNIVERSES",
-        (521, 482, 690, 32),
+        (535, 659, 760, 42),
         label_font,
         fallback_fonts,
-        19,
+        27,
         (183, 233, 255),
         glow=(0, 91, 255),
     )

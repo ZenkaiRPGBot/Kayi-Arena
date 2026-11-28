@@ -1,7 +1,7 @@
 # Kayi Arena — Player Profile 2.0 Implementation Report
 
 **Branch:** `main`  
-**Scope:** Dynamic Player Card (1900×600 PNG), Player Statistics, Universe Selection, Match History, Historical Match Details, Historical Battle Breakdown, Session & Callback Security, SQLite/MongoDB Persistence, Regression Suite & CodeRabbit Review.
+**Scope:** Dynamic Player Card V2 (1900×800 PNG, 19:8), Player Statistics, Universe Selection, Match History, Historical Match Details, Historical Battle Breakdown, Session & Callback Security, SQLite/MongoDB Persistence, Regression Suite & CodeRabbit Review.
 
 ---
 
@@ -11,7 +11,7 @@
 - Verified existing `HistoricalMatchRecord`, `SqliteMatchStore`, `MongoMatchStore`, `MatchCoordinator`, and callback encoding (`encode_cb` / `decode_cb` with Telegram's 64-byte callback limit).
 
 ## 2. Prototype & Asset Integration
-- Extracted `kayi_player_card_prototype.zip` and installed the approved raster layers into `app/telegram/assets/profile/`:
+- Extracted `kayi_player_card_prototype_v2.zip` (superseding the original 1900×600 prototype) and installed the approved raster layers into `app/telegram/assets/profile/`:
   - `background.png`
   - `emblem.png`
   - `avatar_frame.png`
@@ -22,17 +22,17 @@
 
 ## 3. Player Card Renderer Implementation
 - Implemented `app/telegram/profile_card.py`:
-  - `CARD_WIDTH = 1900`, `CARD_HEIGHT = 600` (`RGBA` → `PNG`).
+  - `CARD_WIDTH = 1900`, `CARD_HEIGHT = 800` (19:8, `RENDERER_VERSION = "2.1.0"`, `RGBA` → `PNG`).
   - `render_player_card_png(*, name, wins, losses, draws, avatar_bytes=None) -> bytes`.
   - `render_player_card_async(...)` offloads CPU-bound Pillow compositing via `asyncio.to_thread`.
-  - Static layer caching (`_STATIC_CACHE`) caches resized background, emblem (`100×100`), and avatar frame (`420×420`).
+  - Static layer caching (`_STATIC_CACHE`) caches castle-biased cropped background (`centering=(0.70, 0.5)`), emblem (`160×160`), and avatar frame (`480×480`), with `82 px` `KAYI ARENA` branding typography.
   - Cross-platform font resolution (`resolve_font_paths`) preferring bundled `InterDisplay-BlackItalic.otf` / `InterDisplay-BoldItalic.otf` with Windows/Linux system font fallbacks.
   - Text normalization (`NFKC` for Unicode Mathematical Bold/Italic `U+1D400`–`U+1D7FF`), automatic font downscaling (`max_size` down to `min_size=22`), and clean `"…"` truncation for long names.
-  - EXIF-transposed circular avatar cropping (`_prepare_avatar_layer`, `diameter=304`) with graceful silhouette fallback when `avatar_bytes` is missing or corrupt.
+  - EXIF-transposed circular avatar cropping (`_prepare_avatar_layer`, `diameter=348`) with graceful silhouette fallback when `avatar_bytes` is missing or corrupt.
   - `fetch_telegram_avatar_bytes` fetches the target user's Telegram profile photo with a 3-second timeout and falls back cleanly on network/API failure.
-  - Measured local render latency (`render_player_card_png`):
-    - Cold render (`Obito`, 142W/38L/9D): `2960.4 ms`, `1,635,327` bytes.
-    - Warm render (`Kiyomi`, 75W/19L/4D): `3047.5 ms`, `1,632,110` bytes.
+  - Measured local render latency (`render_player_card_png` V2):
+    - Cold render (`OBITO`, 32W/14L/2D): `6373.9 ms`, `1,897,490` bytes.
+    - Warm render (`Kiyomi`, 75W/19L/4D): `3558.6 ms`, `1,899,132` bytes.
     - Bounded LRU `PlayerCardCache` avoids re-rendering on cache hits.
 
 ## 4. Card Caching Strategy
@@ -133,7 +133,7 @@
   - `tests/test_telegram_ui.py`
 
 ## 20. Remaining Risks or Edge Cases
-- Cold/warm Pillow rendering takes ~3.0 seconds per uncached card on this machine; `PlayerCardCache` mitigates repeat renders, and `render_player_card_async` keeps the asyncio event loop responsive.
+- Warm uncached Pillow V2 rendering takes ~3.6 seconds per card on this machine; `PlayerCardCache` mitigates repeat renders, and `render_player_card_async` keeps the asyncio event loop responsive.
 - Live Telegram Bot API `getUserProfilePhotos` / `send_photo` latency and Render container memory should be observed on first production rollout.
 
 ## 21. Deferred Features Confirmed Excluded

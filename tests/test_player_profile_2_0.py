@@ -57,7 +57,7 @@ def test_player_card_renderer_sizes_unicode_zero_large_and_corrupt_avatar() -> N
     for name, w, l, d, av in cases:
         png = render_player_card_png(name=name, wins=w, losses=l, draws=d, avatar_bytes=av)
         im = Image.open(BytesIO(png))
-        assert im.size == (1900, 600)
+        assert im.size == (1900, 800)
         assert im.format == "PNG"
 
 
@@ -181,7 +181,7 @@ async def test_profile_2_0_stats_history_navigation_security_and_immutability(tm
     friendly_stats = store.compute_player_statistics("101", game_mode="friendly")
     assert friendly_stats.battles_played == 1
 
-    # 1. /profile sends 1900x600 photo card with NO caption stats
+    # 1. /profile sends 1900x800 photo card with NO caption stats
     await dp.feed_update(bot, _make_message_update(1, chat_id=-1001800918110, chat_type="supergroup", user=u1, text="/profile"))
     assert len(bot.sent_photos) == 1
     assert bot.sent_photos[-1]["caption"] == ""
